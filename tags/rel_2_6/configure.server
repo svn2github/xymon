@@ -1,0 +1,186 @@
+#!/bin/sh
+
+# Configure script for bbgen.
+#
+# This is a quick hack to make things work on the systems I use
+# personally, without having to do the full GNU Autoconf thing.
+
+echo ""
+echo "Configuration script for bbgen"
+echo ""
+
+if test -r Makefile
+then
+	echo "Already configured - remove Makefile to re-configure"
+	exit 1
+else
+	echo "This script asks a few questions and builds a Makefile to compile bbgen"
+	echo ""
+	echo "Where is your Big Brother BBHOME directory [/usr/local/bb] ? "
+	read BBHOME
+	if test -z "$BBHOME"
+	then
+		BBHOME=/usr/local/bb
+	fi
+
+	if test -r $BBHOME/etc/bbdef.sh
+	then
+		echo "OK, your BBHOME looks good"
+	else
+		echo "         ********  NB NB NB *********"
+		echo "Ooops ... cannot find the Big Brother configuration in $BBHOME"
+		echo "I trust you know better, so I will use that setting anyway."
+		echo "         ********  NB NB NB *********"
+	fi
+	echo ""
+
+	echo "Trying to determine your BB MAXLINE setting"
+	if test -r $BBHOME/src/bb.h
+	then
+		MAXLINE=`grep "^#define.*MAXLINE.*[0-9]*" $BBHOME/src/bb.h 2>/dev/null`
+		if test "$MAXLINE" != ""
+		then
+			MAXMSG=`echo $MAXLINE | awk '{print $3}'`
+			echo "Found your BB MAXLINE to be $MAXMSG"
+		else
+			MAXMSG="8192"
+			echo " *** Could not determine the MAXMSG setting ***"
+		fi
+	else
+		MAXMSG="8192"
+		echo "*** Could not determine the MAXMSG setting ($BBHOME/src/bb.h not found) ***"
+	fi
+	echo ""
+
+	echo "To install the bbgen CGI scripts for history and reporting, I"
+	echo "need to know where you webserver keeps CGI scripts."
+	echo "This setting is only used by \"make install\""
+	echo "Where is your Webserver CGI-BIN directory [/var/apache/cgi-bin] ? "
+	read CGIDIR
+	if test -z "$CGIDIR"
+	then
+		CGIDIR=/var/apache/cgi-bin
+	fi
+
+	if test -r $CGIDIR/bb-hist.sh
+	then
+		echo "OK, your CGIDIR looks good"
+	else
+		echo "         ********  NB NB NB *********"
+		echo "Ooops ... cannot find the Big Brother CGI scripts in $CGIDIR"
+		echo "I trust you know better, so I will use that setting anyway."
+		echo "         ********  NB NB NB *********"
+	fi
+	echo ""
+
+	echo "The bbgen history CGI replacement can use a different method to"
+	echo "create the 24-hour summary graph on the history page. This method"
+	echo "gives a more accurate view (more detailed), but uses a fixed-width"
+	echo "graph instead of the standard Big Brother graph that automatically"
+	echo "resizes to your browser window."
+	echo ""
+	echo "Use the standard Big Brother history graph (y/n) [y] ? "
+	read USEPCTHIST
+	if test "$USEPCTHIST" = "n"
+	then
+		echo "   Tell me the display width (in pixels) to use for"
+		echo "   the history graph. This could be anything, but to"
+		echo "   eliminate as many rounding errors as possible, it"
+		echo "   is best to use a multiple of 24."
+		echo "   The default value (960) is good on 1024x768 displays"
+		echo ""
+		echo "   What width should I use for the graph [960] ? "
+		read PIXELCOUNT
+		if test "$PIXELCOUNT" = ""
+		then
+			HISTGRAPHDEF="-DDEFPIXELS=960"
+			export HISTGRAPHDEF
+		else
+			HISTGRAPHDEF="-DDEFPIXELS=${PIXELCOUNT}"
+			export HISTGRAPHDEF
+		fi
+	else
+		HISTGRAPHDEF=""
+	fi
+	echo ""
+
+	echo "bbgen uses the CURL library for http and https tests."
+	echo "I will try to find your curl library and headers with curl-config"
+	CURLVER=`curl-config --version`
+	if test $? -eq 0
+	then
+		echo "Your curl-config tells me you have curl version `curl-config --version`"
+		if test "`curl-config --feature | grep -c SSL`" = "1"
+		then
+			echo "Your libcurl supports SSL for https transfers - good"
+		else
+			echo "         ********  NB NB NB *********"
+			echo "WARNING: Your libcurl does not support SSL - you cannot test https sites"
+			echo "I recommend that you rebuild libcurl with SSL support"
+			echo "         ********  NB NB NB *********"
+		fi
+		CURLMSG="Determined with curl-config - ought to work"
+		CURLCC="`curl-config --cc`"
+		CURLINCLUDE="`curl-config --cflags`"
+		CURLLIBS="`curl-config --libs`"
+	else
+		echo "         ********  NB NB NB *********"
+		echo "Cannot run curl-config - are you sure you have libcurl ?"
+		echo "Assuming you have libcurl in /usr/local/lib and /usr/local/include"
+		echo "         ********  NB NB NB *********"
+		CURLMSG="These settings were GUESSED by configure - they probably need changing"
+		CURLCC="cc"
+		CURLINCLUDE="-I/usr/local/include"
+		CURLLIBS="-L/usr/local/lib -lcurl -lssl -lcrypto -lz"
+	fi
+	echo ""
+
+	echo "Where should I install the bbgen man-pages (/usr/local/man) ?"
+	read MANROOT
+	if test -z "$MANROOT"
+	then
+		MANROOT=/usr/local/man
+	fi
+
+	echo "# configure settings for bbgen" > Makefile
+	echo "BBHOME = $BBHOME"               >>Makefile
+	echo "CGIDIR = $CGIDIR"               >>Makefile
+	echo "HISTGRAPHDEF = $HISTGRAPHDEF"   >>Makefile
+	echo "MAXMSG = $MAXMSG"               >>Makefile
+	echo "MANROOT = $MANROOT"             >>Makefile
+	echo "#"                              >>Makefile
+	echo "# $CURLMSG"                     >>Makefile
+	echo "CC = $CURLCC"                   >>Makefile
+	echo "CURLINCLUDE = $CURLINCLUDE"     >>Makefile
+	echo "CURLLIB = $CURLLIBS"            >>Makefile
+
+	if test -r Makefile.`uname -s`
+	then
+		echo "include Makefile.`uname -s`" >>Makefile
+		echo ""
+		echo "Using `uname -s` Makefile settings"
+		echo ""
+	else
+		echo "include Makefile.generic" >>Makefile
+		echo ""
+		echo "Using GENERIC Makefile settings"
+		echo ""
+		echo "If this fails, change the compile settings in Makefile"
+		echo ""
+		echo "I would appreciate it if you send the changes to"
+		echo "bbgen@storner.dk so I can include it in the next version."
+		echo ""
+	fi
+	echo "include Makefile.rules" >> Makefile
+	echo "" >> Makefile
+	echo "# Add local CFLAGS etc. settings below here" >>Makefile
+
+	echo "Created Makefile with the necessary information to build bbgen."
+	echo "If you need to change settings, you should change the Makefile"
+	echo ""
+
+	echo "Configuration complete - now run 'make' to build the tools"
+fi
+
+exit 0
+
