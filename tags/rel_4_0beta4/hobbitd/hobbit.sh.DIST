@@ -1,0 +1,47 @@
+#!/bin/sh
+
+# Startup script for the Hobbit monitor
+#
+# This starts the "hobbitlaunch" tool, which in turn starts
+# all of the other Hobbit server programs.
+
+case "$1" in
+   "start")
+	if test `id -un` != @BBUSER@
+	then
+		echo "Hobbit must be started as the @BBUSER@ user"
+		exit 1
+	else
+		@BBHOME@/bin/hobbitlaunch --config=@BBHOME@/etc/hobbitlaunch.cfg --env=@BBHOME@/etc/hobbitserver.cfg --log=@BBLOGDIR@/hobbitlaunch.log --pidfile=@BBLOGDIR@/hobbitlaunch.pid
+		echo "Hobbit started"
+	fi
+	;;
+
+   "stop")
+	if test -s @BBLOGDIR@/hobbitlaunch.pid
+	then
+		kill -TERM `cat @BBLOGDIR@/hobbitlaunch.pid`
+	fi
+	;;
+
+   "status")
+	if test -s @BBLOGDIR@/hobbitlaunch.pid
+	then
+		echo "hobbitlaunch running with PID `cat @BBLOGDIR@/hobbitlaunch.pid`"
+	else
+		echo "hobbitlaunch does not appear to be running"
+	fi
+	;;
+
+   "restart")
+	if test -s @BBLOGDIR@/hobbitlaunch.pid
+	then
+		$0 stop
+		sleep 10
+		$0 start
+	fi
+	;;
+esac
+
+exit 0
+
