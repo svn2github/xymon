@@ -1,0 +1,67 @@
+Stuff that standard BB does which bbgen/bbtest-net does not
+-----------------------------------------------------------
+* Handle the missing fping.sh extensions (IP ranges).
+* Handle modem banks
+* Handle "group" as mkbb.sh does
+* Convert the mkbwml.sh script to generate WAP pages.
+  Does anyone use WAP phones anymore ?
+* Convert the acklog.sh extension for bb2.html. This does
+  not load the system a great deal (at least for me), so
+  doing it via the existing script as an extension is OK.
+  Ought to be converted, especially for use with alternate
+  pagesets (currently, all ack-logs go onto the bb2 page,
+  even for hosts that are not included in the current pageset).
+
+Suggestions from users
+----------------------
+* When a host exists on multiple pages, provide links to
+  the other pages showing this host. Maybe from the "info"
+  column view ?
+* Something similar to "badconn" for all tests (Torsten
+  Richter on bb list).
+
+Ideas of my own
+---------------
+* Some way of defining acceptable responsetimes for 
+  services, and then go yellow/red if the threshold is 
+  exceeded.
+* libcurl can support LDAP queries. So implement support
+  for running ldap checks, if the runtime library does.
+  Hmm ... apparently it does not work :-( and the curl
+  guys dont want to support it anymore :-((
+  Cf. curl bug item #735752
+* Dynamic schedules. When a test fails, we want to test
+  it sooner than normal to quickly pick up when it goes
+  OK again. However, if a test fails and it stays in 
+  the failed mode for some time, we dont want to spend
+  a lot of energy retesting it.
+  Initial guess: When it fails, do the next 5 tests with
+  one minute intervals. Then if the failure persists,
+  back off to 2 minute intervals for 5 tests, then 4
+  minute intervals for 5 tests etc. until we test only
+  once an hour. That means an increased test rate for
+  the first 5*(1+2+4) = 35 minutes and then we go to
+  a slower than normal test frequency.
+  This should be configurable on a per host and/or 
+  per service basis.
+* Fixed schedules. Some hosts may require testing more
+  often than others.
+* Use Autoconf. Need to learn how to use it first, though.
+
+If I have too much time someday
+-------------------------------
+* BB reporting sucks. But how should a good report
+  feature be ?
+* Re-implement bbd using ucspi-tcp "tcpserver" to
+  catch incoming messages and store them to a file.
+  Maybe restrict incoming messages to status/page only ?
+  The disable/enable/notes messages could go via a unix 
+  socket, so they could only be local.
+  Then run a processing task to move messages off
+  to the logs/ directory, generate web pages,
+  initiate paging etc.
+  Another cool feature would be to sign messages with
+  a key installed on the sender system. Perhaps for
+  "dangerous" messages only - disable/enable, notes,
+* Perhaps switch to using a DB for storing messages.
+
