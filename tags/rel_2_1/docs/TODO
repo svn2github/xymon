@@ -1,0 +1,56 @@
+Stuff that standard BB does which bbgen/bbtest-net does not
+-----------------------------------------------------------
+* Handle the missing fping.sh extensions (ranges).
+* Handle modem banks
+* Handle "group" as mkbb.sh does
+* Convert the mkbwml.sh script to generate WAP pages.
+  Does anyone use WAP phones these days ?
+* Convert the acklog.sh extension for bb2.html. This does
+  not load the system a great deal (at least for me), so
+  doing it via the existing script as an extension is OK.
+
+Suggestions from users
+----------------------
+* Allow generation of the bb2.html / bbnk.html for 
+  alternate pagesets, and have the eventlog&acklog show only
+  events for the hosts that are part of this pageset.
+  NB: This would require re-doing the acklog as part of
+  bbgen, instead of via the current standard BB extension
+  script.
+* When a host exists on multiple pages, provide links to
+  the other pages showing this host. Maybe from the "info"
+  column view ?
+
+Ideas of my own
+---------------
+* Dynamic schedules. When a test fails, we want to test
+  it sooner than normal to quickly pick up when it goes
+  OK again. However, if a test fails and it stays in 
+  the failed mode for some time, we dont want to spend
+  a lot of energy retesting it.
+  Initial guess: When it fails, do the next 5 tests with
+  one minute intervals. Then if the failure persists,
+  back off to 2 minute intervals for 5 tests, then 4
+  minute intervals for 5 tests etc. until we test only
+  once an hour. That means an increased test rate for
+  the first 5*(1+2+4) = 35 minutes and then we go to
+  a slower than normal test frequency.
+  This should be configurable on a per host and/or 
+  per service basis.
+* Fixed schedules. Some hosts may require testing more
+  often than others.
+
+If I have too much time someday
+-------------------------------
+* BB reporting sucks. But how should a good report
+  feature be ?
+* Re-implement bbd using ucspi-tcp "tcpserver" to
+  catch incoming messages and store them to a file.
+  Maybe restrict incoming messages to status/page only ?
+  The disable/enable/notes messages could go via a unix 
+  socket, so they could only be local.
+  Then run a processing task to move messages off
+  to the logs/ directory, generate web pages,
+  initiate paging etc.
+* Perhaps switch to using a DB for storing messages.
+
