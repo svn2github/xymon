@@ -1,0 +1,87 @@
+# bbgen main Makefile
+#
+# This file is included from the Makefile created by the "configure" script
+
+CFLAGS += -DMAXMSG=$(MAXMSG)
+
+PROGRAMS = bbgen bbtest-net bbhostgrep bbhostshow bb-rep.cgi bb-replog.cgi bb-hist.cgi
+CGISCRIPTS = bb-rep.sh bb-replog.sh bb-hist.sh
+
+all: $(PROGRAMS) $(CGISCRIPTS)
+	@echo ""
+	@echo "Build complete"
+	@echo ""
+	@echo "Run 'make install' to install programs AND cgi scripts"
+	@echo "    **** This will overwrite your existing cgi scripts ****"
+	@echo "If you dont want to do that, run 'make install-bin' to install programs"
+	@echo "and then you can later run 'make install-cgi' to install cgi scripts"
+	@echo ""
+
+GENOBJS = bbgen.o debug.o loaddata.o reportdata.o larrdgen.o pagegen.o process.o util.o infogen.o alert.o wmlgen.o bb-replog.o
+NETTESTOBJS = bbtest-net.o util.o debug.o contest.o httptest.o
+HOSTGREPOBJS = bbhostgrep.o util.o debug.o
+HOSTSHOWOBJS = bbhostshow.o util.o debug.o
+REPOBJS = bb-rep.o debug.o util.o
+REPLOGOBJS = bb-replog-cgi.o reportdata.o debug.o util.o
+HISTOBJS = bb-hist.o reportdata.o debug.o util.o
+
+bbgen: $(GENOBJS)
+	$(CC) $(CFLAGS) -o $@ $(GENOBJS)
+
+bbtest-net: $(NETTESTOBJS)
+	$(CC) $(CFLAGS) -o $@ $(NETTESTOBJS) $(CURLLIB) $(NETLIBS)
+
+bbhostgrep: $(HOSTGREPOBJS)
+	$(CC) $(CFLAGS) -o $@ $(HOSTGREPOBJS)
+
+bbhostshow: $(HOSTSHOWOBJS)
+	$(CC) $(CFLAGS) -o $@ $(HOSTSHOWOBJS)
+
+bb-rep.cgi: $(REPOBJS)
+	$(CC) $(CFLAGS) -o $@ $(REPOBJS)
+
+bb-replog-cgi.o: bb-replog.c
+	$(CC) $(CFLAGS) -DCGI -c -o $@ $<
+
+bb-replog.cgi: $(REPLOGOBJS)
+	$(CC) $(CFLAGS) -o $@ $(REPLOGOBJS)
+
+bb-hist.cgi: $(HISTOBJS)
+	$(CC) $(CFLAGS) -o $@ $(HISTOBJS)
+
+alert: alert.c debug.c util.c
+	$(CC) -g -DSTANDALONE -DDEBUG -Wall -o $@ $alert.c debug.c util.c
+
+contest: contest.c debug.c util.c
+	$(CC) -g -DSTANDALONE -DDEBUG -Wall -o $@ contest.c debug.c util.c $(NETLIBS)
+
+reptest: reportdata.c debug.c util.c
+	$(CC) -g -DSTANDALONE -DDEBUG -Wall -o $@ reportdata.c debug.c util.c
+
+httptest.o: httptest.c httptest.h
+	$(CC) $(CFLAGS) $(CURLINCLUDE) -c -o $@ httptest.c
+
+bb-hist.o: bb-hist.c
+	$(CC) $(CFLAGS) $(HISTGRAPHDEF) -c -o $@ $<
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+%.sh: %.sh.DIST
+	cat $< | sed -e 's!@BBHOME@!$(BBHOME)!g' >$@
+	chmod 755 $@
+
+distclean: clean
+	rm -f Makefile
+
+clean:
+	rm -f *.o *~ $(PROGRAMS) $(CGISCRIPTS) alert contest reptest
+
+install-bin: $(PROGRAMS)
+	cp -p $(PROGRAMS) $(BBHOME)/bin/
+
+install-cgi: $(CGISCRIPTS)
+	cp -p $(CGISCRIPTS) $(CGIDIR)/
+
+install: install-bin install-cgi
+
