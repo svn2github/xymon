@@ -1,0 +1,32 @@
+all: bbgen bbgmchosts bbnethosts bbtest-web
+
+CC=gcc
+
+# Compile flags for normal build
+CFLAGS=-O2 -Wall -Wno-unused
+
+# Compile flags for debugging
+# CFLAGS=-g -DDEBUG -Wall
+
+GENOBJS = bbgen.o debug.o loaddata.o larrdgen.o pagegen.o process.o util.o infogen.o alert.o wmlgen.o
+TESTOBJS = bbtest-web.o util.o debug.o
+NETOBJS = bbnethosts.o
+GMCOBJS = bbgmchosts.o
+
+bbgen: $(GENOBJS)
+	$(CC) $(CFLAGS) -o bbgen $(GENOBJS)
+
+bbtest-web: $(TESTOBJS)
+	$(CC) $(CFLAGS) -o bbtest-web $(TESTOBJS)
+
+bbnethosts: $(NETOBJS)
+	$(CC) $(CFLAGS) -o bbnethosts $(NETOBJS)
+
+bbgmchosts: $(GMCOBJS)
+	$(CC) $(CFLAGS) -o bbgmchosts $(GMCOBJS)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+clean:
+	rm -f *.o *~ bbgen bbtest-web bbnethosts bbgmchosts
