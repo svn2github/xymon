@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# This it the Hobbit wrapper for the bb-rep.cgi tool
+
+. @BBHOME@/etc/hobbitserver.cfg
+@RUNTIMEDEFS@ exec @BBHOME@/bin/bb-rep.cgi --env=@BBHOME@/etc/hobbitserver.cfg $BBGENREPOPTS
+

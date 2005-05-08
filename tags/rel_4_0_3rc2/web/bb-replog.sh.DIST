@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# This is the Hobbit wrapper for the bb-replog.cgi tool.
+
+@RUNTIMEDEFS@ exec @BBHOME@/bin/bb-replog.cgi --env=@BBHOME@/etc/hobbitserver.cfg
+
