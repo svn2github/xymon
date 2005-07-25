@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<title>Known issues in Hobbit</title>
+</head>
+<body>
+
+<h1>Known issues in Hobbit</h1>
+<p>This describes some known problems you may encounter when
+using Hobbit to monitor servers.</p>
+<ul>
+	<li><a href="#bugreport">How to report bugs</a></li>
+	<li><a href="#jsval">JavaScript errors when using enable/disable function</a></li>
+	<li><a href="#dnserror">DNS error reported for network tests</a></li>
+	<li><a href="#netfail">Network tests fail sporadically</a></li>
+	<li><a href="#solarisrandom">"Failed to find enough entropy" on Solaris</a></li>
+	<li><a href="#freebsdkernelsem">Hobbit fails on FreeBSD with &quot;Could not get sem: No space left on device&quot;</a></li>
+</ul>
+
+<h3><a name="bugreport">How to report bugs</a></h3>
+<p>If you think you have found a bug in Hobbit, please report it
+to the Hobbit mailing list at <a href="mailto:hobbit@hswn.dk">hobbit@hswn.dk</a>.
+You can do a lot to help getting bugs fixed by providing detailed information
+about the bug:</p>
+<ul>
+	<li>Always include the version number of Hobbit you're using</li>
+	<li>If one of the Hobbit tools crashes and leaves a core-file (usually
+	in the ~hobbit/server/tmp/ directory), please use the <b>gdb</b> tool to
+	pinpoint where the crash occurred:<br>
+	<ul>
+		<li>Login as the Hobbit user</li>
+		<li><tt>
+			$ <b>cd ~/server</b><br>
+			$ <b>gdb bin/PROGRAMFILE tmp/COREFILE</b><br>
+		</tt>then at the <tt>gdb&gt;</tt> prompt, execute the command<br>
+		<tt>
+			gdb&gt; <b>bt</b>
+		</tt></li>
+	</ul>
+</ul>
+
+<h3><a name="jsval">Internet Explorer complains about Javascript errors in Enable/Disable</a></h3>
+<p>This happens for some, but works for most people. One workaround
+is to disable the Javascript validation code in the enable/disable
+function: Edit ~hobbit/cgi-bin/hobbit-enadis.sh script and add the 
+option "--no-jsvalidation" to the hobbisvc.cgi command - this disables
+Javascript validation on the "info" page - and edit the file 
+~hobbit/server/web/maint_form so you remove the text 'onClick="validateDisable(this.form)"'
+from the input-tag near the end of that file.</p>
+
+<h3><a name="dnserror">DNS error reported for network tests</a></h3>
+<p>The bbtest-net network tester uses the built-in ARES library for
+DNS lookups. There have been reports that this library fails on
+some systems; one confirmed case is on "OSF1 V5.1". So if you 
+suddenly get a lot of failed network tests that report "DNS error",
+try running bbtest-net with the "--no-ares" option to use the
+standard DNS lookups instead.</p>
+
+<h3><a name="netfail">Network tests fail sporadically, or report long reponsetimes</a></h3>
+<p>The bbtest-net network tester runs many tests in parallel; by default
+it will typically run up to 256 tests concurrently. This may be more
+than your network test server or network infrastructure can handle; if
+you see sporadic timeouts of network tests or the graphs show increased
+responsetimes, you can lower the number of concurrent tests by adding
+the "--concurrency=N" option to bbtest-net in the <tt>~/server/etc/hobbittasks.cfg</tt>
+file (for Hobbit), or the <tt>$BBHOME/bin/bb-network.sh</tt> file (Big Brother).
+This has been especially important for sites doing many
+http checks, since these typically have much more traffic going on
+while testing than simple TCP services such as smtp.</p>
+
+<h3><a name="solarisrandom">Network tests fail on Solaris with "Failed to find enough entropy"</a></h3>
+<p>OpenSSL uses random data to initialise a key that is negotiated when
+a new SSL-encrypted connection is being setup. Solaris 8 and earlier
+doesn't have a standard way of getting random data, so OpenSSL cannot
+get all of the randomness it needs. Solaris <b>patch 112438</b> solves this
+by adding a /dev/random device that provides random data to applications.<br>
+Thanks to Scott Kelley for the pointer to the Solaris patch.</p>
+
+<h3><a name="freebsdkernelsem">Hobbit fails on FreeBSD with &quot;Could not get sem: No space left on device&quot;</a></h3>
+<p>Hobbit uses some kernel ressources - semaphores and shared memory. 
+If you get the following error message in hobbitlaunch.log when trying
+to start Hobbit:</p>
+<pre><tt>
+2005-05-29 20:25:14 Setting up hobbitd channels
+2005-05-29 20:25:14 Could not get sem: No space left on device
+2005-05-29 20:25:14 Cannot setup status channel
+2005-05-29 20:25:14 Task hobbitd terminated, status 1
+</tt></pre>
+<p>then you need to increase the number of semaphore sets and
+individual semaphores available to applications.</p>
+
+<p>The current settings for your kernel can be found with 
+&quot;<tt>sysctl kern.ipc.semmni</tt>&quot; (semaphore sets)
+and &quot;<tt>sysctl kern.ipc.semmns</tt>&quot; (total number
+of semaphores). Hobbit uses 6 semaphore sets, with a total of 18 semaphores.</p>
+
+<p>To increase this, put these two lines in /boot/loader.conf on your system:</p>
+<tt><pre>
+kern.ipc.semmni="40"
+kern.ipc.semmns="100"
+</pre></tt>
+<p>Adjust the values to something reasonable for your system - considering the
+current settings (from the <tt>sysctl</tt> output), and Hobbit's needs
+(6 sets with 18 semaphores).</p>
+
+<p>More information about tuning the FreeBSD kernel parameters is available in
+<a href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/configtuning-sysctl.html">
+the FreeBSD Handbook</a></p>
+
+</body>
+</html>
+
