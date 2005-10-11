@@ -1,0 +1,12 @@
+#
+# The hobbittasks.cfg file is loaded by "hobbitlaunch".
+# It controls which of the Hobbit modules to run, how often, and
+# with which parameters, options and environment variables.
+#
+
+[client]
+	ENVFILE $HOBBITCLIENTHOME/etc/hobbitclient.cfg
+	CMD $HOBBITCLIENTHOME/bin/hobbitclient.sh
+	LOGFILE $HOBBITCLIENTHOME/logs/hobbitclient.log
+	INTERVAL 5m
+

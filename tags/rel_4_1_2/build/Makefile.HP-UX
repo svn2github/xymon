@@ -1,0 +1,18 @@
+# bbgen compile-time settings for a HP-UX system
+
+OSDEF = -DHPUX
+
+# NETLIBS: You may need to add -lresolv or similar to pick up network libraries
+NETLIBS = -lnsl
+
+# Compile flags for normal build
+CC = cc
+CFLAGS = -g -O -D_REENTRANT $(OSDEF)
+
+# Compile flags for debugging
+# CFLAGS = -g -DDEBUG -D_REENTRANT $(OSDEF)
+
+# Mail program: This must support "CMD -s SUBJECT ADDRESS" to send out a mail with a subject
+# Typically, this will be "mail" or "mailx"
+MAILPROGRAM="mailx"
+
