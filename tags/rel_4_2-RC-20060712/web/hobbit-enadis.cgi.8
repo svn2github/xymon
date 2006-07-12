@@ -1,0 +1,37 @@
+.TH HOBBIT-ENADIS.CGI 8 "Version 4.2-RC-20060712: 12 Jul 2006" "Hobbit Monitor"
+.SH NAME
+hobbit-enadis.cgi \- CGI program to enable/disable Hobbit tests
+.SH SYNOPSIS
+.B "hobbit-enadis.cgi (invoked via CGI from webserver)"
+
+.SH DESCRIPTION
+\fBhobbit-enadis.cgi\fR is a CGI tool for disabling and enabling
+hosts and tests monitored by Hobbit. You can disable monitoring of
+a single test, all tests for a host, or multiple hosts - immediately
+or at a future point in time.
+
+hobbit-enadis.cgi runs as a CGI program, invoked by your webserver.
+It is normally run via a wrapper shell-script in the secured CGI 
+directory for Hobbit.
+
+hobbit-enadis.cgi is the back-end script for the enable/disable
+form present on the "info" status-pages. It can also run in
+"stand-alone" mode, in which case it displays a web form allowing
+users to select what to enable or disable.
+
+
+.SH OPTIONS
+.IP "--env=FILENAME"
+Load the environment from FILENAME before executing the CGI.
+
+.IP "--area=NAME"
+Load environment variables for a specific area. NB: if used,
+this option must appear before any --env=FILENAME option.
+
+.SH FILES
+.IP "$BBHOME/web/maint_{header,form,footer}"
+HTML template header
+
+.SH "SEE ALSO"
+hobbit(7)
+
