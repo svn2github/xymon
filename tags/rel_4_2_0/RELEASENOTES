@@ -1,0 +1,219 @@
+          <<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>
+           * * *   Release notes for Hobbit 4.2    * * *
+          <<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>
+
+This release contains several new programs, enhanced functionality
+and changes to the configuration files.
+
+New Critical Systems View - "NK" tags now deprecated
+====================================================
+The "Critical Systems" view is now built dynamically by a new
+CGI tool, hobbit-nkview. It uses a new configuration file
+separate from the bb-hosts file, which is maintained by the
+hobbit-nkedit CGI.
+
+ *** The "NK" tags in bb-hosts are being deprecated ***
+
+The NK tags in the bb-hosts file will only be handled in
+Hobbit 4.x. It is recommended that you begin to move your
+critical systems view to the new hobbit-nkview configuration.
+
+
+Modem-bank testing ("dialup" host definition) does not work
+===========================================================
+Previous versions of Hobbit supported the Big Brother "dialup"
+host definition for pinging a range of IP-adresses, e.g. a
+modem-bank or a pool of IP-adresses handed out by a DHCP server.
+This feature is not supported in Hobbit 4.2, but may re-appear
+in a different form in a later version.
+(Note: This has nothing to do with the "dialup" directive 
+which can be applied to individual hosts, to make them go
+clear when they are offline instead of red or purple).
+
+
+Installation
+============
+Follow the normal procedure for building and installing Hobbit,
+i.e. "./configure; make; make install". Note that Hobbit
+now installs hobbitping suid-root, so root privileges are
+needed for a server installation.
+
+Hobbit 4.2 uses one more IPC communication channel than the 
+previous release (for a total of 8 shared memory segments totalling
+2336 KB of shared memory, and 8 semaphore sets of 3 semaphores each). 
+If your system has a limited number of IPC shared-memory segments 
+and/or semaphores, you may need to increase this. See the installation 
+document at docs/install.html for some information about this, or 
+refer to your operating system documentation on System V IPC.
+
+
+bbproxy upgrade
+===============
+If you have a multi-host setup using the bbproxy utility, then
+you must upgrade bbproxy for the new Hobbit clients to be fully
+functional.
+
+
+Configuration file changes
+==========================
+If you are upgrading from a previous version of Hobbit, you will
+need to merge several new configuration items into your Hobbit
+configuration files, in order to make full use of these enhance-
+ments. These notes describe what changes to perform.
+
+
+hobbitserver.cfg
+----------------
+Several new status columns are being reported by the Hobbit client,
+and these have associated graphs. In order for them to show up
+correctly, you must change the two graph-settings:
+- TEST2RRD: Add ",files,procs=processes,ports,clock,lines" to 
+  the current setting.
+- GRAPHS: Add ",files,processes,ports,ifstat,clock,lines" to 
+  the current setting.
+
+Hobbit now includes a ping utility, which is faster than "fping"
+which was used in previous Hobbit versions. To use this utility,
+change the FPING setting to FPING="hobbitping". However, the
+hobbitping utility is still somewhat experimental, so if you
+run into problems with the connectivity tests, it is advised that
+you use fping instead.
+
+The following settings in hobbitserver.cfg are no longer used
+and may be deleted: BBPAGE, BBPAGERS, USEHOBBITD, PAGELEVELS,
+PURPLEDELAY, BBREL, BBRELDATE, CLIENTSVCS.
+
+
+hobbitcgi.cfg
+-------------
+The bb-ack.cgi tool has a new option, "--no-pin", which allows
+you to acknowledge alerts without having to bother with the
+acknowledgment code. To use this, add the "--no-pin" option to the
+CGI_ACK_OPTS setting.
+
+Five new CGI programs have been added in Hobbit 4.2. To ensure
+they are invoked correctly, add these lines to your hobbitcgi.cfg file:
+
+# hobbitgraph.cgi options
+CGI_HOSTGRAPHS_OPTS="--env=/home/hobbit/server/etc/hobbitserver.cfg"
+# hobbit-nkview.cgi options
+CGI_NKVIEW_OPTS="--env=/home/hobbit/server/etc/hobbitserver.cfg"
+# hobbit-nkedit.cgi options
+CGI_NKEDIT_OPTS="--env=/home/hobbit/server/etc/hobbitserver.cfg"
+# hobbit-ackinfo.cgi options
+CGI_ACKINFO_OPTS="--env=/home/hobbit/server/etc/hobbitserver.cfg"
+#hobbit-ghosts.cgi options
+CGI_GHOSTS_OPT="--env=/home/hobbit/etc/hobbitserver.cfg"
+
+(Replace "/home/hobbit" with the top-level directory of your
+Hobbit server installation).
+
+
+hobbitgraph.cfg
+---------------
+Several new graphs require additions to the hobbitgraph.cfg
+file. If you haven't added any custom graphs, it is recommended
+that you install the new version of the file located in the
+hobbit-4.2/hobbitd/etcfiles/ directory. If you have added custom
+graphs, copy the following sections from the 4.2 version of the
+file to your hobbitgraph.cfg file: apache3-multi, conn-multi,
+ifstat, files, processes, ports, clock, lines. 
+
+
+hobbitlaunch.cfg
+----------------
+The path for the [bbcombotest] module was incorrect. To use the
+bbcombotest feature, make sure that it has
+   CMD BBHOME/bin/bbcombotest
+
+A new Hobbit module has been implemented, which saves a snapshot
+of the client data reported by a Hobbit client prior to a status
+going into a critical or warning state. This aids in diagnosing
+problems where the critical status appearing in Hobbit is only
+a symptom of the real problem, and you need to look at other types
+of data to determine the root cause. To enable this module, two
+changes are needed:
+
+* The [hobbitd] command must have the option "--store-clientlogs=!msgs"
+  added. See the hobbitd(8) man-page for further information.
+* A new [hostdata] section must be added:
+  # "hostdata" stores the Hobbit client messages on disk when some status for a host
+  # changes. This lets you access a lot of data collected from a host around the time
+  # when a problem occurred. However, it may use a significant amount of disk space
+  # if you have lots of Hobbit clients.
+  # Note: The --store-clientlogs option for the [hobbitd] provides control over
+  #       which status-changes will cause a client message to be stored.
+  [hostdata]
+         ENVFILE $BBHOME/etc/hobbitserver.cfg
+         NEEDS hobbitd
+         CMD hobbitd_channel --channel=clichg --log=$BBSERVERLOGS/hostdata.log hobbitd_hostdata
+
+If you want to use the new "hobbitfetch" utility to collect data from
+clients, you must add a [hobbitfetch] section to run the data collector.
+Add this to your hobbitlaunch.cfg file:
+
+  # "hobbitfetch" is used when you have clients that cannot connect to your Hobbit server,
+  # but the Hobbit server can connect to the client. Normally the clients will initiate
+  # a connection to the Hobbit server to deliver the data they collect, but this is
+  # forbidden in some firewall setups. By enabling the hobbitfetch task, hosts that have
+  # the "pulldata" tag in the bb-hosts file will be polled by hobbitfetch for their data.
+  #
+  # NOTE: On the clients you must enable the "msgcache" task, since this is what
+  #       hobbitfetch is talking to.
+  [hobbitfetch]
+         ENVFILE $BBHOME/etc/hobbitserver.cfg
+         CMD $BBHOME/bin/hobbitfetch --server=YOUR.HOBBIT.SERVER.IP --no-daemon --pidfile=$BBSERVERLOGS/hobbitfetch.pid
+         LOGFILE $BBSERVERLOGS/hobbitfetch.log
+
+
+~hobbit/server/www/menu/menu_items.js
+-----------------------------------
+Two new menu items have been added, and the "NK view" has been replaced by
+the new "Critical systems" view. To make this visible, change this:
+- Replace the "NK view" section with
+      ['Critical systems', '/hobbit-cgi/hobbit-nkview.sh'],
+  Note that this requires you to migrate your current "NK" tags in
+  the bb-hosts file to the new Critical Systems configuration file.
+  See the "Critical Systems" menu item in the "Help" menu.
+- In the "Reports" menu, after the "Config report" line, add
+      ['Metrics Report', '/hobbit-cgi/hobbit-hostgraphs.sh'],
+      ['Ghost Clients', '/hobbit-cgi/hobbit-ghosts.sh'],
+- In the "Administration" menu, after the "Enable/Disable" line, add
+      ['Edit critical systems', '/hobbit-seccgi/hobbit-nkedit.sh'],
+- In the "Help" menu, after the "Tips and Tricks" line, add
+      ['Custom graphs', '/hobbit/help/howtograph.html'],
+- In the "Help" menu, after the "Configuring Alerts" line, add
+      ['Critical systems', '/hobbit/help/criticalsystems.html'],
+      ['Custom graphs', '/hobbit/help/howtograph.html'],
+The "/hobbit-cgi" part of the URL may be different, depending on your setup.
+
+
+~hobbit/server/www/menu/menu_tpl.js
+---------------------------------
+The width of menu items need to be increased slightly. Change line 25
+of this file from "'width': 150" to "'width': 160".
+
+
+bb-services
+-----------
+The [spamd] definition had an erroneous "expect" string. It should
+be changed to
+   expect "SPAMD"
+
+A "cupsd" definition has been added to test the CUPS printing system.
+# CUPS print server. It answers to HTTP requests.
+[cupsd]
+   send "GET /printers\r\n"
+   expect "HTTP/1.1 200 OK"
+   port 631
+
+And an "AJP13" definition has been added for the Apache JServer 
+protocol version 1.3.
+# AJP (Apache JServ Protocol) 1.3 - sends an AJP "ping" request.
+# Ref: http://tomcat.apache.org/connectors-doc/common/ajpv13a.html
+# From Charles Goyard
+[ajp13]
+   send "\x12\x34\x00\x01\x0a"
+   expect "\x41\x42\x00\x01\x09"
+   port 8009
+
