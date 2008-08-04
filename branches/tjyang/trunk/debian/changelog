@@ -1,0 +1,115 @@
+hobbit (4.3.0-0.20080402) unstable; urgency=low
+
+  * Interim release for testing
+
+ -- Henrik Stoerner <henrik@hswn.dk>  Wed,  2 Apr 2008 12:56:00 +0200
+
+
+hobbit (4.3.0-0.20070402) unstable; urgency=low
+
+  * Interim release for CSC, to support Easter holiday
+    reduction in alerts.
+
+ -- Henrik Stoerner <henrik@hswn.dk>  Mon, 02 Apr 2007 11:12:00 +0100
+
+
+hobbit (4.3.0-0.20070202) unstable; urgency=low
+
+  * Interim release for CSC, to support off-loading of RRD
+    updates to multiple servers.
+
+ -- Henrik Stoerner <henrik@hswn.dk>  Fri, 02 Feb 2007 12:29:00 +0100
+
+
+hobbit (4.3.0-0.20061124) unstable; urgency=low
+
+  * Interim release for CSC, to support off-loading of RRD
+    updates to multiple servers.
+
+ -- Henrik Stoerner <henrik@hswn.dk>  Fri, 24 Nov 2006 10:08:00 +0100
+
+
+hobbit (4.2.0-2) unstable; urgency=low
+
+  * Patchset 2 for Hobbit 4.2.0
+
+ -- Henrik Stoerner <henrik@hswn.dk>  Tue, 03 Oct 2006 15:02:00 +0200
+
+hobbit (4.2.0-1) unstable; urgency=low
+
+  * Hobbit version 4.2: New upstream release.
+
+ -- Henrik Stoerner <henrik@hswn.dk>  Wed, 09 Aug 2006 21:48:00 +0200
+
+hobbit (4.2-RC-20060712) unstable; urgency=low
+
+  * Release candidate of 4.2
+
+ -- Henrik Stoerner <henrik@hswn.dk>  Wed, 12 Jul 2006 23:13:00 +0200
+
+hobbit (4.2-beta-20060605) unstable; urgency=low
+
+  * Beta release of 4.2
+
+ -- Henrik Stoerner <henrik@hswn.dk>  Mon, 05 Jun 2006 16:53:00 +0200
+
+hobbit (4.2-alfa-20060404) unstable; urgency=low
+
+  * Alfa release of 4.2
+
+ -- Henrik Stoerner <henrik@hswn.dk>  Tue, 04 Apr 2006 23:30:00 +0200
+
+hobbit (4.1.2p1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Henrik Stoerner <henrik@hswn.dk>  Thu, 10 Nov 2005 17:32:00 +0100
+
+hobbit (4.1.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Henrik Stoerner <henrik@hswn.dk>  Mon, 10 Oct 2005 22:30:00 +0200
+
+hobbit (4.1.1-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Henrik Stoerner <henrik@hswn.dk>  Mon, 25 Jul 2005 17:49:00 +0200
+
+hobbit (4.1.0-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Henrik Stoerner <henrik@hswn.dk>  Sun, 24 Jul 2005 23:27:00 +0200
+
+hobbit (4.0.4-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Henrik Stoerner <henrik@hswn.dk>  Sun, 29 May 2005 12:08:00 +0200
+
+hobbit (4.0.3-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Henrik Stoerner <henrik@hswn.dk>  Sun, 22 May 2005 09:34:57 +0200
+
+hobbit (4.0.2-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Henrik Stoerner <henrik@hswn.dk>  Sun, 10 Apr 2005 19:39:15 +0200
+
+hobbit (4.0.1-1) unstable; urgency=low
+
+  * Build problems fixed on Solaris, HP-UX
+  * Zoomed graphs could lose the hostname in the title.
+
+ -- Henrik Stoerner <henrik@hswn.dk>  Fri,  1 Apr 2005 07:43:42 +0200
+
+hobbit (4.0-1) unstable; urgency=low
+
+  * Upstream release of version 4.0
+
+ -- Henrik Stoerner <henrik@hswn.dk>  Wed, 30 Mar 2005 21:31:03 +0200
