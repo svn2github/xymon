@@ -38,7 +38,8 @@ WARNING:=2
 all: slides checkin
 
 # WHAT: 
-slides: hobbit-slides-developer.pdf 
+slides: hobbit-slides-developer.pdf  hobbit-slides-intro.pdf \
+        hobbit-slides-sysadmin.pdf
 
 # WHAT: 
 hobbit-slides-intro.pdf: hobbit-slides-intro.tex
