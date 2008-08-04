@@ -41,13 +41,15 @@ all: slides checkin
 slides: hobbit-slides-developer.pdf  hobbit-slides-intro.pdf \
         hobbit-slides-sysadmin.pdf
 
-# WHAT: 
+# WHAT: Hobbit Introduction Slides
 hobbit-slides-intro.pdf: hobbit-slides-intro.tex
 	pdflatex  hobbit-slides-intro.tex
 
+# WHAT: Hobbit Slides for Developer
 hobbit-slides-developer.pdf: hobbit-slides-developer.tex
 	pdflatex  hobbit-slides-developer.tex
 
+# WHAT: Hobbit Slides for System Administrators
 hobbit-slides-sysadmin.pdf: hobbit-slides-sysadmin.tex
 	pdflatex  hobbit-slides-sysadmin.tex
 
