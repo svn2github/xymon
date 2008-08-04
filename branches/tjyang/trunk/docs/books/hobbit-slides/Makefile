@@ -18,4 +18,7 @@ clean:
 upload: all 
 	sudo rsync -avz *.pdf  /var/www/html/pdf
 
+checkin: 
+	svn commit 
+
 
