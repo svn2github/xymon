@@ -62,5 +62,5 @@ checkin:
 	svn commit -m "auto checkin by Makefile"
 
 # WHAT:  use :svn status command"  to check which files are not committed.
-svnstatus:
+svnstatus: clean
 	svn status
