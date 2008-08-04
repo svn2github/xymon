@@ -1,8 +1,42 @@
+# -----------------------------------------------------------------------------
+#     M A K E F I L E     S C R I P T   S P E C I F I C A T I O N
+# -----------------------------------------------------------------------------
+# NAME
+#       Makefile 
+#
+# REVISION HISTORY
+#     08/04 2008 T.J. Yang Init
+# 
+# USAGE
+#       make
+#
+# DESCRIPTION
+#       This GNU makefile script will call up latex to generate pdf file using beamer 
+#       latex class.
+#       It will upload the tex and pdf files to hobbitmon sourceforge.net site.
+#
+# ---------------------------- CONSTANT DECLARATION ---------------------------
+#
+# WHAT: Define exit status flags.
+# WHY:  Easier to program with a mnemonic than with the numbers.
+# 
+#
+
+SUCCESS:=0
+ERROR:=1
+WARNING:=2
+
+## ---------------------------------- SCRIPT -----------------------------------
+##
+
+# WHAT: make slides and check in the modified files.
+
 all: slides checkin
 
-#slides: hobbit-slides-intro.pdf hobbit-slides-developer.pdf hobbit-slides-sysadmin.pdf
+# WHAT: 
 slides: hobbit-slides-developer.pdf 
 
+# WHAT: 
 hobbit-slides-intro.pdf: hobbit-slides-intro.tex
 	pdflatex  hobbit-slides-intro.tex
 
@@ -12,13 +46,14 @@ hobbit-slides-developer.pdf: hobbit-slides-developer.tex
 hobbit-slides-sysadmin.pdf: hobbit-slides-sysadmin.tex
 	pdflatex  hobbit-slides-sysadmin.tex
 
+# WHAT: clean up all the unwanted files.
 clean:
 	rm -rf 	*.{aux,log,nav,out,snm,toc,pdf} *~
 
-upload: all 
-	sudo rsync -avz *.pdf  /var/www/html/pdf
-
+# WHAT: use svn to checkin the changes and updated pdf file.
 checkin: 
 	svn commit -m "auto checkin by Makefile"
 
-
+# WHAT:  use :svn status command"  to check which files are not committed.
+svnstatus:
+	svn status
