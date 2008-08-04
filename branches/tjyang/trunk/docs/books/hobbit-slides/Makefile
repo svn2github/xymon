@@ -1,4 +1,4 @@
-all: slides
+all: slides checkin
 
 #slides: hobbit-slides-intro.pdf hobbit-slides-developer.pdf hobbit-slides-sysadmin.pdf
 slides: hobbit-slides-developer.pdf 
