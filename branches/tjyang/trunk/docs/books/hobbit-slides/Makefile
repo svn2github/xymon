@@ -11,7 +11,7 @@
 #       make
 #
 # DESCRIPTION
-#       This GNU makefile script will call up latex to generate pdf file using beamer 
+#       This GNU makefile script will call up pdflatex to generate pdf file using beamer 
 #       latex class.
 #       It will upload the tex and pdf files to hobbitmon sourceforge.net site.
 #
