@@ -13,7 +13,11 @@
 # DESCRIPTION
 #       This GNU makefile script will call up pdflatex to generate pdf file using beamer 
 #       latex class.
-#       It will upload the tex and pdf files to hobbitmon sourceforge.net site.
+#       Slides:
+#        1. hobbit-slides-developer.pdf 
+#        2. hobbit-slides-sysadmin.pdf 
+#        3. hobbit-slides-intro.pdf 
+#       It will upload the tex and generated pdf files to hobbitmon sourceforge.net site.
 #
 # ---------------------------- CONSTANT DECLARATION ---------------------------
 #
