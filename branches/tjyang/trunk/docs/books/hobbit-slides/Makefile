@@ -19,6 +19,6 @@ upload: all
 	sudo rsync -avz *.pdf  /var/www/html/pdf
 
 checkin: 
-	svn commit -m "checkin by Makefile"
+	svn commit -m "auto checkin by Makefile"
 
 
