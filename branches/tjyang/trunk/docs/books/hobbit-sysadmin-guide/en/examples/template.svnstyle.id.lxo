@@ -1,0 +1,2 @@
+$ \textbf{hg log -r0 --template '\{node\}'}
+2fe64ed16f8f667b336187bd5f7fa5f501fbc6ae

@@ -1,0 +1,66 @@
+\begin{thebibliography}{Gru05}
+
+\bibitem[AG]{web:quilt}
+Jean~Delvare Andreas~Gruenbacher, Martin~Quinson.
+\newblock Patchwork quilt.
+\newblock \url{http://savannah.nongnu.org/projects/quilt}.
+
+\bibitem[BI]{web:macpython}
+Ronald~Oussoren Bob~Ippolito.
+\newblock Universal macpython.
+\newblock
+  \url{http://bob.pythonmac.org/archives/2006/04/10/python-and-universal-binar%
+ies-on-mac-os-x/}.
+
+\bibitem[Bro]{web:wiggle}
+Neil Brown.
+\newblock \texttt{wiggle}--apply conflicting patches.
+\newblock \url{http://cgi.cse.unsw.edu.au/~neilb/source/wiggle/}.
+
+\bibitem[Dic]{web:diffstat}
+Thomas Dickey.
+\newblock \texttt{diffstat}--make a histogram of \texttt{diff} output.
+\newblock \url{http://dickey.his.com/diffstat/diffstat.html}.
+
+\bibitem[Dus]{web:mysql-python}
+Andy Dustman.
+\newblock Mysql for python.
+\newblock \url{http://sourceforge.net/projects/mysql-python}.
+
+\bibitem[Gru05]{gruenbacher:2005}
+Andreas Gruenbacher.
+\newblock How to survive with many patches (introduction to \texttt{quilt}).
+\newblock \url{http://www.suse.de/~agruen/quilt.pdf}, June 2005.
+
+\bibitem[Mas]{web:mpatch}
+Chris Mason.
+\newblock \texttt{mpatch}--help solve patch rejects.
+\newblock \url{http://oss.oracle.com/~mason/mpatch/}.
+
+\bibitem[O'S06]{web:europython}
+Bryan O'Sullivan.
+\newblock Achieving high performance in mercurial.
+\newblock In {\em EuroPython Conference}, July 2006.
+\newblock \url{XXX}.
+
+\bibitem[Pyt]{web:configparser}
+Python.org.
+\newblock \texttt{ConfigParser}---configuration file parser.
+\newblock \url{http://docs.python.org/lib/module-ConfigParser.html}.
+
+\bibitem[RS]{web:changelog}
+GNU Project~volunteers Richard~Stallman.
+\newblock Gnu coding standards---change logs.
+\newblock \url{http://www.gnu.org/prep/standards/html_node/Change-Logs.html}.
+
+\bibitem[Tat]{web:putty}
+Simon Tatham.
+\newblock Putty---open source ssh client for windows.
+\newblock \url{http://www.chiark.greenend.org.uk/~sgtatham/putty/}.
+
+\bibitem[Wau]{web:patchutils}
+Tim Waugh.
+\newblock \texttt{patchutils}--programs that operate on patch files.
+\newblock \url{http://cyberelk.net/tim/patchutils/}.
+
+\end{thebibliography}

@@ -1,0 +1,11 @@
+$ \textbf{echo something > somefile}
+$ \textbf{hg commit -A -m 'New file'}
+adding somefile
+$ \textbf{hg heads}
+changeset:   3:1ea29e5556a0
+branch:      bar
+tag:         tip
+user:        Bryan O'Sullivan <bos@serpentine.com>
+date:        Sun Apr 27 00:04:10 2008 +0000
+summary:     New file
+

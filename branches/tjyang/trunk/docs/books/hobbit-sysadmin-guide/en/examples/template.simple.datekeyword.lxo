@@ -1,0 +1,4 @@
+$ \textbf{hg log -r1 --template 'date: \{date\}\textbackslash{}n'}
+date: 1209254666.00
+$ \textbf{hg log -r1 --template 'date: \{date|isodate\}\textbackslash{}n'}
+date: 2008-04-27 00:04 +0000

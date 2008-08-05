@@ -1,0 +1,369 @@
+\BOOKMARK [0][-]{section*.1}{Contents}{}
+\BOOKMARK [0][-]{chapter*.4}{Preface}{}
+\BOOKMARK [1][-]{section.0.1}{This book is a work in progress}{chapter*.4}
+\BOOKMARK [1][-]{section.0.2}{About the examples in this book}{chapter*.4}
+\BOOKMARK [1][-]{section.0.3}{Colophon---this book is Free}{chapter*.4}
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}
+\BOOKMARK [1][-]{section.1.1}{About revision control}{chapter.1}
+\BOOKMARK [2][-]{subsection.1.1.1}{Why use revision control?}{section.1.1}
+\BOOKMARK [2][-]{subsection.1.1.2}{The many names of revision control}{section.1.1}
+\BOOKMARK [1][-]{section.1.2}{A short history of revision control}{chapter.1}
+\BOOKMARK [1][-]{section.1.3}{Trends in revision control}{chapter.1}
+\BOOKMARK [1][-]{section.1.4}{A few of the advantages of distributed revision control}{chapter.1}
+\BOOKMARK [2][-]{subsection.1.4.1}{Advantages for open source projects}{section.1.4}
+\BOOKMARK [2][-]{subsection.1.4.2}{Advantages for commercial projects}{section.1.4}
+\BOOKMARK [1][-]{section.1.5}{Why choose Mercurial?}{chapter.1}
+\BOOKMARK [1][-]{section.1.6}{Mercurial compared with other tools}{chapter.1}
+\BOOKMARK [2][-]{subsection.1.6.1}{Subversion}{section.1.6}
+\BOOKMARK [2][-]{subsection.1.6.2}{Git}{section.1.6}
+\BOOKMARK [2][-]{subsection.1.6.3}{CVS}{section.1.6}
+\BOOKMARK [2][-]{subsection.1.6.4}{Commercial tools}{section.1.6}
+\BOOKMARK [2][-]{subsection.1.6.5}{Choosing a revision control tool}{section.1.6}
+\BOOKMARK [1][-]{section.1.7}{Switching from another tool to Mercurial}{chapter.1}
+\BOOKMARK [0][-]{chapter.2}{Hobbit Client}{}
+\BOOKMARK [1][-]{section.2.1}{Hobbit Client installation}{chapter.2}
+\BOOKMARK [1][-]{section.2.2}{Hobbit Client Architecture}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.2.1}{Factors to keep in mind}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.2}{Informal anarchy}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.3}{A single central repository}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.4}{Working with multiple branches}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.5}{Feature branches}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.6}{The release train}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.7}{The Linux kernel model}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.8}{Pull-only versus shared-push collaboration}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.9}{Where collaboration meets branch management}{section.2.2}
+\BOOKMARK [1][-]{section.2.3}{The technical side of sharing}{chapter.2}
+\BOOKMARK [1][-]{section.2.4}{Informal sharing with ``hg serve''}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.4.1}{A few things to keep in mind}{section.2.4}
+\BOOKMARK [1][-]{section.2.5}{Using the Secure Shell \(ssh\) protocol}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.5.1}{How to read and write ssh URLs}{section.2.5}
+\BOOKMARK [2][-]{subsection.2.5.2}{Finding an ssh client for your system}{section.2.5}
+\BOOKMARK [2][-]{subsection.2.5.3}{Generating a key pair}{section.2.5}
+\BOOKMARK [2][-]{subsection.2.5.4}{Using an authentication agent}{section.2.5}
+\BOOKMARK [2][-]{subsection.2.5.5}{Configuring the server side properly}{section.2.5}
+\BOOKMARK [2][-]{subsection.2.5.6}{Using compression with ssh}{section.2.5}
+\BOOKMARK [1][-]{section.2.6}{Serving over HTTP using CGI}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.6.1}{Web server configuration checklist}{section.2.6}
+\BOOKMARK [2][-]{subsection.2.6.2}{Basic CGI configuration}{section.2.6}
+\BOOKMARK [2][-]{subsection.2.6.3}{Sharing multiple repositories with one CGI script}{section.2.6}
+\BOOKMARK [2][-]{subsection.2.6.4}{Downloading source archives}{section.2.6}
+\BOOKMARK [2][-]{subsection.2.6.5}{Web configuration options}{section.2.6}
+\BOOKMARK [0][-]{chapter.3}{Hobbit Server }{}
+\BOOKMARK [1][-]{section.3.1}{Hobbit Client installation}{chapter.3}
+\BOOKMARK [1][-]{section.3.2}{Hobbit Client Architecture}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.2.1}{Factors to keep in mind}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.2}{Informal anarchy}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.3}{A single central repository}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.4}{Working with multiple branches}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.5}{Feature branches}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.6}{The release train}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.7}{The Linux kernel model}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.8}{Pull-only versus shared-push collaboration}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.9}{Where collaboration meets branch management}{section.3.2}
+\BOOKMARK [1][-]{section.3.3}{The technical side of sharing}{chapter.3}
+\BOOKMARK [1][-]{section.3.4}{Informal sharing with ``hg serve''}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.4.1}{A few things to keep in mind}{section.3.4}
+\BOOKMARK [1][-]{section.3.5}{Using the Secure Shell \(ssh\) protocol}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.5.1}{How to read and write ssh URLs}{section.3.5}
+\BOOKMARK [2][-]{subsection.3.5.2}{Finding an ssh client for your system}{section.3.5}
+\BOOKMARK [2][-]{subsection.3.5.3}{Generating a key pair}{section.3.5}
+\BOOKMARK [2][-]{subsection.3.5.4}{Using an authentication agent}{section.3.5}
+\BOOKMARK [2][-]{subsection.3.5.5}{Configuring the server side properly}{section.3.5}
+\BOOKMARK [2][-]{subsection.3.5.6}{Using compression with ssh}{section.3.5}
+\BOOKMARK [1][-]{section.3.6}{Serving over HTTP using CGI}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.6.1}{Web server configuration checklist}{section.3.6}
+\BOOKMARK [2][-]{subsection.3.6.2}{Basic CGI configuration}{section.3.6}
+\BOOKMARK [2][-]{subsection.3.6.3}{Sharing multiple repositories with one CGI script}{section.3.6}
+\BOOKMARK [2][-]{subsection.3.6.4}{Downloading source archives}{section.3.6}
+\BOOKMARK [2][-]{subsection.3.6.5}{Web configuration options}{section.3.6}
+\BOOKMARK [0][-]{chapter.4}{System Monitoring Requirements}{}
+\BOOKMARK [1][-]{section.4.1}{Web GUI of Hobbit}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.1.1}{Linux}{section.4.1}
+\BOOKMARK [2][-]{subsection.4.1.2}{Solaris}{section.4.1}
+\BOOKMARK [2][-]{subsection.4.1.3}{Mac OS X}{section.4.1}
+\BOOKMARK [2][-]{subsection.4.1.4}{Windows}{section.4.1}
+\BOOKMARK [1][-]{section.4.2}{Getting started}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.2.1}{Built-in help}{section.4.2}
+\BOOKMARK [1][-]{section.4.3}{Working with a repository}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.3.1}{Making a local copy of a repository}{section.4.3}
+\BOOKMARK [2][-]{subsection.4.3.2}{What's in a repository?}{section.4.3}
+\BOOKMARK [1][-]{section.4.4}{A tour through history}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.4.1}{Changesets, revisions, and talking to other people}{section.4.4}
+\BOOKMARK [2][-]{subsection.4.4.2}{Viewing specific revisions}{section.4.4}
+\BOOKMARK [2][-]{subsection.4.4.3}{More detailed information}{section.4.4}
+\BOOKMARK [1][-]{section.4.5}{All about command options}{chapter.4}
+\BOOKMARK [1][-]{section.4.6}{Making and reviewing changes}{chapter.4}
+\BOOKMARK [1][-]{section.4.7}{Recording changes in a new changeset}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.7.1}{Setting up a username}{section.4.7}
+\BOOKMARK [2][-]{subsection.4.7.2}{Writing a commit message}{section.4.7}
+\BOOKMARK [2][-]{subsection.4.7.3}{Writing a good commit message}{section.4.7}
+\BOOKMARK [2][-]{subsection.4.7.4}{Aborting a commit}{section.4.7}
+\BOOKMARK [2][-]{subsection.4.7.5}{Admiring our new handiwork}{section.4.7}
+\BOOKMARK [1][-]{section.4.8}{Sharing changes}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.8.1}{Pulling changes from another repository}{section.4.8}
+\BOOKMARK [2][-]{subsection.4.8.2}{Updating the working directory}{section.4.8}
+\BOOKMARK [2][-]{subsection.4.8.3}{Pushing changes to another repository}{section.4.8}
+\BOOKMARK [2][-]{subsection.4.8.4}{Sharing changes over a network}{section.4.8}
+\BOOKMARK [0][-]{chapter.5}{A tour of Mercurial: merging work}{}
+\BOOKMARK [1][-]{section.5.1}{Merging streams of work}{chapter.5}
+\BOOKMARK [2][-]{subsection.5.1.1}{Head changesets}{section.5.1}
+\BOOKMARK [2][-]{subsection.5.1.2}{Performing the merge}{section.5.1}
+\BOOKMARK [2][-]{subsection.5.1.3}{Committing the results of the merge}{section.5.1}
+\BOOKMARK [1][-]{section.5.2}{Merging conflicting changes}{chapter.5}
+\BOOKMARK [2][-]{subsection.5.2.1}{Using a graphical merge tool}{section.5.2}
+\BOOKMARK [2][-]{subsection.5.2.2}{A worked example}{section.5.2}
+\BOOKMARK [1][-]{section.5.3}{Simplifying the pull-merge-commit sequence}{chapter.5}
+\BOOKMARK [0][-]{chapter.6}{Behind the scenes}{}
+\BOOKMARK [1][-]{section.6.1}{Mercurial's historical record}{chapter.6}
+\BOOKMARK [2][-]{subsection.6.1.1}{Tracking the history of a single file}{section.6.1}
+\BOOKMARK [2][-]{subsection.6.1.2}{Managing tracked files}{section.6.1}
+\BOOKMARK [2][-]{subsection.6.1.3}{Recording changeset information}{section.6.1}
+\BOOKMARK [2][-]{subsection.6.1.4}{Relationships between revisions}{section.6.1}
+\BOOKMARK [1][-]{section.6.2}{Safe, efficient storage}{chapter.6}
+\BOOKMARK [2][-]{subsection.6.2.1}{Efficient storage}{section.6.2}
+\BOOKMARK [2][-]{subsection.6.2.2}{Safe operation}{section.6.2}
+\BOOKMARK [2][-]{subsection.6.2.3}{Fast retrieval}{section.6.2}
+\BOOKMARK [2][-]{subsection.6.2.4}{Identification and strong integrity}{section.6.2}
+\BOOKMARK [1][-]{section.6.3}{Revision history, branching, and merging}{chapter.6}
+\BOOKMARK [1][-]{section.6.4}{The working directory}{chapter.6}
+\BOOKMARK [2][-]{subsection.6.4.1}{What happens when you commit}{section.6.4}
+\BOOKMARK [2][-]{subsection.6.4.2}{Creating a new head}{section.6.4}
+\BOOKMARK [2][-]{subsection.6.4.3}{Merging heads}{section.6.4}
+\BOOKMARK [1][-]{section.6.5}{Other interesting design features}{chapter.6}
+\BOOKMARK [2][-]{subsection.6.5.1}{Clever compression}{section.6.5}
+\BOOKMARK [2][-]{subsection.6.5.2}{Read/write ordering and atomicity}{section.6.5}
+\BOOKMARK [2][-]{subsection.6.5.3}{Concurrent access}{section.6.5}
+\BOOKMARK [2][-]{subsection.6.5.4}{Avoiding seeks}{section.6.5}
+\BOOKMARK [2][-]{subsection.6.5.5}{Other contents of the dirstate}{section.6.5}
+\BOOKMARK [0][-]{chapter.7}{Hobbit Administration Guide}{}
+\BOOKMARK [1][-]{section.7.1}{Telling Mercurial which files to track}{chapter.7}
+\BOOKMARK [2][-]{subsection.7.1.1}{Explicit versus implicit file naming}{section.7.1}
+\BOOKMARK [2][-]{subsection.7.1.2}{Aside: Mercurial tracks files, not directories}{section.7.1}
+\BOOKMARK [1][-]{section.7.2}{How to stop tracking a file}{chapter.7}
+\BOOKMARK [2][-]{subsection.7.2.1}{Removing a file does not affect its history}{section.7.2}
+\BOOKMARK [2][-]{subsection.7.2.2}{Missing files}{section.7.2}
+\BOOKMARK [2][-]{subsection.7.2.3}{Aside: why tell Mercurial explicitly to remove a file?}{section.7.2}
+\BOOKMARK [2][-]{subsection.7.2.4}{Useful shorthand---adding and removing files in one step}{section.7.2}
+\BOOKMARK [1][-]{section.7.3}{Copying files}{chapter.7}
+\BOOKMARK [2][-]{subsection.7.3.1}{The results of copying during a merge}{section.7.3}
+\BOOKMARK [2][-]{subsection.7.3.2}{Why should changes follow copies?}{section.7.3}
+\BOOKMARK [2][-]{subsection.7.3.3}{How to make changes not follow a copy}{section.7.3}
+\BOOKMARK [2][-]{subsection.7.3.4}{Behaviour of the ``hg copy'' command}{section.7.3}
+\BOOKMARK [1][-]{section.7.4}{Renaming files}{chapter.7}
+\BOOKMARK [2][-]{subsection.7.4.1}{Renaming files and merging changes}{section.7.4}
+\BOOKMARK [2][-]{subsection.7.4.2}{Divergent renames and merging}{section.7.4}
+\BOOKMARK [2][-]{subsection.7.4.3}{Convergent renames and merging}{section.7.4}
+\BOOKMARK [2][-]{subsection.7.4.4}{Other name-related corner cases}{section.7.4}
+\BOOKMARK [1][-]{section.7.5}{Recovering from mistakes}{chapter.7}
+\BOOKMARK [0][-]{chapter.8}{File names and pattern matching}{}
+\BOOKMARK [1][-]{section.8.1}{Simple file naming}{chapter.8}
+\BOOKMARK [1][-]{section.8.2}{Running commands without any file names}{chapter.8}
+\BOOKMARK [1][-]{section.8.3}{Telling you what's going on}{chapter.8}
+\BOOKMARK [1][-]{section.8.4}{Using patterns to identify files}{chapter.8}
+\BOOKMARK [2][-]{subsection.8.4.1}{Shell-style glob patterns}{section.8.4}
+\BOOKMARK [2][-]{subsection.8.4.2}{Regular expression matching with re patterns}{section.8.4}
+\BOOKMARK [1][-]{section.8.5}{Filtering files}{chapter.8}
+\BOOKMARK [1][-]{section.8.6}{Ignoring unwanted files and directories}{chapter.8}
+\BOOKMARK [1][-]{section.8.7}{Case sensitivity}{chapter.8}
+\BOOKMARK [2][-]{subsection.8.7.1}{Safe, portable repository storage}{section.8.7}
+\BOOKMARK [2][-]{subsection.8.7.2}{Detecting case conflicts}{section.8.7}
+\BOOKMARK [2][-]{subsection.8.7.3}{Fixing a case conflict}{section.8.7}
+\BOOKMARK [0][-]{chapter.9}{Managing releases and branchy development}{}
+\BOOKMARK [1][-]{section.9.1}{Giving a persistent name to a revision}{chapter.9}
+\BOOKMARK [2][-]{subsection.9.1.1}{Handling tag conflicts during a merge}{section.9.1}
+\BOOKMARK [2][-]{subsection.9.1.2}{Tags and cloning}{section.9.1}
+\BOOKMARK [2][-]{subsection.9.1.3}{When permanent tags are too much}{section.9.1}
+\BOOKMARK [1][-]{section.9.2}{The flow of changes---big picture vs. little}{chapter.9}
+\BOOKMARK [1][-]{section.9.3}{Managing big-picture branches in repositories}{chapter.9}
+\BOOKMARK [1][-]{section.9.4}{Don't repeat yourself: merging across branches}{chapter.9}
+\BOOKMARK [1][-]{section.9.5}{Naming branches within one repository}{chapter.9}
+\BOOKMARK [1][-]{section.9.6}{Dealing with multiple named branches in a repository}{chapter.9}
+\BOOKMARK [1][-]{section.9.7}{Branch names and merging}{chapter.9}
+\BOOKMARK [1][-]{section.9.8}{Branch naming is generally useful}{chapter.9}
+\BOOKMARK [0][-]{chapter.10}{Finding and fixing your mistakes}{}
+\BOOKMARK [1][-]{section.10.1}{Erasing local history}{chapter.10}
+\BOOKMARK [2][-]{subsection.10.1.1}{The accidental commit}{section.10.1}
+\BOOKMARK [2][-]{subsection.10.1.2}{Rolling back a transaction}{section.10.1}
+\BOOKMARK [2][-]{subsection.10.1.3}{The erroneous pull}{section.10.1}
+\BOOKMARK [2][-]{subsection.10.1.4}{Rolling back is useless once you've pushed}{section.10.1}
+\BOOKMARK [2][-]{subsection.10.1.5}{You can only roll back once}{section.10.1}
+\BOOKMARK [1][-]{section.10.2}{Reverting the mistaken change}{chapter.10}
+\BOOKMARK [2][-]{subsection.10.2.1}{File management errors}{section.10.2}
+\BOOKMARK [1][-]{section.10.3}{Dealing with committed changes}{chapter.10}
+\BOOKMARK [2][-]{subsection.10.3.1}{Backing out a changeset}{section.10.3}
+\BOOKMARK [2][-]{subsection.10.3.2}{Backing out the tip changeset}{section.10.3}
+\BOOKMARK [2][-]{subsection.10.3.3}{Backing out a non-tip change}{section.10.3}
+\BOOKMARK [2][-]{subsection.10.3.4}{Gaining more control of the backout process}{section.10.3}
+\BOOKMARK [2][-]{subsection.10.3.5}{Why ``hg backout'' works as it does}{section.10.3}
+\BOOKMARK [1][-]{section.10.4}{Changes that should never have been}{chapter.10}
+\BOOKMARK [2][-]{subsection.10.4.1}{Protect yourself from ``escaped'' changes}{section.10.4}
+\BOOKMARK [1][-]{section.10.5}{Finding the source of a bug}{chapter.10}
+\BOOKMARK [2][-]{subsection.10.5.1}{Using the ``hg bisect'' command}{section.10.5}
+\BOOKMARK [2][-]{subsection.10.5.2}{Cleaning up after your search}{section.10.5}
+\BOOKMARK [1][-]{section.10.6}{Tips for finding bugs effectively}{chapter.10}
+\BOOKMARK [2][-]{subsection.10.6.1}{Give consistent input}{section.10.6}
+\BOOKMARK [2][-]{subsection.10.6.2}{Automate as much as possible}{section.10.6}
+\BOOKMARK [2][-]{subsection.10.6.3}{Check your results}{section.10.6}
+\BOOKMARK [2][-]{subsection.10.6.4}{Beware interference between bugs}{section.10.6}
+\BOOKMARK [2][-]{subsection.10.6.5}{Bracket your search lazily}{section.10.6}
+\BOOKMARK [0][-]{chapter.11}{Handling repository events with hooks}{}
+\BOOKMARK [1][-]{section.11.1}{An overview of hooks in Mercurial}{chapter.11}
+\BOOKMARK [1][-]{section.11.2}{Hooks and security}{chapter.11}
+\BOOKMARK [2][-]{subsection.11.2.1}{Hooks are run with your privileges}{section.11.2}
+\BOOKMARK [2][-]{subsection.11.2.2}{Hooks do not propagate}{section.11.2}
+\BOOKMARK [2][-]{subsection.11.2.3}{Hooks can be overridden}{section.11.2}
+\BOOKMARK [2][-]{subsection.11.2.4}{Ensuring that critical hooks are run}{section.11.2}
+\BOOKMARK [1][-]{section.11.3}{Care with pretxn hooks in a shared-access repository}{chapter.11}
+\BOOKMARK [2][-]{subsection.11.3.1}{The problem illustrated}{section.11.3}
+\BOOKMARK [1][-]{section.11.4}{A short tutorial on using hooks}{chapter.11}
+\BOOKMARK [2][-]{subsection.11.4.1}{Performing multiple actions per event}{section.11.4}
+\BOOKMARK [2][-]{subsection.11.4.2}{Controlling whether an activity can proceed}{section.11.4}
+\BOOKMARK [1][-]{section.11.5}{Writing your own hooks}{chapter.11}
+\BOOKMARK [2][-]{subsection.11.5.1}{Choosing how your hook should run}{section.11.5}
+\BOOKMARK [2][-]{subsection.11.5.2}{Hook parameters}{section.11.5}
+\BOOKMARK [2][-]{subsection.11.5.3}{Hook return values and activity control}{section.11.5}
+\BOOKMARK [2][-]{subsection.11.5.4}{Writing an external hook}{section.11.5}
+\BOOKMARK [2][-]{subsection.11.5.5}{Telling Mercurial to use an in-process hook}{section.11.5}
+\BOOKMARK [2][-]{subsection.11.5.6}{Writing an in-process hook}{section.11.5}
+\BOOKMARK [1][-]{section.11.6}{Some hook examples}{chapter.11}
+\BOOKMARK [2][-]{subsection.11.6.1}{Writing meaningful commit messages}{section.11.6}
+\BOOKMARK [2][-]{subsection.11.6.2}{Checking for trailing whitespace}{section.11.6}
+\BOOKMARK [1][-]{section.11.7}{Bundled hooks}{chapter.11}
+\BOOKMARK [2][-]{subsection.11.7.1}{acl---access control for parts of a repository}{section.11.7}
+\BOOKMARK [2][-]{subsection.11.7.2}{bugzilla---integration with Bugzilla}{section.11.7}
+\BOOKMARK [2][-]{subsection.11.7.3}{notify---send email notifications}{section.11.7}
+\BOOKMARK [1][-]{section.11.8}{Information for writers of hooks}{chapter.11}
+\BOOKMARK [2][-]{subsection.11.8.1}{In-process hook execution}{section.11.8}
+\BOOKMARK [2][-]{subsection.11.8.2}{External hook execution}{section.11.8}
+\BOOKMARK [2][-]{subsection.11.8.3}{Finding out where changesets come from}{section.11.8}
+\BOOKMARK [1][-]{section.11.9}{Hook reference}{chapter.11}
+\BOOKMARK [2][-]{subsection.11.9.1}{changegroup---after remote changesets added}{section.11.9}
+\BOOKMARK [2][-]{subsection.11.9.2}{commit---after a new changeset is created}{section.11.9}
+\BOOKMARK [2][-]{subsection.11.9.3}{incoming---after one remote changeset is added}{section.11.9}
+\BOOKMARK [2][-]{subsection.11.9.4}{outgoing---after changesets are propagated}{section.11.9}
+\BOOKMARK [2][-]{subsection.11.9.5}{prechangegroup---before starting to add remote changesets}{section.11.9}
+\BOOKMARK [2][-]{subsection.11.9.6}{precommit---before starting to commit a changeset}{section.11.9}
+\BOOKMARK [2][-]{subsection.11.9.7}{preoutgoing---before starting to propagate changesets}{section.11.9}
+\BOOKMARK [2][-]{subsection.11.9.8}{pretag---before tagging a changeset}{section.11.9}
+\BOOKMARK [2][-]{subsection.11.9.9}{pretxnchangegroup---before completing addition of remote changesets}{section.11.9}
+\BOOKMARK [2][-]{subsection.11.9.10}{pretxncommit---before completing commit of new changeset}{section.11.9}
+\BOOKMARK [2][-]{subsection.11.9.11}{preupdate---before updating or merging working directory}{section.11.9}
+\BOOKMARK [2][-]{subsection.11.9.12}{tag---after tagging a changeset}{section.11.9}
+\BOOKMARK [2][-]{subsection.11.9.13}{update---after updating or merging working directory}{section.11.9}
+\BOOKMARK [0][-]{chapter.12}{Customising the output of Mercurial}{}
+\BOOKMARK [1][-]{section.12.1}{Using precanned output styles}{chapter.12}
+\BOOKMARK [2][-]{subsection.12.1.1}{Setting a default style}{section.12.1}
+\BOOKMARK [1][-]{section.12.2}{Commands that support styles and templates}{chapter.12}
+\BOOKMARK [1][-]{section.12.3}{The basics of templating}{chapter.12}
+\BOOKMARK [1][-]{section.12.4}{Common template keywords}{chapter.12}
+\BOOKMARK [1][-]{section.12.5}{Escape sequences}{chapter.12}
+\BOOKMARK [1][-]{section.12.6}{Filtering keywords to change their results}{chapter.12}
+\BOOKMARK [2][-]{subsection.12.6.1}{Combining filters}{section.12.6}
+\BOOKMARK [1][-]{section.12.7}{From templates to styles}{chapter.12}
+\BOOKMARK [2][-]{subsection.12.7.1}{The simplest of style files}{section.12.7}
+\BOOKMARK [2][-]{subsection.12.7.2}{Style file syntax}{section.12.7}
+\BOOKMARK [1][-]{section.12.8}{Style files by example}{chapter.12}
+\BOOKMARK [2][-]{subsection.12.8.1}{Identifying mistakes in style files}{section.12.8}
+\BOOKMARK [2][-]{subsection.12.8.2}{Uniquely identifying a repository}{section.12.8}
+\BOOKMARK [2][-]{subsection.12.8.3}{Mimicking Subversion's output}{section.12.8}
+\BOOKMARK [0][-]{chapter.13}{Managing change with Mercurial Queues}{}
+\BOOKMARK [1][-]{section.13.1}{The patch management problem}{chapter.13}
+\BOOKMARK [1][-]{section.13.2}{The prehistory of Mercurial Queues}{chapter.13}
+\BOOKMARK [2][-]{subsection.13.2.1}{A patchwork quilt}{section.13.2}
+\BOOKMARK [2][-]{subsection.13.2.2}{From patchwork quilt to Mercurial Queues}{section.13.2}
+\BOOKMARK [1][-]{section.13.3}{The huge advantage of MQ}{chapter.13}
+\BOOKMARK [1][-]{section.13.4}{Understanding patches}{chapter.13}
+\BOOKMARK [1][-]{section.13.5}{Getting started with Mercurial Queues}{chapter.13}
+\BOOKMARK [2][-]{subsection.13.5.1}{Creating a new patch}{section.13.5}
+\BOOKMARK [2][-]{subsection.13.5.2}{Refreshing a patch}{section.13.5}
+\BOOKMARK [2][-]{subsection.13.5.3}{Stacking and tracking patches}{section.13.5}
+\BOOKMARK [2][-]{subsection.13.5.4}{Manipulating the patch stack}{section.13.5}
+\BOOKMARK [2][-]{subsection.13.5.5}{Pushing and popping many patches}{section.13.5}
+\BOOKMARK [2][-]{subsection.13.5.6}{Safety checks, and overriding them}{section.13.5}
+\BOOKMARK [2][-]{subsection.13.5.7}{Working on several patches at once}{section.13.5}
+\BOOKMARK [1][-]{section.13.6}{More about patches}{chapter.13}
+\BOOKMARK [2][-]{subsection.13.6.1}{The strip count}{section.13.6}
+\BOOKMARK [2][-]{subsection.13.6.2}{Strategies for applying a patch}{section.13.6}
+\BOOKMARK [2][-]{subsection.13.6.3}{Some quirks of patch representation}{section.13.6}
+\BOOKMARK [2][-]{subsection.13.6.4}{Beware the fuzz}{section.13.6}
+\BOOKMARK [2][-]{subsection.13.6.5}{Handling rejection}{section.13.6}
+\BOOKMARK [1][-]{section.13.7}{Getting the best performance out of MQ}{chapter.13}
+\BOOKMARK [1][-]{section.13.8}{Updating your patches when the underlying code changes}{chapter.13}
+\BOOKMARK [1][-]{section.13.9}{Identifying patches}{chapter.13}
+\BOOKMARK [1][-]{section.13.10}{Useful things to know about}{chapter.13}
+\BOOKMARK [1][-]{section.13.11}{Managing patches in a repository}{chapter.13}
+\BOOKMARK [2][-]{subsection.13.11.1}{MQ support for patch repositories}{section.13.11}
+\BOOKMARK [2][-]{subsection.13.11.2}{A few things to watch out for}{section.13.11}
+\BOOKMARK [1][-]{section.13.12}{Third party tools for working with patches}{chapter.13}
+\BOOKMARK [1][-]{section.13.13}{Good ways to work with patches}{chapter.13}
+\BOOKMARK [1][-]{section.13.14}{MQ cookbook}{chapter.13}
+\BOOKMARK [2][-]{subsection.13.14.1}{Manage ``trivial'' patches}{section.13.14}
+\BOOKMARK [2][-]{subsection.13.14.2}{Combining entire patches}{section.13.14}
+\BOOKMARK [2][-]{subsection.13.14.3}{Merging part of one patch into another}{section.13.14}
+\BOOKMARK [1][-]{section.13.15}{Differences between quilt and MQ}{chapter.13}
+\BOOKMARK [0][-]{chapter.14}{Advanced uses of Mercurial Queues}{}
+\BOOKMARK [1][-]{section.14.1}{The problem of many targets}{chapter.14}
+\BOOKMARK [2][-]{subsection.14.1.1}{Tempting approaches that don't work well}{section.14.1}
+\BOOKMARK [1][-]{section.14.2}{Conditionally applying patches with guards}{chapter.14}
+\BOOKMARK [1][-]{section.14.3}{Controlling the guards on a patch}{chapter.14}
+\BOOKMARK [1][-]{section.14.4}{Selecting the guards to use}{chapter.14}
+\BOOKMARK [1][-]{section.14.5}{MQ's rules for applying patches}{chapter.14}
+\BOOKMARK [1][-]{section.14.6}{Trimming the work environment}{chapter.14}
+\BOOKMARK [1][-]{section.14.7}{Dividing up the series file}{chapter.14}
+\BOOKMARK [1][-]{section.14.8}{Maintaining the patch series}{chapter.14}
+\BOOKMARK [2][-]{subsection.14.8.1}{The art of writing backport patches}{section.14.8}
+\BOOKMARK [1][-]{section.14.9}{Useful tips for developing with MQ}{chapter.14}
+\BOOKMARK [2][-]{subsection.14.9.1}{Organising patches in directories}{section.14.9}
+\BOOKMARK [2][-]{subsection.14.9.2}{Viewing the history of a patch}{section.14.9}
+\BOOKMARK [0][-]{chapter.15}{Adding functionality with extensions}{}
+\BOOKMARK [1][-]{section.15.1}{Improve performance with the inotify extension}{chapter.15}
+\BOOKMARK [1][-]{section.15.2}{Flexible diff support with the extdiff extension}{chapter.15}
+\BOOKMARK [2][-]{subsection.15.2.1}{Defining command aliases}{section.15.2}
+\BOOKMARK [1][-]{section.15.3}{Cherrypicking changes with the transplant extension}{chapter.15}
+\BOOKMARK [1][-]{section.15.4}{Send changes via email with the patchbomb extension}{chapter.15}
+\BOOKMARK [2][-]{subsection.15.4.1}{Changing the behaviour of patchbombs}{section.15.4}
+\BOOKMARK [0][-]{appendix.A}{Command reference}{}
+\BOOKMARK [1][-]{section.A.1}{``hg add''---add files at the next commit}{appendix.A}
+\BOOKMARK [1][-]{section.A.2}{``hg diff''---print changes in history or working directory}{appendix.A}
+\BOOKMARK [2][-]{subsection.A.2.1}{Options}{section.A.2}
+\BOOKMARK [1][-]{section.A.3}{``hg version''---print version and copyright information}{appendix.A}
+\BOOKMARK [2][-]{subsection.A.3.1}{Tips and tricks}{section.A.3}
+\BOOKMARK [0][-]{appendix.B}{Mercurial Queues reference}{}
+\BOOKMARK [1][-]{section.B.1}{MQ command reference}{appendix.B}
+\BOOKMARK [2][-]{subsection.B.1.1}{``hg qapplied''---print applied patches}{section.B.1}
+\BOOKMARK [2][-]{subsection.B.1.2}{``hg qcommit''---commit changes in the queue repository}{section.B.1}
+\BOOKMARK [2][-]{subsection.B.1.3}{``hg qdelete''---delete a patch from the series file}{section.B.1}
+\BOOKMARK [2][-]{subsection.B.1.4}{``hg qdiff''---print a diff of the topmost applied patch}{section.B.1}
+\BOOKMARK [2][-]{subsection.B.1.5}{``hg qfold''---merge \(``fold''\) several patches into one}{section.B.1}
+\BOOKMARK [2][-]{subsection.B.1.6}{``hg qheader''---display the header/description of a patch}{section.B.1}
+\BOOKMARK [2][-]{subsection.B.1.7}{``hg qimport''---import a third-party patch into the queue}{section.B.1}
+\BOOKMARK [2][-]{subsection.B.1.8}{``hg qinit''---prepare a repository to work with MQ}{section.B.1}
+\BOOKMARK [2][-]{subsection.B.1.9}{``hg qnew''---create a new patch}{section.B.1}
+\BOOKMARK [2][-]{subsection.B.1.10}{``hg qnext''---print the name of the next patch}{section.B.1}
+\BOOKMARK [2][-]{subsection.B.1.11}{``hg qpop''---pop patches off the stack}{section.B.1}
+\BOOKMARK [2][-]{subsection.B.1.12}{``hg qprev''---print the name of the previous patch}{section.B.1}
+\BOOKMARK [2][-]{subsection.B.1.13}{``hg qpush''---push patches onto the stack}{section.B.1}
+\BOOKMARK [2][-]{subsection.B.1.14}{``hg qrefresh''---update the topmost applied patch}{section.B.1}
+\BOOKMARK [2][-]{subsection.B.1.15}{``hg qrename''---rename a patch}{section.B.1}
+\BOOKMARK [2][-]{subsection.B.1.16}{``hg qrestore''---restore saved queue state}{section.B.1}
+\BOOKMARK [2][-]{subsection.B.1.17}{``hg qsave''---save current queue state}{section.B.1}
+\BOOKMARK [2][-]{subsection.B.1.18}{``hg qseries''---print the entire patch series}{section.B.1}
+\BOOKMARK [2][-]{subsection.B.1.19}{``hg qtop''---print the name of the current patch}{section.B.1}
+\BOOKMARK [2][-]{subsection.B.1.20}{``hg qunapplied''---print patches not yet applied}{section.B.1}
+\BOOKMARK [2][-]{subsection.B.1.21}{``hg qversion''}{section.B.1}
+\BOOKMARK [2][-]{subsection.B.1.22}{``hg strip''---remove a revision and descendants}{section.B.1}
+\BOOKMARK [1][-]{section.B.2}{MQ file reference}{appendix.B}
+\BOOKMARK [2][-]{subsection.B.2.1}{The series file}{section.B.2}
+\BOOKMARK [2][-]{subsection.B.2.2}{The status file}{section.B.2}
+\BOOKMARK [0][-]{appendix.C}{Making of this book}{}
+\BOOKMARK [1][-]{section.C.1}{Where to download the book source}{appendix.C}
+\BOOKMARK [1][-]{section.C.2}{On Windows}{appendix.C}
+\BOOKMARK [0][-]{appendix.D}{Open Publication License}{}
+\BOOKMARK [1][-]{section.D.1}{Requirements on both unmodified and modified versions}{appendix.D}
+\BOOKMARK [1][-]{section.D.2}{Copyright}{appendix.D}
+\BOOKMARK [1][-]{section.D.3}{Scope of license}{appendix.D}
+\BOOKMARK [1][-]{section.D.4}{Requirements on modified works}{appendix.D}
+\BOOKMARK [1][-]{section.D.5}{Good-practice recommendations}{appendix.D}
+\BOOKMARK [1][-]{section.D.6}{License options}{appendix.D}
+\BOOKMARK [0][-]{Item.57}{Bibliography}{}
+\BOOKMARK [0][-]{appendix*.51}{Index}{}

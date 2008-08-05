@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>1 Introduction</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html4-uni,2,html,xhtml --> 
+<meta name="src" content="hobbit-sysadmin-guide.tex" /> 
+<meta name="date" content="2008-04-26 19:37:00" /> 
+<link rel="stylesheet" type="text/css" href="hobbit-sysadmin-guide.css" /> 
+</head><body 
+>
+   <!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="hobbit-sysadmin-guidech2.html" >next</a>] [<a 
+href="hobbit-sysadmin-guideli3.html" >prev</a>] [<a 
+href="hobbit-sysadmin-guideli3.html#tailhobbit-sysadmin-guideli3.html" >prev-tail</a>] [<a 
+href="#tailhobbit-sysadmin-guidech1.html">tail</a>] [<a 
+href="hobbit-sysadmin-guide.html#hobbit-sysadmin-guidech1.html" >up</a>] </p></div>
+   <h2 class="chapterHead"><span class="titlemark">Chapter&#x00A0;1</span><br /><a 
+ id="x5-70001"></a>Introduction</h2>
+   <h3 class="sectionHead"><span class="titlemark">1.1    </span> <a 
+ id="x5-80001.1"></a>About revision control</h3>
+<!--l. 6--><p class="noindent">Revision control is the process of managing multiple versions of a piece of information. In its simplest form, this is something
+that many people do by hand: every time you modify a file, save it under a new name that contains a number, each one higher
+than the number of the preceding version.
+</p><!--l. 12--><p class="indent">   Manually managing multiple versions of even a single file is an error-prone task, though, so software tools to help automate
+this process have long been available. The earliest automated revision control tools were intended to help a single user to
+manage revisions of a single file. Over the past few decades, the scope of revision control tools has expanded greatly; they now
+manage multiple files, and help multiple people to work together. The best modern revision control tools have no
+problem coping with thousands of people working together on projects that consist of hundreds of thousands of
+files.
+</p><!--l. 22--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">1.1.1    </span> <a 
+ id="x5-90001.1.1"></a>Why use revision control?</h4>
+<!--l. 24--><p class="noindent">There are a number of reasons why you or your team might want to use an automated revision control tool for a project.
+</p>
+     <ul><li><span class="dt">
+     </span><span class="dd">It will track the history and evolution of your project, so you don&#x2019;t have to. For every change, you&#x2019;ll have a log
+     of <span 
+class="ptmri7t-">who </span>made it; <span 
+class="ptmri7t-">why </span>they made it; <span 
+class="ptmri7t-">when </span>they made it; and <span 
+class="ptmri7t-">what </span>the change was.
+     </span><li><span class="dt">
+     </span><span class="dd">When you&#x2019;re working with other people, revision control software makes it easier for you to collaborate. For
+     example, when people more or less simultaneously make potentially incompatible changes, the software will
+     help you to identify and resolve those conflicts.
+     </span><li><span class="dt">
+     </span><span class="dd">It can help you to recover from mistakes. If you make a change that later turns out to be in error, you can revert to
+     an earlier version of one or more files. In fact, a <span 
+class="ptmri7t-">really </span>good revision control tool will even help you to efficiently
+     figure out exactly when a problem was introduced (see section&#x00A0;<a 
+href="hobbit-sysadmin-guidech9.html#x13-1880009.5">9.5<!--tex4ht:ref: sec:undo:bisect --></a> for details).
+     </span><li><span class="dt">
+     </span><span class="dd">It will help you to work simultaneously on, and manage the drift between, multiple versions of your project.</li></ul>
+<!--l. 44--><p class="noindent">Most of these reasons are equally valid&#x2014;at least in theory&#x2014;whether you&#x2019;re working on a project by yourself, or with a hundred
+other people.
+</p><!--l. 48--><p class="indent">   A key question about the practicality of revision control at these two different scales (&#x201C;lone hacker&#x201D; and &#x201C;huge team&#x201D;) is
+how its <span 
+class="ptmri7t-">benefits </span>compare to its <span 
+class="ptmri7t-">costs</span>. A revision control tool that&#x2019;s difficult to understand or use is going to impose a high
+cost.
+</p><!--l. 53--><p class="indent">   A five-hundred-person project is likely to collapse under its own weight almost immediately without a revision control tool
+and process. In this case, the cost of using revision control might hardly seem worth considering, since <span 
+class="ptmri7t-">without </span>it, failure is
+almost guaranteed.
+</p><!--l. 59--><p class="indent">   On the other hand, a one-person &#x201C;quick hack&#x201D; might seem like a poor place to use a revision control tool, because surely the
+cost of using one must be close to the overall cost of the project. Right?
+</p><!--l. 63--><p class="indent">   Mercurial uniquely supports <span 
+class="ptmri7t-">both </span>of these scales of development. You can learn the basics in just a few minutes, and due to
+its low overhead, you can apply revision control to the smallest of projects with ease. Its simplicity means you won&#x2019;t have a lot
+of abstruse concepts or command sequences competing for mental space with whatever you&#x2019;re <span 
+class="ptmri7t-">really </span>trying to do. At
+the same time, Mercurial&#x2019;s high performance and peer-to-peer nature let you scale painlessly to handle large
+projects.
+                                                                                         
+                                                                                         
+</p><!--l. 72--><p class="indent">   No revision control tool can rescue a poorly run project, but a good choice of tools can make a huge difference to the
+fluidity with which you can work on a project.
+</p><!--l. 76--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">1.1.2    </span> <a 
+ id="x5-100001.1.2"></a>The many names of revision control</h4>
+<!--l. 78--><p class="noindent">Revision control is a diverse field, so much so that it doesn&#x2019;t actually have a single name or acronym. Here are a few of the
+more common names and acronyms you&#x2019;ll encounter: </p>
+     <ul><li><span class="dt">
+     </span><span class="dd">Revision control (RCS)
+     </span><li><span class="dt">
+     </span><span class="dd">Software configuration management (SCM), or configuration management
+     </span><li><span class="dt">
+     </span><span class="dd">Source code management
+     </span><li><span class="dt">
+     </span><span class="dd">Source code control, or source control
+     </span><li><span class="dt">
+     </span><span class="dd">Version control (VCS)</li></ul>
+<!--l. 88--><p class="noindent">Some people claim that these terms actually have different meanings, but in practice they overlap so much that there&#x2019;s no agreed or
+even useful way to tease them apart.
+</p><!--l. 92--><p class="noindent">
+</p>
+   <h3 class="sectionHead"><span class="titlemark">1.2    </span> <a 
+ id="x5-110001.2"></a>A short history of revision control</h3>
+<!--l. 94--><p class="noindent">The best known of the old-time revision control tools is SCCS (Source Code Control System), which Marc Rochkind wrote at
+Bell Labs, in the early 1970s. SCCS operated on individual files, and required every person working on a project to have access
+to a shared workspace on a single system. Only one person could modify a file at any time; arbitration for access to files was via
+locks. It was common for people to lock files, and later forget to unlock them, preventing anyone else from modifying those
+files without the help of an administrator.
+</p><!--l. 104--><p class="indent">   Walter Tichy developed a free alternative to SCCS in the early 1980s; he called his program RCS (Revison Control
+System). Like SCCS, RCS required developers to work in a single shared workspace, and to lock files to prevent multiple
+people from modifying them simultaneously.
+</p><!--l. 109--><p class="indent">   Later in the 1980s, Dick Grune used RCS as a building block for a set of shell scripts he initially called cmt, but then
+renamed to CVS (Concurrent Versions System). The big innovation of CVS was that it let developers work simultaneously and
+somewhat independently in their own personal workspaces. The personal workspaces prevented developers from stepping on
+each other&#x2019;s toes all the time, as was common with SCCS and RCS. Each developer had a copy of every project file, and could
+modify their copies independently. They had to merge their edits prior to committing changes to the central
+repository.
+</p><!--l. 119--><p class="indent">   Brian Berliner took Grune&#x2019;s original scripts and rewrote them in&#x00A0;C, releasing in 1989 the code that has since developed into
+the modern version of CVS. CVS subsequently acquired the ability to operate over a network connection, giving it a
+client/server architecture. CVS&#x2019;s architecture is centralised; only the server has a copy of the history of the project. Client
+workspaces just contain copies of recent versions of the project&#x2019;s files, and a little metadata to tell them where the
+server is. CVS has been enormously successful; it is probably the world&#x2019;s most widely used revision control
+system.
+                                                                                         
+                                                                                         
+</p><!--l. 129--><p class="indent">   In the early 1990s, Sun Microsystems developed an early distributed revision control system, called TeamWare. A
+TeamWare workspace contains a complete copy of the project&#x2019;s history. TeamWare has no notion of a central repository. (CVS
+relied upon RCS for its history storage; TeamWare used SCCS.)
+</p><!--l. 135--><p class="indent">   As the 1990s progressed, awareness grew of a number of problems with CVS. It records simultaneous changes to multiple
+files individually, instead of grouping them together as a single logically atomic operation. It does not manage
+its file hierarchy well; it is easy to make a mess of a repository by renaming files and directories. Worse, its
+source code is difficult to read and maintain, which made the &#x201C;pain level&#x201D; of fixing these architectural problems
+prohibitive.
+</p><!--l. 143--><p class="indent">   In 2001, Jim Blandy and Karl Fogel, two developers who had worked on CVS, started a project to replace it with a tool that
+would have a better architecture and cleaner code. The result, Subversion, does not stray from CVS&#x2019;s centralised
+client/server model, but it adds multi-file atomic commits, better namespace management, and a number of
+other features that make it a generally better tool than CVS. Since its initial release, it has rapidly grown in
+popularity.
+</p><!--l. 151--><p class="indent">   More or less simultaneously, Graydon Hoare began working on an ambitious distributed revision control system that he
+named Monotone. While Monotone addresses many of CVS&#x2019;s design flaws and has a peer-to-peer architecture, it goes beyond
+earlier (and subsequent) revision control tools in a number of innovative ways. It uses cryptographic hashes as identifiers, and
+has an integral notion of &#x201C;trust&#x201D; for code from different sources.
+</p><!--l. 159--><p class="indent">   Mercurial began life in 2005. While a few aspects of its design are influenced by Monotone, Mercurial focuses on ease of
+use, high performance, and scalability to very large projects.
+</p><!--l. 163--><p class="noindent">
+</p>
+   <h3 class="sectionHead"><span class="titlemark">1.3    </span> <a 
+ id="x5-120001.3"></a>Trends in revision control</h3>
+<!--l. 165--><p class="noindent">There has been an unmistakable trend in the development and use of revision control tools over the past four decades, as people
+have become familiar with the capabilities of their tools and constrained by their limitations.
+</p><!--l. 170--><p class="indent">   The first generation began by managing single files on individual computers. Although these tools represented a huge
+advance over ad-hoc manual revision control, their locking model and reliance on a single computer limited them to small,
+tightly-knit teams.
+</p><!--l. 175--><p class="indent">   The second generation loosened these constraints by moving to network-centered architectures, and managing entire
+projects at a time. As projects grew larger, they ran into new problems. With clients needing to talk to servers very frequently,
+server scaling became an issue for large projects. An unreliable network connection could prevent remote users from being able
+to talk to the server at all. As open source projects started making read-only access available anonymously to anyone, people
+without commit privileges found that they could not use the tools to interact with a project in a natural way, as they could not
+record their changes.
+</p><!--l. 186--><p class="indent">   The current generation of revision control tools is peer-to-peer in nature. All of these systems have dropped the dependency
+on a single central server, and allow people to distribute their revision control data to where it&#x2019;s actually needed. Collaboration
+over the Internet has moved from constrained by technology to a matter of choice and consensus. Modern tools can operate
+offline indefinitely and autonomously, with a network connection only needed when syncing changes with another
+repository.
+</p><!--l. 195--><p class="noindent">
+</p>
+   <h3 class="sectionHead"><span class="titlemark">1.4    </span> <a 
+ id="x5-130001.4"></a>A few of the advantages of distributed revision control</h3>
+<!--l. 197--><p class="noindent">Even though distributed revision control tools have for several years been as robust and usable as their previous-generation
+counterparts, people using older tools have not yet necessarily woken up to their advantages. There are a number of ways in
+which distributed tools shine relative to centralised ones.
+</p><!--l. 203--><p class="indent">   For an individual developer, distributed tools are almost always much faster than centralised tools. This is for a simple
+reason: a centralised tool needs to talk over the network for many common operations, because most metadata is stored in a
+                                                                                         
+                                                                                         
+single copy on the central server. A distributed tool stores all of its metadata locally. All else being equal, talking over the
+network adds overhead to a centralised tool. Don&#x2019;t underestimate the value of a snappy, responsive tool: you&#x2019;re going to spend a
+lot of time interacting with your revision control software.
+</p><!--l. 213--><p class="indent">   Distributed tools are indifferent to the vagaries of your server infrastructure, again because they replicate metadata to so
+many locations. If you use a centralised system and your server catches fire, you&#x2019;d better hope that your backup media are
+reliable, and that your last backup was recent and actually worked. With a distributed tool, you have many backups available on
+every contributor&#x2019;s computer.
+</p><!--l. 220--><p class="indent">   The reliability of your network will affect distributed tools far less than it will centralised tools. You can&#x2019;t even use a
+centralised tool without a network connection, except for a few highly constrained commands. With a distributed tool, if your
+network connection goes down while you&#x2019;re working, you may not even notice. The only thing you won&#x2019;t be able to do is talk
+to repositories on other computers, something that is relatively rare compared with local operations. If you have a far-flung
+team of collaborators, this may be significant.
+</p><!--l. 229--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">1.4.1    </span> <a 
+ id="x5-140001.4.1"></a>Advantages for open source projects</h4>
+<!--l. 231--><p class="noindent">If you take a shine to an open source project and decide that you would like to start hacking on it, and that project uses a
+distributed revision control tool, you are at once a peer with the people who consider themselves the &#x201C;core&#x201D; of that project. If
+they publish their repositories, you can immediately copy their project history, start making changes, and record your work,
+using the same tools in the same ways as insiders. By contrast, with a centralised tool, you must use the software in a &#x201C;read
+only&#x201D; mode unless someone grants you permission to commit changes to their central server. Until then, you won&#x2019;t be able to
+record changes, and your local modifications will be at risk of corruption any time you try to update your client&#x2019;s view of the
+repository.
+</p><!--l. 244--><p class="noindent">
+</p>
+   <h5 class="subsubsectionHead"><a 
+ id="x5-150001.4.1"></a>The forking non-problem</h5>
+<!--l. 246--><p class="noindent">It has been suggested that distributed revision control tools pose some sort of risk to open source projects because they make it
+easy to &#x201C;fork&#x201D; the development of a project. A fork happens when there are differences in opinion or attitude between groups of
+developers that cause them to decide that they can&#x2019;t work together any longer. Each side takes a more or less complete copy of
+the project&#x2019;s source code, and goes off in its own direction.
+</p><!--l. 254--><p class="indent">   Sometimes the camps in a fork decide to reconcile their differences. With a centralised revision control system, the
+<span 
+class="ptmri7t-">technical </span>process of reconciliation is painful, and has to be performed largely by hand. You have to decide whose revision
+history is going to &#x201C;win&#x201D;, and graft the other team&#x2019;s changes into the tree somehow. This usually loses some or all of one side&#x2019;s
+revision history.
+</p><!--l. 261--><p class="indent">   What distributed tools do with respect to forking is they make forking the <span 
+class="ptmri7t-">only </span>way to develop a project. Every single
+change that you make is potentially a fork point. The great strength of this approach is that a distributed revision
+control tool has to be really good at <span 
+class="ptmri7t-">merging </span>forks, because forks are absolutely fundamental: they happen all the
+time.
+</p><!--l. 268--><p class="indent">   If every piece of work that everybody does, all the time, is framed in terms of forking and merging, then what the open
+source world refers to as a &#x201C;fork&#x201D; becomes <span 
+class="ptmri7t-">purely </span>a social issue. If anything, distributed tools <span 
+class="ptmri7t-">lower </span>the likelihood of a fork:
+</p>
+     <ul><li><span class="dt">
+     </span><span class="dd">They eliminate the social distinction that centralised tools impose: that between insiders (people with commit
+     access) and outsiders (people without).
+     </span><li><span class="dt">
+     </span><span class="dd">They make it easier to reconcile after a social fork, because all that&#x2019;s involved from the perspective of the revision
+     control software is just another merge.</li></ul>
+                                                                                         
+                                                                                         
+<!--l. 281--><p class="indent">   Some people resist distributed tools because they want to retain tight control over their projects, and they believe
+that centralised tools give them this control. However, if you&#x2019;re of this belief, and you publish your CVS or
+Subversion repositories publically, there are plenty of tools available that can pull out your entire project&#x2019;s history
+(albeit slowly) and recreate it somewhere that you don&#x2019;t control. So while your control in this case is illusory,
+you are forgoing the ability to fluidly collaborate with whatever people feel compelled to mirror and fork your
+history.
+</p><!--l. 291--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">1.4.2    </span> <a 
+ id="x5-160001.4.2"></a>Advantages for commercial projects</h4>
+<!--l. 293--><p class="noindent">Many commercial projects are undertaken by teams that are scattered across the globe. Contributors who are far from a central
+server will see slower command execution and perhaps less reliability. Commercial revision control systems attempt to
+ameliorate these problems with remote-site replication add-ons that are typically expensive to buy and cantankerous to
+administer. A distributed system doesn&#x2019;t suffer from these problems in the first place. Better yet, you can easily set up multiple
+authoritative servers, say one per site, so that there&#x2019;s no redundant communication between repositories over expensive
+long-haul network links.
+</p><!--l. 304--><p class="indent">   Centralised revision control systems tend to have relatively low scalability. It&#x2019;s not unusual for an expensive centralised
+system to fall over under the combined load of just a few dozen concurrent users. Once again, the typical response
+tends to be an expensive and clunky replication facility. Since the load on a central server&#x2014;if you have one at
+all&#x2014;is many times lower with a distributed tool (because all of the data is replicated everywhere), a single cheap
+server can handle the needs of a much larger team, and replication to balance load becomes a simple matter of
+scripting.
+</p><!--l. 314--><p class="indent">   If you have an employee in the field, troubleshooting a problem at a customer&#x2019;s site, they&#x2019;ll benefit from distributed revision
+control. The tool will let them generate custom builds, try different fixes in isolation from each other, and search efficiently
+through history for the sources of bugs and regressions in the customer&#x2019;s environment, all without needing to connect to your
+company&#x2019;s network.
+</p><!--l. 321--><p class="noindent">
+</p>
+   <h3 class="sectionHead"><span class="titlemark">1.5    </span> <a 
+ id="x5-170001.5"></a>Why choose Mercurial?</h3>
+<!--l. 323--><p class="noindent">Mercurial has a unique set of properties that make it a particularly good choice as a revision control system.
+</p>
+     <ul><li><span class="dt">
+     </span><span class="dd">It is easy to learn and use.
+     </span><li><span class="dt">
+     </span><span class="dd">It is lightweight.
+     </span><li><span class="dt">
+     </span><span class="dd">It scales excellently.
+     </span><li><span class="dt">
+     </span><span class="dd">It is easy to customise.</li></ul>
+<!--l. 332--><p class="indent">   If you are at all familiar with revision control systems, you should be able to get up and running with Mercurial in
+less than five minutes. Even if not, it will take no more than a few minutes longer. Mercurial&#x2019;s command and
+feature sets are generally uniform and consistent, so you can keep track of a few general rules instead of a host of
+exceptions.
+                                                                                         
+                                                                                         
+</p><!--l. 339--><p class="indent">   On a small project, you can start working with Mercurial in moments. Creating new changes and branches; transferring
+changes around (whether locally or over a network); and history and status operations are all fast. Mercurial
+attempts to stay nimble and largely out of your way by combining low cognitive overhead with blazingly fast
+operations.
+</p><!--l. 346--><p class="indent">   The usefulness of Mercurial is not limited to small projects: it is used by projects with hundreds to thousands of
+contributors, each containing tens of thousands of files and hundreds of megabytes of source code.
+</p><!--l. 351--><p class="indent">   If the core functionality of Mercurial is not enough for you, it&#x2019;s easy to build on. Mercurial is well suited to scripting tasks,
+and its clean internals and implementation in Python make it easy to add features in the form of extensions. There are a
+number of popular and useful extensions already available, ranging from helping to identify bugs to improving
+performance.
+</p><!--l. 358--><p class="noindent">
+</p>
+   <h3 class="sectionHead"><span class="titlemark">1.6    </span> <a 
+ id="x5-180001.6"></a>Mercurial compared with other tools</h3>
+<!--l. 360--><p class="noindent">Before you read on, please understand that this section necessarily reflects my own experiences, interests, and (dare I say
+it) biases. I have used every one of the revision control tools listed below, in most cases for several years at a
+time.
+</p><!--l. 366--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">1.6.1    </span> <a 
+ id="x5-190001.6.1"></a>Subversion</h4>
+<!--l. 368--><p class="noindent">Subversion is a popular revision control tool, developed to replace CVS. It has a centralised client/server architecture.
+</p><!--l. 371--><p class="indent">   Subversion and Mercurial have similarly named commands for performing the same operations, so if you&#x2019;re familiar with
+one, it is easy to learn to use the other. Both tools are portable to all popular operating systems.
+</p><!--l. 376--><p class="indent">   Subversion lacks a history-aware merge capability, forcing its users to manually track exactly which revisions have been
+merged between branches. If users fail to do this, or make mistakes, they face the prospect of manually resolving merges with
+unnecessary conflicts. Subversion also fails to merge changes when files or directories are renamed. Subversion&#x2019;s poor merge
+support is its single biggest weakness.
+</p><!--l. 384--><p class="indent">   Mercurial has a substantial performance advantage over Subversion on every revision control operation I have
+benchmarked. I have measured its advantage as ranging from a factor of two to a factor of six when compared with
+Subversion&#x00A0;1.4.3&#x2019;s <span 
+class="ptmri7t-">ra</span><span 
+class="ptmri7t-">_local </span>file store, which is the fastest access method available). In more realistic deployments involving a
+network-based store, Subversion will be at a substantially larger disadvantage. Because many Subversion commands must talk
+to the server and Subversion does not have useful replication facilities, server capacity and network bandwidth become
+bottlenecks for modestly large projects.
+</p><!--l. 395--><p class="indent">   Additionally, Subversion incurs substantial storage overhead to avoid network transactions for a few common operations,
+such as finding modified files (<span 
+class="pcrr7tn-">status</span>) and displaying modifications against the current revision (<span 
+class="pcrr7tn-">diff</span>). As a result, a
+Subversion working copy is often the same size as, or larger than, a Mercurial repository and working directory, even though
+the Mercurial repository contains a complete history of the project.
+</p><!--l. 403--><p class="indent">   Subversion is widely supported by third party tools. Mercurial currently lags considerably in this area. This gap is closing,
+however, and indeed some of Mercurial&#x2019;s GUI tools now outshine their Subversion equivalents. Like Mercurial, Subversion has
+an excellent user manual.
+</p><!--l. 409--><p class="indent">   Because Subversion doesn&#x2019;t store revision history on the client, it is well suited to managing projects that deal with lots of
+large, opaque binary files. If you check in fifty revisions to an incompressible 10MB file, Subversion&#x2019;s client-side space usage
+stays constant The space used by any distributed SCM will grow rapidly in proportion to the number of revisions, because the
+differences between each revision are large.
+</p><!--l. 417--><p class="indent">   In addition, it&#x2019;s often difficult or, more usually, impossible to merge different versions of a binary file. Subversion&#x2019;s ability
+to let a user lock a file, so that they temporarily have the exclusive right to commit changes to it, can be a significant advantage
+to a project where binary files are widely used.
+                                                                                         
+                                                                                         
+</p><!--l. 423--><p class="indent">   Mercurial can import revision history from a Subversion repository. It can also export revision history to a Subversion
+repository. This makes it easy to &#x201C;test the waters&#x201D; and use Mercurial and Subversion in parallel before deciding to switch.
+History conversion is incremental, so you can perform an initial conversion, then small additional conversions afterwards to
+bring in new changes.
+</p><!--l. 431--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">1.6.2    </span> <a 
+ id="x5-200001.6.2"></a>Git</h4>
+<!--l. 433--><p class="noindent">Git is a distributed revision control tool that was developed for managing the Linux kernel source tree. Like Mercurial, its early
+design was somewhat influenced by Monotone.
+</p><!--l. 437--><p class="indent">   Git has a very large command set, with version&#x00A0;1.5.0 providing&#x00A0;139 individual commands. It has something of a reputation
+for being difficult to learn. Compared to Git, Mercurial has a strong focus on simplicity.
+</p><!--l. 442--><p class="indent">   In terms of performance, Git is extremely fast. In several cases, it is faster than Mercurial, at least on Linux, while
+Mercurial performs better on other operations. However, on Windows, the performance and general level of support that Git
+provides is, at the time of writing, far behind that of Mercurial.
+</p><!--l. 448--><p class="indent">   While a Mercurial repository needs no maintenance, a Git repository requires frequent manual &#x201C;repacks&#x201D; of its
+metadata. Without these, performance degrades, while space usage grows rapidly. A server that contains many Git
+repositories that are not rigorously and frequently repacked will become heavily disk-bound during backups, and
+there have been instances of daily backups taking far longer than&#x00A0;24 hours as a result. A freshly packed Git
+repository is slightly smaller than a Mercurial repository, but an unpacked repository is several orders of magnitude
+larger.
+</p><!--l. 458--><p class="indent">   The core of Git is written in C. Many Git commands are implemented as shell or Perl scripts, and the quality of these scripts
+varies widely. I have encountered several instances where scripts charged along blindly in the presence of errors that should
+have been fatal.
+</p><!--l. 463--><p class="indent">   Mercurial can import revision history from a Git repository.
+</p><!--l. 466--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">1.6.3    </span> <a 
+ id="x5-210001.6.3"></a>CVS</h4>
+<!--l. 468--><p class="noindent">CVS is probably the most widely used revision control tool in the world. Due to its age and internal untidiness, it has been only
+lightly maintained for many years.
+</p><!--l. 472--><p class="indent">   It has a centralised client/server architecture. It does not group related file changes into atomic commits, making it easy for
+people to &#x201C;break the build&#x201D;: one person can successfully commit part of a change and then be blocked by the need for a merge,
+causing other people to see only a portion of the work they intended to do. This also affects how you work with project history.
+If you want to see all of the modifications someone made as part of a task, you will need to manually inspect
+the descriptions and timestamps of the changes made to each file involved (if you even know what those files
+were).
+</p><!--l. 482--><p class="indent">   CVS has a muddled notion of tags and branches that I will not attempt to even describe. It does not support renaming of
+files or directories well, making it easy to corrupt a repository. It has almost no internal consistency checking capabilities, so it
+is usually not even possible to tell whether or how a repository is corrupt. I would not recommend CVS for any project, existing
+or new.
+</p><!--l. 489--><p class="indent">   Mercurial can import CVS revision history. However, there are a few caveats that apply; these are true of every other
+revision control tool&#x2019;s CVS importer, too. Due to CVS&#x2019;s lack of atomic changes and unversioned filesystem hierarchy, it is not
+possible to reconstruct CVS history completely accurately; some guesswork is involved, and renames will usually not show up.
+Because a lot of advanced CVS administration has to be done by hand and is hence error-prone, it&#x2019;s common for CVS importers
+to run into multiple problems with corrupted repositories (completely bogus revision timestamps and files that
+have remained locked for over a decade are just two of the less interesting problems I can recall from personal
+experience).
+</p><!--l. 501--><p class="indent">   Mercurial can import revision history from a CVS repository.
+                                                                                         
+                                                                                         
+</p><!--l. 504--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">1.6.4    </span> <a 
+ id="x5-220001.6.4"></a>Commercial tools</h4>
+<!--l. 506--><p class="noindent">Perforce has a centralised client/server architecture, with no client-side caching of any data. Unlike modern revision
+control tools, Perforce requires that a user run a command to inform the server about every file they intend to
+edit.
+</p><!--l. 511--><p class="indent">   The performance of Perforce is quite good for small teams, but it falls off rapidly as the number of users grows beyond a
+few dozen. Modestly large Perforce installations require the deployment of proxies to cope with the load their users
+generate.
+</p><!--l. 517--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">1.6.5    </span> <a 
+ id="x5-230001.6.5"></a>Choosing a revision control tool</h4>
+<!--l. 519--><p class="noindent">With the exception of CVS, all of the tools listed above have unique strengths that suit them to particular styles of work. There
+is no single revision control tool that is best in all situations.
+</p><!--l. 523--><p class="indent">   As an example, Subversion is a good choice for working with frequently edited binary files, due to its centralised nature and
+support for file locking. If you&#x2019;re averse to the command line, it currently has better GUI support than other free
+revision control tools. However, its poor merging is a substantial liability for busy projects with overlapping
+development.
+</p><!--l. 530--><p class="indent">   I personally find Mercurial&#x2019;s properties of simplicity, performance, and good merge support to be a compelling combination
+that has served me well for several years.
+</p><!--l. 535--><p class="noindent">
+</p>
+   <h3 class="sectionHead"><span class="titlemark">1.7    </span> <a 
+ id="x5-240001.7"></a>Switching from another tool to Mercurial</h3>
+<!--l. 537--><p class="noindent">Mercurial is bundled with an extension named <a 
+ id="dx5-24001"></a><span 
+class="pcrr7tn-">convert</span>, which can incrementally import revision history from several other
+revision control tools. By &#x201C;incremental&#x201D;, I mean that you can convert all of a project&#x2019;s history to date in one go, then rerun the
+conversion later to obtain new changes that happened after the initial conversion.
+</p><!--l. 543--><p class="indent">   The revision control tools supported by <a 
+ id="dx5-24002"></a><span 
+class="pcrr7tn-">convert </span>are as follows: </p>
+     <ul><li><span class="dt">
+     </span><span class="dd">Subversion
+     </span><li><span class="dt">
+     </span><span class="dd">CVS
+     </span><li><span class="dt">
+     </span><span class="dd">Git
+     </span><li><span class="dt">
+     </span><span class="dd">Darcs</li></ul>
+<!--l. 552--><p class="indent">   In addition, <a 
+ id="dx5-24003"></a><span 
+class="pcrr7tn-">convert </span>can export changes from Mercurial to Subversion. This makes it possible to try Subversion and
+Mercurial in parallel before committing to a switchover, without risking the loss of any work.
+</p><!--l. 557--><p class="indent">   The <a 
+ id="dx5-24004"></a><a 
+ id="dx5-24005"></a>&#x201C;<span 
+class="pcrr7tn-">hg convert</span>&#x201D; command is easy to use. Simply point it at the path or URL of the source repository, optionally give it
+the name of the destination repository, and it will start working. After the initial conversion, just run the same command again
+to import new changes.
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+</p>
+   <!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="hobbit-sysadmin-guidech2.html" >next</a>] [<a 
+href="hobbit-sysadmin-guideli3.html" >prev</a>] [<a 
+href="hobbit-sysadmin-guideli3.html#tailhobbit-sysadmin-guideli3.html" >prev-tail</a>] [<a 
+href="hobbit-sysadmin-guidech1.html" >front</a>] [<a 
+href="hobbit-sysadmin-guide.html#hobbit-sysadmin-guidech1.html" >up</a>] </p></div>
+<!--l. 1--><p class="indent">   <a 
+ id="tailhobbit-sysadmin-guidech1.html"></a>  </p> 
+</body></html> 

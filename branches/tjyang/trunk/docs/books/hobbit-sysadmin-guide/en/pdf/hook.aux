@@ -1,0 +1,115 @@
+\relax 
+\@writefile{toc}{\contentsline {chapter}{\numberline {11}Handling repository events with hooks}{122}{chapter.11}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chap:hook}{{11}{122}{Handling repository events with hooks\relax }{chapter.11}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {11.1}An overview of hooks in Mercurial}{122}{section.11.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {11.2}Hooks and security}{123}{section.11.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.2.1}Hooks are run with your privileges}{123}{subsection.11.2.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.2.2}Hooks do not propagate}{123}{subsection.11.2.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.2.3}Hooks can be overridden}{123}{subsection.11.2.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.2.4}Ensuring that critical hooks are run}{123}{subsection.11.2.4}}
+\@writefile{toc}{\contentsline {section}{\numberline {11.3}Care with \texttt  {pretxn} hooks in a shared-access repository}{124}{section.11.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.3.1}The problem illustrated}{124}{subsection.11.3.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {11.4}A short tutorial on using hooks}{125}{section.11.4}}
+\newlabel{sec:hook:simple}{{11.4}{125}{A short tutorial on using hooks\relax }{section.11.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11.1}{\ignorespaces A simple hook that runs when a changeset is committed}}{125}{figure.11.1}}
+\newlabel{ex:hook:init}{{11.1}{125}{A short tutorial on using hooks\relax }{figure.11.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.4.1}Performing multiple actions per event}{125}{subsection.11.4.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11.2}{\ignorespaces Defining a second \texttt  {commit} hook}}{125}{figure.11.2}}
+\newlabel{ex:hook:ext}{{11.2}{125}{Performing multiple actions per event\relax }{figure.11.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.4.2}Controlling whether an activity can proceed}{126}{subsection.11.4.2}}
+\newlabel{sec:hook:perm}{{11.4.2}{126}{Controlling whether an activity can proceed\relax }{subsection.11.4.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11.3}{\ignorespaces Using the \texttt  {pretxncommit} hook to control commits}}{126}{figure.11.3}}
+\newlabel{ex:hook:pretxncommit}{{11.3}{126}{Controlling whether an activity can proceed\relax }{figure.11.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {11.5}Writing your own hooks}{126}{section.11.5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.5.1}Choosing how your hook should run}{126}{subsection.11.5.1}}
+\newlabel{sec:hook:lang}{{11.5.1}{126}{Choosing how your hook should run\relax }{subsection.11.5.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.5.2}Hook parameters}{127}{subsection.11.5.2}}
+\newlabel{sec:hook:param}{{11.5.2}{127}{Hook parameters\relax }{subsection.11.5.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.5.3}Hook return values and activity control}{127}{subsection.11.5.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.5.4}Writing an external hook}{127}{subsection.11.5.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.5.5}Telling Mercurial to use an in-process hook}{127}{subsection.11.5.5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.5.6}Writing an in-process hook}{127}{subsection.11.5.6}}
+\@writefile{toc}{\contentsline {section}{\numberline {11.6}Some hook examples}{128}{section.11.6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.6.1}Writing meaningful commit messages}{128}{subsection.11.6.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11.4}{\ignorespaces A hook that forbids overly short commit messages}}{128}{figure.11.4}}
+\newlabel{ex:hook:msglen.go}{{11.4}{128}{Writing meaningful commit messages\relax }{figure.11.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.6.2}Checking for trailing whitespace}{128}{subsection.11.6.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11.5}{\ignorespaces A simple hook that checks for trailing whitespace}}{129}{figure.11.5}}
+\newlabel{ex:hook:ws.simple}{{11.5}{129}{Checking for trailing whitespace\relax }{figure.11.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {11.7}Bundled hooks}{129}{section.11.7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.7.1}\texttt  {acl}---access control for parts of a repository}{129}{subsection.11.7.1}}
+\@writefile{toc}{\contentsline {subsubsection}{Configuring the \texttt  {acl} hook}{129}{section*.26}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11.6}{\ignorespaces A better trailing whitespace hook}}{130}{figure.11.6}}
+\newlabel{ex:hook:ws.better}{{11.6}{130}{Checking for trailing whitespace\relax }{figure.11.6}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Testing and troubleshooting}{130}{section*.27}}
+\citation{web:mysql-python}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.7.2}\texttt  {bugzilla}---integration with Bugzilla}{131}{subsection.11.7.2}}
+\@writefile{toc}{\contentsline {subsubsection}{Configuring the \texttt  {bugzilla} hook}{131}{section*.28}}
+\newlabel{sec:hook:bugzilla:config}{{11.7.2}{131}{Configuring the \hook {bugzilla} hook\relax }{section*.28}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Mapping committer names to Bugzilla user names}{132}{section*.29}}
+\@writefile{toc}{\contentsline {subsubsection}{Configuring the text that gets added to a bug}{132}{section*.30}}
+\@writefile{toc}{\contentsline {subsubsection}{Testing and troubleshooting}{133}{section*.31}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.7.3}\texttt  {notify}---send email notifications}{134}{subsection.11.7.3}}
+\@writefile{toc}{\contentsline {subsubsection}{Configuring the \texttt  {notify} hook}{134}{section*.32}}
+\@writefile{toc}{\contentsline {subsubsection}{Testing and troubleshooting}{135}{section*.33}}
+\@writefile{toc}{\contentsline {section}{\numberline {11.8}Information for writers of hooks}{135}{section.11.8}}
+\newlabel{sec:hook:ref}{{11.8}{135}{Information for writers of hooks\relax }{section.11.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.8.1}In-process hook execution}{135}{subsection.11.8.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.8.2}External hook execution}{136}{subsection.11.8.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.8.3}Finding out where changesets come from}{136}{subsection.11.8.3}}
+\@writefile{toc}{\contentsline {subsubsection}{Sources of changesets}{136}{section*.34}}
+\newlabel{sec:hook:sources}{{11.8.3}{136}{Sources of changesets\relax }{section*.34}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Where changes are going---remote repository URLs}{137}{section*.35}}
+\newlabel{sec:hook:url}{{11.8.3}{137}{Where changes are going---remote repository URLs\relax }{section*.35}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {11.9}Hook reference}{137}{section.11.9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.9.1}\texttt  {changegroup}---after remote changesets added}{137}{subsection.11.9.1}}
+\newlabel{sec:hook:changegroup}{{11.9.1}{137}{\hook {changegroup}---after remote changesets added\relax }{subsection.11.9.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.9.2}\texttt  {commit}---after a new changeset is created}{137}{subsection.11.9.2}}
+\newlabel{sec:hook:commit}{{11.9.2}{137}{\hook {commit}---after a new changeset is created\relax }{subsection.11.9.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.9.3}\texttt  {incoming}---after one remote changeset is added}{137}{subsection.11.9.3}}
+\newlabel{sec:hook:incoming}{{11.9.3}{137}{\hook {incoming}---after one remote changeset is added\relax }{subsection.11.9.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.9.4}\texttt  {outgoing}---after changesets are propagated}{138}{subsection.11.9.4}}
+\newlabel{sec:hook:outgoing}{{11.9.4}{138}{\hook {outgoing}---after changesets are propagated\relax }{subsection.11.9.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.9.5}\texttt  {prechangegroup}---before starting to add remote changesets}{138}{subsection.11.9.5}}
+\newlabel{sec:hook:prechangegroup}{{11.9.5}{138}{\hook {prechangegroup}---before starting to add remote changesets\relax }{subsection.11.9.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.9.6}\texttt  {precommit}---before starting to commit a changeset}{138}{subsection.11.9.6}}
+\newlabel{sec:hook:precommit}{{11.9.6}{138}{\hook {precommit}---before starting to commit a changeset\relax }{subsection.11.9.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.9.7}\texttt  {preoutgoing}---before starting to propagate changesets}{139}{subsection.11.9.7}}
+\newlabel{sec:hook:preoutgoing}{{11.9.7}{139}{\hook {preoutgoing}---before starting to propagate changesets\relax }{subsection.11.9.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.9.8}\texttt  {pretag}---before tagging a changeset}{139}{subsection.11.9.8}}
+\newlabel{sec:hook:pretag}{{11.9.8}{139}{\hook {pretag}---before tagging a changeset\relax }{subsection.11.9.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.9.9}\texttt  {pretxnchangegroup}---before completing addition of remote changesets}{139}{subsection.11.9.9}}
+\newlabel{sec:hook:pretxnchangegroup}{{11.9.9}{139}{\hook {pretxnchangegroup}---before completing addition of remote changesets\relax }{subsection.11.9.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.9.10}\texttt  {pretxncommit}---before completing commit of new changeset}{140}{subsection.11.9.10}}
+\newlabel{sec:hook:pretxncommit}{{11.9.10}{140}{\hook {pretxncommit}---before completing commit of new changeset\relax }{subsection.11.9.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.9.11}\texttt  {preupdate}---before updating or merging working directory}{140}{subsection.11.9.11}}
+\newlabel{sec:hook:preupdate}{{11.9.11}{140}{\hook {preupdate}---before updating or merging working directory\relax }{subsection.11.9.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.9.12}\texttt  {tag}---after tagging a changeset}{140}{subsection.11.9.12}}
+\newlabel{sec:hook:tag}{{11.9.12}{140}{\hook {tag}---after tagging a changeset\relax }{subsection.11.9.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.9.13}\texttt  {update}---after updating or merging working directory}{140}{subsection.11.9.13}}
+\newlabel{sec:hook:update}{{11.9.13}{140}{\hook {update}---after updating or merging working directory\relax }{subsection.11.9.13}{}}
+\@setckpt{hook}{
+\setcounter{page}{142}
+\setcounter{equation}{0}
+\setcounter{enumi}{3}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{11}
+\setcounter{section}{9}
+\setcounter{subsection}{13}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{6}
+\setcounter{table}{0}
+\setcounter{FancyVerbLine}{2}
+\setcounter{Item}{31}
+\setcounter{Hfootnote}{0}
+\setcounter{section@level}{2}
+}

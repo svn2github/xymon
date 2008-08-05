@@ -1,0 +1,8 @@
+$ \textbf{hg status}
+$ \textbf{hg tip}
+changeset:   0:c0dbbe44f4df
+tag:         tip
+user:        Bryan O'Sullivan <bos@serpentine.com>
+date:        Sun Apr 27 00:04:09 2008 +0000
+summary:     Initial commit
+

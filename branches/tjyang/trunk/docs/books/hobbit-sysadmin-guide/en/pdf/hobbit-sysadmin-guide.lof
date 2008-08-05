@@ -1,0 +1,64 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Feature branches}}{14}{figure.2.1}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Feature branches}}{30}{figure.3.1}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Graphical history of the \texttt {hello} repository}}{46}{figure.4.1}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Divergent recent histories of the \texttt {my-hello} and \texttt {my-new-hello} repositories}}{58}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Repository contents after pulling from \texttt {my-hello} into \texttt {my-new-hello}}}{59}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Working directory and repository during merge, and following commit}}{60}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Conflicting changes to a document}}{62}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Using \texttt {kdiff3} to merge versions of a file}}{66}{figure.5.5}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Relationships between files in working directory and filelogs in repository}}{68}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Metadata relationships}}{68}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Snapshot of a revlog, with incremental deltas}}{69}{figure.6.3}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces }}{75}{figure.6.4}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces The working directory can have two parents}}{76}{figure.6.5}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces The working directory gains new parents after a commit}}{76}{figure.6.6}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces The working directory, updated to an older changeset}}{77}{figure.6.7}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces After a commit made while synced to an older changeset}}{77}{figure.6.8}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Merging two heads}}{78}{figure.6.9}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Simulating an empty directory using a hidden file}}{80}{figure.7.1}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {10.1}{\ignorespaces Backing out a change using the ``\texttt {hg backout}'' command}}{111}{figure.10.1}
+\contentsline {figure}{\numberline {10.2}{\ignorespaces Automated backout of a non-tip change using the ``\texttt {hg backout}'' command}}{112}{figure.10.2}
+\contentsline {figure}{\numberline {10.3}{\ignorespaces Backing out a change using the ``\texttt {hg backout}'' command}}{113}{figure.10.3}
+\contentsline {figure}{\numberline {10.4}{\ignorespaces Manually merging a backout change}}{115}{figure.10.4}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {11.1}{\ignorespaces A simple hook that runs when a changeset is committed}}{125}{figure.11.1}
+\contentsline {figure}{\numberline {11.2}{\ignorespaces Defining a second \texttt {commit} hook}}{125}{figure.11.2}
+\contentsline {figure}{\numberline {11.3}{\ignorespaces Using the \texttt {pretxncommit} hook to control commits}}{126}{figure.11.3}
+\contentsline {figure}{\numberline {11.4}{\ignorespaces A hook that forbids overly short commit messages}}{128}{figure.11.4}
+\contentsline {figure}{\numberline {11.5}{\ignorespaces A simple hook that checks for trailing whitespace}}{129}{figure.11.5}
+\contentsline {figure}{\numberline {11.6}{\ignorespaces A better trailing whitespace hook}}{130}{figure.11.6}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {12.1}{\ignorespaces Template keywords in use}}{145}{figure.12.1}
+\contentsline {figure}{\numberline {12.2}{\ignorespaces Template filters in action}}{148}{figure.12.2}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {13.1}{\ignorespaces Simple uses of the \texttt {diff} and \texttt {patch} commands}}{154}{figure.13.1}
+\contentsline {figure}{\numberline {13.2}{\ignorespaces Contents to add to \texttt {\~{}/.hgrc} to enable the MQ extension}}{155}{figure.13.2}
+\contentsline {figure}{\numberline {13.3}{\ignorespaces How to verify that MQ is enabled}}{155}{figure.13.3}
+\contentsline {figure}{\numberline {13.4}{\ignorespaces Preparing a repository for use with MQ}}{155}{figure.13.4}
+\contentsline {figure}{\numberline {13.5}{\ignorespaces Creating a new patch}}{156}{figure.13.5}
+\contentsline {figure}{\numberline {13.6}{\ignorespaces Refreshing a patch}}{157}{figure.13.6}
+\contentsline {figure}{\numberline {13.7}{\ignorespaces Refresh a patch many times to accumulate changes}}{158}{figure.13.7}
+\contentsline {figure}{\numberline {13.8}{\ignorespaces Stacking a second patch on top of the first}}{159}{figure.13.8}
+\contentsline {figure}{\numberline {13.9}{\ignorespaces Understanding the patch stack with ``\texttt {hg qseries}'' and ``\texttt {hg qapplied}''}}{160}{figure.13.9}
+\contentsline {figure}{\numberline {13.10}{\ignorespaces Applied and unapplied patches in the MQ patch stack}}{160}{figure.13.10}
+\contentsline {figure}{\numberline {13.11}{\ignorespaces Modifying the stack of applied patches}}{161}{figure.13.11}
+\contentsline {figure}{\numberline {13.12}{\ignorespaces Pushing all unapplied patches}}{161}{figure.13.12}
+\contentsline {figure}{\numberline {13.13}{\ignorespaces Forcibly creating a patch}}{162}{figure.13.13}
+\contentsline {figure}{\numberline {13.14}{\ignorespaces Using MQ's tag features to work with patches}}{165}{figure.13.14}
+\contentsline {figure}{\numberline {13.15}{\ignorespaces The \texttt {diffstat}, \texttt {filterdiff}, and \texttt {lsdiff} commands}}{167}{figure.13.15}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
