@@ -1,0 +1,5 @@
+This is a set of slides for presenting Hobbitmon system monitoring tool.
+
+hobbit-slides-intro.tex    : hobbitmon introduction slides.
+hobbit-slides-developer.tex: hobbitmon developement slides.
+hobbit-slides-sysadmin.tex : hobbitmon system administration.
