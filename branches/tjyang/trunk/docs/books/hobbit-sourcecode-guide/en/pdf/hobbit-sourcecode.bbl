@@ -1,0 +1,8 @@
+\begin{thebibliography}{Mas}
+
+\bibitem[Mas]{web:mpatch}
+Chris Mason.
+\newblock \texttt{mpatch}--help solve patch rejects.
+\newblock \url{http://oss.oracle.com/~mason/mpatch/}.
+
+\end{thebibliography}

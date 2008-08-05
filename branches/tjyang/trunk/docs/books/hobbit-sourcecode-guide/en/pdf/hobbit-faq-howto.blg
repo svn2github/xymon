@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99c (Web2C 7.5.4)
+The top-level auxiliary file: hobbit-faq-howto.aux
+A level-1 auxiliary file: preface.aux
+A level-1 auxiliary file: bbwinsrc.aux
+A level-1 auxiliary file: userfaq.aux
+A level-1 auxiliary file: developerfaq.aux
+A level-1 auxiliary file: adminfaq.aux
+A level-1 auxiliary file: hobbitgraph.aux
+A level-1 auxiliary file: bookmaking.aux
+A level-1 auxiliary file: license.aux
+The style file: alpha.bst
+Database file #1: 99book.bib
+You've used 4 entries,
+            2543 wiz_defined-function locations,
+            582 strings with 5084 characters,
+and the built_in function-call counts, 1068 in all, are:
+= -- 96
+> -- 32
+< -- 4
++ -- 8
+- -- 8
+* -- 42
+:= -- 172
+add.period$ -- 12
+call.type$ -- 4
+change.case$ -- 20
+chr.to.int$ -- 4
+cite$ -- 4
+duplicate$ -- 44
+empty$ -- 101
+format.name$ -- 15
+if$ -- 222
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 23
+num.names$ -- 12
+pop$ -- 55
+preamble$ -- 1
+purify$ -- 24
+quote$ -- 0
+skip$ -- 34
+stack$ -- 0
+substring$ -- 28
+swap$ -- 4
+text.length$ -- 4
+text.prefix$ -- 3
+top$ -- 0
+type$ -- 32
+warning$ -- 0
+while$ -- 8
+width$ -- 5
+write$ -- 46
