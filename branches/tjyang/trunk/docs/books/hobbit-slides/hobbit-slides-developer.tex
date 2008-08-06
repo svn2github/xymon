@@ -1,37 +1,45 @@
-% - Giving a talk on some subject.
-% - The talk is between 15min and 45min long.
-% - Style is ornate.
+%  -----------------------------------------------------------------------------
+%      L A T E X  F I L E  S P E C I F I C A T I O N
+%  -----------------------------------------------------------------------------
+%  NAME
+%        hobbit-slides-developer.tex
+% 
+%  REVISION HISTORY
+%      08/06 2008 T.J. Yang Init
+%  
+%  USAGE
+%        latex hobbit-slides-developer.tex
+% 
+%  DESCRIPTION
+%        This file is to use latex beamer class to make up a slide to present 
+%        hobbitmon to potential developers.
+% 
+% 
+% ---------------------------------- Man Page -----------------------------------
 
-%
-% In principle, this file can be redistributed and/or modified under
-% the terms of the GNU Public License, version 2.
-%
-% However, this file is supposed to be a template to be modified
-% for your own needs. For this reason, if you use this file as a
-% template and not specifically distribute it as part of a another
-% package/program, I grant the extra permission to freely copy and
-% modify this file as you see fit and even to delete this copyright
-% notice. 
-
+% WHAT: lets use beamer class
 \documentclass{beamer}
 
+% WHAT: 
 \mode<presentation>
 {
   \usetheme{Warsaw}
   \setbeamercovered{transparent}
 }
 
+% WHAT: 
 \usepackage[english]{babel}
-
 \usepackage[latin1]{inputenc}
 
 \usepackage{times}
 \usepackage[T1]{fontenc}
+
+
 % Or whatever. Note that the encoding and the font should match. If T1
 % does not look nice, try deleting the line with the fontenc.
 
-\title[Developing for Hobbit] % (optional, use only with long paper titles)
-{Developing Hobbit}
+\title[Developing for Hobbitmon] % (optional, use only with long paper titles)
+{Developing Hobbitmon}
 
 \subtitle {Yes, you can do it.} % (optional)
 
@@ -40,9 +48,9 @@
 % - Use the \inst{?} command only if the authors have different
 %   affiliation.
 
-\institute[Hobbit Monitor Community] % (optional, but mostly needed)
+\institute[Hobbitmon Monitor Community] % (optional, but mostly needed)
 {
-  Hobbit Monitor Community}
+  Hobbitmon Monitor Community}
 
 % - Use the \inst command only if there are several affiliations.
 % - Keep it simple, no one is interested in your street address.
@@ -108,7 +116,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection[Why developing Hobbit ]{Reasons to develop for Hobbit}
+\subsection[Why developing Hobbitmon ]{Reasons to develop for Hobbitmon}
 
 %%%%%%%%%%%%%
 \begin{frame}
@@ -161,12 +169,12 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Hobbit Architecture}
+\section{Hobbitmon Architecture}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection[Clients and Servers]{Higher Avaiablity}
 
-\begin{frame}{C programming}{Hobbit backbone is in ANSI C.}
+\begin{frame}{C programming}{Hobbitmon backbone is in ANSI C.}
   % - A title should summarize the slide in an understandable fashion
   %   for anyone how does not follow everything on the slide itself.
 
@@ -214,7 +222,7 @@
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{VMWare image for Hobbit development}
+\section{VMWare image for Hobbitmon development}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection[Source Code and development tool all-in-one ]{No more guessing work.}
@@ -274,7 +282,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Autoconfistcate Hobbit}
+\section{Autoconfistcate Hobbitmon}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection[Why the trouble ? ]{Why the trouble ?}
 
@@ -326,7 +334,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{TWWconfiscate Hobbit}
+\section{TWWconfiscate Hobbitmon}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection[Softare Packaging and management ]{Software lifecycle completed}
@@ -376,7 +384,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Hobbit Community}
+\section{Hobbitmon Community}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -396,7 +404,7 @@
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Hobbit Wiki Books .}
+\begin{frame}{Hobbitmon Wiki Books .}
 
   You can create overlays\dots
   \begin{itemize}
@@ -435,14 +443,14 @@
 \section*{Summary}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Summary}
+\begin{frame}{Hobbit Development Summary}
 
   % Keep the summary *very short*.
   \begin{itemize}
   \item
-    Hobbit development is fun and rewarding.
+    Hobbitmon development is fun and rewarding.
   \item
-    Hobbit development is fun and rewarding
+    Hobbitmon development is fun and rewarding
   \end{itemize}
   
   % The following outlook is optional.
