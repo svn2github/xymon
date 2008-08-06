@@ -35,7 +35,8 @@ WARNING:=2
 
 # WHAT: make slides and check in the modified files.
 
-all: slides checkin
+all: slides 
+#all: slides checkin
 
 # WHAT: 
 slides: hobbit-slides-developer.pdf  hobbit-slides-intro.pdf \
