@@ -9,7 +9,11 @@ This branch of hobbitmon has following differences
    2.3 remove hobbitmon package will remove the account and delete
        all the log files.
        ie, "/opt/bin/pkg-rm  hobbitmon-client". 
-3. TBC.
+3. Current supported OS are
+   1. Solaris 2.6 to 2.11 sparc. 
+   2. Solaris 10 and 11 Intel.
+   3. HP-UX 10.20 to 11.11
+   4. RH Linux 9 to RH 4.
 
 README file for Hobbit
 ======================
