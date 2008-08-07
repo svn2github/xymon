@@ -1,4 +1,15 @@
+This branch of hobbitmon has following differences
 
+1. hobbit client and hobbit server has their own account and group ids.
+2. hobbbit client and server are packaged in TWW HPM format. 
+   2.1 /etc/init.d/hobbitmonclient42 to start and stop hobbitmon.
+   2.2 install hobbitmon will create hobbitmon accounts and groups
+       in your local password and group files.
+       ie, "/opt/bin/pkg-inst hobbitmon-client".
+   2.3 remove hobbitmon package will remove the account and delete
+       all the log files.
+       ie, "/opt/bin/pkg-rm  hobbitmon-client". 
+3. TBC.
 
 README file for Hobbit
 ======================
