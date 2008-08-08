@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<packages>
+  <package name="hobbit-client" version="4.2.0">
+    <description attribution="freshmeat.net">
+Hobbit Monitor is a system for monitoring hosts and networks, inspired
+by the Big Brother system. It provides realtime monitoring, an
+easy-to-use Web interface, historical data, availability reports, and
+performance graphs. This package is for a hobbit monitoring client,
+and includes the client parts of a full system, requiring a hobbit
+server on the network to report to in order to be useful.
+    </description>
+
+    <package-manager name="pkgadd">
+      <install-name>hobbitclient42</install-name>
+      <pkgname-base>MOTOhbc</pkgname-base>
+      <version>4.2.0</version>
+      <revision>2</revision>
+      <subpkg type="conf" pkgname-ext="c"
+      size="24003"/>
+      <subpkg type="man" pkgname-ext="m"
+      size="30075"/>
+      <subpkg type="runtime" pkgname-ext="u"
+      size="659314"/>
+    </package-manager>
+  </package>
+</packages>

@@ -1,0 +1,2627 @@
+<?xml version="1.0"?>
+<packages>
+
+
+
+  <package name="rsync" version="2.5.6">
+    <description>
+rsync is a replacement for rcp that has many more features.
+
+rsync uses the "rsync algorithm" which provides a very fast method for
+bringing remote files into sync. It does this by sending just the
+differences in the files across the link, without requiring that both
+sets of files are present at one of the ends of the link beforehand.
+At first glance this may seem impossible because the calculation of
+diffs between two files normally requires local access to both files.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>rsync25</install-name>
+      <pkgname-base>MOTrsync25</pkgname-base>
+      <version>2.5.6</version>
+      <revision>1</revision>
+      <subpkg type="man" pkgname-ext=".MOTrsync25-MAN"/>
+      <subpkg type="runtime" pkgname-ext=".MOTrsync25-RUN"/>
+      <replace pkgname-base="MOTrsync24"
+        install-name="rsync24"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="rsync" version="2.5.6">
+    <description>
+rsync is a replacement for rcp that has many more features.
+
+rsync uses the "rsync algorithm" which provides a very fast method for
+bringing remote files into sync. It does this by sending just the
+differences in the files across the link, without requiring that both
+sets of files are present at one of the ends of the link beforehand.
+At first glance this may seem impossible because the calculation of
+diffs between two files normally requires local access to both files.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>rsync25</install-name>
+      <pkgname-base>MOTrsync25</pkgname-base>
+      <version>2.5.6</version>
+      <revision>1</revision>
+      <subpkg type="man" pkgname-ext=".MOTrsync25-MAN"/>
+      <subpkg type="runtime" pkgname-ext=".MOTrsync25-RUN"/>
+      <replace pkgname-base="MOTrsync24"
+        install-name="rsync24"/>
+    </package-manager>
+  </package>
+
+
+  <package name="textutils" version="2.1">
+    <description>
+The GNU Text Utilities are the basic text-manipulation utilities.
+
+The tools supplied with this package are:
+  * cat - concatenate files and print to the standard output
+  * cksum - checksum and count the bytes in a file
+  * comm - compare two sorted files line by line
+  * csplit - split a file into sections determined by context lines
+  * cut - remove sections from each line of files
+  * expand - convert tabs to spaces
+  * fmt - simple optimal text formatter
+  * fold - wrap each input line to fit in specified width
+  * join - join lines of two files on a common field
+  * md5sum - compute and check MD5 message digest
+  * nl - number lines of files
+  * od - dump files in octal and other formats
+  * paste - merge lines of files
+  * pr - convert text files for printing
+  * ptx - produce a permuted index of file contents
+  * sort - sort lines of text files
+  * split - split a file into pieces
+  * sum - checksum and count the blocks in a file
+  * tac - concatenate and print files in reverse
+  * tail - output the last part of files
+  * tr - translate or delete characters
+  * tsort - perform topological sort
+  * unexpand - convert spaces to tabs
+  * uniq - remove duplicate lines from a sorted file
+  * wc - print the number of bytes, words, and lines in files
+  * head - output the first part of files
+    </description>
+
+    <package-manager name="depot">
+      <install-name>textutils21</install-name>
+      <pkgname-base>MOTOtext21</pkgname-base>
+      <version>2.1</version>
+      <revision>3</revision>
+      <subpkg type="doc" pkgname-ext=".MOTOtext21-HELP"/>
+      <subpkg type="man" pkgname-ext=".MOTOtext21-MAN"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOtext21-RUN">
+        <depend pkgname-base="MOTOgtext014"
+          subpkg="runtime">v&gt;=0.14.1 r&gt;=1</depend>
+      </subpkg>
+      <replace pkgname-base="MOTOtextutil"
+        install-name="textutils"/>
+
+      <changelog>
+        <change date="2005 May 29" revision="3"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Update gettext dependency from 0.11.4 to
+0.14.1</para></item>
+        </change>
+      </changelog>
+    </package-manager>
+  </package>
+
+
+
+
+
+
+
+  <package name="pkgutils" version="1.5.24">
+    <description>
+Package-manager independent suite of tools used to install, remove,
+and configure binary packages. Using an XML configuration file to
+describe the package, the pkgutils suite automatically downloads and
+installs packages including all necessary dependencies, provides
+information on the list of installed packages, removes packages,
+configures packages (runs the package pre-remove and post-install
+scripts), and queries a repository for a list of updated packages.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>pkgutils15</install-name>
+      <pkgname-base>MOTOpkgut15</pkgname-base>
+      <version>1.5.24</version>
+      <revision>1</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOpkgut15-CONF"/>
+      <subpkg type="man" pkgname-ext=".MOTOpkgut15-MAN"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOpkgut15-RUN"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="pkgutils" version="1.5.24">
+    <description>
+Package-manager independent suite of tools used to install, remove,
+and configure binary packages. Using an XML configuration file to
+describe the package, the pkgutils suite automatically downloads and
+installs packages including all necessary dependencies, provides
+information on the list of installed packages, removes packages,
+configures packages (runs the package pre-remove and post-install
+scripts), and queries a repository for a list of updated packages.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>pkgutils15</install-name>
+      <pkgname-base>MOTOpkgut15</pkgname-base>
+      <version>1.5.24</version>
+      <revision>1</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOpkgut15-CONF"/>
+      <subpkg type="man" pkgname-ext=".MOTOpkgut15-MAN"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOpkgut15-RUN"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="perl" version="5.8.6">
+    <description>
+Perl is a general-purpose programming language originally developed
+for text manipulation and now used for a wide range of tasks including
+system administration, web development, network programming, GUI
+development, and more.
+
+The language is intended to be practical (easy to use, efficient,
+complete) rather than beautiful (tiny, elegant, minimal). Its major
+features are that it's easy to use, supports both procedural and
+object-oriented (OO) programming, has powerful built-in support for
+text processing, and has one of the world's most impressive
+collections of third-party modules.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>perl586</install-name>
+      <pkgname-base>MOTOpl58</pkgname-base>
+      <version>5.8.6</version>
+      <revision>5</revision>
+      <subpkg type="man" pkgname-ext=".MOTOpl58-MAN"/>
+      <subpkg type="packages" pkgname-ext=".MOTOpl58-PKG"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOpl58-RUN">
+        <depend pkgname-base="MOTOgcc343"
+          subpkg="libruntime">v&gt;=3.4.3 r&gt;=1</depend>
+        <depend pkgname-base="MOTOgdbm182"
+          subpkg="runtime">v&gt;=1.8.2 r&gt;=1</depend>
+      </subpkg>
+      <replace pkgname-base="MOTOperl582"
+        install-name="perl582"/>
+      <replace pkgname-base="MOTOperl580"
+        install-name="perl580"/>
+      <replace pkgname-base="MOTOperl561"
+        install-name="perl561"/>
+
+      <changelog>
+        <change date="2005 July 4" revision="5"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Added the following module: Net-SFTP
+0.09</para></item>
+          <item><para>Updated the following modules: MIME-Tools from
+5.415 to 5.417; MIME-Types from 1.12 to 1.15; Mail-Box from 2.059 to
+2.061; MailTools from 1.58 to 1.67</para></item>
+        </change>
+
+        <change date="2005 July 4" revision="4"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Added the following modules: Class-ErrorHandler
+0.01, Class-Loader 2.03, Convert-ASCII-Armour 1.4, Convert-PEM 0.07,
+Crypt-Blowfish 2.09, Crypt-CBC 2.14, Crypt-DES 2.03, Crypt-DES_EDE3
+0.01, Crypt-DH 0.03, Crypt-DSA 0.12, Crypt-Primes 0.50, Crypt-Random
+1.25, Crypt-RSA 1.55, Data-Buffer 0.04, DBD File-0.34,
+DBIx-ContextualFetch 1.02, Digest-BubbleBabble 0.01, Digest-MD2 2.03,
+HTML-FillInForm 1.05, Image-Info 1.16, Image-Size 2.992, Math-BigInt
+1.77, Net-Daemon-SSL 1.0, Net-IP 1.23, Net-SSH-Perl 1.28,
+Schedule-Cron 0.9, Sort-Versions 1.5, String-CRC32 1.3,
+Tie-EncryptedHash 1.21, Time-modules 2003.1126, sdf
+2.001</para></item>
+          <item><para>Removed Class-DBI-mysql, DBD-mysql, and
+Time-Piece-MySQL modules as they are now part of the MySQL
+package</para></item>
+          <item><para>Removed DBD-Pg module as it is now part of the
+PostgreSQL package</para></item>
+          <item><para>Updated the following modules: Graph from 0.20102
+to 0.65; Graph-ReadWrite from 1.07 to 2.00; GraphViz from 1.8 to 2.02;
+Heap from 0.50 to 0.71; Net-DNS from 0.39 to 0.52; SQL-Statement from
+1.004 to 1.14; Test-Pod from 0.95 to 1.20; XML-Writer from 0.4 to
+0.545</para></item>
+        </change>
+
+        <change date="2005 May 18" revision="3"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Added the following modules: OLE-Storage_Lite
+0.14, Spreadsheet-ParseExcel 0.2603, Spreadsheet-WriteExcel 2.14,
+XML-Simple 2.14, XML-SimpleObject 0.53, XML-SimpleObject-LibXML 0.60,
+XML-TreeBuilder 3.09</para></item>
+          <item>
+          
+          <para>Fix  usage bug on
+Redhat Linux.  doesn't work with strings in
+read-only memory.</para></item>
+        </change>
+
+        <change date="2005 April 11" revision="2"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Updated the following modules: Class-DBI from 0.89
+to 0.96; Ima-DBI 0.31 to 0.33; Pod-Escapes from 1.03 to 1.04;
+Pod-Simple from 0.97 to 3.02; Test-Builder-Tester from 0.09 to 1.01;
+Test-Pod from 0.95 to 1.20</para></item>
+          <item><para>Added the following modules: Class-DBI-mysql 0.23,
+DBIx-ContextualFetch 1.02, Devel-Symdump 2.03, Devel-ptkdb 1.1091,
+GD-Graph3d 0.63, Module-Build 0.2609, Pod-Coverage 0.17, Pod-POM 0.15,
+String-Ediff 0.05, Test-Inline 0.16, Test-Manifest 1.14,
+Test-Pod-Coverage 1.06, Text-Autoformat 1.12, Text-Reform 1.11,
+Time-Piece 1.08, Time-Piece-MySQL 0.05, X11-GUITest 0.20, XML-RSS
+1.05, XML-XPath 1.13, interface 0.02</para></item>
+        </change>
+      </changelog>
+    </package-manager>
+  </package>
+
+
+
+
+
+  <package name="gcc" version="3.4.3">
+    <description attribution="The OpenPKG Project">
+The GNU Compiler Collection (GCC) provides a standard conforming and
+highly portable ISO C, ISO C++, Fortran 77, Java, and Ada compiler.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>gcc343</install-name>
+      <pkgname-base>MOTOgcc343</pkgname-base>
+      <version>3.4.3</version>
+      <revision>5</revision>
+      <subpkg type="doc" pkgname-ext=".MOTOgcc343-HELP"/>
+      <subpkg type="libruntime" pkgname-ext=".MOTOgcc343-LIBR"/>
+      <subpkg type="man" pkgname-ext=".MOTOgcc343-MAN"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOgcc343-RUN"/>
+      <replace pkgname-base="MOTOgcc342"
+        install-name="gcc342"/>
+      <replace pkgname-base="MOTOgcc332"
+        install-name="gcc332"/>
+      <replace pkgname-base="MOTOgcc33"
+        install-name="gcc33"/>
+      <replace pkgname-base="MOTOgcc323"
+        install-name="gcc323"/>
+
+      <changelog>
+        <change date="2005 June 9" revision="5"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Incorporate patch for PR11459 (<ulink url="http://gcc.gnu.org/PR11459">http://gcc.gnu.org/PR11459</ulink>),
+-ansi -std=c99 -pedantic warns about C90's non long-long support when
+in C99 mode</para></item>
+          <item><para>Incorporate patch for PR19683 (<ulink url="http://gcc.gnu.org/PR19683">http://gcc.gnu.org/PR19683</ulink>),
+MIPS wrong-code for 64-bit multiply</para></item>
+          <item><para>Incorporate patch for PR20301 (<ulink url="http://gcc.gnu.org/PR20301">http://gcc.gnu.org/PR20301</ulink>),
+assembler labels have a leading "-"</para></item>
+          <item><para>Incorporate patch for PR21888 (<ulink url="http://gcc.gnu.org/PR21888">http://gcc.gnu.org/PR21888</ulink>),
+bootstrap failure with linker relaxation enabled</para></item>
+          <item><para>Incorporate patch for PR21889 (<ulink url="http://gcc.gnu.org/PR21889">http://gcc.gnu.org/PR21889</ulink>),
+native Solaris assembler cannot grok DTP-relative debug
+symbols</para></item>
+          <item><para>Incorporate gcc/fixinc/inclhack.def,
+gcc/fixinc/fixincl.x, and gcc/fixinc/tests/base/iso from 3.4 branch
+for PR19933 (<ulink url="http://gcc.gnu.org/PR19933">http://gcc.gnu.org/PR19933</ulink>),
+problem with define of HUGE_VAL in math_c99, and to workaround the
+definition of the PTHREAD_*_INITIALIZER macros on Tru64 UNIX
+5.1</para></item>
+          <item><para>Incorporate patch for PR10692 (<ulink url="http://gcc.gnu.org/bugzilla/show_bug.cgi?id=10692">http://gcc.gnu.org/bugzilla/show_bug.cgi?id=10692</ulink>),
+M68K miscompilation of perl with -O2 -fPIC</para></item>
+          <item><para>Merge patch from 3.4 branch for c-typeck.c
+(same_translation_unit_p) to fix a typo</para></item>
+          <item><para>Incorporate patch for PR17636 (<ulink url="http://gcc.gnu.org/bugzilla/show_bug.cgi?id=17636">http://gcc.gnu.org/bugzilla/show_bug.cgi?id=17636</ulink>),
+"truncation failed in endfile" error when closing a file appended
+to in libf2c fortran library</para></item>
+          <item><para>Incorporate patch for PR22083 (<ulink url="http://gcc.gnu.org/bugzilla/show_bug.cgi?id=22083">http://gcc.gnu.org/bugzilla/show_bug.cgi?id=22083</ulink>),
+TARGET_C99_FUNCTIONS is wrongly defined on AIX 5.1</para></item>
+        </change>
+
+        <change date="2005 April 12" revision="4"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Include GNU prof (ggprof)</para></item>
+        </change>
+
+        <change date="2005 February 28" revision="3"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Add as.info documentation</para></item>
+        </change>
+
+        <change date="2004 December 20" revision="2"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Backport of patch for PR17242 (<ulink url="http://gcc.gnu.org/PR17242">http://gcc.gnu.org/PR17242</ulink>)
+for HP-UX</para></item>
+        </change>
+      </changelog>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="gdbm" version="1.8.2">
+    <description>
+GNU dbm is a set of database routines that use extendible hashing and
+works similar to the standard UNIX dbm routines.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>libgdbm182</install-name>
+      <pkgname-base>MOTOgdbm182</pkgname-base>
+      <version>1.8.2</version>
+      <revision>2</revision>
+      <subpkg type="doc" pkgname-ext=".MOTOgdbm182-HELP"/>
+      <subpkg type="man" pkgname-ext=".MOTOgdbm182-MAN"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOgdbm182-RUN"/>
+      <replace pkgname-base="MOTOgdbm18"
+        install-name="libgdbm18"/>
+      <replace pkgname-base="MOTOgdbm"
+        install-name="libgdbm"/>
+
+      <changelog>
+        <change date="2005 January 26" revision="2"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Backport memory leak fix from 1.8.3</para></item>
+        </change>
+      </changelog>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="gcc" version="3.4.3">
+    <description attribution="The OpenPKG Project">
+The GNU Compiler Collection (GCC) provides a standard conforming and
+highly portable ISO C, ISO C++, Fortran 77, Java, and Ada compiler.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>gcc343</install-name>
+      <pkgname-base>MOTOgcc343</pkgname-base>
+      <version>3.4.3</version>
+      <revision>5</revision>
+      <subpkg type="doc" pkgname-ext=".MOTOgcc343-HELP"/>
+      <subpkg type="libruntime" pkgname-ext=".MOTOgcc343-LIBR"/>
+      <subpkg type="man" pkgname-ext=".MOTOgcc343-MAN"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOgcc343-RUN"/>
+      <replace pkgname-base="MOTOgcc342"
+        install-name="gcc342"/>
+      <replace pkgname-base="MOTOgcc332"
+        install-name="gcc332"/>
+      <replace pkgname-base="MOTOgcc33"
+        install-name="gcc33"/>
+      <replace pkgname-base="MOTOgcc323"
+        install-name="gcc323"/>
+
+      <changelog>
+        <change date="2005 June 9" revision="5"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Incorporate patch for PR11459 (<ulink url="http://gcc.gnu.org/PR11459">http://gcc.gnu.org/PR11459</ulink>),
+-ansi -std=c99 -pedantic warns about C90's non long-long support when
+in C99 mode</para></item>
+          <item><para>Incorporate patch for PR19683 (<ulink url="http://gcc.gnu.org/PR19683">http://gcc.gnu.org/PR19683</ulink>),
+MIPS wrong-code for 64-bit multiply</para></item>
+          <item><para>Incorporate patch for PR20301 (<ulink url="http://gcc.gnu.org/PR20301">http://gcc.gnu.org/PR20301</ulink>),
+assembler labels have a leading "-"</para></item>
+          <item><para>Incorporate patch for PR21888 (<ulink url="http://gcc.gnu.org/PR21888">http://gcc.gnu.org/PR21888</ulink>),
+bootstrap failure with linker relaxation enabled</para></item>
+          <item><para>Incorporate patch for PR21889 (<ulink url="http://gcc.gnu.org/PR21889">http://gcc.gnu.org/PR21889</ulink>),
+native Solaris assembler cannot grok DTP-relative debug
+symbols</para></item>
+          <item><para>Incorporate gcc/fixinc/inclhack.def,
+gcc/fixinc/fixincl.x, and gcc/fixinc/tests/base/iso from 3.4 branch
+for PR19933 (<ulink url="http://gcc.gnu.org/PR19933">http://gcc.gnu.org/PR19933</ulink>),
+problem with define of HUGE_VAL in math_c99, and to workaround the
+definition of the PTHREAD_*_INITIALIZER macros on Tru64 UNIX
+5.1</para></item>
+          <item><para>Incorporate patch for PR10692 (<ulink url="http://gcc.gnu.org/bugzilla/show_bug.cgi?id=10692">http://gcc.gnu.org/bugzilla/show_bug.cgi?id=10692</ulink>),
+M68K miscompilation of perl with -O2 -fPIC</para></item>
+          <item><para>Merge patch from 3.4 branch for c-typeck.c
+(same_translation_unit_p) to fix a typo</para></item>
+          <item><para>Incorporate patch for PR17636 (<ulink url="http://gcc.gnu.org/bugzilla/show_bug.cgi?id=17636">http://gcc.gnu.org/bugzilla/show_bug.cgi?id=17636</ulink>),
+"truncation failed in endfile" error when closing a file appended
+to in libf2c fortran library</para></item>
+          <item><para>Incorporate patch for PR22083 (<ulink url="http://gcc.gnu.org/bugzilla/show_bug.cgi?id=22083">http://gcc.gnu.org/bugzilla/show_bug.cgi?id=22083</ulink>),
+TARGET_C99_FUNCTIONS is wrongly defined on AIX 5.1</para></item>
+        </change>
+
+        <change date="2005 April 12" revision="4"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Include GNU prof (ggprof)</para></item>
+        </change>
+
+        <change date="2005 February 28" revision="3"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Add as.info documentation</para></item>
+        </change>
+
+        <change date="2004 December 20" revision="2"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Backport of patch for PR17242 (<ulink url="http://gcc.gnu.org/PR17242">http://gcc.gnu.org/PR17242</ulink>)
+for HP-UX</para></item>
+        </change>
+      </changelog>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="rsync" version="2.5.6">
+    <description>
+rsync is a replacement for rcp that has many more features.
+
+rsync uses the "rsync algorithm" which provides a very fast method for
+bringing remote files into sync. It does this by sending just the
+differences in the files across the link, without requiring that both
+sets of files are present at one of the ends of the link beforehand.
+At first glance this may seem impossible because the calculation of
+diffs between two files normally requires local access to both files.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>rsync25</install-name>
+      <pkgname-base>MOTOrsync25</pkgname-base>
+      <version>2.5.6</version>
+      <revision>1</revision>
+      <subpkg type="man" pkgname-ext=".MOTOrsync25-MAN"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOrsync25-RUN"/>
+      <replace pkgname-base="MOTOrsync24"
+        install-name="rsync24"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="perl" version="5.8.6">
+    <description>
+Perl is a general-purpose programming language originally developed
+for text manipulation and now used for a wide range of tasks including
+system administration, web development, network programming, GUI
+development, and more.
+
+The language is intended to be practical (easy to use, efficient,
+complete) rather than beautiful (tiny, elegant, minimal). Its major
+features are that it's easy to use, supports both procedural and
+object-oriented (OO) programming, has powerful built-in support for
+text processing, and has one of the world's most impressive
+collections of third-party modules.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>perl586</install-name>
+      <pkgname-base>MOTOpl58</pkgname-base>
+      <version>5.8.6</version>
+      <revision>5</revision>
+      <subpkg type="man" pkgname-ext=".MOTOpl58-MAN"/>
+      <subpkg type="packages" pkgname-ext=".MOTOpl58-PKG"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOpl58-RUN">
+        <depend pkgname-base="MOTOgcc343"
+          subpkg="libruntime">v&gt;=3.4.3 r&gt;=1</depend>
+        <depend pkgname-base="MOTOgdbm182"
+          subpkg="runtime">v&gt;=1.8.2 r&gt;=1</depend>
+      </subpkg>
+      <replace pkgname-base="MOTOperl582"
+        install-name="perl582"/>
+      <replace pkgname-base="MOTOperl580"
+        install-name="perl580"/>
+      <replace pkgname-base="MOTOperl561"
+        install-name="perl561"/>
+
+      <changelog>
+        <change date="2005 July 4" revision="5"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Added the following module: Net-SFTP
+0.09</para></item>
+          <item><para>Updated the following modules: MIME-Tools from
+5.415 to 5.417; MIME-Types from 1.12 to 1.15; Mail-Box from 2.059 to
+2.061; MailTools from 1.58 to 1.67</para></item>
+        </change>
+
+        <change date="2005 July 4" revision="4"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Added the following modules: Class-ErrorHandler
+0.01, Class-Loader 2.03, Convert-ASCII-Armour 1.4, Convert-PEM 0.07,
+Crypt-Blowfish 2.09, Crypt-CBC 2.14, Crypt-DES 2.03, Crypt-DES_EDE3
+0.01, Crypt-DH 0.03, Crypt-DSA 0.12, Crypt-Primes 0.50, Crypt-Random
+1.25, Crypt-RSA 1.55, Data-Buffer 0.04, DBD File-0.34,
+DBIx-ContextualFetch 1.02, Digest-BubbleBabble 0.01, Digest-MD2 2.03,
+HTML-FillInForm 1.05, Image-Info 1.16, Image-Size 2.992, Math-BigInt
+1.77, Net-Daemon-SSL 1.0, Net-IP 1.23, Net-SSH-Perl 1.28,
+Schedule-Cron 0.9, Sort-Versions 1.5, String-CRC32 1.3,
+Tie-EncryptedHash 1.21, Time-modules 2003.1126, sdf
+2.001</para></item>
+          <item><para>Removed Class-DBI-mysql, DBD-mysql, and
+Time-Piece-MySQL modules as they are now part of the MySQL
+package</para></item>
+          <item><para>Removed DBD-Pg module as it is now part of the
+PostgreSQL package</para></item>
+          <item><para>Updated the following modules: Graph from 0.20102
+to 0.65; Graph-ReadWrite from 1.07 to 2.00; GraphViz from 1.8 to 2.02;
+Heap from 0.50 to 0.71; Net-DNS from 0.39 to 0.52; SQL-Statement from
+1.004 to 1.14; Test-Pod from 0.95 to 1.20; XML-Writer from 0.4 to
+0.545</para></item>
+        </change>
+
+        <change date="2005 May 18" revision="3"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Added the following modules: OLE-Storage_Lite
+0.14, Spreadsheet-ParseExcel 0.2603, Spreadsheet-WriteExcel 2.14,
+XML-Simple 2.14, XML-SimpleObject 0.53, XML-SimpleObject-LibXML 0.60,
+XML-TreeBuilder 3.09</para></item>
+          <item>
+          
+          <para>Fix  usage bug on
+Redhat Linux.  doesn't work with strings in
+read-only memory.</para></item>
+        </change>
+
+        <change date="2005 April 11" revision="2"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Updated the following modules: Class-DBI from 0.89
+to 0.96; Ima-DBI 0.31 to 0.33; Pod-Escapes from 1.03 to 1.04;
+Pod-Simple from 0.97 to 3.02; Test-Builder-Tester from 0.09 to 1.01;
+Test-Pod from 0.95 to 1.20</para></item>
+          <item><para>Added the following modules: Class-DBI-mysql 0.23,
+DBIx-ContextualFetch 1.02, Devel-Symdump 2.03, Devel-ptkdb 1.1091,
+GD-Graph3d 0.63, Module-Build 0.2609, Pod-Coverage 0.17, Pod-POM 0.15,
+String-Ediff 0.05, Test-Inline 0.16, Test-Manifest 1.14,
+Test-Pod-Coverage 1.06, Text-Autoformat 1.12, Text-Reform 1.11,
+Time-Piece 1.08, Time-Piece-MySQL 0.05, X11-GUITest 0.20, XML-RSS
+1.05, XML-XPath 1.13, interface 0.02</para></item>
+        </change>
+      </changelog>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="xpm" version="3.4k">
+    <description attribution="FreeBSD Ports Collection">
+XPM (X PixMap) is a format for storing/retrieving X pixmaps to/from
+files.
+
+The XPM Image Library contains a set of four functions, similar to the
+X bitmap functions as defined in the Xlib: XpmCreatePixmapFromData,
+XpmCreateDataFromPixmap, XpmReadFileToPixmap and
+XpmWriteFileFromPixmap for respectively including, storing, reading
+and writing this format, plus four other: XpmCreateImageFromData,
+XpmCreateDataFromImage, XpmReadFileToImage and XpmWriteFileFromImage
+for working with images instead of pixmaps.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>xpm</install-name>
+      <pkgname-base>MOTOxpm</pkgname-base>
+      <version>3.4k</version>
+      <revision>6</revision>
+      <subpkg type="man" pkgname-ext=".MOTOxpm-MAN"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOxpm-RUN"/>
+
+      <changelog>
+        <change date="2005 April 21" revision="6"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Apply patch for CAN-2004-0914 (<ulink url="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0914">http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0914</ulink>),
+fixing integer overflows, out-of-bounds memory accesses, directory
+traversal, shell metacharacter, endless loops, and memory leaks, which
+could allow remote attackers to obtain sensitive information, cause a
+denial of service (application crash), or execute arbitary code via a
+certain XPM image file.</para></item>
+          <item>
+          
+          <para>Apply patch for CAN-2005-0605 (<ulink url="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0605">http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0605</ulink>),
+fixing a potentially exploitable buffer overflow in
+ via a negative
+ value. If an attacker tricked a user
+into loading a malicious XPM image with an application that uses
+libXpm, they could exploit this to execute arbitrary code with the
+privileges of the user opening the image.</para></item>
+        </change>
+
+        <change date="2004 November 10" revision="5"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Apply patch to fix CAN-2003-0687 (<ulink url="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0687">http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0687</ulink>),
+stack-based buffer overflows in the xpmParseColors(),
+ParseAndPutPixels(), and ParsePixels() functions allowing remote
+attackers to execute arbitrary code via a malformed XPM image
+file.</para></item>
+          <item><para>Apply patch to fix CAN-2004-0688 (<ulink url="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0688">http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0688</ulink>),
+integer overflows in the xpmParseColors(),
+XpmCreateImageFromXpmImage(), CreateXImage() ParsePixels(), and
+ParseAndPutPixels() functions allowing remote attackers to execute
+arbitrary code via a malformed XPM image file.</para></item>
+        </change>
+      </changelog>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="pkgutils" version="1.5.24">
+    <description>
+Package-manager independent suite of tools used to install, remove,
+and configure binary packages. Using an XML configuration file to
+describe the package, the pkgutils suite automatically downloads and
+installs packages including all necessary dependencies, provides
+information on the list of installed packages, removes packages,
+configures packages (runs the package pre-remove and post-install
+scripts), and queries a repository for a list of updated packages.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>pkgutils15</install-name>
+      <pkgname-base>MOTOpkgut15</pkgname-base>
+      <version>1.5.24</version>
+      <revision>1</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOpkgut15-CONF"/>
+      <subpkg type="man" pkgname-ext=".MOTOpkgut15-MAN"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOpkgut15-RUN"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="gcc" version="3.4.3">
+    <description attribution="The OpenPKG Project">
+The GNU Compiler Collection (GCC) provides a standard conforming and
+highly portable ISO C, ISO C++, Fortran 77, Java, and Ada compiler.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>gcc343</install-name>
+      <pkgname-base>MOTOgcc343</pkgname-base>
+      <version>3.4.3</version>
+      <revision>5</revision>
+      <subpkg type="doc" pkgname-ext=".MOTOgcc343-HELP"/>
+      <subpkg type="libruntime" pkgname-ext=".MOTOgcc343-LIBR"/>
+      <subpkg type="man" pkgname-ext=".MOTOgcc343-MAN"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOgcc343-RUN"/>
+      <replace pkgname-base="MOTOgcc342"
+        install-name="gcc342"/>
+      <replace pkgname-base="MOTOgcc332"
+        install-name="gcc332"/>
+      <replace pkgname-base="MOTOgcc33"
+        install-name="gcc33"/>
+      <replace pkgname-base="MOTOgcc323"
+        install-name="gcc323"/>
+
+      <changelog>
+        <change date="2005 June 9" revision="5"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Incorporate patch for PR11459 (<ulink url="http://gcc.gnu.org/PR11459">http://gcc.gnu.org/PR11459</ulink>),
+-ansi -std=c99 -pedantic warns about C90's non long-long support when
+in C99 mode</para></item>
+          <item><para>Incorporate patch for PR19683 (<ulink url="http://gcc.gnu.org/PR19683">http://gcc.gnu.org/PR19683</ulink>),
+MIPS wrong-code for 64-bit multiply</para></item>
+          <item><para>Incorporate patch for PR20301 (<ulink url="http://gcc.gnu.org/PR20301">http://gcc.gnu.org/PR20301</ulink>),
+assembler labels have a leading "-"</para></item>
+          <item><para>Incorporate patch for PR21888 (<ulink url="http://gcc.gnu.org/PR21888">http://gcc.gnu.org/PR21888</ulink>),
+bootstrap failure with linker relaxation enabled</para></item>
+          <item><para>Incorporate patch for PR21889 (<ulink url="http://gcc.gnu.org/PR21889">http://gcc.gnu.org/PR21889</ulink>),
+native Solaris assembler cannot grok DTP-relative debug
+symbols</para></item>
+          <item><para>Incorporate gcc/fixinc/inclhack.def,
+gcc/fixinc/fixincl.x, and gcc/fixinc/tests/base/iso from 3.4 branch
+for PR19933 (<ulink url="http://gcc.gnu.org/PR19933">http://gcc.gnu.org/PR19933</ulink>),
+problem with define of HUGE_VAL in math_c99, and to workaround the
+definition of the PTHREAD_*_INITIALIZER macros on Tru64 UNIX
+5.1</para></item>
+          <item><para>Incorporate patch for PR10692 (<ulink url="http://gcc.gnu.org/bugzilla/show_bug.cgi?id=10692">http://gcc.gnu.org/bugzilla/show_bug.cgi?id=10692</ulink>),
+M68K miscompilation of perl with -O2 -fPIC</para></item>
+          <item><para>Merge patch from 3.4 branch for c-typeck.c
+(same_translation_unit_p) to fix a typo</para></item>
+          <item><para>Incorporate patch for PR17636 (<ulink url="http://gcc.gnu.org/bugzilla/show_bug.cgi?id=17636">http://gcc.gnu.org/bugzilla/show_bug.cgi?id=17636</ulink>),
+"truncation failed in endfile" error when closing a file appended
+to in libf2c fortran library</para></item>
+          <item><para>Incorporate patch for PR22083 (<ulink url="http://gcc.gnu.org/bugzilla/show_bug.cgi?id=22083">http://gcc.gnu.org/bugzilla/show_bug.cgi?id=22083</ulink>),
+TARGET_C99_FUNCTIONS is wrongly defined on AIX 5.1</para></item>
+        </change>
+
+        <change date="2005 April 12" revision="4"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Include GNU prof (ggprof)</para></item>
+        </change>
+
+        <change date="2005 February 28" revision="3"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Add as.info documentation</para></item>
+        </change>
+
+        <change date="2004 December 20" revision="2"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Backport of patch for PR17242 (<ulink url="http://gcc.gnu.org/PR17242">http://gcc.gnu.org/PR17242</ulink>)
+for HP-UX</para></item>
+        </change>
+      </changelog>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="bbc" version="1.9e">
+    <description>
+Client: Big Brother monitors System and Network-delivered services for availability.
+Your current network status is displayed on a color-coded web page in near-real time.
+When problems are detected, you're immediately notified by e-mail, pager, or text messaging.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>bbc</install-name>
+      <pkgname-base>MOTObbc19e</pkgname-base>
+      <version>1.9e</version>
+      <revision>1</revision>
+      <subpkg type="conf" pkgname-ext=".MOTObbc19e-CONF"/>
+      <subpkg type="runtime" pkgname-ext=".MOTObbc19e-RUN">
+        <depend pkgname-base="MOTOpl58"
+          subpkg="runtime">v&gt;=5.8.6 r&gt;=1</depend>
+      </subpkg>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="bbc" version="1.9c">
+    <description attribution="Quest Software">
+Client: Big Brother monitors System and Network-delivered services for availability. 
+Your current network status is displayed on a color-coded web page in near-real time.
+When problems are detected, you're immediately notified by e-mail, pager, or text messaging.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>bbc</install-name>
+      <pkgname-base>MOTO19c</pkgname-base>
+      <version>1.9c</version>
+      <revision>2</revision>
+      <subpkg type="conf" pkgname-ext=".MOTO19c-CONF">
+        <depend pkgname-base="MOTO19c"
+          subpkg="runtime">v&gt;=1.9 r&gt;=1</depend>
+      </subpkg>
+      <subpkg type="runtime" pkgname-ext=".MOTO19c-RUN"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="bbc" version="1.9c">
+    <description attribution="Quest Software">
+Client: Big Brother monitors System and Network-delivered services for availability. 
+Your current network status is displayed on a color-coded web page in near-real time.
+When problems are detected, you're immediately notified by e-mail, pager, or text messaging.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>bbc</install-name>
+      <pkgname-base>MOTO19c</pkgname-base>
+      <version>1.9c</version>
+      <revision>2</revision>
+      <subpkg type="conf" pkgname-ext=".MOTO19c-CONF">
+        <depend pkgname-base="MOTO19c"
+          subpkg="runtime">v&gt;=1.9 r&gt;=1</depend>
+      </subpkg>
+      <subpkg type="runtime" pkgname-ext=".MOTO19c-RUN"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="bbc" version="1.9c">
+    <description attribution="Quest Software">
+Client: Big Brother monitors System and Network-delivered services for availability. 
+Your current network status is displayed on a color-coded web page in near-real time.
+When problems are detected, you're immediately notified by e-mail, pager, or text messaging.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>bbc</install-name>
+      <pkgname-base>MOTObbc19c</pkgname-base>
+      <version>1.9c</version>
+      <revision>2</revision>
+      <subpkg type="conf" pkgname-ext=".MOTObbc19c-CONF">
+        <depend pkgname-base="MOTObbc19c"
+          subpkg="runtime">v&gt;=1.9 r&gt;=1</depend>
+      </subpkg>
+      <subpkg type="runtime" pkgname-ext=".MOTObbc19c-RUN"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="bbc" version="1.9e">
+    <description>
+Client: Big Brother monitors System and Network-delivered services for availability.
+Your current network status is displayed on a color-coded web page in near-real time.
+When problems are detected, you're immediately notified by e-mail, pager, or text messaging.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>bbc</install-name>
+      <pkgname-base>MOTObbc19e</pkgname-base>
+      <version>1.9e</version>
+      <revision>1</revision>
+      <subpkg type="conf" pkgname-ext=".MOTObbc19e-CONF"/>
+      <subpkg type="runtime" pkgname-ext=".MOTObbc19e-RUN">
+        <depend pkgname-base="MOTOpl58"
+          subpkg="runtime">v&gt;=5.8.6 r&gt;=1</depend>
+      </subpkg>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="pkgutils" version="1.5.24">
+    <description>
+Package-manager independent suite of tools used to install, remove,
+and configure binary packages. Using an XML configuration file to
+describe the package, the pkgutils suite automatically downloads and
+installs packages including all necessary dependencies, provides
+information on the list of installed packages, removes packages,
+configures packages (runs the package pre-remove and post-install
+scripts), and queries a repository for a list of updated packages.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>pkgutils15</install-name>
+      <pkgname-base>MOTOpkgut15</pkgname-base>
+      <version>1.5.24</version>
+      <revision>1</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOpkgut15-CONF"/>
+      <subpkg type="man" pkgname-ext=".MOTOpkgut15-MAN"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOpkgut15-RUN"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="pkgutils" version="1.5.24">
+    <description>
+Package-manager independent suite of tools used to install, remove,
+and configure binary packages. Using an XML configuration file to
+describe the package, the pkgutils suite automatically downloads and
+installs packages including all necessary dependencies, provides
+information on the list of installed packages, removes packages,
+configures packages (runs the package pre-remove and post-install
+scripts), and queries a repository for a list of updated packages.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>pkgutils15</install-name>
+      <pkgname-base>MOTOpkgut15</pkgname-base>
+      <version>1.5.24</version>
+      <revision>1</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOpkgut15-CONF"/>
+      <subpkg type="man" pkgname-ext=".MOTOpkgut15-MAN"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOpkgut15-RUN"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="pkgutils" version="1.5.24">
+    <description>
+Package-manager independent suite of tools used to install, remove,
+and configure binary packages. Using an XML configuration file to
+describe the package, the pkgutils suite automatically downloads and
+installs packages including all necessary dependencies, provides
+information on the list of installed packages, removes packages,
+configures packages (runs the package pre-remove and post-install
+scripts), and queries a repository for a list of updated packages.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>pkgutils15</install-name>
+      <pkgname-base>MOTOpkgut15</pkgname-base>
+      <version>1.5.24</version>
+      <revision>1</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOpkgut15-CONF"/>
+      <subpkg type="man" pkgname-ext=".MOTOpkgut15-MAN"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOpkgut15-RUN"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="pkgutils" version="1.5.24">
+    <description>
+Package-manager independent suite of tools used to install, remove,
+and configure binary packages. Using an XML configuration file to
+describe the package, the pkgutils suite automatically downloads and
+installs packages including all necessary dependencies, provides
+information on the list of installed packages, removes packages,
+configures packages (runs the package pre-remove and post-install
+scripts), and queries a repository for a list of updated packages.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>pkgutils15</install-name>
+      <pkgname-base>MOTOpkgut15</pkgname-base>
+      <version>1.5.24</version>
+      <revision>1</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOpkgut15-CONF"/>
+      <subpkg type="man" pkgname-ext=".MOTOpkgut15-MAN"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOpkgut15-RUN"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="pkgutils" version="1.5.24">
+    <description>
+Package-manager independent suite of tools used to install, remove,
+and configure binary packages. Using an XML configuration file to
+describe the package, the pkgutils suite automatically downloads and
+installs packages including all necessary dependencies, provides
+information on the list of installed packages, removes packages,
+configures packages (runs the package pre-remove and post-install
+scripts), and queries a repository for a list of updated packages.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>pkgutils15</install-name>
+      <pkgname-base>MOTOpkgut15</pkgname-base>
+      <version>1.5.24</version>
+      <revision>1</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOpkgut15-CONF"/>
+      <subpkg type="man" pkgname-ext=".MOTOpkgut15-MAN"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOpkgut15-RUN"/>
+    </package-manager>
+  </package>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <package name="bbc" version="1.9e">
+    <description>
+Client: Big Brother monitors System and Network-delivered services for availability.
+Your current network status is displayed on a color-coded web page in near-real time.
+When problems are detected, you're immediately notified by e-mail, pager, or text messaging.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>bbc</install-name>
+      <pkgname-base>MOTObbc19e</pkgname-base>
+      <version>1.9e</version>
+      <revision>1</revision>
+      <subpkg type="conf" pkgname-ext=".MOTObbc19e-CONF"/>
+      <subpkg type="runtime" pkgname-ext=".MOTObbc19e-RUN">
+        <depend pkgname-base="MOTOpl58"
+          subpkg="runtime">v&gt;=5.8.6 r&gt;=1</depend>
+      </subpkg>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="gcc" version="3.4.3">
+    <description attribution="The OpenPKG Project">
+The GNU Compiler Collection (GCC) provides a standard conforming and
+highly portable ISO C, ISO C++, Fortran 77, Java, and Ada compiler.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>gcc343</install-name>
+      <pkgname-base>MOTOgcc343</pkgname-base>
+      <version>3.4.3</version>
+      <revision>6</revision>
+      <subpkg type="doc" pkgname-ext=".MOTOgcc343-HELP"/>
+      <subpkg type="libruntime" pkgname-ext=".MOTOgcc343-LIBR"/>
+      <subpkg type="man" pkgname-ext=".MOTOgcc343-MAN"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOgcc343-RUN"/>
+      <replace pkgname-base="MOTOgcc342"
+        install-name="gcc342"/>
+      <replace pkgname-base="MOTOgcc332"
+        install-name="gcc332"/>
+      <replace pkgname-base="MOTOgcc33"
+        install-name="gcc33"/>
+      <replace pkgname-base="MOTOgcc323"
+        install-name="gcc323"/>
+
+      <changelog>
+        <change date="2005 December 24" revision="6"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Build Ada for HP-UX 11.00, 11.11</para></item>
+        </change>
+
+        <change date="2005 June 9" revision="5"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Incorporate patch for PR11459 (<ulink url="http://gcc.gnu.org/PR11459">http://gcc.gnu.org/PR11459</ulink>),
+-ansi -std=c99 -pedantic warns about C90's non long-long support when
+in C99 mode</para></item>
+          <item><para>Incorporate patch for PR19683 (<ulink url="http://gcc.gnu.org/PR19683">http://gcc.gnu.org/PR19683</ulink>),
+MIPS wrong-code for 64-bit multiply</para></item>
+          <item><para>Incorporate patch for PR20301 (<ulink url="http://gcc.gnu.org/PR20301">http://gcc.gnu.org/PR20301</ulink>),
+assembler labels have a leading "-"</para></item>
+          <item><para>Incorporate patch for PR21888 (<ulink url="http://gcc.gnu.org/PR21888">http://gcc.gnu.org/PR21888</ulink>),
+bootstrap failure with linker relaxation enabled</para></item>
+          <item><para>Incorporate patch for PR21889 (<ulink url="http://gcc.gnu.org/PR21889">http://gcc.gnu.org/PR21889</ulink>),
+native Solaris assembler cannot grok DTP-relative debug
+symbols</para></item>
+          <item><para>Incorporate gcc/fixinc/inclhack.def,
+gcc/fixinc/fixincl.x, and gcc/fixinc/tests/base/iso from 3.4 branch
+for PR19933 (<ulink url="http://gcc.gnu.org/PR19933">http://gcc.gnu.org/PR19933</ulink>),
+problem with define of HUGE_VAL in math_c99, and to workaround the
+definition of the PTHREAD_*_INITIALIZER macros on Tru64 UNIX
+5.1</para></item>
+          <item><para>Incorporate patch for PR10692 (<ulink url="http://gcc.gnu.org/bugzilla/show_bug.cgi?id=10692">http://gcc.gnu.org/bugzilla/show_bug.cgi?id=10692</ulink>),
+M68K miscompilation of perl with -O2 -fPIC</para></item>
+          <item><para>Merge patch from 3.4 branch for c-typeck.c
+(same_translation_unit_p) to fix a typo</para></item>
+          <item><para>Incorporate patch for PR17636 (<ulink url="http://gcc.gnu.org/bugzilla/show_bug.cgi?id=17636">http://gcc.gnu.org/bugzilla/show_bug.cgi?id=17636</ulink>),
+"truncation failed in endfile" error when closing a file appended
+to in libf2c fortran library</para></item>
+          <item><para>Incorporate patch for PR22083 (<ulink url="http://gcc.gnu.org/bugzilla/show_bug.cgi?id=22083">http://gcc.gnu.org/bugzilla/show_bug.cgi?id=22083</ulink>),
+TARGET_C99_FUNCTIONS is wrongly defined on AIX 5.1</para></item>
+        </change>
+
+        <change date="2005 April 12" revision="4"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Include GNU prof (ggprof)</para></item>
+        </change>
+
+        <change date="2005 February 28" revision="3"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Add as.info documentation</para></item>
+        </change>
+
+        <change date="2004 December 20" revision="2"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Backport of patch for PR17242 (<ulink url="http://gcc.gnu.org/PR17242">http://gcc.gnu.org/PR17242</ulink>)
+for HP-UX</para></item>
+        </change>
+      </changelog>
+    </package-manager>
+  </package>
+
+
+  <package name="hobbitc" version="4.2.0">
+    <description>
+This is a server-side configuration hobbit client for ITIS Motorola Inc.
+Hobbit is a tool for monitoring servers, applications and networks. It collects information about the health of your computers, the applications running on them, and the network connectivity between them. All of this information is presented in a set of simple, intuitive webpages that are updated frequently to reflect changes in the status of your systems.
+
+Hobbit is capable of monitoring a vast set of network services, e.g. mail-servers, web-servers (both plain HTTP and encrypted HTTPS), local server application logs, ressource utilisation and much more.
+
+Much of the information is processed and stored in RRD files, which then form the basis for providing trend graphs showing how e.g. webserver response-times vary over time.
+
+Hobbit started out as a replacement for a small part of Big Brother, and owes a great deal of inspiration to how Big Brother works. But Hobbit has grown to become a full scale monitoring solution, with features that match or exceed what Big Brother can do.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>hobbitc</install-name>
+      <pkgname-base>MOTOhobbitc</pkgname-base>
+      <version>4.2.0</version>
+      <revision>1</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOhobbitc-CONF"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOhobbitc-RUN"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="hobbitc" version="4.2.0">
+    <description>
+This is a server-side configuration hobbit client for ITIS Motorola Inc.
+Hobbit is a tool for monitoring servers, applications and networks. It collects information about the health of your computers, the applications running on them, and the network connectivity between them. All of this information is presented in a set of simple, intuitive webpages that are updated frequently to reflect changes in the status of your systems.
+
+Hobbit is capable of monitoring a vast set of network services, e.g. mail-servers, web-servers (both plain HTTP and encrypted HTTPS), local server application logs, ressource utilisation and much more.
+
+Much of the information is processed and stored in RRD files, which then form the basis for providing trend graphs showing how e.g. webserver response-times vary over time.
+
+Hobbit started out as a replacement for a small part of Big Brother, and owes a great deal of inspiration to how Big Brother works. But Hobbit has grown to become a full scale monitoring solution, with features that match or exceed what Big Brother can do.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>hobbitc</install-name>
+      <pkgname-base>MOTOhobbitc</pkgname-base>
+      <version>4.2.0</version>
+      <revision>1</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOhobbitc-CONF"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOhobbitc-RUN"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="hobbitc" version="4.2.0">
+    <description>
+This is a server-side configuration hobbit client for ITIS Motorola Inc.
+Hobbit is a tool for monitoring servers, applications and networks. It collects information about the health of your computers, the applications running on them, and the network connectivity between them. All of this information is presented in a set of simple, intuitive webpages that are updated frequently to reflect changes in the status of your systems.
+
+Hobbit is capable of monitoring a vast set of network services, e.g. mail-servers, web-servers (both plain HTTP and encrypted HTTPS), local server application logs, ressource utilisation and much more.
+
+Much of the information is processed and stored in RRD files, which then form the basis for providing trend graphs showing how e.g. webserver response-times vary over time.
+
+Hobbit started out as a replacement for a small part of Big Brother, and owes a great deal of inspiration to how Big Brother works. But Hobbit has grown to become a full scale monitoring solution, with features that match or exceed what Big Brother can do.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>hobbitc</install-name>
+      <pkgname-base>MOTOhobbitc</pkgname-base>
+      <version>4.2.0</version>
+      <revision>1</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOhobbitc-CONF"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOhobbitc-RUN"/>
+    </package-manager>
+  </package>
+
+
+  <package name="pkgutils" version="1.5.31">
+    <description>
+Package-manager independent suite of tools used to install, remove,
+and configure binary packages. Using an XML configuration file to
+describe the package, the pkgutils suite automatically downloads and
+installs packages including all necessary dependencies, provides
+information on the list of installed packages, removes packages,
+configures packages (runs the package pre-remove and post-install
+scripts), and queries a repository for a list of updated packages.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>pkgutils1531</install-name>
+      <pkgname-base>MOTOpkgut1531</pkgname-base>
+      <version>1.5.31</version>
+      <revision>1</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOpkgut1531-CONF"
+      size="0"/>
+      <subpkg type="man" pkgname-ext=".MOTOpkgut1531-MAN"
+      size="138225"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOpkgut1531-RUN"
+      size="25399491"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="pkgutils" version="1.5.24">
+    <description>
+Package-manager independent suite of tools used to install, remove,
+and configure binary packages. Using an XML configuration file to
+describe the package, the pkgutils suite automatically downloads and
+installs packages including all necessary dependencies, provides
+information on the list of installed packages, removes packages,
+configures packages (runs the package pre-remove and post-install
+scripts), and queries a repository for a list of updated packages.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>pkgutils15</install-name>
+      <pkgname-base>MOTOpkgut15</pkgname-base>
+      <version>1.5.24</version>
+      <revision>1</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOpkgut15-CONF"
+      size="0"/>
+      <subpkg type="man" pkgname-ext=".MOTOpkgut15-MAN"
+      size="136032"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOpkgut15-RUN"
+      size="34661380"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="pkgutils" version="1.5.24">
+    <description>
+Package-manager independent suite of tools used to install, remove,
+and configure binary packages. Using an XML configuration file to
+describe the package, the pkgutils suite automatically downloads and
+installs packages including all necessary dependencies, provides
+information on the list of installed packages, removes packages,
+configures packages (runs the package pre-remove and post-install
+scripts), and queries a repository for a list of updated packages.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>pkgutils15</install-name>
+      <pkgname-base>MOTOpkgut15</pkgname-base>
+      <version>1.5.24</version>
+      <revision>1</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOpkgut15-CONF"
+      size="0"/>
+      <subpkg type="man" pkgname-ext=".MOTOpkgut15-MAN"
+      size="136032"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOpkgut15-RUN"
+      size="34661403"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="pkgutils" version="1.5.24">
+    <description>
+Package-manager independent suite of tools used to install, remove,
+and configure binary packages. Using an XML configuration file to
+describe the package, the pkgutils suite automatically downloads and
+installs packages including all necessary dependencies, provides
+information on the list of installed packages, removes packages,
+configures packages (runs the package pre-remove and post-install
+scripts), and queries a repository for a list of updated packages.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>pkgutils15</install-name>
+      <pkgname-base>MOTOpkgut15</pkgname-base>
+      <version>1.5.24</version>
+      <revision>1</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOpkgut15-CONF"
+      size="0"/>
+      <subpkg type="man" pkgname-ext=".MOTOpkgut15-MAN"
+      size="136032"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOpkgut15-RUN"
+      size="34661403"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="pkgutils" version="1.5.24">
+    <description>
+Package-manager independent suite of tools used to install, remove,
+and configure binary packages. Using an XML configuration file to
+describe the package, the pkgutils suite automatically downloads and
+installs packages including all necessary dependencies, provides
+information on the list of installed packages, removes packages,
+configures packages (runs the package pre-remove and post-install
+scripts), and queries a repository for a list of updated packages.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>pkgutils15</install-name>
+      <pkgname-base>MOTOpkgut15</pkgname-base>
+      <version>1.5.24</version>
+      <revision>1</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOpkgut15-CONF"
+      size="0"/>
+      <subpkg type="man" pkgname-ext=".MOTOpkgut15-MAN"
+      size="136032"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOpkgut15-RUN"
+      size="34661403"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="pkgutils" version="1.5.31">
+    <description>
+Package-manager independent suite of tools used to install, remove,
+and configure binary packages. Using an XML configuration file to
+describe the package, the pkgutils suite automatically downloads and
+installs packages including all necessary dependencies, provides
+information on the list of installed packages, removes packages,
+configures packages (runs the package pre-remove and post-install
+scripts), and queries a repository for a list of updated packages.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>pkgutils1531</install-name>
+      <pkgname-base>MOTOpkgut1531</pkgname-base>
+      <version>1.5.31</version>
+      <revision>1</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOpkgut1531-CONF"
+      size="0"/>
+      <subpkg type="man" pkgname-ext=".MOTOpkgut1531-MAN"
+      size="138225"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOpkgut1531-RUN"
+      size="25398959"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="pkgutils" version="1.5.31">
+    <description>
+Package-manager independent suite of tools used to install, remove,
+and configure binary packages. Using an XML configuration file to
+describe the package, the pkgutils suite automatically downloads and
+installs packages including all necessary dependencies, provides
+information on the list of installed packages, removes packages,
+configures packages (runs the package pre-remove and post-install
+scripts), and queries a repository for a list of updated packages.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>pkgutils1531</install-name>
+      <pkgname-base>MOTOpkgut15</pkgname-base>
+      <version>1.5.31</version>
+      <revision>1</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOpkgut15-CONF"
+      size="0"/>
+      <subpkg type="man" pkgname-ext=".MOTOpkgut15-MAN"
+      size="138225"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOpkgut15-RUN"
+      size="25398959"/>
+    </package-manager>
+  </package>
+
+
+
+
+
+
+
+
+
+  <package name="pkgutils" version="1.5.31">
+    <description>
+Package-manager independent suite of tools used to install, remove,
+and configure binary packages. Using an XML configuration file to
+describe the package, the pkgutils suite automatically downloads and
+installs packages including all necessary dependencies, provides
+information on the list of installed packages, removes packages,
+configures packages (runs the package pre-remove and post-install
+scripts), and queries a repository for a list of updated packages.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>pkgutils1531</install-name>
+      <pkgname-base>MOTOpkgut15</pkgname-base>
+      <version>1.5.31</version>
+      <revision>1</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOpkgut15-CONF"
+      size="0"/>
+      <subpkg type="man" pkgname-ext=".MOTOpkgut15-MAN"
+      size="138225"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOpkgut15-RUN"
+      size="25398971"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="pkgutils" version="1.5.31">
+    <description>
+Package-manager independent suite of tools used to install, remove,
+and configure binary packages. Using an XML configuration file to
+describe the package, the pkgutils suite automatically downloads and
+installs packages including all necessary dependencies, provides
+information on the list of installed packages, removes packages,
+configures packages (runs the package pre-remove and post-install
+scripts), and queries a repository for a list of updated packages.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>pkgutils1531</install-name>
+      <pkgname-base>MOTOpkgut1531</pkgname-base>
+      <version>1.5.31</version>
+      <revision>1</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOpkgut1531-CONF"
+      size="0"/>
+      <subpkg type="man" pkgname-ext=".MOTOpkgut1531-MAN"
+      size="138225"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOpkgut1531-RUN"
+      size="25398971"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="pkgutils" version="1.5.31">
+    <description>
+Package-manager independent suite of tools used to install, remove,
+and configure binary packages. Using an XML configuration file to
+describe the package, the pkgutils suite automatically downloads and
+installs packages including all necessary dependencies, provides
+information on the list of installed packages, removes packages,
+configures packages (runs the package pre-remove and post-install
+scripts), and queries a repository for a list of updated packages.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>pkgutils1531</install-name>
+      <pkgname-base>MOTOpkg1531</pkgname-base>
+      <version>1.5.31</version>
+      <revision>2</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOpkg1531-CONF"
+      size="0"/>
+      <subpkg type="man" pkgname-ext=".MOTOpkg1531-MAN"
+      size="138225"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOpkg1531-RUN"
+      size="25398971"/>
+    </package-manager>
+  </package>
+
+
+
+
+
+
+
+
+
+<!--
+
+  <package name="powerbrokerclient" version="2.8.1">
+    <description attribution="Symark Software">
+Client: Powerbroker
+    </description>
+
+    <package-manager name="depot">
+      <install-name>powerbrokerclient281</install-name>
+      <pkgname-base>MOTOpbC281</pkgname-base>
+      <version>2.8.1</version>
+      <revision>1</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOpbC281-CONF"
+      size="1026"/>
+      <subpkg type="man" pkgname-ext=".MOTOpbC281-MAN"
+      size="44036">
+        <depend pkgname-base="MOTOpbC281"
+          subpkg="runtime">v&gt;=2.8.1 r&gt;=1</depend>
+      </subpkg>
+      <subpkg type="runtime" pkgname-ext=".MOTOpbC281-RUN"
+      size="24056216">
+        <depend pkgname-base="MOTOpbC281"
+          subpkg="conf">v&gt;=2.8.1 r&gt;=1</depend>
+      </subpkg>
+    </package-manager>
+  </package>
+-->
+
+
+
+  <package name="powerbrokerclient" version="2.8.1">
+    <description attribution="Symark Software">
+Client: Powerbroker
+    </description>
+
+    <package-manager name="depot">
+      <install-name>powerbrokerclient281</install-name>
+      <pkgname-base>MOTOpbC281</pkgname-base>
+      <version>2.8.1</version>
+      <revision>1</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOpbC281-CONF"
+      size="1026"/>
+      <subpkg type="man" pkgname-ext=".MOTOpbC281-MAN"
+      size="44036">
+        <depend pkgname-base="MOTOpbC281"
+          subpkg="runtime">v&gt;=2.8.1 r&gt;=1</depend>
+      </subpkg>
+      <subpkg type="runtime" pkgname-ext=".MOTOpbC281-RUN"
+      size="24056216">
+        <depend pkgname-base="MOTOpbC281"
+          subpkg="conf">v&gt;=2.8.1 r&gt;=1</depend>
+      </subpkg>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="bash" version="3.0">
+    <description>
+Bash (Bourne-Again Shell) is an sh-compatible command language
+interpreter that executes commands read from the standard input or
+from a file. Bash also incorporates useful features from the Korn and
+C shells (ksh and csh). Bash is intended to be a conformant
+implementation of the IEEE POSIX Shell and Tools specification (IEEE
+Working Group 1003.2).
+    </description>
+
+    <package-manager name="depot">
+      <install-name>bash30</install-name>
+      <pkgname-base>MOTObash30</pkgname-base>
+      <version>3.0</version>
+      <revision>2</revision>
+      <subpkg type="doc" pkgname-ext=".MOTObash30-HELP"
+      size="4205321"/>
+      <subpkg type="man" pkgname-ext=".MOTObash30-MAN"
+      size="645790"/>
+      <subpkg type="runtime" pkgname-ext=".MOTObash30-RUN"
+      size="1093669">
+        <depend pkgname-base="MOTgtext014"
+          subpkg="runtime">v&gt;=0.14.1 r&gt;=1</depend>
+        <depend pkgname-base="MOTOncur54"
+          subpkg="runtime">v&gt;=5.4 r&gt;=1</depend>
+        <depend pkgname-base="MOTOrdln50"
+          subpkg="runtime">v&gt;=5.0 r&gt;=1</depend>
+      </subpkg>
+      <replace pkgname-base="MOTObash"
+        install-name="bash"/>
+
+      <changelog>
+        <change date="2005 April 7" revision="2"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Disable getaddrinfo() on HP-UX because it is
+broken</para></item>
+        </change>
+      </changelog>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="ncurses" version="5.4">
+    <description attribution="freshmeat.net">
+The ncurses (new curses) library is a freeware emulation of System V
+Release 4.0 curses. It uses terminfo format, supports pads and color
+and multiple highlights and forms characters and function-key mapping,
+and has all the other SYSV-curses enhancements over BSD curses. The
+distribution includes the library and support utilities, including a
+terminfo compiler tic, a decompiler infocmp, clear, tput, tset, and a
+termcap conversion tool captoinfo. Full manual pages are provided for
+the library and tools.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>ncurses54</install-name>
+      <pkgname-base>MOTOncur54</pkgname-base>
+      <version>5.4</version>
+      <revision>3</revision>
+      <subpkg type="doc" pkgname-ext=".MOTOncur54-HELP"
+      size="3176242"/>
+      <subpkg type="man" pkgname-ext=".MOTOncur54-MAN"
+      size="760969"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOncur54-RUN"
+      size="10378370"/>
+      <replace pkgname-base="MOTOncurses5"
+        install-name="ncurses5"/>
+
+      <changelog>
+        <change date="2004 December 26" revision="3"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Include wide-character libraries</para></item>
+          <item><para>Upgrade to latest 20041225 patch
+release</para></item>
+        </change>
+
+        <change date="2004 September 1" revision="2"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Remove build directory from dependency_libs in
+*.la files</para></item>
+        </change>
+      </changelog>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="readline" version="5.0">
+    <description>
+The Readline library provides a set of functions for use by
+applications that allow users to edit command lines as they are typed
+in. Both Emacs and vi editing modes are available. The Readline
+library includes additional functions to maintain a list of
+previously-entered command lines, to recall and perhaps reedit those
+lines, and perform csh-like history expansion on previous commands.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>readline50</install-name>
+      <pkgname-base>MOTOrdln50</pkgname-base>
+      <version>5.0</version>
+      <revision>2</revision>
+      <subpkg type="doc" pkgname-ext=".MOTOrdln50-HELP"
+      size="213700"/>
+      <subpkg type="man" pkgname-ext=".MOTOrdln50-MAN"
+      size="379679"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOrdln50-RUN"
+      size="830392">
+        <depend pkgname-base="MOTOncur54"
+          subpkg="runtime">v&gt;=5.4 r&gt;=1</depend>
+      </subpkg>
+      <replace pkgname-base="MOTOrdln43"
+        install-name="readline43"/>
+      <replace pkgname-base="MOTOrdln42a"
+        install-name="readline42a"/>
+      <replace pkgname-base="MOTOrdline42"
+        install-name="readline42"/>
+
+      <changelog>
+        <change date="2005 December 23" revision="2"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Add Term-ReadLine-Gnu-1.15 Perl module which is
+added to default Perl include paths at postinstall</para></item>
+        </change>
+      </changelog>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="gettext" version="0.14.1">
+    <description>
+The GNU `gettext' utilities are a set of tools that provides a
+framework to help other GNU packages produce multi-lingual messages.
+These tools include a set of conventions about how programs should be
+written to support message catalogs, a directory and file naming
+organization for the message catalogs themselves, a runtime library
+supporting the retrieval of translated messages, and a few stand-alone
+programs to massage in various ways the sets of translatable strings,
+or already translated strings.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>gettext014</install-name>
+      <pkgname-base>MOTgtext014</pkgname-base>
+      <version>0.14.1</version>
+      <revision>5</revision>
+      <subpkg type="doc" pkgname-ext=".MOTgtext014-HELP"
+      size="3087298"/>
+      <subpkg type="man" pkgname-ext=".MOTgtext014-MAN"
+      size="539102"/>
+      <subpkg type="runtime" pkgname-ext=".MOTgtext014-RUN"
+      size="5107838">
+        <depend pkgname-base="MOTOexpat19"
+          subpkg="runtime">v&gt;=1.95.8 r&gt;=1</depend>
+        <depend pkgname-base="MOTOiconv19"
+          subpkg="runtime">v&gt;=1.9.2 r&gt;=1</depend>
+      </subpkg>
+      <replace pkgname-base="MOTOgtext011"
+        install-name="gettext011"/>
+      <replace pkgname-base="MOTgettext"
+        install-name="gettext"/>
+
+      <changelog>
+        <change date="2006 May 22" revision="5"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Remove libiconv dependency from libintl.pc as no
+include file requires it</para></item>
+          <item><para>Remove libiconv dependency from libintl.pc as no
+include file requires it</para></item>
+          <item><para>Update <command>config.rpath</command> and
+<command>lib-link.m4</command> to add a new variable,
+<command>hardcode_direct_absolute</command>, to determine if linking
+the path of the shared library encodes the absolute path, unable to be
+overridden with the library search path environment variable
+(<command>LIBPATH</command>, <command>LD_LIBRARY_PATH</command>, or
+<command>SHLIB_PATH</command>).</para></item>
+        </change>
+
+        <change date="2005 November 10" revision="4"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Add 64-bit libraries</para></item>
+        </change>
+
+        <change date="2005 February 5" revision="3"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Upgrade expat dependency from 1.95.6 to
+  1.95.8</para></item>
+        </change>
+
+        <change date="2004 August 2" revision="2"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Add libintl.pc pkgconfig file</para></item>
+        </change>
+      </changelog>
+    </package-manager>
+  </package>
+
+
+
+  <package name="pcre" version="5.0">
+    <description>
+The PCRE library is a set of functions that implement regular
+expression pattern matching using the same syntax and semantics as
+Perl, with just a few differences. The current implementation of PCRE
+(release 4.x) corresponds approximately with Perl 5.8, including
+support for UTF-8 encoded strings. However, this support has to be
+explicitly enabled; it is not the default.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>libpcre50</install-name>
+      <pkgname-base>MOTlibpcre50</pkgname-base>
+      <version>5.0</version>
+      <revision>2</revision>
+      <subpkg type="man" pkgname-ext=".MOTlibpcre50-MAN"
+      size="197773"/>
+      <subpkg type="runtime" pkgname-ext=".MOTlibpcre50-RUN"
+      size="316878"/>
+      <replace pkgname-base="MOTOlibpcre44"
+        install-name="libpcre44"/>
+      <replace pkgname-base="MOTOpcre41"
+        install-name="libpcre41"/>
+
+      <changelog>
+        <change date="2005 September 15" revision="2"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Apply patch for CAN-2005-2491 (<ulink url="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2491">http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2491</ulink>).
+Fix for an integer overflow with a subsequent buffer overflow
+triggered by a maliciously crafted regular expression allowing an
+attacker to execute arbitrary code.</para></item>
+        </change>
+      </changelog>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="hobbit-client-local" version="4.2.0">
+    <description attribution="freshmeat.net">
+Hobbit Monitor is a system for monitoring hosts and networks, inspired
+by the Big Brother system. It provides realtime monitoring, an
+easy-to-use Web interface, historical data, availability reports, and
+performance graphs. This package is for a hobbit monitoring client,
+and includes the client parts of a full system, requiring a hobbit
+server on the network to report to in order to be useful.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>hobbitclientlocal42</install-name>
+      <pkgname-base>MOTOhobtclocal42</pkgname-base>
+      <version>4.2.0</version>
+      <revision>6</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOhobtclocal42-CONF"
+      size="24169"/>
+      <subpkg type="man" pkgname-ext=".MOTOhobtclocal42-MAN"
+      size="30075"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOhobtclocal42-RUN"
+      size="1225830">
+        <depend pkgname-base="MOTlibpcre50"
+          subpkg="runtime">v&gt;=5.0 r&gt;=1</depend>
+        <depend pkgname-base="MOTlibpcre50"
+          subpkg="man">v&gt;=5.0 r&gt;=1</depend>
+      </subpkg>
+    </package-manager>
+  </package>
+
+
+  <package name="hobbit-client" version="4.2.0">
+    <description attribution="freshmeat.net">
+Hobbit Monitor is a system for monitoring hosts and networks, inspired
+by the Big Brother system. It provides realtime monitoring, an
+easy-to-use Web interface, historical data, availability reports, and
+performance graphs. This package is for a hobbit monitoring client,
+and includes the client parts of a full system, requiring a hobbit
+server on the network to report to in order to be useful.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>hobbitclient42</install-name>
+      <pkgname-base>MOTOhobtc42</pkgname-base>
+      <version>4.2.0</version>
+      <revision>7</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOhobtc42-CONF"
+      size="24182"/>
+      <subpkg type="man" pkgname-ext=".MOTOhobtc42-MAN"
+      size="30075"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOhobtc42-RUN"
+      size="1021068"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="gettext" version="0.14.1">
+    <description>
+The GNU `gettext' utilities are a set of tools that provides a
+framework to help other GNU packages produce multi-lingual messages.
+These tools include a set of conventions about how programs should be
+written to support message catalogs, a directory and file naming
+organization for the message catalogs themselves, a runtime library
+supporting the retrieval of translated messages, and a few stand-alone
+programs to massage in various ways the sets of translatable strings,
+or already translated strings.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>gettext014</install-name>
+      <pkgname-base>MOTgtext014</pkgname-base>
+      <version>0.14.1</version>
+      <revision>5</revision>
+      <subpkg type="doc" pkgname-ext=".MOTgtext014-HELP"
+      size="3087298"/>
+      <subpkg type="man" pkgname-ext=".MOTgtext014-MAN"
+      size="539102"/>
+      <subpkg type="runtime" pkgname-ext=".MOTgtext014-RUN"
+      size="5107838">
+        <depend pkgname-base="MOTOexpat19"
+          subpkg="runtime">v&gt;=1.95.8 r&gt;=1</depend>
+        <depend pkgname-base="MOTOiconv19"
+          subpkg="runtime">v&gt;=1.9.2 r&gt;=1</depend>
+      </subpkg>
+      <replace pkgname-base="MOTOgtext011"
+        install-name="gettext011"/>
+      <replace pkgname-base="MOTgettext"
+        install-name="gettext"/>
+
+      <changelog>
+        <change date="2006 May 22" revision="5"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Remove libiconv dependency from libintl.pc as no
+include file requires it</para></item>
+          <item><para>Remove libiconv dependency from libintl.pc as no
+include file requires it</para></item>
+          <item><para>Update <command>config.rpath</command> and
+<command>lib-link.m4</command> to add a new variable,
+<command>hardcode_direct_absolute</command>, to determine if linking
+the path of the shared library encodes the absolute path, unable to be
+overridden with the library search path environment variable
+(<command>LIBPATH</command>, <command>LD_LIBRARY_PATH</command>, or
+<command>SHLIB_PATH</command>).</para></item>
+        </change>
+
+        <change date="2005 November 10" revision="4"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Add 64-bit libraries</para></item>
+        </change>
+
+        <change date="2005 February 5" revision="3"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Upgrade expat dependency from 1.95.6 to
+  1.95.8</para></item>
+        </change>
+
+        <change date="2004 August 2" revision="2"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Add libintl.pc pkgconfig file</para></item>
+        </change>
+      </changelog>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="readline" version="5.0">
+    <description>
+The Readline library provides a set of functions for use by
+applications that allow users to edit command lines as they are typed
+in. Both Emacs and vi editing modes are available. The Readline
+library includes additional functions to maintain a list of
+previously-entered command lines, to recall and perhaps reedit those
+lines, and perform csh-like history expansion on previous commands.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>readline50</install-name>
+      <pkgname-base>MOTOrdln50</pkgname-base>
+      <version>5.0</version>
+      <revision>2</revision>
+      <subpkg type="doc" pkgname-ext=".MOTOrdln50-HELP"
+      size="213700"/>
+      <subpkg type="man" pkgname-ext=".MOTOrdln50-MAN"
+      size="379679"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOrdln50-RUN"
+      size="830392">
+        <depend pkgname-base="MOTOncur54"
+          subpkg="runtime">v&gt;=5.4 r&gt;=1</depend>
+      </subpkg>
+      <replace pkgname-base="MOTOrdln43"
+        install-name="readline43"/>
+      <replace pkgname-base="MOTOrdln42a"
+        install-name="readline42a"/>
+      <replace pkgname-base="MOTOrdline42"
+        install-name="readline42"/>
+
+      <changelog>
+        <change date="2005 December 23" revision="2"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Add Term-ReadLine-Gnu-1.15 Perl module which is
+added to default Perl include paths at postinstall</para></item>
+        </change>
+      </changelog>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="gettext" version="0.14.1">
+    <description>
+The GNU `gettext' utilities are a set of tools that provides a
+framework to help other GNU packages produce multi-lingual messages.
+These tools include a set of conventions about how programs should be
+written to support message catalogs, a directory and file naming
+organization for the message catalogs themselves, a runtime library
+supporting the retrieval of translated messages, and a few stand-alone
+programs to massage in various ways the sets of translatable strings,
+or already translated strings.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>gettext014</install-name>
+      <pkgname-base>MOTgtext014</pkgname-base>
+      <version>0.14.1</version>
+      <revision>5</revision>
+      <subpkg type="doc" pkgname-ext=".MOTgtext014-HELP"
+      size="3087298"/>
+      <subpkg type="man" pkgname-ext=".MOTgtext014-MAN"
+      size="539102"/>
+      <subpkg type="runtime" pkgname-ext=".MOTgtext014-RUN"
+      size="5107838">
+        <depend pkgname-base="MOTOexpat19"
+          subpkg="runtime">v&gt;=1.95.8 r&gt;=1</depend>
+        <depend pkgname-base="MOTOiconv19"
+          subpkg="runtime">v&gt;=1.9.2 r&gt;=1</depend>
+      </subpkg>
+      <replace pkgname-base="MOTOgtext011"
+        install-name="gettext011"/>
+      <replace pkgname-base="MOTgettext"
+        install-name="gettext"/>
+
+      <changelog>
+        <change date="2006 May 22" revision="5"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Remove libiconv dependency from libintl.pc as no
+include file requires it</para></item>
+          <item><para>Remove libiconv dependency from libintl.pc as no
+include file requires it</para></item>
+          <item><para>Update <command>config.rpath</command> and
+<command>lib-link.m4</command> to add a new variable,
+<command>hardcode_direct_absolute</command>, to determine if linking
+the path of the shared library encodes the absolute path, unable to be
+overridden with the library search path environment variable
+(<command>LIBPATH</command>, <command>LD_LIBRARY_PATH</command>, or
+<command>SHLIB_PATH</command>).</para></item>
+        </change>
+
+        <change date="2005 November 10" revision="4"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Add 64-bit libraries</para></item>
+        </change>
+
+        <change date="2005 February 5" revision="3"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Upgrade expat dependency from 1.95.6 to
+  1.95.8</para></item>
+        </change>
+
+        <change date="2004 August 2" revision="2"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Add libintl.pc pkgconfig file</para></item>
+        </change>
+      </changelog>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="gettext" version="0.14.1">
+    <description>
+The GNU `gettext' utilities are a set of tools that provides a
+framework to help other GNU packages produce multi-lingual messages.
+These tools include a set of conventions about how programs should be
+written to support message catalogs, a directory and file naming
+organization for the message catalogs themselves, a runtime library
+supporting the retrieval of translated messages, and a few stand-alone
+programs to massage in various ways the sets of translatable strings,
+or already translated strings.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>gettext014</install-name>
+      <pkgname-base>MOTOgtext014</pkgname-base>
+      <version>0.14.1</version>
+      <revision>5</revision>
+      <subpkg type="doc" pkgname-ext=".MOTOgtext014-HELP"
+      size="3087298"/>
+      <subpkg type="man" pkgname-ext=".MOTOgtext014-MAN"
+      size="539102"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOgtext014-RUN"
+      size="5107838">
+        <depend pkgname-base="MOTOexpat19"
+          subpkg="runtime">v&gt;=1.95.8 r&gt;=1</depend>
+        <depend pkgname-base="MOTOiconv19"
+          subpkg="runtime">v&gt;=1.9.2 r&gt;=1</depend>
+      </subpkg>
+      <replace pkgname-base="MOTOgtext011"
+        install-name="gettext011"/>
+      <replace pkgname-base="MOTgettext"
+        install-name="gettext"/>
+
+      <changelog>
+        <change date="2006 May 22" revision="5"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Remove libiconv dependency from libintl.pc as no
+include file requires it</para></item>
+          <item><para>Remove libiconv dependency from libintl.pc as no
+include file requires it</para></item>
+          <item><para>Update <command>config.rpath</command> and
+<command>lib-link.m4</command> to add a new variable,
+<command>hardcode_direct_absolute</command>, to determine if linking
+the path of the shared library encodes the absolute path, unable to be
+overridden with the library search path environment variable
+(<command>LIBPATH</command>, <command>LD_LIBRARY_PATH</command>, or
+<command>SHLIB_PATH</command>).</para></item>
+        </change>
+
+        <change date="2005 November 10" revision="4"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Add 64-bit libraries</para></item>
+        </change>
+
+        <change date="2005 February 5" revision="3"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Upgrade expat dependency from 1.95.6 to
+  1.95.8</para></item>
+        </change>
+
+        <change date="2004 August 2" revision="2"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Add libintl.pc pkgconfig file</para></item>
+        </change>
+      </changelog>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="gettext" version="0.14.1">
+    <description>
+The GNU `gettext' utilities are a set of tools that provides a
+framework to help other GNU packages produce multi-lingual messages.
+These tools include a set of conventions about how programs should be
+written to support message catalogs, a directory and file naming
+organization for the message catalogs themselves, a runtime library
+supporting the retrieval of translated messages, and a few stand-alone
+programs to massage in various ways the sets of translatable strings,
+or already translated strings.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>gettext014</install-name>
+      <pkgname-base>MOTgtext014</pkgname-base>
+      <version>0.14.1</version>
+      <revision>5</revision>
+      <subpkg type="doc" pkgname-ext=".MOTgtext014-HELP"
+      size="3087298"/>
+      <subpkg type="man" pkgname-ext=".MOTgtext014-MAN"
+      size="539102"/>
+      <subpkg type="runtime" pkgname-ext=".MOTgtext014-RUN"
+      size="5107838">
+        <depend pkgname-base="MOTOexpat19"
+          subpkg="runtime">v&gt;=1.95.8 r&gt;=1</depend>
+        <depend pkgname-base="MOTOiconv19"
+          subpkg="runtime">v&gt;=1.9.2 r&gt;=1</depend>
+      </subpkg>
+      <replace pkgname-base="MOTOgtext011"
+        install-name="gettext011"/>
+      <replace pkgname-base="MOTgettext"
+        install-name="gettext"/>
+
+      <changelog>
+        <change date="2006 May 22" revision="5"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Remove libiconv dependency from libintl.pc as no
+include file requires it</para></item>
+          <item><para>Remove libiconv dependency from libintl.pc as no
+include file requires it</para></item>
+          <item><para>Update <command>config.rpath</command> and
+<command>lib-link.m4</command> to add a new variable,
+<command>hardcode_direct_absolute</command>, to determine if linking
+the path of the shared library encodes the absolute path, unable to be
+overridden with the library search path environment variable
+(<command>LIBPATH</command>, <command>LD_LIBRARY_PATH</command>, or
+<command>SHLIB_PATH</command>).</para></item>
+        </change>
+
+        <change date="2005 November 10" revision="4"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Add 64-bit libraries</para></item>
+        </change>
+
+        <change date="2005 February 5" revision="3"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Upgrade expat dependency from 1.95.6 to
+  1.95.8</para></item>
+        </change>
+
+        <change date="2004 August 2" revision="2"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Add libintl.pc pkgconfig file</para></item>
+        </change>
+      </changelog>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="hobbit-client" version="4.2.0">
+    <description attribution="freshmeat.net">
+Hobbit Monitor is a system for monitoring hosts and networks, inspired
+by the Big Brother system. It provides realtime monitoring, an
+easy-to-use Web interface, historical data, availability reports, and
+performance graphs. This package is for a hobbit monitoring client,
+and includes the client parts of a full system, requiring a hobbit
+server on the network to report to in order to be useful.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>hobbitclient42</install-name>
+      <pkgname-base>MOTOhobtc42</pkgname-base>
+      <version>4.2.0</version>
+      <revision>7</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOhobtc42-CONF"
+      size="24123"/>
+      <subpkg type="man" pkgname-ext=".MOTOhobtc42-MAN"
+      size="30075"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOhobtc42-RUN"
+      size="1021068"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="bash" version="3.0">
+    <description>
+Bash (Bourne-Again Shell) is an sh-compatible command language
+interpreter that executes commands read from the standard input or
+from a file. Bash also incorporates useful features from the Korn and
+C shells (ksh and csh). Bash is intended to be a conformant
+implementation of the IEEE POSIX Shell and Tools specification (IEEE
+Working Group 1003.2).
+    </description>
+
+    <package-manager name="depot">
+      <install-name>bash30</install-name>
+      <pkgname-base>MOTObash30</pkgname-base>
+      <version>3.0</version>
+      <revision>2</revision>
+      <subpkg type="doc" pkgname-ext=".MOTObash30-HELP"
+      size="4205321"/>
+      <subpkg type="man" pkgname-ext=".MOTObash30-MAN"
+      size="645790"/>
+      <subpkg type="runtime" pkgname-ext=".MOTObash30-RUN"
+      size="1093669">
+        <depend pkgname-base="MOTgtext014"
+          subpkg="runtime">v&gt;=0.14.1 r&gt;=1</depend>
+        <depend pkgname-base="MOTOncur54"
+          subpkg="runtime">v&gt;=5.4 r&gt;=1</depend>
+        <depend pkgname-base="MOTOrdln50"
+          subpkg="runtime">v&gt;=5.0 r&gt;=1</depend>
+      </subpkg>
+      <replace pkgname-base="MOTObash"
+        install-name="bash"/>
+
+      <changelog>
+        <change date="2005 April 7" revision="2"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Disable getaddrinfo() on HP-UX because it is
+broken</para></item>
+        </change>
+      </changelog>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="gettext" version="0.14.1">
+    <description>
+The GNU `gettext' utilities are a set of tools that provides a
+framework to help other GNU packages produce multi-lingual messages.
+These tools include a set of conventions about how programs should be
+written to support message catalogs, a directory and file naming
+organization for the message catalogs themselves, a runtime library
+supporting the retrieval of translated messages, and a few stand-alone
+programs to massage in various ways the sets of translatable strings,
+or already translated strings.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>gettext014</install-name>
+      <pkgname-base>MOTgtext014</pkgname-base>
+      <version>0.14.1</version>
+      <revision>5</revision>
+      <subpkg type="doc" pkgname-ext=".MOTgtext014-HELP"
+      size="3087298"/>
+      <subpkg type="man" pkgname-ext=".MOTgtext014-MAN"
+      size="539102"/>
+      <subpkg type="runtime" pkgname-ext=".MOTgtext014-RUN"
+      size="5107838">
+        <depend pkgname-base="MOTOexpat19"
+          subpkg="runtime">v&gt;=1.95.8 r&gt;=1</depend>
+        <depend pkgname-base="MOTOiconv19"
+          subpkg="runtime">v&gt;=1.9.2 r&gt;=1</depend>
+      </subpkg>
+      <replace pkgname-base="MOTOgtext011"
+        install-name="gettext011"/>
+      <replace pkgname-base="MOTOgettext"
+        install-name="gettext"/>
+
+      <changelog>
+        <change date="2006 May 22" revision="5"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Remove libiconv dependency from libintl.pc as no
+include file requires it</para></item>
+          <item><para>Remove libiconv dependency from libintl.pc as no
+include file requires it</para></item>
+          <item><para>Update <command>config.rpath</command> and
+<command>lib-link.m4</command> to add a new variable,
+<command>hardcode_direct_absolute</command>, to determine if linking
+the path of the shared library encodes the absolute path, unable to be
+overridden with the library search path environment variable
+(<command>LIBPATH</command>, <command>LD_LIBRARY_PATH</command>, or
+<command>SHLIB_PATH</command>).</para></item>
+        </change>
+
+        <change date="2005 November 10" revision="4"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Add 64-bit libraries</para></item>
+        </change>
+
+        <change date="2005 February 5" revision="3"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Upgrade expat dependency from 1.95.6 to
+  1.95.8</para></item>
+        </change>
+
+        <change date="2004 August 2" revision="2"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Add libintl.pc pkgconfig file</para></item>
+        </change>
+      </changelog>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="expat" version="1.95.8">
+    <description>
+Expat is an XML parser library written in C. It is a stream-oriented
+parser in which an application registers handlers for things the
+parser might find in the XML document (like start tags).
+    </description>
+
+    <package-manager name="depot">
+      <install-name>libexpat19</install-name>
+      <pkgname-base>MOTOexpat19</pkgname-base>
+      <version>1.95.8</version>
+      <revision>1</revision>
+      <subpkg type="man" pkgname-ext=".MOTOexpat19-MAN"
+      size="7900"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOexpat19-RUN"
+      size="502795"/>
+      <replace pkgname-base="MOTOexpat"
+        install-name="libexpat"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="libiconv" version="1.9.2">
+    <description attribution="FreeBSD Ports Collection">
+libiconv provides an iconv() implementation, for use on systems which
+don't have one, or whose implementation cannot convert from/to
+Unicode.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>libiconv19</install-name>
+      <pkgname-base>MOTOiconv19</pkgname-base>
+      <version>1.9.2</version>
+      <revision>5</revision>
+      <subpkg type="doc" pkgname-ext=".MOTOiconv19-HELP"
+      size="30481"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOiconv19-RUN"
+      size="2000930"/>
+      <replace pkgname-base="MOTOiconv18"
+        install-name="libiconv18"/>
+      <replace pkgname-base="MOTOiconv16"
+        install-name="libiconv16"/>
+
+      <changelog>
+        <change date="2006 June 9" revision="5"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Add support for Solaris "646" encoding by aliasing
+it to the "ASCII" encoding</para></item>
+        </change>
+
+        <change date="2004 November 4" revision="4"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Don't install shared library 644. Use the
+default libtool --mode=install permission, 755.</para></item>
+        </change>
+
+        <change date="2004 August 25" revision="3"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Add 64-bit library for HP-UX 11.x</para></item>
+          <item><para>Add runtime path to libcharset.pc</para></item>
+        </change>
+
+        <change date="2004 August 2" revision="2"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Add libiconv.pc pkgconfig file</para></item>
+        </change>
+      </changelog>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="readline" version="5.0">
+    <description>
+The Readline library provides a set of functions for use by
+applications that allow users to edit command lines as they are typed
+in. Both Emacs and vi editing modes are available. The Readline
+library includes additional functions to maintain a list of
+previously-entered command lines, to recall and perhaps reedit those
+lines, and perform csh-like history expansion on previous commands.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>readline50</install-name>
+      <pkgname-base>MOTOrdln50</pkgname-base>
+      <version>5.0</version>
+      <revision>2</revision>
+      <subpkg type="doc" pkgname-ext=".MOTOrdln50-HELP"
+      size="213700"/>
+      <subpkg type="man" pkgname-ext=".MOTOrdln50-MAN"
+      size="379679"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOrdln50-RUN"
+      size="830392">
+        <depend pkgname-base="MOTOncur54"
+          subpkg="runtime">v&gt;=5.4 r&gt;=1</depend>
+      </subpkg>
+      <replace pkgname-base="MOTOrdln43"
+        install-name="readline43"/>
+      <replace pkgname-base="MOTOrdln42a"
+        install-name="readline42a"/>
+      <replace pkgname-base="MOTOrdline42"
+        install-name="readline42"/>
+
+      <changelog>
+        <change date="2005 December 23" revision="2"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Add Term-ReadLine-Gnu-1.15 Perl module which is
+added to default Perl include paths at postinstall</para></item>
+        </change>
+      </changelog>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="gettext" version="0.14.1">
+    <description>
+The GNU `gettext' utilities are a set of tools that provides a
+framework to help other GNU packages produce multi-lingual messages.
+These tools include a set of conventions about how programs should be
+written to support message catalogs, a directory and file naming
+organization for the message catalogs themselves, a runtime library
+supporting the retrieval of translated messages, and a few stand-alone
+programs to massage in various ways the sets of translatable strings,
+or already translated strings.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>gettext014</install-name>
+      <pkgname-base>MOTgtext014</pkgname-base>
+      <version>0.14.1</version>
+      <revision>5</revision>
+      <subpkg type="doc" pkgname-ext=".MOTgtext014-HELP"
+      size="3087298"/>
+      <subpkg type="man" pkgname-ext=".MOTgtext014-MAN"
+      size="539102"/>
+      <subpkg type="runtime" pkgname-ext=".MOTgtext014-RUN"
+      size="5107838">
+        <depend pkgname-base="MOTOexpat19"
+          subpkg="runtime">v&gt;=1.95.8 r&gt;=1</depend>
+        <depend pkgname-base="MOTOiconv19"
+          subpkg="runtime">v&gt;=1.9.2 r&gt;=1</depend>
+      </subpkg>
+      <replace pkgname-base="MOTOgtext011"
+        install-name="gettext011"/>
+      <replace pkgname-base="MOTOgettext"
+        install-name="gettext"/>
+
+      <changelog>
+        <change date="2006 May 22" revision="5"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Remove libiconv dependency from libintl.pc as no
+include file requires it</para></item>
+          <item><para>Remove libiconv dependency from libintl.pc as no
+include file requires it</para></item>
+          <item><para>Update <command>config.rpath</command> and
+<command>lib-link.m4</command> to add a new variable,
+<command>hardcode_direct_absolute</command>, to determine if linking
+the path of the shared library encodes the absolute path, unable to be
+overridden with the library search path environment variable
+(<command>LIBPATH</command>, <command>LD_LIBRARY_PATH</command>, or
+<command>SHLIB_PATH</command>).</para></item>
+        </change>
+
+        <change date="2005 November 10" revision="4"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Add 64-bit libraries</para></item>
+        </change>
+
+        <change date="2005 February 5" revision="3"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Upgrade expat dependency from 1.95.6 to
+  1.95.8</para></item>
+        </change>
+
+        <change date="2004 August 2" revision="2"
+        author="Albert Chin-A-Young" email="china@thewrittenword.com">
+          <item><para>Add libintl.pc pkgconfig file</para></item>
+        </change>
+      </changelog>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="hobbit-client" version="4.2.0">
+    <description attribution="freshmeat.net">
+Hobbit Monitor is a system for monitoring hosts and networks, inspired
+by the Big Brother system. It provides realtime monitoring, an
+easy-to-use Web interface, historical data, availability reports, and
+performance graphs. This package is for a hobbit monitoring client,
+and includes the client parts of a full system, requiring a hobbit
+server on the network to report to in order to be useful.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>hobbitclient42</install-name>
+      <pkgname-base>MOTOhobtc42</pkgname-base>
+      <version>4.2.0</version>
+      <revision>8</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOhobtc42-CONF"
+      size="24123"/>
+      <subpkg type="man" pkgname-ext=".MOTOhobtc42-MAN"
+      size="30075"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOhobtc42-RUN"
+      size="1021118"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="hobbit-client" version="4.2.0">
+    <description attribution="freshmeat.net">
+Hobbit Monitor is a system for monitoring hosts and networks, inspired
+by the Big Brother system. It provides realtime monitoring, an
+easy-to-use Web interface, historical data, availability reports, and
+performance graphs. This package is for a hobbit monitoring client,
+and includes the client parts of a full system, requiring a hobbit
+server on the network to report to in order to be useful.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>hobbitclient42</install-name>
+      <pkgname-base>MOTOhobtc42</pkgname-base>
+      <version>4.2.0</version>
+      <revision>8</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOhobtc42-CONF"
+      size="24123"/>
+      <subpkg type="man" pkgname-ext=".MOTOhobtc42-MAN"
+      size="30075"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOhobtc42-RUN"
+      size="1021043"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="hobbit-client" version="4.2.0">
+    <description attribution="freshmeat.net">
+Hobbit Monitor is a system for monitoring hosts and networks, inspired
+by the Big Brother system. It provides realtime monitoring, an
+easy-to-use Web interface, historical data, availability reports, and
+performance graphs. This package is for a hobbit monitoring client,
+and includes the client parts of a full system, requiring a hobbit
+server on the network to report to in order to be useful.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>hobbitclient42</install-name>
+      <pkgname-base>MOTOhobtc42</pkgname-base>
+      <version>4.2.0</version>
+      <revision>8</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOhobtc42-CONF"
+      size="24123"/>
+      <subpkg type="man" pkgname-ext=".MOTOhobtc42-MAN"
+      size="30075"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOhobtc42-RUN"
+      size="1021043"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="hobbit-client" version="4.2.0">
+    <description attribution="freshmeat.net">
+Hobbit Monitor is a system for monitoring hosts and networks, inspired
+by the Big Brother system. It provides realtime monitoring, an
+easy-to-use Web interface, historical data, availability reports, and
+performance graphs. This package is for a hobbit monitoring client,
+and includes the client parts of a full system, requiring a hobbit
+server on the network to report to in order to be useful.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>hobbitclient42</install-name>
+      <pkgname-base>MOTOhobtc42</pkgname-base>
+      <version>4.2.0</version>
+      <revision>8</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOhobtc42-CONF"
+      size="24123"/>
+      <subpkg type="man" pkgname-ext=".MOTOhobtc42-MAN"
+      size="30075"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOhobtc42-RUN"
+      size="1021043"/>
+    </package-manager>
+  </package>
+
+
+
+
+  <package name="hobbit-client" version="4.2.0">
+    <description attribution="freshmeat.net">
+Hobbit Monitor is a system for monitoring hosts and networks, inspired
+by the Big Brother system. It provides realtime monitoring, an
+easy-to-use Web interface, historical data, availability reports, and
+performance graphs. This package is for a hobbit monitoring client,
+and includes the client parts of a full system, requiring a hobbit
+server on the network to report to in order to be useful.
+    </description>
+
+    <package-manager name="depot">
+      <install-name>hobbitclient42</install-name>
+      <pkgname-base>MOTOhobtc42</pkgname-base>
+      <version>4.2.0</version>
+      <revision>8</revision>
+      <subpkg type="conf" pkgname-ext=".MOTOhobtc42-CONF"
+      size="24123"/>
+      <subpkg type="man" pkgname-ext=".MOTOhobtc42-MAN"
+      size="30075"/>
+      <subpkg type="runtime" pkgname-ext=".MOTOhobtc42-RUN"
+      size="1021043"/>
+    </package-manager>
+  </package>
+
+</packages>

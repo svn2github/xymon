@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<depots>
+  <depot category="errata" name="errata"/>
+  <depot category="packages" name="packages"/>
+  <depot category="security" name="security"/>
+  <depot category="test" auto-include="0" name="test"/>
+  <depot category="support" name="support"/>
+  <depot category="updates" name="updates"/>
+</depots>

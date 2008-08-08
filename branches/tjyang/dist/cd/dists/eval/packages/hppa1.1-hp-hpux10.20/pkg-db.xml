@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<packages>
+  <package name="small" version="1.0">
+    <description>
+This is an simple and smaill autoconf and automake project taken from "GNU Autoconf,Automake, and Libtool" book. http://sources.redhat.com/autobook. EIT use it an example to create your first TWW pacakges.
+Excerpts from the authors about sic.
+"
+An application which most developers try their hand at sooner or later is a Unix shell. There is a lot of functionality common to all traditional command line shells, which I thought I would push into a portable library to get you over the first hurdle when that moment is upon you. Before elabourating on any of this I need to name the project. I've called it sic, from the Latin so it is, because like all good project names it is somewhat pretentious and it lends itself to the recursive acronym sic is cumulative.
+The gory detail of the minutae of the source is beyond the scope of this book, but to convey a feel for the need for Sic, some of the goals which influenced the design follow:
+Sic must be very small so that, in addition to being used as the basis for a full blown shell, it can be linked (unadorned) into an application and used for trivial tasks, such as reading startup configuration.
+It must not be tied to a particular syntax or set of reserved words. If you use it to read your startup configuration, I don't want to force you to use my syntax and commands.
+The boundary between the library (`libsic') and the application must be well defined. Sic will take strings of characters as input, and internally parse and evaluate them according to registered commands and syntax, returning results or diagnostics as appropriate.
+It must be extremely portable -- that is what I am trying to illustrate here, after all. "
+    </description>
+
+    <package-manager name="depot">
+      <install-name>small</install-name>
+      <pkgname-base>TWWsmall</pkgname-base>
+      <version>1.0</version>
+      <revision>1</revision>
+      <subpkg type="runtime" pkgname-ext=".TWWsmall-RUN"/>
+    </package-manager>
+  </package>
+
+</packages>
