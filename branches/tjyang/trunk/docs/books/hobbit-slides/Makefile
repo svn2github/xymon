@@ -60,8 +60,8 @@ clean:
 
 # WHAT: use svn to checkin the changes and updated pdf file.
 checkin: 
-	svn commit -m "automatic checkin by Makefile,sorry less infomative"
+	svn commit -m "automatic checkin by Makefile,sorry, I know it less infomative about why the changes."
 
-# WHAT:  use :svn status command"  to check which files are not committed.
+# WHAT:  use "svn status" command  to display files are not committed.
 svnstatus: clean
 	svn status
