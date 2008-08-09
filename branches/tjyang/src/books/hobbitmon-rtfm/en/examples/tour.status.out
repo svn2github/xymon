@@ -1,6 +1,4 @@
 $ \textbf{ls}
-backoutKnFrEl	keyring-vPxw2j	keyring-zkV9vq	tmp.CzkvOh3639	vmware-config1
-keyring-F3juw1	keyring-w8X9wA	mapping-root	tour1NCD5E	vmware-config2
-keyring-Q2HW3U	keyring-xLaeeV	mapping-tjyang	vmware-config0	vmware-root
+Makefile  hobbit-slides-developer.tex  hosts  t  tourK9YZJl
 $ \textbf{hg status}
 abort: There is no Mercurial repository here (.hg not found)!

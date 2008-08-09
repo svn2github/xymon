@@ -1,4 +1,4 @@
 $ \textbf{ls -l}
 total 0
 $ \textbf{ls hello}
-ls: hello: No such file or directory
+ls: cannot access hello: No such file or directory
