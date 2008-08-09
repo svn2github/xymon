@@ -1,0 +1,4231 @@
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=pdflatex 2007.11.15)  3 MAR 2008 08:09
+entering extended mode
+**00book.tex
+(./00book.tex
+LaTeX2e <2003/12/01>
+Babel <v3.8d> and hyphenation patterns for american, french, german, ngerman, b
+ahasa, basque, bulgarian, catalan, croatian, czech, danish, dutch, esperanto, e
+stonian, finnish, greek, icelandic, irish, italian, latin, magyar, norsk, polis
+h, portuges, romanian, russian, serbian, slovak, slovene, spanish, swedish, tur
+kish, ukrainian, nohyphenation, loaded.
+(/usr/share/texmf/tex/latex/base/book.cls
+Document Class: book 2004/02/16 v1.4f Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/bk10.clo
+File: bk10.clo 2004/02/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/share/texmf/tex/latex/tools/enumerate.sty
+Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
+\@enLab=\toks14
+) (/usr/share/texmf/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip43
+) (/usr/share/texmf/tex/latex/base/makeidx.sty
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+) (/usr/share/texmf/tex/latex/oberdiek/ifpdf.sty
+Package: ifpdf 2001/06/14 v1.0 Providing \ifpdf (HO)
+Package ifpdf Info: pdfTeX in pdf mode detected on input line 140.
+) (/usr/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks15
+) (/usr/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+) (/usr/share/texmf/tex/latex/graphics/graphics.cfg
+File: graphics.cfg 2005/02/03 v1.3 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 80.
+(/usr/share/texmf/tex/latex/graphics/pdftex.def
+File: pdftex.def 2002/06/19 v0.03k graphics/color for pdftex
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+) (/usr/share/texmf/tex/latex/pslatex/pslatex.sty
+Package: pslatex 1996/07/24 v1.2 pslatex emulation (DPC)
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 65.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/ptmcm/m/n on input line 65.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptmcm/m/n on input line 65.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 66.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/ptmcm/m/it on input line 66.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/ptmcm/m/it on input line 66.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 67.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/pzccm/m/n on input line 67.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/pzccm/m/n on input line 67.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 68.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/psycm/m/n on input line 68.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/psycm/m/n on input line 68.
+\symbold=\mathgroup4
+\symitalic=\mathgroup5
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 74.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 74.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 74.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 75.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 75.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 75.
+) (/usr/share/texmf/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 1998/07/17
+Style option: `fancyvrb' v2.6, with DG/SPQR fixes <1998/07/17> (tvz)
+\FV@CodeLineNo=\count89
+\FV@InFile=\read1
+\FV@TabBox=\box26
+\c@FancyVerbLine=\count90
+\FV@StepNumber=\count91
+\FV@OutFile=\write3
+No file fancyvrb.cfg.
+) (/usr/share/texmf/tex/latex/listings/listings.sty
+\lst@mode=\count92
+\lst@gtempboxa=\box27
+\lst@token=\toks16
+\lst@length=\count93
+\lst@currlwidth=\dimen105
+\lst@column=\count94
+\lst@pos=\count95
+\lst@lostspace=\dimen106
+\lst@width=\dimen107
+\lst@newlines=\count96
+\lst@lineno=\count97
+\c@lstlisting=\count98
+\lst@maxwidth=\dimen108
+(/usr/share/texmf/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2004/10/17 1.3b (Carsten Heinz)
+) (/usr/share/texmf/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2004/09/07 1.3 (Carsten Heinz)
+\c@lstnumber=\count99
+\lst@skipnumbers=\count100
+\lst@framebox=\box28
+) (/usr/share/texmf/tex/latex/listings/listings.cfg
+File: listings.cfg 2004/09/05 1.3 listings configuration
+))
+Package: listings 2004/10/17 1.3b (Carsten Heinz)
+(/usr/share/texmf/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2003/11/30 v6.74m Hypertext links for LaTeX
+\@linkdim=\dimen109
+\Hy@linkcounter=\count101
+\Hy@pagecounter=\count102
+(/usr/share/texmf/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2003/11/30 v6.74m Hyperref: PDFDocEncoding definition (HO)
+) (/usr/share/texmf/tex/latex/hyperref/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive and teTeX
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 1830.
+Package hyperref Info: Option `bookmarks' set `true' on input line 1830.
+Package hyperref Info: Hyper figures OFF on input line 1880.
+Package hyperref Info: Link nesting OFF on input line 1885.
+Package hyperref Info: Hyper index ON on input line 1888.
+Package hyperref Info: Plain pages ON on input line 1893.
+Package hyperref Info: Backreferencing OFF on input line 1900.
+Implicit mode ON; LaTeX internals redefined
+Package hyperref Info: Bookmarks ON on input line 2004.
+(/usr/share/texmf/tex/latex/html/url.sty
+Package: url 1999/03/02  ver 1.4  Verb mode for urls, email addresses, and file
+ names
+)
+LaTeX Info: Redefining \url on input line 2143.
+\Fld@menulength=\count103
+\Field@Width=\dimen110
+\Fld@charsize=\dimen111
+\Choice@toks=\toks17
+\Field@toks=\toks18
+Package hyperref Info: Hyper figures OFF on input line 2618.
+Package hyperref Info: Link nesting OFF on input line 2623.
+Package hyperref Info: Hyper index ON on input line 2626.
+Package hyperref Info: backreferencing OFF on input line 2633.
+Package hyperref Info: Link coloring ON on input line 2636.
+\c@Item=\count104
+\c@Hfootnote=\count105
+)
+*hyperref using default driver hpdftex*
+(/usr/share/texmf/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2003/11/30 v6.74m Hyperref driver for pdfTeX
+(/usr/share/texmf/tex/latex/psnfss/pifont.sty
+Package: pifont 2004/09/15 PSNFSS-v9.2 Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+(/usr/share/texmf/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+(/usr/share/texmf/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+\Fld@listcount=\count106
+\@outlinefile=\write4
+)
+\@input{99defs.aux}
+\openout2 = `99defs.aux'.
+
+(./99defs.tex
+\notebox=\box29
+)
+\@indexfile=\write5
+\openout5 = `hobbit-faq-howto.idx'.
+
+Writing index file hobbit-faq-howto.idx
+(pdf//hobbit-faq-howto.aux (pdf//preface.aux) (pdf//bbwinsrc.aux) (pdf//userfaq
+.aux) (pdf//developerfaq.aux) (pdf//adminfaq.aux) (pdf//hobbitgraph.aux) (pdf//
+bookmaking.aux) (pdf//license.aux))
+\openout1 = `hobbit-faq-howto.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 39.
+LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 39
+.
+(/usr/share/texmf/tex/latex/psnfss/omspzccm.fd
+File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
+)
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+(/usr/share/texmf/tex/context/base/supp-pdf.tex (/usr/share/texmf/tex/context/b
+ase/supp-mis.tex
+loading : Context Support Macros / Miscellaneous (2004.10.26)
+\protectiondepth=\count107
+\scratchcounter=\count108
+\scratchtoks=\toks19
+\scratchdimen=\dimen112
+\scratchskip=\skip44
+\scratchmuskip=\muskip10
+\scratchbox=\box30
+\scratchread=\read2
+\scratchwrite=\write6
+\zeropoint=\dimen113
+\onepoint=\dimen114
+\onebasepoint=\dimen115
+\minusone=\count109
+\thousandpoint=\dimen116
+\onerealpoint=\dimen117
+\emptytoks=\toks20
+\nextbox=\box31
+\nextdepth=\dimen118
+\everyline=\toks21
+\!!counta=\count110
+\!!countb=\count111
+\recursecounter=\count112
+)
+loading : Context Support Macros / PDF (2004.03.26)
+\nofMPsegments=\count113
+\nofMParguments=\count114
+\MPscratchCnt=\count115
+\MPscratchDim=\dimen119
+\MPnumerator=\count116
+\everyMPtoPDFconversion=\toks22
+) (/usr/share/texmf/tex/latex/graphics/color.sty
+Package: color 1999/02/16 v1.0i Standard LaTeX Color (DPC)
+LaTeX Info: Redefining \color on input line 71.
+(/usr/share/texmf/tex/latex/graphics/color.cfg
+File: color.cfg 2005/02/03 v1.3 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 125.
+)
+Package hyperref Info: Link coloring ON on input line 39.
+(/usr/share/texmf/tex/latex/hyperref/nameref.sty
+Package: nameref 2003/12/03 v2.21 Cross-referencing by name of section
+\c@section@level=\count117
+)
+LaTeX Info: Redefining \ref on input line 39.
+LaTeX Info: Redefining \pageref on input line 39.
+(pdf//hobbit-faq-howto.out) (pdf//hobbit-faq-howto.out)
+\openout4 = `hobbit-faq-howto.out'.
+
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 43
+.
+(/usr/share/texmf/tex/latex/psnfss/ot1ptmcm.fd
+File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
+)
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 43
+.
+(/usr/share/texmf/tex/latex/psnfss/omlptmcm.fd
+File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
+)
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 43
+.
+(/usr/share/texmf/tex/latex/psnfss/omxpsycm.fd
+File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
+(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 43.
+(./build_id.tex) (./hg_id.tex) <./hobbitgraph.png, id=1363, 675.52374pt x 213.7
+9875pt>
+File: ./hobbitgraph.png Graphic file (type png)
+<use ./hobbitgraph.png> [1
+
+
+
+
+{/usr/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./hobbitgraph.png>]
+
+Package hyperref Warning: No destination for bookmark of \addcontentsline,
+(hyperref)                destination is added on input line 44.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 46.
+(pdf//hobbit-faq-howto.toc
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+! pdfTeX warning (ext4): destination with the same identifier (name{page.1}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \penalty 
+l.25 .../cpu/PerfCounters.h}{69}{subsection.1.5.2}
+                                                   [1
+
+] [2] [3] [4] [5] [6]
+Overfull \hbox (4.49997pt too wide) detected at line 211
+ []\OT1/ptm/m/n/10 1005
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 212
+ []\OT1/ptm/m/n/10 1007
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 214
+ []\OT1/ptm/m/n/10 1011
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 215
+ []\OT1/ptm/m/n/10 1011
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 216
+ []\OT1/ptm/m/n/10 1011
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 217
+ []\OT1/ptm/m/n/10 1013
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 218
+ []\OT1/ptm/m/n/10 1013
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 219
+ []\OT1/ptm/m/n/10 1013
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 220
+ []\OT1/ptm/m/n/10 1014
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 221
+ []\OT1/ptm/m/n/10 1015
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 223
+ []\OT1/ptm/m/n/10 1017
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 224
+ []\OT1/ptm/m/n/10 1017
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 225
+ []\OT1/ptm/m/n/10 1017
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 226
+ []\OT1/ptm/m/n/10 1019
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 228
+ []\OT1/ptm/m/n/10 1020
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 229
+ []\OT1/ptm/m/n/10 1023
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 230
+ []\OT1/ptm/m/n/10 1024
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 231
+ []\OT1/ptm/m/n/10 1025
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 232
+ []\OT1/ptm/m/n/10 1025
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 233
+ []\OT1/ptm/m/n/10 1026
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 234
+ []\OT1/ptm/m/n/10 1030
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 235
+ []\OT1/ptm/m/n/10 1030
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 236
+ []\OT1/ptm/m/n/10 1030
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 237
+ []\OT1/ptm/m/n/10 1030
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 238
+ []\OT1/ptm/m/n/10 1031
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 239
+ []\OT1/ptm/m/n/10 1031
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 240
+ []\OT1/ptm/m/n/10 1032
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 242
+ []\OT1/ptm/m/n/10 1035
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 243
+ []\OT1/ptm/m/n/10 1036
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 244
+ []\OT1/ptm/m/n/10 1036
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 245
+ []\OT1/ptm/m/n/10 1036
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 246
+ []\OT1/ptm/m/n/10 1036
+ []
+
+[7]
+Overfull \hbox (4.49997pt too wide) detected at line 247
+ []\OT1/ptm/m/n/10 1037
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 248
+ []\OT1/ptm/m/n/10 1040
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 249
+ []\OT1/ptm/m/n/10 1040
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 250
+ []\OT1/ptm/m/n/10 1040
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 251
+ []\OT1/ptm/m/n/10 1041
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 252
+ []\OT1/ptm/m/n/10 1041
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 253
+ []\OT1/ptm/m/n/10 1042
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 254
+ []\OT1/ptm/m/n/10 1042
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 255
+ []\OT1/ptm/m/n/10 1042
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 256
+ []\OT1/ptm/m/n/10 1043
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 257
+ []\OT1/ptm/m/n/10 1043
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 258
+ []\OT1/ptm/m/n/10 1044
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 259
+ []\OT1/ptm/m/n/10 1044
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 260
+ []\OT1/ptm/m/n/10 1044
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 261
+ []\OT1/ptm/m/n/10 1045
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 262
+ []\OT1/ptm/m/n/10 1046
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 263
+ []\OT1/ptm/m/n/10 1047
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 264
+ []\OT1/ptm/m/n/10 1047
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 265
+ []\OT1/ptm/m/n/10 1048
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 268
+ []\OT1/ptm/m/n/10 1050
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 270
+ []\OT1/ptm/m/n/10 1051
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 271
+ []\OT1/ptm/m/n/10 1051
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 276
+ []\OT1/ptm/m/n/10 1055
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 277
+ []\OT1/ptm/m/n/10 1056
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 278
+ []\OT1/ptm/m/n/10 1056
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 279
+ []\OT1/ptm/m/n/10 1056
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 280
+ []\OT1/ptm/m/n/10 1057
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 281
+ []\OT1/ptm/m/n/10 1057
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 282
+ []\OT1/ptm/m/n/10 1057
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 283
+ []\OT1/ptm/m/n/10 1058
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 284
+ []\OT1/ptm/m/n/10 1058
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 285
+ []\OT1/ptm/m/n/10 1058
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 286
+ []\OT1/ptm/m/n/10 1059
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 287
+ []\OT1/ptm/m/n/10 1060
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 288
+ []\OT1/ptm/m/n/10 1060
+ []
+
+[8]
+Overfull \hbox (4.49997pt too wide) detected at line 289
+ []\OT1/ptm/m/n/10 1061
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 290
+ []\OT1/ptm/m/n/10 1061
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 291
+ []\OT1/ptm/m/n/10 1061
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 292
+ []\OT1/ptm/m/n/10 1061
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 293
+ []\OT1/ptm/m/n/10 1062
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 294
+ []\OT1/ptm/m/n/10 1062
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 295
+ []\OT1/ptm/m/n/10 1062
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 296
+ []\OT1/ptm/m/n/10 1062
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 297
+ []\OT1/ptm/m/n/10 1063
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 298
+ []\OT1/ptm/m/n/10 1063
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 301
+ []\OT1/ptm/m/n/10 1066
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 306
+ []\OT1/ptm/m/n/10 1070
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 309
+ []\OT1/ptm/m/n/10 1072
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 310
+ []\OT1/ptm/m/n/10 1072
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 311
+ []\OT1/ptm/m/n/10 1073
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 312
+ []\OT1/ptm/m/n/10 1073
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 315
+ []\OT1/ptm/m/n/10 1074
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 316
+ []\OT1/ptm/m/n/10 1074
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 317
+ []\OT1/ptm/m/n/10 1074
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 318
+ []\OT1/ptm/m/n/10 1075
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 319
+ []\OT1/ptm/m/n/10 1075
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 320
+ []\OT1/ptm/m/n/10 1076
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 321
+ []\OT1/ptm/m/n/10 1076
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 322
+ []\OT1/ptm/m/n/10 1076
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 323
+ []\OT1/ptm/m/n/10 1077
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 324
+ []\OT1/ptm/m/n/10 1077
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 325
+ []\OT1/ptm/m/n/10 1077
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 326
+ []\OT1/ptm/m/n/10 1078
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 327
+ []\OT1/ptm/m/n/10 1078
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 328
+ []\OT1/ptm/m/n/10 1079
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 330
+ []\OT1/ptm/m/n/10 1081
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 331
+ []\OT1/ptm/m/n/10 1083
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 332
+ []\OT1/ptm/m/n/10 1084
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 333
+ []\OT1/ptm/m/n/10 1084
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 334
+ []\OT1/ptm/m/n/10 1084
+ []
+
+[9]
+Overfull \hbox (4.49997pt too wide) detected at line 335
+ []\OT1/ptm/m/n/10 1085
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 336
+ []\OT1/ptm/m/n/10 1087
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 337
+ []\OT1/ptm/m/n/10 1087
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 338
+ []\OT1/ptm/m/n/10 1090
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 339
+ []\OT1/ptm/m/n/10 1090
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 340
+ []\OT1/ptm/m/n/10 1090
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 341
+ []\OT1/ptm/m/n/10 1090
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 342
+ []\OT1/ptm/m/n/10 1091
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 343
+ []\OT1/ptm/m/n/10 1091
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 344
+ []\OT1/ptm/m/n/10 1092
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 345
+ []\OT1/ptm/m/n/10 1093
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 347
+ []\OT1/ptm/m/n/10 1095
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 348
+ []\OT1/ptm/m/n/10 1096
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 350
+ []\OT1/ptm/m/n/10 1097
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 351
+ []\OT1/ptm/m/n/10 1097
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 352
+ []\OT1/ptm/m/n/10 1098
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 353
+ []\OT1/ptm/m/n/10 1098
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 354
+ []\OT1/ptm/m/n/10 1098
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 355
+ []\OT1/ptm/m/n/10 1099
+ []
+
+)
+\tf@toc=\write7
+\openout7 = `hobbit-faq-howto.toc'.
+
+[10] (pdf//hobbit-faq-howto.lof
+Overfull \hbox (4.49997pt too wide) detected at line 3
+ []\OT1/ptm/m/n/10 1018
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 4
+ []\OT1/ptm/m/n/10 1020
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 5
+ []\OT1/ptm/m/n/10 1022
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 6
+ []\OT1/ptm/m/n/10 1033
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 8
+ []\OT1/ptm/m/n/10 1040
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 10
+ []\OT1/ptm/m/n/10 1059
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 11
+ []\OT1/ptm/m/n/10 1059
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 12
+ []\OT1/ptm/m/n/10 1060
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 13
+ []\OT1/ptm/m/n/10 1063
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 14
+ []\OT1/ptm/m/n/10 1064
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 15
+ []\OT1/ptm/m/n/10 1065
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 17
+ []\OT1/ptm/m/n/10 1082
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 18
+ []\OT1/ptm/m/n/10 1086
+ []
+
+
+Overfull \hbox (4.49997pt too wide) detected at line 19
+ []\OT1/ptm/m/n/10 1089
+ []
+
+)
+\tf@lof=\write8
+\openout8 = `hobbit-faq-howto.lof'.
+
+! pdfTeX warning (ext4): destination with the same identifier (name{page.1}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \penalty 
+l.52 \include{preface}
+                       [1
+
+]
+\openout2 = `preface.aux'.
+
+(./preface.tex
+! pdfTeX warning (ext4): destination with the same identifier (name{page.2}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \penalty 
+l.1 \chapter
+            *{Preface} [2
+
+
+]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 15.
+! pdfTeX warning (ext4): destination with the same identifier (name{page.3}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \penalty 
+l.61 T
+      he complete source code for this book is published as a Mercurial [3])
+! pdfTeX warning (ext4): destination with the same identifier (name{page.4}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \penalty 
+l.52 \include{preface}
+                       [4]
+\openout2 = `bbwinsrc.aux'.
+
+(./bbwinsrc.tex
+Chapter 1.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
+(/usr/share/texmf/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+) (/usr/share/texmf/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+) (/usr/share/texmf/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2004/09/07 1.3 (Carsten Heinz)
+) (/home/tjyang/4.3/bbwin/trunk/license.txt
+! pdfTeX warning (ext4): destination with the same identifier (name{page.5}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \penalty 
+l.19 your 
+          programs, too. [5
+
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+! pdfTeX warning (ext4): destination with the same identifier (name{page.6}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \penalty 
+l.56   The 
+           precise terms and conditions for copying, distribution and [6]
+! pdfTeX warning (ext4): destination with the same identifier (name{page.7}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \penalty 
+l.92 distribute 
+                such modifications or work under the terms of Section 1 [7]
+! pdfTeX warning (ext4): destination with the same identifier (name{page.8}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \penalty 
+l.129 In 
+         addition, mere aggregation of another work not based on the Program [8
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+! pdfTeX warning (ext4): destination with the same identifier (name{page.9}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \penalty 
+l.166 If 
+         distribution of executable or object code is made by offering [9]
+! pdfTeX warning (ext4): destination with the same identifier (name{page.10}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \penalty 
+l.201 excuse 
+             you from the conditions of this License.  If you cannot [10] [11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[12]) (/home/tjyang/4.3/bbwin/trunk/ChangeLog.txt
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 8.
+[13]
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 38.
+(/usr/share/texmf/tex/latex/psnfss/omlptm.fd
+File: omlptm.fd 
+)
+LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 38.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[14]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[15]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[16]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[17]) (/usr/share/texmf/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+) (/usr/share/texmf/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2004/09/05 1.3 listings language file
+) (/usr/share/texmf/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2004/09/07 1.3 (Carsten Heinz)
+) (/home/tjyang/4.3/bbwin/trunk/Makefile [18])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[19] (/home/tjyang/4.3/bbwin/trunk/Graphics/bbwin.svg
+LaTeX Font Info:    Font shape `OML/ptm/m/it' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 2.
+[20]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[21]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[22]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[23]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[24]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[25]) (/home/tjyang/4.3/bbwin/trunk/Core/Utils.vcproj [26]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[27]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[28]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[29]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[30]) (/home/tjyang/4.3/bbwin/trunk/Core/BBWinConfig.cpp [31]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[32])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[33] (/home/tjyang/4.3/bbwin/trunk/Core/BBWinHandler.h [34]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[35]
+LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <10> not available
+(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 74.
+) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/bbwinupdate/bbwinupdate.vcproj [36]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[37]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[38]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[39]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[40]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/bbwinupdate/Makefile [41])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[42] (/home/tjyang/4.3/bbwin/trunk/Core/Agents/bbwinupdate/bbwinupdate.h [43]) 
+(/home/tjyang/4.3/bbwin/trunk/Core/Agents/bbwinupdate/bbwinupdate.cpp [44]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[45]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[46]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[47]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[48]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[49]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[50]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/Makefile [51]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[52]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/cpu/cpu.cpp [53]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[54]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[55]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[56]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[57]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[58]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[59]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[60]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[61]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[62]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[63]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[64]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[65]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[66]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[67]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[68]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/cpu/PerfCounters.h [69]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[70]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[71]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[72]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[73]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[74]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[75]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[76]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[77]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[78]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/cpu/Makefile [79]) (/home/tjyan
+g/4.3/bbwin/trunk/Core/Agents/cpu/CpuUsage.cpp [80]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[81]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[82]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[83]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[84]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[85]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[86]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/cpu/cpu.h [87]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[88]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[89]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[90]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[91]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/cpu/CpuUsage.h [92]) (/home/tjy
+ang/4.3/bbwin/trunk/Core/Agents/cpu/cpu.vcproj [93]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[94]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[95]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[96]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[97])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[98] (/home/tjyang/4.3/bbwin/trunk/Core/Agents/svcs/svcs.cpp [99]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[100]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[101]
+Overfull \hbox (69.5772pt too wide) in paragraph at lines 130--131
+[][][][][][] 
+ []
+
+
+Overfull \hbox (23.57652pt too wide) in paragraph at lines 130--131
+[][] 
+ []
+
+
+Overfull \hbox (23.57652pt too wide) in paragraph at lines 130--131
+[][] 
+ []
+
+
+Overfull \hbox (23.57652pt too wide) in paragraph at lines 130--131
+[][] 
+ []
+
+
+Overfull \hbox (143.57774pt too wide) in paragraph at lines 130--131
+[][] 
+ []
+
+
+Overfull \hbox (23.57652pt too wide) in paragraph at lines 130--131
+[][] 
+ []
+
+
+Overfull \hbox (23.57652pt too wide) in paragraph at lines 130--131
+[][] 
+ []
+
+
+Overfull \hbox (23.57652pt too wide) in paragraph at lines 130--131
+[][] 
+ []
+
+
+Overfull \hbox (17.57646pt too wide) in paragraph at lines 130--131
+[]  
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[102]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[103]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[104]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[105]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[106]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[107]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[108]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[109]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[110]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[111]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[112]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/svcs/Makefile [113]) (/home/tj
+yang/4.3/bbwin/trunk/Core/Agents/svcs/svcs.vcproj [114]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[115]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[116]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[117]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[118]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/svcs/svcs.h [119]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[120]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[121]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/externals/externals.cpp [122]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[123]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[124]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[125]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[126]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[127]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[128]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/externals/Makefile [129]) (/ho
+me/tjyang/4.3/bbwin/trunk/Core/Agents/externals/external.h [130]) (/home/tjyang
+/4.3/bbwin/trunk/Core/Agents/externals/externals.vcproj [131]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[132]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[133]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[134]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[135]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[136]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/externals/externals.h [137])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[138] (/home/tjyang/4.3/bbwin/trunk/Core/Agents/externals/external.cpp [139]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[140])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[141] (/home/tjyang/4.3/bbwin/trunk/Core/Agents/filesystem/filesystem.cpp [142]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[143]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[144]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[145]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[146]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[147]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[148]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[149]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[150]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[151]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[152]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[153]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[154]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[155]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[156]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[157]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[158]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[159]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[160]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[161]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/filesystem/Makefile [162]) (/h
+ome/tjyang/4.3/bbwin/trunk/Core/Agents/filesystem/filesystem.h [163]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[164]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[165]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[166]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/filesystem/filesystem.vcproj [
+167]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[168]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[169]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[170]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[171]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/sample/Makefile [172]) (/home/
+tjyang/4.3/bbwin/trunk/Core/Agents/sample/sample.cpp [173]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[174]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[175]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/sample/sample.h [176]) (/home/
+tjyang/4.3/bbwin/trunk/Core/Agents/sample/sample.vcproj [177]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[178]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[179]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[180]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[181]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/memory/Makefile [182])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[183] (/home/tjyang/4.3/bbwin/trunk/Core/Agents/memory/memory.cpp [184]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[185]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[186]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[187]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[188]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[189]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[190])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[191] (/home/tjyang/4.3/bbwin/trunk/Core/Agents/memory/memory.h [192]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[193]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/memory/memory.vcproj [194]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[195]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[196]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[197]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[198]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/stats/stats.h [199]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[200]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/stats/Makefile [201]) (/home/t
+jyang/4.3/bbwin/trunk/Core/Agents/stats/stats.cpp [202]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[203]
+Overfull \hbox (93.57744pt too wide) in paragraph at lines 81--82
+[][][][][][] 
+ []
+
+
+Overfull \hbox (137.57768pt too wide) in paragraph at lines 81--82
+[][] 
+ []
+
+
+Overfull \hbox (113.57744pt too wide) in paragraph at lines 81--82
+[][] 
+ []
+
+
+Overfull \hbox (137.57768pt too wide) in paragraph at lines 81--82
+[][] 
+ []
+
+
+Overfull \hbox (107.57738pt too wide) in paragraph at lines 81--82
+[][] 
+ []
+
+
+Overfull \hbox (113.57744pt too wide) in paragraph at lines 81--82
+[][] 
+ []
+
+
+Overfull \hbox (107.57738pt too wide) in paragraph at lines 81--82
+[][] 
+ []
+
+
+Overfull \hbox (113.57744pt too wide) in paragraph at lines 81--82
+[][] 
+ []
+
+
+Overfull \hbox (107.57738pt too wide) in paragraph at lines 81--82
+[][] 
+ []
+
+
+Overfull \hbox (107.57738pt too wide) in paragraph at lines 81--82
+[][] 
+ []
+
+
+Overfull \hbox (107.57738pt too wide) in paragraph at lines 81--82
+[][] 
+ []
+
+
+Overfull \hbox (107.57738pt too wide) in paragraph at lines 81--82
+[][] 
+ []
+
+
+Overfull \hbox (119.5775pt too wide) in paragraph at lines 81--82
+[][] 
+ []
+
+
+Overfull \hbox (107.57738pt too wide) in paragraph at lines 81--82
+[][] 
+ []
+
+
+Overfull \hbox (107.57738pt too wide) in paragraph at lines 81--82
+[][] 
+ []
+
+
+Overfull \hbox (107.57738pt too wide) in paragraph at lines 81--82
+[][] 
+ []
+
+
+Overfull \hbox (101.57732pt too wide) in paragraph at lines 81--82
+[]  
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[204]
+Overfull \hbox (93.57744pt too wide) in paragraph at lines 82--83
+[][][][][][] 
+ []
+
+
+Overfull \hbox (137.57768pt too wide) in paragraph at lines 82--83
+[][] 
+ []
+
+
+Overfull \hbox (113.57744pt too wide) in paragraph at lines 82--83
+[][] 
+ []
+
+
+Overfull \hbox (137.57768pt too wide) in paragraph at lines 82--83
+[][] 
+ []
+
+
+Overfull \hbox (107.57738pt too wide) in paragraph at lines 82--83
+[][] 
+ []
+
+
+Overfull \hbox (113.57744pt too wide) in paragraph at lines 82--83
+[][] 
+ []
+
+
+Overfull \hbox (107.57738pt too wide) in paragraph at lines 82--83
+[][] 
+ []
+
+
+Overfull \hbox (119.5775pt too wide) in paragraph at lines 82--83
+[][] 
+ []
+
+
+Overfull \hbox (107.57738pt too wide) in paragraph at lines 82--83
+[][] 
+ []
+
+
+Overfull \hbox (107.57738pt too wide) in paragraph at lines 82--83
+[][] 
+ []
+
+
+Overfull \hbox (107.57738pt too wide) in paragraph at lines 82--83
+[][] 
+ []
+
+
+Overfull \hbox (107.57738pt too wide) in paragraph at lines 82--83
+[][] 
+ []
+
+
+Overfull \hbox (119.5775pt too wide) in paragraph at lines 82--83
+[][] 
+ []
+
+
+Overfull \hbox (107.57738pt too wide) in paragraph at lines 82--83
+[][] 
+ []
+
+
+Overfull \hbox (107.57738pt too wide) in paragraph at lines 82--83
+[][] 
+ []
+
+
+Overfull \hbox (107.57738pt too wide) in paragraph at lines 82--83
+[][] 
+ []
+
+
+Overfull \hbox (101.57732pt too wide) in paragraph at lines 82--83
+[]  
+ []
+
+
+Overfull \hbox (93.57744pt too wide) in paragraph at lines 83--84
+[][][][][][] 
+ []
+
+
+Overfull \hbox (137.57768pt too wide) in paragraph at lines 83--84
+[][] 
+ []
+
+
+Overfull \hbox (113.57744pt too wide) in paragraph at lines 83--84
+[][] 
+ []
+
+
+Overfull \hbox (137.57768pt too wide) in paragraph at lines 83--84
+[][] 
+ []
+
+
+Overfull \hbox (107.57738pt too wide) in paragraph at lines 83--84
+[][] 
+ []
+
+
+Overfull \hbox (113.57744pt too wide) in paragraph at lines 83--84
+[][] 
+ []
+
+
+Overfull \hbox (107.57738pt too wide) in paragraph at lines 83--84
+[][] 
+ []
+
+
+Overfull \hbox (119.5775pt too wide) in paragraph at lines 83--84
+[][] 
+ []
+
+
+Overfull \hbox (107.57738pt too wide) in paragraph at lines 83--84
+[][] 
+ []
+
+
+Overfull \hbox (107.57738pt too wide) in paragraph at lines 83--84
+[][] 
+ []
+
+
+Overfull \hbox (107.57738pt too wide) in paragraph at lines 83--84
+[][] 
+ []
+
+
+Overfull \hbox (107.57738pt too wide) in paragraph at lines 83--84
+[][] 
+ []
+
+
+Overfull \hbox (119.5775pt too wide) in paragraph at lines 83--84
+[][] 
+ []
+
+
+Overfull \hbox (107.57738pt too wide) in paragraph at lines 83--84
+[][] 
+ []
+
+
+Overfull \hbox (107.57738pt too wide) in paragraph at lines 83--84
+[][] 
+ []
+
+
+Overfull \hbox (101.57732pt too wide) in paragraph at lines 83--84
+[]  
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[205]
+Overfull \hbox (23.57652pt too wide) in paragraph at lines 87--88
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[206]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[207]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[208]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[209]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/stats/stats.vcproj [210]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[211]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[212]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[213]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[214])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[215] (/home/tjyang/4.3/bbwin/trunk/Core/Agents/procs/Makefile [216]) (/home/tj
+yang/4.3/bbwin/trunk/Core/Agents/procs/procs.h [217]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[218]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/procs/procs.cpp [219]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[220]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[221]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[222]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[223]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[224]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[225]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[226]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[227]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[228]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[229]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/procs/procs.vcproj [230]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[231]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[232]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[233]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[234]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[235]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/common/ProcApi.h [236]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[237]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/common/PerfCounters.h [238]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[239]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[240]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[241]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[242]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[243]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[244]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[245]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[246]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[247]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/common/Makefile [248]) (/home/
+tjyang/4.3/bbwin/trunk/Core/Agents/common/SystemCounters.h [249]) (/home/tjyang
+/4.3/bbwin/trunk/Core/Agents/common/common.vcproj [250]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[251]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[252]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[253]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[254]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/common/SystemCounters.cpp [255
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[256])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[257] (/home/tjyang/4.3/bbwin/trunk/Core/Agents/msgs/msgs.cpp [258]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[259]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[260]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[261]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[262]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[263]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[264])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[265] (/home/tjyang/4.3/bbwin/trunk/Core/Agents/msgs/Makefile [266]) (/home/tjy
+ang/4.3/bbwin/trunk/Core/Agents/msgs/EventLog.h [267]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[268]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[269]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[270]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[271]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/msgs/msgs.h [272]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[273]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/msgs/msgs.vcproj [274]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[275]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[276]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[277]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[278])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[279] (/home/tjyang/4.3/bbwin/trunk/Core/Agents/msgs/EventLog.cpp [280]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[281]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[282]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[283]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[284]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[285]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[286]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[287]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[288]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[289]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[290]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[291]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[292]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[293]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[294]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[295]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[296]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[297]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[298]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[299]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[300]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[301]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[302]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[303]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[304]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[305]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[306]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/disk/Makefile [307]) (/home/tj
+yang/4.3/bbwin/trunk/Core/Agents/disk/disk.cpp [308]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[309]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[310]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[311]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[312]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[313]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[314]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[315]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[316]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[317]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[318]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[319]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[320]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[321]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[322]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[323]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/disk/disk.vcproj [324]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[325]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[326]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[327]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[328]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/disk/disk.h [329]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[330]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[331]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[332]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/uptime/PerfCounters.h [333]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[334]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[335]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[336]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[337]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[338]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[339]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[340]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[341]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[342]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/uptime/Makefile [343]) (/home/
+tjyang/4.3/bbwin/trunk/Core/Agents/uptime/uptime.h [344]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[345]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/uptime/uptime.cpp [346]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[347]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[348]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[349]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/uptime/uptime.vcproj [350]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[351]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[352]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[353]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[354]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/who/who.cpp [355]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[356]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[357]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[358]) (/home/tjyang/4.3/bbwin/trunk/Core/Agents/who/who.h [359]) (/home/tjyang
+/4.3/bbwin/trunk/Core/Agents/who/Makefile [360])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[361] (/home/tjyang/4.3/bbwin/trunk/Core/Agents/who/who.vcproj [362]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[363]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[364]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[365]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[366]) (/home/tjyang/4.3/bbwin/trunk/Core/Logging.cpp [367]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[368]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[369]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[370]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[371]) (/home/tjyang/4.3/bbwin/trunk/Core/Singleton.h [372]) (/home/tjyang/4.3/
+bbwin/trunk/Core/Logging.h [373]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[374]) (/home/tjyang/4.3/bbwin/trunk/Core/IBBWinAgentManager.h [375]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[376]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[377]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[378]) (/home/tjyang/4.3/bbwin/trunk/Core/Utils.h [379])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[380] (/home/tjyang/4.3/bbwin/trunk/Core/IBBWinException.h) (/home/tjyang/4.3/b
+bwin/trunk/Core/Makefile [381]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[382]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[383]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[384]) (/home/tjyang/4.3/bbwin/trunk/Core/BBWinAgentManager.h [385]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[386]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[387])
+Underfull \vbox (badness 1430) has occurred while \output is active []
+
+[388] (/home/tjyang/4.3/bbwin/trunk/Core/uname.cpp [389]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[390]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[391]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[392]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[393]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[394]) (/home/tjyang/4.3/bbwin/trunk/Core/ProcInOut.cpp [395]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[396]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[397])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[398] (/home/tjyang/4.3/bbwin/trunk/Core/BBWinHandler.cpp [399]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[400]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[401]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[402]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[403]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[404]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[405]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[406]) (/home/tjyang/4.3/bbwin/trunk/Core/BBWinCentralHandler.cpp [407]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[408]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[409]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[410]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[411]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[412]) (/home/tjyang/4.3/bbwin/trunk/Core/BBWinService.h [413]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[414]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[415]) (/home/tjyang/4.3/bbwin/trunk/Core/tinystr.cpp
+Missing character: There is no ø in font ptmri7t!
+[416]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[417]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[418]) (/home/tjyang/4.3/bbwin/trunk/Core/BBWinNet.cpp [419]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[420]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[421]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[422]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[423]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[424]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[425]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[426]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[427]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[428]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[429]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[430]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[431]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[432]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[433]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[434]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[435]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[436]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[437]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[438]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[439]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[440]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[441]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[442]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[443]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[444]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[445]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[446]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[447]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[448]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[449]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[450]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[451]) (/home/tjyang/4.3/bbwin/trunk/Core/Utils.cpp [452]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[453]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[454]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[455]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[456]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[457]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[458]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[459]) (/home/tjyang/4.3/bbwin/trunk/Core/tinyxml.h [460]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[461]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[462]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[463]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[464]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[465]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[466]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[467]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[468]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[469]
+Overfull \hbox (17.57646pt too wide) in paragraph at lines 351--352
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[470]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[471]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[472]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[473]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[474]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[475]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[476]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[477]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[478]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[479]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[480]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[481]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[482]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[483]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[484]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[485]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[486]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[487]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[488]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[489]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[490]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[491]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[492]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[493]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[494]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[495]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[496]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[497]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[498]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[499]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[500]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[501]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[502]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[503]
+Overfull \hbox (15.57664pt too wide) in paragraph at lines 1510--1511
+[][][][][][] 
+ []
+
+
+Overfull \hbox (35.57664pt too wide) in paragraph at lines 1510--1511
+[][] 
+ []
+
+
+Overfull \hbox (35.57664pt too wide) in paragraph at lines 1511--1512
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[504]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[505]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[506]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[507]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[508]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[509]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[510]
+Overfull \hbox (51.57701pt too wide) in paragraph at lines 1768--1769
+[][][][][][] 
+ []
+
+
+Overfull \hbox (23.57652pt too wide) in paragraph at lines 1768--1769
+[][] 
+ []
+
+
+Overfull \hbox (23.57652pt too wide) in paragraph at lines 1768--1769
+[][] 
+ []
+
+
+Overfull \hbox (23.57652pt too wide) in paragraph at lines 1768--1769
+[][] 
+ []
+
+
+Overfull \hbox (23.57652pt too wide) in paragraph at lines 1768--1769
+[][] 
+ []
+
+
+Overfull \hbox (23.57652pt too wide) in paragraph at lines 1768--1769
+[][] 
+ []
+
+
+Overfull \hbox (23.57652pt too wide) in paragraph at lines 1768--1769
+[][] 
+ []
+
+
+Overfull \hbox (17.57646pt too wide) in paragraph at lines 1768--1769
+[]  
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[511])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[512] (/home/tjyang/4.3/bbwin/trunk/Core/BBWin.h [513]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[514]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[515]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[516]) (/home/tjyang/4.3/bbwin/trunk/Core/Digest/digest.vcproj [517]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[518]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[519]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[520]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[521]) (/home/tjyang/4.3/bbwin/trunk/Core/Digest/Makefile [522]) (/home/tjyang/
+4.3/bbwin/trunk/Core/Digest/sha1.c [523]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[524]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[525]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[526]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[527]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[528]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[529]) (/home/tjyang/4.3/bbwin/trunk/Core/Digest/sha1.h) (/home/tjyang/4.3/bbwi
+n/trunk/Core/Digest/digest.h [530])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[531] (/home/tjyang/4.3/bbwin/trunk/Core/Digest/digest.c [532]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[533]) (/home/tjyang/4.3/bbwin/trunk/Core/Digest/md5.c [534]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[535]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[536]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[537]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[538]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[539]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[540]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[541]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[542]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[543]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[544]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[545])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[546] (/home/tjyang/4.3/bbwin/trunk/Core/Digest/md5.h) (/home/tjyang/4.3/bbwin/
+trunk/Core/BBWinNet.vcproj [547]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[548]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[549]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[550]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[551]) (/home/tjyang/4.3/bbwin/trunk/Core/Base64.cpp [552]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[553]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[554])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[555] (/home/tjyang/4.3/bbwin/trunk/Core/BBWinCmd.vcproj [556]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[557]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[558]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[559])
+Underfull \vbox (badness 1430) has occurred while \output is active []
+
+[560] (/home/tjyang/4.3/bbwin/trunk/Core/BBWinService.cpp [561]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[562]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[563]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[564]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[565]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[566]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[567]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[568]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[569]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[570]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[571]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[572]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[573]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[574]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[575]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[576]) (/home/tjyang/4.3/bbwin/trunk/Core/BBWinConfig.h [577]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[578]) (/home/tjyang/4.3/bbwin/trunk/Core/BBWinMessages.mc [579]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[580]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[581]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[582])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[583] (/home/tjyang/4.3/bbwin/trunk/Core/BBWin.cpp [584]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[585]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[586]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[587]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[588]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[589]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[590]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[591]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[592]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[593]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[594]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[595]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[596]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[597]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[598]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[599]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[600]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[601]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[602]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[603]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[604]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[605]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[606]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[607]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[608]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[609]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[610]) (/home/tjyang/4.3/bbwin/trunk/Core/Base64.h [611]) (/home/tjyang/4.3/bbw
+in/trunk/Core/BBWinNet.h [612]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[613]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[614]) (/home/tjyang/4.3/bbwin/trunk/Core/Singleton.hxx [615]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[616]) (/home/tjyang/4.3/bbwin/trunk/Core/bbwin.cfg [617]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[618]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[619]) (/home/tjyang/4.3/bbwin/trunk/Core/BBWinCmd.cpp [620]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[621]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[622]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[623]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[624]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[625]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[626]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[627]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[628]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[629]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[630]) (/home/tjyang/4.3/bbwin/trunk/Core/ProcInOut.h [631]) (/home/tjyang/4.3/
+bbwin/trunk/Core/tinyxml.vcproj [632]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[633]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[634]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[635]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[636]) (/home/tjyang/4.3/bbwin/trunk/Core/BBWinLocalHandler.h [637]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[638]) (/home/tjyang/4.3/bbwin/trunk/Core/tinyxmlparser.cpp [639]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[640]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[641]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[642]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[643]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[644]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[645]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[646]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[647]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[648]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[649]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[650]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[651]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[652]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[653]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[654]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[655]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[656]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[657]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[658]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[659]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[660]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[661]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[662]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[663]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[664]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[665]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[666]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[667]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[668]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[669]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[670]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[671]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[672]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[673]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[674]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[675]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[676]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[677]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[678]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[679]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[680]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[681]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[682]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[683])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[684] (/home/tjyang/4.3/bbwin/trunk/Core/tinyxmlerror.cpp [685]) (/home/tjyang/
+4.3/bbwin/trunk/Core/tinyxml.cpp [686]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[687]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[688]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[689]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[690]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[691]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[692]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[693]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[694]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[695]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[696]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[697]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[698]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[699]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[700]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[701]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[702]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[703]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[704]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[705]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[706]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[707]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[708]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[709]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[710]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[711]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[712]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[713]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[714]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[715]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[716]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[717]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[718]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[719]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[720]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[721]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[722]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[723]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[724]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[725]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[726]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[727]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[728]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[729]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[730]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[731]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[732]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[733]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[734]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[735]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[736])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[737] (/home/tjyang/4.3/bbwin/trunk/Core/BBWinLocalHandler.cpp [738]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[739]) (/home/tjyang/4.3/bbwin/trunk/Core/IBBWinAgent.h [740]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[741]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[742]) (/home/tjyang/4.3/bbwin/trunk/Core/BBWinAgentManager.cpp [743]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[744]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[745]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[746]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[747]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[748]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[749]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[750]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[751]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[752]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[753]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[754]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[755]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[756]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[757]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[758]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[759]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[760]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[761]) (/home/tjyang/4.3/bbwin/trunk/Core/BBWinCentralHandler.h [762]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[763]) (/home/tjyang/4.3/bbwin/trunk/Core/tinystr.h [764]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[765]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[766]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[767]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[768]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[769]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[770]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[771]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[772]) (/home/tjyang/4.3/bbwin/trunk/Core/Core.vcproj [773]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[774]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[775]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[776]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[777]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[778]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[779]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[780]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[781]) (/home/tjyang/4.3/bbwin/trunk/Core/BBWinHandlerData.h [782])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[783] (/home/tjyang/4.3/bbwin/trunk/TODO.txt) (/home/tjyang/4.3/bbwin/trunk/Too
+ls/VC/BBWinVC.rules
+Missing character: There is no ï in font ptmr7t!
+Missing character: There is no » in font ptmr7t!
+Missing character: There is no ¿ in font ptmr7t!
+[784]) (/home/tjyang/4.3/bbwin/trunk/Tools/Migrate/MigrateBBntToBBWin.vbs [785]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[786]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[787]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[788]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[789]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[790]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[791]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[792]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[793]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[794]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[795]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[796]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[797]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[798]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[799]) (/home/tjyang/4.3/bbwin/trunk/Doc/BBWin.css [800]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[801]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[802]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[803]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[804]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[805]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[806]) (/usr/share/texmf/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+) (/usr/share/texmf/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2004/09/07 1.3 (Carsten Heinz)
+) (/home/tjyang/4.3/bbwin/trunk/Doc/en/Memory.htm [807]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[808]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[809])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[810] (/home/tjyang/4.3/bbwin/trunk/Doc/en/Uptime.htm [811]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[812]) (/home/tjyang/4.3/bbwin/trunk/Doc/en/Svcs.htm [813]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[814]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[815]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[816]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[817]) (/home/tjyang/4.3/bbwin/trunk/Doc/en/Disk.htm [818]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[819]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[820]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[821]) (/home/tjyang/4.3/bbwin/trunk/Doc/en/ServiceConfiguration.htm [822]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[823]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[824]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[825]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[826]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[827]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[828]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[829]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[830]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[831]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[832]) (/home/tjyang/4.3/bbwin/trunk/Doc/en/Sdk.htm [833]) (/home/tjyang/4.3/bb
+win/trunk/Doc/en/CentralMode.htm [834]) (/home/tjyang/4.3/bbwin/trunk/Doc/en/Cl
+uster.htm [835]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[836]) (/home/tjyang/4.3/bbwin/trunk/Doc/en/GPL.htm [837]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[838]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[839]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[840]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[841]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[842]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[843])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[844] (/home/tjyang/4.3/bbwin/trunk/Doc/en/Who.htm) (/home/tjyang/4.3/bbwin/tru
+nk/Doc/en/Externals.htm [845]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[846]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[847]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[848]) (/home/tjyang/4.3/bbwin/trunk/Doc/en/Overview.htm [849]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[850]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[851]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[852])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[853] (/home/tjyang/4.3/bbwin/trunk/Doc/en/BuildingBBWin.htm) (/home/tjyang/4.3
+/bbwin/trunk/Doc/en/BBWinCmd.htm [854]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[855]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[856]) (/home/tjyang/4.3/bbwin/trunk/Doc/en/Sample.htm [857]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[858]) (/home/tjyang/4.3/bbwin/trunk/Doc/en/Fsmon.htm [859]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[860]) (/home/tjyang/4.3/bbwin/trunk/Doc/en/Licence.htm [861])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[862] (/home/tjyang/4.3/bbwin/trunk/Doc/en/Support.htm [863]) (/home/tjyang/4.3
+/bbwin/trunk/Doc/en/BBWin.hhp [864]) (/home/tjyang/4.3/bbwin/trunk/Doc/en/Msgs.
+htm [865]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[866]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[867]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[868]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[869]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[870]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[871]) (/home/tjyang/4.3/bbwin/trunk/Doc/en/Cpu.htm [872]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[873]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[874]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[875]) (/home/tjyang/4.3/bbwin/trunk/Doc/en/Begin.htm [876]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[877]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[878]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[879]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[880]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[881]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[882]) (/home/tjyang/4.3/bbwin/trunk/Doc/en/Procs.htm [883]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[884]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[885]) (/home/tjyang/4.3/bbwin/trunk/Doc/en/MigrateBBntToBBWin.htm [886]
+Missing character: There is no   in font ptmr7t!
+Missing character: There is no   in font ptmr7t!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[887]
+Missing character: There is no   in font ptmr7t!
+Missing character: There is no   in font ptmr7t!
+Missing character: There is no   in font ptmr7t!
+Missing character: There is no   in font ptmr7t!
+Missing character: There is no   in font ptmr7t!
+Missing character: There is no   in font ptmr7t!
+Missing character: There is no   in font ptmr7t!
+Missing character: There is no   in font ptmr7t!
+Missing character: There is no   in font ptmr7t!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[888]) (/home/tjyang/4.3/bbwin/trunk/Doc/en/BBWinUpdateAgent.htm [889]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[890]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[891]) (/home/tjyang/4.3/bbwin/trunk/Doc/en/Wlbs.htm [892]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[893]) (/home/tjyang/4.3/bbwin/trunk/Doc/en/Troubleshooting.htm [894]) (/home/t
+jyang/4.3/bbwin/trunk/Doc/en/Stats.htm [895]) (/home/tjyang/4.3/bbwin/trunk/Bui
+ld.txt [896]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[897]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[898]) (/home/tjyang/4.3/bbwin/trunk/Externals/Makefile [899]) (/home/tjyang/4.
+3/bbwin/trunk/Externals/vbs/wlbs/wlbs.vbs [900]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[901]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[902]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[903]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[904]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[905]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[906]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[907]) (/home/tjyang/4.3/bbwin/trunk/Externals/vbs/wlbs/wlbs.cfg) [908] (/home/
+tjyang/4.3/bbwin/trunk/Externals/vbs/fsmon/fsmon.vbs [909]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[910]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[911]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[912]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[913]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[914]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[915]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[916]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[917]) (/home/tjyang/4.3/bbwin/trunk/Externals/vbs/fsmon/fsmon.cfg [918]) (/hom
+e/tjyang/4.3/bbwin/trunk/Externals/c/Makefile [919]) (/home/tjyang/4.3/bbwin/tr
+unk/Externals/c/Cluster/cluster.vcproj [920]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[921]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[922]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[923]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[924]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[925]) (/home/tjyang/4.3/bbwin/trunk/Externals/c/Cluster/Version.c [926]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[927]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[928]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[929]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[930]) (/home/tjyang/4.3/bbwin/trunk/Externals/c/Cluster/Makefile [931])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[932] (/home/tjyang/4.3/bbwin/trunk/Externals/c/Cluster/Cluster.h [933]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[934]) (/home/tjyang/4.3/bbwin/trunk/Externals/c/Cluster/Utils.c [935]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[936]) (/home/tjyang/4.3/bbwin/trunk/Externals/c/Cluster/Cluster.c [937]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[938]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[939]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[940]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[941]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[942]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[943]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[944]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[945]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[946]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[947]) (/home/tjyang/4.3/bbwin/trunk/www/index.htm [948]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[949]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[950]
+Overfull \hbox (1217.58867pt too wide) in paragraph at lines 85--86
+[][] 
+ []
+
+
+Overfull \hbox (5.57634pt too wide) in paragraph at lines 85--86
+[][] 
+ []
+
+
+Overfull \hbox (65.57695pt too wide) in paragraph at lines 85--86
+[][] 
+ []
+
+
+Overfull \hbox (2603.60277pt too wide) in paragraph at lines 85--86
+[][] 
+ []
+
+
+Overfull \hbox (761.58403pt too wide) in paragraph at lines 85--86
+[][] 
+ []
+
+
+Overfull \hbox (1811.59471pt too wide) in paragraph at lines 85--86
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[951]) (/home/tjyang/4.3/bbwin/trunk/ReadMe.txt) (/home/tjyang/4.3/bbwin/trunk/
+Setup/UpgradeConfiguration.cpp [952]) (/home/tjyang/4.3/bbwin/trunk/Setup/BBWin
+.wxs [953]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[954]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[955]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[956]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[957]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[958]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[959]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[960]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[961]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[962]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[963]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[964]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[965]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[966]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[967]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[968]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[969]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[970]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[971]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[972]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[973]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[974]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[975]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[976]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[977]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[978]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[979]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[980]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[981]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[982]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[983]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[984]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[985]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[986]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[987]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[988]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[989]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[990]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[991]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[992]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[993]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[994]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[995]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[996]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[997]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[998]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[999]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[1000]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[1001]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[1002]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[1003]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[1004]) (/home/tjyang/4.3/bbwin/trunk/Setup/Makefile [1005]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[1006]) (/home/tjyang/4.3/bbwin/trunk/Credits.txt
+Missing character: There is no ç in font ptmr7t!
+[1007]
+Missing character: There is no ï in font ptmr7t!
+Missing character: There is no ë in font ptmr7t!
+Missing character: There is no é in font ptmr7t!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[1008])) [1009]
+\openout2 = `userfaq.aux'.
+
+(./userfaq.tex [1010
+
+
+
+]
+Chapter 2.
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <10> not available
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 35.
+[1011] [1012] [1013] [1014] [1015] [1016] [1017] <undo-simple.png, id=40861, 12
+7.677pt x 216.007pt>
+File: undo-simple.png Graphic file (type png)
+<use undo-simple.png> [1018 <./undo-simple.png>] <undo-non-tip.png, id=40867, 2
+25.643pt x 273.823pt>
+File: undo-non-tip.png Graphic file (type png)
+<use undo-non-tip.png> [1019] [1020 <./undo-non-tip.png>] <undo-manual.png, id=
+40878, 225.643pt x 197.538pt>
+File: undo-manual.png Graphic file (type png)
+<use undo-manual.png> [1021] [1022 <./undo-manual.png>] <undo-manual-merge.png,
+ id=40889, 225.643pt x 292.292pt>
+File: undo-manual-merge.png Graphic file (type png)
+<use undo-manual-merge.png>
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <12> not available
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 364.
+[1023] [1024] [1025] [1026] [1027]
+LaTeX Font Info:    Try loading font information for OMS+pcr on input line 636.
+
+(/usr/share/texmf/tex/latex/psnfss/omspcr.fd
+File: omspcr.fd 
+)
+
+LaTeX Font Warning: Font shape `OMS/pcr/bx/n' undefined
+(Font)              using `OMS/pcr/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 636.
+
+LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 636.
+[1028]
+LaTeX Font Info:    Font shape `OMS/pcr/bx/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 636.
+[1029] [1030] [1031]) [1032] [1033 <./undo-manual-merge.png>]
+\openout2 = `developerfaq.aux'.
+
+(./developerfaq.tex [1034
+
+
+
+]
+Chapter 3.
+
+Underfull \vbox (badness 1014) has occurred while \output is active []
+
+[1035] [1036] [1037] [1038] [1039] <feature-branches.png, id=40980, 522.753pt x
+ 121.253pt>
+File: feature-branches.png Graphic file (type png)
+<use feature-branches.png> [1040 <./feature-branches.png>] [1041]
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 334.
+[1042] [1043] [1044] [1045] [1046] [1047]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 766.
+[1048] [1049] [1050] [1051] [1052]) [1053]
+\openout2 = `adminfaq.aux'.
+
+(./adminfaq.tex [1054
+
+
+
+]
+Chapter 4.
+[1055] [1056] [1057] [1058] [1059] [1060] [1061] [1062]
+LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <10> not available
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 504.
+[1063] [1064] [1065] [1066] [1067] [1068] [1069] [1070] [1071] [1072] [1073] [1
+074] [1075] [1076] [1077] [1078]) [1079]
+\openout2 = `hobbitgraph.aux'.
+
+(./hobbitgraph.tex [1080
+
+
+
+]
+Chapter 5.
+File: ./hobbitgraph.png Graphic file (type png)
+<use ./hobbitgraph.png> <hobbitgraph.png, id=41248, 675.52374pt x 213.79875pt>
+File: hobbitgraph.png Graphic file (type png)
+<use hobbitgraph.png>
+Overfull \hbox (25.09209pt too wide) in paragraph at lines 12--13
+ [][] 
+ []
+
+[1081] [1082 <./hobbitgraph.png>] [1083] [1084] [1085] [1086]
+Overfull \hbox (31.02483pt too wide) in paragraph at lines 213--217
+[]\OT1/pcr/m/n/10 date \OT1/ptm/m/n/10 key-word. Ren-der a date in a sim-i-lar 
+for-mat to the Unix [][]\OT1/pcr/m/n/10 date \OT1/ptm/m/n/10 com-mand, but with
+ time-zone in-cluded. Yields a string like ``[]''. 
+ []
+
+
+Overfull \hbox (41.92503pt too wide) in paragraph at lines 222--227
+[]\OT1/ptm/m/n/10 Any text, but most use-ful for the [][]\OT1/pcr/m/n/10 author
+ \OT1/ptm/m/n/10 key-word. Ex-tract the first string that looks like an email a
+d-dress. For ex-am-ple, ``[]''
+ []
+
+[1087]
+Overfull \hbox (9.3159pt too wide) in paragraph at lines 267--272
+[]\OT1/ptm/m/n/10 Any text, but most use-ful for the [][]\OT1/pcr/m/n/10 author
+ \OT1/ptm/m/n/10 key-word. Re-turn the ``user'' por-tion of an email ad-dress. 
+For ex-am-ple, ``[]''
+ []
+
+
+LaTeX Warning: Float too large for page by 340.50482pt on input line 278.
+
+[1088] [1089] [1090] [1091] [1092] [1093]) [1094]
+\openout2 = `bookmaking.aux'.
+
+(./bookmaking.tex
+Appendix A.
+[1095
+
+
+
+]) [1096]
+\openout2 = `license.aux'.
+
+(./license.tex
+Appendix B.
+[1097
+
+
+
+] [1098]) [1099] (pdf//hobbit-faq-howto.bbl [1100
+
+
+]) (pdf//hobbit-faq-howto.ind [1101] [1102
+
+] [1103] [1104] [1105]) (pdf//hobbit-faq-howto.aux (pdf//preface.aux) (pdf//bbw
+insrc.aux) (pdf//userfaq.aux) (pdf//developerfaq.aux) (pdf//adminfaq.aux) (pdf/
+/hobbitgraph.aux) (pdf//bookmaking.aux) (pdf//license.aux))
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 51639 strings out of 94500
+ 837881 string characters out of 1169919
+ 312749 words of memory out of 1000000
+ 17745 multiletter control sequences out of 10000+50000
+ 47663 words of font info for 96 fonts, out of 500000 for 2000
+ 580 hyphenation exceptions out of 1000
+ 38i,6n,73p,2701b,1693s stack positions out of 1500i,500n,5000p,200000b,5000s
+PDF statistics:
+ 41813 PDF objects out of 300000
+ 36334 named destinations out of 131072
+ 2764 words of extra memory for PDF output out of 65536
+{/usr/share/texmf/fonts/enc/dvips/psnfss/8r.enc}</usr/share/texmf/fonts/type1
+/urw/courier/ucrro8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmbi8a.pfb></
+usr/share/texmf/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texmf/fonts/type
+1/urw/times/utmr8a.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi10.pfb></us
+r/share/texmf/fonts/type1/urw/times/utmri8a.pfb></usr/share/texmf/fonts/type1/u
+rw/courier/ucrr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmb8a.pfb></usr/
+share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/urw
+/times/utmr8a.pfb>
+Output written on pdf//hobbit-faq-howto.pdf (1116 pages, 7823722 bytes).

@@ -1,0 +1,430 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi 
+\doTocEntry\tocchapter{}{\csname a:TocLink\endcsname{1}{Q1-1-1}{}{Contents}}{i}\relax 
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{1}{x1-1000}{QQ2-1-2}{Contents}}{2}\relax 
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{1}{x1-2000}{QQ2-1-3}{List of Figures}}{1}\relax 
+\doTocEntry\toclikechapter{}{\csname a:TocLink\endcsname{1}{x1-3000}{QQ2-1-4}{Preface}}{3}\relax 
+\doTocEntry\tocchapter{}{\csname a:TocLink\endcsname{1}{Q1-1-5}{}{Preface}}{3}\relax 
+\doTocEntry\tocsection{0.1}{\csname a:TocLink\endcsname{1}{x1-40000.1}{QQ2-1-6}{This book is a work in progress}}{3}\relax 
+\doTocEntry\tocsection{0.2}{\csname a:TocLink\endcsname{1}{x1-50000.2}{QQ2-1-7}{About the examples in this book}}{3}\relax 
+\doTocEntry\tocsection{0.3}{\csname a:TocLink\endcsname{1}{x1-60000.3}{QQ2-1-8}{Colophon---this book is Free}}{3}\relax 
+\doTocEntry\tocchapter{1}{\csname a:TocLink\endcsname{1}{x1-70001}{QQ2-1-9}{Introduction}}{6}\relax 
+\doTocEntry\tocsection{1.1}{\csname a:TocLink\endcsname{1}{x1-80001.1}{QQ2-1-10}{About revision control}}{6}\relax 
+\doTocEntry\tocsubsection{1.1.1}{\csname a:TocLink\endcsname{1}{x1-90001.1.1}{QQ2-1-11}{Why use revision control?}}{6}\relax 
+\doTocEntry\tocsubsection{1.1.2}{\csname a:TocLink\endcsname{1}{x1-100001.1.2}{QQ2-1-12}{The many names of revision control}}{7}\relax 
+\doTocEntry\tocsection{1.2}{\csname a:TocLink\endcsname{1}{x1-110001.2}{QQ2-1-13}{A short history of revision control}}{7}\relax 
+\doTocEntry\tocsection{1.3}{\csname a:TocLink\endcsname{1}{x1-120001.3}{QQ2-1-14}{Trends in revision control}}{8}\relax 
+\doTocEntry\tocsection{1.4}{\csname a:TocLink\endcsname{1}{x1-130001.4}{QQ2-1-15}{A few of the advantages of distributed revision control}}{8}\relax 
+\doTocEntry\tocsubsection{1.4.1}{\csname a:TocLink\endcsname{1}{x1-140001.4.1}{QQ2-1-16}{Advantages for open source projects}}{9}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-150001.4.1}{QQ2-1-17}{The forking non-problem}}{9}\relax 
+\doTocEntry\tocsubsection{1.4.2}{\csname a:TocLink\endcsname{1}{x1-160001.4.2}{QQ2-1-18}{Advantages for commercial projects}}{10}\relax 
+\doTocEntry\tocsection{1.5}{\csname a:TocLink\endcsname{1}{x1-170001.5}{QQ2-1-19}{Why choose Mercurial?}}{10}\relax 
+\doTocEntry\tocsection{1.6}{\csname a:TocLink\endcsname{1}{x1-180001.6}{QQ2-1-20}{Mercurial compared with other tools}}{11}\relax 
+\doTocEntry\tocsubsection{1.6.1}{\csname a:TocLink\endcsname{1}{x1-190001.6.1}{QQ2-1-21}{Subversion}}{11}\relax 
+\doTocEntry\tocsubsection{1.6.2}{\csname a:TocLink\endcsname{1}{x1-200001.6.2}{QQ2-1-22}{Git}}{12}\relax 
+\doTocEntry\tocsubsection{1.6.3}{\csname a:TocLink\endcsname{1}{x1-210001.6.3}{QQ2-1-23}{CVS}}{12}\relax 
+\doTocEntry\tocsubsection{1.6.4}{\csname a:TocLink\endcsname{1}{x1-220001.6.4}{QQ2-1-24}{Commercial tools}}{13}\relax 
+\doTocEntry\tocsubsection{1.6.5}{\csname a:TocLink\endcsname{1}{x1-230001.6.5}{QQ2-1-25}{Choosing a revision control tool}}{13}\relax 
+\doTocEntry\tocsection{1.7}{\csname a:TocLink\endcsname{1}{x1-240001.7}{QQ2-1-26}{Switching from another tool to Mercurial}}{13}\relax 
+\doTocEntry\tocchapter{2}{\csname a:TocLink\endcsname{1}{x1-250002}{QQ2-1-27}{Hobbit Client}}{16}\relax 
+\doTocEntry\tocsection{2.1}{\csname a:TocLink\endcsname{1}{x1-260002.1}{QQ2-1-28}{Hobbit Client installation}}{16}\relax 
+\doTocEntry\tocsection{2.2}{\csname a:TocLink\endcsname{1}{x1-270002.2}{QQ2-1-29}{Hobbit Client Architecture}}{16}\relax 
+\doTocEntry\tocsubsection{2.2.1}{\csname a:TocLink\endcsname{1}{x1-280002.2.1}{QQ2-1-30}{Factors to keep in mind}}{16}\relax 
+\doTocEntry\tocsubsection{2.2.2}{\csname a:TocLink\endcsname{1}{x1-290002.2.2}{QQ2-1-31}{Informal anarchy}}{17}\relax 
+\doTocEntry\tocsubsection{2.2.3}{\csname a:TocLink\endcsname{1}{x1-300002.2.3}{QQ2-1-32}{A single central repository}}{17}\relax 
+\doTocEntry\tocsubsection{2.2.4}{\csname a:TocLink\endcsname{1}{x1-310002.2.4}{QQ2-1-33}{Working with multiple branches}}{17}\relax 
+\doTocEntry\tocsubsection{2.2.5}{\csname a:TocLink\endcsname{1}{x1-320002.2.5}{QQ2-1-34}{Feature branches}}{20}\relax 
+\doTocEntry\toclof{2.1}{\csname a:TocLink\endcsname{1}{x1-320011}{}{\ignorespaces Feature branches}}{figure}\relax 
+\doTocEntry\tocsubsection{2.2.6}{\csname a:TocLink\endcsname{1}{x1-330002.2.6}{QQ2-1-36}{The release train}}{23}\relax 
+\doTocEntry\tocsubsection{2.2.7}{\csname a:TocLink\endcsname{1}{x1-340002.2.7}{QQ2-1-37}{The Linux kernel model}}{23}\relax 
+\doTocEntry\tocsubsection{2.2.8}{\csname a:TocLink\endcsname{1}{x1-350002.2.8}{QQ2-1-38}{Pull-only versus shared-push collaboration}}{24}\relax 
+\doTocEntry\tocsubsection{2.2.9}{\csname a:TocLink\endcsname{1}{x1-360002.2.9}{QQ2-1-39}{Where collaboration meets branch management}}{24}\relax 
+\doTocEntry\tocsection{2.3}{\csname a:TocLink\endcsname{1}{x1-370002.3}{QQ2-1-40}{The technical side of sharing}}{24}\relax 
+\doTocEntry\tocsection{2.4}{\csname a:TocLink\endcsname{1}{x1-380002.4}{QQ2-1-41}{Informal sharing with ``\texttt  {hg serve}''}}{24}\relax 
+\doTocEntry\tocsubsection{2.4.1}{\csname a:TocLink\endcsname{1}{x1-390002.4.1}{QQ2-1-42}{A few things to keep in mind}}{25}\relax 
+\doTocEntry\tocsection{2.5}{\csname a:TocLink\endcsname{1}{x1-400002.5}{QQ2-1-43}{Using the Secure Shell (ssh) protocol}}{25}\relax 
+\doTocEntry\tocsubsection{2.5.1}{\csname a:TocLink\endcsname{1}{x1-410002.5.1}{QQ2-1-44}{How to read and write ssh URLs}}{25}\relax 
+\doTocEntry\tocsubsection{2.5.2}{\csname a:TocLink\endcsname{1}{x1-420002.5.2}{QQ2-1-45}{Finding an ssh client for your system}}{26}\relax 
+\doTocEntry\tocsubsection{2.5.3}{\csname a:TocLink\endcsname{1}{x1-430002.5.3}{QQ2-1-46}{Generating a key pair}}{27}\relax 
+\doTocEntry\tocsubsection{2.5.4}{\csname a:TocLink\endcsname{1}{x1-440002.5.4}{QQ2-1-47}{Using an authentication agent}}{27}\relax 
+\doTocEntry\tocsubsection{2.5.5}{\csname a:TocLink\endcsname{1}{x1-450002.5.5}{QQ2-1-48}{Configuring the server side properly}}{27}\relax 
+\doTocEntry\tocsubsection{2.5.6}{\csname a:TocLink\endcsname{1}{x1-460002.5.6}{QQ2-1-49}{Using compression with ssh}}{29}\relax 
+\doTocEntry\tocsection{2.6}{\csname a:TocLink\endcsname{1}{x1-470002.6}{QQ2-1-50}{Serving over HTTP using CGI}}{30}\relax 
+\doTocEntry\tocsubsection{2.6.1}{\csname a:TocLink\endcsname{1}{x1-480002.6.1}{QQ2-1-51}{Web server configuration checklist}}{30}\relax 
+\doTocEntry\tocsubsection{2.6.2}{\csname a:TocLink\endcsname{1}{x1-490002.6.2}{QQ2-1-52}{Basic CGI configuration}}{31}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-500002.6.2}{QQ2-1-53}{What could \emph  {possibly} go wrong?}}{31}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-510002.6.2}{QQ2-1-54}{Configuring lighttpd}}{32}\relax 
+\doTocEntry\tocsubsection{2.6.3}{\csname a:TocLink\endcsname{1}{x1-520002.6.3}{QQ2-1-55}{Sharing multiple repositories with one CGI script}}{33}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-530002.6.3}{QQ2-1-56}{Explicitly specifying which repositories to publish}}{34}\relax 
+\doTocEntry\tocsubsection{2.6.4}{\csname a:TocLink\endcsname{1}{x1-540002.6.4}{QQ2-1-57}{Downloading source archives}}{34}\relax 
+\doTocEntry\tocsubsection{2.6.5}{\csname a:TocLink\endcsname{1}{x1-550002.6.5}{QQ2-1-58}{Web configuration options}}{34}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-560002.6.5}{QQ2-1-59}{Options specific to an individual repository}}{36}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-570002.6.5}{QQ2-1-60}{Options specific to the ``\texttt  {hg serve}'' command}}{36}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-580002.6.5}{QQ2-1-61}{Choosing the right \texttt  {hgrc} file to add \texttt  {[web]} items to}}{36}\relax 
+\doTocEntry\tocchapter{3}{\csname a:TocLink\endcsname{1}{x1-590003}{QQ2-1-62}{System Monitoring Requirements}}{40}\relax 
+\doTocEntry\tocsection{3.1}{\csname a:TocLink\endcsname{1}{x1-600003.1}{QQ2-1-63}{Web GUI of Hobbit}}{40}\relax 
+\doTocEntry\tocsubsection{3.1.1}{\csname a:TocLink\endcsname{1}{x1-610003.1.1}{QQ2-1-64}{Linux}}{40}\relax 
+\doTocEntry\tocsubsection{3.1.2}{\csname a:TocLink\endcsname{1}{x1-620003.1.2}{QQ2-1-65}{Solaris}}{41}\relax 
+\doTocEntry\tocsubsection{3.1.3}{\csname a:TocLink\endcsname{1}{x1-630003.1.3}{QQ2-1-66}{Mac OS X}}{41}\relax 
+\doTocEntry\tocsubsection{3.1.4}{\csname a:TocLink\endcsname{1}{x1-640003.1.4}{QQ2-1-67}{Windows}}{41}\relax 
+\doTocEntry\tocsection{3.2}{\csname a:TocLink\endcsname{1}{x1-650003.2}{QQ2-1-68}{Getting started}}{41}\relax 
+\doTocEntry\tocsubsection{3.2.1}{\csname a:TocLink\endcsname{1}{x1-660003.2.1}{QQ2-1-69}{Built-in help}}{42}\relax 
+\doTocEntry\tocsection{3.3}{\csname a:TocLink\endcsname{1}{x1-670003.3}{QQ2-1-70}{Working with a repository}}{42}\relax 
+\doTocEntry\tocsubsection{3.3.1}{\csname a:TocLink\endcsname{1}{x1-680003.3.1}{QQ2-1-71}{Making a local copy of a repository}}{42}\relax 
+\doTocEntry\tocsubsection{3.3.2}{\csname a:TocLink\endcsname{1}{x1-690003.3.2}{QQ2-1-72}{What's in a repository?}}{43}\relax 
+\doTocEntry\tocsection{3.4}{\csname a:TocLink\endcsname{1}{x1-700003.4}{QQ2-1-73}{A tour through history}}{44}\relax 
+\doTocEntry\toclof{3.1}{\csname a:TocLink\endcsname{1}{x1-700581}{}{\ignorespaces Graphical history of the \texttt  {hello} repository}}{figure}\relax 
+\doTocEntry\tocsubsection{3.4.1}{\csname a:TocLink\endcsname{1}{x1-710003.4.1}{QQ2-1-75}{Changesets, revisions, and talking to other people}}{48}\relax 
+\doTocEntry\tocsubsection{3.4.2}{\csname a:TocLink\endcsname{1}{x1-720003.4.2}{QQ2-1-76}{Viewing specific revisions}}{48}\relax 
+\doTocEntry\tocsubsection{3.4.3}{\csname a:TocLink\endcsname{1}{x1-730003.4.3}{QQ2-1-77}{More detailed information}}{49}\relax 
+\doTocEntry\tocsection{3.5}{\csname a:TocLink\endcsname{1}{x1-740003.5}{QQ2-1-78}{All about command options}}{50}\relax 
+\doTocEntry\tocsection{3.6}{\csname a:TocLink\endcsname{1}{x1-750003.6}{QQ2-1-79}{Making and reviewing changes}}{51}\relax 
+\doTocEntry\tocsection{3.7}{\csname a:TocLink\endcsname{1}{x1-760003.7}{QQ2-1-80}{Recording changes in a new changeset}}{52}\relax 
+\doTocEntry\tocsubsection{3.7.1}{\csname a:TocLink\endcsname{1}{x1-770003.7.1}{QQ2-1-81}{Setting up a username}}{52}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-780003.7.1}{QQ2-1-82}{Creating a Mercurial configuration file}}{53}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-790003.7.1}{QQ2-1-83}{Choosing a user name}}{53}\relax 
+\doTocEntry\tocsubsection{3.7.2}{\csname a:TocLink\endcsname{1}{x1-800003.7.2}{QQ2-1-84}{Writing a commit message}}{53}\relax 
+\doTocEntry\tocsubsection{3.7.3}{\csname a:TocLink\endcsname{1}{x1-810003.7.3}{QQ2-1-85}{Writing a good commit message}}{54}\relax 
+\doTocEntry\tocsubsection{3.7.4}{\csname a:TocLink\endcsname{1}{x1-820003.7.4}{QQ2-1-86}{Aborting a commit}}{54}\relax 
+\doTocEntry\tocsubsection{3.7.5}{\csname a:TocLink\endcsname{1}{x1-830003.7.5}{QQ2-1-87}{Admiring our new handiwork}}{55}\relax 
+\doTocEntry\tocsection{3.8}{\csname a:TocLink\endcsname{1}{x1-840003.8}{QQ2-1-88}{Sharing changes}}{55}\relax 
+\doTocEntry\tocsubsection{3.8.1}{\csname a:TocLink\endcsname{1}{x1-850003.8.1}{QQ2-1-89}{Pulling changes from another repository}}{55}\relax 
+\doTocEntry\tocsubsection{3.8.2}{\csname a:TocLink\endcsname{1}{x1-860003.8.2}{QQ2-1-90}{Updating the working directory}}{57}\relax 
+\doTocEntry\tocsubsection{3.8.3}{\csname a:TocLink\endcsname{1}{x1-870003.8.3}{QQ2-1-91}{Pushing changes to another repository}}{58}\relax 
+\doTocEntry\tocsubsection{3.8.4}{\csname a:TocLink\endcsname{1}{x1-880003.8.4}{QQ2-1-92}{Sharing changes over a network}}{59}\relax 
+\doTocEntry\tocchapter{4}{\csname a:TocLink\endcsname{1}{x1-890004}{QQ2-1-93}{A tour of Mercurial: merging work}}{63}\relax 
+\doTocEntry\tocsection{4.1}{\csname a:TocLink\endcsname{1}{x1-900004.1}{QQ2-1-94}{Merging streams of work}}{63}\relax 
+\doTocEntry\toclof{4.1}{\csname a:TocLink\endcsname{1}{x1-900691}{}{\ignorespaces Divergent recent histories of the \texttt  {my-hello} and \texttt  {my-new-hello} repositories}}{figure}\relax 
+\doTocEntry\tocsubsection{4.1.1}{\csname a:TocLink\endcsname{1}{x1-910004.1.1}{QQ2-1-96}{Head changesets}}{67}\relax 
+\doTocEntry\toclof{4.2}{\csname a:TocLink\endcsname{1}{x1-910012}{}{\ignorespaces Repository contents after pulling from \texttt  {my-hello} into \texttt  {my-new-hello}}}{figure}\relax 
+\doTocEntry\tocsubsection{4.1.2}{\csname a:TocLink\endcsname{1}{x1-920004.1.2}{QQ2-1-98}{Performing the merge}}{70}\relax 
+\doTocEntry\toclof{4.3}{\csname a:TocLink\endcsname{1}{x1-920163}{}{\ignorespaces Working directory and repository during merge, and following commit}}{figure}\relax 
+\doTocEntry\tocsubsection{4.1.3}{\csname a:TocLink\endcsname{1}{x1-930004.1.3}{QQ2-1-100}{Committing the results of the merge}}{73}\relax 
+\doTocEntry\tocsection{4.2}{\csname a:TocLink\endcsname{1}{x1-940004.2}{QQ2-1-101}{Merging conflicting changes}}{74}\relax 
+\doTocEntry\toclof{4.4}{\csname a:TocLink\endcsname{1}{x1-940014}{}{\ignorespaces Conflicting changes to a document}}{figure}\relax 
+\doTocEntry\tocsubsection{4.2.1}{\csname a:TocLink\endcsname{1}{x1-950004.2.1}{QQ2-1-103}{Using a graphical merge tool}}{77}\relax 
+\doTocEntry\toclof{4.5}{\csname a:TocLink\endcsname{1}{x1-950035}{}{\ignorespaces Using \texttt  {kdiff3} to merge versions of a file}}{figure}\relax 
+\doTocEntry\tocsubsection{4.2.2}{\csname a:TocLink\endcsname{1}{x1-960004.2.2}{QQ2-1-105}{A worked example}}{80}\relax 
+\doTocEntry\tocsection{4.3}{\csname a:TocLink\endcsname{1}{x1-970004.3}{QQ2-1-106}{Simplifying the pull-merge-commit sequence}}{82}\relax 
+\doTocEntry\tocchapter{5}{\csname a:TocLink\endcsname{1}{x1-980005}{QQ2-1-107}{Behind the scenes}}{86}\relax 
+\doTocEntry\tocsection{5.1}{\csname a:TocLink\endcsname{1}{x1-990005.1}{QQ2-1-108}{Mercurial's historical record}}{86}\relax 
+\doTocEntry\tocsubsection{5.1.1}{\csname a:TocLink\endcsname{1}{x1-1000005.1.1}{QQ2-1-109}{Tracking the history of a single file}}{86}\relax 
+\doTocEntry\toclof{5.1}{\csname a:TocLink\endcsname{1}{x1-1000021}{}{\ignorespaces Relationships between files in working directory and filelogs in repository}}{figure}\relax 
+\doTocEntry\tocsubsection{5.1.2}{\csname a:TocLink\endcsname{1}{x1-1010005.1.2}{QQ2-1-111}{Managing tracked files}}{89}\relax 
+\doTocEntry\tocsubsection{5.1.3}{\csname a:TocLink\endcsname{1}{x1-1020005.1.3}{QQ2-1-112}{Recording changeset information}}{89}\relax 
+\doTocEntry\tocsubsection{5.1.4}{\csname a:TocLink\endcsname{1}{x1-1030005.1.4}{QQ2-1-113}{Relationships between revisions}}{89}\relax 
+\doTocEntry\toclof{5.2}{\csname a:TocLink\endcsname{1}{x1-1030012}{}{\ignorespaces Metadata relationships}}{figure}\relax 
+\doTocEntry\tocsection{5.2}{\csname a:TocLink\endcsname{1}{x1-1040005.2}{QQ2-1-115}{Safe, efficient storage}}{92}\relax 
+\doTocEntry\tocsubsection{5.2.1}{\csname a:TocLink\endcsname{1}{x1-1050005.2.1}{QQ2-1-116}{Efficient storage}}{92}\relax 
+\doTocEntry\tocsubsection{5.2.2}{\csname a:TocLink\endcsname{1}{x1-1060005.2.2}{QQ2-1-117}{Safe operation}}{92}\relax 
+\doTocEntry\tocsubsection{5.2.3}{\csname a:TocLink\endcsname{1}{x1-1070005.2.3}{QQ2-1-118}{Fast retrieval}}{92}\relax 
+\doTocEntry\toclof{5.3}{\csname a:TocLink\endcsname{1}{x1-1070013}{}{\ignorespaces Snapshot of a revlog, with incremental deltas}}{figure}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-1080005.2.3}{QQ2-1-120}{Aside: the influence of video compression}}{95}\relax 
+\doTocEntry\tocsubsection{5.2.4}{\csname a:TocLink\endcsname{1}{x1-1090005.2.4}{QQ2-1-121}{Identification and strong integrity}}{95}\relax 
+\doTocEntry\tocsection{5.3}{\csname a:TocLink\endcsname{1}{x1-1100005.3}{QQ2-1-122}{Revision history, branching, and merging}}{95}\relax 
+\doTocEntry\toclof{5.4}{\csname a:TocLink\endcsname{1}{x1-1100014}{}{\ignorespaces }}{figure}\relax 
+\doTocEntry\tocsection{5.4}{\csname a:TocLink\endcsname{1}{x1-1110005.4}{QQ2-1-124}{The working directory}}{99}\relax 
+\doTocEntry\tocsubsection{5.4.1}{\csname a:TocLink\endcsname{1}{x1-1120005.4.1}{QQ2-1-125}{What happens when you commit}}{99}\relax 
+\doTocEntry\toclof{5.5}{\csname a:TocLink\endcsname{1}{x1-1120015}{}{\ignorespaces The working directory can have two parents}}{figure}\relax 
+\doTocEntry\toclof{5.6}{\csname a:TocLink\endcsname{1}{x1-1120026}{}{\ignorespaces The working directory gains new parents after a commit}}{figure}\relax 
+\doTocEntry\tocsubsection{5.4.2}{\csname a:TocLink\endcsname{1}{x1-1130005.4.2}{QQ2-1-128}{Creating a new head}}{105}\relax 
+\doTocEntry\toclof{5.7}{\csname a:TocLink\endcsname{1}{x1-1130017}{}{\ignorespaces The working directory, updated to an older changeset}}{figure}\relax 
+\doTocEntry\toclof{5.8}{\csname a:TocLink\endcsname{1}{x1-1130028}{}{\ignorespaces After a commit made while synced to an older changeset}}{figure}\relax 
+\doTocEntry\tocsubsection{5.4.3}{\csname a:TocLink\endcsname{1}{x1-1140005.4.3}{QQ2-1-131}{Merging heads}}{111}\relax 
+\doTocEntry\toclof{5.9}{\csname a:TocLink\endcsname{1}{x1-1140029}{}{\ignorespaces Merging two heads}}{figure}\relax 
+\doTocEntry\tocsection{5.5}{\csname a:TocLink\endcsname{1}{x1-1150005.5}{QQ2-1-133}{Other interesting design features}}{114}\relax 
+\doTocEntry\tocsubsection{5.5.1}{\csname a:TocLink\endcsname{1}{x1-1160005.5.1}{QQ2-1-134}{Clever compression}}{114}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-1170005.5.1}{QQ2-1-135}{Network recompression}}{115}\relax 
+\doTocEntry\tocsubsection{5.5.2}{\csname a:TocLink\endcsname{1}{x1-1180005.5.2}{QQ2-1-136}{Read/write ordering and atomicity}}{115}\relax 
+\doTocEntry\tocsubsection{5.5.3}{\csname a:TocLink\endcsname{1}{x1-1190005.5.3}{QQ2-1-137}{Concurrent access}}{115}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-1200005.5.3}{QQ2-1-138}{Safe dirstate access}}{116}\relax 
+\doTocEntry\tocsubsection{5.5.4}{\csname a:TocLink\endcsname{1}{x1-1210005.5.4}{QQ2-1-139}{Avoiding seeks}}{116}\relax 
+\doTocEntry\tocsubsection{5.5.5}{\csname a:TocLink\endcsname{1}{x1-1220005.5.5}{QQ2-1-140}{Other contents of the dirstate}}{116}\relax 
+\doTocEntry\tocchapter{6}{\csname a:TocLink\endcsname{1}{x1-1230006}{QQ2-1-141}{Hobbit Administration Guide}}{120}\relax 
+\doTocEntry\tocsection{6.1}{\csname a:TocLink\endcsname{1}{x1-1240006.1}{QQ2-1-142}{Telling Mercurial which files to track}}{120}\relax 
+\doTocEntry\tocsubsection{6.1.1}{\csname a:TocLink\endcsname{1}{x1-1250006.1.1}{QQ2-1-143}{Explicit versus implicit file naming}}{120}\relax 
+\doTocEntry\tocsubsection{6.1.2}{\csname a:TocLink\endcsname{1}{x1-1260006.1.2}{QQ2-1-144}{Aside: Mercurial tracks files, not directories}}{121}\relax 
+\doTocEntry\toclof{6.1}{\csname a:TocLink\endcsname{1}{x1-1260281}{}{\ignorespaces Simulating an empty directory using a hidden file}}{figure}\relax 
+\doTocEntry\tocsection{6.2}{\csname a:TocLink\endcsname{1}{x1-1270006.2}{QQ2-1-146}{How to stop tracking a file}}{124}\relax 
+\doTocEntry\tocsubsection{6.2.1}{\csname a:TocLink\endcsname{1}{x1-1280006.2.1}{QQ2-1-147}{Removing a file does not affect its history}}{124}\relax 
+\doTocEntry\tocsubsection{6.2.2}{\csname a:TocLink\endcsname{1}{x1-1290006.2.2}{QQ2-1-148}{Missing files}}{125}\relax 
+\doTocEntry\tocsubsection{6.2.3}{\csname a:TocLink\endcsname{1}{x1-1300006.2.3}{QQ2-1-149}{Aside: why tell Mercurial explicitly to remove a file?}}{125}\relax 
+\doTocEntry\tocsubsection{6.2.4}{\csname a:TocLink\endcsname{1}{x1-1310006.2.4}{QQ2-1-150}{Useful shorthand---adding and removing files in one step}}{126}\relax 
+\doTocEntry\tocsection{6.3}{\csname a:TocLink\endcsname{1}{x1-1320006.3}{QQ2-1-151}{Copying files}}{126}\relax 
+\doTocEntry\tocsubsection{6.3.1}{\csname a:TocLink\endcsname{1}{x1-1330006.3.1}{QQ2-1-152}{The results of copying during a merge}}{126}\relax 
+\doTocEntry\tocsubsection{6.3.2}{\csname a:TocLink\endcsname{1}{x1-1340006.3.2}{QQ2-1-153}{Why should changes follow copies?}}{128}\relax 
+\doTocEntry\tocsubsection{6.3.3}{\csname a:TocLink\endcsname{1}{x1-1350006.3.3}{QQ2-1-154}{How to make changes \emph  {not} follow a copy}}{128}\relax 
+\doTocEntry\tocsubsection{6.3.4}{\csname a:TocLink\endcsname{1}{x1-1360006.3.4}{QQ2-1-155}{Behaviour of the ``\texttt  {hg copy}'' command}}{128}\relax 
+\doTocEntry\tocsection{6.4}{\csname a:TocLink\endcsname{1}{x1-1370006.4}{QQ2-1-156}{Renaming files}}{129}\relax 
+\doTocEntry\tocsubsection{6.4.1}{\csname a:TocLink\endcsname{1}{x1-1380006.4.1}{QQ2-1-157}{Renaming files and merging changes}}{130}\relax 
+\doTocEntry\tocsubsection{6.4.2}{\csname a:TocLink\endcsname{1}{x1-1390006.4.2}{QQ2-1-158}{Divergent renames and merging}}{130}\relax 
+\doTocEntry\tocsubsection{6.4.3}{\csname a:TocLink\endcsname{1}{x1-1400006.4.3}{QQ2-1-159}{Convergent renames and merging}}{132}\relax 
+\doTocEntry\tocsubsection{6.4.4}{\csname a:TocLink\endcsname{1}{x1-1410006.4.4}{QQ2-1-160}{Other name-related corner cases}}{132}\relax 
+\doTocEntry\tocsection{6.5}{\csname a:TocLink\endcsname{1}{x1-1420006.5}{QQ2-1-161}{Recovering from mistakes}}{132}\relax 
+\doTocEntry\tocchapter{7}{\csname a:TocLink\endcsname{1}{x1-1430007}{QQ2-1-162}{File names and pattern matching}}{138}\relax 
+\doTocEntry\tocsection{7.1}{\csname a:TocLink\endcsname{1}{x1-1440007.1}{QQ2-1-163}{Simple file naming}}{138}\relax 
+\doTocEntry\tocsection{7.2}{\csname a:TocLink\endcsname{1}{x1-1450007.2}{QQ2-1-164}{Running commands without any file names}}{138}\relax 
+\doTocEntry\tocsection{7.3}{\csname a:TocLink\endcsname{1}{x1-1460007.3}{QQ2-1-165}{Telling you what's going on}}{140}\relax 
+\doTocEntry\tocsection{7.4}{\csname a:TocLink\endcsname{1}{x1-1470007.4}{QQ2-1-166}{Using patterns to identify files}}{140}\relax 
+\doTocEntry\tocsubsection{7.4.1}{\csname a:TocLink\endcsname{1}{x1-1480007.4.1}{QQ2-1-167}{Shell-style \texttt  {glob} patterns}}{140}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-1490007.4.1}{QQ2-1-168}{Watch out!}}{141}\relax 
+\doTocEntry\tocsubsection{7.4.2}{\csname a:TocLink\endcsname{1}{x1-1500007.4.2}{QQ2-1-169}{Regular expression matching with \texttt  {re} patterns}}{142}\relax 
+\doTocEntry\tocsection{7.5}{\csname a:TocLink\endcsname{1}{x1-1510007.5}{QQ2-1-170}{Filtering files}}{142}\relax 
+\doTocEntry\tocsection{7.6}{\csname a:TocLink\endcsname{1}{x1-1520007.6}{QQ2-1-171}{Ignoring unwanted files and directories}}{143}\relax 
+\doTocEntry\tocsection{7.7}{\csname a:TocLink\endcsname{1}{x1-1530007.7}{QQ2-1-172}{Case sensitivity}}{143}\relax 
+\doTocEntry\tocsubsection{7.7.1}{\csname a:TocLink\endcsname{1}{x1-1540007.7.1}{QQ2-1-173}{Safe, portable repository storage}}{143}\relax 
+\doTocEntry\tocsubsection{7.7.2}{\csname a:TocLink\endcsname{1}{x1-1550007.7.2}{QQ2-1-174}{Detecting case conflicts}}{144}\relax 
+\doTocEntry\tocsubsection{7.7.3}{\csname a:TocLink\endcsname{1}{x1-1560007.7.3}{QQ2-1-175}{Fixing a case conflict}}{144}\relax 
+\doTocEntry\tocchapter{8}{\csname a:TocLink\endcsname{1}{x1-1570008}{QQ2-1-176}{Managing releases and branchy development}}{147}\relax 
+\doTocEntry\tocsection{8.1}{\csname a:TocLink\endcsname{1}{x1-1580008.1}{QQ2-1-177}{Giving a persistent name to a revision}}{147}\relax 
+\doTocEntry\tocsubsection{8.1.1}{\csname a:TocLink\endcsname{1}{x1-1590008.1.1}{QQ2-1-178}{Handling tag conflicts during a merge}}{150}\relax 
+\doTocEntry\tocsubsection{8.1.2}{\csname a:TocLink\endcsname{1}{x1-1600008.1.2}{QQ2-1-179}{Tags and cloning}}{151}\relax 
+\doTocEntry\tocsubsection{8.1.3}{\csname a:TocLink\endcsname{1}{x1-1610008.1.3}{QQ2-1-180}{When permanent tags are too much}}{151}\relax 
+\doTocEntry\tocsection{8.2}{\csname a:TocLink\endcsname{1}{x1-1620008.2}{QQ2-1-181}{The flow of changes---big picture vs. little}}{151}\relax 
+\doTocEntry\tocsection{8.3}{\csname a:TocLink\endcsname{1}{x1-1630008.3}{QQ2-1-182}{Managing big-picture branches in repositories}}{152}\relax 
+\doTocEntry\tocsection{8.4}{\csname a:TocLink\endcsname{1}{x1-1640008.4}{QQ2-1-183}{Don't repeat yourself: merging across branches}}{153}\relax 
+\doTocEntry\tocsection{8.5}{\csname a:TocLink\endcsname{1}{x1-1650008.5}{QQ2-1-184}{Naming branches within one repository}}{154}\relax 
+\doTocEntry\tocsection{8.6}{\csname a:TocLink\endcsname{1}{x1-1660008.6}{QQ2-1-185}{Dealing with multiple named branches in a repository}}{156}\relax 
+\doTocEntry\tocsection{8.7}{\csname a:TocLink\endcsname{1}{x1-1670008.7}{QQ2-1-186}{Branch names and merging}}{158}\relax 
+\doTocEntry\tocsection{8.8}{\csname a:TocLink\endcsname{1}{x1-1680008.8}{QQ2-1-187}{Branch naming is generally useful}}{158}\relax 
+\doTocEntry\tocchapter{9}{\csname a:TocLink\endcsname{1}{x1-1690009}{QQ2-1-188}{Finding and fixing your mistakes}}{162}\relax 
+\doTocEntry\tocsection{9.1}{\csname a:TocLink\endcsname{1}{x1-1700009.1}{QQ2-1-189}{Erasing local history}}{162}\relax 
+\doTocEntry\tocsubsection{9.1.1}{\csname a:TocLink\endcsname{1}{x1-1710009.1.1}{QQ2-1-190}{The accidental commit}}{162}\relax 
+\doTocEntry\tocsubsection{9.1.2}{\csname a:TocLink\endcsname{1}{x1-1720009.1.2}{QQ2-1-191}{Rolling back a transaction}}{162}\relax 
+\doTocEntry\tocsubsection{9.1.3}{\csname a:TocLink\endcsname{1}{x1-1730009.1.3}{QQ2-1-192}{The erroneous pull}}{163}\relax 
+\doTocEntry\tocsubsection{9.1.4}{\csname a:TocLink\endcsname{1}{x1-1740009.1.4}{QQ2-1-193}{Rolling back is useless once you've pushed}}{164}\relax 
+\doTocEntry\tocsubsection{9.1.5}{\csname a:TocLink\endcsname{1}{x1-1750009.1.5}{QQ2-1-194}{You can only roll back once}}{164}\relax 
+\doTocEntry\tocsection{9.2}{\csname a:TocLink\endcsname{1}{x1-1760009.2}{QQ2-1-195}{Reverting the mistaken change}}{164}\relax 
+\doTocEntry\tocsubsection{9.2.1}{\csname a:TocLink\endcsname{1}{x1-1770009.2.1}{QQ2-1-196}{File management errors}}{165}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-1780009.2.1}{QQ2-1-197}{A slightly special case: reverting a rename}}{166}\relax 
+\doTocEntry\tocsection{9.3}{\csname a:TocLink\endcsname{1}{x1-1790009.3}{QQ2-1-198}{Dealing with committed changes}}{167}\relax 
+\doTocEntry\tocsubsection{9.3.1}{\csname a:TocLink\endcsname{1}{x1-1800009.3.1}{QQ2-1-199}{Backing out a changeset}}{167}\relax 
+\doTocEntry\tocsubsection{9.3.2}{\csname a:TocLink\endcsname{1}{x1-1810009.3.2}{QQ2-1-200}{Backing out the tip changeset}}{168}\relax 
+\doTocEntry\toclof{9.1}{\csname a:TocLink\endcsname{1}{x1-1810341}{}{\ignorespaces Backing out a change using the ``\texttt  {hg backout}'' command}}{figure}\relax 
+\doTocEntry\tocsubsection{9.3.3}{\csname a:TocLink\endcsname{1}{x1-1820009.3.3}{QQ2-1-202}{Backing out a non-tip change}}{171}\relax 
+\doTocEntry\toclof{9.2}{\csname a:TocLink\endcsname{1}{x1-1820452}{}{\ignorespaces Automated backout of a non-tip change using the ``\texttt  {hg backout}'' command}}{figure}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-1830009.3.3}{QQ2-1-204}{Always use the \texttt  {--merge} option}}{174}\relax 
+\doTocEntry\tocsubsection{9.3.4}{\csname a:TocLink\endcsname{1}{x1-1840009.3.4}{QQ2-1-205}{Gaining more control of the backout process}}{174}\relax 
+\doTocEntry\toclof{9.3}{\csname a:TocLink\endcsname{1}{x1-1840643}{}{\ignorespaces Backing out a change using the ``\texttt  {hg backout}'' command}}{figure}\relax 
+\doTocEntry\toclof{9.4}{\csname a:TocLink\endcsname{1}{x1-1841294}{}{\ignorespaces Manually merging a backout change}}{figure}\relax 
+\doTocEntry\tocsubsection{9.3.5}{\csname a:TocLink\endcsname{1}{x1-1850009.3.5}{QQ2-1-208}{Why ``\texttt  {hg backout}'' works as it does}}{182}\relax 
+\doTocEntry\tocsection{9.4}{\csname a:TocLink\endcsname{1}{x1-1860009.4}{QQ2-1-209}{Changes that should never have been}}{182}\relax 
+\doTocEntry\tocsubsection{9.4.1}{\csname a:TocLink\endcsname{1}{x1-1870009.4.1}{QQ2-1-210}{Protect yourself from ``escaped'' changes}}{183}\relax 
+\doTocEntry\tocsection{9.5}{\csname a:TocLink\endcsname{1}{x1-1880009.5}{QQ2-1-211}{Finding the source of a bug}}{183}\relax 
+\doTocEntry\tocsubsection{9.5.1}{\csname a:TocLink\endcsname{1}{x1-1890009.5.1}{QQ2-1-212}{Using the ``\texttt  {hg bisect}'' command}}{184}\relax 
+\doTocEntry\tocsubsection{9.5.2}{\csname a:TocLink\endcsname{1}{x1-1900009.5.2}{QQ2-1-213}{Cleaning up after your search}}{188}\relax 
+\doTocEntry\tocsection{9.6}{\csname a:TocLink\endcsname{1}{x1-1910009.6}{QQ2-1-214}{Tips for finding bugs effectively}}{188}\relax 
+\doTocEntry\tocsubsection{9.6.1}{\csname a:TocLink\endcsname{1}{x1-1920009.6.1}{QQ2-1-215}{Give consistent input}}{188}\relax 
+\doTocEntry\tocsubsection{9.6.2}{\csname a:TocLink\endcsname{1}{x1-1930009.6.2}{QQ2-1-216}{Automate as much as possible}}{188}\relax 
+\doTocEntry\tocsubsection{9.6.3}{\csname a:TocLink\endcsname{1}{x1-1940009.6.3}{QQ2-1-217}{Check your results}}{189}\relax 
+\doTocEntry\tocsubsection{9.6.4}{\csname a:TocLink\endcsname{1}{x1-1950009.6.4}{QQ2-1-218}{Beware interference between bugs}}{189}\relax 
+\doTocEntry\tocsubsection{9.6.5}{\csname a:TocLink\endcsname{1}{x1-1960009.6.5}{QQ2-1-219}{Bracket your search lazily}}{190}\relax 
+\doTocEntry\tocchapter{10}{\csname a:TocLink\endcsname{1}{x1-19700010}{QQ2-1-220}{Handling repository events with hooks}}{193}\relax 
+\doTocEntry\tocsection{10.1}{\csname a:TocLink\endcsname{1}{x1-19800010.1}{QQ2-1-221}{An overview of hooks in Mercurial}}{193}\relax 
+\doTocEntry\tocsection{10.2}{\csname a:TocLink\endcsname{1}{x1-19900010.2}{QQ2-1-222}{Hooks and security}}{194}\relax 
+\doTocEntry\tocsubsection{10.2.1}{\csname a:TocLink\endcsname{1}{x1-20000010.2.1}{QQ2-1-223}{Hooks are run with your privileges}}{194}\relax 
+\doTocEntry\tocsubsection{10.2.2}{\csname a:TocLink\endcsname{1}{x1-20100010.2.2}{QQ2-1-224}{Hooks do not propagate}}{194}\relax 
+\doTocEntry\tocsubsection{10.2.3}{\csname a:TocLink\endcsname{1}{x1-20200010.2.3}{QQ2-1-225}{Hooks can be overridden}}{195}\relax 
+\doTocEntry\tocsubsection{10.2.4}{\csname a:TocLink\endcsname{1}{x1-20300010.2.4}{QQ2-1-226}{Ensuring that critical hooks are run}}{195}\relax 
+\doTocEntry\tocsection{10.3}{\csname a:TocLink\endcsname{1}{x1-20400010.3}{QQ2-1-227}{Care with \texttt  {pretxn} hooks in a shared-access repository}}{195}\relax 
+\doTocEntry\tocsubsection{10.3.1}{\csname a:TocLink\endcsname{1}{x1-20500010.3.1}{QQ2-1-228}{The problem illustrated}}{196}\relax 
+\doTocEntry\tocsection{10.4}{\csname a:TocLink\endcsname{1}{x1-20600010.4}{QQ2-1-229}{A short tutorial on using hooks}}{196}\relax 
+\doTocEntry\toclof{10.1}{\csname a:TocLink\endcsname{1}{x1-2060261}{}{\ignorespaces A simple hook that runs when a changeset is committed}}{figure}\relax 
+\doTocEntry\tocsubsection{10.4.1}{\csname a:TocLink\endcsname{1}{x1-20700010.4.1}{QQ2-1-231}{Performing multiple actions per event}}{199}\relax 
+\doTocEntry\toclof{10.2}{\csname a:TocLink\endcsname{1}{x1-2070112}{}{\ignorespaces Defining a second \texttt  {commit} hook}}{figure}\relax 
+\doTocEntry\tocsubsection{10.4.2}{\csname a:TocLink\endcsname{1}{x1-20800010.4.2}{QQ2-1-233}{Controlling whether an activity can proceed}}{202}\relax 
+\doTocEntry\toclof{10.3}{\csname a:TocLink\endcsname{1}{x1-2080413}{}{\ignorespaces Using the \texttt  {pretxncommit} hook to control commits}}{figure}\relax 
+\doTocEntry\tocsection{10.5}{\csname a:TocLink\endcsname{1}{x1-20900010.5}{QQ2-1-235}{Writing your own hooks}}{205}\relax 
+\doTocEntry\tocsubsection{10.5.1}{\csname a:TocLink\endcsname{1}{x1-21000010.5.1}{QQ2-1-236}{Choosing how your hook should run}}{205}\relax 
+\doTocEntry\tocsubsection{10.5.2}{\csname a:TocLink\endcsname{1}{x1-21100010.5.2}{QQ2-1-237}{Hook parameters}}{205}\relax 
+\doTocEntry\tocsubsection{10.5.3}{\csname a:TocLink\endcsname{1}{x1-21200010.5.3}{QQ2-1-238}{Hook return values and activity control}}{205}\relax 
+\doTocEntry\tocsubsection{10.5.4}{\csname a:TocLink\endcsname{1}{x1-21300010.5.4}{QQ2-1-239}{Writing an external hook}}{206}\relax 
+\doTocEntry\tocsubsection{10.5.5}{\csname a:TocLink\endcsname{1}{x1-21400010.5.5}{QQ2-1-240}{Telling Mercurial to use an in-process hook}}{206}\relax 
+\doTocEntry\tocsubsection{10.5.6}{\csname a:TocLink\endcsname{1}{x1-21500010.5.6}{QQ2-1-241}{Writing an in-process hook}}{206}\relax 
+\doTocEntry\tocsection{10.6}{\csname a:TocLink\endcsname{1}{x1-21600010.6}{QQ2-1-242}{Some hook examples}}{207}\relax 
+\doTocEntry\tocsubsection{10.6.1}{\csname a:TocLink\endcsname{1}{x1-21700010.6.1}{QQ2-1-243}{Writing meaningful commit messages}}{207}\relax 
+\doTocEntry\toclof{10.4}{\csname a:TocLink\endcsname{1}{x1-2170234}{}{\ignorespaces A hook that forbids overly short commit messages}}{figure}\relax 
+\doTocEntry\tocsubsection{10.6.2}{\csname a:TocLink\endcsname{1}{x1-21800010.6.2}{QQ2-1-245}{Checking for trailing whitespace}}{210}\relax 
+\doTocEntry\toclof{10.5}{\csname a:TocLink\endcsname{1}{x1-2180345}{}{\ignorespaces A simple hook that checks for trailing whitespace}}{figure}\relax 
+\doTocEntry\toclof{10.6}{\csname a:TocLink\endcsname{1}{x1-2180716}{}{\ignorespaces A better trailing whitespace hook}}{figure}\relax 
+\doTocEntry\tocsection{10.7}{\csname a:TocLink\endcsname{1}{x1-21900010.7}{QQ2-1-248}{Bundled hooks}}{216}\relax 
+\doTocEntry\tocsubsection{10.7.1}{\csname a:TocLink\endcsname{1}{x1-22000010.7.1}{QQ2-1-249}{\texttt  {acl}---access control for parts of a repository}}{216}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-22100010.7.1}{QQ2-1-250}{Configuring the \texttt  {acl} hook}}{216}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-22200010.7.1}{QQ2-1-251}{Testing and troubleshooting}}{217}\relax 
+\doTocEntry\tocsubsection{10.7.2}{\csname a:TocLink\endcsname{1}{x1-22300010.7.2}{QQ2-1-252}{\texttt  {bugzilla}---integration with Bugzilla}}{217}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-22400010.7.2}{QQ2-1-253}{Configuring the \texttt  {bugzilla} hook}}{218}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-22500010.7.2}{QQ2-1-254}{Mapping committer names to Bugzilla user names}}{219}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-22600010.7.2}{QQ2-1-255}{Configuring the text that gets added to a bug}}{220}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-22700010.7.2}{QQ2-1-256}{Testing and troubleshooting}}{221}\relax 
+\doTocEntry\tocsubsection{10.7.3}{\csname a:TocLink\endcsname{1}{x1-22800010.7.3}{QQ2-1-257}{\texttt  {notify}---send email notifications}}{221}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-22900010.7.3}{QQ2-1-258}{Configuring the \texttt  {notify} hook}}{222}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-23000010.7.3}{QQ2-1-259}{Testing and troubleshooting}}{223}\relax 
+\doTocEntry\tocsection{10.8}{\csname a:TocLink\endcsname{1}{x1-23100010.8}{QQ2-1-260}{Information for writers of hooks}}{224}\relax 
+\doTocEntry\tocsubsection{10.8.1}{\csname a:TocLink\endcsname{1}{x1-23200010.8.1}{QQ2-1-261}{In-process hook execution}}{224}\relax 
+\doTocEntry\tocsubsection{10.8.2}{\csname a:TocLink\endcsname{1}{x1-23300010.8.2}{QQ2-1-262}{External hook execution}}{224}\relax 
+\doTocEntry\tocsubsection{10.8.3}{\csname a:TocLink\endcsname{1}{x1-23400010.8.3}{QQ2-1-263}{Finding out where changesets come from}}{225}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-23500010.8.3}{QQ2-1-264}{Sources of changesets}}{225}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-23600010.8.3}{QQ2-1-265}{Where changes are going---remote repository URLs}}{225}\relax 
+\doTocEntry\tocsection{10.9}{\csname a:TocLink\endcsname{1}{x1-23700010.9}{QQ2-1-266}{Hook reference}}{226}\relax 
+\doTocEntry\tocsubsection{10.9.1}{\csname a:TocLink\endcsname{1}{x1-23800010.9.1}{QQ2-1-267}{\texttt  {changegroup}---after remote changesets added}}{226}\relax 
+\doTocEntry\tocsubsection{10.9.2}{\csname a:TocLink\endcsname{1}{x1-23900010.9.2}{QQ2-1-268}{\texttt  {commit}---after a new changeset is created}}{226}\relax 
+\doTocEntry\tocsubsection{10.9.3}{\csname a:TocLink\endcsname{1}{x1-24000010.9.3}{QQ2-1-269}{\texttt  {incoming}---after one remote changeset is added}}{226}\relax 
+\doTocEntry\tocsubsection{10.9.4}{\csname a:TocLink\endcsname{1}{x1-24100010.9.4}{QQ2-1-270}{\texttt  {outgoing}---after changesets are propagated}}{227}\relax 
+\doTocEntry\tocsubsection{10.9.5}{\csname a:TocLink\endcsname{1}{x1-24200010.9.5}{QQ2-1-271}{\texttt  {prechangegroup}---before starting to add remote changesets}}{227}\relax 
+\doTocEntry\tocsubsection{10.9.6}{\csname a:TocLink\endcsname{1}{x1-24300010.9.6}{QQ2-1-272}{\texttt  {precommit}---before starting to commit a changeset}}{228}\relax 
+\doTocEntry\tocsubsection{10.9.7}{\csname a:TocLink\endcsname{1}{x1-24400010.9.7}{QQ2-1-273}{\texttt  {preoutgoing}---before starting to propagate changesets}}{228}\relax 
+\doTocEntry\tocsubsection{10.9.8}{\csname a:TocLink\endcsname{1}{x1-24500010.9.8}{QQ2-1-274}{\texttt  {pretag}---before tagging a changeset}}{228}\relax 
+\doTocEntry\tocsubsection{10.9.9}{\csname a:TocLink\endcsname{1}{x1-24600010.9.9}{QQ2-1-275}{\texttt  {pretxnchangegroup}---before completing addition of remote changesets}}{229}\relax 
+\doTocEntry\tocsubsection{10.9.10}{\csname a:TocLink\endcsname{1}{x1-24700010.9.10}{QQ2-1-276}{\texttt  {pretxncommit}---before completing commit of new changeset}}{229}\relax 
+\doTocEntry\tocsubsection{10.9.11}{\csname a:TocLink\endcsname{1}{x1-24800010.9.11}{QQ2-1-277}{\texttt  {preupdate}---before updating or merging working directory}}{230}\relax 
+\doTocEntry\tocsubsection{10.9.12}{\csname a:TocLink\endcsname{1}{x1-24900010.9.12}{QQ2-1-278}{\texttt  {tag}---after tagging a changeset}}{230}\relax 
+\doTocEntry\tocsubsection{10.9.13}{\csname a:TocLink\endcsname{1}{x1-25000010.9.13}{QQ2-1-279}{\texttt  {update}---after updating or merging working directory}}{230}\relax 
+\doTocEntry\tocchapter{11}{\csname a:TocLink\endcsname{1}{x1-25100011}{QQ2-1-280}{Customising the output of Mercurial}}{234}\relax 
+\doTocEntry\tocsection{11.1}{\csname a:TocLink\endcsname{1}{x1-25200011.1}{QQ2-1-281}{Using precanned output styles}}{234}\relax 
+\doTocEntry\tocsubsection{11.1.1}{\csname a:TocLink\endcsname{1}{x1-25300011.1.1}{QQ2-1-282}{Setting a default style}}{235}\relax 
+\doTocEntry\tocsection{11.2}{\csname a:TocLink\endcsname{1}{x1-25400011.2}{QQ2-1-283}{Commands that support styles and templates}}{235}\relax 
+\doTocEntry\tocsection{11.3}{\csname a:TocLink\endcsname{1}{x1-25500011.3}{QQ2-1-284}{The basics of templating}}{236}\relax 
+\doTocEntry\tocsection{11.4}{\csname a:TocLink\endcsname{1}{x1-25600011.4}{QQ2-1-285}{Common template keywords}}{237}\relax 
+\doTocEntry\toclof{11.1}{\csname a:TocLink\endcsname{1}{x1-2560651}{}{\ignorespaces Template keywords in use}}{figure}\relax 
+\doTocEntry\tocsection{11.5}{\csname a:TocLink\endcsname{1}{x1-25700011.5}{QQ2-1-287}{Escape sequences}}{240}\relax 
+\doTocEntry\tocsection{11.6}{\csname a:TocLink\endcsname{1}{x1-25800011.6}{QQ2-1-288}{Filtering keywords to change their results}}{240}\relax 
+\doTocEntry\toclof{11.2}{\csname a:TocLink\endcsname{1}{x1-2582092}{}{\ignorespaces Template filters in action}}{figure}\relax 
+\doTocEntry\tocsubsection{11.6.1}{\csname a:TocLink\endcsname{1}{x1-25900011.6.1}{QQ2-1-290}{Combining filters}}{246}\relax 
+\doTocEntry\tocsection{11.7}{\csname a:TocLink\endcsname{1}{x1-26000011.7}{QQ2-1-291}{From templates to styles}}{246}\relax 
+\doTocEntry\tocsubsection{11.7.1}{\csname a:TocLink\endcsname{1}{x1-26100011.7.1}{QQ2-1-292}{The simplest of style files}}{246}\relax 
+\doTocEntry\tocsubsection{11.7.2}{\csname a:TocLink\endcsname{1}{x1-26200011.7.2}{QQ2-1-293}{Style file syntax}}{247}\relax 
+\doTocEntry\tocsection{11.8}{\csname a:TocLink\endcsname{1}{x1-26300011.8}{QQ2-1-294}{Style files by example}}{247}\relax 
+\doTocEntry\tocsubsection{11.8.1}{\csname a:TocLink\endcsname{1}{x1-26400011.8.1}{QQ2-1-295}{Identifying mistakes in style files}}{248}\relax 
+\doTocEntry\tocsubsection{11.8.2}{\csname a:TocLink\endcsname{1}{x1-26500011.8.2}{QQ2-1-296}{Uniquely identifying a repository}}{249}\relax 
+\doTocEntry\tocsubsection{11.8.3}{\csname a:TocLink\endcsname{1}{x1-26600011.8.3}{QQ2-1-297}{Mimicking Subversion's output}}{249}\relax 
+\doTocEntry\tocchapter{12}{\csname a:TocLink\endcsname{1}{x1-26700012}{QQ2-1-298}{Managing change with Mercurial Queues}}{253}\relax 
+\doTocEntry\tocsection{12.1}{\csname a:TocLink\endcsname{1}{x1-26800012.1}{QQ2-1-299}{The patch management problem}}{253}\relax 
+\doTocEntry\tocsection{12.2}{\csname a:TocLink\endcsname{1}{x1-26900012.2}{QQ2-1-300}{The prehistory of Mercurial Queues}}{253}\relax 
+\doTocEntry\tocsubsection{12.2.1}{\csname a:TocLink\endcsname{1}{x1-27000012.2.1}{QQ2-1-301}{A patchwork quilt}}{253}\relax 
+\doTocEntry\tocsubsection{12.2.2}{\csname a:TocLink\endcsname{1}{x1-27100012.2.2}{QQ2-1-302}{From patchwork quilt to Mercurial Queues}}{254}\relax 
+\doTocEntry\tocsection{12.3}{\csname a:TocLink\endcsname{1}{x1-27200012.3}{QQ2-1-303}{The huge advantage of MQ}}{254}\relax 
+\doTocEntry\tocsection{12.4}{\csname a:TocLink\endcsname{1}{x1-27300012.4}{QQ2-1-304}{Understanding patches}}{255}\relax 
+\doTocEntry\toclof{12.1}{\csname a:TocLink\endcsname{1}{x1-2730291}{}{\ignorespaces Simple uses of the \texttt  {diff} and \texttt  {patch} commands}}{figure}\relax 
+\doTocEntry\tocsection{12.5}{\csname a:TocLink\endcsname{1}{x1-27400012.5}{QQ2-1-306}{Getting started with Mercurial Queues}}{258}\relax 
+\doTocEntry\toclof{12.2}{\csname a:TocLink\endcsname{1}{x1-2740052}{}{\ignorespaces Contents to add to \texttt  {\~{}/.hgrc} to enable the MQ extension}}{figure}\relax 
+\doTocEntry\toclof{12.3}{\csname a:TocLink\endcsname{1}{x1-2740353}{}{\ignorespaces How to verify that MQ is enabled}}{figure}\relax 
+\doTocEntry\toclof{12.4}{\csname a:TocLink\endcsname{1}{x1-2740554}{}{\ignorespaces Preparing a repository for use with MQ}}{figure}\relax 
+\doTocEntry\toclof{12.5}{\csname a:TocLink\endcsname{1}{x1-2740965}{}{\ignorespaces Creating a new patch}}{figure}\relax 
+\doTocEntry\tocsubsection{12.5.1}{\csname a:TocLink\endcsname{1}{x1-27500012.5.1}{QQ2-1-311}{Creating a new patch}}{270}\relax 
+\doTocEntry\tocsubsection{12.5.2}{\csname a:TocLink\endcsname{1}{x1-27600012.5.2}{QQ2-1-312}{Refreshing a patch}}{270}\relax 
+\doTocEntry\toclof{12.6}{\csname a:TocLink\endcsname{1}{x1-2760456}{}{\ignorespaces Refreshing a patch}}{figure}\relax 
+\doTocEntry\toclof{12.7}{\csname a:TocLink\endcsname{1}{x1-2760817}{}{\ignorespaces Refresh a patch many times to accumulate changes}}{figure}\relax 
+\doTocEntry\tocsubsection{12.5.3}{\csname a:TocLink\endcsname{1}{x1-27700012.5.3}{QQ2-1-315}{Stacking and tracking patches}}{276}\relax 
+\doTocEntry\toclof{12.8}{\csname a:TocLink\endcsname{1}{x1-2770608}{}{\ignorespaces Stacking a second patch on top of the first}}{figure}\relax 
+\doTocEntry\toclof{12.9}{\csname a:TocLink\endcsname{1}{x1-2770819}{}{\ignorespaces Understanding the patch stack with ``\texttt  {hg qseries}'' and ``\texttt  {hg qapplied}''}}{figure}\relax 
+\doTocEntry\tocsubsection{12.5.4}{\csname a:TocLink\endcsname{1}{x1-27800012.5.4}{QQ2-1-318}{Manipulating the patch stack}}{282}\relax 
+\doTocEntry\toclof{12.10}{\csname a:TocLink\endcsname{1}{x1-27800310}{}{\ignorespaces Applied and unapplied patches in the MQ patch stack}}{figure}\relax 
+\doTocEntry\toclof{12.11}{\csname a:TocLink\endcsname{1}{x1-27804211}{}{\ignorespaces Modifying the stack of applied patches}}{figure}\relax 
+\doTocEntry\tocsubsection{12.5.5}{\csname a:TocLink\endcsname{1}{x1-27900012.5.5}{QQ2-1-321}{Pushing and popping many patches}}{288}\relax 
+\doTocEntry\toclof{12.12}{\csname a:TocLink\endcsname{1}{x1-27902912}{}{\ignorespaces Pushing all unapplied patches}}{figure}\relax 
+\doTocEntry\tocsubsection{12.5.6}{\csname a:TocLink\endcsname{1}{x1-28000012.5.6}{QQ2-1-323}{Safety checks, and overriding them}}{291}\relax 
+\doTocEntry\toclof{12.13}{\csname a:TocLink\endcsname{1}{x1-28001213}{}{\ignorespaces Forcibly creating a patch}}{figure}\relax 
+\doTocEntry\tocsubsection{12.5.7}{\csname a:TocLink\endcsname{1}{x1-28100012.5.7}{QQ2-1-325}{Working on several patches at once}}{294}\relax 
+\doTocEntry\tocsection{12.6}{\csname a:TocLink\endcsname{1}{x1-28200012.6}{QQ2-1-326}{More about patches}}{294}\relax 
+\doTocEntry\tocsubsection{12.6.1}{\csname a:TocLink\endcsname{1}{x1-28300012.6.1}{QQ2-1-327}{The strip count}}{294}\relax 
+\doTocEntry\tocsubsection{12.6.2}{\csname a:TocLink\endcsname{1}{x1-28400012.6.2}{QQ2-1-328}{Strategies for applying a patch}}{295}\relax 
+\doTocEntry\tocsubsection{12.6.3}{\csname a:TocLink\endcsname{1}{x1-28500012.6.3}{QQ2-1-329}{Some quirks of patch representation}}{295}\relax 
+\doTocEntry\tocsubsection{12.6.4}{\csname a:TocLink\endcsname{1}{x1-28600012.6.4}{QQ2-1-330}{Beware the fuzz}}{296}\relax 
+\doTocEntry\tocsubsection{12.6.5}{\csname a:TocLink\endcsname{1}{x1-28700012.6.5}{QQ2-1-331}{Handling rejection}}{296}\relax 
+\doTocEntry\tocsection{12.7}{\csname a:TocLink\endcsname{1}{x1-28800012.7}{QQ2-1-332}{Getting the best performance out of MQ}}{297}\relax 
+\doTocEntry\tocsection{12.8}{\csname a:TocLink\endcsname{1}{x1-28900012.8}{QQ2-1-333}{Updating your patches when the underlying code changes}}{297}\relax 
+\doTocEntry\tocsection{12.9}{\csname a:TocLink\endcsname{1}{x1-29000012.9}{QQ2-1-334}{Identifying patches}}{298}\relax 
+\doTocEntry\toclof{12.14}{\csname a:TocLink\endcsname{1}{x1-29007514}{}{\ignorespaces Using MQ's tag features to work with patches}}{figure}\relax 
+\doTocEntry\tocsection{12.10}{\csname a:TocLink\endcsname{1}{x1-29100012.10}{QQ2-1-336}{Useful things to know about}}{302}\relax 
+\doTocEntry\tocsection{12.11}{\csname a:TocLink\endcsname{1}{x1-29200012.11}{QQ2-1-337}{Managing patches in a repository}}{302}\relax 
+\doTocEntry\tocsubsection{12.11.1}{\csname a:TocLink\endcsname{1}{x1-29300012.11.1}{QQ2-1-338}{MQ support for patch repositories}}{302}\relax 
+\doTocEntry\tocsubsection{12.11.2}{\csname a:TocLink\endcsname{1}{x1-29400012.11.2}{QQ2-1-339}{A few things to watch out for}}{303}\relax 
+\doTocEntry\tocsection{12.12}{\csname a:TocLink\endcsname{1}{x1-29500012.12}{QQ2-1-340}{Third party tools for working with patches}}{303}\relax 
+\doTocEntry\toclof{12.15}{\csname a:TocLink\endcsname{1}{x1-29505015}{}{\ignorespaces The \texttt  {diffstat}, \texttt  {filterdiff}, and \texttt  {lsdiff} commands}}{figure}\relax 
+\doTocEntry\tocsection{12.13}{\csname a:TocLink\endcsname{1}{x1-29600012.13}{QQ2-1-342}{Good ways to work with patches}}{306}\relax 
+\doTocEntry\tocsection{12.14}{\csname a:TocLink\endcsname{1}{x1-29700012.14}{QQ2-1-343}{MQ cookbook}}{306}\relax 
+\doTocEntry\tocsubsection{12.14.1}{\csname a:TocLink\endcsname{1}{x1-29800012.14.1}{QQ2-1-344}{Manage ``trivial'' patches}}{306}\relax 
+\doTocEntry\tocsubsection{12.14.2}{\csname a:TocLink\endcsname{1}{x1-29900012.14.2}{QQ2-1-345}{Combining entire patches}}{308}\relax 
+\doTocEntry\tocsubsection{12.14.3}{\csname a:TocLink\endcsname{1}{x1-30000012.14.3}{QQ2-1-346}{Merging part of one patch into another}}{308}\relax 
+\doTocEntry\tocsection{12.15}{\csname a:TocLink\endcsname{1}{x1-30100012.15}{QQ2-1-347}{Differences between quilt and MQ}}{309}\relax 
+\doTocEntry\tocchapter{13}{\csname a:TocLink\endcsname{1}{x1-30200013}{QQ2-1-348}{Advanced uses of Mercurial Queues}}{312}\relax 
+\doTocEntry\tocsection{13.1}{\csname a:TocLink\endcsname{1}{x1-30300013.1}{QQ2-1-349}{The problem of many targets}}{312}\relax 
+\doTocEntry\tocsubsection{13.1.1}{\csname a:TocLink\endcsname{1}{x1-30400013.1.1}{QQ2-1-350}{Tempting approaches that don't work well}}{312}\relax 
+\doTocEntry\tocsection{13.2}{\csname a:TocLink\endcsname{1}{x1-30500013.2}{QQ2-1-351}{Conditionally applying patches with guards}}{313}\relax 
+\doTocEntry\tocsection{13.3}{\csname a:TocLink\endcsname{1}{x1-30600013.3}{QQ2-1-352}{Controlling the guards on a patch}}{313}\relax 
+\doTocEntry\tocsection{13.4}{\csname a:TocLink\endcsname{1}{x1-30700013.4}{QQ2-1-353}{Selecting the guards to use}}{314}\relax 
+\doTocEntry\tocsection{13.5}{\csname a:TocLink\endcsname{1}{x1-30800013.5}{QQ2-1-354}{MQ's rules for applying patches}}{316}\relax 
+\doTocEntry\tocsection{13.6}{\csname a:TocLink\endcsname{1}{x1-30900013.6}{QQ2-1-355}{Trimming the work environment}}{316}\relax 
+\doTocEntry\tocsection{13.7}{\csname a:TocLink\endcsname{1}{x1-31000013.7}{QQ2-1-356}{Dividing up the \texttt  {series} file}}{316}\relax 
+\doTocEntry\tocsection{13.8}{\csname a:TocLink\endcsname{1}{x1-31100013.8}{QQ2-1-357}{Maintaining the patch series}}{317}\relax 
+\doTocEntry\tocsubsection{13.8.1}{\csname a:TocLink\endcsname{1}{x1-31200013.8.1}{QQ2-1-358}{The art of writing backport patches}}{318}\relax 
+\doTocEntry\tocsection{13.9}{\csname a:TocLink\endcsname{1}{x1-31300013.9}{QQ2-1-359}{Useful tips for developing with MQ}}{318}\relax 
+\doTocEntry\tocsubsection{13.9.1}{\csname a:TocLink\endcsname{1}{x1-31400013.9.1}{QQ2-1-360}{Organising patches in directories}}{318}\relax 
+\doTocEntry\tocsubsection{13.9.2}{\csname a:TocLink\endcsname{1}{x1-31500013.9.2}{QQ2-1-361}{Viewing the history of a patch}}{318}\relax 
+\doTocEntry\tocchapter{14}{\csname a:TocLink\endcsname{1}{x1-31600014}{QQ2-1-362}{Adding functionality with extensions}}{323}\relax 
+\doTocEntry\tocsection{14.1}{\csname a:TocLink\endcsname{1}{x1-31700014.1}{QQ2-1-363}{Improve performance with the \texttt  {inotify} extension}}{323}\relax 
+\doTocEntry\tocsection{14.2}{\csname a:TocLink\endcsname{1}{x1-31800014.2}{QQ2-1-364}{Flexible diff support with the \texttt  {extdiff} extension}}{325}\relax 
+\doTocEntry\tocsubsection{14.2.1}{\csname a:TocLink\endcsname{1}{x1-31900014.2.1}{QQ2-1-365}{Defining command aliases}}{327}\relax 
+\doTocEntry\tocsection{14.3}{\csname a:TocLink\endcsname{1}{x1-32000014.3}{QQ2-1-366}{Cherrypicking changes with the \texttt  {transplant} extension}}{328}\relax 
+\doTocEntry\tocsection{14.4}{\csname a:TocLink\endcsname{1}{x1-32100014.4}{QQ2-1-367}{Send changes via email with the \texttt  {patchbomb} extension}}{328}\relax 
+\doTocEntry\tocsubsection{14.4.1}{\csname a:TocLink\endcsname{1}{x1-32200014.4.1}{QQ2-1-368}{Changing the behaviour of patchbombs}}{329}\relax 
+\doTocEntry\tocappendix{A}{\csname a:TocLink\endcsname{1}{x1-323000A}{QQ2-1-369}{Command reference}}{332}\relax 
+\doTocEntry\tocsection{A.1}{\csname a:TocLink\endcsname{1}{x1-324000A.1}{QQ2-1-370}{``\texttt  {hg add}''---add files at the next commit}}{332}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-325000A.1}{QQ2-1-371}{\texttt  {--include}, also \texttt  {-I}}}{332}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-326000A.1}{QQ2-1-372}{\texttt  {--exclude}, also \texttt  {-X}}}{332}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-327000A.1}{QQ2-1-373}{\texttt  {--dry-run}, also \texttt  {-n}}}{332}\relax 
+\doTocEntry\tocsection{A.2}{\csname a:TocLink\endcsname{1}{x1-328000A.2}{QQ2-1-374}{``\texttt  {hg diff}''---print changes in history or working directory}}{332}\relax 
+\doTocEntry\tocsubsection{A.2.1}{\csname a:TocLink\endcsname{1}{x1-329000A.2.1}{QQ2-1-375}{Options}}{332}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-330000A.2.1}{QQ2-1-376}{\texttt  {--nodates} option}}{332}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-331000A.2.1}{QQ2-1-377}{\texttt  {--ignore-blank-lines}, also \texttt  {-B}}}{332}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-332000A.2.1}{QQ2-1-378}{\texttt  {--include}, also \texttt  {-I}}}{333}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-333000A.2.1}{QQ2-1-379}{\texttt  {--exclude}, also \texttt  {-X}}}{333}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-334000A.2.1}{QQ2-1-380}{\texttt  {--text}, also \texttt  {-a}}}{333}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-335000A.2.1}{QQ2-1-381}{\texttt  {--ignore-space-change}, also \texttt  {-b}}}{333}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-336000A.2.1}{QQ2-1-382}{\texttt  {--git}, also \texttt  {-g}}}{333}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-337000A.2.1}{QQ2-1-383}{\texttt  {--show-function}, also \texttt  {-p}}}{333}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-338000A.2.1}{QQ2-1-384}{\texttt  {--rev}, also \texttt  {-r}}}{334}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-339000A.2.1}{QQ2-1-385}{\texttt  {--ignore-all-space}, also \texttt  {-w}}}{334}\relax 
+\doTocEntry\tocsection{A.3}{\csname a:TocLink\endcsname{1}{x1-340000A.3}{QQ2-1-386}{``\texttt  {hg version}''---print version and copyright information}}{335}\relax 
+\doTocEntry\tocsubsection{A.3.1}{\csname a:TocLink\endcsname{1}{x1-341000A.3.1}{QQ2-1-387}{Tips and tricks}}{335}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-342000A.3.1}{QQ2-1-388}{Why do the results of ``\texttt  {hg diff}'' and ``\texttt  {hg status}'' differ?}}{335}\relax 
+\doTocEntry\tocsubsubsection{}{\csname a:TocLink\endcsname{1}{x1-343000A.3.1}{QQ2-1-389}{Generating safe binary diffs}}{336}\relax 
+\doTocEntry\tocappendix{B}{\csname a:TocLink\endcsname{1}{x1-344000B}{QQ2-1-390}{Mercurial Queues reference}}{339}\relax 
+\doTocEntry\tocsection{B.1}{\csname a:TocLink\endcsname{1}{x1-345000B.1}{QQ2-1-391}{MQ command reference}}{339}\relax 
+\doTocEntry\tocsubsection{B.1.1}{\csname a:TocLink\endcsname{1}{x1-346000B.1.1}{QQ2-1-392}{``\texttt  {hg qapplied}''---print applied patches}}{339}\relax 
+\doTocEntry\tocsubsection{B.1.2}{\csname a:TocLink\endcsname{1}{x1-347000B.1.2}{QQ2-1-393}{``\texttt  {hg qcommit}''---commit changes in the queue repository}}{339}\relax 
+\doTocEntry\tocsubsection{B.1.3}{\csname a:TocLink\endcsname{1}{x1-348000B.1.3}{QQ2-1-394}{``\texttt  {hg qdelete}''---delete a patch from the \texttt  {series} file}}{339}\relax 
+\doTocEntry\tocsubsection{B.1.4}{\csname a:TocLink\endcsname{1}{x1-349000B.1.4}{QQ2-1-395}{``\texttt  {hg qdiff}''---print a diff of the topmost applied patch}}{339}\relax 
+\doTocEntry\tocsubsection{B.1.5}{\csname a:TocLink\endcsname{1}{x1-350000B.1.5}{QQ2-1-396}{``\texttt  {hg qfold}''---merge (``fold'') several patches into one}}{339}\relax 
+\doTocEntry\tocsubsection{B.1.6}{\csname a:TocLink\endcsname{1}{x1-351000B.1.6}{QQ2-1-397}{``\texttt  {hg qheader}''---display the header/description of a patch}}{340}\relax 
+\doTocEntry\tocsubsection{B.1.7}{\csname a:TocLink\endcsname{1}{x1-352000B.1.7}{QQ2-1-398}{``\texttt  {hg qimport}''---import a third-party patch into the queue}}{340}\relax 
+\doTocEntry\tocsubsection{B.1.8}{\csname a:TocLink\endcsname{1}{x1-353000B.1.8}{QQ2-1-399}{``\texttt  {hg qinit}''---prepare a repository to work with MQ}}{340}\relax 
+\doTocEntry\tocsubsection{B.1.9}{\csname a:TocLink\endcsname{1}{x1-354000B.1.9}{QQ2-1-400}{``\texttt  {hg qnew}''---create a new patch}}{340}\relax 
+\doTocEntry\tocsubsection{B.1.10}{\csname a:TocLink\endcsname{1}{x1-355000B.1.10}{QQ2-1-401}{``\texttt  {hg qnext}''---print the name of the next patch}}{341}\relax 
+\doTocEntry\tocsubsection{B.1.11}{\csname a:TocLink\endcsname{1}{x1-356000B.1.11}{QQ2-1-402}{``\texttt  {hg qpop}''---pop patches off the stack}}{341}\relax 
+\doTocEntry\tocsubsection{B.1.12}{\csname a:TocLink\endcsname{1}{x1-357000B.1.12}{QQ2-1-403}{``\texttt  {hg qprev}''---print the name of the previous patch}}{342}\relax 
+\doTocEntry\tocsubsection{B.1.13}{\csname a:TocLink\endcsname{1}{x1-358000B.1.13}{QQ2-1-404}{``\texttt  {hg qpush}''---push patches onto the stack}}{342}\relax 
+\doTocEntry\tocsubsection{B.1.14}{\csname a:TocLink\endcsname{1}{x1-359000B.1.14}{QQ2-1-405}{``\texttt  {hg qrefresh}''---update the topmost applied patch}}{342}\relax 
+\doTocEntry\tocsubsection{B.1.15}{\csname a:TocLink\endcsname{1}{x1-360000B.1.15}{QQ2-1-406}{``\texttt  {hg qrename}''---rename a patch}}{343}\relax 
+\doTocEntry\tocsubsection{B.1.16}{\csname a:TocLink\endcsname{1}{x1-361000B.1.16}{QQ2-1-407}{``\texttt  {hg qrestore}''---restore saved queue state}}{343}\relax 
+\doTocEntry\tocsubsection{B.1.17}{\csname a:TocLink\endcsname{1}{x1-362000B.1.17}{QQ2-1-408}{``\texttt  {hg qsave}''---save current queue state}}{343}\relax 
+\doTocEntry\tocsubsection{B.1.18}{\csname a:TocLink\endcsname{1}{x1-363000B.1.18}{QQ2-1-409}{``\texttt  {hg qseries}''---print the entire patch series}}{343}\relax 
+\doTocEntry\tocsubsection{B.1.19}{\csname a:TocLink\endcsname{1}{x1-364000B.1.19}{QQ2-1-410}{``\texttt  {hg qtop}''---print the name of the current patch}}{344}\relax 
+\doTocEntry\tocsubsection{B.1.20}{\csname a:TocLink\endcsname{1}{x1-365000B.1.20}{QQ2-1-411}{``\texttt  {hg qunapplied}''---print patches not yet applied}}{344}\relax 
+\doTocEntry\tocsubsection{B.1.21}{\csname a:TocLink\endcsname{1}{x1-366000B.1.21}{QQ2-1-412}{``\texttt  {hg qversion}''}}{344}\relax 
+\doTocEntry\tocsubsection{B.1.22}{\csname a:TocLink\endcsname{1}{x1-367000B.1.22}{QQ2-1-413}{``\texttt  {hg strip}''---remove a revision and descendants}}{344}\relax 
+\doTocEntry\tocsection{B.2}{\csname a:TocLink\endcsname{1}{x1-368000B.2}{QQ2-1-414}{MQ file reference}}{344}\relax 
+\doTocEntry\tocsubsection{B.2.1}{\csname a:TocLink\endcsname{1}{x1-369000B.2.1}{QQ2-1-415}{The \texttt  {series} file}}{344}\relax 
+\doTocEntry\tocsubsection{B.2.2}{\csname a:TocLink\endcsname{1}{x1-370000B.2.2}{QQ2-1-416}{The \texttt  {status} file}}{345}\relax 
+\doTocEntry\tocappendix{C}{\csname a:TocLink\endcsname{1}{x1-371000C}{QQ2-1-417}{Making of this book}}{348}\relax 
+\doTocEntry\tocsection{C.1}{\csname a:TocLink\endcsname{1}{x1-372000C.1}{QQ2-1-418}{Where to download the book source}}{348}\relax 
+\doTocEntry\tocsection{C.2}{\csname a:TocLink\endcsname{1}{x1-373000C.2}{QQ2-1-419}{On Windows}}{348}\relax 
+\doTocEntry\tocappendix{D}{\csname a:TocLink\endcsname{1}{x1-374000D}{QQ2-1-420}{Open Publication License}}{351}\relax 
+\doTocEntry\tocsection{D.1}{\csname a:TocLink\endcsname{1}{x1-375000D.1}{QQ2-1-421}{Requirements on both unmodified and modified versions}}{351}\relax 
+\doTocEntry\tocsection{D.2}{\csname a:TocLink\endcsname{1}{x1-376000D.2}{QQ2-1-422}{Copyright}}{351}\relax 
+\doTocEntry\tocsection{D.3}{\csname a:TocLink\endcsname{1}{x1-377000D.3}{QQ2-1-423}{Scope of license}}{351}\relax 
+\doTocEntry\tocsection{D.4}{\csname a:TocLink\endcsname{1}{x1-378000D.4}{QQ2-1-424}{Requirements on modified works}}{352}\relax 
+\doTocEntry\tocsection{D.5}{\csname a:TocLink\endcsname{1}{x1-379000D.5}{QQ2-1-425}{Good-practice recommendations}}{352}\relax 
+\doTocEntry\tocsection{D.6}{\csname a:TocLink\endcsname{1}{x1-380000D.6}{QQ2-1-426}{License options}}{352}\relax 
+\doTocEntry\tocchapter{}{\csname a:TocLink\endcsname{1}{Q1-1-427}{}{Bibliography}}{354}\relax 
+\doTocEntry\tocchapter{}{\csname a:TocLink\endcsname{1}{Q1-1-428}{}{Index}}{354}\relax 
+\par 

@@ -1,0 +1,13 @@
+$ \textbf{hg heads}
+changeset:   6:c943cfd31ca5
+tag:         tip
+parent:      4:b57f9a090b62
+user:        Bryan O'Sullivan <bos@serpentine.com>
+date:        Sun Apr 27 00:04:35 2008 +0000
+summary:     Added an extra line of output
+
+changeset:   5:19651aae2b19
+user:        Bryan O'Sullivan <bos@serpentine.com>
+date:        Sun Apr 27 00:04:40 2008 +0000
+summary:     A new hello for a new day.
+

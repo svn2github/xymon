@@ -1,0 +1,22 @@
+$ \textbf{hg log --style changelog}
+2008-04-27  Bryan O'Sullivan  <bos@serpentine.com>
+
+	* .hgtags:
+	Added tag v0.1 for changeset 3e6934fa6d03
+	[ee5ab79601d1] [tip]
+
+	* .hgtags:
+	Added tag mytag for changeset 37f903b308e5
+	[3e6934fa6d03] [v0.1]
+
+	* goodbye, hello:
+	added line to end of <<hello>> file.
+
+	in addition, added a file with the helpful name (at least i hope
+	that some might consider it so) of goodbye.
+	[37f903b308e5] [mytag]
+
+	* hello:
+	added hello
+	[2ee744e761f3]
+

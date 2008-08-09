@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>A Command reference</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html4-uni,2,html,xhtml --> 
+<meta name="src" content="hobbit-sysadmin-guide.tex" /> 
+<meta name="date" content="2008-04-26 19:37:00" /> 
+<link rel="stylesheet" type="text/css" href="hobbit-sysadmin-guide.css" /> 
+</head><body 
+>
+   <!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="hobbit-sysadmin-guideap2.html" >next</a>] [<a 
+href="hobbit-sysadmin-guidech14.html" >prev</a>] [<a 
+href="hobbit-sysadmin-guidech14.html#tailhobbit-sysadmin-guidech14.html" >prev-tail</a>] [<a 
+href="#tailhobbit-sysadmin-guideap1.html">tail</a>] [<a 
+href="hobbit-sysadmin-guide.html#hobbit-sysadmin-guideap1.html" >up</a>] </p></div>
+   <h2 class="appendixHead"><span class="titlemark">Appendix&#x00A0;A</span><br /><a 
+ id="x19-323000A"></a>Command reference</h2>
+   <h3 class="sectionHead"><span class="titlemark">A.1    </span> <a 
+ id="x19-324000A.1"></a>&#x201C;<span 
+class="pcrr7tn-">hg add</span>&#x201D;&#x2014;add files at the next commit</h3>
+<a 
+ id="dx19-324001"></a>
+<!--l. 5--><p class="noindent">
+</p>
+   <h5 class="subsubsectionHead"><a 
+ id="x19-325000A.1"></a><span 
+class="pcrr7tn-">--include</span>, also <span 
+class="pcrr7tn-">-I</span></h5>
+<!--l. 6--><p class="noindent">
+</p>
+   <h5 class="subsubsectionHead"><a 
+ id="x19-326000A.1"></a><span 
+class="pcrr7tn-">--exclude</span>, also <span 
+class="pcrr7tn-">-X</span></h5>
+<!--l. 7--><p class="noindent">
+</p>
+   <h5 class="subsubsectionHead"><a 
+ id="x19-327000A.1"></a><span 
+class="pcrr7tn-">--dry-run</span>, also <span 
+class="pcrr7tn-">-n</span></h5>
+<!--l. 9--><p class="noindent">
+</p>
+   <h3 class="sectionHead"><span class="titlemark">A.2    </span> <a 
+ id="x19-328000A.2"></a>&#x201C;<span 
+class="pcrr7tn-">hg diff</span>&#x201D;&#x2014;print changes in history or working directory</h3>
+<a 
+ id="dx19-328001"></a>
+<!--l. 11--><p class="noindent">Show differences between revisions for the specified files or directories, using the unified diff format. For a description of the
+unified diff format, see section&#x00A0;<a 
+href="hobbit-sysadmin-guidech12.html#x16-27300012.4">12.4<!--tex4ht:ref: sec:mq:patch --></a>.
+</p><!--l. 15--><p class="indent">   By default, this command does not print diffs for files that Mercurial considers to contain binary data. To control this
+behaviour, see the <a 
+ id="dx19-328002"></a><span 
+class="pcrr7tn-">-a </span>and <a 
+ id="dx19-328003"></a><span 
+class="pcrr7tn-">--git </span>options.
+</p><!--l. 19--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">A.2.1    </span> <a 
+ id="x19-329000A.2.1"></a>Options</h4>
+<!--l. 21--><p class="noindent">
+</p>
+   <h5 class="subsubsectionHead"><a 
+ id="x19-330000A.2.1"></a><span 
+class="pcrr7tn-">--nodates </span>option</h5>
+<!--l. 23--><p class="noindent">Omit date and time information when printing diff headers.
+                                                                                         
+                                                                                         
+</p><!--l. 25--><p class="noindent">
+</p>
+   <h5 class="subsubsectionHead"><a 
+ id="x19-331000A.2.1"></a><span 
+class="pcrr7tn-">--ignore-blank-lines</span>, also <span 
+class="pcrr7tn-">-B</span></h5>
+<!--l. 27--><p class="noindent">Do not print changes that only insert or delete blank lines. A line that contains only whitespace is not considered
+blank.
+</p><!--l. 30--><p class="noindent">
+</p>
+   <h5 class="subsubsectionHead"><a 
+ id="x19-332000A.2.1"></a><span 
+class="pcrr7tn-">--include</span>, also <span 
+class="pcrr7tn-">-I</span></h5>
+<!--l. 32--><p class="noindent">Include files and directories whose names match the given patterns.
+</p><!--l. 34--><p class="noindent">
+</p>
+   <h5 class="subsubsectionHead"><a 
+ id="x19-333000A.2.1"></a><span 
+class="pcrr7tn-">--exclude</span>, also <span 
+class="pcrr7tn-">-X</span></h5>
+<!--l. 36--><p class="noindent">Exclude files and directories whose names match the given patterns.
+</p><!--l. 38--><p class="noindent">
+</p>
+   <h5 class="subsubsectionHead"><a 
+ id="x19-334000A.2.1"></a><span 
+class="pcrr7tn-">--text</span>, also <span 
+class="pcrr7tn-">-a</span></h5>
+<!--l. 40--><p class="noindent">If this option is not specified, <a 
+ id="dx19-334001"></a>&#x201C;<span 
+class="pcrr7tn-">hg diff</span>&#x201D; will refuse to print diffs for files that it detects as binary. Specifying <a 
+ id="dx19-334002"></a><span 
+class="pcrr7tn-">-a </span>forces <a 
+ id="dx19-334003"></a>&#x201C;<span 
+class="pcrr7tn-">hg</span>
+<span 
+class="pcrr7tn-">diff</span>&#x201D; to treat all files as text, and generate diffs for all of them.
+</p><!--l. 45--><p class="indent">   This option is useful for files that are &#x201C;mostly text&#x201D; but have a few embedded NUL characters. If you use it on files that
+contain a lot of binary data, its output will be incomprehensible.
+</p><!--l. 49--><p class="noindent">
+</p>
+   <h5 class="subsubsectionHead"><a 
+ id="x19-335000A.2.1"></a><span 
+class="pcrr7tn-">--ignore-space-change</span>, also <span 
+class="pcrr7tn-">-b</span></h5>
+<!--l. 51--><p class="noindent">Do not print a line if the only change to that line is in the amount of white space it contains.
+</p><!--l. 54--><p class="noindent">
+</p>
+   <h5 class="subsubsectionHead"><a 
+ id="x19-336000A.2.1"></a><span 
+class="pcrr7tn-">--git</span>, also <span 
+class="pcrr7tn-">-g</span></h5>
+<!--l. 56--><p class="noindent">Print <a 
+ id="dx19-336001"></a><span 
+class="pcrr7tn-">git</span>-compatible diffs. XXX reference a format description.
+</p><!--l. 59--><p class="noindent">
+</p>
+   <h5 class="subsubsectionHead"><a 
+ id="x19-337000A.2.1"></a><span 
+class="pcrr7tn-">--show-function</span>, also <span 
+class="pcrr7tn-">-p</span></h5>
+<!--l. 61--><p class="noindent">Display the name of the enclosing function in a hunk header, using a simple heuristic. This functionality is enabled by default,
+so the <a 
+ id="dx19-337001"></a><span 
+class="pcrr7tn-">-p </span>option has no effect unless you change the value of the <a 
+ id="dx19-337002"></a><span 
+class="pcrr7tn-">showfunc </span>config item, as in the following
+example.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+                                                                                         
+                                                                                         
+<a 
+ id="x19-337004r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">echo</span><span 
+class="pcrb7t-">&#x00A0;'[diff]'</span><span 
+class="pcrb7t-">&#x00A0;&#x003e;&#x003e;</span><span 
+class="pcrb7t-">&#x00A0;$HGRC</span>
+<br class="fancyvrb" /><a 
+ id="x19-337006r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">echo</span><span 
+class="pcrb7t-">&#x00A0;'showfunc</span><span 
+class="pcrb7t-">&#x00A0;=</span><span 
+class="pcrb7t-">&#x00A0;False'</span><span 
+class="pcrb7t-">&#x00A0;&#x003e;&#x003e;</span><span 
+class="pcrb7t-">&#x00A0;$HGRC</span>
+<br class="fancyvrb" /><a 
+ id="x19-337008r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;diff</span>
+<br class="fancyvrb" /><a 
+ id="x19-337010r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;diff</span><span 
+class="pcrr7tn-">&#x00A0;-r</span><span 
+class="pcrr7tn-">&#x00A0;f3f4fdc5ffe0</span><span 
+class="pcrr7tn-">&#x00A0;myfile.c</span>
+<br class="fancyvrb" /><a 
+ id="x19-337012r5"></a><span 
+class="ptmr7t-x-x-50">5</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;---</span><span 
+class="pcrr7tn-">&#x00A0;a/myfile.c        Sun</span><span 
+class="pcrr7tn-">&#x00A0;Apr</span><span 
+class="pcrr7tn-">&#x00A0;27</span><span 
+class="pcrr7tn-">&#x00A0;00:04:11</span><span 
+class="pcrr7tn-">&#x00A0;2008</span><span 
+class="pcrr7tn-">&#x00A0;+0000</span>
+<br class="fancyvrb" /><a 
+ id="x19-337014r6"></a><span 
+class="ptmr7t-x-x-50">6</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;+++</span><span 
+class="pcrr7tn-">&#x00A0;b/myfile.c        Sun</span><span 
+class="pcrr7tn-">&#x00A0;Apr</span><span 
+class="pcrr7tn-">&#x00A0;27</span><span 
+class="pcrr7tn-">&#x00A0;00:04:11</span><span 
+class="pcrr7tn-">&#x00A0;2008</span><span 
+class="pcrr7tn-">&#x00A0;+0000</span>
+<br class="fancyvrb" /><a 
+ id="x19-337016r7"></a><span 
+class="ptmr7t-x-x-50">7</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;@@</span><span 
+class="pcrr7tn-">&#x00A0;-1,4</span><span 
+class="pcrr7tn-">&#x00A0;+1,4</span><span 
+class="pcrr7tn-">&#x00A0;@@</span>
+<br class="fancyvrb" /><a 
+ id="x19-337018r8"></a><span 
+class="ptmr7t-x-x-50">8</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;int</span><span 
+class="pcrr7tn-">&#x00A0;myfunc()</span>
+<br class="fancyvrb" /><a 
+ id="x19-337020r9"></a><span 
+class="ptmr7t-x-x-50">9</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="cmsy-10">{</span>
+<br class="fancyvrb" /><a 
+ id="x19-337022r10"></a><span 
+class="ptmr7t-x-x-50">10</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;-</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;return</span><span 
+class="pcrr7tn-">&#x00A0;1;</span>
+<br class="fancyvrb" /><a 
+ id="x19-337024r11"></a><span 
+class="ptmr7t-x-x-50">11</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;+</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;return</span><span 
+class="pcrr7tn-">&#x00A0;10;</span>
+<br class="fancyvrb" /><a 
+ id="x19-337026r12"></a><span 
+class="ptmr7t-x-x-50">12</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="cmsy-10">}</span>
+<br class="fancyvrb" /><a 
+ id="x19-337028r13"></a><span 
+class="ptmr7t-x-x-50">13</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;diff</span><span 
+class="pcrb7t-">&#x00A0;-p</span>
+<br class="fancyvrb" /><a 
+ id="x19-337030r14"></a><span 
+class="ptmr7t-x-x-50">14</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;diff</span><span 
+class="pcrr7tn-">&#x00A0;-r</span><span 
+class="pcrr7tn-">&#x00A0;f3f4fdc5ffe0</span><span 
+class="pcrr7tn-">&#x00A0;myfile.c</span>
+<br class="fancyvrb" /><a 
+ id="x19-337032r15"></a><span 
+class="ptmr7t-x-x-50">15</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;---</span><span 
+class="pcrr7tn-">&#x00A0;a/myfile.c        Sun</span><span 
+class="pcrr7tn-">&#x00A0;Apr</span><span 
+class="pcrr7tn-">&#x00A0;27</span><span 
+class="pcrr7tn-">&#x00A0;00:04:11</span><span 
+class="pcrr7tn-">&#x00A0;2008</span><span 
+class="pcrr7tn-">&#x00A0;+0000</span>
+<br class="fancyvrb" /><a 
+ id="x19-337034r16"></a><span 
+class="ptmr7t-x-x-50">16</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;+++</span><span 
+class="pcrr7tn-">&#x00A0;b/myfile.c        Sun</span><span 
+class="pcrr7tn-">&#x00A0;Apr</span><span 
+class="pcrr7tn-">&#x00A0;27</span><span 
+class="pcrr7tn-">&#x00A0;00:04:11</span><span 
+class="pcrr7tn-">&#x00A0;2008</span><span 
+class="pcrr7tn-">&#x00A0;+0000</span>
+<br class="fancyvrb" /><a 
+ id="x19-337036r17"></a><span 
+class="ptmr7t-x-x-50">17</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;@@</span><span 
+class="pcrr7tn-">&#x00A0;-1,4</span><span 
+class="pcrr7tn-">&#x00A0;+1,4</span><span 
+class="pcrr7tn-">&#x00A0;@@</span><span 
+class="pcrr7tn-">&#x00A0;int</span><span 
+class="pcrr7tn-">&#x00A0;myfunc()</span>
+<br class="fancyvrb" /><a 
+ id="x19-337038r18"></a><span 
+class="ptmr7t-x-x-50">18</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;int</span><span 
+class="pcrr7tn-">&#x00A0;myfunc()</span>
+<br class="fancyvrb" /><a 
+ id="x19-337040r19"></a><span 
+class="ptmr7t-x-x-50">19</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="cmsy-10">{</span>
+<br class="fancyvrb" /><a 
+ id="x19-337042r20"></a><span 
+class="ptmr7t-x-x-50">20</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;-</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;return</span><span 
+class="pcrr7tn-">&#x00A0;1;</span>
+<br class="fancyvrb" /><a 
+ id="x19-337044r21"></a><span 
+class="ptmr7t-x-x-50">21</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;+</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;return</span><span 
+class="pcrr7tn-">&#x00A0;10;</span>
+<br class="fancyvrb" /><a 
+ id="x19-337046r22"></a><span 
+class="ptmr7t-x-x-50">22</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="cmsy-10">}</span>
+   </div>
+<!--l. 67--><p class="noindent">
+</p>
+   <h5 class="subsubsectionHead"><a 
+ id="x19-338000A.2.1"></a><span 
+class="pcrr7tn-">--rev</span>, also <span 
+class="pcrr7tn-">-r</span></h5>
+<!--l. 69--><p class="noindent">Specify one or more revisions to compare. The <a 
+ id="dx19-338001"></a>&#x201C;<span 
+class="pcrr7tn-">hg diff</span>&#x201D; command accepts up to two <a 
+ id="dx19-338002"></a><span 
+class="pcrr7tn-">-r </span>options to specify the revisions to
+compare.
+</p><!--l. 74--><p class="indent">
+     </p><ol  class="enumerate1" >
+     <li class="enumerate"><a 
+ id="x19-338004x1"></a>Display the differences between the parent revision of the working directory and the working directory.
+     </li>
+     <li class="enumerate"><a 
+ id="x19-338006x2"></a>Display the differences between the specified changeset and the working directory.
+     </li>
+     <li class="enumerate"><a 
+ id="x19-338008x3"></a>Display the differences between the two specified changesets.</li></ol>
+<!--l. 82--><p class="indent">   You can specify two revisions using either two <a 
+ id="dx19-338009"></a><span 
+class="pcrr7tn-">-r </span>options or revision range notation. For example, the two revision
+specifications below are equivalent.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x19-338011r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;hg</span><span 
+class="pcrr7tn-">&#x00A0;diff</span><span 
+class="pcrr7tn-">&#x00A0;-r</span><span 
+class="pcrr7tn-">&#x00A0;10</span><span 
+class="pcrr7tn-">&#x00A0;-r</span><span 
+class="pcrr7tn-">&#x00A0;20</span>
+<br class="fancyvrb" /><a 
+ id="x19-338013r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;hg</span><span 
+class="pcrr7tn-">&#x00A0;diff</span><span 
+class="pcrr7tn-">&#x00A0;-r10:20</span>
+   </div>
+<!--l. 90--><p class="indent">   When you provide two revisions, Mercurial treats the order of those revisions as significant. Thus, <a 
+ id="dx19-338014"></a>&#x201C;<span 
+class="pcrr7tn-">hg diff -r10:20</span>&#x201D;
+will produce a diff that will transform files from their contents as of revision&#x00A0;10 to their contents as of revision&#x00A0;20, while
+<a 
+ id="dx19-338015"></a>&#x201C;<span 
+class="pcrr7tn-">hg diff -r20:10</span>&#x201D; means the opposite: the diff that will transform files from their revision&#x00A0;20 contents to
+their revision&#x00A0;10 contents. You cannot reverse the ordering in this way if you are diffing against the working
+directory.
+                                                                                         
+                                                                                         
+</p><!--l. 99--><p class="noindent">
+</p>
+   <h5 class="subsubsectionHead"><a 
+ id="x19-339000A.2.1"></a><span 
+class="pcrr7tn-">--ignore-all-space</span>, also <span 
+class="pcrr7tn-">-w</span></h5>
+<!--l. 101--><p class="noindent">
+</p>
+   <h3 class="sectionHead"><span class="titlemark">A.3    </span> <a 
+ id="x19-340000A.3"></a>&#x201C;<span 
+class="pcrr7tn-">hg version</span>&#x201D;&#x2014;print version and copyright information</h3>
+<a 
+ id="dx19-340001"></a>
+<!--l. 103--><p class="noindent">This command displays the version of Mercurial you are running, and its copyright license. There are four kinds of version
+string that you may see. </p>
+     <ul><li><span class="dt">
+     </span><span class="dd">The string &#x201C;<span 
+class="pcrr7tn-">unknown</span>&#x201D;. This version of Mercurial was not built in a Mercurial repository, and cannot determine
+     its own version.
+     </span><li><span class="dt">
+     </span><span class="dd">A short numeric string, such as &#x201C;<span 
+class="pcrr7tn-">1.1</span>&#x201D;. This is a build of a revision of Mercurial that was identified by a specific
+     tag in the repository where it was built. (This doesn&#x2019;t necessarily mean that you&#x2019;re running an official release;
+     someone else could have added that tag to any revision in the repository where they built Mercurial.)
+     </span><li><span class="dt">
+     </span><span class="dd">A hexadecimal string, such as &#x201C;<span 
+class="pcrr7tn-">875489e31abe</span>&#x201D;. This is a build of the given revision of Mercurial.
+     </span><li><span class="dt">
+     </span><span class="dd">A hexadecimal string followed by a date, such as &#x201C;<span 
+class="pcrr7tn-">875489e31abe+20070205</span>&#x201D;. This is a build of the given
+     revision of Mercurial, where the build repository contained some local changes that had not been committed.</li></ul>
+<!--l. 124--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">A.3.1    </span> <a 
+ id="x19-341000A.3.1"></a>Tips and tricks</h4>
+<!--l. 127--><p class="noindent">
+</p>
+   <h5 class="subsubsectionHead"><a 
+ id="x19-342000A.3.1"></a>Why do the results of &#x201C;<span 
+class="pcrr7tn-">hg diff</span>&#x201D; and &#x201C;<span 
+class="pcrr7tn-">hg status</span>&#x201D; differ?</h5>
+<!--l. 130--><p class="noindent">When you run the <a 
+ id="dx19-342001"></a>&#x201C;<span 
+class="pcrr7tn-">hg status</span>&#x201D; command, you&#x2019;ll see a list of files that Mercurial will record changes for the next time you
+perform a commit. If you run the <a 
+ id="dx19-342002"></a>&#x201C;<span 
+class="pcrr7tn-">hg diff</span>&#x201D; command, you may notice that it prints diffs for only a <span 
+class="ptmri7t-">subset </span>of the files that <a 
+ id="dx19-342003"></a>&#x201C;<span 
+class="pcrr7tn-">hg</span>
+<span 
+class="pcrr7tn-">status</span>&#x201D; listed. There are two possible reasons for this.
+</p><!--l. 136--><p class="indent">   The first is that <a 
+ id="dx19-342004"></a>&#x201C;<span 
+class="pcrr7tn-">hg status</span>&#x201D; prints some kinds of modifications that <a 
+ id="dx19-342005"></a>&#x201C;<span 
+class="pcrr7tn-">hg diff</span>&#x201D; doesn&#x2019;t normally display. The <a 
+ id="dx19-342006"></a>&#x201C;<span 
+class="pcrr7tn-">hg diff</span>&#x201D;
+command normally outputs unified diffs, which don&#x2019;t have the ability to represent some changes that Mercurial can track. Most
+notably, traditional diffs can&#x2019;t represent a change in whether or not a file is executable, but Mercurial records this
+information.
+</p><!--l. 143--><p class="indent">   If you use the <a 
+ id="dx19-342007"></a><span 
+class="pcrr7tn-">--git </span>option to <a 
+ id="dx19-342008"></a>&#x201C;<span 
+class="pcrr7tn-">hg diff</span>&#x201D;, it will display <a 
+ id="dx19-342009"></a><span 
+class="pcrr7tn-">git</span>-compatible diffs that <span 
+class="ptmri7t-">can </span>display this extra
+information.
+                                                                                         
+                                                                                         
+</p><!--l. 147--><p class="indent">   The second possible reason that <a 
+ id="dx19-342010"></a>&#x201C;<span 
+class="pcrr7tn-">hg diff</span>&#x201D; might be printing diffs for a subset of the files displayed by <a 
+ id="dx19-342011"></a>&#x201C;<span 
+class="pcrr7tn-">hg status</span>&#x201D; is
+that if you invoke it without any arguments, <a 
+ id="dx19-342012"></a>&#x201C;<span 
+class="pcrr7tn-">hg diff</span>&#x201D; prints diffs against the first parent of the working directory. If you have
+run <a 
+ id="dx19-342013"></a>&#x201C;<span 
+class="pcrr7tn-">hg merge</span>&#x201D; to merge two changesets, but you haven&#x2019;t yet committed the results of the merge, your working directory has
+two parents (use <a 
+ id="dx19-342014"></a>&#x201C;<span 
+class="pcrr7tn-">hg parents</span>&#x201D; to see them). While <a 
+ id="dx19-342015"></a>&#x201C;<span 
+class="pcrr7tn-">hg status</span>&#x201D; prints modifications relative to <span 
+class="ptmri7t-">both </span>parents after an
+uncommitted merge, <a 
+ id="dx19-342016"></a>&#x201C;<span 
+class="pcrr7tn-">hg diff</span>&#x201D; still operates relative only to the first parent. You can get it to print diffs relative to
+the second parent by specifying that parent with the <a 
+ id="dx19-342017"></a><span 
+class="pcrr7tn-">-r </span>option. There is no way to print diffs relative to both
+parents.
+</p><!--l. 160--><p class="noindent">
+</p>
+   <h5 class="subsubsectionHead"><a 
+ id="x19-343000A.3.1"></a>Generating safe binary diffs</h5>
+<!--l. 162--><p class="noindent">If you use the <a 
+ id="dx19-343001"></a><span 
+class="pcrr7tn-">-a </span>option to force Mercurial to print diffs of files that are either &#x201C;mostly text&#x201D; or contain lots of binary data,
+those diffs cannot subsequently be applied by either Mercurial&#x2019;s <a 
+ id="dx19-343002"></a>&#x201C;<span 
+class="pcrr7tn-">hg import</span>&#x201D; command or the system&#x2019;s <a 
+ id="dx19-343003"></a><span 
+class="pcrr7tn-">patch</span>
+command.
+</p><!--l. 168--><p class="indent">   If you want to generate a diff of a binary file that is safe to use as input for <a 
+ id="dx19-343004"></a>&#x201C;<span 
+class="pcrr7tn-">hg import</span>&#x201D;, use the <a 
+ id="dx19-343005"></a>&#x201C;<span 
+class="pcrr7tn-">hg diff</span>&#x201D;&#x2013;git option
+when you generate the patch. The system <a 
+ id="dx19-343006"></a><span 
+class="pcrr7tn-">patch </span>command cannot handle binary patches at all.
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+</p>
+   <!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="hobbit-sysadmin-guideap2.html" >next</a>] [<a 
+href="hobbit-sysadmin-guidech14.html" >prev</a>] [<a 
+href="hobbit-sysadmin-guidech14.html#tailhobbit-sysadmin-guidech14.html" >prev-tail</a>] [<a 
+href="hobbit-sysadmin-guideap1.html" >front</a>] [<a 
+href="hobbit-sysadmin-guide.html#hobbit-sysadmin-guideap1.html" >up</a>] </p></div>
+<!--l. 1--><p class="indent">   <a 
+ id="tailhobbit-sysadmin-guideap1.html"></a>    </p> 
+</body></html> 

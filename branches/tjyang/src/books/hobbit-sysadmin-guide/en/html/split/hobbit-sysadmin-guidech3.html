@@ -1,0 +1,3910 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>3 System Monitoring Requirements</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html4-uni,2,html,xhtml --> 
+<meta name="src" content="hobbit-sysadmin-guide.tex" /> 
+<meta name="date" content="2008-04-26 19:37:00" /> 
+<link rel="stylesheet" type="text/css" href="hobbit-sysadmin-guide.css" /> 
+</head><body 
+>
+   <!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="hobbit-sysadmin-guidech4.html" >next</a>] [<a 
+href="hobbit-sysadmin-guidech2.html" >prev</a>] [<a 
+href="hobbit-sysadmin-guidech2.html#tailhobbit-sysadmin-guidech2.html" >prev-tail</a>] [<a 
+href="#tailhobbit-sysadmin-guidech3.html">tail</a>] [<a 
+href="hobbit-sysadmin-guide.html#hobbit-sysadmin-guidech3.html" >up</a>] </p></div>
+   <h2 class="chapterHead"><span class="titlemark">Chapter&#x00A0;3</span><br /><a 
+ id="x7-590003"></a>System Monitoring Requirements</h2>
+   <h3 class="sectionHead"><span class="titlemark">3.1    </span> <a 
+ id="x7-600003.1"></a>Web GUI of Hobbit</h3>
+<!--l. 7--><p class="noindent">Prebuilt binary packages of Mercurial are available for every popular operating system. These make it easy to start using
+Mercurial on your computer immediately.
+</p><!--l. 11--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.1.1    </span> <a 
+ id="x7-610003.1.1"></a>Linux</h4>
+<!--l. 13--><p class="noindent">Because each Linux distribution has its own packaging tools, policies, and rate of development, it&#x2019;s difficult to give a
+comprehensive set of instructions on how to install Mercurial binaries. The version of Mercurial that you will end up with can
+vary depending on how active the person is who maintains the package for your distribution.
+</p><!--l. 19--><p class="indent">   To keep things simple, I will focus on installing Mercurial from the command line under the most popular Linux
+distributions. Most of these distributions provide graphical package managers that will let you install Mercurial with a single
+click; the package name to look for is <span 
+class="pcrr7tn-">mercurial</span>.
+</p>
+     <ul><li><span class="dt">
+Debian </span><span class="dd">
+     <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-61002r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;apt-get</span><span 
+class="pcrr7tn-">&#x00A0;install</span><span 
+class="pcrr7tn-">&#x00A0;mercurial</span>
+</div>
+     </span><li><span class="dt">
+Fedora Core </span><span class="dd">
+     <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-61004r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;yum</span><span 
+class="pcrr7tn-">&#x00A0;install</span><span 
+class="pcrr7tn-">&#x00A0;mercurial</span>
+</div>
+     </span><li><span class="dt">
+Gentoo </span><span class="dd">
+     <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-61006r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;emerge</span><span 
+class="pcrr7tn-">&#x00A0;mercurial</span>
+</div>
+     </span><li><span class="dt">
+OpenSUSE </span><span class="dd">
+     <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-61008r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;yum</span><span 
+class="pcrr7tn-">&#x00A0;install</span><span 
+class="pcrr7tn-">&#x00A0;mercurial</span>
+</div>
+     </span><li><span class="dt">
+Ubuntu </span><span class="dd">Ubuntu&#x2019;s Mercurial package is based on Debian&#x2019;s. To install it, run the following command.
+                                                                                         
+                                                                                         
+     <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-61010r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;apt-get</span><span 
+class="pcrr7tn-">&#x00A0;install</span><span 
+class="pcrr7tn-">&#x00A0;mercurial</span>
+</div>
+     <!--l. 51--><p class="noindent">The Ubuntu package for Mercurial tends to lag behind the Debian version by a considerable time margin (at the time of
+     writing, seven months), which in some cases will mean that on Ubuntu, you may run into problems that have since been
+     fixed in the Debian package.</p></li></ul>
+<!--l. 57--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.1.2    </span> <a 
+ id="x7-620003.1.2"></a>Solaris</h4>
+<!--l. 59--><p class="noindent">XXX.
+</p><!--l. 61--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.1.3    </span> <a 
+ id="x7-630003.1.3"></a>Mac OS X</h4>
+<!--l. 63--><p class="noindent">Lee Cantey publishes an installer of Mercurial for Mac OS&#x00A0;X at   <a 
+href="http://mercurial.berkwood.com" class="url" ><span 
+class="pcrr7tn-">http://mercurial.berkwood.com</span></a>. This package works on
+both Intel-&#x00A0;and Power-based Macs. Before you can use it, you must install a compatible version of Universal MacPython&#x00A0;<span class="cite">[<span 
+class="ptmb7t-">?</span>]</span>.
+This is easy to do; simply follow the instructions on Lee&#x2019;s site.
+</p><!--l. 69--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.1.4    </span> <a 
+ id="x7-640003.1.4"></a>Windows</h4>
+<!--l. 71--><p class="noindent">Lee Cantey also publishes an installer of Mercurial for Windows at   <a 
+href="http://mercurial.berkwood.com" class="url" ><span 
+class="pcrr7tn-">http://mercurial.berkwood.com</span></a>. This package has no
+external dependencies; it &#x201C;just works&#x201D;.
+</p>
+   <div class="fbox"><span 
+class="ptmb7t-">Note:   </span>The  Windows  version  of  Mercurial  does  not  automatically  convert  line
+endings between Windows and Unix styles. If you want to share work with Unix
+users, you must do a little additional configuration work. XXX Flesh this out.        </div>
+<!--l. 82--><p class="noindent">
+</p>
+   <h3 class="sectionHead"><span class="titlemark">3.2    </span> <a 
+ id="x7-650003.2"></a>Getting started</h3>
+<!--l. 84--><p class="noindent">To begin, we&#x2019;ll use the <a 
+ id="dx7-65001"></a>&#x201C;<span 
+class="pcrr7tn-">hg version</span>&#x201D; command to find out whether Mercurial is actually installed properly. The
+actual version information that it prints isn&#x2019;t so important; it&#x2019;s whether it prints anything at all that we care
+about.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-65003r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;version</span>
+<br class="fancyvrb" /><a 
+ id="x7-65005r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Mercurial</span><span 
+class="pcrr7tn-">&#x00A0;Distributed</span><span 
+class="pcrr7tn-">&#x00A0;SCM</span><span 
+class="pcrr7tn-">&#x00A0;(version</span><span 
+class="pcrr7tn-">&#x00A0;0.9.3)</span>
+<br class="fancyvrb" /><a 
+ id="x7-65007r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+<br class="fancyvrb" /><a 
+ id="x7-65009r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Copyright</span><span 
+class="pcrr7tn-">&#x00A0;(C)</span><span 
+class="pcrr7tn-">&#x00A0;2005,</span><span 
+class="pcrr7tn-">&#x00A0;2006</span><span 
+class="pcrr7tn-">&#x00A0;Matt</span><span 
+class="pcrr7tn-">&#x00A0;Mackall</span><span 
+class="pcrr7tn-">&#x00A0;&#x003c;mpm@selenic.com&#x003e;</span>
+<br class="fancyvrb" /><a 
+ id="x7-65011r5"></a><span 
+class="ptmr7t-x-x-50">5</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;This</span><span 
+class="pcrr7tn-">&#x00A0;is</span><span 
+class="pcrr7tn-">&#x00A0;free</span><span 
+class="pcrr7tn-">&#x00A0;software;</span><span 
+class="pcrr7tn-">&#x00A0;see</span><span 
+class="pcrr7tn-">&#x00A0;the</span><span 
+class="pcrr7tn-">&#x00A0;source</span><span 
+class="pcrr7tn-">&#x00A0;for</span><span 
+class="pcrr7tn-">&#x00A0;copying</span><span 
+class="pcrr7tn-">&#x00A0;conditions.</span><span 
+class="pcrr7tn-">&#x00A0;There</span><span 
+class="pcrr7tn-">&#x00A0;is</span><span 
+class="pcrr7tn-">&#x00A0;NO</span>
+<br class="fancyvrb" /><a 
+ id="x7-65013r6"></a><span 
+class="ptmr7t-x-x-50">6</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;warranty;</span><span 
+class="pcrr7tn-">&#x00A0;not</span><span 
+class="pcrr7tn-">&#x00A0;even</span><span 
+class="pcrr7tn-">&#x00A0;for</span><span 
+class="pcrr7tn-">&#x00A0;MERCHANTABILITY</span><span 
+class="pcrr7tn-">&#x00A0;or</span><span 
+class="pcrr7tn-">&#x00A0;FITNESS</span><span 
+class="pcrr7tn-">&#x00A0;FOR</span><span 
+class="pcrr7tn-">&#x00A0;A</span><span 
+class="pcrr7tn-">&#x00A0;PARTICULAR</span><span 
+class="pcrr7tn-">&#x00A0;PURPOSE.</span>
+   </div>
+                                                                                         
+                                                                                         
+<!--l. 90--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.2.1    </span> <a 
+ id="x7-660003.2.1"></a>Built-in help</h4>
+<!--l. 92--><p class="noindent">Mercurial provides a built-in help system. This is invaluable for those times when you find yourself stuck trying to remember
+how to run a command. If you are completely stuck, simply run <a 
+ id="dx7-66001"></a>&#x201C;<span 
+class="pcrr7tn-">hg help</span>&#x201D;; it will print a brief list of commands, along with a
+description of what each does. If you ask for help on a specific command (as below), it prints more detailed
+information.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-66003r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;help</span><span 
+class="pcrb7t-">&#x00A0;init</span>
+<br class="fancyvrb" /><a 
+ id="x7-66005r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;hg</span><span 
+class="pcrr7tn-">&#x00A0;init</span><span 
+class="pcrr7tn-">&#x00A0;[-e</span><span 
+class="pcrr7tn-">&#x00A0;CMD]</span><span 
+class="pcrr7tn-">&#x00A0;[--remotecmd</span><span 
+class="pcrr7tn-">&#x00A0;CMD]</span><span 
+class="pcrr7tn-">&#x00A0;[DEST]</span>
+<br class="fancyvrb" /><a 
+ id="x7-66007r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+<br class="fancyvrb" /><a 
+ id="x7-66009r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;create</span><span 
+class="pcrr7tn-">&#x00A0;a</span><span 
+class="pcrr7tn-">&#x00A0;new</span><span 
+class="pcrr7tn-">&#x00A0;repository</span><span 
+class="pcrr7tn-">&#x00A0;in</span><span 
+class="pcrr7tn-">&#x00A0;the</span><span 
+class="pcrr7tn-">&#x00A0;given</span><span 
+class="pcrr7tn-">&#x00A0;directory</span>
+<br class="fancyvrb" /><a 
+ id="x7-66011r5"></a><span 
+class="ptmr7t-x-x-50">5</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+<br class="fancyvrb" /><a 
+ id="x7-66013r6"></a><span 
+class="ptmr7t-x-x-50">6</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Initialize</span><span 
+class="pcrr7tn-">&#x00A0;a</span><span 
+class="pcrr7tn-">&#x00A0;new</span><span 
+class="pcrr7tn-">&#x00A0;repository</span><span 
+class="pcrr7tn-">&#x00A0;in</span><span 
+class="pcrr7tn-">&#x00A0;the</span><span 
+class="pcrr7tn-">&#x00A0;given</span><span 
+class="pcrr7tn-">&#x00A0;directory.</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;If</span><span 
+class="pcrr7tn-">&#x00A0;the</span><span 
+class="pcrr7tn-">&#x00A0;given</span>
+<br class="fancyvrb" /><a 
+ id="x7-66015r7"></a><span 
+class="ptmr7t-x-x-50">7</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;directory</span><span 
+class="pcrr7tn-">&#x00A0;does</span><span 
+class="pcrr7tn-">&#x00A0;not</span><span 
+class="pcrr7tn-">&#x00A0;exist,</span><span 
+class="pcrr7tn-">&#x00A0;it</span><span 
+class="pcrr7tn-">&#x00A0;is</span><span 
+class="pcrr7tn-">&#x00A0;created.</span>
+<br class="fancyvrb" /><a 
+ id="x7-66017r8"></a><span 
+class="ptmr7t-x-x-50">8</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+<br class="fancyvrb" /><a 
+ id="x7-66019r9"></a><span 
+class="ptmr7t-x-x-50">9</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;If</span><span 
+class="pcrr7tn-">&#x00A0;no</span><span 
+class="pcrr7tn-">&#x00A0;directory</span><span 
+class="pcrr7tn-">&#x00A0;is</span><span 
+class="pcrr7tn-">&#x00A0;given,</span><span 
+class="pcrr7tn-">&#x00A0;the</span><span 
+class="pcrr7tn-">&#x00A0;current</span><span 
+class="pcrr7tn-">&#x00A0;directory</span><span 
+class="pcrr7tn-">&#x00A0;is</span><span 
+class="pcrr7tn-">&#x00A0;used.</span>
+<br class="fancyvrb" /><a 
+ id="x7-66021r10"></a><span 
+class="ptmr7t-x-x-50">10</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+<br class="fancyvrb" /><a 
+ id="x7-66023r11"></a><span 
+class="ptmr7t-x-x-50">11</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;It</span><span 
+class="pcrr7tn-">&#x00A0;is</span><span 
+class="pcrr7tn-">&#x00A0;possible</span><span 
+class="pcrr7tn-">&#x00A0;to</span><span 
+class="pcrr7tn-">&#x00A0;specify</span><span 
+class="pcrr7tn-">&#x00A0;an</span><span 
+class="pcrr7tn-">&#x00A0;ssh://</span><span 
+class="pcrr7tn-">&#x00A0;URL</span><span 
+class="pcrr7tn-">&#x00A0;as</span><span 
+class="pcrr7tn-">&#x00A0;the</span><span 
+class="pcrr7tn-">&#x00A0;destination.</span>
+<br class="fancyvrb" /><a 
+ id="x7-66025r12"></a><span 
+class="ptmr7t-x-x-50">12</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Look</span><span 
+class="pcrr7tn-">&#x00A0;at</span><span 
+class="pcrr7tn-">&#x00A0;the</span><span 
+class="pcrr7tn-">&#x00A0;help</span><span 
+class="pcrr7tn-">&#x00A0;text</span><span 
+class="pcrr7tn-">&#x00A0;for</span><span 
+class="pcrr7tn-">&#x00A0;the</span><span 
+class="pcrr7tn-">&#x00A0;pull</span><span 
+class="pcrr7tn-">&#x00A0;command</span><span 
+class="pcrr7tn-">&#x00A0;for</span><span 
+class="pcrr7tn-">&#x00A0;important</span><span 
+class="pcrr7tn-">&#x00A0;details</span>
+<br class="fancyvrb" /><a 
+ id="x7-66027r13"></a><span 
+class="ptmr7t-x-x-50">13</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;about</span><span 
+class="pcrr7tn-">&#x00A0;ssh://</span><span 
+class="pcrr7tn-">&#x00A0;URLs.</span>
+<br class="fancyvrb" /><a 
+ id="x7-66029r14"></a><span 
+class="ptmr7t-x-x-50">14</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+<br class="fancyvrb" /><a 
+ id="x7-66031r15"></a><span 
+class="ptmr7t-x-x-50">15</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;options:</span>
+<br class="fancyvrb" /><a 
+ id="x7-66033r16"></a><span 
+class="ptmr7t-x-x-50">16</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+<br class="fancyvrb" /><a 
+ id="x7-66035r17"></a><span 
+class="ptmr7t-x-x-50">17</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;-e</span><span 
+class="pcrr7tn-">&#x00A0;--ssh</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;specify</span><span 
+class="pcrr7tn-">&#x00A0;ssh</span><span 
+class="pcrr7tn-">&#x00A0;command</span><span 
+class="pcrr7tn-">&#x00A0;to</span><span 
+class="pcrr7tn-">&#x00A0;use</span>
+<br class="fancyvrb" /><a 
+ id="x7-66037r18"></a><span 
+class="ptmr7t-x-x-50">18</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;--remotecmd</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;specify</span><span 
+class="pcrr7tn-">&#x00A0;hg</span><span 
+class="pcrr7tn-">&#x00A0;command</span><span 
+class="pcrr7tn-">&#x00A0;to</span><span 
+class="pcrr7tn-">&#x00A0;run</span><span 
+class="pcrr7tn-">&#x00A0;on</span><span 
+class="pcrr7tn-">&#x00A0;the</span><span 
+class="pcrr7tn-">&#x00A0;remote</span><span 
+class="pcrr7tn-">&#x00A0;side</span>
+   </div>
+<!--l. 99--><p class="noindent">For a more impressive level of detail (which you won&#x2019;t usually need) run <a 
+ id="dx7-66038"></a>&#x201C;<span 
+class="pcrr7tn-">hg help</span> <a 
+ id="dx7-66039"></a><span 
+class="pcrr7tn-">-v</span>&#x201D;. The <a 
+ id="dx7-66040"></a><span 
+class="pcrr7tn-">-v </span>option is short for <a 
+ id="dx7-66041"></a><span 
+class="pcrr7tn-">--verbose</span>,
+and tells Mercurial to print more information than it usually would.
+</p><!--l. 104--><p class="noindent">
+</p>
+   <h3 class="sectionHead"><span class="titlemark">3.3    </span> <a 
+ id="x7-670003.3"></a>Working with a repository</h3>
+<!--l. 106--><p class="noindent">In Mercurial, everything happens inside a <span 
+class="ptmri7t-">repository</span>. The repository for a project contains all of the files that &#x201C;belong to&#x201D; that
+project, along with a historical record of the project&#x2019;s files.
+</p><!--l. 110--><p class="indent">   There&#x2019;s nothing particularly magical about a repository; it is simply a directory tree in your filesystem that Mercurial treats
+as special. You can rename or delete a repository any time you like, using either the command line or your file
+browser.
+</p><!--l. 115--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.3.1    </span> <a 
+ id="x7-680003.3.1"></a>Making a local copy of a repository</h4>
+<!--l. 117--><p class="noindent"><span 
+class="ptmri7t-">Copying </span>a repository is just a little bit special. While you could use a normal file copying command to make a copy of a
+repository, it&#x2019;s best to use a built-in command that Mercurial provides. This command is called <a 
+ id="dx7-68001"></a>&#x201C;<span 
+class="pcrr7tn-">hg clone</span>&#x201D;, because it creates
+an identical copy of an existing repository.
+                                                                                         
+                                                                                         
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-68003r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;clone</span><span 
+class="pcrb7t-">&#x00A0;http://hg.serpentine.com/tutorial/hello</span>
+<br class="fancyvrb" /><a 
+ id="x7-68005r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;destination</span><span 
+class="pcrr7tn-">&#x00A0;directory:</span><span 
+class="pcrr7tn-">&#x00A0;hello</span>
+<br class="fancyvrb" /><a 
+ id="x7-68007r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;requesting</span><span 
+class="pcrr7tn-">&#x00A0;all</span><span 
+class="pcrr7tn-">&#x00A0;changes</span>
+<br class="fancyvrb" /><a 
+ id="x7-68009r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;adding</span><span 
+class="pcrr7tn-">&#x00A0;changesets</span>
+<br class="fancyvrb" /><a 
+ id="x7-68011r5"></a><span 
+class="ptmr7t-x-x-50">5</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;adding</span><span 
+class="pcrr7tn-">&#x00A0;manifests</span>
+<br class="fancyvrb" /><a 
+ id="x7-68013r6"></a><span 
+class="ptmr7t-x-x-50">6</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;adding</span><span 
+class="pcrr7tn-">&#x00A0;file</span><span 
+class="pcrr7tn-">&#x00A0;changes</span>
+<br class="fancyvrb" /><a 
+ id="x7-68015r7"></a><span 
+class="ptmr7t-x-x-50">7</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;added</span><span 
+class="pcrr7tn-">&#x00A0;5</span><span 
+class="pcrr7tn-">&#x00A0;changesets</span><span 
+class="pcrr7tn-">&#x00A0;with</span><span 
+class="pcrr7tn-">&#x00A0;5</span><span 
+class="pcrr7tn-">&#x00A0;changes</span><span 
+class="pcrr7tn-">&#x00A0;to</span><span 
+class="pcrr7tn-">&#x00A0;2</span><span 
+class="pcrr7tn-">&#x00A0;files</span>
+<br class="fancyvrb" /><a 
+ id="x7-68017r8"></a><span 
+class="ptmr7t-x-x-50">8</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;2</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;updated,</span><span 
+class="pcrr7tn-">&#x00A0;0</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;merged,</span><span 
+class="pcrr7tn-">&#x00A0;0</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;removed,</span><span 
+class="pcrr7tn-">&#x00A0;0</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;unresolved</span>
+   </div>
+<!--l. 123--><p class="noindent">If our clone succeeded, we should now have a local directory called <span 
+class="pcrr7tn-">hello</span>. This directory will contain some files.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-68019r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">ls</span><span 
+class="pcrb7t-">&#x00A0;-l</span>
+<br class="fancyvrb" /><a 
+ id="x7-68021r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;total</span><span 
+class="pcrr7tn-">&#x00A0;4</span>
+<br class="fancyvrb" /><a 
+ id="x7-68023r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;drwxr-xr-x</span><span 
+class="pcrr7tn-">&#x00A0;3</span><span 
+class="pcrr7tn-">&#x00A0;root</span><span 
+class="pcrr7tn-">&#x00A0;root</span><span 
+class="pcrr7tn-">&#x00A0;4096</span><span 
+class="pcrr7tn-">&#x00A0;Apr</span><span 
+class="pcrr7tn-">&#x00A0;27</span><span 
+class="pcrr7tn-">&#x00A0;00:04</span><span 
+class="pcrr7tn-">&#x00A0;hello</span>
+<br class="fancyvrb" /><a 
+ id="x7-68025r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">ls</span><span 
+class="pcrb7t-">&#x00A0;hello</span>
+<br class="fancyvrb" /><a 
+ id="x7-68027r5"></a><span 
+class="ptmr7t-x-x-50">5</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Makefile</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;hello.c</span>
+   </div>
+<!--l. 126--><p class="noindent">These files have the same contents and history in our repository as they do in the repository we cloned.
+</p><!--l. 129--><p class="indent">   Every Mercurial repository is complete, self-contained, and independent. It contains its own private copy of a project&#x2019;s files
+and history. A cloned repository remembers the location of the repository it was cloned from, but it does not communicate with
+that repository, or any other, unless you tell it to.
+</p><!--l. 135--><p class="indent">   What this means for now is that we&#x2019;re free to experiment with our repository, safe in the knowledge that it&#x2019;s a private
+&#x201C;sandbox&#x201D; that won&#x2019;t affect anyone else.
+</p><!--l. 139--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.3.2    </span> <a 
+ id="x7-690003.3.2"></a>What&#x2019;s in a repository?</h4>
+<!--l. 141--><p class="noindent">When we take a more detailed look inside a repository, we can see that it contains a directory named <span 
+class="pcrr7tn-">.hg</span>. This is where
+Mercurial keeps all of its metadata for the repository.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-69002r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">cd</span><span 
+class="pcrb7t-">&#x00A0;hello</span>
+<br class="fancyvrb" /><a 
+ id="x7-69004r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">ls</span><span 
+class="pcrb7t-">&#x00A0;-a</span>
+<br class="fancyvrb" /><a 
+ id="x7-69006r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;.</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;..</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;.hg</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Makefile</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;hello.c</span>
+   </div>
+<!--l. 146--><p class="indent">   The contents of the <span 
+class="pcrr7tn-">.hg </span>directory and its subdirectories are private to Mercurial. Every other file and directory in the
+repository is yours to do with as you please.
+</p><!--l. 150--><p class="indent">   To introduce a little terminology, the <span 
+class="pcrr7tn-">.hg </span>directory is the &#x201C;real&#x201D; repository, and all of the files and directories that coexist
+with it are said to live in the <span 
+class="ptmri7t-">working directory</span>. An easy way to remember the distinction is that the <span 
+class="ptmri7t-">repository </span>contains the
+<span 
+class="ptmri7t-">history </span>of your project, while the <span 
+class="ptmri7t-">working directory </span>contains a <span 
+class="ptmri7t-">snapshot </span>of your project at a particular point in
+history.
+                                                                                         
+                                                                                         
+</p><!--l. 158--><p class="noindent">
+</p>
+   <h3 class="sectionHead"><span class="titlemark">3.4    </span> <a 
+ id="x7-700003.4"></a>A tour through history</h3>
+<!--l. 160--><p class="noindent">One of the first things we might want to do with a new, unfamiliar repository is understand its history. The <a 
+ id="dx7-70001"></a>&#x201C;<span 
+class="pcrr7tn-">hg log</span>&#x201D; command
+gives us a view of history.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-70003r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;log</span>
+<br class="fancyvrb" /><a 
+ id="x7-70005r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;changeset:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;4:b57f9a090b62</span>
+<br class="fancyvrb" /><a 
+ id="x7-70007r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;tag:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;tip</span>
+<br class="fancyvrb" /><a 
+ id="x7-70009r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;user:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Bryan</span><span 
+class="pcrr7tn-">&#x00A0;O'Sullivan</span><span 
+class="pcrr7tn-">&#x00A0;&#x003c;bos@serpentine.com&#x003e;</span>
+<br class="fancyvrb" /><a 
+ id="x7-70011r5"></a><span 
+class="ptmr7t-x-x-50">5</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;date:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Tue</span><span 
+class="pcrr7tn-">&#x00A0;Sep</span><span 
+class="pcrr7tn-">&#x00A0;06</span><span 
+class="pcrr7tn-">&#x00A0;15:43:07</span><span 
+class="pcrr7tn-">&#x00A0;2005</span><span 
+class="pcrr7tn-">&#x00A0;-0700</span>
+<br class="fancyvrb" /><a 
+ id="x7-70013r6"></a><span 
+class="ptmr7t-x-x-50">6</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;summary:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Trim</span><span 
+class="pcrr7tn-">&#x00A0;comments.</span>
+<br class="fancyvrb" /><a 
+ id="x7-70015r7"></a><span 
+class="ptmr7t-x-x-50">7</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+<br class="fancyvrb" /><a 
+ id="x7-70017r8"></a><span 
+class="ptmr7t-x-x-50">8</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;changeset:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;3:ff5d7b70a2a9</span>
+<br class="fancyvrb" /><a 
+ id="x7-70019r9"></a><span 
+class="ptmr7t-x-x-50">9</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;user:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Bryan</span><span 
+class="pcrr7tn-">&#x00A0;O'Sullivan</span><span 
+class="pcrr7tn-">&#x00A0;&#x003c;bos@serpentine.com&#x003e;</span>
+<br class="fancyvrb" /><a 
+ id="x7-70021r10"></a><span 
+class="ptmr7t-x-x-50">10</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;date:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Tue</span><span 
+class="pcrr7tn-">&#x00A0;Sep</span><span 
+class="pcrr7tn-">&#x00A0;06</span><span 
+class="pcrr7tn-">&#x00A0;13:15:58</span><span 
+class="pcrr7tn-">&#x00A0;2005</span><span 
+class="pcrr7tn-">&#x00A0;-0700</span>
+<br class="fancyvrb" /><a 
+ id="x7-70023r11"></a><span 
+class="ptmr7t-x-x-50">11</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;summary:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Get</span><span 
+class="pcrr7tn-">&#x00A0;make</span><span 
+class="pcrr7tn-">&#x00A0;to</span><span 
+class="pcrr7tn-">&#x00A0;generate</span><span 
+class="pcrr7tn-">&#x00A0;the</span><span 
+class="pcrr7tn-">&#x00A0;final</span><span 
+class="pcrr7tn-">&#x00A0;binary</span><span 
+class="pcrr7tn-">&#x00A0;from</span><span 
+class="pcrr7tn-">&#x00A0;a</span><span 
+class="pcrr7tn-">&#x00A0;.o</span><span 
+class="pcrr7tn-">&#x00A0;file.</span>
+<br class="fancyvrb" /><a 
+ id="x7-70025r12"></a><span 
+class="ptmr7t-x-x-50">12</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+<br class="fancyvrb" /><a 
+ id="x7-70027r13"></a><span 
+class="ptmr7t-x-x-50">13</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;changeset:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;2:057d3c2d823c</span>
+<br class="fancyvrb" /><a 
+ id="x7-70029r14"></a><span 
+class="ptmr7t-x-x-50">14</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;user:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Bryan</span><span 
+class="pcrr7tn-">&#x00A0;O'Sullivan</span><span 
+class="pcrr7tn-">&#x00A0;&#x003c;bos@serpentine.com&#x003e;</span>
+<br class="fancyvrb" /><a 
+ id="x7-70031r15"></a><span 
+class="ptmr7t-x-x-50">15</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;date:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Tue</span><span 
+class="pcrr7tn-">&#x00A0;Sep</span><span 
+class="pcrr7tn-">&#x00A0;06</span><span 
+class="pcrr7tn-">&#x00A0;13:15:43</span><span 
+class="pcrr7tn-">&#x00A0;2005</span><span 
+class="pcrr7tn-">&#x00A0;-0700</span>
+<br class="fancyvrb" /><a 
+ id="x7-70033r16"></a><span 
+class="ptmr7t-x-x-50">16</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;summary:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Introduce</span><span 
+class="pcrr7tn-">&#x00A0;a</span><span 
+class="pcrr7tn-">&#x00A0;typo</span><span 
+class="pcrr7tn-">&#x00A0;into</span><span 
+class="pcrr7tn-">&#x00A0;hello.c.</span>
+<br class="fancyvrb" /><a 
+ id="x7-70035r17"></a><span 
+class="ptmr7t-x-x-50">17</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+<br class="fancyvrb" /><a 
+ id="x7-70037r18"></a><span 
+class="ptmr7t-x-x-50">18</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;changeset:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;1:82e55d328c8c</span>
+<br class="fancyvrb" /><a 
+ id="x7-70039r19"></a><span 
+class="ptmr7t-x-x-50">19</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;user:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;mpm@selenic.com</span>
+<br class="fancyvrb" /><a 
+ id="x7-70041r20"></a><span 
+class="ptmr7t-x-x-50">20</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;date:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Fri</span><span 
+class="pcrr7tn-">&#x00A0;Aug</span><span 
+class="pcrr7tn-">&#x00A0;26</span><span 
+class="pcrr7tn-">&#x00A0;01:21:28</span><span 
+class="pcrr7tn-">&#x00A0;2005</span><span 
+class="pcrr7tn-">&#x00A0;-0700</span>
+<br class="fancyvrb" /><a 
+ id="x7-70043r21"></a><span 
+class="ptmr7t-x-x-50">21</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;summary:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Create</span><span 
+class="pcrr7tn-">&#x00A0;a</span><span 
+class="pcrr7tn-">&#x00A0;makefile</span>
+<br class="fancyvrb" /><a 
+ id="x7-70045r22"></a><span 
+class="ptmr7t-x-x-50">22</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+<br class="fancyvrb" /><a 
+ id="x7-70047r23"></a><span 
+class="ptmr7t-x-x-50">23</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;changeset:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;0:0a04b987be5a</span>
+<br class="fancyvrb" /><a 
+ id="x7-70049r24"></a><span 
+class="ptmr7t-x-x-50">24</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;user:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;mpm@selenic.com</span>
+<br class="fancyvrb" /><a 
+ id="x7-70051r25"></a><span 
+class="ptmr7t-x-x-50">25</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;date:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Fri</span><span 
+class="pcrr7tn-">&#x00A0;Aug</span><span 
+class="pcrr7tn-">&#x00A0;26</span><span 
+class="pcrr7tn-">&#x00A0;01:20:50</span><span 
+class="pcrr7tn-">&#x00A0;2005</span><span 
+class="pcrr7tn-">&#x00A0;-0700</span>
+<br class="fancyvrb" /><a 
+ id="x7-70053r26"></a><span 
+class="ptmr7t-x-x-50">26</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;summary:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Create</span><span 
+class="pcrr7tn-">&#x00A0;a</span><span 
+class="pcrr7tn-">&#x00A0;standard</span><span 
+class="pcrr7tn-">&#x00A0;"hello,</span><span 
+class="pcrr7tn-">&#x00A0;world"</span><span 
+class="pcrr7tn-">&#x00A0;program</span>
+<br class="fancyvrb" /><a 
+ id="x7-70055r27"></a><span 
+class="ptmr7t-x-x-50">27</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+   </div>
+<!--l. 164--><p class="noindent">By default, this command prints a brief paragraph of output for each change to the project that was recorded. In Mercurial
+terminology, we call each of these recorded events a <span 
+class="ptmri7t-">changeset</span>, because it can contain a record of changes to several
+files.
+</p><!--l. 169--><p class="indent">   The fields in a record of output from <a 
+ id="dx7-70056"></a>&#x201C;<span 
+class="pcrr7tn-">hg log</span>&#x201D; are as follows. </p>
+     <ul><li><span class="dt">
+<span 
+class="pcrr7tn-">changeset</span> </span><span class="dd">This  field  has  the  format  of  a  number,  followed  by  a  colon,  followed  by  a  hexadecimal  string.  These  are
+     <span 
+class="ptmri7t-">identifiers </span>for the changeset. There are two identifiers because the number is shorter and easier to type than the
+     hex string.
+     </span><li><span class="dt">
+<span 
+class="pcrr7tn-">user</span> </span><span class="dd">The identity of the person who created the changeset. This is a free-form field, but it most often contains a
+     person&#x2019;s name and email address.
+     </span><li><span class="dt">
+<span 
+class="pcrr7tn-">date</span> </span><span class="dd">The date and time on which the changeset was created, and the timezone in which it was created. (The date and
+     time are local to that timezone; they display what time and date it was for the person who created the changeset.)
+                                                                                         
+                                                                                         
+     </span><li><span class="dt">
+<span 
+class="pcrr7tn-">summary</span> </span><span class="dd">The first line of the text message that the creator of the changeset entered to describe the changeset.</li></ul>
+<!--l. 186--><p class="noindent">The default output printed by <a 
+ id="dx7-70057"></a>&#x201C;<span 
+class="pcrr7tn-">hg log</span>&#x201D; is purely a summary; it is missing a lot of detail.
+</p><!--l. 189--><p class="indent">   Figure&#x00A0;<a 
+href="#x7-700581">3.1<!--tex4ht:ref: fig:tour-basic:history --></a> provides a graphical representation of the history of the <span 
+class="pcrr7tn-">hello </span>repository, to make it a little easier to see which
+direction history is &#x201C;flowing&#x201D; in. We&#x2019;ll be returning to this figure several times in this chapter and the chapter that
+follows.
+</p>
+   <hr class="figure" /><div class="figure" 
+><table class="figure"><tr class="figure"><td class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x7-700581"></a>
+                                                                                         
+                                                                                         
+<!--l. 197--><p class="noindent"><img 
+src="tour-history.png" alt="PIC"  
+ />
+<br /> </p><table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id">Figure&#x00A0;3.1: </td><td  
+class="content">Graphical history of the <span 
+class="pcrr7tn-">hello </span>repository</td></tr></table><!--tex4ht:label?: x7-700581 -->
+                                                                                         
+                                                                                         
+   </td></tr></table></div><hr class="endfigure" />
+   <h4 class="subsectionHead"><span class="titlemark">3.4.1    </span> <a 
+ id="x7-710003.4.1"></a>Changesets, revisions, and talking to other people</h4>
+<!--l. 205--><p class="noindent">As English is a notoriously sloppy language, and computer science has a hallowed history of terminological confusion (why
+use one term when four will do?), revision control has a variety of words and phrases that mean the same thing.
+If you are talking about Mercurial history with other people, you will find that the word &#x201C;changeset&#x201D; is often
+compressed to &#x201C;change&#x201D; or (when written) &#x201C;cset&#x201D;, and sometimes a changeset is referred to as a &#x201C;revision&#x201D; or a
+&#x201C;rev&#x201D;.
+</p><!--l. 213--><p class="indent">   While it doesn&#x2019;t matter what <span 
+class="ptmri7t-">word </span>you use to refer to the concept of &#x201C;a&#x00A0;changeset&#x201D;, the <span 
+class="ptmri7t-">identifier </span>that you use to refer to
+&#x201C;a&#x00A0;<span 
+class="ptmri7t-">specific </span>changeset&#x201D; is of great importance. Recall that the <span 
+class="pcrr7tn-">changeset </span>field in the output from <a 
+ id="dx7-71001"></a>&#x201C;<span 
+class="pcrr7tn-">hg log</span>&#x201D; identifies a
+changeset using both a number and a hexadecimal string. </p>
+     <ul><li><span class="dt">
+     </span><span class="dd">The revision number is <span 
+class="ptmri7t-">only valid in that repository</span>,
+     </span><li><span class="dt">
+     </span><span class="dd">while the hex string is the <span 
+class="ptmri7t-">permanent, unchanging identifier </span>that will always identify that exact changeset in
+     <span 
+class="ptmri7t-">every </span>copy of the repository.</li></ul>
+<!--l. 225--><p class="noindent">This distinction is important. If you send someone an email talking about &#x201C;revision&#x00A0;33&#x201D;, there&#x2019;s a high likelihood that their
+revision&#x00A0;33 will <span 
+class="ptmri7t-">not be the same </span>as yours. The reason for this is that a revision number depends on the order in which
+changes arrived in a repository, and there is no guarantee that the same changes will happen in the same order in
+different repositories. Three changes <span 
+class="zptmcmrm-">a,b,c </span>can easily appear in one repository as <span 
+class="zptmcmr-">0</span><span 
+class="zptmcmrm-">,</span><span 
+class="zptmcmr-">1</span><span 
+class="zptmcmrm-">,</span><span 
+class="zptmcmr-">2</span>, while in another as
+<span 
+class="zptmcmr-">1</span><span 
+class="zptmcmrm-">,</span><span 
+class="zptmcmr-">0</span><span 
+class="zptmcmrm-">,</span><span 
+class="zptmcmr-">2</span>.
+</p><!--l. 234--><p class="indent">   Mercurial uses revision numbers purely as a convenient shorthand. If you need to discuss a changeset with
+someone, or make a record of a changeset for some other reason (for example, in a bug report), use the hexadecimal
+identifier.
+</p><!--l. 239--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.4.2    </span> <a 
+ id="x7-720003.4.2"></a>Viewing specific revisions</h4>
+<!--l. 241--><p class="noindent">To narrow the output of <a 
+ id="dx7-72001"></a>&#x201C;<span 
+class="pcrr7tn-">hg log</span>&#x201D; down to a single revision, use the <a 
+ id="dx7-72002"></a><span 
+class="pcrr7tn-">-r </span>(or <a 
+ id="dx7-72003"></a><span 
+class="pcrr7tn-">--rev</span>) option. You can use either a revision number
+or a long-form changeset identifier, and you can provide as many revisions as you want.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-72005r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;log</span><span 
+class="pcrb7t-">&#x00A0;-r</span><span 
+class="pcrb7t-">&#x00A0;3</span>
+<br class="fancyvrb" /><a 
+ id="x7-72007r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;changeset:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;3:ff5d7b70a2a9</span>
+<br class="fancyvrb" /><a 
+ id="x7-72009r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;user:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Bryan</span><span 
+class="pcrr7tn-">&#x00A0;O'Sullivan</span><span 
+class="pcrr7tn-">&#x00A0;&#x003c;bos@serpentine.com&#x003e;</span>
+<br class="fancyvrb" /><a 
+ id="x7-72011r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;date:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Tue</span><span 
+class="pcrr7tn-">&#x00A0;Sep</span><span 
+class="pcrr7tn-">&#x00A0;06</span><span 
+class="pcrr7tn-">&#x00A0;13:15:58</span><span 
+class="pcrr7tn-">&#x00A0;2005</span><span 
+class="pcrr7tn-">&#x00A0;-0700</span>
+<br class="fancyvrb" /><a 
+ id="x7-72013r5"></a><span 
+class="ptmr7t-x-x-50">5</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;summary:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Get</span><span 
+class="pcrr7tn-">&#x00A0;make</span><span 
+class="pcrr7tn-">&#x00A0;to</span><span 
+class="pcrr7tn-">&#x00A0;generate</span><span 
+class="pcrr7tn-">&#x00A0;the</span><span 
+class="pcrr7tn-">&#x00A0;final</span><span 
+class="pcrr7tn-">&#x00A0;binary</span><span 
+class="pcrr7tn-">&#x00A0;from</span><span 
+class="pcrr7tn-">&#x00A0;a</span><span 
+class="pcrr7tn-">&#x00A0;.o</span><span 
+class="pcrr7tn-">&#x00A0;file.</span>
+<br class="fancyvrb" /><a 
+ id="x7-72015r6"></a><span 
+class="ptmr7t-x-x-50">6</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+<br class="fancyvrb" /><a 
+ id="x7-72017r7"></a><span 
+class="ptmr7t-x-x-50">7</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;log</span><span 
+class="pcrb7t-">&#x00A0;-r</span><span 
+class="pcrb7t-">&#x00A0;ff5d7b70a2a9</span>
+<br class="fancyvrb" /><a 
+ id="x7-72019r8"></a><span 
+class="ptmr7t-x-x-50">8</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;changeset:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;3:ff5d7b70a2a9</span>
+<br class="fancyvrb" /><a 
+ id="x7-72021r9"></a><span 
+class="ptmr7t-x-x-50">9</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;user:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Bryan</span><span 
+class="pcrr7tn-">&#x00A0;O'Sullivan</span><span 
+class="pcrr7tn-">&#x00A0;&#x003c;bos@serpentine.com&#x003e;</span>
+<br class="fancyvrb" /><a 
+ id="x7-72023r10"></a><span 
+class="ptmr7t-x-x-50">10</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;date:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Tue</span><span 
+class="pcrr7tn-">&#x00A0;Sep</span><span 
+class="pcrr7tn-">&#x00A0;06</span><span 
+class="pcrr7tn-">&#x00A0;13:15:58</span><span 
+class="pcrr7tn-">&#x00A0;2005</span><span 
+class="pcrr7tn-">&#x00A0;-0700</span>
+<br class="fancyvrb" /><a 
+ id="x7-72025r11"></a><span 
+class="ptmr7t-x-x-50">11</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;summary:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Get</span><span 
+class="pcrr7tn-">&#x00A0;make</span><span 
+class="pcrr7tn-">&#x00A0;to</span><span 
+class="pcrr7tn-">&#x00A0;generate</span><span 
+class="pcrr7tn-">&#x00A0;the</span><span 
+class="pcrr7tn-">&#x00A0;final</span><span 
+class="pcrr7tn-">&#x00A0;binary</span><span 
+class="pcrr7tn-">&#x00A0;from</span><span 
+class="pcrr7tn-">&#x00A0;a</span><span 
+class="pcrr7tn-">&#x00A0;.o</span><span 
+class="pcrr7tn-">&#x00A0;file.</span>
+<br class="fancyvrb" /><a 
+ id="x7-72027r12"></a><span 
+class="ptmr7t-x-x-50">12</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+<br class="fancyvrb" /><a 
+ id="x7-72029r13"></a><span 
+class="ptmr7t-x-x-50">13</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;log</span><span 
+class="pcrb7t-">&#x00A0;-r</span><span 
+class="pcrb7t-">&#x00A0;1</span><span 
+class="pcrb7t-">&#x00A0;-r</span><span 
+class="pcrb7t-">&#x00A0;4</span>
+<br class="fancyvrb" /><a 
+ id="x7-72031r14"></a><span 
+class="ptmr7t-x-x-50">14</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;changeset:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;1:82e55d328c8c</span>
+<br class="fancyvrb" /><a 
+ id="x7-72033r15"></a><span 
+class="ptmr7t-x-x-50">15</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;user:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;mpm@selenic.com</span>
+                                                                                         
+                                                                                         
+<br class="fancyvrb" /><a 
+ id="x7-72035r16"></a><span 
+class="ptmr7t-x-x-50">16</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;date:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Fri</span><span 
+class="pcrr7tn-">&#x00A0;Aug</span><span 
+class="pcrr7tn-">&#x00A0;26</span><span 
+class="pcrr7tn-">&#x00A0;01:21:28</span><span 
+class="pcrr7tn-">&#x00A0;2005</span><span 
+class="pcrr7tn-">&#x00A0;-0700</span>
+<br class="fancyvrb" /><a 
+ id="x7-72037r17"></a><span 
+class="ptmr7t-x-x-50">17</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;summary:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Create</span><span 
+class="pcrr7tn-">&#x00A0;a</span><span 
+class="pcrr7tn-">&#x00A0;makefile</span>
+<br class="fancyvrb" /><a 
+ id="x7-72039r18"></a><span 
+class="ptmr7t-x-x-50">18</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+<br class="fancyvrb" /><a 
+ id="x7-72041r19"></a><span 
+class="ptmr7t-x-x-50">19</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;changeset:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;4:b57f9a090b62</span>
+<br class="fancyvrb" /><a 
+ id="x7-72043r20"></a><span 
+class="ptmr7t-x-x-50">20</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;tag:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;tip</span>
+<br class="fancyvrb" /><a 
+ id="x7-72045r21"></a><span 
+class="ptmr7t-x-x-50">21</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;user:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Bryan</span><span 
+class="pcrr7tn-">&#x00A0;O'Sullivan</span><span 
+class="pcrr7tn-">&#x00A0;&#x003c;bos@serpentine.com&#x003e;</span>
+<br class="fancyvrb" /><a 
+ id="x7-72047r22"></a><span 
+class="ptmr7t-x-x-50">22</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;date:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Tue</span><span 
+class="pcrr7tn-">&#x00A0;Sep</span><span 
+class="pcrr7tn-">&#x00A0;06</span><span 
+class="pcrr7tn-">&#x00A0;15:43:07</span><span 
+class="pcrr7tn-">&#x00A0;2005</span><span 
+class="pcrr7tn-">&#x00A0;-0700</span>
+<br class="fancyvrb" /><a 
+ id="x7-72049r23"></a><span 
+class="ptmr7t-x-x-50">23</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;summary:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Trim</span><span 
+class="pcrr7tn-">&#x00A0;comments.</span>
+<br class="fancyvrb" /><a 
+ id="x7-72051r24"></a><span 
+class="ptmr7t-x-x-50">24</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+   </div>
+<!--l. 246--><p class="indent">   If you want to see the history of several revisions without having to list each one, you can use <span 
+class="ptmri7t-">range notation</span>; this lets you
+express the idea &#x201C;I want all revisions between <span 
+class="zptmcmrm-">a </span>and <span 
+class="zptmcmrm-">b</span>, inclusive&#x201D;.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-72053r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;log</span><span 
+class="pcrb7t-">&#x00A0;-r</span><span 
+class="pcrb7t-">&#x00A0;2:4</span>
+<br class="fancyvrb" /><a 
+ id="x7-72055r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;changeset:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;2:057d3c2d823c</span>
+<br class="fancyvrb" /><a 
+ id="x7-72057r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;user:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Bryan</span><span 
+class="pcrr7tn-">&#x00A0;O'Sullivan</span><span 
+class="pcrr7tn-">&#x00A0;&#x003c;bos@serpentine.com&#x003e;</span>
+<br class="fancyvrb" /><a 
+ id="x7-72059r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;date:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Tue</span><span 
+class="pcrr7tn-">&#x00A0;Sep</span><span 
+class="pcrr7tn-">&#x00A0;06</span><span 
+class="pcrr7tn-">&#x00A0;13:15:43</span><span 
+class="pcrr7tn-">&#x00A0;2005</span><span 
+class="pcrr7tn-">&#x00A0;-0700</span>
+<br class="fancyvrb" /><a 
+ id="x7-72061r5"></a><span 
+class="ptmr7t-x-x-50">5</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;summary:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Introduce</span><span 
+class="pcrr7tn-">&#x00A0;a</span><span 
+class="pcrr7tn-">&#x00A0;typo</span><span 
+class="pcrr7tn-">&#x00A0;into</span><span 
+class="pcrr7tn-">&#x00A0;hello.c.</span>
+<br class="fancyvrb" /><a 
+ id="x7-72063r6"></a><span 
+class="ptmr7t-x-x-50">6</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+<br class="fancyvrb" /><a 
+ id="x7-72065r7"></a><span 
+class="ptmr7t-x-x-50">7</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;changeset:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;3:ff5d7b70a2a9</span>
+<br class="fancyvrb" /><a 
+ id="x7-72067r8"></a><span 
+class="ptmr7t-x-x-50">8</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;user:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Bryan</span><span 
+class="pcrr7tn-">&#x00A0;O'Sullivan</span><span 
+class="pcrr7tn-">&#x00A0;&#x003c;bos@serpentine.com&#x003e;</span>
+<br class="fancyvrb" /><a 
+ id="x7-72069r9"></a><span 
+class="ptmr7t-x-x-50">9</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;date:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Tue</span><span 
+class="pcrr7tn-">&#x00A0;Sep</span><span 
+class="pcrr7tn-">&#x00A0;06</span><span 
+class="pcrr7tn-">&#x00A0;13:15:58</span><span 
+class="pcrr7tn-">&#x00A0;2005</span><span 
+class="pcrr7tn-">&#x00A0;-0700</span>
+<br class="fancyvrb" /><a 
+ id="x7-72071r10"></a><span 
+class="ptmr7t-x-x-50">10</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;summary:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Get</span><span 
+class="pcrr7tn-">&#x00A0;make</span><span 
+class="pcrr7tn-">&#x00A0;to</span><span 
+class="pcrr7tn-">&#x00A0;generate</span><span 
+class="pcrr7tn-">&#x00A0;the</span><span 
+class="pcrr7tn-">&#x00A0;final</span><span 
+class="pcrr7tn-">&#x00A0;binary</span><span 
+class="pcrr7tn-">&#x00A0;from</span><span 
+class="pcrr7tn-">&#x00A0;a</span><span 
+class="pcrr7tn-">&#x00A0;.o</span><span 
+class="pcrr7tn-">&#x00A0;file.</span>
+<br class="fancyvrb" /><a 
+ id="x7-72073r11"></a><span 
+class="ptmr7t-x-x-50">11</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+<br class="fancyvrb" /><a 
+ id="x7-72075r12"></a><span 
+class="ptmr7t-x-x-50">12</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;changeset:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;4:b57f9a090b62</span>
+<br class="fancyvrb" /><a 
+ id="x7-72077r13"></a><span 
+class="ptmr7t-x-x-50">13</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;tag:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;tip</span>
+<br class="fancyvrb" /><a 
+ id="x7-72079r14"></a><span 
+class="ptmr7t-x-x-50">14</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;user:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Bryan</span><span 
+class="pcrr7tn-">&#x00A0;O'Sullivan</span><span 
+class="pcrr7tn-">&#x00A0;&#x003c;bos@serpentine.com&#x003e;</span>
+<br class="fancyvrb" /><a 
+ id="x7-72081r15"></a><span 
+class="ptmr7t-x-x-50">15</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;date:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Tue</span><span 
+class="pcrr7tn-">&#x00A0;Sep</span><span 
+class="pcrr7tn-">&#x00A0;06</span><span 
+class="pcrr7tn-">&#x00A0;15:43:07</span><span 
+class="pcrr7tn-">&#x00A0;2005</span><span 
+class="pcrr7tn-">&#x00A0;-0700</span>
+<br class="fancyvrb" /><a 
+ id="x7-72083r16"></a><span 
+class="ptmr7t-x-x-50">16</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;summary:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Trim</span><span 
+class="pcrr7tn-">&#x00A0;comments.</span>
+<br class="fancyvrb" /><a 
+ id="x7-72085r17"></a><span 
+class="ptmr7t-x-x-50">17</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+   </div>
+<!--l. 251--><p class="noindent">Mercurial also honours the order in which you specify revisions, so <a 
+ id="dx7-72086"></a>&#x201C;<span 
+class="pcrr7tn-">hg log -r 2:4</span>&#x201D; prints <span 
+class="zptmcmr-">2</span><span 
+class="zptmcmrm-">,</span><span 
+class="zptmcmr-">3</span><span 
+class="zptmcmrm-">,</span><span 
+class="zptmcmr-">4 </span>while <a 
+ id="dx7-72087"></a>&#x201C;<span 
+class="pcrr7tn-">hg log -r 4:2</span>&#x201D; prints
+<span 
+class="zptmcmr-">4</span><span 
+class="zptmcmrm-">,</span><span 
+class="zptmcmr-">3</span><span 
+class="zptmcmrm-">,</span><span 
+class="zptmcmr-">2</span>.
+</p><!--l. 255--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.4.3    </span> <a 
+ id="x7-730003.4.3"></a>More detailed information</h4>
+<!--l. 257--><p class="noindent">While the summary information printed by <a 
+ id="dx7-73001"></a>&#x201C;<span 
+class="pcrr7tn-">hg log</span>&#x201D; is useful if you already know what you&#x2019;re looking for, you may need
+to see a complete description of the change, or a list of the files changed, if you&#x2019;re trying to decide whether a
+changeset is the one you&#x2019;re looking for. The <a 
+ id="dx7-73002"></a>&#x201C;<span 
+class="pcrr7tn-">hg log</span>&#x201D; command&#x2019;s <a 
+ id="dx7-73003"></a><span 
+class="pcrr7tn-">-v </span>(or <a 
+ id="dx7-73004"></a><span 
+class="pcrr7tn-">--verbose</span>) option gives you this extra
+detail.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-73006r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;log</span><span 
+class="pcrb7t-">&#x00A0;-v</span><span 
+class="pcrb7t-">&#x00A0;-r</span><span 
+class="pcrb7t-">&#x00A0;3</span>
+<br class="fancyvrb" /><a 
+ id="x7-73008r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;changeset:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;3:ff5d7b70a2a9</span>
+<br class="fancyvrb" /><a 
+ id="x7-73010r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;user:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Bryan</span><span 
+class="pcrr7tn-">&#x00A0;O'Sullivan</span><span 
+class="pcrr7tn-">&#x00A0;&#x003c;bos@serpentine.com&#x003e;</span>
+<br class="fancyvrb" /><a 
+ id="x7-73012r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;date:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Tue</span><span 
+class="pcrr7tn-">&#x00A0;Sep</span><span 
+class="pcrr7tn-">&#x00A0;06</span><span 
+class="pcrr7tn-">&#x00A0;13:15:58</span><span 
+class="pcrr7tn-">&#x00A0;2005</span><span 
+class="pcrr7tn-">&#x00A0;-0700</span>
+                                                                                         
+                                                                                         
+<br class="fancyvrb" /><a 
+ id="x7-73014r5"></a><span 
+class="ptmr7t-x-x-50">5</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;files:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Makefile</span>
+<br class="fancyvrb" /><a 
+ id="x7-73016r6"></a><span 
+class="ptmr7t-x-x-50">6</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;description:</span>
+<br class="fancyvrb" /><a 
+ id="x7-73018r7"></a><span 
+class="ptmr7t-x-x-50">7</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Get</span><span 
+class="pcrr7tn-">&#x00A0;make</span><span 
+class="pcrr7tn-">&#x00A0;to</span><span 
+class="pcrr7tn-">&#x00A0;generate</span><span 
+class="pcrr7tn-">&#x00A0;the</span><span 
+class="pcrr7tn-">&#x00A0;final</span><span 
+class="pcrr7tn-">&#x00A0;binary</span><span 
+class="pcrr7tn-">&#x00A0;from</span><span 
+class="pcrr7tn-">&#x00A0;a</span><span 
+class="pcrr7tn-">&#x00A0;.o</span><span 
+class="pcrr7tn-">&#x00A0;file.</span>
+<br class="fancyvrb" /><a 
+ id="x7-73020r8"></a><span 
+class="ptmr7t-x-x-50">8</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+<br class="fancyvrb" /><a 
+ id="x7-73022r9"></a><span 
+class="ptmr7t-x-x-50">9</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+   </div>
+<!--l. 265--><p class="indent">   If you want to see both the description and content of a change, add the <a 
+ id="dx7-73023"></a><span 
+class="pcrr7tn-">-p </span>(or <a 
+ id="dx7-73024"></a><span 
+class="pcrr7tn-">--patch</span>) option. This displays the content of
+a change as a <span 
+class="ptmri7t-">unified diff  </span>(if you&#x2019;ve never seen a unified diff before, see section&#x00A0;<a 
+href="hobbit-sysadmin-guidech12.html#x16-27300012.4">12.4<!--tex4ht:ref: sec:mq:patch --></a> for an overview).
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-73026r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;log</span><span 
+class="pcrb7t-">&#x00A0;-v</span><span 
+class="pcrb7t-">&#x00A0;-p</span><span 
+class="pcrb7t-">&#x00A0;-r</span><span 
+class="pcrb7t-">&#x00A0;2</span>
+<br class="fancyvrb" /><a 
+ id="x7-73028r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;changeset:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;2:057d3c2d823c</span>
+<br class="fancyvrb" /><a 
+ id="x7-73030r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;user:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Bryan</span><span 
+class="pcrr7tn-">&#x00A0;O'Sullivan</span><span 
+class="pcrr7tn-">&#x00A0;&#x003c;bos@serpentine.com&#x003e;</span>
+<br class="fancyvrb" /><a 
+ id="x7-73032r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;date:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Tue</span><span 
+class="pcrr7tn-">&#x00A0;Sep</span><span 
+class="pcrr7tn-">&#x00A0;06</span><span 
+class="pcrr7tn-">&#x00A0;13:15:43</span><span 
+class="pcrr7tn-">&#x00A0;2005</span><span 
+class="pcrr7tn-">&#x00A0;-0700</span>
+<br class="fancyvrb" /><a 
+ id="x7-73034r5"></a><span 
+class="ptmr7t-x-x-50">5</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;files:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;hello.c</span>
+<br class="fancyvrb" /><a 
+ id="x7-73036r6"></a><span 
+class="ptmr7t-x-x-50">6</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;description:</span>
+<br class="fancyvrb" /><a 
+ id="x7-73038r7"></a><span 
+class="ptmr7t-x-x-50">7</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Introduce</span><span 
+class="pcrr7tn-">&#x00A0;a</span><span 
+class="pcrr7tn-">&#x00A0;typo</span><span 
+class="pcrr7tn-">&#x00A0;into</span><span 
+class="pcrr7tn-">&#x00A0;hello.c.</span>
+<br class="fancyvrb" /><a 
+ id="x7-73040r8"></a><span 
+class="ptmr7t-x-x-50">8</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+<br class="fancyvrb" /><a 
+ id="x7-73042r9"></a><span 
+class="ptmr7t-x-x-50">9</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+<br class="fancyvrb" /><a 
+ id="x7-73044r10"></a><span 
+class="ptmr7t-x-x-50">10</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;diff</span><span 
+class="pcrr7tn-">&#x00A0;-r</span><span 
+class="pcrr7tn-">&#x00A0;82e55d328c8c</span><span 
+class="pcrr7tn-">&#x00A0;-r</span><span 
+class="pcrr7tn-">&#x00A0;057d3c2d823c</span><span 
+class="pcrr7tn-">&#x00A0;hello.c</span>
+<br class="fancyvrb" /><a 
+ id="x7-73046r11"></a><span 
+class="ptmr7t-x-x-50">11</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;---</span><span 
+class="pcrr7tn-">&#x00A0;a/hello.c        Fri</span><span 
+class="pcrr7tn-">&#x00A0;Aug</span><span 
+class="pcrr7tn-">&#x00A0;26</span><span 
+class="pcrr7tn-">&#x00A0;01:21:28</span><span 
+class="pcrr7tn-">&#x00A0;2005</span><span 
+class="pcrr7tn-">&#x00A0;-0700</span>
+<br class="fancyvrb" /><a 
+ id="x7-73048r12"></a><span 
+class="ptmr7t-x-x-50">12</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;+++</span><span 
+class="pcrr7tn-">&#x00A0;b/hello.c        Tue</span><span 
+class="pcrr7tn-">&#x00A0;Sep</span><span 
+class="pcrr7tn-">&#x00A0;06</span><span 
+class="pcrr7tn-">&#x00A0;13:15:43</span><span 
+class="pcrr7tn-">&#x00A0;2005</span><span 
+class="pcrr7tn-">&#x00A0;-0700</span>
+<br class="fancyvrb" /><a 
+ id="x7-73050r13"></a><span 
+class="ptmr7t-x-x-50">13</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;@@</span><span 
+class="pcrr7tn-">&#x00A0;-11,6</span><span 
+class="pcrr7tn-">&#x00A0;+11,6</span><span 
+class="pcrr7tn-">&#x00A0;@@</span>
+<br class="fancyvrb" /><a 
+ id="x7-73052r14"></a><span 
+class="ptmr7t-x-x-50">14</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+<br class="fancyvrb" /><a 
+ id="x7-73054r15"></a><span 
+class="ptmr7t-x-x-50">15</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;int</span><span 
+class="pcrr7tn-">&#x00A0;main(int</span><span 
+class="pcrr7tn-">&#x00A0;argc,</span><span 
+class="pcrr7tn-">&#x00A0;char</span><span 
+class="pcrr7tn-">&#x00A0;&#x22C6;&#x22C6;argv)</span>
+<br class="fancyvrb" /><a 
+ id="x7-73056r16"></a><span 
+class="ptmr7t-x-x-50">16</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="cmsy-10">{</span>
+<br class="fancyvrb" /><a 
+ id="x7-73058r17"></a><span 
+class="ptmr7t-x-x-50">17</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;-        printf("hello,</span><span 
+class="pcrr7tn-">&#x00A0;world!</span><span 
+class="cmsy-10">&#x2216;</span><span 
+class="pcrr7tn-">n");</span>
+<br class="fancyvrb" /><a 
+ id="x7-73060r18"></a><span 
+class="ptmr7t-x-x-50">18</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;+        printf("hello,</span><span 
+class="pcrr7tn-">&#x00A0;world!</span><span 
+class="cmsy-10">&#x2216;</span><span 
+class="pcrr7tn-">");</span>
+<br class="fancyvrb" /><a 
+ id="x7-73062r19"></a><span 
+class="ptmr7t-x-x-50">19</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;        return</span><span 
+class="pcrr7tn-">&#x00A0;0;</span>
+<br class="fancyvrb" /><a 
+ id="x7-73064r20"></a><span 
+class="ptmr7t-x-x-50">20</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="cmsy-10">}</span>
+<br class="fancyvrb" /><a 
+ id="x7-73066r21"></a><span 
+class="ptmr7t-x-x-50">21</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+   </div>
+<!--l. 271--><p class="noindent">
+</p>
+   <h3 class="sectionHead"><span class="titlemark">3.5    </span> <a 
+ id="x7-740003.5"></a>All about command options</h3>
+<!--l. 273--><p class="noindent">Let&#x2019;s take a brief break from exploring Mercurial commands to discuss a pattern in the way that they work; you may find this
+useful to keep in mind as we continue our tour.
+</p><!--l. 277--><p class="indent">   Mercurial has a consistent and straightforward approach to dealing with the options that you can pass to commands. It
+follows the conventions for options that are common to modern Linux and Unix systems. </p>
+     <ul><li><span class="dt">
+     </span><span class="dd">Every option has a long name. For example, as we&#x2019;ve already seen, the <a 
+ id="dx7-74001"></a>&#x201C;<span 
+class="pcrr7tn-">hg log</span>&#x201D; command accepts a <a 
+ id="dx7-74002"></a><span 
+class="pcrr7tn-">--rev</span>
+     option.
+     </span><li><span class="dt">
+     </span><span class="dd">Most options have short names, too. Instead of <a 
+ id="dx7-74003"></a><span 
+class="pcrr7tn-">--rev</span>, we can use <a 
+ id="dx7-74004"></a><span 
+class="pcrr7tn-">-r</span>. (The reason that some options don&#x2019;t have
+     short names is that the options in question are rarely used.)
+                                                                                         
+                                                                                         
+     </span><li><span class="dt">
+     </span><span class="dd">Long options start with two dashes (e.g.&#x00A0;<a 
+ id="dx7-74005"></a><span 
+class="pcrr7tn-">--rev</span>), while short options start with one (e.g.&#x00A0;<a 
+ id="dx7-74006"></a><span 
+class="pcrr7tn-">-r</span>).
+     </span><li><span class="dt">
+     </span><span class="dd">Option naming and usage is consistent across commands. For example, every command that lets you specify a
+     changeset&#x00A0;ID or revision number accepts both <a 
+ id="dx7-74007"></a><span 
+class="pcrr7tn-">-r </span>and <a 
+ id="dx7-74008"></a><span 
+class="pcrr7tn-">--rev </span>arguments.</li></ul>
+<!--l. 295--><p class="noindent">In the examples throughout this book, I use short options instead of long. This just reflects my own preference, so don&#x2019;t read
+anything significant into it.
+</p><!--l. 299--><p class="indent">   Most commands that print output of some kind will print more output when passed a <a 
+ id="dx7-74009"></a><span 
+class="pcrr7tn-">-v </span>(or <a 
+ id="dx7-74010"></a><span 
+class="pcrr7tn-">--verbose</span>) option, and less
+when passed <a 
+ id="dx7-74011"></a><span 
+class="pcrr7tn-">-q </span>(or <a 
+ id="dx7-74012"></a><span 
+class="pcrr7tn-">--quiet</span>).
+</p><!--l. 303--><p class="noindent">
+</p>
+   <h3 class="sectionHead"><span class="titlemark">3.6    </span> <a 
+ id="x7-750003.6"></a>Making and reviewing changes</h3>
+<!--l. 305--><p class="noindent">Now that we have a grasp of viewing history in Mercurial, let&#x2019;s take a look at making some changes and examining
+them.
+</p><!--l. 308--><p class="indent">   The first thing we&#x2019;ll do is isolate our experiment in a repository of its own. We use the <a 
+ id="dx7-75001"></a>&#x201C;<span 
+class="pcrr7tn-">hg clone</span>&#x201D; command, but we don&#x2019;t
+need to clone a copy of the remote repository. Since we already have a copy of it locally, we can just clone that instead. This is
+much faster than cloning over the network, and cloning a local repository uses less disk space in most cases,
+too.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-75003r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">cd</span><span 
+class="pcrb7t-">&#x00A0;..</span>
+<br class="fancyvrb" /><a 
+ id="x7-75005r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;clone</span><span 
+class="pcrb7t-">&#x00A0;hello</span><span 
+class="pcrb7t-">&#x00A0;my-hello</span>
+<br class="fancyvrb" /><a 
+ id="x7-75007r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;2</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;updated,</span><span 
+class="pcrr7tn-">&#x00A0;0</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;merged,</span><span 
+class="pcrr7tn-">&#x00A0;0</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;removed,</span><span 
+class="pcrr7tn-">&#x00A0;0</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;unresolved</span>
+<br class="fancyvrb" /><a 
+ id="x7-75009r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">cd</span><span 
+class="pcrb7t-">&#x00A0;my-hello</span>
+   </div>
+<!--l. 315--><p class="noindent">As an aside, it&#x2019;s often good practice to keep a &#x201C;pristine&#x201D; copy of a remote repository around, which you can then
+make temporary clones of to create sandboxes for each task you want to wshelork on. This lets you work on
+multiple tasks in parallel, each isolated from the others until it&#x2019;s complete and you&#x2019;re ready to integrate it back.
+Because local clones are so cheap, there&#x2019;s almost no overhead to cloning and destroying repositories whenever you
+want.
+</p><!--l. 323--><p class="indent">   In our <span 
+class="pcrr7tn-">my-hello </span>repository, we have a file <span 
+class="pcrr7tn-">hello.c </span>that contains the classic &#x201C;hello, world&#x201D; program. Let&#x2019;s use the ancient
+and venerable <a 
+ id="dx7-75010"></a><span 
+class="pcrr7tn-">bb </span>command to edit this file so that it prints a second line of output. (I&#x2019;m only using <a 
+ id="dx7-75011"></a><span 
+class="pcrr7tn-">sed </span>to do this because it&#x2019;s
+easy to write a scripted example this way. Since you&#x2019;re not under the same constraint, you probably won&#x2019;t want to use <a 
+ id="dx7-75012"></a><span 
+class="pcrr7tn-">sed</span>;
+simply use your preferred text editor to do the same thing.)
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-75014r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">sed</span><span 
+class="pcrb7t-">&#x00A0;-i</span><span 
+class="pcrb7t-">&#x00A0;'/printf/a</span><span 
+class="cmsy-10">&#x2216;&#x2216;</span><span 
+class="pcrb7t-">tprintf("hello</span><span 
+class="pcrb7t-">&#x00A0;again!</span><span 
+class="cmsy-10">&#x2216;&#x2216;</span><span 
+class="pcrb7t-">n");'</span><span 
+class="pcrb7t-">&#x00A0;hello.c</span>
+   </div>
+<!--l. 333--><p class="indent">   Mercurial&#x2019;s <a 
+ id="dx7-75015"></a>&#x201C;<span 
+class="pcrr7tn-">hg status</span>&#x201D; command will tell us what Mercurial knows about the files in the repository.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-75017r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">ls</span>
+<br class="fancyvrb" /><a 
+ id="x7-75019r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Makefile</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;hello.c</span>
+<br class="fancyvrb" /><a 
+ id="x7-75021r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;status</span>
+<br class="fancyvrb" /><a 
+ id="x7-75023r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;M</span><span 
+class="pcrr7tn-">&#x00A0;hello.c</span>
+   </div>
+                                                                                         
+                                                                                         
+<!--l. 336--><p class="noindent">The <a 
+ id="dx7-75024"></a>&#x201C;<span 
+class="pcrr7tn-">hg status</span>&#x201D; command prints no output for some files, but a line starting with &#x201C;<span 
+class="pcrr7tn-">M</span>&#x201D; for <span 
+class="pcrr7tn-">hello.c</span>. Unless you tell it to, <a 
+ id="dx7-75025"></a>&#x201C;<span 
+class="pcrr7tn-">hg</span>
+<span 
+class="pcrr7tn-">status</span>&#x201D; will not print any output for files that have not been modified.
+</p><!--l. 341--><p class="indent">   The &#x201C;<span 
+class="pcrr7tn-">M</span>&#x201D; indicates that Mercurial has noticed that we modified <span 
+class="pcrr7tn-">hello.c</span>. We didn&#x2019;t need to <span 
+class="ptmri7t-">inform </span>Mercurial that we were
+going to modify the file before we started, or that we had modified the file after we were done; it was able to figure this out
+itself.
+</p><!--l. 347--><p class="indent">   It&#x2019;s a little bit helpful to know that we&#x2019;ve modified <span 
+class="pcrr7tn-">hello.c</span>, but we might prefer to know exactly <span 
+class="ptmri7t-">what </span>changes we&#x2019;ve made
+to it. To do this, we use the <a 
+ id="dx7-75026"></a>&#x201C;<span 
+class="pcrr7tn-">hg diff</span>&#x201D; command.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-75028r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;diff</span>
+<br class="fancyvrb" /><a 
+ id="x7-75030r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;diff</span><span 
+class="pcrr7tn-">&#x00A0;-r</span><span 
+class="pcrr7tn-">&#x00A0;b57f9a090b62</span><span 
+class="pcrr7tn-">&#x00A0;hello.c</span>
+<br class="fancyvrb" /><a 
+ id="x7-75032r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;---</span><span 
+class="pcrr7tn-">&#x00A0;a/hello.c        Tue</span><span 
+class="pcrr7tn-">&#x00A0;Sep</span><span 
+class="pcrr7tn-">&#x00A0;06</span><span 
+class="pcrr7tn-">&#x00A0;15:43:07</span><span 
+class="pcrr7tn-">&#x00A0;2005</span><span 
+class="pcrr7tn-">&#x00A0;-0700</span>
+<br class="fancyvrb" /><a 
+ id="x7-75034r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;+++</span><span 
+class="pcrr7tn-">&#x00A0;b/hello.c        Sun</span><span 
+class="pcrr7tn-">&#x00A0;Apr</span><span 
+class="pcrr7tn-">&#x00A0;27</span><span 
+class="pcrr7tn-">&#x00A0;00:04:35</span><span 
+class="pcrr7tn-">&#x00A0;2008</span><span 
+class="pcrr7tn-">&#x00A0;+0000</span>
+<br class="fancyvrb" /><a 
+ id="x7-75036r5"></a><span 
+class="ptmr7t-x-x-50">5</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;@@</span><span 
+class="pcrr7tn-">&#x00A0;-8,5</span><span 
+class="pcrr7tn-">&#x00A0;+8,6</span><span 
+class="pcrr7tn-">&#x00A0;@@</span><span 
+class="pcrr7tn-">&#x00A0;int</span><span 
+class="pcrr7tn-">&#x00A0;main(int</span><span 
+class="pcrr7tn-">&#x00A0;argc,</span><span 
+class="pcrr7tn-">&#x00A0;char</span><span 
+class="pcrr7tn-">&#x00A0;&#x22C6;&#x22C6;argv)</span>
+<br class="fancyvrb" /><a 
+ id="x7-75038r6"></a><span 
+class="ptmr7t-x-x-50">6</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;int</span><span 
+class="pcrr7tn-">&#x00A0;main(int</span><span 
+class="pcrr7tn-">&#x00A0;argc,</span><span 
+class="pcrr7tn-">&#x00A0;char</span><span 
+class="pcrr7tn-">&#x00A0;&#x22C6;&#x22C6;argv)</span>
+<br class="fancyvrb" /><a 
+ id="x7-75040r7"></a><span 
+class="ptmr7t-x-x-50">7</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="cmsy-10">{</span>
+<br class="fancyvrb" /><a 
+ id="x7-75042r8"></a><span 
+class="ptmr7t-x-x-50">8</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;        printf("hello,</span><span 
+class="pcrr7tn-">&#x00A0;world!</span><span 
+class="cmsy-10">&#x2216;</span><span 
+class="pcrr7tn-">");</span>
+<br class="fancyvrb" /><a 
+ id="x7-75044r9"></a><span 
+class="ptmr7t-x-x-50">9</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;+        printf("hello</span><span 
+class="pcrr7tn-">&#x00A0;again!</span><span 
+class="cmsy-10">&#x2216;</span><span 
+class="pcrr7tn-">n");</span>
+<br class="fancyvrb" /><a 
+ id="x7-75046r10"></a><span 
+class="ptmr7t-x-x-50">10</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;        return</span><span 
+class="pcrr7tn-">&#x00A0;0;</span>
+<br class="fancyvrb" /><a 
+ id="x7-75048r11"></a><span 
+class="ptmr7t-x-x-50">11</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="cmsy-10">}</span>
+   </div>
+<!--l. 353--><p class="noindent">
+</p>
+   <h3 class="sectionHead"><span class="titlemark">3.7    </span> <a 
+ id="x7-760003.7"></a>Recording changes in a new changeset</h3>
+<!--l. 355--><p class="noindent">We can modify files, build and test our changes, and use <a 
+ id="dx7-76001"></a>&#x201C;<span 
+class="pcrr7tn-">hg status</span>&#x201D; and <a 
+ id="dx7-76002"></a>&#x201C;<span 
+class="pcrr7tn-">hg diff</span>&#x201D; to review our changes, until we&#x2019;re
+satisfied with what we&#x2019;ve done and arrive at a natural stopping point where we want to record our work in a new
+changeset.
+</p><!--l. 360--><p class="indent">   The <a 
+ id="dx7-76003"></a>&#x201C;<span 
+class="pcrr7tn-">hg commit</span>&#x201D; command lets us create a new changeset; we&#x2019;ll usually refer to this as &#x201C;making a commit&#x201D; or
+&#x201C;committing&#x201D;.
+</p><!--l. 363--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.7.1    </span> <a 
+ id="x7-770003.7.1"></a>Setting up a username</h4>
+<!--l. 365--><p class="noindent">When you try to run <a 
+ id="dx7-77001"></a>&#x201C;<span 
+class="pcrr7tn-">hg commit</span>&#x201D; for the first time, it is not guaranteed to succeed. Mercurial records your name and address
+with each change that you commit, so that you and others will later be able to tell who made each change. Mercurial tries to
+automatically figure out a sensible username to commit the change with. It will attempt each of the following methods, in
+order:
+     </p><ol  class="enumerate1" >
+     <li class="enumerate"><a 
+ id="x7-77003x1"></a>If you specify a <a 
+ id="dx7-77004"></a><span 
+class="pcrr7tn-">-u </span>option to the <a 
+ id="dx7-77005"></a>&#x201C;<span 
+class="pcrr7tn-">hg commit</span>&#x201D; command on the command line, followed by a username, this is
+     always given the highest precedence.
+     </li>
+     <li class="enumerate"><a 
+ id="x7-77007x2"></a>If you have set the <a 
+ id="dx7-77008"></a><a 
+ id="dx7-77009"></a><span 
+class="pcrr7tn-">HGUSER </span>environment variable, this is checked next.
+     </li>
+     <li class="enumerate"><a 
+ id="x7-77011x3"></a>If you create a file in your home directory called <a 
+ id="dx7-77012"></a><span 
+class="pcrr7tn-">.hgrc</span>, with a <a 
+ id="dx7-77013"></a><span 
+class="pcrr7tn-">username </span>entry, that will be used next. To see
+     what the contents of this file should look like, refer to section&#x00A0;<a 
+href="#x7-780003.7.1">3.7.1<!--tex4ht:ref: sec:tour-basic:username --></a> below.
+                                                                                         
+                                                                                         
+     </li>
+     <li class="enumerate"><a 
+ id="x7-77015x4"></a>If you have set the <a 
+ id="dx7-77016"></a><a 
+ id="dx7-77017"></a><span 
+class="pcrr7tn-">EMAIL </span>environment variable, this will be used next.
+     </li>
+     <li class="enumerate"><a 
+ id="x7-77019x5"></a>Mercurial will query your system to find out your local user name and host name, and construct a username
+     from these components. Since this often results in a username that is not very useful, it will print a warning if it
+     has to do this.</li></ol>
+<!--l. 388--><p class="noindent">If all of these mechanisms fail, Mercurial will fail, printing an error message. In this case, it will not let you commit until you set up
+a username.
+</p><!--l. 392--><p class="indent">   You should think of the <a 
+ id="dx7-77020"></a><a 
+ id="dx7-77021"></a><span 
+class="pcrr7tn-">HGUSER </span>environment variable and the <a 
+ id="dx7-77022"></a><span 
+class="pcrr7tn-">-u </span>option to the <a 
+ id="dx7-77023"></a>&#x201C;<span 
+class="pcrr7tn-">hg commit</span>&#x201D; command as ways to <span 
+class="ptmri7t-">override</span>
+Mercurial&#x2019;s default selection of username. For normal use, the simplest and most robust way to set a username for yourself is
+by creating a <a 
+ id="dx7-77024"></a><span 
+class="pcrr7tn-">.hgrc </span>file; see below for details.
+</p><!--l. 398--><p class="noindent">
+</p>
+   <h5 class="subsubsectionHead"><a 
+ id="x7-780003.7.1"></a>Creating a Mercurial configuration file</h5>
+<!--l. 401--><p class="noindent">To set a user name, use your favourite editor to create a file called <a 
+ id="dx7-78001"></a><span 
+class="pcrr7tn-">.hgrc </span>in your home directory. Mercurial will use this
+file to look up your personalised configuration settings. The initial contents of your <a 
+ id="dx7-78002"></a><span 
+class="pcrr7tn-">.hgrc </span>should look like
+this.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-78004r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;#</span><span 
+class="pcrr7tn-">&#x00A0;This</span><span 
+class="pcrr7tn-">&#x00A0;is</span><span 
+class="pcrr7tn-">&#x00A0;a</span><span 
+class="pcrr7tn-">&#x00A0;Mercurial</span><span 
+class="pcrr7tn-">&#x00A0;configuration</span><span 
+class="pcrr7tn-">&#x00A0;file.</span>
+<br class="fancyvrb" /><a 
+ id="x7-78006r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;[ui]</span>
+<br class="fancyvrb" /><a 
+ id="x7-78008r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;username</span><span 
+class="pcrr7tn-">&#x00A0;=</span><span 
+class="pcrr7tn-">&#x00A0;Firstname</span><span 
+class="pcrr7tn-">&#x00A0;Lastname</span><span 
+class="pcrr7tn-">&#x00A0;&#x003c;email.address@domain.net&#x003e;</span>
+   </div>
+<!--l. 410--><p class="noindent">The &#x201C;<span 
+class="pcrr7tn-">[ui]</span>&#x201D; line begins a <span 
+class="ptmri7t-">section </span>of the config file, so you can read the &#x201C;<span 
+class="pcrr7tn-">username = ...</span>&#x201D; line as meaning &#x201C;set the value of the
+<span 
+class="pcrr7tn-">username </span>item in the <span 
+class="pcrr7tn-">ui </span>section&#x201D;. A section continues until a new section begins, or the end of the file. Mercurial ignores
+empty lines and treats any text from &#x201C;<span 
+class="pcrr7tn-">#</span>&#x201D; to the end of a line as a comment.
+</p><!--l. 417--><p class="noindent">
+</p>
+   <h5 class="subsubsectionHead"><a 
+ id="x7-790003.7.1"></a>Choosing a user name</h5>
+<!--l. 419--><p class="noindent">You can use any text you like as the value of the <span 
+class="pcrr7tn-">username </span>config item, since this information is for reading by other people,
+but for interpreting by Mercurial. The convention that most people follow is to use their name and email address, as in the
+example above.
+</p>
+   <div class="fbox"><span 
+class="ptmb7t-">Note:    </span>Mercurial&#x2019;s  built-in  web  server  obfuscates  email  addresses,  to  make  it
+more difficult for the email harvesting tools that spammers use. This reduces the
+likelihood that you&#x2019;ll start receiving more junk email if you publish a Mercurial
+repository on the web.                                                                                                </div>
+<!--l. 432--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.7.2    </span> <a 
+ id="x7-800003.7.2"></a>Writing a commit message</h4>
+<!--l. 434--><p class="noindent">When we commit a change, Mercurial drops us into a text editor, to enter a message that will describe the modifications we&#x2019;ve
+made in this changeset. This is called the <span 
+class="ptmri7t-">commit message</span>. It will be a record for readers of what we did and why, and it will be
+printed by <a 
+ id="dx7-80001"></a>&#x201C;<span 
+class="pcrr7tn-">hg log</span>&#x201D; after we&#x2019;ve finished committing.
+                                                                                         
+                                                                                         
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-80003r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;commit</span>
+   </div>
+<!--l. 441--><p class="indent">   The editor that the <a 
+ id="dx7-80004"></a>&#x201C;<span 
+class="pcrr7tn-">hg commit</span>&#x201D; command drops us into will contain an empty line, followed by a number of lines starting
+with &#x201C;<span 
+class="pcrr7tn-">HG:</span>&#x201D;.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-80006r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrro7t-">empty</span><span 
+class="pcrro7t-">&#x00A0;line</span>
+<br class="fancyvrb" /><a 
+ id="x7-80008r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;HG:</span><span 
+class="pcrr7tn-">&#x00A0;changed</span><span 
+class="pcrr7tn-">&#x00A0;hello.c</span>
+   </div>
+<!--l. 448--><p class="noindent">Mercurial ignores the lines that start with &#x201C;<span 
+class="pcrr7tn-">HG:</span>&#x201D;; it uses them only to tell us which files it&#x2019;s recording changes to. Modifying or
+deleting these lines has no effect.
+</p><!--l. 452--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.7.3    </span> <a 
+ id="x7-810003.7.3"></a>Writing a good commit message</h4>
+<!--l. 454--><p class="noindent">Since <a 
+ id="dx7-81001"></a>&#x201C;<span 
+class="pcrr7tn-">hg log</span>&#x201D; only prints the first line of a commit message by default, it&#x2019;s best to write a commit message whose first line
+stands alone. Here&#x2019;s a real example of a commit message that <span 
+class="ptmri7t-">doesn&#x2019;t </span>follow this guideline, and hence has a summary that is not
+readable.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-81003r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;changeset:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;73:584af0e231be</span>
+<br class="fancyvrb" /><a 
+ id="x7-81005r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;user:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Censored</span><span 
+class="pcrr7tn-">&#x00A0;Person</span><span 
+class="pcrr7tn-">&#x00A0;&#x003c;censored.person@example.org&#x003e;</span>
+<br class="fancyvrb" /><a 
+ id="x7-81007r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;date:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Tue</span><span 
+class="pcrr7tn-">&#x00A0;Sep</span><span 
+class="pcrr7tn-">&#x00A0;26</span><span 
+class="pcrr7tn-">&#x00A0;21:37:07</span><span 
+class="pcrr7tn-">&#x00A0;2006</span><span 
+class="pcrr7tn-">&#x00A0;-0700</span>
+<br class="fancyvrb" /><a 
+ id="x7-81009r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;summary:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;include</span><span 
+class="pcrr7tn-">&#x00A0;buildmeister/commondefs.</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Add</span><span 
+class="pcrr7tn-">&#x00A0;an</span><span 
+class="pcrr7tn-">&#x00A0;exports</span><span 
+class="pcrr7tn-">&#x00A0;and</span><span 
+class="pcrr7tn-">&#x00A0;install</span>
+   </div>
+<!--l. 465--><p class="indent">   As far as the remainder of the contents of the commit message are concerned, there are no hard-and-fast rules. Mercurial
+itself doesn&#x2019;t interpret or care about the contents of the commit message, though your project may have policies that dictate a
+certain kind of formatting.
+</p><!--l. 471--><p class="indent">   My personal preference is for short, but informative, commit messages that tell me something that I can&#x2019;t figure out with a
+quick glance at the output of <a 
+ id="dx7-81010"></a>&#x201C;<span 
+class="pcrr7tn-">hg log --patch</span>&#x201D;.
+</p><!--l. 475--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.7.4    </span> <a 
+ id="x7-820003.7.4"></a>Aborting a commit</h4>
+<!--l. 477--><p class="noindent">If you decide that you don&#x2019;t want to commit while in the middle of editing a commit message, simply exit from your editor
+without saving the file that it&#x2019;s editing. This will cause nothing to happen to either the repository or the working
+directory.
+</p><!--l. 482--><p class="indent">   If we run the <a 
+ id="dx7-82001"></a>&#x201C;<span 
+class="pcrr7tn-">hg commit</span>&#x201D; command without any arguments, it records all of the changes we&#x2019;ve made, as reported by <a 
+ id="dx7-82002"></a>&#x201C;<span 
+class="pcrr7tn-">hg</span>
+<span 
+class="pcrr7tn-">status</span>&#x201D; and <a 
+ id="dx7-82003"></a>&#x201C;<span 
+class="pcrr7tn-">hg diff</span>&#x201D;.
+                                                                                         
+                                                                                         
+</p><!--l. 486--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.7.5    </span> <a 
+ id="x7-830003.7.5"></a>Admiring our new handiwork</h4>
+<!--l. 488--><p class="noindent">Once we&#x2019;ve finished the commit, we can use the <a 
+ id="dx7-83001"></a>&#x201C;<span 
+class="pcrr7tn-">hg tip</span>&#x201D; command to display the changeset we just created.
+This command produces output that is identical to <a 
+ id="dx7-83002"></a>&#x201C;<span 
+class="pcrr7tn-">hg log</span>&#x201D;, but it only displays the newest revision in the
+repository.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-83004r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;tip</span><span 
+class="pcrb7t-">&#x00A0;-vp</span>
+<br class="fancyvrb" /><a 
+ id="x7-83006r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;changeset:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;5:c943cfd31ca5</span>
+<br class="fancyvrb" /><a 
+ id="x7-83008r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;tag:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;tip</span>
+<br class="fancyvrb" /><a 
+ id="x7-83010r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;user:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Bryan</span><span 
+class="pcrr7tn-">&#x00A0;O'Sullivan</span><span 
+class="pcrr7tn-">&#x00A0;&#x003c;bos@serpentine.com&#x003e;</span>
+<br class="fancyvrb" /><a 
+ id="x7-83012r5"></a><span 
+class="ptmr7t-x-x-50">5</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;date:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Sun</span><span 
+class="pcrr7tn-">&#x00A0;Apr</span><span 
+class="pcrr7tn-">&#x00A0;27</span><span 
+class="pcrr7tn-">&#x00A0;00:04:35</span><span 
+class="pcrr7tn-">&#x00A0;2008</span><span 
+class="pcrr7tn-">&#x00A0;+0000</span>
+<br class="fancyvrb" /><a 
+ id="x7-83014r6"></a><span 
+class="ptmr7t-x-x-50">6</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;files:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;hello.c</span>
+<br class="fancyvrb" /><a 
+ id="x7-83016r7"></a><span 
+class="ptmr7t-x-x-50">7</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;description:</span>
+<br class="fancyvrb" /><a 
+ id="x7-83018r8"></a><span 
+class="ptmr7t-x-x-50">8</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Added</span><span 
+class="pcrr7tn-">&#x00A0;an</span><span 
+class="pcrr7tn-">&#x00A0;extra</span><span 
+class="pcrr7tn-">&#x00A0;line</span><span 
+class="pcrr7tn-">&#x00A0;of</span><span 
+class="pcrr7tn-">&#x00A0;output</span>
+<br class="fancyvrb" /><a 
+ id="x7-83020r9"></a><span 
+class="ptmr7t-x-x-50">9</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+<br class="fancyvrb" /><a 
+ id="x7-83022r10"></a><span 
+class="ptmr7t-x-x-50">10</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+<br class="fancyvrb" /><a 
+ id="x7-83024r11"></a><span 
+class="ptmr7t-x-x-50">11</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;diff</span><span 
+class="pcrr7tn-">&#x00A0;-r</span><span 
+class="pcrr7tn-">&#x00A0;b57f9a090b62</span><span 
+class="pcrr7tn-">&#x00A0;-r</span><span 
+class="pcrr7tn-">&#x00A0;c943cfd31ca5</span><span 
+class="pcrr7tn-">&#x00A0;hello.c</span>
+<br class="fancyvrb" /><a 
+ id="x7-83026r12"></a><span 
+class="ptmr7t-x-x-50">12</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;---</span><span 
+class="pcrr7tn-">&#x00A0;a/hello.c        Tue</span><span 
+class="pcrr7tn-">&#x00A0;Sep</span><span 
+class="pcrr7tn-">&#x00A0;06</span><span 
+class="pcrr7tn-">&#x00A0;15:43:07</span><span 
+class="pcrr7tn-">&#x00A0;2005</span><span 
+class="pcrr7tn-">&#x00A0;-0700</span>
+<br class="fancyvrb" /><a 
+ id="x7-83028r13"></a><span 
+class="ptmr7t-x-x-50">13</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;+++</span><span 
+class="pcrr7tn-">&#x00A0;b/hello.c        Sun</span><span 
+class="pcrr7tn-">&#x00A0;Apr</span><span 
+class="pcrr7tn-">&#x00A0;27</span><span 
+class="pcrr7tn-">&#x00A0;00:04:35</span><span 
+class="pcrr7tn-">&#x00A0;2008</span><span 
+class="pcrr7tn-">&#x00A0;+0000</span>
+<br class="fancyvrb" /><a 
+ id="x7-83030r14"></a><span 
+class="ptmr7t-x-x-50">14</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;@@</span><span 
+class="pcrr7tn-">&#x00A0;-8,5</span><span 
+class="pcrr7tn-">&#x00A0;+8,6</span><span 
+class="pcrr7tn-">&#x00A0;@@</span><span 
+class="pcrr7tn-">&#x00A0;int</span><span 
+class="pcrr7tn-">&#x00A0;main(int</span><span 
+class="pcrr7tn-">&#x00A0;argc,</span><span 
+class="pcrr7tn-">&#x00A0;char</span><span 
+class="pcrr7tn-">&#x00A0;&#x22C6;&#x22C6;argv)</span>
+<br class="fancyvrb" /><a 
+ id="x7-83032r15"></a><span 
+class="ptmr7t-x-x-50">15</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;int</span><span 
+class="pcrr7tn-">&#x00A0;main(int</span><span 
+class="pcrr7tn-">&#x00A0;argc,</span><span 
+class="pcrr7tn-">&#x00A0;char</span><span 
+class="pcrr7tn-">&#x00A0;&#x22C6;&#x22C6;argv)</span>
+<br class="fancyvrb" /><a 
+ id="x7-83034r16"></a><span 
+class="ptmr7t-x-x-50">16</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="cmsy-10">{</span>
+<br class="fancyvrb" /><a 
+ id="x7-83036r17"></a><span 
+class="ptmr7t-x-x-50">17</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;        printf("hello,</span><span 
+class="pcrr7tn-">&#x00A0;world!</span><span 
+class="cmsy-10">&#x2216;</span><span 
+class="pcrr7tn-">");</span>
+<br class="fancyvrb" /><a 
+ id="x7-83038r18"></a><span 
+class="ptmr7t-x-x-50">18</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;+        printf("hello</span><span 
+class="pcrr7tn-">&#x00A0;again!</span><span 
+class="cmsy-10">&#x2216;</span><span 
+class="pcrr7tn-">n");</span>
+<br class="fancyvrb" /><a 
+ id="x7-83040r19"></a><span 
+class="ptmr7t-x-x-50">19</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;        return</span><span 
+class="pcrr7tn-">&#x00A0;0;</span>
+<br class="fancyvrb" /><a 
+ id="x7-83042r20"></a><span 
+class="ptmr7t-x-x-50">20</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="cmsy-10">}</span>
+<br class="fancyvrb" /><a 
+ id="x7-83044r21"></a><span 
+class="ptmr7t-x-x-50">21</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+   </div>
+<!--l. 493--><p class="noindent">We refer to the newest revision in the repository as the tip revision, or simply the tip.
+</p><!--l. 496--><p class="noindent">
+</p>
+   <h3 class="sectionHead"><span class="titlemark">3.8    </span> <a 
+ id="x7-840003.8"></a>Sharing changes</h3>
+<!--l. 498--><p class="noindent">We mentioned earlier that repositories in Mercurial are self-contained. This means that the changeset we just created
+exists only in our <span 
+class="pcrr7tn-">my-hello </span>repository. Let&#x2019;s look at a few ways that we can propagate this change into other
+repositories.
+</p><!--l. 503--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.8.1    </span> <a 
+ id="x7-850003.8.1"></a>Pulling changes from another repository</h4>
+<!--l. 506--><p class="noindent">To get started, let&#x2019;s clone our original <span 
+class="pcrr7tn-">hello </span>repository, which does not contain the change we just committed. We&#x2019;ll call our
+temporary repository <span 
+class="pcrr7tn-">hello-pull</span>.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+                                                                                         
+                                                                                         
+<a 
+ id="x7-85002r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">cd</span><span 
+class="pcrb7t-">&#x00A0;..</span>
+<br class="fancyvrb" /><a 
+ id="x7-85004r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;clone</span><span 
+class="pcrb7t-">&#x00A0;hello</span><span 
+class="pcrb7t-">&#x00A0;hello-pull</span>
+<br class="fancyvrb" /><a 
+ id="x7-85006r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;2</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;updated,</span><span 
+class="pcrr7tn-">&#x00A0;0</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;merged,</span><span 
+class="pcrr7tn-">&#x00A0;0</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;removed,</span><span 
+class="pcrr7tn-">&#x00A0;0</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;unresolved</span>
+   </div>
+<!--l. 511--><p class="indent">   We&#x2019;ll use the <a 
+ id="dx7-85007"></a>&#x201C;<span 
+class="pcrr7tn-">hg pull</span>&#x201D; command to bring changes from <span 
+class="pcrr7tn-">my-hello </span>into <span 
+class="pcrr7tn-">hello-pull</span>. However, blindly pulling unknown
+changes into a repository is a somewhat scary prospect. Mercurial provides the <a 
+ id="dx7-85008"></a>&#x201C;<span 
+class="pcrr7tn-">hg incoming</span>&#x201D; command to tell us
+what changes the <a 
+ id="dx7-85009"></a>&#x201C;<span 
+class="pcrr7tn-">hg pull</span>&#x201D; command <span 
+class="ptmri7t-">would </span>pull into the repository, without actually pulling the changes
+in.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-85011r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">cd</span><span 
+class="pcrb7t-">&#x00A0;hello-pull</span>
+<br class="fancyvrb" /><a 
+ id="x7-85013r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;incoming</span><span 
+class="pcrb7t-">&#x00A0;../my-hello</span>
+<br class="fancyvrb" /><a 
+ id="x7-85015r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;searching</span><span 
+class="pcrr7tn-">&#x00A0;for</span><span 
+class="pcrr7tn-">&#x00A0;changes</span>
+<br class="fancyvrb" /><a 
+ id="x7-85017r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;changeset:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;5:c943cfd31ca5</span>
+<br class="fancyvrb" /><a 
+ id="x7-85019r5"></a><span 
+class="ptmr7t-x-x-50">5</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;tag:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;tip</span>
+<br class="fancyvrb" /><a 
+ id="x7-85021r6"></a><span 
+class="ptmr7t-x-x-50">6</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;user:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Bryan</span><span 
+class="pcrr7tn-">&#x00A0;O'Sullivan</span><span 
+class="pcrr7tn-">&#x00A0;&#x003c;bos@serpentine.com&#x003e;</span>
+<br class="fancyvrb" /><a 
+ id="x7-85023r7"></a><span 
+class="ptmr7t-x-x-50">7</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;date:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Sun</span><span 
+class="pcrr7tn-">&#x00A0;Apr</span><span 
+class="pcrr7tn-">&#x00A0;27</span><span 
+class="pcrr7tn-">&#x00A0;00:04:35</span><span 
+class="pcrr7tn-">&#x00A0;2008</span><span 
+class="pcrr7tn-">&#x00A0;+0000</span>
+<br class="fancyvrb" /><a 
+ id="x7-85025r8"></a><span 
+class="ptmr7t-x-x-50">8</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;summary:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Added</span><span 
+class="pcrr7tn-">&#x00A0;an</span><span 
+class="pcrr7tn-">&#x00A0;extra</span><span 
+class="pcrr7tn-">&#x00A0;line</span><span 
+class="pcrr7tn-">&#x00A0;of</span><span 
+class="pcrr7tn-">&#x00A0;output</span>
+<br class="fancyvrb" /><a 
+ id="x7-85027r9"></a><span 
+class="ptmr7t-x-x-50">9</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+   </div>
+<!--l. 518--><p class="noindent">(Of course, someone could cause more changesets to appear in the repository that we ran <a 
+ id="dx7-85028"></a>&#x201C;<span 
+class="pcrr7tn-">hg incoming</span>&#x201D; in, before we get a
+chance to <a 
+ id="dx7-85029"></a>&#x201C;<span 
+class="pcrr7tn-">hg pull</span>&#x201D; the changes, so that we could end up pulling changes that we didn&#x2019;t expect.)
+</p><!--l. 523--><p class="indent">   Bringing changes into a repository is a simple matter of running the <a 
+ id="dx7-85030"></a>&#x201C;<span 
+class="pcrr7tn-">hg pull</span>&#x201D; command, and telling it which repository to
+pull from.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-85032r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;tip</span>
+<br class="fancyvrb" /><a 
+ id="x7-85034r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;changeset:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;4:b57f9a090b62</span>
+<br class="fancyvrb" /><a 
+ id="x7-85036r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;tag:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;tip</span>
+<br class="fancyvrb" /><a 
+ id="x7-85038r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;user:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Bryan</span><span 
+class="pcrr7tn-">&#x00A0;O'Sullivan</span><span 
+class="pcrr7tn-">&#x00A0;&#x003c;bos@serpentine.com&#x003e;</span>
+<br class="fancyvrb" /><a 
+ id="x7-85040r5"></a><span 
+class="ptmr7t-x-x-50">5</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;date:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Tue</span><span 
+class="pcrr7tn-">&#x00A0;Sep</span><span 
+class="pcrr7tn-">&#x00A0;06</span><span 
+class="pcrr7tn-">&#x00A0;15:43:07</span><span 
+class="pcrr7tn-">&#x00A0;2005</span><span 
+class="pcrr7tn-">&#x00A0;-0700</span>
+<br class="fancyvrb" /><a 
+ id="x7-85042r6"></a><span 
+class="ptmr7t-x-x-50">6</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;summary:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Trim</span><span 
+class="pcrr7tn-">&#x00A0;comments.</span>
+<br class="fancyvrb" /><a 
+ id="x7-85044r7"></a><span 
+class="ptmr7t-x-x-50">7</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+<br class="fancyvrb" /><a 
+ id="x7-85046r8"></a><span 
+class="ptmr7t-x-x-50">8</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;pull</span><span 
+class="pcrb7t-">&#x00A0;../my-hello</span>
+<br class="fancyvrb" /><a 
+ id="x7-85048r9"></a><span 
+class="ptmr7t-x-x-50">9</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;pulling</span><span 
+class="pcrr7tn-">&#x00A0;from</span><span 
+class="pcrr7tn-">&#x00A0;../my-hello</span>
+<br class="fancyvrb" /><a 
+ id="x7-85050r10"></a><span 
+class="ptmr7t-x-x-50">10</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;searching</span><span 
+class="pcrr7tn-">&#x00A0;for</span><span 
+class="pcrr7tn-">&#x00A0;changes</span>
+<br class="fancyvrb" /><a 
+ id="x7-85052r11"></a><span 
+class="ptmr7t-x-x-50">11</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;adding</span><span 
+class="pcrr7tn-">&#x00A0;changesets</span>
+<br class="fancyvrb" /><a 
+ id="x7-85054r12"></a><span 
+class="ptmr7t-x-x-50">12</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;adding</span><span 
+class="pcrr7tn-">&#x00A0;manifests</span>
+<br class="fancyvrb" /><a 
+ id="x7-85056r13"></a><span 
+class="ptmr7t-x-x-50">13</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;adding</span><span 
+class="pcrr7tn-">&#x00A0;file</span><span 
+class="pcrr7tn-">&#x00A0;changes</span>
+<br class="fancyvrb" /><a 
+ id="x7-85058r14"></a><span 
+class="ptmr7t-x-x-50">14</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;added</span><span 
+class="pcrr7tn-">&#x00A0;1</span><span 
+class="pcrr7tn-">&#x00A0;changesets</span><span 
+class="pcrr7tn-">&#x00A0;with</span><span 
+class="pcrr7tn-">&#x00A0;1</span><span 
+class="pcrr7tn-">&#x00A0;changes</span><span 
+class="pcrr7tn-">&#x00A0;to</span><span 
+class="pcrr7tn-">&#x00A0;1</span><span 
+class="pcrr7tn-">&#x00A0;files</span>
+<br class="fancyvrb" /><a 
+ id="x7-85060r15"></a><span 
+class="ptmr7t-x-x-50">15</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;(run</span><span 
+class="pcrr7tn-">&#x00A0;'hg</span><span 
+class="pcrr7tn-">&#x00A0;update'</span><span 
+class="pcrr7tn-">&#x00A0;to</span><span 
+class="pcrr7tn-">&#x00A0;get</span><span 
+class="pcrr7tn-">&#x00A0;a</span><span 
+class="pcrr7tn-">&#x00A0;working</span><span 
+class="pcrr7tn-">&#x00A0;copy)</span>
+<br class="fancyvrb" /><a 
+ id="x7-85062r16"></a><span 
+class="ptmr7t-x-x-50">16</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;tip</span>
+<br class="fancyvrb" /><a 
+ id="x7-85064r17"></a><span 
+class="ptmr7t-x-x-50">17</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;changeset:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;5:c943cfd31ca5</span>
+<br class="fancyvrb" /><a 
+ id="x7-85066r18"></a><span 
+class="ptmr7t-x-x-50">18</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;tag:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;tip</span>
+<br class="fancyvrb" /><a 
+ id="x7-85068r19"></a><span 
+class="ptmr7t-x-x-50">19</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;user:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Bryan</span><span 
+class="pcrr7tn-">&#x00A0;O'Sullivan</span><span 
+class="pcrr7tn-">&#x00A0;&#x003c;bos@serpentine.com&#x003e;</span>
+<br class="fancyvrb" /><a 
+ id="x7-85070r20"></a><span 
+class="ptmr7t-x-x-50">20</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;date:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Sun</span><span 
+class="pcrr7tn-">&#x00A0;Apr</span><span 
+class="pcrr7tn-">&#x00A0;27</span><span 
+class="pcrr7tn-">&#x00A0;00:04:35</span><span 
+class="pcrr7tn-">&#x00A0;2008</span><span 
+class="pcrr7tn-">&#x00A0;+0000</span>
+<br class="fancyvrb" /><a 
+ id="x7-85072r21"></a><span 
+class="ptmr7t-x-x-50">21</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;summary:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Added</span><span 
+class="pcrr7tn-">&#x00A0;an</span><span 
+class="pcrr7tn-">&#x00A0;extra</span><span 
+class="pcrr7tn-">&#x00A0;line</span><span 
+class="pcrr7tn-">&#x00A0;of</span><span 
+class="pcrr7tn-">&#x00A0;output</span>
+<br class="fancyvrb" /><a 
+ id="x7-85074r22"></a><span 
+class="ptmr7t-x-x-50">22</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+   </div>
+                                                                                         
+                                                                                         
+<!--l. 526--><p class="noindent">As you can see from the before-and-after output of <a 
+ id="dx7-85075"></a>&#x201C;<span 
+class="pcrr7tn-">hg tip</span>&#x201D;, we have successfully pulled changes into our repository. There
+remains one step before we can see these changes in the working directory.
+</p><!--l. 530--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.8.2    </span> <a 
+ id="x7-860003.8.2"></a>Updating the working directory</h4>
+<!--l. 532--><p class="noindent">We have so far glossed over the relationship between a repository and its working directory. The <a 
+ id="dx7-86001"></a>&#x201C;<span 
+class="pcrr7tn-">hg pull</span>&#x201D; command that we
+ran in section&#x00A0;<a 
+href="#x7-850003.8.1">3.8.1<!--tex4ht:ref: sec:tour:pull --></a> brought changes into the repository, but if we check, there&#x2019;s no sign of those changes in the working
+directory. This is because <a 
+ id="dx7-86002"></a>&#x201C;<span 
+class="pcrr7tn-">hg pull</span>&#x201D; does not (by default) touch the working directory. Instead, we use the <a 
+ id="dx7-86003"></a>&#x201C;<span 
+class="pcrr7tn-">hg update</span>&#x201D;
+command to do this.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-86005r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">grep</span><span 
+class="pcrb7t-">&#x00A0;printf</span><span 
+class="pcrb7t-">&#x00A0;hello.c</span>
+<br class="fancyvrb" /><a 
+ id="x7-86007r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;        printf("hello,</span><span 
+class="pcrr7tn-">&#x00A0;world!</span><span 
+class="cmsy-10">&#x2216;</span><span 
+class="pcrr7tn-">");</span>
+<br class="fancyvrb" /><a 
+ id="x7-86009r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;update</span><span 
+class="pcrb7t-">&#x00A0;tip</span>
+<br class="fancyvrb" /><a 
+ id="x7-86011r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;1</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;updated,</span><span 
+class="pcrr7tn-">&#x00A0;0</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;merged,</span><span 
+class="pcrr7tn-">&#x00A0;0</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;removed,</span><span 
+class="pcrr7tn-">&#x00A0;0</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;unresolved</span>
+<br class="fancyvrb" /><a 
+ id="x7-86013r5"></a><span 
+class="ptmr7t-x-x-50">5</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">grep</span><span 
+class="pcrb7t-">&#x00A0;printf</span><span 
+class="pcrb7t-">&#x00A0;hello.c</span>
+<br class="fancyvrb" /><a 
+ id="x7-86015r6"></a><span 
+class="ptmr7t-x-x-50">6</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;        printf("hello,</span><span 
+class="pcrr7tn-">&#x00A0;world!</span><span 
+class="cmsy-10">&#x2216;</span><span 
+class="pcrr7tn-">");</span>
+<br class="fancyvrb" /><a 
+ id="x7-86017r7"></a><span 
+class="ptmr7t-x-x-50">7</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;        printf("hello</span><span 
+class="pcrr7tn-">&#x00A0;again!</span><span 
+class="cmsy-10">&#x2216;</span><span 
+class="pcrr7tn-">n");</span>
+   </div>
+<!--l. 541--><p class="indent">   It might seem a bit strange that <a 
+ id="dx7-86018"></a>&#x201C;<span 
+class="pcrr7tn-">hg pull</span>&#x201D; doesn&#x2019;t update the working directory automatically. There&#x2019;s actually a good
+reason for this: you can use <a 
+ id="dx7-86019"></a>&#x201C;<span 
+class="pcrr7tn-">hg update</span>&#x201D; to update the working directory to the state it was in at <span 
+class="ptmri7t-">any revision </span>in the history of
+the repository. If you had the working directory updated to an old revision&#x2014;to hunt down the origin of a bug, say&#x2014;and ran a
+<a 
+ id="dx7-86020"></a>&#x201C;<span 
+class="pcrr7tn-">hg pull</span>&#x201D; which automatically updated the working directory to a new revision, you might not be terribly
+happy.
+</p><!--l. 550--><p class="indent">   However, since pull-then-update is such a common thing to do, Mercurial lets you combine the two by passing the <a 
+ id="dx7-86021"></a><span 
+class="pcrr7tn-">-u</span>
+option to <a 
+ id="dx7-86022"></a>&#x201C;<span 
+class="pcrr7tn-">hg pull</span>&#x201D;.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-86024r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;hg</span><span 
+class="pcrr7tn-">&#x00A0;pull</span><span 
+class="pcrr7tn-">&#x00A0;-u</span>
+   </div>
+<!--l. 556--><p class="noindent">If you look back at the output of <a 
+ id="dx7-86025"></a>&#x201C;<span 
+class="pcrr7tn-">hg pull</span>&#x201D; in section&#x00A0;<a 
+href="#x7-850003.8.1">3.8.1<!--tex4ht:ref: sec:tour:pull --></a> when we ran it without <a 
+ id="dx7-86026"></a><span 
+class="pcrr7tn-">-u</span>, you can see that it printed a helpful
+reminder that we&#x2019;d have to take an explicit step to update the working directory:
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-86028r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;(run</span><span 
+class="pcrr7tn-">&#x00A0;'hg</span><span 
+class="pcrr7tn-">&#x00A0;update'</span><span 
+class="pcrr7tn-">&#x00A0;to</span><span 
+class="pcrr7tn-">&#x00A0;get</span><span 
+class="pcrr7tn-">&#x00A0;a</span><span 
+class="pcrr7tn-">&#x00A0;working</span><span 
+class="pcrr7tn-">&#x00A0;copy)</span>
+   </div>
+<!--l. 564--><p class="indent">   To find out what revision the working directory is at, use the <a 
+ id="dx7-86029"></a>&#x201C;<span 
+class="pcrr7tn-">hg parents</span>&#x201D; command.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-86031r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;parents</span>
+<br class="fancyvrb" /><a 
+ id="x7-86033r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;changeset:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;5:c943cfd31ca5</span>
+<br class="fancyvrb" /><a 
+ id="x7-86035r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;tag:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;tip</span>
+<br class="fancyvrb" /><a 
+ id="x7-86037r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;user:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Bryan</span><span 
+class="pcrr7tn-">&#x00A0;O'Sullivan</span><span 
+class="pcrr7tn-">&#x00A0;&#x003c;bos@serpentine.com&#x003e;</span>
+<br class="fancyvrb" /><a 
+ id="x7-86039r5"></a><span 
+class="ptmr7t-x-x-50">5</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;date:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Sun</span><span 
+class="pcrr7tn-">&#x00A0;Apr</span><span 
+class="pcrr7tn-">&#x00A0;27</span><span 
+class="pcrr7tn-">&#x00A0;00:04:35</span><span 
+class="pcrr7tn-">&#x00A0;2008</span><span 
+class="pcrr7tn-">&#x00A0;+0000</span>
+<br class="fancyvrb" /><a 
+ id="x7-86041r6"></a><span 
+class="ptmr7t-x-x-50">6</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;summary:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Added</span><span 
+class="pcrr7tn-">&#x00A0;an</span><span 
+class="pcrr7tn-">&#x00A0;extra</span><span 
+class="pcrr7tn-">&#x00A0;line</span><span 
+class="pcrr7tn-">&#x00A0;of</span><span 
+class="pcrr7tn-">&#x00A0;output</span>
+<br class="fancyvrb" /><a 
+ id="x7-86043r7"></a><span 
+class="ptmr7t-x-x-50">7</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+   </div>
+                                                                                         
+                                                                                         
+<!--l. 567--><p class="noindent">If you look back at figure&#x00A0;<a 
+href="#x7-700581">3.1<!--tex4ht:ref: fig:tour-basic:history --></a>, you&#x2019;ll see arrows connecting each changeset. The node that the arrow leads <span 
+class="ptmri7t-">from </span>in each case is a
+parent, and the node that the arrow leads <span 
+class="ptmri7t-">to </span>is its child. The working directory has a parent in just the same way; this is the
+changeset that the working directory currently contains.
+</p><!--l. 574--><p class="indent">   To update the working directory to a particular revision, give a revision number or changeset&#x00A0;ID to the <a 
+ id="dx7-86044"></a>&#x201C;<span 
+class="pcrr7tn-">hg update</span>&#x201D;
+command.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-86046r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;update</span><span 
+class="pcrb7t-">&#x00A0;2</span>
+<br class="fancyvrb" /><a 
+ id="x7-86048r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;2</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;updated,</span><span 
+class="pcrr7tn-">&#x00A0;0</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;merged,</span><span 
+class="pcrr7tn-">&#x00A0;0</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;removed,</span><span 
+class="pcrr7tn-">&#x00A0;0</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;unresolved</span>
+<br class="fancyvrb" /><a 
+ id="x7-86050r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;parents</span>
+<br class="fancyvrb" /><a 
+ id="x7-86052r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;changeset:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;2:057d3c2d823c</span>
+<br class="fancyvrb" /><a 
+ id="x7-86054r5"></a><span 
+class="ptmr7t-x-x-50">5</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;user:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Bryan</span><span 
+class="pcrr7tn-">&#x00A0;O'Sullivan</span><span 
+class="pcrr7tn-">&#x00A0;&#x003c;bos@serpentine.com&#x003e;</span>
+<br class="fancyvrb" /><a 
+ id="x7-86056r6"></a><span 
+class="ptmr7t-x-x-50">6</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;date:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Tue</span><span 
+class="pcrr7tn-">&#x00A0;Sep</span><span 
+class="pcrr7tn-">&#x00A0;06</span><span 
+class="pcrr7tn-">&#x00A0;13:15:43</span><span 
+class="pcrr7tn-">&#x00A0;2005</span><span 
+class="pcrr7tn-">&#x00A0;-0700</span>
+<br class="fancyvrb" /><a 
+ id="x7-86058r7"></a><span 
+class="ptmr7t-x-x-50">7</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;summary:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Introduce</span><span 
+class="pcrr7tn-">&#x00A0;a</span><span 
+class="pcrr7tn-">&#x00A0;typo</span><span 
+class="pcrr7tn-">&#x00A0;into</span><span 
+class="pcrr7tn-">&#x00A0;hello.c.</span>
+<br class="fancyvrb" /><a 
+ id="x7-86060r8"></a><span 
+class="ptmr7t-x-x-50">8</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+<br class="fancyvrb" /><a 
+ id="x7-86062r9"></a><span 
+class="ptmr7t-x-x-50">9</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;update</span>
+<br class="fancyvrb" /><a 
+ id="x7-86064r10"></a><span 
+class="ptmr7t-x-x-50">10</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;2</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;updated,</span><span 
+class="pcrr7tn-">&#x00A0;0</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;merged,</span><span 
+class="pcrr7tn-">&#x00A0;0</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;removed,</span><span 
+class="pcrr7tn-">&#x00A0;0</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;unresolved</span>
+   </div>
+<!--l. 577--><p class="noindent">If you omit an explicit revision, <a 
+ id="dx7-86065"></a>&#x201C;<span 
+class="pcrr7tn-">hg update</span>&#x201D; will update to the tip revision, as shown by the second call to <a 
+ id="dx7-86066"></a>&#x201C;<span 
+class="pcrr7tn-">hg update</span>&#x201D; in the
+example above.
+</p><!--l. 581--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.8.3    </span> <a 
+ id="x7-870003.8.3"></a>Pushing changes to another repository</h4>
+<!--l. 583--><p class="noindent">Mercurial lets us push changes to another repository, from the repository we&#x2019;re currently visiting. As with the example of <a 
+ id="dx7-87001"></a>&#x201C;<span 
+class="pcrr7tn-">hg</span>
+<span 
+class="pcrr7tn-">pull</span>&#x201D; above, we&#x2019;ll create a temporary repository to push our changes into.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-87003r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">cd</span><span 
+class="pcrb7t-">&#x00A0;..</span>
+<br class="fancyvrb" /><a 
+ id="x7-87005r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;clone</span><span 
+class="pcrb7t-">&#x00A0;hello</span><span 
+class="pcrb7t-">&#x00A0;hello-push</span>
+<br class="fancyvrb" /><a 
+ id="x7-87007r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;2</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;updated,</span><span 
+class="pcrr7tn-">&#x00A0;0</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;merged,</span><span 
+class="pcrr7tn-">&#x00A0;0</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;removed,</span><span 
+class="pcrr7tn-">&#x00A0;0</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;unresolved</span>
+   </div>
+<!--l. 588--><p class="noindent">The <a 
+ id="dx7-87008"></a>&#x201C;<span 
+class="pcrr7tn-">hg outgoing</span>&#x201D; command tells us what changes would be pushed into another repository.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-87010r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">cd</span><span 
+class="pcrb7t-">&#x00A0;my-hello</span>
+<br class="fancyvrb" /><a 
+ id="x7-87012r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;outgoing</span><span 
+class="pcrb7t-">&#x00A0;../hello-push</span>
+<br class="fancyvrb" /><a 
+ id="x7-87014r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;searching</span><span 
+class="pcrr7tn-">&#x00A0;for</span><span 
+class="pcrr7tn-">&#x00A0;changes</span>
+<br class="fancyvrb" /><a 
+ id="x7-87016r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;changeset:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;5:c943cfd31ca5</span>
+<br class="fancyvrb" /><a 
+ id="x7-87018r5"></a><span 
+class="ptmr7t-x-x-50">5</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;tag:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;tip</span>
+<br class="fancyvrb" /><a 
+ id="x7-87020r6"></a><span 
+class="ptmr7t-x-x-50">6</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;user:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Bryan</span><span 
+class="pcrr7tn-">&#x00A0;O'Sullivan</span><span 
+class="pcrr7tn-">&#x00A0;&#x003c;bos@serpentine.com&#x003e;</span>
+<br class="fancyvrb" /><a 
+ id="x7-87022r7"></a><span 
+class="ptmr7t-x-x-50">7</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;date:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Sun</span><span 
+class="pcrr7tn-">&#x00A0;Apr</span><span 
+class="pcrr7tn-">&#x00A0;27</span><span 
+class="pcrr7tn-">&#x00A0;00:04:35</span><span 
+class="pcrr7tn-">&#x00A0;2008</span><span 
+class="pcrr7tn-">&#x00A0;+0000</span>
+<br class="fancyvrb" /><a 
+ id="x7-87024r8"></a><span 
+class="ptmr7t-x-x-50">8</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;summary:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Added</span><span 
+class="pcrr7tn-">&#x00A0;an</span><span 
+class="pcrr7tn-">&#x00A0;extra</span><span 
+class="pcrr7tn-">&#x00A0;line</span><span 
+class="pcrr7tn-">&#x00A0;of</span><span 
+class="pcrr7tn-">&#x00A0;output</span>
+<br class="fancyvrb" /><a 
+ id="x7-87026r9"></a><span 
+class="ptmr7t-x-x-50">9</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+   </div>
+<!--l. 591--><p class="noindent">And the <a 
+ id="dx7-87027"></a>&#x201C;<span 
+class="pcrr7tn-">hg push</span>&#x201D; command does the actual push.
+                                                                                         
+                                                                                         
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-87029r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;push</span><span 
+class="pcrb7t-">&#x00A0;../hello-push</span>
+<br class="fancyvrb" /><a 
+ id="x7-87031r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;pushing</span><span 
+class="pcrr7tn-">&#x00A0;to</span><span 
+class="pcrr7tn-">&#x00A0;../hello-push</span>
+<br class="fancyvrb" /><a 
+ id="x7-87033r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;searching</span><span 
+class="pcrr7tn-">&#x00A0;for</span><span 
+class="pcrr7tn-">&#x00A0;changes</span>
+<br class="fancyvrb" /><a 
+ id="x7-87035r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;adding</span><span 
+class="pcrr7tn-">&#x00A0;changesets</span>
+<br class="fancyvrb" /><a 
+ id="x7-87037r5"></a><span 
+class="ptmr7t-x-x-50">5</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;adding</span><span 
+class="pcrr7tn-">&#x00A0;manifests</span>
+<br class="fancyvrb" /><a 
+ id="x7-87039r6"></a><span 
+class="ptmr7t-x-x-50">6</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;adding</span><span 
+class="pcrr7tn-">&#x00A0;file</span><span 
+class="pcrr7tn-">&#x00A0;changes</span>
+<br class="fancyvrb" /><a 
+ id="x7-87041r7"></a><span 
+class="ptmr7t-x-x-50">7</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;added</span><span 
+class="pcrr7tn-">&#x00A0;1</span><span 
+class="pcrr7tn-">&#x00A0;changesets</span><span 
+class="pcrr7tn-">&#x00A0;with</span><span 
+class="pcrr7tn-">&#x00A0;1</span><span 
+class="pcrr7tn-">&#x00A0;changes</span><span 
+class="pcrr7tn-">&#x00A0;to</span><span 
+class="pcrr7tn-">&#x00A0;1</span><span 
+class="pcrr7tn-">&#x00A0;files</span>
+   </div>
+<!--l. 593--><p class="noindent">As with <a 
+ id="dx7-87042"></a>&#x201C;<span 
+class="pcrr7tn-">hg pull</span>&#x201D;, the <a 
+ id="dx7-87043"></a>&#x201C;<span 
+class="pcrr7tn-">hg push</span>&#x201D; command does not update the working directory in the repository that it&#x2019;s pushing changes
+into. (Unlike <a 
+ id="dx7-87044"></a>&#x201C;<span 
+class="pcrr7tn-">hg pull</span>&#x201D;, <a 
+ id="dx7-87045"></a>&#x201C;<span 
+class="pcrr7tn-">hg push</span>&#x201D; does not provide a <span 
+class="pcrr7tn-">-u </span>option that updates the other repository&#x2019;s working
+directory.)
+</p><!--l. 598--><p class="indent">   What happens if we try to pull or push changes and the receiving repository already has those changes? Nothing too
+exciting.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-87047r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;push</span><span 
+class="pcrb7t-">&#x00A0;../hello-push</span>
+<br class="fancyvrb" /><a 
+ id="x7-87049r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;pushing</span><span 
+class="pcrr7tn-">&#x00A0;to</span><span 
+class="pcrr7tn-">&#x00A0;../hello-push</span>
+<br class="fancyvrb" /><a 
+ id="x7-87051r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;searching</span><span 
+class="pcrr7tn-">&#x00A0;for</span><span 
+class="pcrr7tn-">&#x00A0;changes</span>
+<br class="fancyvrb" /><a 
+ id="x7-87053r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;no</span><span 
+class="pcrr7tn-">&#x00A0;changes</span><span 
+class="pcrr7tn-">&#x00A0;found</span>
+   </div>
+<!--l. 602--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.8.4    </span> <a 
+ id="x7-880003.8.4"></a>Sharing changes over a network</h4>
+<!--l. 604--><p class="noindent">The commands we have covered in the previous few sections are not limited to working with local repositories.
+Each works in exactly the same fashion over a network connection; simply pass in a URL instead of a local
+path.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-88002r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;outgoing</span><span 
+class="pcrb7t-">&#x00A0;http://hg.serpentine.com/tutorial/hello</span>
+<br class="fancyvrb" /><a 
+ id="x7-88004r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;searching</span><span 
+class="pcrr7tn-">&#x00A0;for</span><span 
+class="pcrr7tn-">&#x00A0;changes</span>
+<br class="fancyvrb" /><a 
+ id="x7-88006r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;changeset:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;5:c943cfd31ca5</span>
+<br class="fancyvrb" /><a 
+ id="x7-88008r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;tag:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;tip</span>
+<br class="fancyvrb" /><a 
+ id="x7-88010r5"></a><span 
+class="ptmr7t-x-x-50">5</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;user:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Bryan</span><span 
+class="pcrr7tn-">&#x00A0;O'Sullivan</span><span 
+class="pcrr7tn-">&#x00A0;&#x003c;bos@serpentine.com&#x003e;</span>
+<br class="fancyvrb" /><a 
+ id="x7-88012r6"></a><span 
+class="ptmr7t-x-x-50">6</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;date:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Sun</span><span 
+class="pcrr7tn-">&#x00A0;Apr</span><span 
+class="pcrr7tn-">&#x00A0;27</span><span 
+class="pcrr7tn-">&#x00A0;00:04:35</span><span 
+class="pcrr7tn-">&#x00A0;2008</span><span 
+class="pcrr7tn-">&#x00A0;+0000</span>
+<br class="fancyvrb" /><a 
+ id="x7-88014r7"></a><span 
+class="ptmr7t-x-x-50">7</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;summary:</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;Added</span><span 
+class="pcrr7tn-">&#x00A0;an</span><span 
+class="pcrr7tn-">&#x00A0;extra</span><span 
+class="pcrr7tn-">&#x00A0;line</span><span 
+class="pcrr7tn-">&#x00A0;of</span><span 
+class="pcrr7tn-">&#x00A0;output</span>
+<br class="fancyvrb" /><a 
+ id="x7-88016r8"></a><span 
+class="ptmr7t-x-x-50">8</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span>
+   </div>
+<!--l. 609--><p class="noindent">In this example, we can see what changes we could push to the remote repository, but the repository is understandably not set up to
+let anonymous users push to it.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x7-88018r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;push</span><span 
+class="pcrb7t-">&#x00A0;http://hg.serpentine.com/tutorial/hello</span>
+<br class="fancyvrb" /><a 
+ id="x7-88020r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;pushing</span><span 
+class="pcrr7tn-">&#x00A0;to</span><span 
+class="pcrr7tn-">&#x00A0;http://hg.serpentine.com/tutorial/hello</span>
+<br class="fancyvrb" /><a 
+ id="x7-88022r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;searching</span><span 
+class="pcrr7tn-">&#x00A0;for</span><span 
+class="pcrr7tn-">&#x00A0;changes</span>
+<br class="fancyvrb" /><a 
+ id="x7-88024r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;ssl</span><span 
+class="pcrr7tn-">&#x00A0;required</span>
+                                                                                         
+                                                                                         
+   </div>
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+   <!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="hobbit-sysadmin-guidech4.html" >next</a>] [<a 
+href="hobbit-sysadmin-guidech2.html" >prev</a>] [<a 
+href="hobbit-sysadmin-guidech2.html#tailhobbit-sysadmin-guidech2.html" >prev-tail</a>] [<a 
+href="hobbit-sysadmin-guidech3.html" >front</a>] [<a 
+href="hobbit-sysadmin-guide.html#hobbit-sysadmin-guidech3.html" >up</a>] </p></div>
+<!--l. 1--><p class="indent">   <a 
+ id="tailhobbit-sysadmin-guidech3.html"></a>   </p> 
+</body></html> 

@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head>
+   <title>Hobbit System Administration Guide</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html4-uni,2,html,xhtml --> 
+<meta name="src" content="hobbit-sysadmin-guide.tex" /> 
+<meta name="date" content="2008-04-26 19:37:00" /> 
+<link rel="stylesheet" type="text/css" href="hobbit-sysadmin-guide.css" /> 
+</head><body 
+>
+   <div class="maketitle">
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+
+<h2 class="titleHead">Hobbit System Administration Guide</h2>
+<div class="author" ><span 
+class="ptmr7t-x-x-120">T.J. Yang</span></div>
+<br />
+<div class="date" ><span 
+class="ptmr7t-x-x-120">Copyright </span><span 
+class="zpzccmry-x-x-120">&#x00A9;</span><span 
+class="ptmr7t-x-x-120">&#x00A0;2008 Tyng-Jing Yang.</span><br />
+<span 
+class="ptmr7t-x-x-120">This material may be distributed only subject to the terms and conditions set forth in version 1.0</span>
+<span 
+class="ptmr7t-x-x-120">of the Open Publication License. Please refer to Appendix</span><span 
+class="ptmr7t-x-x-120">&#x00A0;</span><a 
+href="hobbit-sysadmin-guideap4.html#x22-374000D"><span 
+class="ptmr7t-x-x-120">D</span><!--tex4ht:ref: cha:opl --></a> <span 
+class="ptmr7t-x-x-120">for the license text.</span><br />
+<span 
+class="ptmr7t-x-x-120">This book was prepared from </span><a 
+href="http://hg.serpentine.com/mercurial/book/" ><span 
+class="ptmr7t-x-x-120">rev</span><span 
+class="ptmr7t-x-x-120">&#x00A0;c9202b05c4f5, dated 2008-01-29 17:34 -0600, </span></a> <span 
+class="ptmr7t-x-x-120">using</span>
+<a 
+href="http://www.selenic.com/hg/" ><span 
+class="ptmr7t-x-x-120">rev</span><span 
+class="ptmr7t-x-x-120">&#x00A0;Mercurial Distributed SCM (version 0.9.3) </span></a> <span 
+class="ptmr7t-x-x-120">of Mercurial.</span></div>
+                                                                                         
+                                                                                         
+   </div>
+<a 
+ id="Q1-1-1"></a>
+                                                                                         
+                                                                                         
+   <div class="tableofcontents">
+   <span class="chapterToc"> <a 
+href="#Q1-1-1">Contents</a></span>
+<br />   <span class="likechapterToc"><a 
+href="hobbit-sysadmin-guideli1.html#x2-1000" id="QQ2-2-2">Contents</a></span>
+<br />   <span class="likechapterToc"><a 
+href="hobbit-sysadmin-guideli2.html#x3-2000" id="QQ2-3-3">List of Figures</a></span>
+<br />   <span class="likechapterToc"><a 
+href="hobbit-sysadmin-guideli3.html#x4-3000" id="QQ2-4-4">Preface</a></span>
+<br />   <span class="chapterToc"> <a 
+href="hobbit-sysadmin-guideli3.html#Q1-4-5">Preface</a></span>
+<br />   &#x00A0;<span class="sectionToc">0.1 <a 
+href="hobbit-sysadmin-guideli3.html#x4-40000.1" id="QQ2-4-6">This book is a work in progress</a></span>
+<br />   &#x00A0;<span class="sectionToc">0.2 <a 
+href="hobbit-sysadmin-guideli3.html#x4-50000.2" id="QQ2-4-7">About the examples in this book</a></span>
+<br />   &#x00A0;<span class="sectionToc">0.3 <a 
+href="hobbit-sysadmin-guideli3.html#x4-60000.3" id="QQ2-4-8">Colophon&#x2014;this book is Free</a></span>
+<br />   <span class="chapterToc">1 <a 
+href="hobbit-sysadmin-guidech1.html#x5-70001" id="QQ2-5-9">Introduction</a></span>
+<br />   &#x00A0;<span class="sectionToc">1.1 <a 
+href="hobbit-sysadmin-guidech1.html#x5-80001.1" id="QQ2-5-10">About revision control</a></span>
+<br />   &#x00A0;<span class="sectionToc">1.2 <a 
+href="hobbit-sysadmin-guidech1.html#x5-110001.2" id="QQ2-5-13">A short history of revision control</a></span>
+<br />   &#x00A0;<span class="sectionToc">1.3 <a 
+href="hobbit-sysadmin-guidech1.html#x5-120001.3" id="QQ2-5-14">Trends in revision control</a></span>
+<br />   &#x00A0;<span class="sectionToc">1.4 <a 
+href="hobbit-sysadmin-guidech1.html#x5-130001.4" id="QQ2-5-15">A few of the advantages of distributed revision control</a></span>
+<br />   &#x00A0;<span class="sectionToc">1.5 <a 
+href="hobbit-sysadmin-guidech1.html#x5-170001.5" id="QQ2-5-19">Why choose Mercurial?</a></span>
+<br />   &#x00A0;<span class="sectionToc">1.6 <a 
+href="hobbit-sysadmin-guidech1.html#x5-180001.6" id="QQ2-5-20">Mercurial compared with other tools</a></span>
+<br />   &#x00A0;<span class="sectionToc">1.7 <a 
+href="hobbit-sysadmin-guidech1.html#x5-240001.7" id="QQ2-5-26">Switching from another tool to Mercurial</a></span>
+<br />   <span class="chapterToc">2 <a 
+href="hobbit-sysadmin-guidech2.html#x6-250002" id="QQ2-6-27">Hobbit Client</a></span>
+<br />   &#x00A0;<span class="sectionToc">2.1 <a 
+href="hobbit-sysadmin-guidech2.html#x6-260002.1" id="QQ2-6-28">Hobbit Client installation</a></span>
+<br />   &#x00A0;<span class="sectionToc">2.2 <a 
+href="hobbit-sysadmin-guidech2.html#x6-270002.2" id="QQ2-6-29">Hobbit Client Architecture</a></span>
+<br />   &#x00A0;<span class="sectionToc">2.3 <a 
+href="hobbit-sysadmin-guidech2.html#x6-370002.3" id="QQ2-6-40">The technical side of sharing</a></span>
+<br />   &#x00A0;<span class="sectionToc">2.4 <a 
+href="hobbit-sysadmin-guidech2.html#x6-380002.4" id="QQ2-6-41">Informal sharing with &#x201C;<span 
+class="pcrr7tn-">hg serve</span>&#x201D;</a></span>
+<br />   &#x00A0;<span class="sectionToc">2.5 <a 
+href="hobbit-sysadmin-guidech2.html#x6-400002.5" id="QQ2-6-43">Using the Secure Shell (ssh) protocol</a></span>
+<br />   &#x00A0;<span class="sectionToc">2.6 <a 
+href="hobbit-sysadmin-guidech2.html#x6-470002.6" id="QQ2-6-50">Serving over HTTP using CGI</a></span>
+<br />   <span class="chapterToc">3 <a 
+href="hobbit-sysadmin-guidech3.html#x7-590003" id="QQ2-7-62">System Monitoring Requirements</a></span>
+<br />   &#x00A0;<span class="sectionToc">3.1 <a 
+href="hobbit-sysadmin-guidech3.html#x7-600003.1" id="QQ2-7-63">Web GUI of Hobbit</a></span>
+<br />   &#x00A0;<span class="sectionToc">3.2 <a 
+href="hobbit-sysadmin-guidech3.html#x7-650003.2" id="QQ2-7-68">Getting started</a></span>
+<br />   &#x00A0;<span class="sectionToc">3.3 <a 
+href="hobbit-sysadmin-guidech3.html#x7-670003.3" id="QQ2-7-70">Working with a repository</a></span>
+<br />   &#x00A0;<span class="sectionToc">3.4 <a 
+href="hobbit-sysadmin-guidech3.html#x7-700003.4" id="QQ2-7-73">A tour through history</a></span>
+<br />   &#x00A0;<span class="sectionToc">3.5 <a 
+href="hobbit-sysadmin-guidech3.html#x7-740003.5" id="QQ2-7-78">All about command options</a></span>
+<br />   &#x00A0;<span class="sectionToc">3.6 <a 
+href="hobbit-sysadmin-guidech3.html#x7-750003.6" id="QQ2-7-79">Making and reviewing changes</a></span>
+<br />   &#x00A0;<span class="sectionToc">3.7 <a 
+href="hobbit-sysadmin-guidech3.html#x7-760003.7" id="QQ2-7-80">Recording changes in a new changeset</a></span>
+<br />   &#x00A0;<span class="sectionToc">3.8 <a 
+href="hobbit-sysadmin-guidech3.html#x7-840003.8" id="QQ2-7-88">Sharing changes</a></span>
+<br />   <span class="chapterToc">4 <a 
+href="hobbit-sysadmin-guidech4.html#x8-890004" id="QQ2-8-93">A tour of Mercurial: merging work</a></span>
+<br />   &#x00A0;<span class="sectionToc">4.1 <a 
+href="hobbit-sysadmin-guidech4.html#x8-900004.1" id="QQ2-8-94">Merging streams of work</a></span>
+<br />   &#x00A0;<span class="sectionToc">4.2 <a 
+href="hobbit-sysadmin-guidech4.html#x8-940004.2" id="QQ2-8-101">Merging conflicting changes</a></span>
+<br />   &#x00A0;<span class="sectionToc">4.3 <a 
+href="hobbit-sysadmin-guidech4.html#x8-970004.3" id="QQ2-8-106">Simplifying the pull-merge-commit sequence</a></span>
+<br />   <span class="chapterToc">5 <a 
+href="hobbit-sysadmin-guidech5.html#x9-980005" id="QQ2-9-107">Behind the scenes</a></span>
+<br />   &#x00A0;<span class="sectionToc">5.1 <a 
+href="hobbit-sysadmin-guidech5.html#x9-990005.1" id="QQ2-9-108">Mercurial&#x2019;s historical record</a></span>
+<br />   &#x00A0;<span class="sectionToc">5.2 <a 
+href="hobbit-sysadmin-guidech5.html#x9-1040005.2" id="QQ2-9-115">Safe, efficient storage</a></span>
+<br />   &#x00A0;<span class="sectionToc">5.3 <a 
+href="hobbit-sysadmin-guidech5.html#x9-1100005.3" id="QQ2-9-122">Revision history, branching, and merging</a></span>
+<br />   &#x00A0;<span class="sectionToc">5.4 <a 
+href="hobbit-sysadmin-guidech5.html#x9-1110005.4" id="QQ2-9-124">The working directory</a></span>
+<br />   &#x00A0;<span class="sectionToc">5.5 <a 
+href="hobbit-sysadmin-guidech5.html#x9-1150005.5" id="QQ2-9-133">Other interesting design features</a></span>
+                                                                                         
+                                                                                         
+<br />   <span class="chapterToc">6 <a 
+href="hobbit-sysadmin-guidech6.html#x10-1230006" id="QQ2-10-141">Hobbit Administration Guide</a></span>
+<br />   &#x00A0;<span class="sectionToc">6.1 <a 
+href="hobbit-sysadmin-guidech6.html#x10-1240006.1" id="QQ2-10-142">Telling Mercurial which files to track</a></span>
+<br />   &#x00A0;<span class="sectionToc">6.2 <a 
+href="hobbit-sysadmin-guidech6.html#x10-1270006.2" id="QQ2-10-146">How to stop tracking a file</a></span>
+<br />   &#x00A0;<span class="sectionToc">6.3 <a 
+href="hobbit-sysadmin-guidech6.html#x10-1320006.3" id="QQ2-10-151">Copying files</a></span>
+<br />   &#x00A0;<span class="sectionToc">6.4 <a 
+href="hobbit-sysadmin-guidech6.html#x10-1370006.4" id="QQ2-10-156">Renaming files</a></span>
+<br />   &#x00A0;<span class="sectionToc">6.5 <a 
+href="hobbit-sysadmin-guidech6.html#x10-1420006.5" id="QQ2-10-161">Recovering from mistakes</a></span>
+<br />   <span class="chapterToc">7 <a 
+href="hobbit-sysadmin-guidech7.html#x11-1430007" id="QQ2-11-162">File names and pattern matching</a></span>
+<br />   &#x00A0;<span class="sectionToc">7.1 <a 
+href="hobbit-sysadmin-guidech7.html#x11-1440007.1" id="QQ2-11-163">Simple file naming</a></span>
+<br />   &#x00A0;<span class="sectionToc">7.2 <a 
+href="hobbit-sysadmin-guidech7.html#x11-1450007.2" id="QQ2-11-164">Running commands without any file names</a></span>
+<br />   &#x00A0;<span class="sectionToc">7.3 <a 
+href="hobbit-sysadmin-guidech7.html#x11-1460007.3" id="QQ2-11-165">Telling you what&#x2019;s going on</a></span>
+<br />   &#x00A0;<span class="sectionToc">7.4 <a 
+href="hobbit-sysadmin-guidech7.html#x11-1470007.4" id="QQ2-11-166">Using patterns to identify files</a></span>
+<br />   &#x00A0;<span class="sectionToc">7.5 <a 
+href="hobbit-sysadmin-guidech7.html#x11-1510007.5" id="QQ2-11-170">Filtering files</a></span>
+<br />   &#x00A0;<span class="sectionToc">7.6 <a 
+href="hobbit-sysadmin-guidech7.html#x11-1520007.6" id="QQ2-11-171">Ignoring unwanted files and directories</a></span>
+<br />   &#x00A0;<span class="sectionToc">7.7 <a 
+href="hobbit-sysadmin-guidech7.html#x11-1530007.7" id="QQ2-11-172">Case sensitivity</a></span>
+<br />   <span class="chapterToc">8 <a 
+href="hobbit-sysadmin-guidech8.html#x12-1570008" id="QQ2-12-176">Managing releases and branchy development</a></span>
+<br />   &#x00A0;<span class="sectionToc">8.1 <a 
+href="hobbit-sysadmin-guidech8.html#x12-1580008.1" id="QQ2-12-177">Giving a persistent name to a revision</a></span>
+<br />   &#x00A0;<span class="sectionToc">8.2 <a 
+href="hobbit-sysadmin-guidech8.html#x12-1620008.2" id="QQ2-12-181">The flow of changes&#x2014;big picture vs. little</a></span>
+<br />   &#x00A0;<span class="sectionToc">8.3 <a 
+href="hobbit-sysadmin-guidech8.html#x12-1630008.3" id="QQ2-12-182">Managing big-picture branches in repositories</a></span>
+<br />   &#x00A0;<span class="sectionToc">8.4 <a 
+href="hobbit-sysadmin-guidech8.html#x12-1640008.4" id="QQ2-12-183">Don&#x2019;t repeat yourself: merging across branches</a></span>
+<br />   &#x00A0;<span class="sectionToc">8.5 <a 
+href="hobbit-sysadmin-guidech8.html#x12-1650008.5" id="QQ2-12-184">Naming branches within one repository</a></span>
+<br />   &#x00A0;<span class="sectionToc">8.6 <a 
+href="hobbit-sysadmin-guidech8.html#x12-1660008.6" id="QQ2-12-185">Dealing with multiple named branches in a repository</a></span>
+<br />   &#x00A0;<span class="sectionToc">8.7 <a 
+href="hobbit-sysadmin-guidech8.html#x12-1670008.7" id="QQ2-12-186">Branch names and merging</a></span>
+<br />   &#x00A0;<span class="sectionToc">8.8 <a 
+href="hobbit-sysadmin-guidech8.html#x12-1680008.8" id="QQ2-12-187">Branch naming is generally useful</a></span>
+<br />   <span class="chapterToc">9 <a 
+href="hobbit-sysadmin-guidech9.html#x13-1690009" id="QQ2-13-188">Finding and fixing your mistakes</a></span>
+<br />   &#x00A0;<span class="sectionToc">9.1 <a 
+href="hobbit-sysadmin-guidech9.html#x13-1700009.1" id="QQ2-13-189">Erasing local history</a></span>
+<br />   &#x00A0;<span class="sectionToc">9.2 <a 
+href="hobbit-sysadmin-guidech9.html#x13-1760009.2" id="QQ2-13-195">Reverting the mistaken change</a></span>
+<br />   &#x00A0;<span class="sectionToc">9.3 <a 
+href="hobbit-sysadmin-guidech9.html#x13-1790009.3" id="QQ2-13-198">Dealing with committed changes</a></span>
+<br />   &#x00A0;<span class="sectionToc">9.4 <a 
+href="hobbit-sysadmin-guidech9.html#x13-1860009.4" id="QQ2-13-209">Changes that should never have been</a></span>
+<br />   &#x00A0;<span class="sectionToc">9.5 <a 
+href="hobbit-sysadmin-guidech9.html#x13-1880009.5" id="QQ2-13-211">Finding the source of a bug</a></span>
+<br />   &#x00A0;<span class="sectionToc">9.6 <a 
+href="hobbit-sysadmin-guidech9.html#x13-1910009.6" id="QQ2-13-214">Tips for finding bugs effectively</a></span>
+<br />   <span class="chapterToc">10 <a 
+href="hobbit-sysadmin-guidech10.html#x14-19700010" id="QQ2-14-220">Handling repository events with hooks</a></span>
+<br />   &#x00A0;<span class="sectionToc">10.1 <a 
+href="hobbit-sysadmin-guidech10.html#x14-19800010.1" id="QQ2-14-221">An overview of hooks in Mercurial</a></span>
+<br />   &#x00A0;<span class="sectionToc">10.2 <a 
+href="hobbit-sysadmin-guidech10.html#x14-19900010.2" id="QQ2-14-222">Hooks and security</a></span>
+<br />   &#x00A0;<span class="sectionToc">10.3 <a 
+href="hobbit-sysadmin-guidech10.html#x14-20400010.3" id="QQ2-14-227">Care with <span 
+class="pcrr7tn-">pretxn </span>hooks in a shared-access repository</a></span>
+<br />   &#x00A0;<span class="sectionToc">10.4 <a 
+href="hobbit-sysadmin-guidech10.html#x14-20600010.4" id="QQ2-14-229">A short tutorial on using hooks</a></span>
+<br />   &#x00A0;<span class="sectionToc">10.5 <a 
+href="hobbit-sysadmin-guidech10.html#x14-20900010.5" id="QQ2-14-235">Writing your own hooks</a></span>
+<br />   &#x00A0;<span class="sectionToc">10.6 <a 
+href="hobbit-sysadmin-guidech10.html#x14-21600010.6" id="QQ2-14-242">Some hook examples</a></span>
+<br />   &#x00A0;<span class="sectionToc">10.7 <a 
+href="hobbit-sysadmin-guidech10.html#x14-21900010.7" id="QQ2-14-248">Bundled hooks</a></span>
+<br />   &#x00A0;<span class="sectionToc">10.8 <a 
+href="hobbit-sysadmin-guidech10.html#x14-23100010.8" id="QQ2-14-260">Information for writers of hooks</a></span>
+<br />   &#x00A0;<span class="sectionToc">10.9 <a 
+href="hobbit-sysadmin-guidech10.html#x14-23700010.9" id="QQ2-14-266">Hook reference</a></span>
+<br />   <span class="chapterToc">11 <a 
+href="hobbit-sysadmin-guidech11.html#x15-25100011" id="QQ2-15-280">Customising the output of Mercurial</a></span>
+<br />   &#x00A0;<span class="sectionToc">11.1 <a 
+href="hobbit-sysadmin-guidech11.html#x15-25200011.1" id="QQ2-15-281">Using precanned output styles</a></span>
+<br />   &#x00A0;<span class="sectionToc">11.2 <a 
+href="hobbit-sysadmin-guidech11.html#x15-25400011.2" id="QQ2-15-283">Commands that support styles and templates</a></span>
+<br />   &#x00A0;<span class="sectionToc">11.3 <a 
+href="hobbit-sysadmin-guidech11.html#x15-25500011.3" id="QQ2-15-284">The basics of templating</a></span>
+<br />   &#x00A0;<span class="sectionToc">11.4 <a 
+href="hobbit-sysadmin-guidech11.html#x15-25600011.4" id="QQ2-15-285">Common template keywords</a></span>
+<br />   &#x00A0;<span class="sectionToc">11.5 <a 
+href="hobbit-sysadmin-guidech11.html#x15-25700011.5" id="QQ2-15-287">Escape sequences</a></span>
+<br />   &#x00A0;<span class="sectionToc">11.6 <a 
+href="hobbit-sysadmin-guidech11.html#x15-25800011.6" id="QQ2-15-288">Filtering keywords to change their results</a></span>
+<br />   &#x00A0;<span class="sectionToc">11.7 <a 
+href="hobbit-sysadmin-guidech11.html#x15-26000011.7" id="QQ2-15-291">From templates to styles</a></span>
+<br />   &#x00A0;<span class="sectionToc">11.8 <a 
+href="hobbit-sysadmin-guidech11.html#x15-26300011.8" id="QQ2-15-294">Style files by example</a></span>
+<br />   <span class="chapterToc">12 <a 
+href="hobbit-sysadmin-guidech12.html#x16-26700012" id="QQ2-16-298">Managing change with Mercurial Queues</a></span>
+<br />   &#x00A0;<span class="sectionToc">12.1 <a 
+href="hobbit-sysadmin-guidech12.html#x16-26800012.1" id="QQ2-16-299">The patch management problem</a></span>
+<br />   &#x00A0;<span class="sectionToc">12.2 <a 
+href="hobbit-sysadmin-guidech12.html#x16-26900012.2" id="QQ2-16-300">The prehistory of Mercurial Queues</a></span>
+                                                                                         
+                                                                                         
+<br />   &#x00A0;<span class="sectionToc">12.3 <a 
+href="hobbit-sysadmin-guidech12.html#x16-27200012.3" id="QQ2-16-303">The huge advantage of MQ</a></span>
+<br />   &#x00A0;<span class="sectionToc">12.4 <a 
+href="hobbit-sysadmin-guidech12.html#x16-27300012.4" id="QQ2-16-304">Understanding patches</a></span>
+<br />   &#x00A0;<span class="sectionToc">12.5 <a 
+href="hobbit-sysadmin-guidech12.html#x16-27400012.5" id="QQ2-16-306">Getting started with Mercurial Queues</a></span>
+<br />   &#x00A0;<span class="sectionToc">12.6 <a 
+href="hobbit-sysadmin-guidech12.html#x16-28200012.6" id="QQ2-16-326">More about patches</a></span>
+<br />   &#x00A0;<span class="sectionToc">12.7 <a 
+href="hobbit-sysadmin-guidech12.html#x16-28800012.7" id="QQ2-16-332">Getting the best performance out of MQ</a></span>
+<br />   &#x00A0;<span class="sectionToc">12.8 <a 
+href="hobbit-sysadmin-guidech12.html#x16-28900012.8" id="QQ2-16-333">Updating your patches when the underlying code changes</a></span>
+<br />   &#x00A0;<span class="sectionToc">12.9 <a 
+href="hobbit-sysadmin-guidech12.html#x16-29000012.9" id="QQ2-16-334">Identifying patches</a></span>
+<br />   &#x00A0;<span class="sectionToc">12.10 <a 
+href="hobbit-sysadmin-guidech12.html#x16-29100012.10" id="QQ2-16-336">Useful things to know about</a></span>
+<br />   &#x00A0;<span class="sectionToc">12.11 <a 
+href="hobbit-sysadmin-guidech12.html#x16-29200012.11" id="QQ2-16-337">Managing patches in a repository</a></span>
+<br />   &#x00A0;<span class="sectionToc">12.12 <a 
+href="hobbit-sysadmin-guidech12.html#x16-29500012.12" id="QQ2-16-340">Third party tools for working with patches</a></span>
+<br />   &#x00A0;<span class="sectionToc">12.13 <a 
+href="hobbit-sysadmin-guidech12.html#x16-29600012.13" id="QQ2-16-342">Good ways to work with patches</a></span>
+<br />   &#x00A0;<span class="sectionToc">12.14 <a 
+href="hobbit-sysadmin-guidech12.html#x16-29700012.14" id="QQ2-16-343">MQ cookbook</a></span>
+<br />   &#x00A0;<span class="sectionToc">12.15 <a 
+href="hobbit-sysadmin-guidech12.html#x16-30100012.15" id="QQ2-16-347">Differences between quilt and MQ</a></span>
+<br />   <span class="chapterToc">13 <a 
+href="hobbit-sysadmin-guidech13.html#x17-30200013" id="QQ2-17-348">Advanced uses of Mercurial Queues</a></span>
+<br />   &#x00A0;<span class="sectionToc">13.1 <a 
+href="hobbit-sysadmin-guidech13.html#x17-30300013.1" id="QQ2-17-349">The problem of many targets</a></span>
+<br />   &#x00A0;<span class="sectionToc">13.2 <a 
+href="hobbit-sysadmin-guidech13.html#x17-30500013.2" id="QQ2-17-351">Conditionally applying patches with guards</a></span>
+<br />   &#x00A0;<span class="sectionToc">13.3 <a 
+href="hobbit-sysadmin-guidech13.html#x17-30600013.3" id="QQ2-17-352">Controlling the guards on a patch</a></span>
+<br />   &#x00A0;<span class="sectionToc">13.4 <a 
+href="hobbit-sysadmin-guidech13.html#x17-30700013.4" id="QQ2-17-353">Selecting the guards to use</a></span>
+<br />   &#x00A0;<span class="sectionToc">13.5 <a 
+href="hobbit-sysadmin-guidech13.html#x17-30800013.5" id="QQ2-17-354">MQ&#x2019;s rules for applying patches</a></span>
+<br />   &#x00A0;<span class="sectionToc">13.6 <a 
+href="hobbit-sysadmin-guidech13.html#x17-30900013.6" id="QQ2-17-355">Trimming the work environment</a></span>
+<br />   &#x00A0;<span class="sectionToc">13.7 <a 
+href="hobbit-sysadmin-guidech13.html#x17-31000013.7" id="QQ2-17-356">Dividing up the <span 
+class="pcrr7tn-">series </span>file</a></span>
+<br />   &#x00A0;<span class="sectionToc">13.8 <a 
+href="hobbit-sysadmin-guidech13.html#x17-31100013.8" id="QQ2-17-357">Maintaining the patch series</a></span>
+<br />   &#x00A0;<span class="sectionToc">13.9 <a 
+href="hobbit-sysadmin-guidech13.html#x17-31300013.9" id="QQ2-17-359">Useful tips for developing with MQ</a></span>
+<br />   <span class="chapterToc">14 <a 
+href="hobbit-sysadmin-guidech14.html#x18-31600014" id="QQ2-18-362">Adding functionality with extensions</a></span>
+<br />   &#x00A0;<span class="sectionToc">14.1 <a 
+href="hobbit-sysadmin-guidech14.html#x18-31700014.1" id="QQ2-18-363">Improve performance with the <span 
+class="pcrr7tn-">inotify </span>extension</a></span>
+<br />   &#x00A0;<span class="sectionToc">14.2 <a 
+href="hobbit-sysadmin-guidech14.html#x18-31800014.2" id="QQ2-18-364">Flexible diff support with the <span 
+class="pcrr7tn-">extdiff </span>extension</a></span>
+<br />   &#x00A0;<span class="sectionToc">14.3 <a 
+href="hobbit-sysadmin-guidech14.html#x18-32000014.3" id="QQ2-18-366">Cherrypicking changes with the <span 
+class="pcrr7tn-">transplant </span>extension</a></span>
+<br />   &#x00A0;<span class="sectionToc">14.4 <a 
+href="hobbit-sysadmin-guidech14.html#x18-32100014.4" id="QQ2-18-367">Send changes via email with the <span 
+class="pcrr7tn-">patchbomb </span>extension</a></span>
+<br />   <span class="appendixToc">A <a 
+href="hobbit-sysadmin-guideap1.html#x19-323000A" id="QQ2-19-369">Command reference</a></span>
+<br />   &#x00A0;<span class="sectionToc">A.1 <a 
+href="hobbit-sysadmin-guideap1.html#x19-324000A.1" id="QQ2-19-370">&#x201C;<span 
+class="pcrr7tn-">hg add</span>&#x201D;&#x2014;add files at the next commit</a></span>
+<br />   &#x00A0;<span class="sectionToc">A.2 <a 
+href="hobbit-sysadmin-guideap1.html#x19-328000A.2" id="QQ2-19-374">&#x201C;<span 
+class="pcrr7tn-">hg diff</span>&#x201D;&#x2014;print changes in history or working directory</a></span>
+<br />   &#x00A0;<span class="sectionToc">A.3 <a 
+href="hobbit-sysadmin-guideap1.html#x19-340000A.3" id="QQ2-19-386">&#x201C;<span 
+class="pcrr7tn-">hg version</span>&#x201D;&#x2014;print version and copyright information</a></span>
+<br />   <span class="appendixToc">B <a 
+href="hobbit-sysadmin-guideap2.html#x20-344000B" id="QQ2-20-390">Mercurial Queues reference</a></span>
+<br />   &#x00A0;<span class="sectionToc">B.1 <a 
+href="hobbit-sysadmin-guideap2.html#x20-345000B.1" id="QQ2-20-391">MQ command reference</a></span>
+<br />   &#x00A0;<span class="sectionToc">B.2 <a 
+href="hobbit-sysadmin-guideap2.html#x20-368000B.2" id="QQ2-20-414">MQ file reference</a></span>
+<br />   <span class="appendixToc">C <a 
+href="hobbit-sysadmin-guideap3.html#x21-371000C" id="QQ2-21-417">Making of this book</a></span>
+<br />   &#x00A0;<span class="sectionToc">C.1 <a 
+href="hobbit-sysadmin-guideap3.html#x21-372000C.1" id="QQ2-21-418">Where to download the book source</a></span>
+<br />   &#x00A0;<span class="sectionToc">C.2 <a 
+href="hobbit-sysadmin-guideap3.html#x21-373000C.2" id="QQ2-21-419">On Windows</a></span>
+<br />   <span class="appendixToc">D <a 
+href="hobbit-sysadmin-guideap4.html#x22-374000D" id="QQ2-22-420">Open Publication License</a></span>
+<br />   &#x00A0;<span class="sectionToc">D.1 <a 
+href="hobbit-sysadmin-guideap4.html#x22-375000D.1" id="QQ2-22-421">Requirements on both unmodified and modified versions</a></span>
+<br />   &#x00A0;<span class="sectionToc">D.2 <a 
+href="hobbit-sysadmin-guideap4.html#x22-376000D.2" id="QQ2-22-422">Copyright</a></span>
+<br />   &#x00A0;<span class="sectionToc">D.3 <a 
+href="hobbit-sysadmin-guideap4.html#x22-377000D.3" id="QQ2-22-423">Scope of license</a></span>
+<br />   &#x00A0;<span class="sectionToc">D.4 <a 
+href="hobbit-sysadmin-guideap4.html#x22-378000D.4" id="QQ2-22-424">Requirements on modified works</a></span>
+<br />   &#x00A0;<span class="sectionToc">D.5 <a 
+href="hobbit-sysadmin-guideap4.html#x22-379000D.5" id="QQ2-22-425">Good-practice recommendations</a></span>
+<br />   &#x00A0;<span class="sectionToc">D.6 <a 
+href="hobbit-sysadmin-guideap4.html#x22-380000D.6" id="QQ2-22-426">License options</a></span>
+<br />   <span class="chapterToc"> <a 
+href="hobbit-sysadmin-guideap4.html#Q1-22-427">Bibliography</a></span>
+<br />   <span class="chapterToc"> <a 
+href="hobbit-sysadmin-guideap4.html#Q1-22-428">Index</a></span>
+   </div>
+                                                                                         
+                                                                                         
+
+                                                                                         
+                                                                                         
+
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+<a 
+ id="x1-322018r362"></a>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-343007r362"></a>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-370003r362"></a>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-373001r362"></a> 
+</body></html> 
+
+                                                                                         
+
+

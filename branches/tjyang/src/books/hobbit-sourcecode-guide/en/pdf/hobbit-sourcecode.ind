@@ -1,0 +1,11 @@
+\begin{theindex}
+
+  \item \texttt  {PYTHONPATH} environment variable, \hyperpage{989}
+  \item \texttt  {bisect} extension, \hyperpage{3}
+
+  \indexspace
+
+  \item environment variables
+    \subitem \texttt  {PYTHONPATH}, \hyperpage{989}
+
+\end{theindex}

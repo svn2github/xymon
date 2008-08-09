@@ -1,0 +1,1339 @@
+htfcss: pcrr7t font-family: monospace;
+htfcss: pcrr7tn font-family: monospace;
+htfcss: pcrro7t font-family: monospace;    font-style: oblique;
+htfcss: pcrb7t  font-family: monospace; font-weight: bold;
+htfcss: ptmr7t font-family: monospace;
+htfcss: ptmb7t  font-weight: bold;
+htfcss: zpzccmry  font-weight: bold; font-style: italic;
+htfcss: zptmcmrm  font-style: italic;
+htfcss: cmmi font-style: italic;
+htfcss: cmmib font-style: italic; font-weight: bold;
+htfcss: zptmcmr  font-style: italic;
+htfcss: ptmri7t font-style: italic;
+htfcss: zpzccmry  font-weight: bold; font-style: italic;
+htfcss: ptmr7t font-family: monospace;
+htfcss: ptmr7t font-family: monospace;
+htfcss: ptmr7t font-family: monospace;
+File: hobbit-sysadmin-guide.html
+File: hobbit-sysadmin-guide.css
+File: hobbit-sysadmin-guide.tmp
+File: hobbit-sysadmin-guideli1.html
+File: hobbit-sysadmin-guideli2.html
+File: hobbit-sysadmin-guideli3.html
+File: hobbit-sysadmin-guidech1.html
+File: hobbit-sysadmin-guidech2.html
+File: hobbit-sysadmin-guidech3.html
+File: hobbit-sysadmin-guidech4.html
+File: hobbit-sysadmin-guidech5.html
+File: hobbit-sysadmin-guidech6.html
+File: hobbit-sysadmin-guidech7.html
+File: hobbit-sysadmin-guidech8.html
+File: hobbit-sysadmin-guidech9.html
+File: hobbit-sysadmin-guidech10.html
+File: hobbit-sysadmin-guidech11.html
+File: hobbit-sysadmin-guidech12.html
+File: hobbit-sysadmin-guidech13.html
+File: hobbit-sysadmin-guidech14.html
+File: hobbit-sysadmin-guideap1.html
+File: hobbit-sysadmin-guideap2.html
+File: hobbit-sysadmin-guideap3.html
+File: hobbit-sysadmin-guideap4.html
+Css: p.noindent { text-indent: 0em }
+Css: p.nopar { text-indent: 0em; }
+Css: p.indent{ text-indent: 1.5em }
+Css: @media print {div.crosslinks {visibility:hidden;}}
+Css: a img { border-top: 0; border-left: 0; border-right: 0; }
+Font_Css("4"): .small-caps{font-variant: small-caps; }
+Font_Css("10"): .htf-cmbx {font-weight: bold; font-style:normal;}
+Font_Css("12"): .htf-calligraphy {font-family:cursive}
+Font_Css("14"): .htf-italic {font-style: italic;}
+Font_Css("16"): .htf-bold {font-weight: bold;}
+Font_Css("12"): .htf-calligraphy-bold {font-family:cursive ; font-weight: bold; }
+Css: center { margin-top:1em; margin-bottom:1em; }
+Css: td center { margin-top:0em; margin-bottom:0em; }
+Css: .Canvas { position:relative; }
+Css: img.math{vertical-align:middle;}
+Css: li p.indent { text-indent: 0em }
+Css: .enumerate1 {list-style-type:decimal;}
+Css: .enumerate2 {list-style-type:lower-alpha;}
+Css: .enumerate3 {list-style-type:lower-roman;}
+Css: .enumerate4 {list-style-type:upper-alpha;}
+Css: div.newtheorem { margin-bottom: 2em; margin-top: 2em;}
+Css: .obeylines-h,.obeylines-v {white-space: nowrap; }
+Css: div.obeylines-v p { margin-top:0; margin-bottom:0; }
+Css: .overline{ text-decoration:overline; }
+Css: .overline img{ border-top: 1px solid black; }
+Css: td.displaylines {text-align:center; white-space:nowrap;}
+Css: .centerline {text-align:center;}
+Css: .rightline {text-align:right;}
+Css: div.verbatim {font-family: monospace; white-space: nowrap; }
+Css: table.verbatim {width:100%;}
+Css: .fbox {padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: div.center div.fbox {text-align:center; clear:both; padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: table.minipage{width:100%;}
+Css: div.center, div.center div.center {text-align: center; margin-left:1em; margin-right:1em;}
+Css: div.center div {text-align: left;}
+Css: div.flushright, div.flushright div.flushright {text-align: right;}
+Css: div.flushright div {text-align: left;}
+Css: div.flushleft {text-align: left;}
+Css: .underline{ text-decoration:underline; }
+Css: .underline img{ border-bottom: 1px solid black; margin-bottom:1pt; }
+Css: .framebox-c, .framebox-l, .framebox-r { padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: .framebox-c {text-align:center;}
+Css: .framebox-l {text-align:left;}
+Css: .framebox-r {text-align:right;}
+Css: span.thank-mark{ vertical-align: super }
+Css: span.footnote-mark sup.textsuperscript, span.footnote-mark a sup.textsuperscript{ font-size:80%; }
+Css: div.tabular, div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
+Css: table.tabular td p{margin-top:0em;}
+Css: table.tabular {margin-left: auto; margin-right: auto;}
+Css: div.td00{ margin-left:0pt; margin-right:0pt; }
+Css: div.td01{ margin-left:0pt; margin-right:5pt; }
+Css: div.td10{ margin-left:5pt; margin-right:0pt; }
+Css: div.td11{ margin-left:5pt; margin-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: td.td00{ padding-left:0pt; padding-right:0pt; }
+Css: td.td01{ padding-left:0pt; padding-right:5pt; }
+Css: td.td10{ padding-left:5pt; padding-right:0pt; }
+Css: td.td11{ padding-left:5pt; padding-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: .hline hr, .cline hr{ height : 1px; margin:0px; }
+Css: .tabbing-right {text-align:right;}
+Css: span.TEX {letter-spacing: -0.125em; }
+Css: span.TEX span.E{ position:relative;top:0.5ex;left:-0.0417em;}
+Css: a span.TEX span.E {text-decoration: none; }
+Css: span.LATEX span.A{ position:relative; top:-0.5ex; left:-0.4em; font-size:85%;}
+Css: span.LATEX span.TEX{ position:relative; left: -0.4em; }
+Css: div.float img, div.float .caption {text-align:center;}
+Css: div.figure img, div.figure .caption {text-align:center;}
+Css: .marginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
+Css: .marginpar p{margin-top:0.4em; margin-bottom:0.4em;}
+Css: table.equation {width:100%;}
+Css: .equation td{text-align:center; }
+Css: td.equation { margin-top:1em; margin-bottom:1em; } 
+Css: td.equation-label { width:5%; text-align:center; }
+Css: td.eqnarray4 { width:5%; white-space: normal; }
+Css: td.eqnarray2 { width:5%; }
+Css: table.eqnarray-star, table.eqnarray {width:100%;}
+Css: div.eqnarray{text-align:center;}
+Css: div.array {text-align:center;}
+Css: div.pmatrix {text-align:center;}
+Css: table.pmatrix {width:100%;}
+Css: span.pmatrix img{vertical-align:middle;}
+Css: div.pmatrix {text-align:center;}
+Css: table.pmatrix {width:100%;}
+Css: img.cdots{vertical-align:middle;}
+Css: .partToc a, .partToc, .likepartToc a, .likepartToc {line-height: 200%; font-weight:bold; font-size:110%;}
+Css: .chapterToc a, .chapterToc, .likechapterToc a, .likechapterToc, .appendixToc a, .appendixToc {line-height: 200%; font-weight:bold;}
+Css: .caption td.id{font-weight: bold; white-space: nowrap; }
+Css: table.caption {text-align:center;}
+Css: h1.partHead{text-align: center}
+Css: p.bibitem { text-indent: -2em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+Css: p.bibitem-p { text-indent: 0em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+Css: .paragraphHead, .likeparagraphHead { margin-top:2em; font-weight: bold;}
+Css: .subparagraphHead, .likesubparagraphHead { font-weight: bold;}
+Css: .quote {margin-bottom:0.25em; margin-top:0.25em; margin-left:1em; margin-right:1em; text-align:justify;}
+Css: .verse{white-space:nowrap; margin-left:2em}
+Css: div.maketitle {text-align:center;}
+Css: h2.titleHead{text-align:center;}
+Css: div.maketitle{ margin-bottom: 2em; }
+Css: div.author, div.date {text-align:center;}
+Css: div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
+Css: div.author{white-space: nowrap;}
+Css: .quotation {margin-bottom:0.25em; margin-top:0.25em; margin-left:1em; }
+Css: h1.partHead{text-align: center}
+Css: .figure img.graphics {margin-left:10%;}
+Css: P.fancyvrb {white-space: nowrap; margin:0em;}
+File: hobbit-sysadmin-guide.4idx
+Css: div#fancyvrb1{ border-top: solid 0.4pt; }
+Css: div#fancyvrb1{ border-left: solid 0.4pt; }
+Css: div#fancyvrb1{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb1{ border-right: solid 0.4pt; }
+Css: div#fancyvrb2{ border-top: solid 0.4pt; }
+Css: div#fancyvrb2{ border-left: solid 0.4pt; }
+Css: div#fancyvrb2{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb2{ border-right: solid 0.4pt; }
+Css: div#fancyvrb3{ border-top: solid 0.4pt; }
+Css: div#fancyvrb3{ border-left: solid 0.4pt; }
+Css: div#fancyvrb3{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb3{ border-right: solid 0.4pt; }
+Css: div#fancyvrb4{ border-top: solid 0.4pt; }
+Css: div#fancyvrb4{ border-left: solid 0.4pt; }
+Css: div#fancyvrb4{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb4{ border-right: solid 0.4pt; }
+Css: div#fancyvrb5{ border-top: solid 0.4pt; }
+Css: div#fancyvrb5{ border-left: solid 0.4pt; }
+Css: div#fancyvrb5{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb5{ border-right: solid 0.4pt; }
+Css: div#fancyvrb6{ border-top: solid 0.4pt; }
+Css: div#fancyvrb6{ border-left: solid 0.4pt; }
+Css: div#fancyvrb6{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb6{ border-right: solid 0.4pt; }
+Css: div#fancyvrb7{ border-top: solid 0.4pt; }
+Css: div#fancyvrb7{ border-left: solid 0.4pt; }
+Css: div#fancyvrb7{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb7{ border-right: solid 0.4pt; }
+Css: div#fancyvrb8{ border-top: solid 0.4pt; }
+Css: div#fancyvrb8{ border-left: solid 0.4pt; }
+Css: div#fancyvrb8{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb8{ border-right: solid 0.4pt; }
+Css: div#fancyvrb9{ border-top: solid 0.4pt; }
+Css: div#fancyvrb9{ border-left: solid 0.4pt; }
+Css: div#fancyvrb9{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb9{ border-right: solid 0.4pt; }
+Css: div#fancyvrb10{ border-top: solid 0.4pt; }
+Css: div#fancyvrb10{ border-left: solid 0.4pt; }
+Css: div#fancyvrb10{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb10{ border-right: solid 0.4pt; }
+Css: div#fancyvrb11{ border-top: solid 0.4pt; }
+Css: div#fancyvrb11{ border-left: solid 0.4pt; }
+Css: div#fancyvrb11{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb11{ border-right: solid 0.4pt; }
+Css: div#fancyvrb12{ border-top: solid 0.4pt; }
+Css: div#fancyvrb12{ border-left: solid 0.4pt; }
+Css: div#fancyvrb12{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb12{ border-right: solid 0.4pt; }
+Css: div#fancyvrb13{ border-top: solid 0.4pt; }
+Css: div#fancyvrb13{ border-left: solid 0.4pt; }
+Css: div#fancyvrb13{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb13{ border-right: solid 0.4pt; }
+Css: div#fancyvrb14{ border-top: solid 0.4pt; }
+Css: div#fancyvrb14{ border-left: solid 0.4pt; }
+Css: div#fancyvrb14{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb14{ border-right: solid 0.4pt; }
+Css: div#fancyvrb15{ border-top: solid 0.4pt; }
+Css: div#fancyvrb15{ border-left: solid 0.4pt; }
+Css: div#fancyvrb15{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb15{ border-right: solid 0.4pt; }
+Css: div#fancyvrb16{ border-top: solid 0.4pt; }
+Css: div#fancyvrb16{ border-left: solid 0.4pt; }
+Css: div#fancyvrb16{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb16{ border-right: solid 0.4pt; }
+Css: div#fancyvrb17{ border-top: solid 0.4pt; }
+Css: div#fancyvrb17{ border-left: solid 0.4pt; }
+Css: div#fancyvrb17{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb17{ border-right: solid 0.4pt; }
+Css: div#fancyvrb18{ border-top: solid 0.4pt; }
+Css: div#fancyvrb18{ border-left: solid 0.4pt; }
+Css: div#fancyvrb18{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb18{ border-right: solid 0.4pt; }
+Css: div#fancyvrb19{ border-top: solid 0.4pt; }
+Css: div#fancyvrb19{ border-left: solid 0.4pt; }
+Css: div#fancyvrb19{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb19{ border-right: solid 0.4pt; }
+Css: div#fancyvrb20{ border-top: solid 0.4pt; }
+Css: div#fancyvrb20{ border-left: solid 0.4pt; }
+Css: div#fancyvrb20{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb20{ border-right: solid 0.4pt; }
+Css: div#fancyvrb21{ border-top: solid 0.4pt; }
+Css: div#fancyvrb21{ border-left: solid 0.4pt; }
+Css: div#fancyvrb21{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb21{ border-right: solid 0.4pt; }
+Css: div#fancyvrb22{ border-top: solid 0.4pt; }
+Css: div#fancyvrb22{ border-left: solid 0.4pt; }
+Css: div#fancyvrb22{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb22{ border-right: solid 0.4pt; }
+Css: div#fancyvrb23{ border-top: solid 0.4pt; }
+Css: div#fancyvrb23{ border-left: solid 0.4pt; }
+Css: div#fancyvrb23{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb23{ border-right: solid 0.4pt; }
+Css: div#fancyvrb24{ border-top: solid 0.4pt; }
+Css: div#fancyvrb24{ border-left: solid 0.4pt; }
+Css: div#fancyvrb24{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb24{ border-right: solid 0.4pt; }
+Css: div#fancyvrb25{ border-top: solid 0.4pt; }
+Css: div#fancyvrb25{ border-left: solid 0.4pt; }
+Css: div#fancyvrb25{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb25{ border-right: solid 0.4pt; }
+Css: div#fancyvrb26{ border-top: solid 0.4pt; }
+Css: div#fancyvrb26{ border-left: solid 0.4pt; }
+Css: div#fancyvrb26{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb26{ border-right: solid 0.4pt; }
+Css: div#fancyvrb27{ border-top: solid 0.4pt; }
+Css: div#fancyvrb27{ border-left: solid 0.4pt; }
+Css: div#fancyvrb27{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb27{ border-right: solid 0.4pt; }
+Css: div#fancyvrb28{ border-top: solid 0.4pt; }
+Css: div#fancyvrb28{ border-left: solid 0.4pt; }
+Css: div#fancyvrb28{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb28{ border-right: solid 0.4pt; }
+Css: div#fancyvrb29{ border-top: solid 0.4pt; }
+Css: div#fancyvrb29{ border-left: solid 0.4pt; }
+Css: div#fancyvrb29{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb29{ border-right: solid 0.4pt; }
+Css: div#fancyvrb30{ border-top: solid 0.4pt; }
+Css: div#fancyvrb30{ border-left: solid 0.4pt; }
+Css: div#fancyvrb30{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb30{ border-right: solid 0.4pt; }
+Css: div#fancyvrb31{ border-top: solid 0.4pt; }
+Css: div#fancyvrb31{ border-left: solid 0.4pt; }
+Css: div#fancyvrb31{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb31{ border-right: solid 0.4pt; }
+Css: div#fancyvrb32{ border-top: solid 0.4pt; }
+Css: div#fancyvrb32{ border-left: solid 0.4pt; }
+Css: div#fancyvrb32{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb32{ border-right: solid 0.4pt; }
+Css: div#fancyvrb33{ border-top: solid 0.4pt; }
+Css: div#fancyvrb33{ border-left: solid 0.4pt; }
+Css: div#fancyvrb33{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb33{ border-right: solid 0.4pt; }
+Css: div#fancyvrb34{ border-top: solid 0.4pt; }
+Css: div#fancyvrb34{ border-left: solid 0.4pt; }
+Css: div#fancyvrb34{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb34{ border-right: solid 0.4pt; }
+Css: div#fancyvrb35{ border-top: solid 0.4pt; }
+Css: div#fancyvrb35{ border-left: solid 0.4pt; }
+Css: div#fancyvrb35{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb35{ border-right: solid 0.4pt; }
+Css: div#fancyvrb36{ border-top: solid 0.4pt; }
+Css: div#fancyvrb36{ border-left: solid 0.4pt; }
+Css: div#fancyvrb36{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb36{ border-right: solid 0.4pt; }
+Css: div#fancyvrb37{ border-top: solid 0.4pt; }
+Css: div#fancyvrb37{ border-left: solid 0.4pt; }
+Css: div#fancyvrb37{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb37{ border-right: solid 0.4pt; }
+Css: div#fancyvrb38{ border-top: solid 0.4pt; }
+Css: div#fancyvrb38{ border-left: solid 0.4pt; }
+Css: div#fancyvrb38{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb38{ border-right: solid 0.4pt; }
+Css: div#fancyvrb39{ border-top: solid 0.4pt; }
+Css: div#fancyvrb39{ border-left: solid 0.4pt; }
+Css: div#fancyvrb39{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb39{ border-right: solid 0.4pt; }
+Css: div#fancyvrb40{ border-top: solid 0.4pt; }
+Css: div#fancyvrb40{ border-left: solid 0.4pt; }
+Css: div#fancyvrb40{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb40{ border-right: solid 0.4pt; }
+Css: div#fancyvrb41{ border-top: solid 0.4pt; }
+Css: div#fancyvrb41{ border-left: solid 0.4pt; }
+Css: div#fancyvrb41{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb41{ border-right: solid 0.4pt; }
+Css: div#fancyvrb42{ border-top: solid 0.4pt; }
+Css: div#fancyvrb42{ border-left: solid 0.4pt; }
+Css: div#fancyvrb42{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb42{ border-right: solid 0.4pt; }
+Css: div#fancyvrb43{ border-top: solid 0.4pt; }
+Css: div#fancyvrb43{ border-left: solid 0.4pt; }
+Css: div#fancyvrb43{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb43{ border-right: solid 0.4pt; }
+Css: div#fancyvrb44{ border-top: solid 0.4pt; }
+Css: div#fancyvrb44{ border-left: solid 0.4pt; }
+Css: div#fancyvrb44{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb44{ border-right: solid 0.4pt; }
+Css: div#fancyvrb45{ border-top: solid 0.4pt; }
+Css: div#fancyvrb45{ border-left: solid 0.4pt; }
+Css: div#fancyvrb45{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb45{ border-right: solid 0.4pt; }
+Css: div#fancyvrb46{ border-top: solid 0.4pt; }
+Css: div#fancyvrb46{ border-left: solid 0.4pt; }
+Css: div#fancyvrb46{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb46{ border-right: solid 0.4pt; }
+Css: div#fancyvrb47{ border-top: solid 0.4pt; }
+Css: div#fancyvrb47{ border-left: solid 0.4pt; }
+Css: div#fancyvrb47{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb47{ border-right: solid 0.4pt; }
+Css: div#fancyvrb48{ border-top: solid 0.4pt; }
+Css: div#fancyvrb48{ border-left: solid 0.4pt; }
+Css: div#fancyvrb48{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb48{ border-right: solid 0.4pt; }
+Css: div#fancyvrb49{ border-top: solid 0.4pt; }
+Css: div#fancyvrb49{ border-left: solid 0.4pt; }
+Css: div#fancyvrb49{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb49{ border-right: solid 0.4pt; }
+Css: div#fancyvrb50{ border-top: solid 0.4pt; }
+Css: div#fancyvrb50{ border-left: solid 0.4pt; }
+Css: div#fancyvrb50{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb50{ border-right: solid 0.4pt; }
+Css: div#fancyvrb51{ border-top: solid 0.4pt; }
+Css: div#fancyvrb51{ border-left: solid 0.4pt; }
+Css: div#fancyvrb51{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb51{ border-right: solid 0.4pt; }
+Css: div#fancyvrb52{ border-top: solid 0.4pt; }
+Css: div#fancyvrb52{ border-left: solid 0.4pt; }
+Css: div#fancyvrb52{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb52{ border-right: solid 0.4pt; }
+Css: div#fancyvrb53{ border-top: solid 0.4pt; }
+Css: div#fancyvrb53{ border-left: solid 0.4pt; }
+Css: div#fancyvrb53{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb53{ border-right: solid 0.4pt; }
+Css: div#fancyvrb54{ border-top: solid 0.4pt; }
+Css: div#fancyvrb54{ border-left: solid 0.4pt; }
+Css: div#fancyvrb54{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb54{ border-right: solid 0.4pt; }
+Css: div#fancyvrb55{ border-top: solid 0.4pt; }
+Css: div#fancyvrb55{ border-left: solid 0.4pt; }
+Css: div#fancyvrb55{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb55{ border-right: solid 0.4pt; }
+Css: div#fancyvrb56{ border-top: solid 0.4pt; }
+Css: div#fancyvrb56{ border-left: solid 0.4pt; }
+Css: div#fancyvrb56{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb56{ border-right: solid 0.4pt; }
+Css: div#fancyvrb57{ border-top: solid 0.4pt; }
+Css: div#fancyvrb57{ border-left: solid 0.4pt; }
+Css: div#fancyvrb57{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb57{ border-right: solid 0.4pt; }
+Css: div#fancyvrb58{ border-top: solid 0.4pt; }
+Css: div#fancyvrb58{ border-left: solid 0.4pt; }
+Css: div#fancyvrb58{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb58{ border-right: solid 0.4pt; }
+Css: div#fancyvrb59{ border-top: solid 0.4pt; }
+Css: div#fancyvrb59{ border-left: solid 0.4pt; }
+Css: div#fancyvrb59{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb59{ border-right: solid 0.4pt; }
+Css: div#fancyvrb60{ border-top: solid 0.4pt; }
+Css: div#fancyvrb60{ border-left: solid 0.4pt; }
+Css: div#fancyvrb60{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb60{ border-right: solid 0.4pt; }
+Css: div#fancyvrb61{ border-top: solid 0.4pt; }
+Css: div#fancyvrb61{ border-left: solid 0.4pt; }
+Css: div#fancyvrb61{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb61{ border-right: solid 0.4pt; }
+Css: div#fancyvrb62{ border-top: solid 0.4pt; }
+Css: div#fancyvrb62{ border-left: solid 0.4pt; }
+Css: div#fancyvrb62{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb62{ border-right: solid 0.4pt; }
+Css: div#fancyvrb63{ border-top: solid 0.4pt; }
+Css: div#fancyvrb63{ border-left: solid 0.4pt; }
+Css: div#fancyvrb63{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb63{ border-right: solid 0.4pt; }
+Css: div#fancyvrb64{ border-top: solid 0.4pt; }
+Css: div#fancyvrb64{ border-left: solid 0.4pt; }
+Css: div#fancyvrb64{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb64{ border-right: solid 0.4pt; }
+Css: div#fancyvrb65{ border-top: solid 0.4pt; }
+Css: div#fancyvrb65{ border-left: solid 0.4pt; }
+Css: div#fancyvrb65{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb65{ border-right: solid 0.4pt; }
+Css: div#fancyvrb66{ border-top: solid 0.4pt; }
+Css: div#fancyvrb66{ border-left: solid 0.4pt; }
+Css: div#fancyvrb66{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb66{ border-right: solid 0.4pt; }
+Css: div#fancyvrb67{ border-top: solid 0.4pt; }
+Css: div#fancyvrb67{ border-left: solid 0.4pt; }
+Css: div#fancyvrb67{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb67{ border-right: solid 0.4pt; }
+Css: div#fancyvrb68{ border-top: solid 0.4pt; }
+Css: div#fancyvrb68{ border-left: solid 0.4pt; }
+Css: div#fancyvrb68{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb68{ border-right: solid 0.4pt; }
+Css: div#fancyvrb69{ border-top: solid 0.4pt; }
+Css: div#fancyvrb69{ border-left: solid 0.4pt; }
+Css: div#fancyvrb69{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb69{ border-right: solid 0.4pt; }
+Css: div#fancyvrb70{ border-top: solid 0.4pt; }
+Css: div#fancyvrb70{ border-left: solid 0.4pt; }
+Css: div#fancyvrb70{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb70{ border-right: solid 0.4pt; }
+Css: div#fancyvrb71{ border-top: solid 0.4pt; }
+Css: div#fancyvrb71{ border-left: solid 0.4pt; }
+Css: div#fancyvrb71{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb71{ border-right: solid 0.4pt; }
+Css: div#fancyvrb72{ border-top: solid 0.4pt; }
+Css: div#fancyvrb72{ border-left: solid 0.4pt; }
+Css: div#fancyvrb72{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb72{ border-right: solid 0.4pt; }
+Css: div#fancyvrb73{ border-top: solid 0.4pt; }
+Css: div#fancyvrb73{ border-left: solid 0.4pt; }
+Css: div#fancyvrb73{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb73{ border-right: solid 0.4pt; }
+Css: div#fancyvrb74{ border-top: solid 0.4pt; }
+Css: div#fancyvrb74{ border-left: solid 0.4pt; }
+Css: div#fancyvrb74{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb74{ border-right: solid 0.4pt; }
+Css: div#fancyvrb75{ border-top: solid 0.4pt; }
+Css: div#fancyvrb75{ border-left: solid 0.4pt; }
+Css: div#fancyvrb75{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb75{ border-right: solid 0.4pt; }
+Css: div#fancyvrb76{ border-top: solid 0.4pt; }
+Css: div#fancyvrb76{ border-left: solid 0.4pt; }
+Css: div#fancyvrb76{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb76{ border-right: solid 0.4pt; }
+Css: div#fancyvrb77{ border-top: solid 0.4pt; }
+Css: div#fancyvrb77{ border-left: solid 0.4pt; }
+Css: div#fancyvrb77{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb77{ border-right: solid 0.4pt; }
+Css: div#fancyvrb78{ border-top: solid 0.4pt; }
+Css: div#fancyvrb78{ border-left: solid 0.4pt; }
+Css: div#fancyvrb78{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb78{ border-right: solid 0.4pt; }
+Css: div#fancyvrb79{ border-top: solid 0.4pt; }
+Css: div#fancyvrb79{ border-left: solid 0.4pt; }
+Css: div#fancyvrb79{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb79{ border-right: solid 0.4pt; }
+Css: div#fancyvrb80{ border-top: solid 0.4pt; }
+Css: div#fancyvrb80{ border-left: solid 0.4pt; }
+Css: div#fancyvrb80{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb80{ border-right: solid 0.4pt; }
+Css: div#fancyvrb81{ border-top: solid 0.4pt; }
+Css: div#fancyvrb81{ border-left: solid 0.4pt; }
+Css: div#fancyvrb81{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb81{ border-right: solid 0.4pt; }
+Css: div#fancyvrb82{ border-top: solid 0.4pt; }
+Css: div#fancyvrb82{ border-left: solid 0.4pt; }
+Css: div#fancyvrb82{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb82{ border-right: solid 0.4pt; }
+Css: div#fancyvrb83{ border-top: solid 0.4pt; }
+Css: div#fancyvrb83{ border-left: solid 0.4pt; }
+Css: div#fancyvrb83{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb83{ border-right: solid 0.4pt; }
+Css: div#fancyvrb84{ border-top: solid 0.4pt; }
+Css: div#fancyvrb84{ border-left: solid 0.4pt; }
+Css: div#fancyvrb84{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb84{ border-right: solid 0.4pt; }
+Css: div#fancyvrb85{ border-top: solid 0.4pt; }
+Css: div#fancyvrb85{ border-left: solid 0.4pt; }
+Css: div#fancyvrb85{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb85{ border-right: solid 0.4pt; }
+Css: div#fancyvrb86{ border-top: solid 0.4pt; }
+Css: div#fancyvrb86{ border-left: solid 0.4pt; }
+Css: div#fancyvrb86{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb86{ border-right: solid 0.4pt; }
+Css: div#fancyvrb87{ border-top: solid 0.4pt; }
+Css: div#fancyvrb87{ border-left: solid 0.4pt; }
+Css: div#fancyvrb87{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb87{ border-right: solid 0.4pt; }
+Css: div#fancyvrb88{ border-top: solid 0.4pt; }
+Css: div#fancyvrb88{ border-left: solid 0.4pt; }
+Css: div#fancyvrb88{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb88{ border-right: solid 0.4pt; }
+Css: div#fancyvrb89{ border-top: solid 0.4pt; }
+Css: div#fancyvrb89{ border-left: solid 0.4pt; }
+Css: div#fancyvrb89{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb89{ border-right: solid 0.4pt; }
+Css: div#fancyvrb90{ border-top: solid 0.4pt; }
+Css: div#fancyvrb90{ border-left: solid 0.4pt; }
+Css: div#fancyvrb90{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb90{ border-right: solid 0.4pt; }
+Css: div#fancyvrb91{ border-top: solid 0.4pt; }
+Css: div#fancyvrb91{ border-left: solid 0.4pt; }
+Css: div#fancyvrb91{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb91{ border-right: solid 0.4pt; }
+Css: div#fancyvrb92{ border-top: solid 0.4pt; }
+Css: div#fancyvrb92{ border-left: solid 0.4pt; }
+Css: div#fancyvrb92{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb92{ border-right: solid 0.4pt; }
+Css: div#fancyvrb93{ border-top: solid 0.4pt; }
+Css: div#fancyvrb93{ border-left: solid 0.4pt; }
+Css: div#fancyvrb93{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb93{ border-right: solid 0.4pt; }
+Css: div#fancyvrb94{ border-top: solid 0.4pt; }
+Css: div#fancyvrb94{ border-left: solid 0.4pt; }
+Css: div#fancyvrb94{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb94{ border-right: solid 0.4pt; }
+Css: div#fancyvrb95{ border-top: solid 0.4pt; }
+Css: div#fancyvrb95{ border-left: solid 0.4pt; }
+Css: div#fancyvrb95{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb95{ border-right: solid 0.4pt; }
+Css: div#fancyvrb96{ border-top: solid 0.4pt; }
+Css: div#fancyvrb96{ border-left: solid 0.4pt; }
+Css: div#fancyvrb96{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb96{ border-right: solid 0.4pt; }
+Css: div#fancyvrb97{ border-top: solid 0.4pt; }
+Css: div#fancyvrb97{ border-left: solid 0.4pt; }
+Css: div#fancyvrb97{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb97{ border-right: solid 0.4pt; }
+Css: div#fancyvrb98{ border-top: solid 0.4pt; }
+Css: div#fancyvrb98{ border-left: solid 0.4pt; }
+Css: div#fancyvrb98{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb98{ border-right: solid 0.4pt; }
+Css: div#fancyvrb99{ border-top: solid 0.4pt; }
+Css: div#fancyvrb99{ border-left: solid 0.4pt; }
+Css: div#fancyvrb99{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb99{ border-right: solid 0.4pt; }
+Css: div#fancyvrb100{ border-top: solid 0.4pt; }
+Css: div#fancyvrb100{ border-left: solid 0.4pt; }
+Css: div#fancyvrb100{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb100{ border-right: solid 0.4pt; }
+Css: div#fancyvrb101{ border-top: solid 0.4pt; }
+Css: div#fancyvrb101{ border-left: solid 0.4pt; }
+Css: div#fancyvrb101{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb101{ border-right: solid 0.4pt; }
+Css: div#fancyvrb102{ border-top: solid 0.4pt; }
+Css: div#fancyvrb102{ border-left: solid 0.4pt; }
+Css: div#fancyvrb102{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb102{ border-right: solid 0.4pt; }
+Css: div#fancyvrb103{ border-top: solid 0.4pt; }
+Css: div#fancyvrb103{ border-left: solid 0.4pt; }
+Css: div#fancyvrb103{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb103{ border-right: solid 0.4pt; }
+Css: div#fancyvrb104{ border-top: solid 0.4pt; }
+Css: div#fancyvrb104{ border-left: solid 0.4pt; }
+Css: div#fancyvrb104{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb104{ border-right: solid 0.4pt; }
+Css: div#fancyvrb105{ border-top: solid 0.4pt; }
+Css: div#fancyvrb105{ border-left: solid 0.4pt; }
+Css: div#fancyvrb105{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb105{ border-right: solid 0.4pt; }
+Css: div#fancyvrb106{ border-top: solid 0.4pt; }
+Css: div#fancyvrb106{ border-left: solid 0.4pt; }
+Css: div#fancyvrb106{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb106{ border-right: solid 0.4pt; }
+Css: div#fancyvrb107{ border-top: solid 0.4pt; }
+Css: div#fancyvrb107{ border-left: solid 0.4pt; }
+Css: div#fancyvrb107{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb107{ border-right: solid 0.4pt; }
+Css: div#fancyvrb108{ border-top: solid 0.4pt; }
+Css: div#fancyvrb108{ border-left: solid 0.4pt; }
+Css: div#fancyvrb108{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb108{ border-right: solid 0.4pt; }
+Css: div#fancyvrb109{ border-top: solid 0.4pt; }
+Css: div#fancyvrb109{ border-left: solid 0.4pt; }
+Css: div#fancyvrb109{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb109{ border-right: solid 0.4pt; }
+Css: div#fancyvrb110{ border-top: solid 0.4pt; }
+Css: div#fancyvrb110{ border-left: solid 0.4pt; }
+Css: div#fancyvrb110{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb110{ border-right: solid 0.4pt; }
+Css: div#fancyvrb111{ border-top: solid 0.4pt; }
+Css: div#fancyvrb111{ border-left: solid 0.4pt; }
+Css: div#fancyvrb111{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb111{ border-right: solid 0.4pt; }
+Css: div#fancyvrb112{ border-top: solid 0.4pt; }
+Css: div#fancyvrb112{ border-left: solid 0.4pt; }
+Css: div#fancyvrb112{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb112{ border-right: solid 0.4pt; }
+Css: div#fancyvrb113{ border-top: solid 0.4pt; }
+Css: div#fancyvrb113{ border-left: solid 0.4pt; }
+Css: div#fancyvrb113{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb113{ border-right: solid 0.4pt; }
+Css: div#fancyvrb114{ border-top: solid 0.4pt; }
+Css: div#fancyvrb114{ border-left: solid 0.4pt; }
+Css: div#fancyvrb114{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb114{ border-right: solid 0.4pt; }
+Css: div#fancyvrb115{ border-top: solid 0.4pt; }
+Css: div#fancyvrb115{ border-left: solid 0.4pt; }
+Css: div#fancyvrb115{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb115{ border-right: solid 0.4pt; }
+Css: div#fancyvrb116{ border-top: solid 0.4pt; }
+Css: div#fancyvrb116{ border-left: solid 0.4pt; }
+Css: div#fancyvrb116{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb116{ border-right: solid 0.4pt; }
+Css: div#fancyvrb117{ border-top: solid 0.4pt; }
+Css: div#fancyvrb117{ border-left: solid 0.4pt; }
+Css: div#fancyvrb117{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb117{ border-right: solid 0.4pt; }
+Css: div#fancyvrb118{ border-top: solid 0.4pt; }
+Css: div#fancyvrb118{ border-left: solid 0.4pt; }
+Css: div#fancyvrb118{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb118{ border-right: solid 0.4pt; }
+Css: div#fancyvrb119{ border-top: solid 0.4pt; }
+Css: div#fancyvrb119{ border-left: solid 0.4pt; }
+Css: div#fancyvrb119{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb119{ border-right: solid 0.4pt; }
+Css: div#fancyvrb120{ border-top: solid 0.4pt; }
+Css: div#fancyvrb120{ border-left: solid 0.4pt; }
+Css: div#fancyvrb120{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb120{ border-right: solid 0.4pt; }
+Css: div#fancyvrb121{ border-top: solid 0.4pt; }
+Css: div#fancyvrb121{ border-left: solid 0.4pt; }
+Css: div#fancyvrb121{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb121{ border-right: solid 0.4pt; }
+Css: div#fancyvrb122{ border-top: solid 0.4pt; }
+Css: div#fancyvrb122{ border-left: solid 0.4pt; }
+Css: div#fancyvrb122{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb122{ border-right: solid 0.4pt; }
+Css: div#fancyvrb123{ border-top: solid 0.4pt; }
+Css: div#fancyvrb123{ border-left: solid 0.4pt; }
+Css: div#fancyvrb123{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb123{ border-right: solid 0.4pt; }
+Css: div#fancyvrb124{ border-top: solid 0.4pt; }
+Css: div#fancyvrb124{ border-left: solid 0.4pt; }
+Css: div#fancyvrb124{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb124{ border-right: solid 0.4pt; }
+Css: div#fancyvrb125{ border-top: solid 0.4pt; }
+Css: div#fancyvrb125{ border-left: solid 0.4pt; }
+Css: div#fancyvrb125{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb125{ border-right: solid 0.4pt; }
+Css: div#fancyvrb126{ border-top: solid 0.4pt; }
+Css: div#fancyvrb126{ border-left: solid 0.4pt; }
+Css: div#fancyvrb126{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb126{ border-right: solid 0.4pt; }
+Css: div#fancyvrb127{ border-top: solid 0.4pt; }
+Css: div#fancyvrb127{ border-left: solid 0.4pt; }
+Css: div#fancyvrb127{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb127{ border-right: solid 0.4pt; }
+Css: div#fancyvrb128{ border-top: solid 0.4pt; }
+Css: div#fancyvrb128{ border-left: solid 0.4pt; }
+Css: div#fancyvrb128{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb128{ border-right: solid 0.4pt; }
+Css: div#fancyvrb129{ border-top: solid 0.4pt; }
+Css: div#fancyvrb129{ border-left: solid 0.4pt; }
+Css: div#fancyvrb129{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb129{ border-right: solid 0.4pt; }
+Css: div#fancyvrb130{ border-top: solid 0.4pt; }
+Css: div#fancyvrb130{ border-left: solid 0.4pt; }
+Css: div#fancyvrb130{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb130{ border-right: solid 0.4pt; }
+Css: div#fancyvrb131{ border-top: solid 0.4pt; }
+Css: div#fancyvrb131{ border-left: solid 0.4pt; }
+Css: div#fancyvrb131{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb131{ border-right: solid 0.4pt; }
+Css: div#fancyvrb132{ border-top: solid 0.4pt; }
+Css: div#fancyvrb132{ border-left: solid 0.4pt; }
+Css: div#fancyvrb132{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb132{ border-right: solid 0.4pt; }
+Css: div#fancyvrb133{ border-top: solid 0.4pt; }
+Css: div#fancyvrb133{ border-left: solid 0.4pt; }
+Css: div#fancyvrb133{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb133{ border-right: solid 0.4pt; }
+Css: div#fancyvrb134{ border-top: solid 0.4pt; }
+Css: div#fancyvrb134{ border-left: solid 0.4pt; }
+Css: div#fancyvrb134{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb134{ border-right: solid 0.4pt; }
+Css: div#fancyvrb135{ border-top: solid 0.4pt; }
+Css: div#fancyvrb135{ border-left: solid 0.4pt; }
+Css: div#fancyvrb135{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb135{ border-right: solid 0.4pt; }
+Css: div#fancyvrb136{ border-top: solid 0.4pt; }
+Css: div#fancyvrb136{ border-left: solid 0.4pt; }
+Css: div#fancyvrb136{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb136{ border-right: solid 0.4pt; }
+Css: div#fancyvrb137{ border-top: solid 0.4pt; }
+Css: div#fancyvrb137{ border-left: solid 0.4pt; }
+Css: div#fancyvrb137{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb137{ border-right: solid 0.4pt; }
+Css: div#fancyvrb138{ border-top: solid 0.4pt; }
+Css: div#fancyvrb138{ border-left: solid 0.4pt; }
+Css: div#fancyvrb138{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb138{ border-right: solid 0.4pt; }
+Css: div#fancyvrb139{ border-top: solid 0.4pt; }
+Css: div#fancyvrb139{ border-left: solid 0.4pt; }
+Css: div#fancyvrb139{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb139{ border-right: solid 0.4pt; }
+Css: div#fancyvrb140{ border-top: solid 0.4pt; }
+Css: div#fancyvrb140{ border-left: solid 0.4pt; }
+Css: div#fancyvrb140{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb140{ border-right: solid 0.4pt; }
+Css: div#fancyvrb141{ border-top: solid 0.4pt; }
+Css: div#fancyvrb141{ border-left: solid 0.4pt; }
+Css: div#fancyvrb141{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb141{ border-right: solid 0.4pt; }
+Css: div#fancyvrb142{ border-top: solid 0.4pt; }
+Css: div#fancyvrb142{ border-left: solid 0.4pt; }
+Css: div#fancyvrb142{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb142{ border-right: solid 0.4pt; }
+Css: div#fancyvrb143{ border-top: solid 0.4pt; }
+Css: div#fancyvrb143{ border-left: solid 0.4pt; }
+Css: div#fancyvrb143{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb143{ border-right: solid 0.4pt; }
+Css: div#fancyvrb144{ border-top: solid 0.4pt; }
+Css: div#fancyvrb144{ border-left: solid 0.4pt; }
+Css: div#fancyvrb144{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb144{ border-right: solid 0.4pt; }
+Css: div#fancyvrb145{ border-top: solid 0.4pt; }
+Css: div#fancyvrb145{ border-left: solid 0.4pt; }
+Css: div#fancyvrb145{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb145{ border-right: solid 0.4pt; }
+Css: div#fancyvrb146{ border-top: solid 0.4pt; }
+Css: div#fancyvrb146{ border-left: solid 0.4pt; }
+Css: div#fancyvrb146{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb146{ border-right: solid 0.4pt; }
+Css: div#fancyvrb147{ border-top: solid 0.4pt; }
+Css: div#fancyvrb147{ border-left: solid 0.4pt; }
+Css: div#fancyvrb147{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb147{ border-right: solid 0.4pt; }
+Css: div#fancyvrb148{ border-top: solid 0.4pt; }
+Css: div#fancyvrb148{ border-left: solid 0.4pt; }
+Css: div#fancyvrb148{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb148{ border-right: solid 0.4pt; }
+Css: div#fancyvrb149{ border-top: solid 0.4pt; }
+Css: div#fancyvrb149{ border-left: solid 0.4pt; }
+Css: div#fancyvrb149{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb149{ border-right: solid 0.4pt; }
+Css: div#fancyvrb150{ border-top: solid 0.4pt; }
+Css: div#fancyvrb150{ border-left: solid 0.4pt; }
+Css: div#fancyvrb150{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb150{ border-right: solid 0.4pt; }
+Css: div#fancyvrb151{ border-top: solid 0.4pt; }
+Css: div#fancyvrb151{ border-left: solid 0.4pt; }
+Css: div#fancyvrb151{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb151{ border-right: solid 0.4pt; }
+Css: div#fancyvrb152{ border-top: solid 0.4pt; }
+Css: div#fancyvrb152{ border-left: solid 0.4pt; }
+Css: div#fancyvrb152{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb152{ border-right: solid 0.4pt; }
+Css: div#fancyvrb153{ border-top: solid 0.4pt; }
+Css: div#fancyvrb153{ border-left: solid 0.4pt; }
+Css: div#fancyvrb153{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb153{ border-right: solid 0.4pt; }
+Css: div#fancyvrb154{ border-top: solid 0.4pt; }
+Css: div#fancyvrb154{ border-left: solid 0.4pt; }
+Css: div#fancyvrb154{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb154{ border-right: solid 0.4pt; }
+Css: div#fancyvrb155{ border-top: solid 0.4pt; }
+Css: div#fancyvrb155{ border-left: solid 0.4pt; }
+Css: div#fancyvrb155{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb155{ border-right: solid 0.4pt; }
+Css: div#fancyvrb156{ border-top: solid 0.4pt; }
+Css: div#fancyvrb156{ border-left: solid 0.4pt; }
+Css: div#fancyvrb156{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb156{ border-right: solid 0.4pt; }
+Css: div#fancyvrb157{ border-top: solid 0.4pt; }
+Css: div#fancyvrb157{ border-left: solid 0.4pt; }
+Css: div#fancyvrb157{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb157{ border-right: solid 0.4pt; }
+Css: div#fancyvrb158{ border-top: solid 0.4pt; }
+Css: div#fancyvrb158{ border-left: solid 0.4pt; }
+Css: div#fancyvrb158{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb158{ border-right: solid 0.4pt; }
+Css: div#fancyvrb159{ border-top: solid 0.4pt; }
+Css: div#fancyvrb159{ border-left: solid 0.4pt; }
+Css: div#fancyvrb159{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb159{ border-right: solid 0.4pt; }
+Css: div#fancyvrb160{ border-top: solid 0.4pt; }
+Css: div#fancyvrb160{ border-left: solid 0.4pt; }
+Css: div#fancyvrb160{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb160{ border-right: solid 0.4pt; }
+Css: div#fancyvrb161{ border-top: solid 0.4pt; }
+Css: div#fancyvrb161{ border-left: solid 0.4pt; }
+Css: div#fancyvrb161{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb161{ border-right: solid 0.4pt; }
+Css: div#fancyvrb162{ border-top: solid 0.4pt; }
+Css: div#fancyvrb162{ border-left: solid 0.4pt; }
+Css: div#fancyvrb162{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb162{ border-right: solid 0.4pt; }
+Css: div#fancyvrb163{ border-top: solid 0.4pt; }
+Css: div#fancyvrb163{ border-left: solid 0.4pt; }
+Css: div#fancyvrb163{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb163{ border-right: solid 0.4pt; }
+Css: div#fancyvrb164{ border-top: solid 0.4pt; }
+Css: div#fancyvrb164{ border-left: solid 0.4pt; }
+Css: div#fancyvrb164{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb164{ border-right: solid 0.4pt; }
+Css: div#fancyvrb165{ border-top: solid 0.4pt; }
+Css: div#fancyvrb165{ border-left: solid 0.4pt; }
+Css: div#fancyvrb165{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb165{ border-right: solid 0.4pt; }
+Css: div#fancyvrb166{ border-top: solid 0.4pt; }
+Css: div#fancyvrb166{ border-left: solid 0.4pt; }
+Css: div#fancyvrb166{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb166{ border-right: solid 0.4pt; }
+Css: div#fancyvrb167{ border-top: solid 0.4pt; }
+Css: div#fancyvrb167{ border-left: solid 0.4pt; }
+Css: div#fancyvrb167{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb167{ border-right: solid 0.4pt; }
+Css: div#fancyvrb168{ border-top: solid 0.4pt; }
+Css: div#fancyvrb168{ border-left: solid 0.4pt; }
+Css: div#fancyvrb168{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb168{ border-right: solid 0.4pt; }
+Css: div#fancyvrb169{ border-top: solid 0.4pt; }
+Css: div#fancyvrb169{ border-left: solid 0.4pt; }
+Css: div#fancyvrb169{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb169{ border-right: solid 0.4pt; }
+Css: div#fancyvrb170{ border-top: solid 0.4pt; }
+Css: div#fancyvrb170{ border-left: solid 0.4pt; }
+Css: div#fancyvrb170{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb170{ border-right: solid 0.4pt; }
+Css: div#fancyvrb171{ border-top: solid 0.4pt; }
+Css: div#fancyvrb171{ border-left: solid 0.4pt; }
+Css: div#fancyvrb171{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb171{ border-right: solid 0.4pt; }
+Css: div#fancyvrb172{ border-top: solid 0.4pt; }
+Css: div#fancyvrb172{ border-left: solid 0.4pt; }
+Css: div#fancyvrb172{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb172{ border-right: solid 0.4pt; }
+Css: div#fancyvrb173{ border-top: solid 0.4pt; }
+Css: div#fancyvrb173{ border-left: solid 0.4pt; }
+Css: div#fancyvrb173{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb173{ border-right: solid 0.4pt; }
+Css: div#fancyvrb174{ border-top: solid 0.4pt; }
+Css: div#fancyvrb174{ border-left: solid 0.4pt; }
+Css: div#fancyvrb174{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb174{ border-right: solid 0.4pt; }
+Css: div#fancyvrb175{ border-top: solid 0.4pt; }
+Css: div#fancyvrb175{ border-left: solid 0.4pt; }
+Css: div#fancyvrb175{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb175{ border-right: solid 0.4pt; }
+Css: div#fancyvrb176{ border-top: solid 0.4pt; }
+Css: div#fancyvrb176{ border-left: solid 0.4pt; }
+Css: div#fancyvrb176{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb176{ border-right: solid 0.4pt; }
+Css: div#fancyvrb177{ border-top: solid 0.4pt; }
+Css: div#fancyvrb177{ border-left: solid 0.4pt; }
+Css: div#fancyvrb177{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb177{ border-right: solid 0.4pt; }
+Css: div#fancyvrb178{ border-top: solid 0.4pt; }
+Css: div#fancyvrb178{ border-left: solid 0.4pt; }
+Css: div#fancyvrb178{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb178{ border-right: solid 0.4pt; }
+Css: div#fancyvrb179{ border-top: solid 0.4pt; }
+Css: div#fancyvrb179{ border-left: solid 0.4pt; }
+Css: div#fancyvrb179{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb179{ border-right: solid 0.4pt; }
+Css: div#fancyvrb180{ border-top: solid 0.4pt; }
+Css: div#fancyvrb180{ border-left: solid 0.4pt; }
+Css: div#fancyvrb180{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb180{ border-right: solid 0.4pt; }
+Css: div#fancyvrb181{ border-top: solid 0.4pt; }
+Css: div#fancyvrb181{ border-left: solid 0.4pt; }
+Css: div#fancyvrb181{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb181{ border-right: solid 0.4pt; }
+Css: div#fancyvrb182{ border-top: solid 0.4pt; }
+Css: div#fancyvrb182{ border-left: solid 0.4pt; }
+Css: div#fancyvrb182{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb182{ border-right: solid 0.4pt; }
+Css: div#fancyvrb183{ border-top: solid 0.4pt; }
+Css: div#fancyvrb183{ border-left: solid 0.4pt; }
+Css: div#fancyvrb183{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb183{ border-right: solid 0.4pt; }
+Css: div#fancyvrb184{ border-top: solid 0.4pt; }
+Css: div#fancyvrb184{ border-left: solid 0.4pt; }
+Css: div#fancyvrb184{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb184{ border-right: solid 0.4pt; }
+Css: div#fancyvrb185{ border-top: solid 0.4pt; }
+Css: div#fancyvrb185{ border-left: solid 0.4pt; }
+Css: div#fancyvrb185{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb185{ border-right: solid 0.4pt; }
+Css: div#fancyvrb186{ border-top: solid 0.4pt; }
+Css: div#fancyvrb186{ border-left: solid 0.4pt; }
+Css: div#fancyvrb186{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb186{ border-right: solid 0.4pt; }
+Css: div#fancyvrb187{ border-top: solid 0.4pt; }
+Css: div#fancyvrb187{ border-left: solid 0.4pt; }
+Css: div#fancyvrb187{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb187{ border-right: solid 0.4pt; }
+Css: div#fancyvrb188{ border-top: solid 0.4pt; }
+Css: div#fancyvrb188{ border-left: solid 0.4pt; }
+Css: div#fancyvrb188{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb188{ border-right: solid 0.4pt; }
+Css: div#fancyvrb189{ border-top: solid 0.4pt; }
+Css: div#fancyvrb189{ border-left: solid 0.4pt; }
+Css: div#fancyvrb189{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb189{ border-right: solid 0.4pt; }
+Css: div#fancyvrb190{ border-top: solid 0.4pt; }
+Css: div#fancyvrb190{ border-left: solid 0.4pt; }
+Css: div#fancyvrb190{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb190{ border-right: solid 0.4pt; }
+Css: div#fancyvrb191{ border-top: solid 0.4pt; }
+Css: div#fancyvrb191{ border-left: solid 0.4pt; }
+Css: div#fancyvrb191{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb191{ border-right: solid 0.4pt; }
+Css: div#fancyvrb192{ border-top: solid 0.4pt; }
+Css: div#fancyvrb192{ border-left: solid 0.4pt; }
+Css: div#fancyvrb192{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb192{ border-right: solid 0.4pt; }
+Css: div#fancyvrb193{ border-top: solid 0.4pt; }
+Css: div#fancyvrb193{ border-left: solid 0.4pt; }
+Css: div#fancyvrb193{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb193{ border-right: solid 0.4pt; }
+Css: div#fancyvrb194{ border-top: solid 0.4pt; }
+Css: div#fancyvrb194{ border-left: solid 0.4pt; }
+Css: div#fancyvrb194{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb194{ border-right: solid 0.4pt; }
+Css: div#fancyvrb195{ border-top: solid 0.4pt; }
+Css: div#fancyvrb195{ border-left: solid 0.4pt; }
+Css: div#fancyvrb195{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb195{ border-right: solid 0.4pt; }
+Css: div#fancyvrb196{ border-top: solid 0.4pt; }
+Css: div#fancyvrb196{ border-left: solid 0.4pt; }
+Css: div#fancyvrb196{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb196{ border-right: solid 0.4pt; }
+Css: div#fancyvrb197{ border-top: solid 0.4pt; }
+Css: div#fancyvrb197{ border-left: solid 0.4pt; }
+Css: div#fancyvrb197{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb197{ border-right: solid 0.4pt; }
+Css: div#fancyvrb198{ border-top: solid 0.4pt; }
+Css: div#fancyvrb198{ border-left: solid 0.4pt; }
+Css: div#fancyvrb198{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb198{ border-right: solid 0.4pt; }
+Css: div#fancyvrb199{ border-top: solid 0.4pt; }
+Css: div#fancyvrb199{ border-left: solid 0.4pt; }
+Css: div#fancyvrb199{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb199{ border-right: solid 0.4pt; }
+Css: div#fancyvrb200{ border-top: solid 0.4pt; }
+Css: div#fancyvrb200{ border-left: solid 0.4pt; }
+Css: div#fancyvrb200{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb200{ border-right: solid 0.4pt; }
+Css: div#fancyvrb201{ border-top: solid 0.4pt; }
+Css: div#fancyvrb201{ border-left: solid 0.4pt; }
+Css: div#fancyvrb201{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb201{ border-right: solid 0.4pt; }
+Css: div#fancyvrb202{ border-top: solid 0.4pt; }
+Css: div#fancyvrb202{ border-left: solid 0.4pt; }
+Css: div#fancyvrb202{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb202{ border-right: solid 0.4pt; }
+Css: div#fancyvrb203{ border-top: solid 0.4pt; }
+Css: div#fancyvrb203{ border-left: solid 0.4pt; }
+Css: div#fancyvrb203{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb203{ border-right: solid 0.4pt; }
+Css: div#fancyvrb204{ border-top: solid 0.4pt; }
+Css: div#fancyvrb204{ border-left: solid 0.4pt; }
+Css: div#fancyvrb204{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb204{ border-right: solid 0.4pt; }
+Css: div#fancyvrb205{ border-top: solid 0.4pt; }
+Css: div#fancyvrb205{ border-left: solid 0.4pt; }
+Css: div#fancyvrb205{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb205{ border-right: solid 0.4pt; }
+Css: div#fancyvrb206{ border-top: solid 0.4pt; }
+Css: div#fancyvrb206{ border-left: solid 0.4pt; }
+Css: div#fancyvrb206{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb206{ border-right: solid 0.4pt; }
+Css: div#fancyvrb207{ border-top: solid 0.4pt; }
+Css: div#fancyvrb207{ border-left: solid 0.4pt; }
+Css: div#fancyvrb207{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb207{ border-right: solid 0.4pt; }
+Css: div#fancyvrb208{ border-top: solid 0.4pt; }
+Css: div#fancyvrb208{ border-left: solid 0.4pt; }
+Css: div#fancyvrb208{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb208{ border-right: solid 0.4pt; }
+Css: div#fancyvrb209{ border-top: solid 0.4pt; }
+Css: div#fancyvrb209{ border-left: solid 0.4pt; }
+Css: div#fancyvrb209{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb209{ border-right: solid 0.4pt; }
+Css: div#fancyvrb210{ border-top: solid 0.4pt; }
+Css: div#fancyvrb210{ border-left: solid 0.4pt; }
+Css: div#fancyvrb210{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb210{ border-right: solid 0.4pt; }
+Css: div#fancyvrb211{ border-top: solid 0.4pt; }
+Css: div#fancyvrb211{ border-left: solid 0.4pt; }
+Css: div#fancyvrb211{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb211{ border-right: solid 0.4pt; }
+Css: div#fancyvrb212{ border-top: solid 0.4pt; }
+Css: div#fancyvrb212{ border-left: solid 0.4pt; }
+Css: div#fancyvrb212{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb212{ border-right: solid 0.4pt; }
+Css: div#fancyvrb213{ border-top: solid 0.4pt; }
+Css: div#fancyvrb213{ border-left: solid 0.4pt; }
+Css: div#fancyvrb213{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb213{ border-right: solid 0.4pt; }
+Css: div#fancyvrb214{ border-top: solid 0.4pt; }
+Css: div#fancyvrb214{ border-left: solid 0.4pt; }
+Css: div#fancyvrb214{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb214{ border-right: solid 0.4pt; }
+Css: div#fancyvrb215{ border-top: solid 0.4pt; }
+Css: div#fancyvrb215{ border-left: solid 0.4pt; }
+Css: div#fancyvrb215{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb215{ border-right: solid 0.4pt; }
+Css: div#fancyvrb216{ border-top: solid 0.4pt; }
+Css: div#fancyvrb216{ border-left: solid 0.4pt; }
+Css: div#fancyvrb216{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb216{ border-right: solid 0.4pt; }
+Css: div#fancyvrb217{ border-top: solid 0.4pt; }
+Css: div#fancyvrb217{ border-left: solid 0.4pt; }
+Css: div#fancyvrb217{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb217{ border-right: solid 0.4pt; }
+Css: div#fancyvrb218{ border-top: solid 0.4pt; }
+Css: div#fancyvrb218{ border-left: solid 0.4pt; }
+Css: div#fancyvrb218{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb218{ border-right: solid 0.4pt; }
+Css: div#fancyvrb219{ border-top: solid 0.4pt; }
+Css: div#fancyvrb219{ border-left: solid 0.4pt; }
+Css: div#fancyvrb219{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb219{ border-right: solid 0.4pt; }
+Css: div#fancyvrb220{ border-top: solid 0.4pt; }
+Css: div#fancyvrb220{ border-left: solid 0.4pt; }
+Css: div#fancyvrb220{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb220{ border-right: solid 0.4pt; }
+Css: div#fancyvrb221{ border-top: solid 0.4pt; }
+Css: div#fancyvrb221{ border-left: solid 0.4pt; }
+Css: div#fancyvrb221{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb221{ border-right: solid 0.4pt; }
+Css: div#fancyvrb222{ border-top: solid 0.4pt; }
+Css: div#fancyvrb222{ border-left: solid 0.4pt; }
+Css: div#fancyvrb222{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb222{ border-right: solid 0.4pt; }
+Css: div#fancyvrb223{ border-top: solid 0.4pt; }
+Css: div#fancyvrb223{ border-left: solid 0.4pt; }
+Css: div#fancyvrb223{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb223{ border-right: solid 0.4pt; }
+Css: div#fancyvrb224{ border-top: solid 0.4pt; }
+Css: div#fancyvrb224{ border-left: solid 0.4pt; }
+Css: div#fancyvrb224{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb224{ border-right: solid 0.4pt; }
+Css: div#fancyvrb225{ border-top: solid 0.4pt; }
+Css: div#fancyvrb225{ border-left: solid 0.4pt; }
+Css: div#fancyvrb225{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb225{ border-right: solid 0.4pt; }
+Css: div#fancyvrb226{ border-top: solid 0.4pt; }
+Css: div#fancyvrb226{ border-left: solid 0.4pt; }
+Css: div#fancyvrb226{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb226{ border-right: solid 0.4pt; }
+Css: div#fancyvrb227{ border-top: solid 0.4pt; }
+Css: div#fancyvrb227{ border-left: solid 0.4pt; }
+Css: div#fancyvrb227{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb227{ border-right: solid 0.4pt; }
+Css: div#fancyvrb228{ border-top: solid 0.4pt; }
+Css: div#fancyvrb228{ border-left: solid 0.4pt; }
+Css: div#fancyvrb228{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb228{ border-right: solid 0.4pt; }
+Css: div#fancyvrb229{ border-top: solid 0.4pt; }
+Css: div#fancyvrb229{ border-left: solid 0.4pt; }
+Css: div#fancyvrb229{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb229{ border-right: solid 0.4pt; }
+Css: div#fancyvrb230{ border-top: solid 0.4pt; }
+Css: div#fancyvrb230{ border-left: solid 0.4pt; }
+Css: div#fancyvrb230{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb230{ border-right: solid 0.4pt; }
+Css: div#fancyvrb231{ border-top: solid 0.4pt; }
+Css: div#fancyvrb231{ border-left: solid 0.4pt; }
+Css: div#fancyvrb231{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb231{ border-right: solid 0.4pt; }
+Css: div#fancyvrb232{ border-top: solid 0.4pt; }
+Css: div#fancyvrb232{ border-left: solid 0.4pt; }
+Css: div#fancyvrb232{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb232{ border-right: solid 0.4pt; }
+Css: div#fancyvrb233{ border-top: solid 0.4pt; }
+Css: div#fancyvrb233{ border-left: solid 0.4pt; }
+Css: div#fancyvrb233{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb233{ border-right: solid 0.4pt; }
+Css: div#fancyvrb234{ border-top: solid 0.4pt; }
+Css: div#fancyvrb234{ border-left: solid 0.4pt; }
+Css: div#fancyvrb234{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb234{ border-right: solid 0.4pt; }
+Css: div#fancyvrb235{ border-top: solid 0.4pt; }
+Css: div#fancyvrb235{ border-left: solid 0.4pt; }
+Css: div#fancyvrb235{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb235{ border-right: solid 0.4pt; }
+Css: div#fancyvrb236{ border-top: solid 0.4pt; }
+Css: div#fancyvrb236{ border-left: solid 0.4pt; }
+Css: div#fancyvrb236{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb236{ border-right: solid 0.4pt; }
+Css: div#fancyvrb237{ border-top: solid 0.4pt; }
+Css: div#fancyvrb237{ border-left: solid 0.4pt; }
+Css: div#fancyvrb237{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb237{ border-right: solid 0.4pt; }
+Css: div#fancyvrb238{ border-top: solid 0.4pt; }
+Css: div#fancyvrb238{ border-left: solid 0.4pt; }
+Css: div#fancyvrb238{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb238{ border-right: solid 0.4pt; }
+Css: div#fancyvrb239{ border-top: solid 0.4pt; }
+Css: div#fancyvrb239{ border-left: solid 0.4pt; }
+Css: div#fancyvrb239{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb239{ border-right: solid 0.4pt; }
+Css: div#fancyvrb240{ border-top: solid 0.4pt; }
+Css: div#fancyvrb240{ border-left: solid 0.4pt; }
+Css: div#fancyvrb240{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb240{ border-right: solid 0.4pt; }
+Css: div#fancyvrb241{ border-top: solid 0.4pt; }
+Css: div#fancyvrb241{ border-left: solid 0.4pt; }
+Css: div#fancyvrb241{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb241{ border-right: solid 0.4pt; }
+Css: div#fancyvrb242{ border-top: solid 0.4pt; }
+Css: div#fancyvrb242{ border-left: solid 0.4pt; }
+Css: div#fancyvrb242{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb242{ border-right: solid 0.4pt; }
+Css: div#fancyvrb243{ border-top: solid 0.4pt; }
+Css: div#fancyvrb243{ border-left: solid 0.4pt; }
+Css: div#fancyvrb243{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb243{ border-right: solid 0.4pt; }
+Css: div#fancyvrb244{ border-top: solid 0.4pt; }
+Css: div#fancyvrb244{ border-left: solid 0.4pt; }
+Css: div#fancyvrb244{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb244{ border-right: solid 0.4pt; }
+Css: div#fancyvrb245{ border-top: solid 0.4pt; }
+Css: div#fancyvrb245{ border-left: solid 0.4pt; }
+Css: div#fancyvrb245{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb245{ border-right: solid 0.4pt; }
+Css: div#fancyvrb246{ border-top: solid 0.4pt; }
+Css: div#fancyvrb246{ border-left: solid 0.4pt; }
+Css: div#fancyvrb246{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb246{ border-right: solid 0.4pt; }
+Css: div#fancyvrb247{ border-top: solid 0.4pt; }
+Css: div#fancyvrb247{ border-left: solid 0.4pt; }
+Css: div#fancyvrb247{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb247{ border-right: solid 0.4pt; }
+Css: div#fancyvrb248{ border-top: solid 0.4pt; }
+Css: div#fancyvrb248{ border-left: solid 0.4pt; }
+Css: div#fancyvrb248{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb248{ border-right: solid 0.4pt; }
+Css: div#fancyvrb249{ border-top: solid 0.4pt; }
+Css: div#fancyvrb249{ border-left: solid 0.4pt; }
+Css: div#fancyvrb249{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb249{ border-right: solid 0.4pt; }
+Css: div#fancyvrb250{ border-top: solid 0.4pt; }
+Css: div#fancyvrb250{ border-left: solid 0.4pt; }
+Css: div#fancyvrb250{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb250{ border-right: solid 0.4pt; }
+Css: div#fancyvrb251{ border-top: solid 0.4pt; }
+Css: div#fancyvrb251{ border-left: solid 0.4pt; }
+Css: div#fancyvrb251{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb251{ border-right: solid 0.4pt; }
+Css: div#fancyvrb252{ border-top: solid 0.4pt; }
+Css: div#fancyvrb252{ border-left: solid 0.4pt; }
+Css: div#fancyvrb252{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb252{ border-right: solid 0.4pt; }
+Css: div#fancyvrb253{ border-top: solid 0.4pt; }
+Css: div#fancyvrb253{ border-left: solid 0.4pt; }
+Css: div#fancyvrb253{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb253{ border-right: solid 0.4pt; }
+Css: div#fancyvrb254{ border-top: solid 0.4pt; }
+Css: div#fancyvrb254{ border-left: solid 0.4pt; }
+Css: div#fancyvrb254{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb254{ border-right: solid 0.4pt; }
+Css: div#fancyvrb255{ border-top: solid 0.4pt; }
+Css: div#fancyvrb255{ border-left: solid 0.4pt; }
+Css: div#fancyvrb255{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb255{ border-right: solid 0.4pt; }
+Css: div#fancyvrb256{ border-top: solid 0.4pt; }
+Css: div#fancyvrb256{ border-left: solid 0.4pt; }
+Css: div#fancyvrb256{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb256{ border-right: solid 0.4pt; }
+Css: div#fancyvrb257{ border-top: solid 0.4pt; }
+Css: div#fancyvrb257{ border-left: solid 0.4pt; }
+Css: div#fancyvrb257{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb257{ border-right: solid 0.4pt; }
+Css: div#fancyvrb258{ border-top: solid 0.4pt; }
+Css: div#fancyvrb258{ border-left: solid 0.4pt; }
+Css: div#fancyvrb258{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb258{ border-right: solid 0.4pt; }
+Css: div#fancyvrb259{ border-top: solid 0.4pt; }
+Css: div#fancyvrb259{ border-left: solid 0.4pt; }
+Css: div#fancyvrb259{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb259{ border-right: solid 0.4pt; }
+Css: div#fancyvrb260{ border-top: solid 0.4pt; }
+Css: div#fancyvrb260{ border-left: solid 0.4pt; }
+Css: div#fancyvrb260{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb260{ border-right: solid 0.4pt; }
+Css: div#fancyvrb261{ border-top: solid 0.4pt; }
+Css: div#fancyvrb261{ border-left: solid 0.4pt; }
+Css: div#fancyvrb261{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb261{ border-right: solid 0.4pt; }
+Css: div#fancyvrb262{ border-top: solid 0.4pt; }
+Css: div#fancyvrb262{ border-left: solid 0.4pt; }
+Css: div#fancyvrb262{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb262{ border-right: solid 0.4pt; }
+Css: div#fancyvrb263{ border-top: solid 0.4pt; }
+Css: div#fancyvrb263{ border-left: solid 0.4pt; }
+Css: div#fancyvrb263{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb263{ border-right: solid 0.4pt; }
+Css: div#fancyvrb264{ border-top: solid 0.4pt; }
+Css: div#fancyvrb264{ border-left: solid 0.4pt; }
+Css: div#fancyvrb264{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb264{ border-right: solid 0.4pt; }
+Css: div#fancyvrb265{ border-top: solid 0.4pt; }
+Css: div#fancyvrb265{ border-left: solid 0.4pt; }
+Css: div#fancyvrb265{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb265{ border-right: solid 0.4pt; }
+Css: div#fancyvrb266{ border-top: solid 0.4pt; }
+Css: div#fancyvrb266{ border-left: solid 0.4pt; }
+Css: div#fancyvrb266{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb266{ border-right: solid 0.4pt; }
+Css: div#fancyvrb267{ border-top: solid 0.4pt; }
+Css: div#fancyvrb267{ border-left: solid 0.4pt; }
+Css: div#fancyvrb267{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb267{ border-right: solid 0.4pt; }
+Css: div#fancyvrb268{ border-top: solid 0.4pt; }
+Css: div#fancyvrb268{ border-left: solid 0.4pt; }
+Css: div#fancyvrb268{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb268{ border-right: solid 0.4pt; }
+Css: div#fancyvrb269{ border-top: solid 0.4pt; }
+Css: div#fancyvrb269{ border-left: solid 0.4pt; }
+Css: div#fancyvrb269{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb269{ border-right: solid 0.4pt; }
+Css: div#fancyvrb270{ border-top: solid 0.4pt; }
+Css: div#fancyvrb270{ border-left: solid 0.4pt; }
+Css: div#fancyvrb270{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb270{ border-right: solid 0.4pt; }
+Css: div#fancyvrb271{ border-top: solid 0.4pt; }
+Css: div#fancyvrb271{ border-left: solid 0.4pt; }
+Css: div#fancyvrb271{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb271{ border-right: solid 0.4pt; }
+Css: div#fancyvrb272{ border-top: solid 0.4pt; }
+Css: div#fancyvrb272{ border-left: solid 0.4pt; }
+Css: div#fancyvrb272{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb272{ border-right: solid 0.4pt; }
+Css: div#fancyvrb273{ border-top: solid 0.4pt; }
+Css: div#fancyvrb273{ border-left: solid 0.4pt; }
+Css: div#fancyvrb273{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb273{ border-right: solid 0.4pt; }
+Css: div#fancyvrb274{ border-top: solid 0.4pt; }
+Css: div#fancyvrb274{ border-left: solid 0.4pt; }
+Css: div#fancyvrb274{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb274{ border-right: solid 0.4pt; }
+Css: div#fancyvrb275{ border-top: solid 0.4pt; }
+Css: div#fancyvrb275{ border-left: solid 0.4pt; }
+Css: div#fancyvrb275{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb275{ border-right: solid 0.4pt; }
+Css: div#fancyvrb276{ border-top: solid 0.4pt; }
+Css: div#fancyvrb276{ border-left: solid 0.4pt; }
+Css: div#fancyvrb276{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb276{ border-right: solid 0.4pt; }
+Css: div#fancyvrb277{ border-top: solid 0.4pt; }
+Css: div#fancyvrb277{ border-left: solid 0.4pt; }
+Css: div#fancyvrb277{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb277{ border-right: solid 0.4pt; }
+Css: div#fancyvrb278{ border-top: solid 0.4pt; }
+Css: div#fancyvrb278{ border-left: solid 0.4pt; }
+Css: div#fancyvrb278{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb278{ border-right: solid 0.4pt; }
+Css: div#fancyvrb279{ border-top: solid 0.4pt; }
+Css: div#fancyvrb279{ border-left: solid 0.4pt; }
+Css: div#fancyvrb279{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb279{ border-right: solid 0.4pt; }
+Css: div#fancyvrb280{ border-top: solid 0.4pt; }
+Css: div#fancyvrb280{ border-left: solid 0.4pt; }
+Css: div#fancyvrb280{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb280{ border-right: solid 0.4pt; }
+Css: div#fancyvrb281{ border-top: solid 0.4pt; }
+Css: div#fancyvrb281{ border-left: solid 0.4pt; }
+Css: div#fancyvrb281{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb281{ border-right: solid 0.4pt; }
+Css: div#fancyvrb282{ border-top: solid 0.4pt; }
+Css: div#fancyvrb282{ border-left: solid 0.4pt; }
+Css: div#fancyvrb282{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb282{ border-right: solid 0.4pt; }
+Css: div#fancyvrb283{ border-top: solid 0.4pt; }
+Css: div#fancyvrb283{ border-left: solid 0.4pt; }
+Css: div#fancyvrb283{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb283{ border-right: solid 0.4pt; }
+Css: div#fancyvrb284{ border-top: solid 0.4pt; }
+Css: div#fancyvrb284{ border-left: solid 0.4pt; }
+Css: div#fancyvrb284{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb284{ border-right: solid 0.4pt; }
+Css: div#fancyvrb285{ border-top: solid 0.4pt; }
+Css: div#fancyvrb285{ border-left: solid 0.4pt; }
+Css: div#fancyvrb285{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb285{ border-right: solid 0.4pt; }
+Css: div#fancyvrb286{ border-top: solid 0.4pt; }
+Css: div#fancyvrb286{ border-left: solid 0.4pt; }
+Css: div#fancyvrb286{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb286{ border-right: solid 0.4pt; }
+Css: div#fancyvrb287{ border-top: solid 0.4pt; }
+Css: div#fancyvrb287{ border-left: solid 0.4pt; }
+Css: div#fancyvrb287{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb287{ border-right: solid 0.4pt; }
+Css: div#fancyvrb288{ border-top: solid 0.4pt; }
+Css: div#fancyvrb288{ border-left: solid 0.4pt; }
+Css: div#fancyvrb288{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb288{ border-right: solid 0.4pt; }
+Css: div#fancyvrb289{ border-top: solid 0.4pt; }
+Css: div#fancyvrb289{ border-left: solid 0.4pt; }
+Css: div#fancyvrb289{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb289{ border-right: solid 0.4pt; }
+Css: div#fancyvrb290{ border-top: solid 0.4pt; }
+Css: div#fancyvrb290{ border-left: solid 0.4pt; }
+Css: div#fancyvrb290{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb290{ border-right: solid 0.4pt; }
+Css: div#fancyvrb291{ border-top: solid 0.4pt; }
+Css: div#fancyvrb291{ border-left: solid 0.4pt; }
+Css: div#fancyvrb291{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb291{ border-right: solid 0.4pt; }
+Css: div#fancyvrb292{ border-top: solid 0.4pt; }
+Css: div#fancyvrb292{ border-left: solid 0.4pt; }
+Css: div#fancyvrb292{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb292{ border-right: solid 0.4pt; }
+Css: div#fancyvrb293{ border-top: solid 0.4pt; }
+Css: div#fancyvrb293{ border-left: solid 0.4pt; }
+Css: div#fancyvrb293{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb293{ border-right: solid 0.4pt; }
+Css: div#fancyvrb294{ border-top: solid 0.4pt; }
+Css: div#fancyvrb294{ border-left: solid 0.4pt; }
+Css: div#fancyvrb294{ border-bottom: solid 0.4pt; }
+Css: div#fancyvrb294{ border-right: solid 0.4pt; }
+--- characters ---
+Font("cmsy","10","10","100")
+Font("ptmr7t","","10","100")
+Font("ptmr7t","","10","172")
+Font("ptmr7t","","10","120")
+Font("zpzccmry","","10","120")
+Font("pcrr7tn","","10","100")
+Font("ptmri7t","","10","100")
+Font("zptmcmr","","10","100")
+Font("zptmcmrm","","10","100")
+Font("zpzccmry","","10","100")
+Font("ptmb7t","","10","100")
+Font("ptmr7t","","10","50")
+Font("pcrb7t","","10","100")
+Font("pcrro7t","","10","100")
+Font("pcrr7tn","","10","90")

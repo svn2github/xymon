@@ -1,0 +1,1572 @@
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=latex 2007.11.15)  4 AUG 2008 20:20
+entering extended mode
+**00book.tex
+(./00book.tex
+LaTeX2e <2003/12/01>
+Babel <v3.8d> and hyphenation patterns for american, french, german, ngerman, b
+ahasa, basque, bulgarian, catalan, croatian, czech, danish, dutch, esperanto, e
+stonian, finnish, greek, icelandic, irish, italian, latin, magyar, norsk, polis
+h, portuges, romanian, russian, serbian, slovak, slovene, spanish, swedish, tur
+kish, ukrainian, nohyphenation, loaded.
+(/usr/share/texmf/tex/latex/base/book.cls
+Document Class: book 2004/02/16 v1.4f Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/bk10.clo
+File: bk10.clo 2004/02/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf/tex/latex/tools/enumerate.sty
+Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
+\@enLab=\toks14
+)
+(/usr/share/texmf/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip43
+)
+(/usr/share/texmf/tex/latex/base/makeidx.sty
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+(/usr/share/texmf/tex/latex/oberdiek/ifpdf.sty
+Package: ifpdf 2001/06/14 v1.0 Providing \ifpdf (HO)
+Package ifpdf Info: pdfTeX in pdf mode not detected on input line 140.
+)
+(/usr/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(/usr/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texmf/tex/latex/graphics/graphics.cfg
+File: graphics.cfg 2005/02/03 v1.3 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: dvips.def on input line 80.
+
+(/usr/share/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texmf/tex/latex/pslatex/pslatex.sty
+Package: pslatex 1996/07/24 v1.2 pslatex emulation (DPC)
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 65.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/ptmcm/m/n on input line 65.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptmcm/m/n on input line 65.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 66.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/ptmcm/m/it on input line 66.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/ptmcm/m/it on input line 66.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 67.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/pzccm/m/n on input line 67.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/pzccm/m/n on input line 67.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 68.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/psycm/m/n on input line 68.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/psycm/m/n on input line 68.
+\symbold=\mathgroup4
+\symitalic=\mathgroup5
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 74.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 74.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 74.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 75.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 75.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 75.
+)
+(/usr/share/texmf/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 1998/07/17
+
+Style option: `fancyvrb' v2.6, with DG/SPQR fixes <1998/07/17> (tvz)
+\FV@CodeLineNo=\count88
+\FV@InFile=\read1
+\FV@TabBox=\box26
+\c@FancyVerbLine=\count89
+\FV@StepNumber=\count90
+\FV@OutFile=\write3
+
+No file fancyvrb.cfg.
+) (/usr/share/texmf/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2003/11/30 v6.74m Hypertext links for LaTeX
+\@linkdim=\dimen105
+\Hy@linkcounter=\count91
+\Hy@pagecounter=\count92
+
+(/usr/share/texmf/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2003/11/30 v6.74m Hyperref: PDFDocEncoding definition (HO)
+)
+(/usr/share/texmf/tex/latex/hyperref/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive and teTeX
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 1830.
+Package hyperref Info: Option `bookmarks' set `true' on input line 1830.
+Package hyperref Info: Hyper figures OFF on input line 1880.
+Package hyperref Info: Link nesting OFF on input line 1885.
+Package hyperref Info: Hyper index ON on input line 1888.
+Package hyperref Info: Plain pages ON on input line 1893.
+Package hyperref Info: Backreferencing OFF on input line 1900.
+
+Implicit mode ON; LaTeX internals redefined
+Package hyperref Info: Bookmarks ON on input line 2004.
+(/usr/share/texmf/tex/latex/html/url.sty
+Package: url 1999/03/02  ver 1.4  Verb mode for urls, email addresses, and file
+ names
+)
+LaTeX Info: Redefining \url on input line 2143.
+\Fld@menulength=\count93
+\Field@Width=\dimen106
+\Fld@charsize=\dimen107
+\Choice@toks=\toks16
+\Field@toks=\toks17
+Package hyperref Info: Hyper figures OFF on input line 2618.
+Package hyperref Info: Link nesting OFF on input line 2623.
+Package hyperref Info: Hyper index ON on input line 2626.
+Package hyperref Info: backreferencing OFF on input line 2633.
+Package hyperref Info: Link coloring ON on input line 2636.
+\c@Item=\count94
+\c@Hfootnote=\count95
+)
+*hyperref using default driver hdvips*
+(/usr/share/texmf/tex/latex/hyperref/hdvips.def
+File: hdvips.def 2003/11/30 v6.74m Hyperref driver for dvips
+
+(/usr/share/texmf/tex/latex/hyperref/pdfmark.def
+File: pdfmark.def 2003/11/30 v6.74m Hyperref definitions for pdfmark specials
+\pdf@docset=\toks18
+\pdf@box=\box27
+\pdf@toks=\toks19
+\pdf@defaulttoks=\toks20
+\Fld@listcount=\count96
+\@outlinefile=\write4
+))
+\@input{99defs.aux}
+\openout2 = `99defs.aux'.
+
+(./99defs.tex
+\notebox=\box28
+)
+\@indexfile=\write5
+\openout5 = `00book.idx'.
+
+
+Writing index file 00book.idx
+No file 00book.aux.
+\openout1 = `00book.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 30.
+LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 30
+.
+(/usr/share/texmf/tex/latex/psnfss/omspzccm.fd
+File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
+)
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+
+(/usr/share/texmf/tex/latex/graphics/color.sty
+Package: color 1999/02/16 v1.0i Standard LaTeX Color (DPC)
+
+(/usr/share/texmf/tex/latex/graphics/color.cfg
+File: color.cfg 2005/02/03 v1.3 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: dvips.def on input line 125.
+
+(/usr/share/texmf/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+Package hyperref Info: Link coloring ON on input line 30.
+
+(/usr/share/texmf/tex/latex/hyperref/nameref.sty
+Package: nameref 2003/12/03 v2.21 Cross-referencing by name of section
+\c@section@level=\count97
+)
+LaTeX Info: Redefining \ref on input line 30.
+LaTeX Info: Redefining \pageref on input line 30.
+\openout4 = `00book.out'.
+
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 33
+.
+
+(/usr/share/texmf/tex/latex/psnfss/ot1ptmcm.fd
+File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
+)
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 33
+.
+
+(/usr/share/texmf/tex/latex/psnfss/omlptmcm.fd
+File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
+)
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 33
+.
+
+(/usr/share/texmf/tex/latex/psnfss/omxpsycm.fd
+File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 33.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 33.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 33.
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
+(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 33.
+
+
+LaTeX Warning: Reference `cha:opl' on page 1 undefined on input line 33.
+
+(./build_id.tex) (./hg_id.tex) [1
+
+
+
+
+]
+
+Package hyperref Warning: No destination for bookmark of \addcontentsline,
+(hyperref)                destination is added on input line 34.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
+\tf@toc=\write6
+\openout6 = `00book.toc'.
+
+[1
+
+]
+\tf@lof=\write7
+\openout7 = `00book.lof'.
+
+ [1
+
+]
+\openout2 = `preface.aux'.
+
+ (./preface.tex
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 15.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 46.
+
+
+LaTeX Warning: Reference `sec:undo:bisect' on page 2 undefined on input line 46
+.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
+
+Overfull \hbox (64.04105pt too wide) in paragraph at lines 61--63
+[]\OT1/ptm/m/n/10 The com-plete source code for this book is pub-lished as a Me
+r-cu-rial repos-i-tory, at [][][][][][]. 
+ []
+
+) [2
+
+
+]
+\openout2 = `intro.aux'.
+
+ (./intro.tex
+Chapter 1.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 27.
+
+LaTeX Warning: Reference `sec:undo:bisect' on page 3 undefined on input line 40
+.
+
+[3
+
+
+
+] [4] [5] [6] [7] [8]) [9]
+\openout2 = `client.aux'.
+
+ (./client.tex
+Chapter 2.
+
+LaTeX Warning: Reference `sec:collab:serve' on page 10 undefined on input line 
+23.
+
+
+LaTeX Warning: Reference `sec:collab:cgi' on page 10 undefined on input line 28
+.
+
+[10
+
+
+
+]
+
+LaTeX Warning: Reference `sec:collab:serve' on page 11 undefined on input line 
+81.
+
+
+LaTeX Warning: Reference `sec:collab:ssh' on page 11 undefined on input line 11
+9.
+
+
+LaTeX Warning: Reference `sec:collab:cgi' on page 11 undefined on input line 12
+1.
+
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <10> not available
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 147.
+[11] [12]
+
+! LaTeX Error: Cannot determine size of graphic in feature-branches.png (no Bou
+ndingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.195   \grafix{feature-branches}
+                                 
+? 
+File: feature-branches.png Graphic file (type eps)
+<feature-branches.png> [13] [14]
+
+LaTeX Warning: Reference `chap:branch' on page 15 undefined on input line 307.
+
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 314.
+[15] [16]
+
+LaTeX Warning: Citation `web:putty' on page 17 undefined on input line 447.
+
+[17] [18] [19]
+Overfull \hbox (177.83028pt too wide) in paragraph at lines 722--727
+\OT1/ptm/m/n/10 find a lo-cal copy on your sys-tem, sim-ply down-load one from 
+the mas-ter Mer-cu-rial repos-i-tory at [][][][][][]. 
+ []
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 746.
+
+Overfull \hbox (78.99052pt too wide) in paragraph at lines 749--758
+\OT1/ptm/m/n/10 Once you've copied the CGI script into place, go into a web bro
+wser, and try to open the URL [][][][][][],
+ []
+
+[20] [21]
+
+LaTeX Warning: Reference `sec:collab:wtf' on page 22 undefined on input line 88
+6.
+
+
+LaTeX Warning: Citation `web:configparser' on page 22 undefined on input line 8
+93.
+
+
+Overfull \hbox (17.41096pt too wide) in paragraph at lines 888--894
+[]\OT1/ptm/m/n/10 The []\OT1/pcr/m/n/10 hgwebdir.cgi \OT1/ptm/m/n/10 script re-
+lies on an ex-ter-nal con-fig-u-ra-tion file. By de-fault, it searches for a fi
+le named []\OT1/pcr/m/n/10 hgweb.config
+ []
+
+[22] [23]
+
+LaTeX Warning: Reference `chap:template' on page 24 undefined on input line 102
+7.
+
+) [24]
+\openout2 = `server.aux'.
+
+ (./server.tex
+Chapter 3.
+
+LaTeX Warning: Reference `sec:collab:serve' on page 25 undefined on input line 
+23.
+
+
+LaTeX Warning: Reference `sec:collab:cgi' on page 25 undefined on input line 28
+.
+
+[25
+
+
+
+]
+
+LaTeX Warning: Reference `sec:collab:serve' on page 26 undefined on input line 
+81.
+
+
+LaTeX Warning: Reference `sec:collab:ssh' on page 26 undefined on input line 11
+9.
+
+
+LaTeX Warning: Reference `sec:collab:cgi' on page 26 undefined on input line 12
+1.
+
+[26] [27]
+
+! LaTeX Error: Cannot determine size of graphic in feature-branches.png (no Bou
+ndingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.195   \grafix{feature-branches}
+                                 
+? 
+File: feature-branches.png Graphic file (type eps)
+<feature-branches.png> [28] [29]
+
+LaTeX Warning: Reference `chap:branch' on page 30 undefined on input line 307.
+
+[30] [31]
+
+LaTeX Warning: Citation `web:putty' on page 32 undefined on input line 447.
+
+[32] [33] [34]
+Overfull \hbox (177.83028pt too wide) in paragraph at lines 722--727
+\OT1/ptm/m/n/10 find a lo-cal copy on your sys-tem, sim-ply down-load one from 
+the mas-ter Mer-cu-rial repos-i-tory at [][][][][][]. 
+ []
+
+
+Overfull \hbox (78.99052pt too wide) in paragraph at lines 749--758
+\OT1/ptm/m/n/10 Once you've copied the CGI script into place, go into a web bro
+wser, and try to open the URL [][][][][][],
+ []
+
+[35] [36]
+
+LaTeX Warning: Reference `sec:collab:wtf' on page 37 undefined on input line 88
+6.
+
+
+LaTeX Warning: Citation `web:configparser' on page 37 undefined on input line 8
+93.
+
+
+Overfull \hbox (17.41096pt too wide) in paragraph at lines 888--894
+[]\OT1/ptm/m/n/10 The []\OT1/pcr/m/n/10 hgwebdir.cgi \OT1/ptm/m/n/10 script re-
+lies on an ex-ter-nal con-fig-u-ra-tion file. By de-fault, it searches for a fi
+le named []\OT1/pcr/m/n/10 hgweb.config
+ []
+
+[37] [38]
+
+LaTeX Warning: Reference `chap:template' on page 39 undefined on input line 102
+7.
+
+) [39]
+\openout2 = `user-guides.aux'.
+
+ (./user-guides.tex
+Chapter 4.
+
+LaTeX Warning: Citation `web:macpython' on page 40 undefined on input line 66.
+
+[40
+
+
+
+] [41] [42] [43]
+
+LaTeX Warning: Reference `fig:tour-basic:history' on page 44 undefined on input
+ line 189.
+
+
+! LaTeX Error: Cannot determine size of graphic in tour-history.png (no Boundin
+gBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.197   \grafix{tour-history}
+                             
+? 
+File: tour-history.png Graphic file (type eps)
+<tour-history.png> [44] [45]
+
+LaTeX Warning: Reference `sec:mq:patch' on page 46 undefined on input line 268.
+
+
+LaTeX Font Info:    Try loading font information for OMS+pcr on input line 269.
+
+(/usr/share/texmf/tex/latex/psnfss/omspcr.fd
+File: omspcr.fd 
+)
+LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 269.
+ [46]
+
+LaTeX Font Warning: Font shape `OMS/pcr/bx/n' undefined
+(Font)              using `OMS/pcr/m/n' instead
+(Font)              for symbol `textbackslash' on input line 331.
+
+LaTeX Font Info:    Font shape `OMS/pcr/bx/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 331.
+[47]
+
+LaTeX Warning: Reference `sec:tour-basic:username' on page 48 undefined on inpu
+t line 380.
+
+[48]
+LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <10> not available
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 445.
+ [49] [50]
+
+LaTeX Warning: Reference `sec:tour:pull' on page 51 undefined on input line 534
+.
+
+[51]
+
+LaTeX Warning: Reference `sec:tour:pull' on page 52 undefined on input line 557
+.
+
+
+LaTeX Warning: Reference `fig:tour-basic:history' on page 52 undefined on input
+ line 567.
+
+[52] [53]) [54]
+\openout2 = `tour-merge.aux'.
+
+ (./tour-merge.tex
+Chapter 5.
+
+LaTeX Warning: Reference `fig:tour-merge:sep-repos' on page 55 undefined on inp
+ut line 31.
+
+[55
+
+
+
+]
+
+! LaTeX Error: Cannot determine size of graphic in tour-merge-sep-repos.png (no
+ BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36   \grafix{tour-merge-sep-repos}
+                                    
+? 
+File: tour-merge-sep-repos.png Graphic file (type eps)
+<tour-merge-sep-repos.png>
+
+! LaTeX Error: Cannot determine size of graphic in tour-merge-pull.png (no Boun
+dingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.56   \grafix{tour-merge-pull}
+                               
+? 
+File: tour-merge-pull.png Graphic file (type eps)
+<tour-merge-pull.png>
+
+LaTeX Warning: Reference `fig:tour-merge:pull' on page 56 undefined on input li
+ne 62.
+
+
+LaTeX Warning: Reference `fig:tour-merge:sep-repos' on page 56 undefined on inp
+ut line 66.
+
+[56]
+
+! LaTeX Error: Cannot determine size of graphic in tour-merge-merge.png (no Bou
+ndingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.87   \grafix{tour-merge-merge}
+                                
+? 
+File: tour-merge-merge.png Graphic file (type eps)
+<tour-merge-merge.png> [57]
+
+LaTeX Warning: Reference `fig:tour-merge:merge' on page 58 undefined on input l
+ine 107.
+
+[58]
+
+! LaTeX Error: Cannot determine size of graphic in tour-merge-conflict.png (no 
+BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.123   \grafix{tour-merge-conflict}
+                                    
+? 
+File: tour-merge-conflict.png Graphic file (type eps)
+<tour-merge-conflict.png>
+
+LaTeX Warning: Reference `fig:tour-merge:conflict' on page 59 undefined on inpu
+t line 128.
+
+
+LaTeX Warning: Reference `fig:tour-merge:kdiff3' on page 59 undefined on input 
+line 153.
+
+
+! LaTeX Error: Cannot determine size of graphic in kdiff3.png (no BoundingBox).
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.177   \grafix{kdiff3}
+                       
+? 
+File: kdiff3.png Graphic file (type eps)
+<kdiff3.png> [59]
+
+LaTeX Warning: Reference `fig:tour-merge:conflict' on page 60 undefined on inpu
+t line 196.
+
+[60] [61]) [62]
+\openout2 = `concepts.aux'.
+
+ (./concepts.tex
+Chapter 6.
+
+LaTeX Warning: Reference `fig:concepts:filelog' on page 63 undefined on input l
+ine 37.
+
+
+! LaTeX Error: Cannot determine size of graphic in filelog.png (no BoundingBox)
+.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41   \grafix{filelog}
+                       
+? 
+File: filelog.png Graphic file (type eps)
+<filelog.png> [63
+
+
+
+]
+
+LaTeX Warning: Reference `fig:concepts:metadata' on page 64 undefined on input 
+line 75.
+
+
+! LaTeX Error: Cannot determine size of graphic in metadata.png (no BoundingBox
+).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.79   \grafix{metadata}
+                        
+? 
+File: metadata.png Graphic file (type eps)
+<metadata.png> [64]
+
+! LaTeX Error: Cannot determine size of graphic in snapshot.png (no BoundingBox
+).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.146   \grafix{snapshot}
+                         
+? 
+File: snapshot.png Graphic file (type eps)
+<snapshot.png>
+
+LaTeX Warning: Reference `fig:concepts:snapshot' on page 65 undefined on input 
+line 159.
+
+[65]
+
+LaTeX Warning: Reference `fig:concepts:revlog' on page 66 undefined on input li
+ne 217.
+
+
+! LaTeX Error: Cannot determine size of graphic in revlog.png (no BoundingBox).
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.232   \grafix{revlog}
+                       
+? 
+File: revlog.png Graphic file (type eps)
+<revlog.png>
+
+! LaTeX Error: Cannot determine size of graphic in wdir.png (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.273   \grafix{wdir}
+                     
+? 
+File: wdir.png Graphic file (type eps)
+<wdir.png>
+
+LaTeX Warning: Reference `fig:concepts:wdir' on page 66 undefined on input line
+ 278.
+
+
+! LaTeX Error: Cannot determine size of graphic in wdir-after-commit.png (no Bo
+undingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.285   \grafix{wdir-after-commit}
+                                  
+? 
+File: wdir-after-commit.png Graphic file (type eps)
+<wdir-after-commit.png> [66]
+
+LaTeX Warning: Reference `fig:concepts:wdir-after-commit' on page 67 undefined 
+on input line 300.
+
+
+LaTeX Warning: Reference `fig:concepts:wdir-pre-branch' on page 67 undefined on
+ input line 314.
+
+
+! LaTeX Error: Cannot determine size of graphic in wdir-pre-branch.png (no Boun
+dingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318   \grafix{wdir-pre-branch}
+                                
+? 
+File: wdir-pre-branch.png Graphic file (type eps)
+<wdir-pre-branch.png>
+
+LaTeX Warning: Reference `fig:concepts:wdir-branch' on page 67 undefined on inp
+ut line 330.
+
+
+! LaTeX Error: Cannot determine size of graphic in wdir-branch.png (no Bounding
+Box).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.334   \grafix{wdir-branch}
+                            
+? 
+File: wdir-branch.png Graphic file (type eps)
+<wdir-branch.png> [67]
+
+LaTeX Warning: Reference `fig:concepts:wdir-merge' on page 68 undefined on inpu
+t line 362.
+
+
+! LaTeX Error: Cannot determine size of graphic in wdir-merge.png (no BoundingB
+ox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.366   \grafix{wdir-merge}
+                           
+? 
+File: wdir-merge.png Graphic file (type eps)
+<wdir-merge.png> [68]
+
+LaTeX Warning: Reference `fig:concepts:metadata' on page 69 undefined on input 
+line 468.
+
+[69]) [70]
+\openout2 = `daily.aux'.
+
+ (./daily.tex
+Chapter 7.
+[71
+
+
+
+]
+
+LaTeX Warning: Reference `ex:daily:hidden' on page 72 undefined on input line 7
+4.
+
+[72] [73] [74] [75]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 236.
+
+
+LaTeX Warning: Reference `sec:daily:why-copy' on page 76 undefined on input lin
+e 243.
+
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <12> not available
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 246.
+[76] [77] [78]
+
+LaTeX Warning: Reference `chap:undo' on page 79 undefined on input line 376.
+
+) [79]
+\openout2 = `collab.aux'.
+
+
+No file collab.tex.
+\openout2 = `filenames.aux'.
+
+(./filenames.tex
+Chapter 8.
+[80
+
+
+
+
+
+] [81] [82] [83] [84]) [85]
+\openout2 = `branch.aux'.
+
+ (./branch.tex
+Chapter 9.
+[86
+
+
+
+] [87] [88] [89] [90] [91] [92] [93] [94] [95]) [96]
+\openout2 = `undo.aux'.
+
+ (./undo.tex
+Chapter 10.
+
+LaTeX Warning: Reference `sec:concepts:txn' on page 97 undefined on input line 
+25.
+
+
+LaTeX Warning: Reference `sec:undo:rollback-after-push' on page 97 undefined on
+ input line 30.
+
+[97
+
+
+
+] [98] [99] [100]
+
+LaTeX Warning: Reference `sec:undo:aaaiiieee' on page 101 undefined on input li
+ne 219.
+
+[101]
+
+LaTeX Warning: Reference `fig:undo:backout' on page 102 undefined on input line
+ 251.
+
+
+! LaTeX Error: Cannot determine size of graphic in undo-simple.png (no Bounding
+Box).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.256   \grafix{undo-simple}
+                            
+? 
+File: undo-simple.png Graphic file (type eps)
+<undo-simple.png> [102]
+
+LaTeX Warning: Reference `fig:undo:backout-non-tip' on page 103 undefined on in
+put line 276.
+
+
+! LaTeX Error: Cannot determine size of graphic in undo-non-tip.png (no Boundin
+gBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.287   \grafix{undo-non-tip}
+                             
+? 
+File: undo-non-tip.png Graphic file (type eps)
+<undo-non-tip.png> [103]
+
+LaTeX Warning: Reference `fig:undo:backout-manual' on page 104 undefined on inp
+ut line 326.
+
+
+! LaTeX Error: Cannot determine size of graphic in undo-manual.png (no Bounding
+Box).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.333   \grafix{undo-manual}
+                            
+? 
+File: undo-manual.png Graphic file (type eps)
+<undo-manual.png> [104]
+
+LaTeX Warning: Reference `fig:undo:backout-manual-merge' on page 105 undefined 
+on input line 355.
+
+
+! LaTeX Error: Cannot determine size of graphic in undo-manual-merge.png (no Bo
+undingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.359   \grafix{undo-manual-merge}
+                                  
+? 
+File: undo-manual-merge.png Graphic file (type eps)
+<undo-manual-merge.png> [105]
+
+LaTeX Warning: Reference `sec:mq:patch' on page 106 undefined on input line 404
+.
+
+
+LaTeX Warning: Reference `sec:undo:rollback' on page 106 undefined on input lin
+e 436.
+
+[106]
+
+LaTeX Warning: Reference `chap:hook' on page 107 undefined on input line 469.
+
+[107] [108] [109] [110] [111]) [112]
+\openout2 = `hook.aux'.
+
+ (./hook.tex
+Chapter 11.
+
+LaTeX Warning: Reference `sec:hook:ref' on page 113 undefined on input line 16.
+
+
+[113
+
+
+
+] [114] [115]
+
+LaTeX Warning: Reference `ex:hook:init' on page 116 undefined on input line 243
+.
+
+
+LaTeX Warning: Reference `ex:hook:ext' on page 116 undefined on input line 253.
+
+
+
+LaTeX Warning: Reference `sec:hook:perm' on page 116 undefined on input line 27
+8.
+
+[116]
+
+LaTeX Warning: Reference `ex:hook:pretxncommit' on page 117 undefined on input 
+line 312.
+
+[117] [118]
+
+LaTeX Warning: Reference `ex:hook:msglen.go' on page 119 undefined on input lin
+e 438.
+
+
+LaTeX Warning: Reference `ex:hook:ws.simple' on page 119 undefined on input lin
+e 482.
+
+
+LaTeX Warning: Reference `ex:hook:ws.better' on page 119 undefined on input lin
+e 497.
+
+
+LaTeX Warning: Reference `ex:hook:ws.better' on page 119 undefined on input lin
+e 507.
+
+[119] [120] [121]
+
+LaTeX Warning: Citation `web:mysql-python' on page 122 undefined on input line 
+664.
+
+[122] [123]
+
+LaTeX Warning: Reference `sec:hook:bugzilla:config' on page 124 undefined on in
+put line 799.
+
+[124]
+
+LaTeX Warning: Reference `sec:hook:sources' on page 125 undefined on input line
+ 902.
+
+[125] [126] [127]
+
+LaTeX Warning: Reference `sec:hook:sources' on page 128 undefined on input line
+ 1099.
+
+
+LaTeX Warning: Reference `sec:hook:url' on page 128 undefined on input line 110
+1.
+
+
+LaTeX Warning: Reference `sec:hook:incoming' on page 128 undefined on input lin
+e 1104.
+
+
+LaTeX Warning: Reference `sec:hook:prechangegroup' on page 128 undefined on inp
+ut line 1105.
+
+
+LaTeX Warning: Reference `sec:hook:pretxnchangegroup' on page 128 undefined on 
+input line 1106.
+
+
+LaTeX Warning: Reference `sec:hook:precommit' on page 128 undefined on input li
+ne 1123.
+
+
+LaTeX Warning: Reference `sec:hook:pretxncommit' on page 128 undefined on input
+ line 1124.
+
+
+LaTeX Warning: Reference `sec:hook:changegroup' on page 128 undefined on input 
+line 1135.
+
+
+LaTeX Warning: Reference `sec:hook:sources' on page 128 undefined on input line
+ 1144.
+
+
+LaTeX Warning: Reference `sec:hook:url' on page 128 undefined on input line 114
+6.
+
+[128]
+
+LaTeX Warning: Reference `sec:hook:changegroup' on page 129 undefined on input 
+line 1149.
+
+
+LaTeX Warning: Reference `sec:hook:prechangegroup' on page 129 undefined on inp
+ut line 1149.
+
+
+LaTeX Warning: Reference `sec:hook:pretxnchangegroup' on page 129 undefined on 
+input line 1149.
+
+
+LaTeX Warning: Reference `sec:hook:sources' on page 129 undefined on input line
+ 1166.
+
+
+LaTeX Warning: Reference `sec:hook:url' on page 129 undefined on input line 117
+3.
+
+
+LaTeX Warning: Reference `sec:hook:preoutgoing' on page 129 undefined on input 
+line 1176.
+
+
+LaTeX Warning: Reference `sec:hook:sources' on page 129 undefined on input line
+ 1198.
+
+
+LaTeX Warning: Reference `sec:hook:url' on page 129 undefined on input line 120
+0.
+
+
+LaTeX Warning: Reference `sec:hook:changegroup' on page 129 undefined on input 
+line 1203.
+
+
+LaTeX Warning: Reference `sec:hook:incoming' on page 129 undefined on input lin
+e 1204.
+
+
+LaTeX Warning: Reference `sec:hook:pretxnchangegroup' on page 129 undefined on 
+input line 1205.
+
+
+LaTeX Warning: Reference `sec:hook:commit' on page 129 undefined on input line 
+1230.
+
+
+LaTeX Warning: Reference `sec:hook:pretxncommit' on page 129 undefined on input
+ line 1231.
+
+[129]
+
+LaTeX Warning: Reference `sec:hook:sources' on page 130 undefined on input line
+ 1246.
+
+
+LaTeX Warning: Reference `sec:hook:outgoing' on page 130 undefined on input lin
+e 1248.
+
+
+LaTeX Warning: Reference `sec:hook:url' on page 130 undefined on input line 125
+1.
+
+
+LaTeX Warning: Reference `sec:hook:outgoing' on page 130 undefined on input lin
+e 1254.
+
+
+LaTeX Warning: Reference `sec:hook:commit' on page 130 undefined on input line 
+1273.
+
+
+LaTeX Warning: Reference `sec:hook:pretxncommit' on page 130 undefined on input
+ line 1274.
+
+
+LaTeX Warning: Reference `sec:hook:tag' on page 130 undefined on input line 127
+6.
+
+
+LaTeX Warning: Reference `sec:hook:sources' on page 130 undefined on input line
+ 1309.
+
+
+LaTeX Warning: Reference `sec:hook:url' on page 130 undefined on input line 131
+1.
+
+
+LaTeX Warning: Reference `sec:hook:changegroup' on page 130 undefined on input 
+line 1314.
+
+
+LaTeX Warning: Reference `sec:hook:incoming' on page 130 undefined on input lin
+e 1315.
+
+
+LaTeX Warning: Reference `sec:hook:prechangegroup' on page 130 undefined on inp
+ut line 1316.
+
+[130]
+
+LaTeX Warning: Reference `sec:hook:precommit' on page 131 undefined on input li
+ne 1346.
+
+
+LaTeX Warning: Reference `sec:hook:update' on page 131 undefined on input line 
+1367.
+
+
+LaTeX Warning: Reference `sec:hook:commit' on page 131 undefined on input line 
+1385.
+
+
+LaTeX Warning: Reference `sec:hook:pretag' on page 131 undefined on input line 
+1387.
+
+[131]
+
+LaTeX Warning: Reference `sec:hook:preupdate' on page 132 undefined on input li
+ne 1408.
+
+) [132]
+\openout2 = `template.aux'.
+
+ (./template.tex
+Chapter 12.
+
+LaTeX Warning: Citation `web:changelog' on page 133 undefined on input line 29.
+
+
+[133
+
+
+
+]
+Overfull \hbox (2.63051pt too wide) in paragraph at lines 54--57
+\OT1/ptm/m/n/10 All of Mer-cu-rial's ``\OT1/pcr/m/n/10 log\OT1/ptm/m/n/10 -like
+'' com-mands let you use styles and tem-plates: []``\OT1/pcr/m/n/10 hg incoming
+\OT1/ptm/m/n/10 '', []``\OT1/pcr/m/n/10 hg log\OT1/ptm/m/n/10 '', []``\OT1/pcr/
+m/n/10 hg outgoing\OT1/ptm/m/n/10 '',
+ []
+
+[134]
+
+LaTeX Warning: Reference `sec:template:escape' on page 135 undefined on input l
+ine 90.
+
+
+LaTeX Warning: Reference `sec:template:escape' on page 135 undefined on input l
+ine 102.
+
+
+LaTeX Warning: Reference `sec:template:filter' on page 135 undefined on input l
+ine 118.
+
+[135]
+
+LaTeX Warning: Reference `fig:template:keywords' on page 136 undefined on input
+ line 141.
+
+
+LaTeX Warning: Reference `sec:template:filter' on page 136 undefined on input l
+ine 151.
+
+[136]
+Overfull \hbox (34.85149pt too wide) in paragraph at lines 232--235
+[]\OT1/pcr/m/n/10 date \OT1/ptm/m/n/10 key-word. Ren-der the date as a text str
+ing in ISO 8601 for-mat. Yields a string like ``[]''. 
+ []
+
+[137]
+Overfull \hbox (96.6907pt too wide) in paragraph at lines 243--246
+[]\OT1/pcr/m/n/10 date \OT1/ptm/m/n/10 key-word. Ren-der a date us-ing the same
+ for-mat used in email head-ers. Yields a string like ``[]''. 
+ []
+
+
+LaTeX Warning: Float too large for page by 159.82983pt on input line 269.
+
+[138] [139]
+Overfull \hbox (45.41174pt too wide) in paragraph at lines 334--338
+\OT1/ptm/m/n/10 con-tain any al-phanu-meric char-ac-ter or un-der-score. (In re
+g-exp no-ta-tion, a key-word must match [].) 
+ []
+
+[140] [141]) [142]
+\openout2 = `mq.aux'.
+
+ (./mq.tex
+Chapter 13.
+
+LaTeX Warning: Reference `sec:mq:patch' on page 143 undefined on input line 33.
+
+
+
+LaTeX Warning: Citation `web:quilt' on page 143 undefined on input line 74.
+
+
+LaTeX Warning: Citation `gruenbacher:2005' on page 143 undefined on input line 
+75.
+
+[143
+
+
+
+] [144]
+
+LaTeX Warning: Reference `ex:mq:diff' on page 145 undefined on input line 165.
+
+
+LaTeX Warning: Reference `sec:mq:adv-patch' on page 145 undefined on input line
+ 208.
+
+
+LaTeX Warning: Reference `ex:mq:config' on page 145 undefined on input line 217
+.
+
+
+LaTeX Warning: Reference `ex:mq:enabled' on page 145 undefined on input line 23
+1.
+
+
+LaTeX Warning: Reference `ex:mq:qinit' on page 145 undefined on input line 242.
+
+
+[145]
+
+LaTeX Warning: Reference `ex:mq:qnew' on page 146 undefined on input line 264.
+
+[146]
+
+LaTeX Warning: Reference `ex:mq:qnew' on page 147 undefined on input line 289.
+
+
+LaTeX Warning: Reference `ex:mq:qnew2' on page 147 undefined on input line 316.
+
+
+
+LaTeX Warning: Reference `ex:mq:qseries' on page 147 undefined on input line 32
+9.
+
+[147]
+
+LaTeX Warning: Reference `fig:mq:stack' on page 148 undefined on input line 359
+.
+
+
+! LaTeX Error: Cannot determine size of graphic in mq-stack.png (no BoundingBox
+).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.364   \grafix{mq-stack}
+                         
+? 
+File: mq-stack.png Graphic file (type eps)
+<mq-stack.png>
+
+LaTeX Warning: Reference `ex:mq:qpop' on page 148 undefined on input line 372.
+
+
+LaTeX Warning: Reference `sec:mq:perf' on page 148 undefined on input line 390.
+
+
+
+LaTeX Warning: Reference `ex:mq:add' on page 148 undefined on input line 403.
+
+[148] [149] [150] [151] [152]
+
+LaTeX Warning: Reference `sec:mq:merge' on page 153 undefined on input line 583
+.
+
+
+LaTeX Warning: Citation `web:wiggle' on page 153 undefined on input line 590.
+
+
+LaTeX Warning: Citation `web:mpatch' on page 153 undefined on input line 595.
+
+
+Overfull \hbox (0.74089pt too wide) in paragraph at lines 593--599
+[]\OT1/ptm/m/n/10 Another Linux ker-nel hacker, Chris Ma-son (the au-thor of Me
+r-cu-rial Queues), wrote a sim-i-lar tool called []\OT1/pcr/m/n/10 mpatch \OT1/
+ptm/m/n/10 [[]],
+ []
+
+
+LaTeX Warning: Citation `web:europython' on page 153 undefined on input line 62
+1.
+
+[153] [154]
+
+LaTeX Warning: Reference `sec:hgext:patchbomb' on page 155 undefined on input l
+ine 760.
+
+
+LaTeX Warning: Reference `ex:mq:id' on page 155 undefined on input line 783.
+
+
+LaTeX Warning: Reference `sec:mqref:cmd:qpush' on page 155 undefined on input l
+ine 797.
+
+[155] [156]
+
+LaTeX Warning: Citation `web:diffstat' on page 157 undefined on input line 891.
+
+
+
+LaTeX Warning: Citation `web:patchutils' on page 157 undefined on input line 90
+6.
+
+
+LaTeX Warning: Reference `mq-collab:tips:interdiff' on page 157 undefined on in
+put line 914.
+
+
+LaTeX Warning: Reference `sec:mq:tools' on page 157 undefined on input line 941
+.
+
+[157] [158] [159] [160]
+
+LaTeX Warning: Reference `sec:mq:combine' on page 161 undefined on input line 1
+026.
+
+) [161]
+\openout2 = `mq-collab.aux'.
+
+ (./mq-collab.tex
+Chapter 14.
+[162
+
+
+
+] [163] [164] [165] [166]
+
+LaTeX Warning: Reference `sec:mq:repo' on page 167 undefined on input line 328.
+
+
+
+LaTeX Warning: Citation `web:patchutils' on page 167 undefined on input line 33
+8.
+
+[167] [168]
+
+LaTeX Warning: Reference `sec:hgext:extdiff' on page 169 undefined on input lin
+e 388.
+
+) [169]
+\openout2 = `hgext.aux'.
+
+ (./hgext.tex
+Chapter 15.
+
+LaTeX Warning: Reference `sec:tour-merge:fetch' on page 170 undefined on input 
+line 14.
+
+
+LaTeX Warning: Reference `chap:hook' on page 170 undefined on input line 17.
+
+
+LaTeX Warning: Reference `chap:mq' on page 170 undefined on input line 24.
+
+
+LaTeX Warning: Reference `chap:mq-collab' on page 170 undefined on input line 2
+5.
+
+
+LaTeX Warning: Reference `chap:mqref' on page 170 undefined on input line 26.
+
+
+LaTeX Warning: Reference `sec:hgext:inotify' on page 170 undefined on input lin
+e 34.
+
+[170
+
+
+
+]
+Overfull \hbox (10.69077pt too wide) in paragraph at lines 110--128
+\OT1/ptm/m/n/10 bind-ings to the \OT1/pcr/m/n/10 inotify \OT1/ptm/m/n/10 sub-sy
+s-tem. []
+ []
+
+
+Overfull \hbox (179.51932pt too wide) in paragraph at lines 110--128
+\OT1/ptm/m/n/10 To get go-ing, it's best to al-ready have a func-tion-ing copy 
+of Mer-cu-rial in-stalled. [] 
+ []
+
+
+LaTeX Warning: Reference `sec:mq:start' on page 171 undefined on input line 146
+.
+
+[171] [172]
+
+LaTeX Warning: Reference `mq-collab:tips:interdiff' on page 173 undefined on in
+put line 279.
+
+[173] [174]
+
+LaTeX Warning: Reference `sec:mq:patch' on page 175 undefined on input line 401
+.
+
+) [175]
+\openout2 = `cmdref.aux'.
+
+ (./cmdref.tex
+Appendix A.
+
+LaTeX Warning: Reference `sec:mq:patch' on page 176 undefined on input line 13.
+
+
+[176
+
+
+
+] [177] [178]) [179]
+\openout2 = `mq-ref.aux'.
+
+ (./mq-ref.tex
+Appendix B.
+[180
+
+
+
+] [181] [182] [183]) [184]
+\openout2 = `bookmaking.aux'.
+
+ (./bookmaking.tex
+Appendix C.
+) [185
+
+
+
+]
+\openout2 = `license.aux'.
+
+ (./license.tex
+Appendix D.
+
+LaTeX Warning: Reference `sec:opl:options' on page 186 undefined on input line 
+26.
+
+[186
+
+
+
+]) [187]
+No file 00book.bbl.
+No file 00book.ind.
+(./00book.aux (./preface.aux) (./intro.aux) (./client.aux) (./server.aux)
+(./user-guides.aux) (./tour-merge.aux) (./concepts.aux) (./daily.aux)
+(./collab.aux) (./filenames.aux) (./branch.aux) (./undo.aux) (./hook.aux)
+(./template.aux) (./mq.aux) (./mq-collab.aux) (./hgext.aux) (./cmdref.aux)
+(./mq-ref.aux) (./bookmaking.aux) (./license.aux))
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3652 strings out of 94501
+ 51902 string characters out of 1169942
+ 103639 words of memory out of 1000000
+ 6460 multiletter control sequences out of 10000+50000
+ 28225 words of font info for 70 fonts, out of 500000 for 2000
+ 580 hyphenation exceptions out of 1000
+ 28i,7n,40p,1369b,422s stack positions out of 1500i,500n,5000p,200000b,5000s
+
+Output written on 00book.dvi (189 pages, 960124 bytes).

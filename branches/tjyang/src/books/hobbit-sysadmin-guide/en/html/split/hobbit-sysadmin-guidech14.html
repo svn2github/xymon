@@ -1,0 +1,1023 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>14 Adding functionality with extensions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html4-uni,2,html,xhtml --> 
+<meta name="src" content="hobbit-sysadmin-guide.tex" /> 
+<meta name="date" content="2008-04-26 19:37:00" /> 
+<link rel="stylesheet" type="text/css" href="hobbit-sysadmin-guide.css" /> 
+</head><body 
+>
+   <!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="hobbit-sysadmin-guideap1.html" >next</a>] [<a 
+href="hobbit-sysadmin-guidech13.html" >prev</a>] [<a 
+href="hobbit-sysadmin-guidech13.html#tailhobbit-sysadmin-guidech13.html" >prev-tail</a>] [<a 
+href="#tailhobbit-sysadmin-guidech14.html">tail</a>] [<a 
+href="hobbit-sysadmin-guide.html#hobbit-sysadmin-guidech14.html" >up</a>] </p></div>
+   <h2 class="chapterHead"><span class="titlemark">Chapter&#x00A0;14</span><br /><a 
+ id="x18-31600014"></a>Adding functionality with extensions</h2>
+<!--l. 4--><p class="noindent">While the core of Mercurial is quite complete from a functionality standpoint, it&#x2019;s deliberately shorn of fancy
+features. This approach of preserving simplicity keeps the software easy to deal with for both maintainers and
+users.
+</p><!--l. 9--><p class="indent">   However, Mercurial doesn&#x2019;t box you in with an inflexible command set: you can add features to it as <span 
+class="ptmri7t-">extensions </span>(sometimes
+known as <span 
+class="ptmri7t-">plugins</span>). We&#x2019;ve already discussed a few of these extensions in earlier chapters. </p>
+     <ul><li><span class="dt">
+     </span><span class="dd">Section&#x00A0;<a 
+href="hobbit-sysadmin-guidech4.html#x8-970004.3">4.3<!--tex4ht:ref: sec:tour-merge:fetch --></a>  covers  the  <a 
+ id="dx18-316001"></a><span 
+class="pcrr7tn-">fetch </span>extension;  this  combines  pulling  new  changes  and  merging  them  with  local
+     changes into a single command, <a 
+ id="dx18-316002"></a><a 
+ id="dx18-316003"></a>&#x201C;<span 
+class="pcrr7tn-">hg fetch</span>&#x201D;.
+     </span><li><span class="dt">
+     </span><span class="dd">In chapter&#x00A0;<a 
+href="hobbit-sysadmin-guidech10.html#x14-19700010">10<!--tex4ht:ref: chap:hook --></a>, we covered several extensions that are useful for hook-related functionality: <a 
+ id="dx18-316004"></a><span 
+class="pcrr7tn-">acl </span>adds access
+     control lists; <a 
+ id="dx18-316005"></a><span 
+class="pcrr7tn-">bugzilla </span>adds integration with the Bugzilla bug tracking system; and <a 
+ id="dx18-316006"></a><span 
+class="pcrr7tn-">notify </span>sends notification
+     emails on new changes.
+     </span><li><span class="dt">
+     </span><span class="dd">The Mercurial Queues patch management extension is so invaluable that it merits two chapters and an appendix
+     all to itself. Chapter&#x00A0;<a 
+href="hobbit-sysadmin-guidech12.html#x16-26700012">12<!--tex4ht:ref: chap:mq --></a> covers the basics; chapter&#x00A0;<a 
+href="hobbit-sysadmin-guidech13.html#x17-30200013">13<!--tex4ht:ref: chap:mq-collab --></a> discusses advanced topics; and appendix&#x00A0;<a 
+href="hobbit-sysadmin-guideap2.html#x20-344000B">B<!--tex4ht:ref: chap:mqref --></a> goes into
+     detail on each command.</li></ul>
+<!--l. 29--><p class="indent">   In this chapter, we&#x2019;ll cover some of the other extensions that are available for Mercurial, and briefly touch on some of the
+machinery you&#x2019;ll need to know about if you want to write an extension of your own. </p>
+     <ul><li><span class="dt">
+     </span><span class="dd">In section&#x00A0;<a 
+href="#x18-31700014.1">14.1<!--tex4ht:ref: sec:hgext:inotify --></a>, we&#x2019;ll discuss the possibility of <span 
+class="ptmri7t-">huge </span>performance improvements using the <a 
+ id="dx18-316007"></a><span 
+class="pcrr7tn-">inotify </span>extension.</li></ul>
+   <h3 class="sectionHead"><span class="titlemark">14.1    </span> <a 
+ id="x18-31700014.1"></a>Improve performance with the <span 
+class="pcrr7tn-">inotify </span>extension</h3>
+<!--l. 42--><p class="noindent">Are you interested in having some of the most common Mercurial operations run as much as a hundred times faster? Read
+on!
+</p><!--l. 45--><p class="indent">   Mercurial has great performance under normal circumstances. For example, when you run the <a 
+ id="dx18-317001"></a>&#x201C;<span 
+class="pcrr7tn-">hg status</span>&#x201D; command,
+Mercurial has to scan almost every directory and file in your repository so that it can display file status. Many
+other Mercurial commands need to do the same work behind the scenes; for example, the <a 
+ id="dx18-317002"></a>&#x201C;<span 
+class="pcrr7tn-">hg diff</span>&#x201D; command
+uses the status machinery to avoid doing an expensive comparison operation on files that obviously haven&#x2019;t
+changed.
+</p><!--l. 53--><p class="indent">   Because obtaining file status is crucial to good performance, the authors of Mercurial have optimised this code to within an
+inch of its life. However, there&#x2019;s no avoiding the fact that when you run <a 
+ id="dx18-317003"></a>&#x201C;<span 
+class="pcrr7tn-">hg status</span>&#x201D;, Mercurial is going to have to perform at
+least one expensive system call for each managed file to determine whether it&#x2019;s changed since the last time Mercurial checked.
+For a sufficiently large repository, this can take a long time.
+</p><!--l. 61--><p class="indent">   To put a number on the magnitude of this effect, I created a repository containing 150,000 managed files. I timed <a 
+ id="dx18-317004"></a>&#x201C;<span 
+class="pcrr7tn-">hg</span>
+<span 
+class="pcrr7tn-">status</span>&#x201D; as taking ten seconds to run, even when <span 
+class="ptmri7t-">none </span>of those files had been modified.
+</p><!--l. 66--><p class="indent">   Many modern operating systems contain a file notification facility. If a program signs up to an appropriate service, the
+operating system will notify it every time a file of interest is created, modified, or deleted. On Linux systems, the kernel
+component that does this is called <span 
+class="pcrr7tn-">inotify</span>.
+</p><!--l. 72--><p class="indent">   Mercurial&#x2019;s <a 
+ id="dx18-317005"></a><span 
+class="pcrr7tn-">inotify </span>extension talks to the kernel&#x2019;s <span 
+class="pcrr7tn-">inotify </span>component to optimise <a 
+ id="dx18-317006"></a>&#x201C;<span 
+class="pcrr7tn-">hg status</span>&#x201D; commands. The
+extension has two components. A daemon sits in the background and receives notifications from the <span 
+class="pcrr7tn-">inotify </span>subsystem. It also
+listens for connections from a regular Mercurial command. The extension modifies Mercurial&#x2019;s behaviour so that instead of
+scanning the filesystem, it queries the daemon. Since the daemon has perfect information about the state of the
+repository, it can respond with a result instantaneously, avoiding the need to scan every directory and file in the
+repository.
+</p><!--l. 83--><p class="indent">   Recall the ten seconds that I measured plain Mercurial as taking to run <a 
+ id="dx18-317007"></a>&#x201C;<span 
+class="pcrr7tn-">hg status</span>&#x201D; on a 150,000 file repository. With the
+<a 
+ id="dx18-317008"></a><span 
+class="pcrr7tn-">inotify </span>extension enabled, the time dropped to 0.1&#x00A0;seconds, a factor of <span 
+class="ptmri7t-">one hundred </span>faster.
+                                                                                         
+                                                                                         
+</p><!--l. 88--><p class="indent">   Before we continue, please pay attention to some caveats. </p>
+     <ul><li><span class="dt">
+     </span><span class="dd">The  <a 
+ id="dx18-317009"></a><span 
+class="pcrr7tn-">inotify </span>extension  is  Linux-specific.  Because  it  interfaces  directly  to  the  Linux  kernel&#x2019;s  <span 
+class="pcrr7tn-">inotify</span>
+     subsystem, it does not work on other operating systems.
+     </span><li><span class="dt">
+     </span><span class="dd">It should work on any Linux distribution that was released after early&#x00A0;2005. Older distributions are likely to
+     have a kernel that lacks <span 
+class="pcrr7tn-">inotify</span>, or a version of <span 
+class="pcrr7tn-">glibc </span>that does not have the necessary interfacing support.
+     </span><li><span class="dt">
+     </span><span class="dd">Not all filesystems are suitable for use with the <a 
+ id="dx18-317010"></a><span 
+class="pcrr7tn-">inotify </span>extension. Network filesystems such as NFS are a
+     non-starter, for example, particularly if you&#x2019;re running Mercurial on several systems, all mounting the same
+     network  filesystem.  The  kernel&#x2019;s  <span 
+class="pcrr7tn-">inotify </span>system  has  no  way  of  knowing  about  changes  made  on  another
+     system. Most local filesystems (e.g.&#x00A0;ext3, XFS, ReiserFS) should work fine.</li></ul>
+<!--l. 106--><p class="indent">   The <a 
+ id="dx18-317011"></a><span 
+class="pcrr7tn-">inotify </span>extension is not yet shipped with Mercurial as of May&#x00A0;2007, so it&#x2019;s a little more involved to set up than other
+extensions. But the performance improvement is worth it!
+</p><!--l. 110--><p class="indent">   The extension currently comes in two parts: a set of patches to the Mercurial source code, and a library of Python bindings
+to the <span 
+class="pcrr7tn-">inotify </span>subsystem.
+<span class="fbox"><span 
+class="ptmb7t-">Note:   </span>There  are  <span 
+class="ptmri7t-">two  </span>Python  <span 
+class="pcrr7tn-">inotify </span>binding  libraries.  One  of  them  is  called
+<span 
+class="pcrr7tn-">pyinotify</span>,  and  is  packaged  by  some  Linux  distributions  as  <span 
+class="pcrr7tn-">python-inotify</span>.
+This is <span 
+class="ptmri7t-">not </span>the one you&#x2019;ll need, as it is too buggy and inefficient to be practical.  </span> To get going, it&#x2019;s best to already have a
+functioning copy of Mercurial installed.
+<span class="fbox"><span 
+class="ptmb7t-">Note:   </span>If you follow the instructions below, you&#x2019;ll be <span 
+class="ptmri7t-">replacing </span>and overwriting
+any existing installation of Mercurial that you might already have, using the latest
+&#x201C;bleeding edge&#x201D; Mercurial code. Don&#x2019;t say you weren&#x2019;t warned!              </span>
+     </p><ol  class="enumerate1" >
+     <li class="enumerate"><a 
+ id="x18-317013x1"></a>Clone the Python <span 
+class="pcrr7tn-">inotify </span>binding repository. Build and install it.
+     <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x18-317015r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;hg</span><span 
+class="pcrr7tn-">&#x00A0;clone</span><span 
+class="pcrr7tn-">&#x00A0;http://hg.kublai.com/python/inotify</span>
+<br class="fancyvrb" /><a 
+ id="x18-317017r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;cd</span><span 
+class="pcrr7tn-">&#x00A0;inotify</span>
+<br class="fancyvrb" /><a 
+ id="x18-317019r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;python</span><span 
+class="pcrr7tn-">&#x00A0;setup.py</span><span 
+class="pcrr7tn-">&#x00A0;build</span><span 
+class="pcrr7tn-">&#x00A0;--force</span>
+<br class="fancyvrb" /><a 
+ id="x18-317021r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;sudo</span><span 
+class="pcrr7tn-">&#x00A0;python</span><span 
+class="pcrr7tn-">&#x00A0;setup.py</span><span 
+class="pcrr7tn-">&#x00A0;install</span><span 
+class="pcrr7tn-">&#x00A0;--skip-build</span>
+</div>
+     </li>
+     <li class="enumerate"><a 
+ id="x18-317023x2"></a>Clone the <span 
+class="pcrr7tn-">crew </span>Mercurial repository. Clone the <a 
+ id="dx18-317024"></a><span 
+class="pcrr7tn-">inotify </span>patch repository so that Mercurial Queues will be able to apply
+     patches to your cope of the <span 
+class="pcrr7tn-">crew </span>repository.
+     <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x18-317026r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;hg</span><span 
+class="pcrr7tn-">&#x00A0;clone</span><span 
+class="pcrr7tn-">&#x00A0;http://hg.intevation.org/mercurial/crew</span>
+<br class="fancyvrb" /><a 
+ id="x18-317028r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;hg</span><span 
+class="pcrr7tn-">&#x00A0;clone</span><span 
+class="pcrr7tn-">&#x00A0;crew</span><span 
+class="pcrr7tn-">&#x00A0;inotify</span>
+<br class="fancyvrb" /><a 
+ id="x18-317030r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;hg</span><span 
+class="pcrr7tn-">&#x00A0;clone</span><span 
+class="pcrr7tn-">&#x00A0;http://hg.kublai.com/mercurial/patches/inotify</span><span 
+class="pcrr7tn-">&#x00A0;inotify/.hg/patches</span>
+</div>
+     </li>
+     <li class="enumerate"><a 
+ id="x18-317032x3"></a>Make sure that you have the Mercurial Queues extension, <a 
+ id="dx18-317033"></a><span 
+class="pcrr7tn-">mq</span>, enabled. If you&#x2019;ve never used MQ, read section&#x00A0;<a 
+href="hobbit-sysadmin-guidech12.html#x16-27400012.5">12.5<!--tex4ht:ref: sec:mq:start --></a> to get
+     started quickly.
+     </li>
+     <li class="enumerate"><a 
+ id="x18-317035x4"></a>Go into the <span 
+class="pcrr7tn-">inotify </span>repo, and apply all of the <a 
+ id="dx18-317036"></a><span 
+class="pcrr7tn-">inotify </span>patches using the <a 
+ id="dx18-317037"></a><a 
+ id="dx18-317038"></a><span 
+class="pcrr7tn-">-a </span>option to the <a 
+ id="dx18-317039"></a><a 
+ id="dx18-317040"></a>&#x201C;<span 
+class="pcrr7tn-">hg qpush</span>&#x201D;
+     command.
+                                                                                         
+                                                                                         
+     <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x18-317042r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;cd</span><span 
+class="pcrr7tn-">&#x00A0;inotify</span>
+<br class="fancyvrb" /><a 
+ id="x18-317044r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;hg</span><span 
+class="pcrr7tn-">&#x00A0;qpush</span><span 
+class="pcrr7tn-">&#x00A0;-a</span>
+</div>
+     <!--l. 154--><p class="noindent">If you get an error message from <a 
+ id="dx18-317045"></a><a 
+ id="dx18-317046"></a>&#x201C;<span 
+class="pcrr7tn-">hg qpush</span>&#x201D;, you should not continue. Instead, ask for help.
+     </p></li>
+     <li class="enumerate"><a 
+ id="x18-317048x5"></a>Build and install the patched version of Mercurial.
+     <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x18-317050r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;python</span><span 
+class="pcrr7tn-">&#x00A0;setup.py</span><span 
+class="pcrr7tn-">&#x00A0;build</span><span 
+class="pcrr7tn-">&#x00A0;--force</span>
+<br class="fancyvrb" /><a 
+ id="x18-317052r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;sudo</span><span 
+class="pcrr7tn-">&#x00A0;python</span><span 
+class="pcrr7tn-">&#x00A0;setup.py</span><span 
+class="pcrr7tn-">&#x00A0;install</span><span 
+class="pcrr7tn-">&#x00A0;--skip-build</span>
+</div>
+     </li></ol>
+<!--l. 162--><p class="noindent">Once you&#x2019;ve build a suitably patched version of Mercurial, all you need to do to enable the <a 
+ id="dx18-317053"></a><span 
+class="pcrr7tn-">inotify </span>extension is add an entry to
+your <a 
+ id="dx18-317054"></a><a 
+ id="dx18-317055"></a><span 
+class="pcrr7tn-">hgrc</span>.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x18-317057r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;[extensions]</span>
+<br class="fancyvrb" /><a 
+ id="x18-317059r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;inotify</span><span 
+class="pcrr7tn-">&#x00A0;=</span>
+   </div>
+<!--l. 169--><p class="noindent">When the <a 
+ id="dx18-317060"></a><span 
+class="pcrr7tn-">inotify </span>extension is enabled, Mercurial will automatically and transparently start the status daemon the first time you
+run a command that needs status in a repository. It runs one status daemon per repository.
+</p><!--l. 174--><p class="indent">   The status daemon is started silently, and runs in the background. If you look at a list of running processes after you&#x2019;ve
+enabled the <a 
+ id="dx18-317061"></a><span 
+class="pcrr7tn-">inotify </span>extension and run a few commands in different repositories, you&#x2019;ll thus see a few <span 
+class="pcrr7tn-">hg </span>processes sitting
+around, waiting for updates from the kernel and queries from Mercurial.
+</p><!--l. 181--><p class="indent">   The first time you run a Mercurial command in a repository when you have the <a 
+ id="dx18-317062"></a><span 
+class="pcrr7tn-">inotify </span>extension enabled, it
+will run with about the same performance as a normal Mercurial command. This is because the status daemon
+needs to perform a normal status scan so that it has a baseline against which to apply later updates from the
+kernel. However, <span 
+class="ptmri7t-">every </span>subsequent command that does any kind of status check should be noticeably faster
+on repositories of even fairly modest size. Better yet, the bigger your repository is, the greater a performance
+advantage you&#x2019;ll see. The <a 
+ id="dx18-317063"></a><span 
+class="pcrr7tn-">inotify </span>daemon makes status operations almost instantaneous on repositories of all
+sizes!
+</p><!--l. 192--><p class="indent">   If you like, you can manually start a status daemon using the <a 
+ id="dx18-317064"></a><a 
+ id="dx18-317065"></a>&#x201C;<span 
+class="pcrr7tn-">hg inserve</span>&#x201D; command. This gives you slightly finer control
+over how the daemon ought to run. This command will of course only be available when the <a 
+ id="dx18-317066"></a><span 
+class="pcrr7tn-">inotify </span>extension is
+enabled.
+</p><!--l. 197--><p class="indent">   When you&#x2019;re using the <a 
+ id="dx18-317067"></a><span 
+class="pcrr7tn-">inotify </span>extension, you should notice <span 
+class="ptmri7t-">no difference at all </span>in Mercurial&#x2019;s behaviour, with the sole
+exception of status-related commands running a whole lot faster than they used to. You should specifically expect that
+commands will not print different output; neither should they give different results. If either of these situations occurs, please
+report a bug.
+</p><!--l. 204--><p class="noindent">
+</p>
+   <h3 class="sectionHead"><span class="titlemark">14.2    </span> <a 
+ id="x18-31800014.2"></a>Flexible diff support with the <span 
+class="pcrr7tn-">extdiff </span>extension</h3>
+<!--l. 207--><p class="noindent">Mercurial&#x2019;s built-in <a 
+ id="dx18-318001"></a>&#x201C;<span 
+class="pcrr7tn-">hg diff</span>&#x201D; command outputs plaintext unified diffs.
+                                                                                         
+                                                                                         
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x18-318003r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;diff</span>
+<br class="fancyvrb" /><a 
+ id="x18-318005r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;diff</span><span 
+class="pcrr7tn-">&#x00A0;-r</span><span 
+class="pcrr7tn-">&#x00A0;8e4e1048b925</span><span 
+class="pcrr7tn-">&#x00A0;myfile</span>
+<br class="fancyvrb" /><a 
+ id="x18-318007r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;---</span><span 
+class="pcrr7tn-">&#x00A0;a/myfile        Sun</span><span 
+class="pcrr7tn-">&#x00A0;Apr</span><span 
+class="pcrr7tn-">&#x00A0;27</span><span 
+class="pcrr7tn-">&#x00A0;00:04:16</span><span 
+class="pcrr7tn-">&#x00A0;2008</span><span 
+class="pcrr7tn-">&#x00A0;+0000</span>
+<br class="fancyvrb" /><a 
+ id="x18-318009r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;+++</span><span 
+class="pcrr7tn-">&#x00A0;b/myfile        Sun</span><span 
+class="pcrr7tn-">&#x00A0;Apr</span><span 
+class="pcrr7tn-">&#x00A0;27</span><span 
+class="pcrr7tn-">&#x00A0;00:04:16</span><span 
+class="pcrr7tn-">&#x00A0;2008</span><span 
+class="pcrr7tn-">&#x00A0;+0000</span>
+<br class="fancyvrb" /><a 
+ id="x18-318011r5"></a><span 
+class="ptmr7t-x-x-50">5</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;@@</span><span 
+class="pcrr7tn-">&#x00A0;-1,1</span><span 
+class="pcrr7tn-">&#x00A0;+1,2</span><span 
+class="pcrr7tn-">&#x00A0;@@</span><span 
+class="pcrr7tn-">&#x00A0;The</span><span 
+class="pcrr7tn-">&#x00A0;first</span><span 
+class="pcrr7tn-">&#x00A0;line.</span>
+<br class="fancyvrb" /><a 
+ id="x18-318013r6"></a><span 
+class="ptmr7t-x-x-50">6</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;The</span><span 
+class="pcrr7tn-">&#x00A0;first</span><span 
+class="pcrr7tn-">&#x00A0;line.</span>
+<br class="fancyvrb" /><a 
+ id="x18-318015r7"></a><span 
+class="ptmr7t-x-x-50">7</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;+The</span><span 
+class="pcrr7tn-">&#x00A0;second</span><span 
+class="pcrr7tn-">&#x00A0;line.</span>
+   </div>
+<!--l. 210--><p class="noindent">If you would like to use an external tool to display modifications, you&#x2019;ll want to use the <a 
+ id="dx18-318016"></a><span 
+class="pcrr7tn-">extdiff </span>extension. This will let you use,
+for example, a graphical diff tool.
+</p><!--l. 214--><p class="indent">   The <a 
+ id="dx18-318017"></a><span 
+class="pcrr7tn-">extdiff </span>extension is bundled with Mercurial, so it&#x2019;s easy to set up. In the <a 
+ id="dx18-318018"></a><span 
+class="pcrr7tn-">[extensions] </span>section of your <a 
+ id="dx18-318019"></a><a 
+ id="dx18-318020"></a><span 
+class="pcrr7tn-">hgrc</span>, simply
+add a one-line entry to enable the extension.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x18-318022r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;[extensions]</span>
+<br class="fancyvrb" /><a 
+ id="x18-318024r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;extdiff</span><span 
+class="pcrr7tn-">&#x00A0;=</span>
+   </div>
+<!--l. 221--><p class="noindent">This introduces a command named <a 
+ id="dx18-318025"></a><a 
+ id="dx18-318026"></a>&#x201C;<span 
+class="pcrr7tn-">hg extdiff</span>&#x201D;, which by default uses your system&#x2019;s <a 
+ id="dx18-318027"></a><span 
+class="pcrr7tn-">diff </span>command to generate a unified diff
+in the same form as the built-in <a 
+ id="dx18-318028"></a>&#x201C;<span 
+class="pcrr7tn-">hg diff</span>&#x201D; command.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x18-318030r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;extdiff</span>
+<br class="fancyvrb" /><a 
+ id="x18-318032r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;making</span><span 
+class="pcrr7tn-">&#x00A0;snapshot</span><span 
+class="pcrr7tn-">&#x00A0;of</span><span 
+class="pcrr7tn-">&#x00A0;1</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;from</span><span 
+class="pcrr7tn-">&#x00A0;rev</span><span 
+class="pcrr7tn-">&#x00A0;8e4e1048b925</span>
+<br class="fancyvrb" /><a 
+ id="x18-318034r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;making</span><span 
+class="pcrr7tn-">&#x00A0;snapshot</span><span 
+class="pcrr7tn-">&#x00A0;of</span><span 
+class="pcrr7tn-">&#x00A0;1</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;from</span><span 
+class="pcrr7tn-">&#x00A0;working</span><span 
+class="pcrr7tn-">&#x00A0;dir</span>
+<br class="fancyvrb" /><a 
+ id="x18-318036r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;diff</span><span 
+class="pcrr7tn-">&#x00A0;-Npru</span><span 
+class="pcrr7tn-">&#x00A0;a.8e4e1048b925/myfile</span><span 
+class="pcrr7tn-">&#x00A0;a/myfile</span>
+<br class="fancyvrb" /><a 
+ id="x18-318038r5"></a><span 
+class="ptmr7t-x-x-50">5</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;---</span><span 
+class="pcrr7tn-">&#x00A0;a.8e4e1048b925/myfile        2008-04-27</span><span 
+class="pcrr7tn-">&#x00A0;00:04:16.000000000</span><span 
+class="pcrr7tn-">&#x00A0;+0000</span>
+<br class="fancyvrb" /><a 
+ id="x18-318040r6"></a><span 
+class="ptmr7t-x-x-50">6</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;+++</span><span 
+class="pcrr7tn-">&#x00A0;a/myfile        2008-04-27</span><span 
+class="pcrr7tn-">&#x00A0;00:04:16.000000000</span><span 
+class="pcrr7tn-">&#x00A0;+0000</span>
+<br class="fancyvrb" /><a 
+ id="x18-318042r7"></a><span 
+class="ptmr7t-x-x-50">7</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;@@</span><span 
+class="pcrr7tn-">&#x00A0;-1</span><span 
+class="pcrr7tn-">&#x00A0;+1,2</span><span 
+class="pcrr7tn-">&#x00A0;@@</span>
+<br class="fancyvrb" /><a 
+ id="x18-318044r8"></a><span 
+class="ptmr7t-x-x-50">8</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;The</span><span 
+class="pcrr7tn-">&#x00A0;first</span><span 
+class="pcrr7tn-">&#x00A0;line.</span>
+<br class="fancyvrb" /><a 
+ id="x18-318046r9"></a><span 
+class="ptmr7t-x-x-50">9</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;+The</span><span 
+class="pcrr7tn-">&#x00A0;second</span><span 
+class="pcrr7tn-">&#x00A0;line.</span>
+   </div>
+<!--l. 225--><p class="noindent">The result won&#x2019;t be exactly the same as with the built-in <a 
+ id="dx18-318047"></a>&#x201C;<span 
+class="pcrr7tn-">hg diff</span>&#x201D; variations, because the output of <a 
+ id="dx18-318048"></a><span 
+class="pcrr7tn-">diff </span>varies from one system
+to another, even when passed the same options.
+</p><!--l. 229--><p class="indent">   As the &#x201C;<span 
+class="pcrr7tn-">making snapshot</span>&#x201D; lines of output above imply, the <a 
+ id="dx18-318049"></a><a 
+ id="dx18-318050"></a>&#x201C;<span 
+class="pcrr7tn-">hg extdiff</span>&#x201D; command works by creating two snapshots of
+your source tree. The first snapshot is of the source revision; the second, of the target revision or working directory. The <a 
+ id="dx18-318051"></a><a 
+ id="dx18-318052"></a>&#x201C;<span 
+class="pcrr7tn-">hg</span>
+<span 
+class="pcrr7tn-">extdiff</span>&#x201D; command generates these snapshots in a temporary directory, passes the name of each directory to an external diff
+viewer, then deletes the temporary directory. For efficiency, it only snapshots the directories and files that have changed
+between the two revisions.
+</p><!--l. 239--><p class="indent">   Snapshot directory names have the same base name as your repository. If your repository path is <span 
+class="pcrr7tn-">/quux/bar/foo</span>, then <span 
+class="pcrr7tn-">foo</span>
+will be the name of each snapshot directory. Each snapshot directory name has its changeset ID appended, if appropriate. If a
+snapshot is of revision <span 
+class="pcrr7tn-">a631aca1083f</span>, the directory will be named <span 
+class="pcrr7tn-">foo.a631aca1083f</span>. A snapshot of the working directory
+won&#x2019;t have a changeset ID appended, so it would just be <span 
+class="pcrr7tn-">foo </span>in this example. To see what this looks like in practice, look again
+at the <a 
+ id="dx18-318053"></a><a 
+ id="dx18-318054"></a>&#x201C;<span 
+class="pcrr7tn-">hg extdiff</span>&#x201D; example above. Notice that the diff has the snapshot directory names embedded in its
+header.
+</p><!--l. 250--><p class="indent">   The <a 
+ id="dx18-318055"></a><a 
+ id="dx18-318056"></a>&#x201C;<span 
+class="pcrr7tn-">hg extdiff</span>&#x201D; command accepts two important options. The <a 
+ id="dx18-318057"></a><a 
+ id="dx18-318058"></a><span 
+class="pcrr7tn-">-p </span>option lets you choose a program to view differences
+with, instead of <a 
+ id="dx18-318059"></a><span 
+class="pcrr7tn-">diff</span>. With the <a 
+ id="dx18-318060"></a><a 
+ id="dx18-318061"></a><span 
+class="pcrr7tn-">-o </span>option, you can change the options that <a 
+ id="dx18-318062"></a><a 
+ id="dx18-318063"></a>&#x201C;<span 
+class="pcrr7tn-">hg extdiff</span>&#x201D; passes to the program (by default,
+these options are &#x201C;<span 
+class="pcrr7tn-">-Npru</span>&#x201D;, which only make sense if you&#x2019;re running <a 
+ id="dx18-318064"></a><span 
+class="pcrr7tn-">diff</span>). In other respects, the <a 
+ id="dx18-318065"></a><a 
+ id="dx18-318066"></a>&#x201C;<span 
+class="pcrr7tn-">hg extdiff</span>&#x201D; command acts
+                                                                                         
+                                                                                         
+similarly to the built-in <a 
+ id="dx18-318067"></a>&#x201C;<span 
+class="pcrr7tn-">hg diff</span>&#x201D; command: you use the same option names, syntax, and arguments to specify the revisions
+you want, the files you want, and so on.
+</p><!--l. 262--><p class="indent">   As an example, here&#x2019;s how to run the normal system <a 
+ id="dx18-318068"></a><span 
+class="pcrr7tn-">diff </span>command, getting it to generate context diffs (using the <a 
+ id="dx18-318069"></a><span 
+class="pcrr7tn-">-c</span>
+option) instead of unified diffs, and five lines of context instead of the default three (passing <span 
+class="pcrr7tn-">5 </span>as the argument to the <a 
+ id="dx18-318070"></a><span 
+class="pcrr7tn-">-C</span>
+option).
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x18-318072r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;$</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrb7t-">hg</span><span 
+class="pcrb7t-">&#x00A0;extdiff</span><span 
+class="pcrb7t-">&#x00A0;-o</span><span 
+class="pcrb7t-">&#x00A0;-NprcC5</span>
+<br class="fancyvrb" /><a 
+ id="x18-318074r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;making</span><span 
+class="pcrr7tn-">&#x00A0;snapshot</span><span 
+class="pcrr7tn-">&#x00A0;of</span><span 
+class="pcrr7tn-">&#x00A0;1</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;from</span><span 
+class="pcrr7tn-">&#x00A0;rev</span><span 
+class="pcrr7tn-">&#x00A0;8e4e1048b925</span>
+<br class="fancyvrb" /><a 
+ id="x18-318076r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;making</span><span 
+class="pcrr7tn-">&#x00A0;snapshot</span><span 
+class="pcrr7tn-">&#x00A0;of</span><span 
+class="pcrr7tn-">&#x00A0;1</span><span 
+class="pcrr7tn-">&#x00A0;files</span><span 
+class="pcrr7tn-">&#x00A0;from</span><span 
+class="pcrr7tn-">&#x00A0;working</span><span 
+class="pcrr7tn-">&#x00A0;dir</span>
+<br class="fancyvrb" /><a 
+ id="x18-318078r4"></a><span 
+class="ptmr7t-x-x-50">4</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;diff</span><span 
+class="pcrr7tn-">&#x00A0;-NprcC5</span><span 
+class="pcrr7tn-">&#x00A0;a.8e4e1048b925/myfile</span><span 
+class="pcrr7tn-">&#x00A0;a/myfile</span>
+<br class="fancyvrb" /><a 
+ id="x18-318080r5"></a><span 
+class="ptmr7t-x-x-50">5</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;&#x22C6;&#x22C6;&#x22C6;</span><span 
+class="pcrr7tn-">&#x00A0;a.8e4e1048b925/myfile        Sun</span><span 
+class="pcrr7tn-">&#x00A0;Apr</span><span 
+class="pcrr7tn-">&#x00A0;27</span><span 
+class="pcrr7tn-">&#x00A0;00:04:16</span><span 
+class="pcrr7tn-">&#x00A0;2008</span>
+<br class="fancyvrb" /><a 
+ id="x18-318082r6"></a><span 
+class="ptmr7t-x-x-50">6</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;---</span><span 
+class="pcrr7tn-">&#x00A0;a/myfile        Sun</span><span 
+class="pcrr7tn-">&#x00A0;Apr</span><span 
+class="pcrr7tn-">&#x00A0;27</span><span 
+class="pcrr7tn-">&#x00A0;00:04:16</span><span 
+class="pcrr7tn-">&#x00A0;2008</span>
+<br class="fancyvrb" /><a 
+ id="x18-318084r7"></a><span 
+class="ptmr7t-x-x-50">7</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;&#x22C6;&#x22C6;&#x22C6;&#x22C6;&#x22C6;&#x22C6;&#x22C6;&#x22C6;&#x22C6;&#x22C6;&#x22C6;&#x22C6;&#x22C6;&#x22C6;&#x22C6;</span>
+<br class="fancyvrb" /><a 
+ id="x18-318086r8"></a><span 
+class="ptmr7t-x-x-50">8</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;&#x22C6;&#x22C6;&#x22C6;</span><span 
+class="pcrr7tn-">&#x00A0;1</span><span 
+class="pcrr7tn-">&#x00A0;&#x22C6;&#x22C6;&#x22C6;&#x22C6;</span>
+<br class="fancyvrb" /><a 
+ id="x18-318088r9"></a><span 
+class="ptmr7t-x-x-50">9</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;---</span><span 
+class="pcrr7tn-">&#x00A0;1,2</span><span 
+class="pcrr7tn-">&#x00A0;----</span>
+<br class="fancyvrb" /><a 
+ id="x18-318090r10"></a><span 
+class="ptmr7t-x-x-50">10</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;The</span><span 
+class="pcrr7tn-">&#x00A0;first</span><span 
+class="pcrr7tn-">&#x00A0;line.</span>
+<br class="fancyvrb" /><a 
+ id="x18-318092r11"></a><span 
+class="ptmr7t-x-x-50">11</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;+</span><span 
+class="pcrr7tn-">&#x00A0;The</span><span 
+class="pcrr7tn-">&#x00A0;second</span><span 
+class="pcrr7tn-">&#x00A0;line.</span>
+   </div>
+<!--l. 269--><p class="indent">   Launching a visual diff tool is just as easy. Here&#x2019;s how to launch the <a 
+ id="dx18-318093"></a><span 
+class="pcrr7tn-">kdiff3 </span>viewer.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x18-318095r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;hg</span><span 
+class="pcrr7tn-">&#x00A0;extdiff</span><span 
+class="pcrr7tn-">&#x00A0;-p</span><span 
+class="pcrr7tn-">&#x00A0;kdiff3</span><span 
+class="pcrr7tn-">&#x00A0;-o</span><span 
+class="pcrr7tn-">&#x00A0;''</span>
+   </div>
+<!--l. 275--><p class="indent">   If your diff viewing command can&#x2019;t deal with directories, you can easily work around this with a little scripting. For an
+example of such scripting in action with the <a 
+ id="dx18-318096"></a><span 
+class="pcrr7tn-">mq </span>extension and the <a 
+ id="dx18-318097"></a><span 
+class="pcrr7tn-">interdiff </span>command, see section&#x00A0;<a 
+href="hobbit-sysadmin-guidech13.html#x17-31500013.9.2">13.9.2<!--tex4ht:ref: mq-collab:tips:interdiff --></a>.
+</p><!--l. 281--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">14.2.1    </span> <a 
+ id="x18-31900014.2.1"></a>Defining command aliases</h4>
+<!--l. 283--><p class="noindent">It can be cumbersome to remember the options to both the <a 
+ id="dx18-319001"></a><a 
+ id="dx18-319002"></a>&#x201C;<span 
+class="pcrr7tn-">hg extdiff</span>&#x201D; command and the diff viewer you want to use, so
+the <a 
+ id="dx18-319003"></a><span 
+class="pcrr7tn-">extdiff </span>extension lets you define <span 
+class="ptmri7t-">new </span>commands that will invoke your diff viewer with exactly the right
+options.
+</p><!--l. 288--><p class="indent">   All you need to do is edit your <a 
+ id="dx18-319004"></a><a 
+ id="dx18-319005"></a><span 
+class="pcrr7tn-">hgrc</span>, and add a section named <a 
+ id="dx18-319006"></a><span 
+class="pcrr7tn-">[extdiff]</span>. Inside this section, you can define multiple
+commands. Here&#x2019;s how to add a <span 
+class="pcrr7tn-">kdiff3 </span>command. Once you&#x2019;ve defined this, you can type &#x201C;<span 
+class="pcrr7tn-">hg kdiff3</span>&#x201D; and the <a 
+ id="dx18-319007"></a><span 
+class="pcrr7tn-">extdiff</span>
+extension will run <a 
+ id="dx18-319008"></a><span 
+class="pcrr7tn-">kdiff3 </span>for you.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x18-319010r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;[extdiff]</span>
+<br class="fancyvrb" /><a 
+ id="x18-319012r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;cmd.kdiff3</span><span 
+class="pcrr7tn-">&#x00A0;=</span>
+   </div>
+<!--l. 297--><p class="noindent">If you leave the right hand side of the definition empty, as above, the <a 
+ id="dx18-319013"></a><span 
+class="pcrr7tn-">extdiff </span>extension uses the name of the command you
+defined as the name of the external program to run. But these names don&#x2019;t have to be the same. Here, we define a command
+named &#x201C;<span 
+class="pcrr7tn-">hg wibble</span>&#x201D;, which runs <a 
+ id="dx18-319014"></a><span 
+class="pcrr7tn-">kdiff3</span>.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+                                                                                         
+                                                                                         
+<a 
+ id="x18-319016r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;[extdiff]</span>
+<br class="fancyvrb" /><a 
+ id="x18-319018r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;cmd.wibble</span><span 
+class="pcrr7tn-">&#x00A0;=</span><span 
+class="pcrr7tn-">&#x00A0;kdiff3</span>
+   </div>
+<!--l. 307--><p class="indent">   You can also specify the default options that you want to invoke your diff viewing program with. The prefix to use is
+&#x201C;<span 
+class="pcrr7tn-">opts.</span>&#x201D;, followed by the name of the command to which the options apply. This example defines a &#x201C;<span 
+class="pcrr7tn-">hg vimdiff</span>&#x201D; command
+that runs the <a 
+ id="dx18-319019"></a><span 
+class="pcrr7tn-">vim </span>editor&#x2019;s <span 
+class="pcrr7tn-">DirDiff </span>extension.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x18-319021r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;[extdiff]</span>
+<br class="fancyvrb" /><a 
+ id="x18-319023r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;cmd.vimdiff</span><span 
+class="pcrr7tn-">&#x00A0;=</span><span 
+class="pcrr7tn-">&#x00A0;vim</span>
+<br class="fancyvrb" /><a 
+ id="x18-319025r3"></a><span 
+class="ptmr7t-x-x-50">3</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;opts.vimdiff</span><span 
+class="pcrr7tn-">&#x00A0;=</span><span 
+class="pcrr7tn-">&#x00A0;-f</span><span 
+class="pcrr7tn-">&#x00A0;'+next'</span><span 
+class="pcrr7tn-">&#x00A0;'+execute</span><span 
+class="pcrr7tn-">&#x00A0;"DirDiff"</span><span 
+class="pcrr7tn-">&#x00A0;argv(0)</span><span 
+class="pcrr7tn-">&#x00A0;argv(1)'</span>
+   </div>
+<!--l. 318--><p class="noindent">
+</p>
+   <h3 class="sectionHead"><span class="titlemark">14.3    </span> <a 
+ id="x18-32000014.3"></a>Cherrypicking changes with the <span 
+class="pcrr7tn-">transplant </span>extension</h3>
+<!--l. 321--><p class="noindent">Need to have a long chat with Brendan about this.
+</p><!--l. 323--><p class="noindent">
+</p>
+   <h3 class="sectionHead"><span class="titlemark">14.4    </span> <a 
+ id="x18-32100014.4"></a>Send changes via email with the <span 
+class="pcrr7tn-">patchbomb </span>extension</h3>
+<!--l. 326--><p class="noindent">Many projects have a culture of &#x201C;change review&#x201D;, in which people send their modifications to a mailing list for others to
+read and comment on before they commit the final version to a shared repository. Some projects have people
+who act as gatekeepers; they apply changes from other people to a repository to which those others don&#x2019;t have
+access.
+</p><!--l. 333--><p class="indent">   Mercurial makes it easy to send changes over email for review or application, via its <a 
+ id="dx18-321001"></a><span 
+class="pcrr7tn-">patchbomb </span>extension. The
+extension is so namd because changes are formatted as patches, and it&#x2019;s usual to send one changeset per email
+message. Sending a long series of changes by email is thus much like &#x201C;bombing&#x201D; the recipient&#x2019;s inbox, hence
+&#x201C;patchbomb&#x201D;.
+</p><!--l. 340--><p class="indent">   As usual, the basic configuration of the <a 
+ id="dx18-321002"></a><span 
+class="pcrr7tn-">patchbomb </span>extension takes just one or two lines in your <a 
+ id="dx18-321003"></a><a 
+ id="dx18-321004"></a><span 
+class="pcrr7tn-">hgrc</span>.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x18-321006r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;[extensions]</span>
+<br class="fancyvrb" /><a 
+ id="x18-321008r2"></a><span 
+class="ptmr7t-x-x-50">2</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;patchbomb</span><span 
+class="pcrr7tn-">&#x00A0;=</span>
+   </div>
+<!--l. 346--><p class="noindent">Once you&#x2019;ve enabled the extension, you will have a new command available, named <a 
+ id="dx18-321009"></a><a 
+ id="dx18-321010"></a>&#x201C;<span 
+class="pcrr7tn-">hg email</span>&#x201D;.
+</p><!--l. 349--><p class="indent">   The safest and best way to invoke the <a 
+ id="dx18-321011"></a><a 
+ id="dx18-321012"></a>&#x201C;<span 
+class="pcrr7tn-">hg email</span>&#x201D; command is to <span 
+class="ptmri7t-">always </span>run it first with the <a 
+ id="dx18-321013"></a><a 
+ id="dx18-321014"></a><span 
+class="pcrr7tn-">-n </span>option. This will show you
+what the command <span 
+class="ptmri7t-">would </span>send, without actually sending anything. Once you&#x2019;ve had a quick glance over the
+changes and verified that you are sending the right ones, you can rerun the same command, with the <a 
+ id="dx18-321015"></a><a 
+ id="dx18-321016"></a><span 
+class="pcrr7tn-">-n </span>option
+removed.
+</p><!--l. 357--><p class="indent">   The <a 
+ id="dx18-321017"></a><a 
+ id="dx18-321018"></a>&#x201C;<span 
+class="pcrr7tn-">hg email</span>&#x201D; command accepts the same kind of revision syntax as every other Mercurial command. For example, this
+command will send every revision between 7 and <span 
+class="pcrr7tn-">tip</span>, inclusive.
+</p>
+   <div class="fancyvrb" id="fancyvrb">
+<a 
+ id="x18-321020r1"></a><span 
+class="ptmr7t-x-x-50">1</span><span 
+class="pcrr7tn-">&#x00A0;</span><span 
+class="pcrr7tn-">&#x00A0;hg</span><span 
+class="pcrr7tn-">&#x00A0;email</span><span 
+class="pcrr7tn-">&#x00A0;-n</span><span 
+class="pcrr7tn-">&#x00A0;7:tip</span>
+   </div>
+                                                                                         
+                                                                                         
+<!--l. 364--><p class="noindent">You can also specify a <span 
+class="ptmri7t-">repository </span>to compare with. If you provide a repository but no revisions, the <a 
+ id="dx18-321021"></a><a 
+ id="dx18-321022"></a>&#x201C;<span 
+class="pcrr7tn-">hg email</span>&#x201D;
+command will send all revisions in the local repository that are not present in the remote repository. If you
+additionally specify revisions or a branch name (the latter using the <a 
+ id="dx18-321023"></a><a 
+ id="dx18-321024"></a><span 
+class="pcrr7tn-">-b </span>option), this will constrain the revisions
+sent.
+</p><!--l. 372--><p class="indent">   It&#x2019;s perfectly safe to run the <a 
+ id="dx18-321025"></a><a 
+ id="dx18-321026"></a>&#x201C;<span 
+class="pcrr7tn-">hg email</span>&#x201D; command without the names of the people you want to send to: if you do this, it
+will just prompt you for those values interactively. (If you&#x2019;re using a Linux or Unix-like system, you should have enhanced
+<span 
+class="pcrr7tn-">readline</span>-style editing capabilities when entering those headers, too, which is useful.)
+</p><!--l. 379--><p class="indent">   When you are sending just one revision, the <a 
+ id="dx18-321027"></a><a 
+ id="dx18-321028"></a>&#x201C;<span 
+class="pcrr7tn-">hg email</span>&#x201D; command will by default use the first line of the changeset
+description as the subject of the single email message it sends.
+</p><!--l. 383--><p class="indent">   If you send multiple revisions, the <a 
+ id="dx18-321029"></a><a 
+ id="dx18-321030"></a>&#x201C;<span 
+class="pcrr7tn-">hg email</span>&#x201D; command will usually send one message per changeset. It will preface the
+series with an introductory message, in which you should describe the purpose of the series of changes you&#x2019;re
+sending.
+</p><!--l. 388--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">14.4.1    </span> <a 
+ id="x18-32200014.4.1"></a>Changing the behaviour of patchbombs</h4>
+<!--l. 390--><p class="noindent">Not every project has exactly the same conventions for sending changes in email; the <a 
+ id="dx18-322001"></a><span 
+class="pcrr7tn-">patchbomb </span>extension tries to
+accommodate a number of variations through command line options. </p>
+     <ul><li><span class="dt">
+     </span><span class="dd">You can write a subject for the introductory message on the command line using the <a 
+ id="dx18-322002"></a><a 
+ id="dx18-322003"></a><span 
+class="pcrr7tn-">-s </span>option. This takes one
+     argument, the text of the subject to use.
+     </span><li><span class="dt">
+     </span><span class="dd">To change the email address from which the messages originate, use the <a 
+ id="dx18-322004"></a><a 
+ id="dx18-322005"></a><span 
+class="pcrr7tn-">-f </span>option. This takes one argument, the
+     email address to use.
+     </span><li><span class="dt">
+     </span><span class="dd">The default behaviour is to send unified diffs (see section&#x00A0;<a 
+href="hobbit-sysadmin-guidech12.html#x16-27300012.4">12.4<!--tex4ht:ref: sec:mq:patch --></a> for a description of the format), one per message.
+     You can send a binary bundle instead with the <a 
+ id="dx18-322006"></a><a 
+ id="dx18-322007"></a><span 
+class="pcrr7tn-">-b </span>option.
+     </span><li><span class="dt">
+     </span><span class="dd">Unified diffs are normally prefaced with a metadata header. You can omit this, and send unadorned diffs, with
+     the <a 
+ id="dx18-322008"></a><a 
+ id="dx18-322009"></a><span 
+class="pcrr7tn-">--plain </span>option.
+     </span><li><span class="dt">
+     </span><span class="dd">Diffs are normally sent &#x201C;inline&#x201D;, in the same body part as the description of a patch. This makes it easiest for the
+     largest number of readers to quote and respond to parts of a diff, as some mail clients will only quote the first
+     MIME body part in a message. If you&#x2019;d prefer to send the description and the diff in separate body parts, use the
+     <a 
+ id="dx18-322010"></a><a 
+ id="dx18-322011"></a><span 
+class="pcrr7tn-">-a </span>option.
+     </span><li><span class="dt">
+     </span><span class="dd">Instead of sending mail messages, you can write them to an <span 
+class="pcrr7tn-">mbox</span>-format mail folder using the <a 
+ id="dx18-322012"></a><a 
+ id="dx18-322013"></a><span 
+class="pcrr7tn-">-m </span>option. That
+     option takes one argument, the name of the file to write to.
+     </span><li><span class="dt">
+     </span><span class="dd">If you would like to add a <a 
+ id="dx18-322014"></a><span 
+class="pcrr7tn-">diffstat</span>-format summary to each patch, and one to the introductory message, use
+     the <a 
+ id="dx18-322015"></a><a 
+ id="dx18-322016"></a><span 
+class="pcrr7tn-">-d </span>option. The <a 
+ id="dx18-322017"></a><span 
+class="pcrr7tn-">diffstat </span>command displays a table containing the name of each file patched, the number of
+     lines affected, and a histogram showing how much each file is modified. This gives readers a qualitative glance
+     at how complex a patch is.</li></ul>
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+   <!--l. 58--><div class="crosslinks"><p class="noindent">[<a 
+href="hobbit-sysadmin-guideap1.html" >next</a>] [<a 
+href="hobbit-sysadmin-guidech13.html" >prev</a>] [<a 
+href="hobbit-sysadmin-guidech13.html#tailhobbit-sysadmin-guidech13.html" >prev-tail</a>] [<a 
+href="hobbit-sysadmin-guidech14.html" >front</a>] [<a 
+href="hobbit-sysadmin-guide.html#hobbit-sysadmin-guidech14.html" >up</a>] </p></div>
+<!--l. 58--><p class="indent">   <a 
+ id="tailhobbit-sysadmin-guidech14.html"></a>   </p> 
+</body></html> 

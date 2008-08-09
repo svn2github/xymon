@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>B Mercurial Queues reference</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- html4-uni,2,html,xhtml --> 
+<meta name="src" content="hobbit-sysadmin-guide.tex" /> 
+<meta name="date" content="2008-04-26 19:37:00" /> 
+<link rel="stylesheet" type="text/css" href="hobbit-sysadmin-guide.css" /> 
+</head><body 
+>
+   <!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="hobbit-sysadmin-guideap3.html" >next</a>] [<a 
+href="hobbit-sysadmin-guideap1.html" >prev</a>] [<a 
+href="hobbit-sysadmin-guideap1.html#tailhobbit-sysadmin-guideap1.html" >prev-tail</a>] [<a 
+href="#tailhobbit-sysadmin-guideap2.html">tail</a>] [<a 
+href="hobbit-sysadmin-guide.html#hobbit-sysadmin-guideap2.html" >up</a>] </p></div>
+   <h2 class="appendixHead"><span class="titlemark">Appendix&#x00A0;B</span><br /><a 
+ id="x20-344000B"></a>Mercurial Queues reference</h2>
+   <h3 class="sectionHead"><span class="titlemark">B.1    </span> <a 
+ id="x20-345000B.1"></a>MQ command reference</h3>
+<!--l. 7--><p class="noindent">For an overview of the commands provided by MQ, use the command <a 
+ id="dx20-345001"></a>&#x201C;<span 
+class="pcrr7tn-">hg help mq</span>&#x201D;.
+</p><!--l. 10--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">B.1.1    </span> <a 
+ id="x20-346000B.1.1"></a>&#x201C;<span 
+class="pcrr7tn-">hg qapplied</span>&#x201D;&#x2014;print applied patches</h4>
+<!--l. 12--><p class="noindent">The <a 
+ id="dx20-346001"></a><a 
+ id="dx20-346002"></a>&#x201C;<span 
+class="pcrr7tn-">hg qapplied</span>&#x201D; command prints the current stack of applied patches. Patches are printed in oldest-to-newest order, so the
+last patch in the list is the &#x201C;top&#x201D; patch.
+</p><!--l. 16--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">B.1.2    </span> <a 
+ id="x20-347000B.1.2"></a>&#x201C;<span 
+class="pcrr7tn-">hg qcommit</span>&#x201D;&#x2014;commit changes in the queue repository</h4>
+<!--l. 18--><p class="noindent">The <a 
+ id="dx20-347001"></a><a 
+ id="dx20-347002"></a>&#x201C;<span 
+class="pcrr7tn-">hg qcommit</span>&#x201D; command commits any outstanding changes in the <a 
+ id="dx20-347003"></a><span 
+class="pcrr7tn-">.hg/patches </span>repository. This command only works if
+the <a 
+ id="dx20-347004"></a><span 
+class="pcrr7tn-">.hg/patches </span>directory is a repository, i.e.&#x00A0;you created the directory using <a 
+ id="dx20-347005"></a>&#x201C;<span 
+class="pcrr7tn-">hg qinit</span> <a 
+ id="dx20-347006"></a><a 
+ id="dx20-347007"></a><span 
+class="pcrr7tn-">-c</span>&#x201D; or ran <a 
+ id="dx20-347008"></a>&#x201C;<span 
+class="pcrr7tn-">hg init</span>&#x201D; in the
+directory after running <a 
+ id="dx20-347009"></a><a 
+ id="dx20-347010"></a>&#x201C;<span 
+class="pcrr7tn-">hg qinit</span>&#x201D;.
+</p><!--l. 24--><p class="indent">   This command is shorthand for <a 
+ id="dx20-347011"></a>&#x201C;<span 
+class="pcrr7tn-">hg commit --cwd .hg/patches</span>&#x201D;.
+</p><!--l. 27--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">B.1.3    </span> <a 
+ id="x20-348000B.1.3"></a>&#x201C;<span 
+class="pcrr7tn-">hg qdelete</span>&#x201D;&#x2014;delete a patch from the <span 
+class="pcrr7tn-">series </span>file</h4>
+<!--l. 29--><p class="noindent">The <a 
+ id="dx20-348001"></a><a 
+ id="dx20-348002"></a>&#x201C;<span 
+class="pcrr7tn-">hg qdelete</span>&#x201D; command removes the entry for a patch from the <a 
+ id="dx20-348003"></a><span 
+class="pcrr7tn-">series </span>file in the <a 
+ id="dx20-348004"></a><span 
+class="pcrr7tn-">.hg/patches </span>directory. It does not pop
+the patch if the patch is already applied. By default, it does not delete the patch file; use the <a 
+ id="dx20-348005"></a><a 
+ id="dx20-348006"></a><span 
+class="pcrr7tn-">-f </span>option to do
+that.
+</p><!--l. 35--><p class="indent">   Options: </p>
+     <ul><li><span class="dt">
+  <a 
+ id="dx20-348007"></a><a 
+ id="dx20-348008"></a><span 
+class="pcrr7tn-">-f</span> </span><span class="dd">Delete the patch file.</li></ul>
+<!--l. 40--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">B.1.4    </span> <a 
+ id="x20-349000B.1.4"></a>&#x201C;<span 
+class="pcrr7tn-">hg qdiff</span>&#x201D;&#x2014;print a diff of the topmost applied patch</h4>
+<!--l. 42--><p class="noindent">The <a 
+ id="dx20-349001"></a><a 
+ id="dx20-349002"></a>&#x201C;<span 
+class="pcrr7tn-">hg qdiff</span>&#x201D; command prints a diff of the topmost applied patch. It is equivalent to <a 
+ id="dx20-349003"></a>&#x201C;<span 
+class="pcrr7tn-">hg diff -r-2:-1</span>&#x201D;.
+</p><!--l. 45--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">B.1.5    </span> <a 
+ id="x20-350000B.1.5"></a>&#x201C;<span 
+class="pcrr7tn-">hg qfold</span>&#x201D;&#x2014;merge (&#x201C;fold&#x201D;) several patches into one</h4>
+<!--l. 47--><p class="noindent">The <a 
+ id="dx20-350001"></a><a 
+ id="dx20-350002"></a>&#x201C;<span 
+class="pcrr7tn-">hg qfold</span>&#x201D; command merges multiple patches into the topmost applied patch, so that the topmost applied patch makes
+the union of all of the changes in the patches in question.
+                                                                                         
+                                                                                         
+</p><!--l. 51--><p class="indent">   The patches to fold must not be applied; <a 
+ id="dx20-350003"></a><a 
+ id="dx20-350004"></a>&#x201C;<span 
+class="pcrr7tn-">hg qfold</span>&#x201D; will exit with an error if any is. The order in which patches are
+folded is significant; <a 
+ id="dx20-350005"></a>&#x201C;<span 
+class="pcrr7tn-">hg qfold a b</span>&#x201D; means &#x201C;apply the current topmost patch, followed by <span 
+class="pcrr7tn-">a</span>, followed by
+<span 
+class="pcrr7tn-">b</span>&#x201D;.
+</p><!--l. 56--><p class="indent">   The comments from the folded patches are appended to the comments of the destination patch, with each block of
+comments separated by three asterisk (&#x201C;<span 
+class="pcrr7tn-">&#x22C6;</span>&#x201D;) characters. Use the <a 
+ id="dx20-350006"></a><a 
+ id="dx20-350007"></a><span 
+class="pcrr7tn-">-e </span>option to edit the commit message for the combined
+patch/changeset after the folding has completed.
+</p><!--l. 62--><p class="indent">   Options: </p>
+     <ul><li><span class="dt">
+  <a 
+ id="dx20-350008"></a><a 
+ id="dx20-350009"></a><span 
+class="pcrr7tn-">-e</span> </span><span class="dd">Edit the commit message and patch description for the newly folded patch.
+     </span><li><span class="dt">
+  <a 
+ id="dx20-350010"></a><a 
+ id="dx20-350011"></a><span 
+class="pcrr7tn-">-l</span> </span><span class="dd">Use the contents of the given file as the new commit message and patch description for the folded patch.
+     </span><li><span class="dt">
+  <a 
+ id="dx20-350012"></a><a 
+ id="dx20-350013"></a><span 
+class="pcrr7tn-">-m</span> </span><span class="dd">Use the given text as the new commit message and patch description for the folded patch.</li></ul>
+<!--l. 72--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">B.1.6    </span> <a 
+ id="x20-351000B.1.6"></a>&#x201C;<span 
+class="pcrr7tn-">hg qheader</span>&#x201D;&#x2014;display the header/description of a patch</h4>
+<!--l. 74--><p class="noindent">The <a 
+ id="dx20-351001"></a><a 
+ id="dx20-351002"></a>&#x201C;<span 
+class="pcrr7tn-">hg qheader</span>&#x201D; command prints the header, or description, of a patch. By default, it prints the header of the topmost applied
+patch. Given an argument, it prints the header of the named patch.
+</p><!--l. 78--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">B.1.7    </span> <a 
+ id="x20-352000B.1.7"></a>&#x201C;<span 
+class="pcrr7tn-">hg qimport</span>&#x201D;&#x2014;import a third-party patch into the queue</h4>
+<!--l. 80--><p class="noindent">The <a 
+ id="dx20-352001"></a><a 
+ id="dx20-352002"></a>&#x201C;<span 
+class="pcrr7tn-">hg qimport</span>&#x201D; command adds an entry for an external patch to the <a 
+ id="dx20-352003"></a><span 
+class="pcrr7tn-">series </span>file, and copies the patch into the
+<a 
+ id="dx20-352004"></a><span 
+class="pcrr7tn-">.hg/patches </span>directory. It adds the entry immediately after the topmost applied patch, but does not push the
+patch.
+</p><!--l. 85--><p class="indent">   If the <a 
+ id="dx20-352005"></a><span 
+class="pcrr7tn-">.hg/patches </span>directory is a repository, <a 
+ id="dx20-352006"></a><a 
+ id="dx20-352007"></a>&#x201C;<span 
+class="pcrr7tn-">hg qimport</span>&#x201D; automatically does an <a 
+ id="dx20-352008"></a>&#x201C;<span 
+class="pcrr7tn-">hg add</span>&#x201D; of the imported
+patch.
+</p><!--l. 89--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">B.1.8    </span> <a 
+ id="x20-353000B.1.8"></a>&#x201C;<span 
+class="pcrr7tn-">hg qinit</span>&#x201D;&#x2014;prepare a repository to work with MQ</h4>
+<!--l. 91--><p class="noindent">The <a 
+ id="dx20-353001"></a><a 
+ id="dx20-353002"></a>&#x201C;<span 
+class="pcrr7tn-">hg qinit</span>&#x201D; command prepares a repository to work with MQ. It creates a directory called <a 
+ id="dx20-353003"></a><span 
+class="pcrr7tn-">.hg/patches</span>.
+</p><!--l. 94--><p class="indent">   Options: </p>
+     <ul><li><span class="dt">
+  <a 
+ id="dx20-353004"></a><a 
+ id="dx20-353005"></a><span 
+class="pcrr7tn-">-c</span> </span><span class="dd">Create <a 
+ id="dx20-353006"></a><span 
+class="pcrr7tn-">.hg/patches </span>as a repository in its own right. Also creates a <a 
+ id="dx20-353007"></a><span 
+class="pcrr7tn-">.hgignore </span>file that will ignore the <a 
+ id="dx20-353008"></a><span 
+class="pcrr7tn-">status</span>
+     file.</li></ul>
+<!--l. 101--><p class="indent">   When the <a 
+ id="dx20-353009"></a><span 
+class="pcrr7tn-">.hg/patches </span>directory is a repository, the <a 
+ id="dx20-353010"></a><a 
+ id="dx20-353011"></a>&#x201C;<span 
+class="pcrr7tn-">hg qimport</span>&#x201D; and <a 
+ id="dx20-353012"></a><a 
+ id="dx20-353013"></a>&#x201C;<span 
+class="pcrr7tn-">hg qnew</span>&#x201D; commands automatically <a 
+ id="dx20-353014"></a>&#x201C;<span 
+class="pcrr7tn-">hg add</span>&#x201D;
+new patches.
+                                                                                         
+                                                                                         
+</p><!--l. 105--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">B.1.9    </span> <a 
+ id="x20-354000B.1.9"></a>&#x201C;<span 
+class="pcrr7tn-">hg qnew</span>&#x201D;&#x2014;create a new patch</h4>
+<!--l. 107--><p class="noindent">The <a 
+ id="dx20-354001"></a><a 
+ id="dx20-354002"></a>&#x201C;<span 
+class="pcrr7tn-">hg qnew</span>&#x201D; command creates a new patch. It takes one mandatory argument, the name to use for the patch file. The newly
+created patch is created empty by default. It is added to the <a 
+ id="dx20-354003"></a><span 
+class="pcrr7tn-">series </span>file after the current topmost applied patch, and is
+immediately pushed on top of that patch.
+</p><!--l. 113--><p class="indent">   If <a 
+ id="dx20-354004"></a><a 
+ id="dx20-354005"></a>&#x201C;<span 
+class="pcrr7tn-">hg qnew</span>&#x201D; finds modified files in the working directory, it will refuse to create a new patch unless the <a 
+ id="dx20-354006"></a><a 
+ id="dx20-354007"></a><span 
+class="pcrr7tn-">-f </span>option is used
+(see below). This behaviour allows you to <a 
+ id="dx20-354008"></a><a 
+ id="dx20-354009"></a>&#x201C;<span 
+class="pcrr7tn-">hg qrefresh</span>&#x201D; your topmost applied patch before you apply a new patch on top of
+it.
+</p><!--l. 118--><p class="indent">   Options: </p>
+     <ul><li><span class="dt">
+  <a 
+ id="dx20-354010"></a><a 
+ id="dx20-354011"></a><span 
+class="pcrr7tn-">-f</span> </span><span class="dd">Create a new patch if the contents of the working directory are modified. Any outstanding modifications are
+     added to the newly created patch, so after this command completes, the working directory will no longer be
+     modified.
+     </span><li><span class="dt">
+  <a 
+ id="dx20-354012"></a><a 
+ id="dx20-354013"></a><span 
+class="pcrr7tn-">-m</span> </span><span class="dd">Use the given text as the commit message. This text will be stored at the beginning of the patch file, before the
+     patch data.</li></ul>
+<!--l. 129--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">B.1.10    </span> <a 
+ id="x20-355000B.1.10"></a>&#x201C;<span 
+class="pcrr7tn-">hg qnext</span>&#x201D;&#x2014;print the name of the next patch</h4>
+<!--l. 131--><p class="noindent">The <a 
+ id="dx20-355001"></a><a 
+ id="dx20-355002"></a>&#x201C;<span 
+class="pcrr7tn-">hg qnext</span>&#x201D; command prints the name name of the next patch in the <a 
+ id="dx20-355003"></a><span 
+class="pcrr7tn-">series </span>file after the topmost applied patch. This
+patch will become the topmost applied patch if you run <a 
+ id="dx20-355004"></a><a 
+ id="dx20-355005"></a>&#x201C;<span 
+class="pcrr7tn-">hg qpush</span>&#x201D;.
+</p><!--l. 135--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">B.1.11    </span> <a 
+ id="x20-356000B.1.11"></a>&#x201C;<span 
+class="pcrr7tn-">hg qpop</span>&#x201D;&#x2014;pop patches off the stack</h4>
+<!--l. 137--><p class="noindent">The <a 
+ id="dx20-356001"></a><a 
+ id="dx20-356002"></a>&#x201C;<span 
+class="pcrr7tn-">hg qpop</span>&#x201D; command removes applied patches from the top of the stack of applied patches. By default, it removes only one
+patch.
+</p><!--l. 140--><p class="indent">   This command removes the changesets that represent the popped patches from the repository, and updates the working
+directory to undo the effects of the patches.
+</p><!--l. 144--><p class="indent">   This command takes an optional argument, which it uses as the name or index of the patch to pop to. If given a name, it
+will pop patches until the named patch is the topmost applied patch. If given a number, <a 
+ id="dx20-356003"></a><a 
+ id="dx20-356004"></a>&#x201C;<span 
+class="pcrr7tn-">hg qpop</span>&#x201D; treats the
+number as an index into the entries in the series file, counting from zero (empty lines and lines containing only
+comments do not count). It pops patches until the patch identified by the given index is the topmost applied
+patch.
+</p><!--l. 152--><p class="indent">   The <a 
+ id="dx20-356005"></a><a 
+ id="dx20-356006"></a>&#x201C;<span 
+class="pcrr7tn-">hg qpop</span>&#x201D; command does not read or write patches or the <a 
+ id="dx20-356007"></a><span 
+class="pcrr7tn-">series </span>file. It is thus safe to <a 
+ id="dx20-356008"></a><a 
+ id="dx20-356009"></a>&#x201C;<span 
+class="pcrr7tn-">hg qpop</span>&#x201D; a patch that you
+have removed from the <a 
+ id="dx20-356010"></a><span 
+class="pcrr7tn-">series </span>file, or a patch that you have renamed or deleted entirely. In the latter two cases, use the name
+of the patch as it was when you applied it.
+</p><!--l. 158--><p class="indent">   By default, the <a 
+ id="dx20-356011"></a><a 
+ id="dx20-356012"></a>&#x201C;<span 
+class="pcrr7tn-">hg qpop</span>&#x201D; command will not pop any patches if the working directory has been modified. You can override
+this behaviour using the <a 
+ id="dx20-356013"></a><a 
+ id="dx20-356014"></a><span 
+class="pcrr7tn-">-f </span>option, which reverts all modifications in the working directory.
+</p><!--l. 163--><p class="indent">   Options: </p>
+     <ul><li><span class="dt">
+  <a 
+ id="dx20-356015"></a><a 
+ id="dx20-356016"></a><span 
+class="pcrr7tn-">-a</span> </span><span class="dd">Pop all applied patches. This returns the repository to its state before you applied any patches.
+     </span><li><span class="dt">
+  <a 
+ id="dx20-356017"></a><a 
+ id="dx20-356018"></a><span 
+class="pcrr7tn-">-f</span> </span><span class="dd">Forcibly revert any modifications to the working directory when popping.
+                                                                                         
+                                                                                         
+     </span><li><span class="dt">
+  <a 
+ id="dx20-356019"></a><a 
+ id="dx20-356020"></a><span 
+class="pcrr7tn-">-n</span> </span><span class="dd">Pop a patch from the named queue.</li></ul>
+<!--l. 172--><p class="indent">   The <a 
+ id="dx20-356021"></a><a 
+ id="dx20-356022"></a>&#x201C;<span 
+class="pcrr7tn-">hg qpop</span>&#x201D; command removes one line from the end of the <a 
+ id="dx20-356023"></a><span 
+class="pcrr7tn-">status </span>file for each patch that it pops.
+</p><!--l. 175--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">B.1.12    </span> <a 
+ id="x20-357000B.1.12"></a>&#x201C;<span 
+class="pcrr7tn-">hg qprev</span>&#x201D;&#x2014;print the name of the previous patch</h4>
+<!--l. 177--><p class="noindent">The <a 
+ id="dx20-357001"></a><a 
+ id="dx20-357002"></a>&#x201C;<span 
+class="pcrr7tn-">hg qprev</span>&#x201D; command prints the name of the patch in the <a 
+ id="dx20-357003"></a><span 
+class="pcrr7tn-">series </span>file that comes before the topmost applied patch. This
+will become the topmost applied patch if you run <a 
+ id="dx20-357004"></a><a 
+ id="dx20-357005"></a>&#x201C;<span 
+class="pcrr7tn-">hg qpop</span>&#x201D;.
+</p><!--l. 181--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">B.1.13    </span> <a 
+ id="x20-358000B.1.13"></a>&#x201C;<span 
+class="pcrr7tn-">hg qpush</span>&#x201D;&#x2014;push patches onto the stack</h4>
+<!--l. 184--><p class="noindent">The <a 
+ id="dx20-358001"></a><a 
+ id="dx20-358002"></a>&#x201C;<span 
+class="pcrr7tn-">hg qpush</span>&#x201D; command adds patches onto the applied stack. By default, it adds only one patch.
+</p><!--l. 187--><p class="indent">   This command creates a new changeset to represent each applied patch, and updates the working directory to apply the
+effects of the patches.
+</p><!--l. 190--><p class="indent">   The default data used when creating a changeset are as follows: </p>
+     <ul><li><span class="dt">
+     </span><span class="dd">The commit date and time zone are the current date and time zone. Because these data are used to compute the
+     identity of a changeset, this means that if you <a 
+ id="dx20-358003"></a><a 
+ id="dx20-358004"></a>&#x201C;<span 
+class="pcrr7tn-">hg qpop</span>&#x201D; a patch and <a 
+ id="dx20-358005"></a><a 
+ id="dx20-358006"></a>&#x201C;<span 
+class="pcrr7tn-">hg qpush</span>&#x201D; it again, the changeset that
+     you push will have a different identity than the changeset you popped.
+     </span><li><span class="dt">
+     </span><span class="dd">The author is the same as the default used by the <a 
+ id="dx20-358007"></a>&#x201C;<span 
+class="pcrr7tn-">hg commit</span>&#x201D; command.
+     </span><li><span class="dt">
+     </span><span class="dd">The commit message is any text from the patch file that comes before the first diff header. If there is no such
+     text, a default commit message is used that identifies the name of the patch.</li></ul>
+<!--l. 203--><p class="noindent">If a patch contains a Mercurial patch header (XXX add link), the information in the patch header overrides these
+defaults.
+</p><!--l. 206--><p class="indent">   Options: </p>
+     <ul><li><span class="dt">
+  <a 
+ id="dx20-358008"></a><a 
+ id="dx20-358009"></a><span 
+class="pcrr7tn-">-a</span> </span><span class="dd">Push all unapplied patches from the <a 
+ id="dx20-358010"></a><span 
+class="pcrr7tn-">series </span>file until there are none left to push.
+     </span><li><span class="dt">
+  <a 
+ id="dx20-358011"></a><a 
+ id="dx20-358012"></a><span 
+class="pcrr7tn-">-l</span> </span><span class="dd">Add the name of the patch to the end of the commit message.
+     </span><li><span class="dt">
+  <a 
+ id="dx20-358013"></a><a 
+ id="dx20-358014"></a><span 
+class="pcrr7tn-">-m</span> </span><span class="dd">If a patch fails to apply cleanly, use the entry for the patch in another saved queue to compute the parameters
+     for a three-way merge, and perform a three-way merge using the normal Mercurial merge machinery. Use the
+     resolution of the merge as the new patch content.
+     </span><li><span class="dt">
+  <a 
+ id="dx20-358015"></a><a 
+ id="dx20-358016"></a><span 
+class="pcrr7tn-">-n</span> </span><span class="dd">Use the named queue if merging while pushing.</li></ul>
+<!--l. 220--><p class="indent">   The <a 
+ id="dx20-358017"></a><a 
+ id="dx20-358018"></a>&#x201C;<span 
+class="pcrr7tn-">hg qpush</span>&#x201D; command reads, but does not modify, the <a 
+ id="dx20-358019"></a><span 
+class="pcrr7tn-">series </span>file. It appends one line to the <a 
+ id="dx20-358020"></a>&#x201C;<span 
+class="pcrr7tn-">hg status</span>&#x201D; file for each
+patch that it pushes.
+                                                                                         
+                                                                                         
+</p><!--l. 224--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">B.1.14    </span> <a 
+ id="x20-359000B.1.14"></a>&#x201C;<span 
+class="pcrr7tn-">hg qrefresh</span>&#x201D;&#x2014;update the topmost applied patch</h4>
+<!--l. 226--><p class="noindent">The <a 
+ id="dx20-359001"></a><a 
+ id="dx20-359002"></a>&#x201C;<span 
+class="pcrr7tn-">hg qrefresh</span>&#x201D; command updates the topmost applied patch. It modifies the patch, removes the old changeset that
+represented the patch, and creates a new changeset to represent the modified patch.
+</p><!--l. 230--><p class="indent">   The <a 
+ id="dx20-359003"></a><a 
+ id="dx20-359004"></a>&#x201C;<span 
+class="pcrr7tn-">hg qrefresh</span>&#x201D; command looks for the following modifications: </p>
+     <ul><li><span class="dt">
+     </span><span class="dd">Changes to the commit message, i.e.&#x00A0;the text before the first diff header in the patch file, are reflected in the new
+     changeset that represents the patch.
+     </span><li><span class="dt">
+     </span><span class="dd">Modifications to tracked files in the working directory are added to the patch.
+     </span><li><span class="dt">
+     </span><span class="dd">Changes to the files tracked using <a 
+ id="dx20-359005"></a>&#x201C;<span 
+class="pcrr7tn-">hg add</span>&#x201D;, <a 
+ id="dx20-359006"></a>&#x201C;<span 
+class="pcrr7tn-">hg copy</span>&#x201D;, <a 
+ id="dx20-359007"></a>&#x201C;<span 
+class="pcrr7tn-">hg remove</span>&#x201D;, or <a 
+ id="dx20-359008"></a>&#x201C;<span 
+class="pcrr7tn-">hg rename</span>&#x201D;. Added files and copy
+     and rename destinations are added to the patch, while removed files and rename sources are removed.</li></ul>
+<!--l. 243--><p class="indent">   Even if <a 
+ id="dx20-359009"></a><a 
+ id="dx20-359010"></a>&#x201C;<span 
+class="pcrr7tn-">hg qrefresh</span>&#x201D; detects no changes, it still recreates the changeset that represents the patch. This causes the identity
+of the changeset to differ from the previous changeset that identified the patch.
+</p><!--l. 248--><p class="indent">   Options: </p>
+     <ul><li><span class="dt">
+  <a 
+ id="dx20-359011"></a><a 
+ id="dx20-359012"></a><span 
+class="pcrr7tn-">-e</span> </span><span class="dd">Modify the commit and patch description, using the preferred text editor.
+     </span><li><span class="dt">
+  <a 
+ id="dx20-359013"></a><a 
+ id="dx20-359014"></a><span 
+class="pcrr7tn-">-m</span> </span><span class="dd">Modify the commit message and patch description, using the given text.
+     </span><li><span class="dt">
+  <a 
+ id="dx20-359015"></a><a 
+ id="dx20-359016"></a><span 
+class="pcrr7tn-">-l</span> </span><span class="dd">Modify the commit message and patch description, using text from the given file.</li></ul>
+<!--l. 258--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">B.1.15    </span> <a 
+ id="x20-360000B.1.15"></a>&#x201C;<span 
+class="pcrr7tn-">hg qrename</span>&#x201D;&#x2014;rename a patch</h4>
+<!--l. 260--><p class="noindent">The <a 
+ id="dx20-360001"></a><a 
+ id="dx20-360002"></a>&#x201C;<span 
+class="pcrr7tn-">hg qrename</span>&#x201D; command renames a patch, and changes the entry for the patch in the <a 
+ id="dx20-360003"></a><span 
+class="pcrr7tn-">series </span>file.
+</p><!--l. 263--><p class="indent">   With a single argument, <a 
+ id="dx20-360004"></a><a 
+ id="dx20-360005"></a>&#x201C;<span 
+class="pcrr7tn-">hg qrename</span>&#x201D; renames the topmost applied patch. With two arguments, it renames its first
+argument to its second.
+</p><!--l. 267--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">B.1.16    </span> <a 
+ id="x20-361000B.1.16"></a>&#x201C;<span 
+class="pcrr7tn-">hg qrestore</span>&#x201D;&#x2014;restore saved queue state</h4>
+<!--l. 269--><p class="noindent">XXX No idea what this does.
+</p><!--l. 271--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">B.1.17    </span> <a 
+ id="x20-362000B.1.17"></a>&#x201C;<span 
+class="pcrr7tn-">hg qsave</span>&#x201D;&#x2014;save current queue state</h4>
+<!--l. 273--><p class="noindent">XXX Likewise.
+                                                                                         
+                                                                                         
+</p><!--l. 275--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">B.1.18    </span> <a 
+ id="x20-363000B.1.18"></a>&#x201C;<span 
+class="pcrr7tn-">hg qseries</span>&#x201D;&#x2014;print the entire patch series</h4>
+<!--l. 277--><p class="noindent">The <a 
+ id="dx20-363001"></a><a 
+ id="dx20-363002"></a>&#x201C;<span 
+class="pcrr7tn-">hg qseries</span>&#x201D; command prints the entire patch series from the <a 
+ id="dx20-363003"></a><span 
+class="pcrr7tn-">series </span>file. It prints only patch names, not empty lines or
+comments. It prints in order from first to be applied to last.
+</p><!--l. 281--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">B.1.19    </span> <a 
+ id="x20-364000B.1.19"></a>&#x201C;<span 
+class="pcrr7tn-">hg qtop</span>&#x201D;&#x2014;print the name of the current patch</h4>
+<!--l. 283--><p class="noindent">The <a 
+ id="dx20-364001"></a><a 
+ id="dx20-364002"></a>&#x201C;<span 
+class="pcrr7tn-">hg qtop</span>&#x201D; prints the name of the topmost currently applied patch.
+</p><!--l. 286--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">B.1.20    </span> <a 
+ id="x20-365000B.1.20"></a>&#x201C;<span 
+class="pcrr7tn-">hg qunapplied</span>&#x201D;&#x2014;print patches not yet applied</h4>
+<!--l. 288--><p class="noindent">The <a 
+ id="dx20-365001"></a><a 
+ id="dx20-365002"></a>&#x201C;<span 
+class="pcrr7tn-">hg qunapplied</span>&#x201D; command prints the names of patches from the <a 
+ id="dx20-365003"></a><span 
+class="pcrr7tn-">series </span>file that are not yet applied. It prints them in
+order from the next patch that will be pushed to the last.
+</p><!--l. 292--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">B.1.21    </span> <a 
+ id="x20-366000B.1.21"></a>&#x201C;<span 
+class="pcrr7tn-">hg qversion</span>&#x201D;</h4>
+<!--l. 294--><p class="noindent">The <a 
+ id="dx20-366001"></a><a 
+ id="dx20-366002"></a>&#x201C;<span 
+class="pcrr7tn-">hg qversion</span>&#x201D; command prints the version of MQ that is in use.
+</p><!--l. 296--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">B.1.22    </span> <a 
+ id="x20-367000B.1.22"></a>&#x201C;<span 
+class="pcrr7tn-">hg strip</span>&#x201D;&#x2014;remove a revision and descendants</h4>
+<!--l. 298--><p class="noindent">The <a 
+ id="dx20-367001"></a>&#x201C;<span 
+class="pcrr7tn-">hg strip</span>&#x201D; command removes a revision, and all of its descendants, from the repository. It undoes the effects of the
+removed revisions from the repository, and updates the working directory to the first parent of the removed
+revision.
+</p><!--l. 303--><p class="indent">   The <a 
+ id="dx20-367002"></a>&#x201C;<span 
+class="pcrr7tn-">hg strip</span>&#x201D; command saves a backup of the removed changesets in a bundle, so that they can be reapplied if removed
+in error.
+</p><!--l. 306--><p class="indent">   Options: </p>
+     <ul><li><span class="dt">
+  <a 
+ id="dx20-367003"></a><span 
+class="pcrr7tn-">-b</span> </span><span class="dd">Save unrelated changesets that are intermixed with the stripped changesets in the backup bundle.
+     </span><li><span class="dt">
+  <a 
+ id="dx20-367004"></a><span 
+class="pcrr7tn-">-f</span> </span><span class="dd">If a branch has multiple heads, remove all heads. XXX This should be renamed, and use <span 
+class="pcrr7tn-">-f </span>to strip revs when
+     there are pending changes.
+     </span><li><span class="dt">
+  <a 
+ id="dx20-367005"></a><span 
+class="pcrr7tn-">-n</span> </span><span class="dd">Do not save a backup bundle.</li></ul>
+<!--l. 316--><p class="noindent">
+</p>
+   <h3 class="sectionHead"><span class="titlemark">B.2    </span> <a 
+ id="x20-368000B.2"></a>MQ file reference</h3>
+                                                                                         
+                                                                                         
+<!--l. 318--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">B.2.1    </span> <a 
+ id="x20-369000B.2.1"></a>The <span 
+class="pcrr7tn-">series </span>file</h4>
+<!--l. 320--><p class="noindent">The <a 
+ id="dx20-369001"></a><span 
+class="pcrr7tn-">series </span>file contains a list of the names of all patches that MQ can apply. It is represented as a list of names, with one name
+saved per line. Leading and trailing white space in each line are ignored.
+</p><!--l. 325--><p class="indent">   Lines may contain comments. A comment begins with the &#x201C;<span 
+class="pcrr7tn-">#</span>&#x201D; character, and extends to the end of the line. Empty lines,
+and lines that contain only comments, are ignored.
+</p><!--l. 329--><p class="indent">   You will often need to edit the <a 
+ id="dx20-369002"></a><span 
+class="pcrr7tn-">series </span>file by hand, hence the support for comments and empty lines noted above. For
+example, you can comment out a patch temporarily, and <a 
+ id="dx20-369003"></a><a 
+ id="dx20-369004"></a>&#x201C;<span 
+class="pcrr7tn-">hg qpush</span>&#x201D; will skip over that patch when applying
+patches. You can also change the order in which patches are applied by reordering their entries in the <a 
+ id="dx20-369005"></a><span 
+class="pcrr7tn-">series</span>
+file.
+</p><!--l. 336--><p class="indent">   Placing the <a 
+ id="dx20-369006"></a><span 
+class="pcrr7tn-">series </span>file under revision control is also supported; it is a good idea to place all of the patches that it refers to
+under revision control, as well. If you create a patch directory using the <a 
+ id="dx20-369007"></a><a 
+ id="dx20-369008"></a><span 
+class="pcrr7tn-">-c </span>option to <a 
+ id="dx20-369009"></a><a 
+ id="dx20-369010"></a>&#x201C;<span 
+class="pcrr7tn-">hg qinit</span>&#x201D;, this will be done for you
+automatically.
+</p><!--l. 342--><p class="noindent">
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">B.2.2    </span> <a 
+ id="x20-370000B.2.2"></a>The <span 
+class="pcrr7tn-">status </span>file</h4>
+<!--l. 344--><p class="noindent">The <a 
+ id="dx20-370001"></a><span 
+class="pcrr7tn-">status </span>file contains the names and changeset hashes of all patches that MQ currently has applied. Unlike the <a 
+ id="dx20-370002"></a><span 
+class="pcrr7tn-">series </span>file,
+this file is not intended for editing. You should not place this file under revision control, or modify it in any way. It is used by
+MQ strictly for internal book-keeping.
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+</p>
+   <!--l. 1--><div class="crosslinks"><p class="noindent">[<a 
+href="hobbit-sysadmin-guideap3.html" >next</a>] [<a 
+href="hobbit-sysadmin-guideap1.html" >prev</a>] [<a 
+href="hobbit-sysadmin-guideap1.html#tailhobbit-sysadmin-guideap1.html" >prev-tail</a>] [<a 
+href="hobbit-sysadmin-guideap2.html" >front</a>] [<a 
+href="hobbit-sysadmin-guide.html#hobbit-sysadmin-guideap2.html" >up</a>] </p></div>
+<!--l. 1--><p class="indent">   <a 
+ id="tailhobbit-sysadmin-guideap2.html"></a>   </p> 
+</body></html> 

@@ -1,0 +1,66 @@
+This is BibTeX, Version 0.99c (Web2C 7.5.4)
+The top-level auxiliary file: hobbit-sysadmin-guide.aux
+A level-1 auxiliary file: preface.aux
+A level-1 auxiliary file: intro.aux
+A level-1 auxiliary file: client.aux
+A level-1 auxiliary file: server.aux
+A level-1 auxiliary file: user-guides.aux
+A level-1 auxiliary file: tour-merge.aux
+A level-1 auxiliary file: concepts.aux
+A level-1 auxiliary file: daily.aux
+A level-1 auxiliary file: collab.aux
+A level-1 auxiliary file: filenames.aux
+A level-1 auxiliary file: branch.aux
+A level-1 auxiliary file: undo.aux
+A level-1 auxiliary file: hook.aux
+A level-1 auxiliary file: template.aux
+A level-1 auxiliary file: mq.aux
+A level-1 auxiliary file: mq-collab.aux
+A level-1 auxiliary file: hgext.aux
+A level-1 auxiliary file: cmdref.aux
+A level-1 auxiliary file: mq-ref.aux
+A level-1 auxiliary file: bookmaking.aux
+A level-1 auxiliary file: license.aux
+The style file: alpha.bst
+Database file #1: 99book.bib
+You've used 12 entries,
+            2543 wiz_defined-function locations,
+            630 strings with 6187 characters,
+and the built_in function-call counts, 3175 in all, are:
+= -- 293
+> -- 96
+< -- 12
++ -- 24
+- -- 24
+* -- 131
+:= -- 508
+add.period$ -- 37
+call.type$ -- 12
+change.case$ -- 60
+chr.to.int$ -- 12
+cite$ -- 12
+duplicate$ -- 138
+empty$ -- 296
+format.name$ -- 45
+if$ -- 661
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 1
+newline$ -- 64
+num.names$ -- 36
+pop$ -- 147
+preamble$ -- 1
+purify$ -- 72
+quote$ -- 0
+skip$ -- 102
+stack$ -- 0
+substring$ -- 84
+swap$ -- 12
+text.length$ -- 12
+text.prefix$ -- 9
+top$ -- 0
+type$ -- 96
+warning$ -- 0
+while$ -- 24
+width$ -- 15
+write$ -- 138
