@@ -9,8 +9,8 @@ This branch of hobbitmon is released by T.J. Yang with following differences
    2.3 remove hobbitmon package will remove the account and delete
        all the log files.
        ie, "/opt/bin/pkg-rm  hobbitmon-client".
-3. Using makefile to automate the hobbitmon pacakge creation.
-4. Using makefile and latex to automate the hobbit documenation sets.
+3. Using makefile to automate the hobbitmon software compilation and pacakge creation.
+4. Using makefile and latex to automate the hobbitmon documenation sets.
 5. Use TWW's pkg-inst cross-platform package management utility.
 6. Current supported OS are
    1. Solaris 2.6 to 2.11 sparc.
