@@ -1,0 +1,21 @@
+$ \textbf{echo 'line 2' >> file1}
+$ \textbf{hg diff}
+diff -r 286622178355 file1
+--- a/file1	Mon Aug 04 12:53:28 2008 +0000
++++ b/file1	Mon Aug 04 12:53:28 2008 +0000
+@@ -1,1 +1,2 @@ line 1
+ line 1
++line 2
+$ \textbf{hg qrefresh}
+$ \textbf{hg diff}
+$ \textbf{hg tip --style=compact --patch}
+1[qtip,first.patch,tip,qbase]   8d6207850702   2008-08-04 12:53 +0000   bos
+  patch queue: first.patch
+
+diff -r 93550182f26d -r 8d6207850702 file1
+--- a/file1	Mon Aug 04 12:53:28 2008 +0000
++++ b/file1	Mon Aug 04 12:53:29 2008 +0000
+@@ -1,1 +1,2 @@ line 1
+ line 1
++line 2
+

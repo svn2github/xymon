@@ -1,0 +1,6 @@
+$ \textbf{hg update 2}
+abort: There is no Mercurial repository here (.hg not found)!
+$ \textbf{hg parents}
+abort: There is no Mercurial repository here (.hg not found)!
+$ \textbf{hg update}
+abort: There is no Mercurial repository here (.hg not found)!

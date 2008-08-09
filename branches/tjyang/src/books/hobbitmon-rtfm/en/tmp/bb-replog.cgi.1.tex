@@ -1,0 +1,74 @@
+
+
+
+
+\chapter{BB-REPLOG.CGI}
+
+\section{BB-REPLOG.CGI}
+ Section: User Commands (1) 
+Updated: Version Exp: 11 Jan 2008 
+Index Return to Main Contents 
+ \section{NAME}
+ bb-replog.cgi - CGI program to report service availability log  \section{SYNOPSIS}
+\textbf{bb-replog.cgi}
+
+
+  
+\section{DESCRIPTION}
+\textbf{bb-replog.cgi}
+ is invoked as a CGI script via the bb-replog.sh CGI wrapper. Based on the parameters it receives, it generates an availability report for a specific host-service combination for the requested time-period. The availability report includes a calculation of the availability percentage (split out on percent green, yellow, red time), and an eventlog for the period listing the status changes that have occurred to allow for drill-down to the test reports that indicate a problem. Access to the individual historical status logs go via the \emph{hobbitsvc.cgi(1)}
+ CGI script. 
+
+  bb-replog.cgi is passed a QUERY\_STRING environment variable with the following parameters: 
+
+
+  
+   HOSTSVC (the host and service to report on)  
+   STYLE (report style: ''crit'', ''non-crit'', ''all'')  
+   ST (starttime in seconds since 1-1-1970 00:00 UTC)  
+   END (endtime in seconds since 1-1-1970 00:00 UTC) 
+
+
+  The following non-standard parameters are handled by the bbgen version of bb-hist.cgi: 
+
+
+  
+   IP (IP address of host - for display purposes only)  
+   REPORTTIME (the REPORTTIME: setting for this host)  
+   WARNPCT (the WARNPCT: setting for this host) 
+
+
+  The REPORTTIME and WARNPCT options are taken from the \emph{bb-hosts(5)}
+ definition for the host, or the defaults are used. These modify the availability calculation to handle reporting against agreed Service Level Agreements re. the time of day when the service must be available, and the agreed availability level. 
+
+
+  
+\section{OPTIONS}
+\begin{description}
+\item[--env=FILENAME] Loads environment from FILENAME before executing the CGI. 
+
+ 
+
+
+\end{description}
+ \section{SEE ALSO}
+bb-hosts(5), hobbitserver.cfg(5), hobbitsvc.cgi(1) 
+
+ 
+
+
+  
+ 
+\section{Index}
+\begin{description}
+\item[NAME]
+\item[SYNOPSIS]
+\item[DESCRIPTION]
+\item[OPTIONS]
+\item[SEE ALSO]
+
+\end{description}
+ 
+ This document was created by man2html, using the manual pages. 
+ Time: 16:21:47 GMT, January 11, 2008 
+

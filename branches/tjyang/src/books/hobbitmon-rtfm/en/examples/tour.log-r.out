@@ -1,0 +1,6 @@
+$ \textbf{hg log -r 3}
+abort: There is no Mercurial repository here (.hg not found)!
+$ \textbf{hg log -r }
+abort: There is no Mercurial repository here (.hg not found)!
+$ \textbf{hg log -r 1 -r 4}
+abort: There is no Mercurial repository here (.hg not found)!

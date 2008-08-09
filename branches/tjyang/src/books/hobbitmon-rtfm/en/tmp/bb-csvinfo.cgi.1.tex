@@ -1,0 +1,71 @@
+
+
+
+
+\chapter{BB-CSVINFO.CGI}
+
+\section{BB-CSVINFO.CGI}
+ Section: User Commands (1) 
+Updated: Version Exp: 11 Jan 2008 
+Index Return to Main Contents 
+ \section{NAME}
+ bb-csvinfo.cgi - CGI program to show host information from a CSV file  \section{SYNOPSIS}
+\textbf{bb-csvinfo.cgi}
+
+
+  
+\section{DESCRIPTION}
+\textbf{bb-csvinfo.cgi}
+ is invoked as a CGI script via the bb-csvinfo.sh CGI wrapper. Based on the parameters it receives, it searches a comma- separated file for the matching host, and presents the information found as a table. 
+
+  bb-csvinfo.cgi is passed a QUERY\_STRING environment variable with the following parameters: 
+
+
+  
+   key (string to search for, typically hostname)  
+   column (columnnumber to search - default 0)  
+   db  (name of the CSV database file in \$BBHOME/etc/, default hostinfo.csv)  
+   delimiter (delimiter character for columns, default semi-colon) 
+
+
+  CSV files are easily created from e.g. spreadsheets, by exporting them in CSV format. You should have one host per line, with the first line containing the column headings. Despite their name, the default delimiter for CSV files is the semi-colon - if you need a different delimiter, invoke bb-csvinfo.cgi with the ``delimiter=$<$character$>$'' in the query string. 
+
+
+  
+\section{Example usage}
+ This example shows how you can use the bb-csvinfo CGI. It assumes you have a CSV-formatted file with information about the hosts stored as \$BBHOME/etc/hostinfo.csv, and the hostname is in the first column of the file. 
+
+ \begin{description}
+\item[Use with the bbgen --docurl] The --docurl option to \emph{bbgen(1)}
+ sets up all of the hostnames on your Hobbit webpages to act as links to a CGI script. To invoke the bb-csvinfo CGI script, run bbgen with the option 
+
+  
+   --docurl=/cgi-bin/bb-csvinfo.sh?db=hostinfo.csv\&key=\%s 
+
+
+ 
+
+
+\end{description}
+ 
+\section{SEE ALSO}
+bb-hosts(5), hobbitserver.cfg(5), bbgen(1) 
+
+ 
+
+
+  
+ 
+\section{Index}
+\begin{description}
+\item[NAME]
+\item[SYNOPSIS]
+\item[DESCRIPTION]
+\item[Example usage]
+\item[SEE ALSO]
+
+\end{description}
+ 
+ This document was created by man2html, using the manual pages. 
+ Time: 16:21:47 GMT, January 11, 2008 
+

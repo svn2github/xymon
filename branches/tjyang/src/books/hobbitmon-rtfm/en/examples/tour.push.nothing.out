@@ -1,0 +1,2 @@
+$ \textbf{hg push ../hello-push}
+abort: There is no Mercurial repository here (.hg not found)!

@@ -1,0 +1,82 @@
+
+
+
+
+\chapter{HOBBIT-HOSTGRAPHS.CGI}
+
+\section{HOBBIT-HOSTGRAPHS.CGI}
+ Section: User Commands (1) 
+Updated: Version Exp: 11 Jan 2008 
+Index Return to Main Contents 
+ \section{NAME}
+ hobbit-hostgraphs.cgi - CGI program to show multiple graphs  \section{SYNOPSIS}
+\textbf{hobbit-hostgraph.cgi}
+
+
+  
+\section{DESCRIPTION}
+\textbf{hobbit-hostgraph.cgi}
+ is invoked as a CGI script via the hobbit-hostgraph.sh CGI wrapper. 
+
+  If no parameters are provided when invoked, it will present a form where the user can select a time period, one or more hosts, and a set of graphs. 
+
+
+  The parameters selected by the user are passed to a second invocation of hobbit-hostgraph.cgi, and result in a webpage showing a list of graph images based on the trend data stored about the hosts. 
+
+
+  If multiple graph-types are selected, hobbit-hostgraph.cgi will display a list of graphs, with one graph per type. 
+
+
+  If multiple hosts are selected, hobbit-hostgraph.cgi will attempt to display a multi-host graph for each type where the graphs for all hosts are overlayed in a single image, allowing for easy comparison of the hosts. 
+
+
+  The hostlist uses the PAGEPATH cookie provided by Hobbit webpages to select the list of hosts to present. Only the hosts visible on the page where hobbit-hostgraph.cgi is invoked from will be visible. 
+
+
+  The resulting graph page can be bookmarked, but the bookmark also fixates the time period shown. 
+
+
+  
+\section{OPTIONS}
+\begin{description}
+\item[--env=FILENAME] Loads the environment defined in FILENAME before executing the CGI script. 
+
+ 
+
+
+\end{description}
+ \section{BUGS}
+ This utility is experimental. It may change in a future release of Hobbit. 
+
+  It is possible for the user to select graphs which do not exist. This results in broken image links. 
+
+
+  The set of graph-types is fixed in the server/web/hostgraphs\_form template and does not adjust to which graphs are available. 
+
+
+  If the tool is invoked directly, all hosts defined in Hobbit will be listed. 
+
+
+  
+\section{SEE ALSO}
+bb-hosts(5), hobbitserver.cfg(5) 
+
+ 
+
+
+  
+ 
+\section{Index}
+\begin{description}
+\item[NAME]
+\item[SYNOPSIS]
+\item[DESCRIPTION]
+\item[OPTIONS]
+\item[BUGS]
+\item[SEE ALSO]
+
+\end{description}
+ 
+ This document was created by man2html, using the manual pages. 
+ Time: 16:21:47 GMT, January 11, 2008 
+

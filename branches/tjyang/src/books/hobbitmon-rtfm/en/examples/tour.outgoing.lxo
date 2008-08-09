@@ -1,0 +1,4 @@
+$ \textbf{cd my-hello}
+bash: cd: my-hello: No such file or directory
+$ \textbf{hg outgoing ../hello-push}
+abort: There is no Mercurial repository here (.hg not found)!

@@ -1,0 +1,6 @@
+$ \textbf{grep printf hello.c}
+grep: hello.c: No such file or directory
+$ \textbf{hg update tip}
+abort: There is no Mercurial repository here (.hg not found)!
+$ \textbf{grep printf hello.c}
+grep: hello.c: No such file or directory

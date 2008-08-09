@@ -1,0 +1,2 @@
+$ \textbf{hg log -r 2:4}
+abort: There is no Mercurial repository here (.hg not found)!

@@ -1,0 +1,13 @@
+$ \textbf{hg log}
+changeset:   1:0792f9ce99d5
+tag:         tip
+user:        Bryan O'Sullivan <bos@serpentine.com>
+date:        Mon Aug 04 12:53:31 2008 +0000
+summary:     Added tag v1.0 for changeset 4a521360a97c
+
+changeset:   0:4a521360a97c
+tag:         v1.0
+user:        Bryan O'Sullivan <bos@serpentine.com>
+date:        Mon Aug 04 12:53:31 2008 +0000
+summary:     Initial commit
+

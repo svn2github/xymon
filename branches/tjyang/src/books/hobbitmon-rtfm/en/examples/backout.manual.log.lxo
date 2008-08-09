@@ -1,0 +1,13 @@
+$ \textbf{hg log --style compact}
+3[tip]:1   3ddf50d9e58a   2008-08-04 12:53 +0000   bos
+  back out second change
+
+2   38bcd25cca24   2008-08-04 12:53 +0000   bos
+  third change
+
+1   a9514b55a7d4   2008-08-04 12:53 +0000   bos
+  second change
+
+0   ed390bb500da   2008-08-04 12:53 +0000   bos
+  first change
+

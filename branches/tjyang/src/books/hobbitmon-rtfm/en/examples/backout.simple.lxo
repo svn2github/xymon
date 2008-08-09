@@ -1,0 +1,5 @@
+$ \textbf{hg backout -m 'back out second change' tip}
+reverting myfile
+changeset 2:3ddf50d9e58a backs out changeset 1:a9514b55a7d4
+$ \textbf{cat myfile}
+first change

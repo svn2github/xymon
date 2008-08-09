@@ -1,0 +1,4 @@
+$ \textbf{hg parents}
+abort: There is no Mercurial repository here (.hg not found)!
+$ \textbf{cat hello.c}
+cat: hello.c: No such file or directory

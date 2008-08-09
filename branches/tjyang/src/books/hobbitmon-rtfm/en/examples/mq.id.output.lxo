@@ -1,0 +1,32 @@
+$ \textbf{hg qapplied}
+first.patch
+second.patch
+$ \textbf{hg log -r qbase:qtip}
+changeset:   1:b3ad6bd439ca
+tag:         first.patch
+tag:         qbase
+user:        Bryan O'Sullivan <bos@serpentine.com>
+date:        Mon Aug 04 12:53:27 2008 +0000
+summary:     patch queue: first.patch
+
+changeset:   2:6a69650d0f20
+tag:         second.patch
+tag:         qtip
+tag:         tip
+user:        Bryan O'Sullivan <bos@serpentine.com>
+date:        Mon Aug 04 12:53:27 2008 +0000
+summary:     patch queue: second.patch
+
+$ \textbf{hg export second.patch}
+# HG changeset patch
+# User Bryan O'Sullivan <bos@serpentine.com>
+# Date 1217854407 0
+# Node ID 6a69650d0f208140c0e365e16efb78995e687ef0
+# Parent  b3ad6bd439ca71fcd73dcb15b3797875fff30733
+patch queue: second.patch
+
+diff -r b3ad6bd439ca -r 6a69650d0f20 other.c
+--- /dev/null	Thu Jan 01 00:00:00 1970 +0000
++++ b/other.c	Mon Aug 04 12:53:27 2008 +0000
+@@ -0,0 +1,1 @@
++double u;

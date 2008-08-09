@@ -1,0 +1,92 @@
+
+
+
+
+\chapter{BB-SNAPSHOT.CGI}
+
+\section{BB-SNAPSHOT.CGI}
+ Section: User Commands (1) 
+Updated: Version Exp: 11 Jan 2008 
+Index Return to Main Contents 
+ \section{NAME}
+ bb-snapshot.cgi - CGI program to rebuild the Hobbit webpages for a specific point in time.  \section{SYNOPSIS}
+\textbf{bb-snapshot.cgi}
+
+
+  
+\section{DESCRIPTION}
+\textbf{bb-snapshot.cgi}
+ is invoked as a CGI script via the bb-snapshot.sh CGI wrapper. It rebuilds the Hobbit web pages to the look they had at a particular point in time, based upon the historical information logged about events. 
+
+  bb-snapshot.cgi is passed a QUERY\_STRING environment variable with the following parameters: 
+
+
+  
+   mon (Start month of the snapshot)  
+   day (Start day-of-month of the snapshot)  
+   yr  (Start year of the snapshot)  
+   hour (Start hour of the snapshot)  
+   min  (Start minute of the snapshot)  
+   sec  (Start second of the snapshot) 
+
+
+  The ``month'' parameters must be specified as the three-letter english month name abbreviation: Jan, Feb, Mar ... 
+
+
+  ``day'' must be in the range 1..31; ``yr'' must be specified including century (e.g. ``2003''). ``hour'' must be specified using a 24-hour clock. 
+
+
+  All of the processing involved in generating the report is done by invoking \emph{bbgen(1)}
+ with the proper ``--snapshot'' option. 
+
+
+  
+\section{OPTIONS}
+\begin{description}
+\item[--env=FILENAME] Load environment from FILENAME before executing the CGI. 
+
+ 
+
+\item[bbgen-options] All options except ``--env'' are passed on to the \emph{bbgen(1)}
+ program building the snapshot files. 
+
+ 
+
+
+\end{description}
+ \section{ENVIRONMENT VARIABLES}
+\begin{description}
+\item[BBGENSNAPOPTS] bbgen options passed by default to the bb-snapshot.cgi script. This happens in the bb-snapshot.sh CGI wrapper script. 
+\item[BBHOME] Home directory of the Hobbit server files 
+\item[BBSNAP] Directory where generated snapshots are stored. This directory must be writable by the userid executing the CGI script, typically ``www'', ``apache'' or ``nobody''. Default: \$BBHOME/www/snap/ 
+\item[BBSNAPURL] The URL prefix to use when accessing the reports via a browser. Default: \$BBWEB/snap 
+
+ 
+
+
+ 
+
+
+\end{description}
+ \section{SEE ALSO}
+bbgen(1), bb-hosts(5), hobbitserver.cfg(5) 
+
+ 
+
+
+  
+ 
+\section{Index}
+\begin{description}
+\item[NAME]
+\item[SYNOPSIS]
+\item[DESCRIPTION]
+\item[OPTIONS]
+\item[ENVIRONMENT VARIABLES]
+\item[SEE ALSO]
+
+\end{description}
+ 
+ This document was created by man2html, using the manual pages. 
+ Time: 16:21:47 GMT, January 11, 2008 
+

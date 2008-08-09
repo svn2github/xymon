@@ -1,0 +1,48 @@
+\chapter{HOBBITD\_SAMPLE}
+
+\section{HOBBITD\_SAMPLE}
+ Section: Maintenance Commands (8) 
+Updated: Version Exp: 11 Jan 2008 
+Index Return to Main Contents
+\section{NAME}
+ hobbitd\_sample - example of a hobbitd worker module \section{SYNOPSIS}
+\textbf{hobbitd\_channel --channel=status hobbitd\_sample [options]}
+
+
+ 
+\section{DESCRIPTION}
+ hobbitd\_sample is a worker module for hobbitd, and as such it is normally run via the \emph{hobbitd\_channel(8)}
+ program. It receives messages from hobbitd via stdin, and simply displays these on stdout. It can be used with all types of hobbitd channels. 
+
+  hobbitd\_sample is not designed to actually run, except as a demonstration. The purpose of this tool is to show how hobbitd worker modules can be implemented to handle different tasks that need to hook into the hobbitd processing. 
+
+
+ 
+\section{OPTIONS}
+\begin{description}
+\item[--timeout=N] Read messages with a timeout of N seconds. 
+
+ 
+
+\item[--debug] Enable debugging output. 
+
+ 
+
+
+\end{description}
+\section{SEE ALSO}
+hobbitd\_channel(8), hobbitd(8), hobbit(7) 
+
+
+
+\section{Index}
+\begin{description}
+\item[NAME]
+\item[SYNOPSIS]
+\item[DESCRIPTION]
+\item[OPTIONS]
+\item[SEE ALSO]
+
+\end{description}
+
+

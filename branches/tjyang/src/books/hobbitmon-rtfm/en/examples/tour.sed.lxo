@@ -1,0 +1,2 @@
+$ \textbf{sed -i '/printf/a\textbackslash{}\textbackslash{}tprintf("hello again!\textbackslash{}\textbackslash{}n");' hello.c}
+sed: can't read hello.c: No such file or directory

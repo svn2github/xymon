@@ -1,0 +1,69 @@
+
+
+
+
+\chapter{BBHOSTSHOW}
+
+\section{BBHOSTSHOW}
+ Section: User Commands (1) 
+Updated: Version Exp: 11 Jan 2008 
+Index Return to Main Contents 
+ \section{NAME}
+ bbhostshow - output the full bb-hosts file  \section{SYNOPSIS}
+\textbf{bbhostshow [--bbdisp] [--bbnet] [filename]}
+
+
+  
+\section{DESCRIPTION}
+\emph{bbhostshow(1)}
+ dumps the full bb-hosts file to stdout. It follows ``include'' tags in the bb-hosts files, and prints the full contents as seen by the \emph{bbgen(1)}
+ and \emph{bbtest-net(1)}
+ utilities. 
+
+  If no filename is given, bbhostshow displays the file pointed to by the BBHOSTS environment variable. 
+
+
+  
+\section{OPTIONS}
+\begin{description}
+\item[--bbdisp] Show the bb-hosts file following include statements as a BBDISPLAY server would. 
+
+ 
+
+\item[--bbnet] Show the bb-hosts file following include statements as a BBNET server would. 
+
+ 
+
+
+ 
+
+
+\end{description}
+ \section{ENVIRONMENT VARIABLES}
+\begin{description}
+\item[BBHOSTS] Filename for the \emph{bb-hosts(5)}
+ file. 
+
+ 
+
+
+\end{description}
+ \section{SEE ALSO}
+bb-hosts(5), hobbitserver.cfg(5) 
+
+  
+ 
+\section{Index}
+\begin{description}
+\item[NAME]
+\item[SYNOPSIS]
+\item[DESCRIPTION]
+\item[OPTIONS]
+\item[ENVIRONMENT VARIABLES]
+\item[SEE ALSO]
+
+\end{description}
+ 
+ This document was created by man2html, using the manual pages. 
+ Time: 16:21:46 GMT, January 11, 2008 
+

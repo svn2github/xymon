@@ -1,0 +1,258 @@
+
+
+
+
+\chapter{HOBBIT-ALERTS.CFG}
+
+\section{HOBBIT-ALERTS.CFG}
+ Section: File Formats (5) 
+Updated: Version Exp: 11 Jan 2008 
+Index Return to Main Contents 
+ \section{NAME}
+ hobbit-alerts.cfg - Configuration for for hobbitd\_alert module 
+
+  
+\section{SYNOPSIS}
+\textbf{~hobbit/server/etc/hobbit-alerts.cfg}
+
+
+  
+\section{DESCRIPTION}
+ The hobbit-alerts.cfg file controls the sending of alerts by Hobbit when monitoring detects a failure. 
+
+  
+\section{FILE FORMAT}
+ The configuration file consists of \textbf{rules}
+, that may have one or more \textbf{recipients}
+ associated. A recipient specification may include additional rules that limit the circumstances when this recipient is eligible for receiving an alert. 
+
+  Blank lines and lines starting with a hash mark (\#) are treated as comments and ignored. Long lines can be broken up by putting a backslash at the end of the line and continuing the entry on the next line. 
+
+
+  
+\section{RULES}
+ A rule consists of one of more filters using these keywords: 
+
+ \textbf{PAGE=targetstring}
+ Rule matching an alert by the name of the page in BB. This is the path of the page as defined in the bb-hosts file. E.g. if you have this setup: \begin{description}
+\item[]\begin{verbatim}
+
+page servers All Servers
+subpage web Webservers
+10.0.0.1 www1.foo.com
+subpage db Database servers
+10.0.0.2 db1.foo.com
+
+\end{verbatim}
+
+
+\end{description}
+
+
+
+  Then the ``All servers'' page is found with \textbf{PAGE=servers}
+, the ``Webservers'' page is \textbf{PAGE=servers/web}
+ and the ``Database servers'' page is \textbf{PAGE=servers/db}
+. Note that you can also use regular expressions to specify the page name, e.g. \textbf{PAGE=\%.*/db}
+ would find the ``Database servers'' page regardless of where this page was placed in the hierarchy. 
+
+
+  The PAGE name of top-level page is an empty string. To match this, use \textbf{PAGE=\%\^{}\$}
+ to match the empty string. 
+
+
+ 
+
+
+ \textbf{EXPAGE=targetstring}
+ Rule excluding an alert if the pagename matches. 
+
+
+ \textbf{HOST=targetstring}
+ Rule matching an alert by the hostname. 
+
+
+ \textbf{EXHOST=targetstring}
+ Rule excluding an alert by matching the hostname. 
+
+
+ \textbf{SERVICE=targetstring}
+ Rule matching an alert by the service name. 
+
+
+ \textbf{EXSERVICE=targetstring}
+ Rule excluding an alert by matching the service name. 
+
+
+ \textbf{GROUP=groupname}
+ Rule matching an alert by the group name. Groupnames are assigned to a status via the GROUP setting in the hobbit-clients.cfg file. 
+
+
+ \textbf{EXGROUP=groupname}
+ Rule excluding an alert by the group name. Groupnames are assigned to a status via the GROUP setting in the hobbit-clients.cfg file. 
+
+
+ \textbf{COLOR=color[,color]}
+ Rule matching an alert by color. Can be ``red'', ``yellow'', or ``purple''. The forms ``!red'', ``!yellow'' and ``!purple'' can also be used to NOT send an alert if the color is the specified one. 
+
+
+ \textbf{TIME=timespecification}
+ Rule matching an alert by the time-of-day. This is specified as the DOWNTIME timespecification in the bb-hosts file. 
+
+
+ \textbf{DURATION$>$time, DURATION$<$time}
+ Rule matcing an alert if the event has lasted longer/shorter than the given duration. E.g. DURATION$>$1h (lasted longer than 1 hour) or DURATION$<$30 (only sends alerts the first 30 minutes). The duration is specified as a number, optionally followed by 'm' (minutes, default), 'h' (hours) or 'd' (days). 
+
+
+ \textbf{RECOVERED}
+ Rule matches if the alert has recovered from an alert state. 
+
+
+ \textbf{NOTICE}
+ Rule matches if the message is a ``notify'' message. This type of message is sent when a host or test is disabled or enabled. 
+
+
+  The ``targetstring'' is either a simple pagename, hostname or servicename, OR a '\%' followed by a Perl-compatible regular expression. E.g. ``HOST=\%www(.*)'' will match any hostname that begins with ``www''. The same for the ``groupname'' setting. 
+
+
+  
+\section{RECIPIENTS}
+ The recipients are listed after the initial rule. The following keywords can be used to define recipients: 
+
+ \textbf{MAIL address[,address]}
+ Recipient who receives an e-mail alert. This takes one parameter, the e-mail address. 
+
+
+ \textbf{SCRIPT /path/to/script recipientID}
+ Recipient that invokes a script. This takes two parameters: The script filename, and the recipient that gets passed to the script. 
+
+
+ \textbf{IGNORE}
+ This is used to define a recipient that does NOT trigger any alerts, and also terminates the search for more recipients. It is useful if you have a rule that handles most alerts, but there is just that one particular server where you dont want cpu alerts on Monday morning. Note that the IGNORE recipient always has the STOP flag defined, so when the IGNORE recipient is matched, no more recipients will be considered. So the location of this recipient in your set of recipients is important. 
+
+
+ \textbf{FORMAT=formatstring}
+ Format of the text message with the alert. Default is ``TEXT'' (suitable for e-mail alerts). ``PLAIN'' is the same as text, but without the URL link to the status webpage. ``SMS'' is a short message with no subject for SMS alerts. ``SCRIPT'' is a brief message template for scripts. 
+
+
+ \textbf{REPEAT=time}
+ How often an alert gets repeated. As with DURATION, time is a number optionally followed by 'm', 'h' or 'd'. 
+
+
+ \textbf{UNMATCHED}
+ The alert is sent to this recipient ONLY if no other recipients received an alert for this event. 
+
+
+ \textbf{STOP}
+ Stop looking for more recipients after this one matches. This is implicit on IGNORE recipients. 
+
+
+ \textbf{Rules}
+ You can specify rules for a recipient also. This limits the alerts sent to this particular recipient. 
+
+
+  
+\section{MACROS}
+ It is possible to use \textbf{macros}
+ in the configuration file. To define a macro: 
+
+        \$MYMACRO=text extending to end of line 
+
+
+
+  After the definition of a macro, it can be used throughout the file. Wherever the text \$MYMACRO appears, it will be substituted with the text of the macro before any processing of rules and recipients. 
+
+
+  It is possible to nest macros, as long as the macro is defined before it is used. 
+
+
+  
+\section{ALERT SCRIPTS}
+ Alerts can go out via custom scripts, by using the SCRIPT keyword for a recipient. Such scritps have access to the following environment variables: 
+
+ \textbf{BBALPHAMSG}
+ The full text of the status log triggering the alert 
+
+
+ \textbf{ACKCODE}
+ The ``cookie'' that can be used to acknowledge the alert 
+
+
+ \textbf{RCPT}
+ The recipientID from the SCRIPT entry 
+
+
+ \textbf{BBHOSTNAME}
+ The name of the host that the alert is about 
+
+
+ \textbf{MACHIP}
+ The IP-address of the host that has a problem 
+
+
+ \textbf{BBSVCNAME}
+ The name of the service that the alert is about 
+
+
+ \textbf{BBSVCNUM}
+ The numeric code for the service. From the SVCCODES definition. 
+
+
+ \textbf{BBHOSTSVC}
+ HOSTNAME.SERVICE that the alert is about. 
+
+
+ \textbf{BBHOSTSVCCOMMAS}
+ As BBHOSTSVC, but dots in the hostname replaced with commas 
+
+
+ \textbf{BBNUMERIC}
+ A 22-digit number made by BBSVCNUM, MACHIP and ACKCODE. 
+
+
+ \textbf{RECOVERED}
+ Is ``1'' if the service has recovered. 
+
+
+ \textbf{EVENTSTART}
+ Timestamp when the current status (color) began. 
+
+
+ \textbf{SECS}
+ Number of seconds the service has been down. 
+
+
+ \textbf{DOWNSECSMSG}
+ When recovered, holds the text ``Event duration : N'' where N is the DOWNSECS value. 
+
+
+ \textbf{CFID}
+ Line-number in the hobbit-alerts.cfg file that caused the script to be invoked. Can be useful when troubleshooting alert configuration rules. 
+
+
+  
+\section{SEE ALSO}
+hobbitd\_alert(8), hobbitd(8), hobbit(7), the ``Configuring Hobbit Alerts'' guide in the Online documentation. 
+
+ 
+
+
+  
+ 
+\section{Index}
+\begin{description}
+\item[NAME]
+\item[SYNOPSIS]
+\item[DESCRIPTION]
+\item[FILE FORMAT]
+\item[RULES]
+\item[RECIPIENTS]
+\item[MACROS]
+\item[ALERT SCRIPTS]
+\item[SEE ALSO]
+
+\end{description}
+ 
+ This document was created by man2html, using the manual pages. 
+ Time: 16:21:46 GMT, January 11, 2008 
+

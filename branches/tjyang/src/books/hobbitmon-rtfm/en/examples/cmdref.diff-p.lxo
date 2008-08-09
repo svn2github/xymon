@@ -1,0 +1,22 @@
+$ \textbf{echo '[diff]' >> $HGRC}
+$ \textbf{echo 'showfunc = False' >> $HGRC}
+$ \textbf{hg diff}
+diff -r 0b02550d7979 myfile.c
+--- a/myfile.c	Mon Aug 04 12:53:19 2008 +0000
++++ b/myfile.c	Mon Aug 04 12:53:19 2008 +0000
+@@ -1,4 +1,4 @@
+ int myfunc()
+ \{
+-    return 1;
++    return 10;
+ \}
+$ \textbf{hg diff -p}
+diff -r 0b02550d7979 myfile.c
+--- a/myfile.c	Mon Aug 04 12:53:19 2008 +0000
++++ b/myfile.c	Mon Aug 04 12:53:19 2008 +0000
+@@ -1,4 +1,4 @@ int myfunc()
+ int myfunc()
+ \{
+-    return 1;
++    return 10;
+ \}

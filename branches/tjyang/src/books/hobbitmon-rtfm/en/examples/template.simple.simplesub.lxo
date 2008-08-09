@@ -1,0 +1,7 @@
+$ \textbf{hg log --template 'i saw a changeset: \{desc\}\textbackslash{}n'}
+i saw a changeset: Added tag v0.1 for changeset 5787d3dd85cf
+i saw a changeset: Added tag mytag for changeset 2a5bc2c0d901
+i saw a changeset:    added line to end of <<hello>> file.
+
+in addition, added a file with the helpful name (at least i hope that some might consider it so) of goodbye.
+i saw a changeset: added hello

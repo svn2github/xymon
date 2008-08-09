@@ -1,0 +1,50 @@
+
+
+
+
+\chapter{HOBBITD\_HOSTDATA}
+
+\section{HOBBITD\_HOSTDATA}
+ Section: Maintenance Commands (8) 
+Updated: Version Exp: 11 Jan 2008 
+Index Return to Main Contents 
+ \section{NAME}
+ hobbitd\_hostdata - hobbitd worker module for storing historical client data  \section{SYNOPSIS}
+\textbf{hobbitd\_channel --channel=clichg hobbitd\_hostdata}
+
+
+  
+\section{DESCRIPTION}
+ hobbitd\_hostdata is a worker module for hobbitd, and as such it is normally run via the \emph{hobbitd\_channel(8)}
+ program. Whenever a status column in Hobbit changes to an alert state (usually red, yellow or purple), this module receives a copy of the latest Hobbit client data sent by the host, and stores it on disk. This allows you to review all of the data collected by the Hobbit client on the server around the time that a problem occurred. This can make troubleshooting incidents easier by providing a snapshot of the host status shortly before a problem became apparent. 
+
+  Note: This module requires that \emph{hobbitd(8)}
+ is launched with the ``--store-clientlogs'' option enabled. 
+
+
+  
+\section{FILES}
+ All of the host data are stored in the \$CLIENTLOGS directory, by default this is the \$BBVAR/hostdata/ directory. 
+
+  
+\section{SEE ALSO}
+hobbitd(8), hobbitd\_channel(8), hobbit(7) 
+
+ 
+
+
+  
+ 
+\section{Index}
+\begin{description}
+\item[NAME]
+\item[SYNOPSIS]
+\item[DESCRIPTION]
+\item[FILES]
+\item[SEE ALSO]
+
+\end{description}
+ 
+ This document was created by man2html, using the manual pages. 
+ Time: 16:21:47 GMT, January 11, 2008 
+

@@ -1,0 +1,125 @@
+
+
+
+
+\chapter{HOBBITLAUNCH.CFG}
+
+\section{HOBBITLAUNCH.CFG}
+ Section: File Formats (5) 
+Updated: Version Exp: 11 Jan 2008 
+Index Return to Main Contents 
+ \section{NAME}
+ hobbitlaunch.cfg - Task definitions for the hobbitlaunch utility 
+
+  
+\section{SYNOPSIS}
+\textbf{~hobbit/server/etc/hobbitlaunch.cfg}
+
+
+  
+\section{DESCRIPTION}
+ The hobbitlaunch.cfg file holds the list of tasks that hobbitlaunch runs to perform all of the tasks needed by the Hobbit monitor. 
+
+  
+\section{FILE FORMAT}
+ A task is defined by a \textbf{key}
+, a \textbf{command}
+, and optionally also \textbf{interval}
+, \textbf{environment}
+, and \textbf{logfile}
+. 
+
+  Blank lines and lines starting with a hash mark (\#) are treated as comments and ignored. Long lines can be broken up by putting a backslash at the end of the line and continuing the entry on the next line. 
+
+
+  An entry looks like this: 
+
+
+  
+    [hobbitd]  
+ 
+          ENVFILE /usr/local/hobbit/server/etc/hobbitserver.cfg  
+ 
+          CMD /usr/local/hobbit/server/bin/hobbitd 
+
+
+  
+    [updateweb]  
+ 
+          ENVFILE /usr/local/hobbit/server/etc/hobbitserver.cfg  
+ 
+          CMD /usr/local/hobbit/server/bin/bbgen  
+ 
+          NEEDS hobbitd  
+ 
+          GROUP webupdates  
+ 
+          INTERVAL 5m  
+ 
+          LOGFILE /var/log/hobbit/updateweb.log 
+
+
+  The \textbf{key}
+ is enclosed in angle brackets, and must be unique for each task. You can choose your key-names as you like, they are only used internally in hobbitlaunch to identify each task. 
+
+
+  The \textbf{command}
+ is defined by the CMD keyword. This is the full command including any options you want to use for this task. This is required for all tasks. 
+
+
+  The \textbf{DISABLED}
+ keyword means that this command is disabled. hobbitlaunch will not start this task. It is recommended that you use this to disable standard tasks, instead of removing them or commenting them out. Upgrades to Hobbit will add standard tasks back into the file, so unless you have them listed as DISABLED then tasks may re-appear unexpectedly after an upgrade. 
+
+
+  The \textbf{ONHOST}
+ keyword tells hobbitlaunch that this task should only run on specific hosts. After the ONHOST keyword, you must provide a ``regular expression''; if the hostname where hobbitlaunch runs matches this expression, then the task will run. If it doesn't match, then the task is treated as if it were DISABLED. 
+
+
+  The \textbf{NEEDS}
+ instructs hobbitlaunch not to run this task unless the task defined by the NEEDS keyword is already running. This is used e.g. to delay the start of some application until the needed daemons have been started. The task that must be running is defined by its \textbf{key}
+. 
+
+
+  The \textbf{GROUP}
+ keyword can be used to limit the number of tasks that may run simultaneously. E.g. if you are generating multiple pagesets of webpages, you dont want them to run at the same time. Putting them into a GROUP will cause hobbitlaunch to delay the start of new tasks, so that only one task will run per group. You can change the limit by defining the group before the tasks, with a ``GROUP groupname maxtasks'' line. 
+
+
+  The \textbf{INTERVAL}
+ keyword defines how often this command is executed. The example shows a command that runs every 5 minutes. If no interval is given, the task is only run once - this is useful for tasks that run continually as daemons - although if the task stops for some reason, then hobbitlaunch will attempt to restart it. Intervals can be specified in seconds (if you just put a number there), or in minutes (5m), hours (2h), or days (1d). 
+
+
+  The \textbf{ENVFILE}
+ setting points to a file with definitions of environment variables. Before running the task, hobbitlaunch will setup all of the environment variables listed in this file. Since this is a per-task setting, you can use the same hobbitlaunch instance to run e.g. both the server- and client-side Hobbit tasks. If this option is not present, then the environment defined to hobbitlaunch is used. 
+
+
+  The \textbf{ENVAREA}
+ setting modifies which environment variables are loaded, by picking up the ones that are defined for this specific ``area''. See \emph{hobbitserver.cfg(5)}
+ for information about environment areas. 
+
+
+  The \textbf{LOGFILE}
+ setting defines a logfile for the task. hobbitlaunch will start the task with stdout and stderr redirected to this file. If this option is not present, then the output goes to the same location as the hobbitlaunch output. 
+
+
+  
+\section{SEE ALSO}
+hobbitlaunch(8), hobbitd(8), hobbit(7) 
+
+ 
+
+
+  
+ 
+\section{Index}
+\begin{description}
+\item[NAME]
+\item[SYNOPSIS]
+\item[DESCRIPTION]
+\item[FILE FORMAT]
+\item[SEE ALSO]
+
+\end{description}
+ 
+ This document was created by man2html, using the manual pages. 
+ Time: 16:21:46 GMT, January 11, 2008 
+

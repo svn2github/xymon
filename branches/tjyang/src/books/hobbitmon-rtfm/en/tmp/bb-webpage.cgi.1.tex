@@ -1,0 +1,35 @@
+\chapter{BB-WEBPAGE}
+
+\section{{NAME}
+ bb-webpage - Utility to show a webpage using header and footer  \section{SYNOPSIS}
+\textbf{bb-webpage [options]}
+
+
+  
+\section{DESCRIPTION}
+\textbf{bb-webpage}
+ is a tool to generate a webpage in the Hobbit style, with a standard header- and footer as well as a Hobbit background. The data to present on the webpage, apart from the header and footer, are passed to bb-webpage in stdin. The generated webpage is printed to stdout. 
+
+  
+\section{OPTIONS}
+\begin{description}
+\item[--env=FILENAME] Loads the environment defined in FILENAME before executing the CGI script. 
+
+ 
+
+\item[--hffile=PREFIX] Use the header- and footer-files in \$BBHOME/web/PREFIX\_header and PREFIX\_footer. If not specified, bb\_header and bb\_footer are used. 
+
+ 
+
+\item[--color=COLOR] Set the background color of the generated webpage to COLOR. Default: Blue 
+
+ 
+
+\item[--debug] Enable debugging output. 
+
+ 
+\end{description}
+ \section{SEE ALSO}
+hobbit(7) 
+
+ 

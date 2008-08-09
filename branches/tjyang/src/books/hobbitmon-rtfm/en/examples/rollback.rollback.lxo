@@ -1,0 +1,12 @@
+$ \textbf{hg rollback}
+rolling back last transaction
+$ \textbf{hg tip}
+changeset:   0:cafcca658d50
+tag:         tip
+user:        Bryan O'Sullivan <bos@serpentine.com>
+date:        Mon Aug 04 12:53:30 2008 +0000
+summary:     First commit
+
+$ \textbf{hg status}
+M a
+? b

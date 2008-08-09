@@ -1,0 +1,78 @@
+
+
+
+
+\chapter{HOBBITFETCH}
+
+\section{HOBBITFETCH}
+ Section: Maintenance Commands (8) 
+Updated: Version Exp: 11 Jan 2008 
+Index Return to Main Contents 
+ \section{NAME}
+ hobbitfetch - fetch client data from passive clients  \section{SYNOPSIS}
+\textbf{hobbitfetch [--server=HOBBIT.SERVER.IP] [options]}
+
+
+  
+\section{DESCRIPTION}
+ This utility is used to collect data from Hobbit clients. 
+
+  Normally, Hobbit clients will themselves take care of sending all of their data directly to the Hobbit server. In that case, you do not need this utility at all. However, in some network setups clients may be prohibited from establishing a connection to an external server such as the Hobbit server, due to firewall policies. In such a setup you can configure the client to store all of the client data locally by enabling the \emph{msgcache(8)}
+ utility on the client, and using \textbf{hobbitfetch}
+ on the Hobbit server to collect data from the clients. 
+
+
+  hobbitfetch will only collect data from clients that have the \textbf{pulldata}
+ tag listed in the \emph{bb-hosts(5)}
+ file. The IP-address listed in the bb-hosts file must be correct, since this is the IP-address where hobbitfetch will attempt to contact the client. If the msgcache daemon is running on a non-standard IP-address or portnumber, you can specify the portnumber as in \textbf{pulldata=192.168.1.2:8084}
+ for contacting the msgcache daemon using IP 192.168.1.2 port 8084. If the IP-address is omitted, the default IP in the bb-hosts file is used. If the port number is omitted, the portnumber from the BBPORT setting in \emph{hobbitserver.cfg(5)}
+ is used (normally, this is port 1984). 
+
+
+  
+\section{OPTIONS}
+\begin{description}
+\item[--server=HOBBIT.SERVER.IP] Defines the IP address of the Hobbit server where the collected client messages are forwarded to. By default, messages are sent to the loopback address 127.0.0.1, i.e. to a Hobbit server running on the same host as hobbitfetch. 
+
+ 
+
+\item[--interval=N] Sets the interval (in seconds) between polls of a client. Default: 60 seconds. 
+
+ 
+
+\item[--id=N] Used when you have a setup with multiple Hobbit servers. In that case, you must run hobbitfetch on each of the Hobbit servers, with hobbitfetch instance using a different value of N. This allows several Hobbit servers to pick up data from the clients running msgcache, and msgcache can distinguish between which messages have already been forwarded to which server.  
+ N is a number in the range 1-31. 
+
+ 
+
+\item[--log-interval=N] Limit how often hobbitfetch will log problems with fetching data from a host, in seconds. Default: 900 seconds (15 minutes). This is to prevent a host that is down or where msgcache has not been started from flooding the hobbitfetch logs. Note that this is ignored when debugging is enabled. 
+
+ 
+
+\item[--debug] Enable debugging output. 
+
+ 
+
+
+\end{description}
+ \section{SEE ALSO}
+msgcache(8), hobbitd(8), hobbit(7) 
+
+ 
+
+
+  
+ 
+\section{Index}
+\begin{description}
+\item[NAME]
+\item[SYNOPSIS]
+\item[DESCRIPTION]
+\item[OPTIONS]
+\item[SEE ALSO]
+
+\end{description}
+ 
+ This document was created by man2html, using the manual pages. 
+ Time: 16:21:47 GMT, January 11, 2008 
+

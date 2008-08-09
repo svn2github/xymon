@@ -1,0 +1,74 @@
+
+
+
+
+\chapter{HOBBIT-NKEDIT.CGI}
+
+\section{HOBBIT-NKEDIT.CGI}
+ Section: User Commands (1) 
+Updated: Version Exp: 11 Jan 2008 
+Index Return to Main Contents 
+ \section{NAME}
+ hobbit-nkedit.cgi - Hobbit Critical Systems view CGI  \section{SYNOPSIS}
+\textbf{hobbit-nkedit.cgi}
+
+
+  
+\section{DESCRIPTION}
+\textbf{hobbit-nkedit.cgi}
+ is invoked as a CGI script via the hobbit-nkedit.sh CGI wrapper. 
+
+  hobbit-nkedit.cgi is a web-based editor for the \emph{hobbit-nkview.cfg(5)}
+ file, which is used to configure the Hobbit ``Critical Systems'' view. 
+
+
+  A detailed description of how to use the editor is provided in the Hobbit Web documentation, available from the ``Help'' -$>$ ``Critical Systems'' link on the Hobbit website. 
+
+
+  
+\section{SECURITY}
+ Access to this CGI script should be restricted through access controls in your webserver. Editing the Critical Systems View configuration will impact the monitoring of your site. 
+
+  
+\section{OPTIONS}
+\begin{description}
+\item[--config=FILENAME] Name of the Critical Systems View configuration file. The default is hobbit-nkview.cfg in the \$BBHOME/etc/ directory. 
+
+ 
+
+\item[--env=FILENAME] Loads the environment defined in FILENAME before executing the CGI script. 
+
+ 
+
+\item[--area=NAME] Load environment variables for a specific area. NB: if used, this option must appear before any --env=FILENAME option. 
+
+ 
+
+\item[--debug] Enables debugging output. 
+
+ 
+
+
+\end{description}
+ \section{SEE ALSO}
+hobbit-nkview.cgi(1), hobbit(7) 
+
+ 
+
+
+  
+ 
+\section{Index}
+\begin{description}
+\item[NAME]
+\item[SYNOPSIS]
+\item[DESCRIPTION]
+\item[SECURITY]
+\item[OPTIONS]
+\item[SEE ALSO]
+
+\end{description}
+ 
+ This document was created by man2html, using the manual pages. 
+ Time: 16:21:47 GMT, January 11, 2008 
+

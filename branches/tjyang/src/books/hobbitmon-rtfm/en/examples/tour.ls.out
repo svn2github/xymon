@@ -1,0 +1,4 @@
+$ \textbf{ls -l}
+
+$ \textbf{ls hello}
+ls: hello: No such file or directory

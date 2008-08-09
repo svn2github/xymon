@@ -1,0 +1,107 @@
+
+
+
+
+\chapter{HOBBITD\_FILESTORE}
+
+\section{HOBBITD\_FILESTORE}
+ Section: Maintenance Commands (8) 
+Updated: Version Exp: 11 Jan 2008 
+Index Return to Main Contents 
+ \section{NAME}
+ hobbitd\_filestore - hobbitd worker module for storing Hobbit data  \section{SYNOPSIS}
+\textbf{hobbitd\_channel --channel=status hobbitd\_filestore --status [options]}
+ 
+\textbf{hobbitd\_channel --channel=data hobbitd\_filestore --data [options]}
+ 
+\textbf{hobbitd\_channel --channel=notes hobbitd\_filestore --notes [options]}
+ 
+\textbf{hobbitd\_channel --channel=enadis hobbitd\_filestore --enadis [options]}
+
+
+  
+\section{DESCRIPTION}
+ hobbitd\_filestore is a worker module for hobbitd, and as such it is normally run via the \emph{hobbitd\_channel(8)}
+ program. It receives hobbitd messages from a hobbitd channel via stdin, and stores these in the filesystem in a manner that is compatible with the Big Brother daemon, bbd. 
+
+  This program can be started multiple times, if you want to store messages for more than one channel. 
+
+
+  
+\section{OPTIONS}
+\begin{description}
+\item[--status] Incoming messages are ``status'' messages, they will be stored in the \$BBLOGS/ directory. If you are using \emph{hobbit(7)}
+ throughout your Hobbit server, you will not need to run this module to save status messages, unless you have a third-party add-on that reads the status-logs directly. This module is NOT needed to get trend graphs, you should run the \emph{hobbitd\_rrd(8)}
+ module instead. 
+
+ 
+
+\item[--data] Incoming messages are ``data'' messages, they will be stored in the \$BBDATA directory. This module is not needed, unless you have a third-party module that processes the data-files. This module is NOT needed to get trend graphs, you should run the \emph{hobbitd\_rrd(8)}
+ module instead. 
+
+ 
+
+\item[--notes] Incoming messages are ``notes'' messages, they will be stored in the \$BBNOTES directory. This modules is only needed if you want to allow people to remotely update the notes-files available on the Hobbit webpages. 
+
+ 
+
+\item[--enadis] Incoming messages are enable/disable messages, they will update files in the \$BBDISABLED directory. This is only needed if you have third-party add-ons that use these files. 
+
+ 
+
+\item[--dir=DIRECTORY] Overrides the default output directory. 
+
+ 
+
+\item[--html] Used together with ``--status''. Tells hobbitd\_filestore to also save an HTML version of the status-log. Should not be used unless you must run with ``BBLOGSTATUS=static''. 
+
+ 
+
+\item[--htmldir=DIRECTORY] The directory where HTML-versions of the status logs are stored. Default: \$BBHTML 
+
+ 
+
+\item[--htmlext=.EXT] Set the filename extension for generated HTML files. By default, HTML files are saved with a ``.html'' extension. 
+
+ 
+
+\item[--multigraphs=TEST1[,TEST2]] This causes hobbitd\_filestore to generate HTML status pages with links to service graphs that are split up into multiple images, with at most 5 graphs per image. If not specified, only the ``disk'' status is split up this way. 
+
+ 
+
+\item[--only=test[,test,test]] Save status messages only for the listed set of tests. This can be useful if you have an external script that needs to parse some of the status logs, but you do not want to save all status logs. 
+
+ 
+
+\item[--debug] Enable debugging output. 
+
+ 
+
+
+\end{description}
+ \section{FILES}
+ This module does not rely on any configuration files. 
+
+  
+\section{SEE ALSO}
+hobbitd\_channel(8), hobbitd\_rrd(8), hobbitd(8), hobbit(7) 
+
+ 
+
+
+  
+ 
+\section{Index}
+\begin{description}
+\item[NAME]
+\item[SYNOPSIS]
+\item[DESCRIPTION]
+\item[OPTIONS]
+\item[FILES]
+\item[SEE ALSO]
+
+\end{description}
+ 
+ This document was created by man2html, using the manual pages. 
+ Time: 16:21:46 GMT, January 11, 2008 
+

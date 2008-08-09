@@ -1,0 +1,67 @@
+
+
+
+
+\chapter{BBRETEST-NET.SH}
+
+\section{BBRETEST-NET.SH}
+ Section: User Commands (1) 
+Updated: Version Exp: 11 Jan 2008 
+Index Return to Main Contents 
+ \section{NAME}
+ bbretest-net.sh - Hobbit network re-test tool  \section{SYNOPSIS}
+\textbf{bbretest-net.sh}
+
+
+  
+\section{DESCRIPTION}
+\textbf{bbretest-net.sh}
+ is an extension script for Hobbit that runs on the network test server. It picks up the failing network tests executed by the \emph{bbtest-net(1)}
+ program, and repeats these tests with a faster test cycle than the normal bbtest-net schedule. This means that when the server recovers and the network service becomes available again, this is detected quicker resulting in less reported downtime. 
+
+  Only tests whose first failure occurred within 30 minutes are included in the tests that are run by bbretest-net.sh. The 30 minute limit is there to avoid hosts that are down for longer periods of time to bog down bbretest-net.sh. You can change this limit with the ``--frequenttestlimit=SECONDS'' when you run bbtest-net. 
+
+
+ 
+
+
+  
+\section{INSTALLATION}
+ This script runs by default from your \emph{hobbitlaunch.cfg(5)}
+ file. 
+
+ 
+
+
+  
+\section{FILES}
+\begin{description}
+\item[\$BBTMP/TESTNAME.LOCATION.status] Temporary status file managed by bbtest-net with status of tests that have currently failed. 
+\item[\$BBTMP/frequenttests.LOCATION] Temporary file managed by bbtest-net with the hostnames that bbretest-net.sh should test. 
+
+ 
+
+
+\end{description}
+ \section{SEE ALSO}
+bbtest-net(1), hobbit(7), hobbitlaunch.cfg(5) 
+
+ 
+
+
+  
+ 
+\section{Index}
+\begin{description}
+\item[NAME]
+\item[SYNOPSIS]
+\item[DESCRIPTION]
+\item[INSTALLATION]
+\item[FILES]
+\item[SEE ALSO]
+
+\end{description}
+ 
+ This document was created by man2html, using the manual pages. 
+ Time: 16:21:46 GMT, January 11, 2008 
+

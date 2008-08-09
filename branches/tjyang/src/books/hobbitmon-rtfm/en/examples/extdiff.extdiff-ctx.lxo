@@ -1,0 +1,11 @@
+$ \textbf{hg extdiff -o -NprcC5}
+making snapshot of 1 files from rev a9fa7aa65338
+making snapshot of 1 files from working dir
+diff -NprcC5 a.a9fa7aa65338/myfile a/myfile
+*** a.a9fa7aa65338/myfile	Mon Aug  4 12:53:23 2008
+--- a/myfile	Mon Aug  4 12:53:23 2008
+***************
+*** 1 ****
+--- 1,2 ----
+  The first line.
++ The second line.
