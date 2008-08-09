@@ -1,6 +1,7 @@
-This branch of hobbitmon is released by T.J. Yang with following differences
+This branch of hobbitmon released by T.J. Yang with following differences
 
 1. hobbit client and hobbit server has their own account and group ids.
+   1.1  account and group ids are added/removed upon package installation/removal.  
 2. hobbbit client and server are packaged in TWW Hyper Package Manager format.
    2.1 /etc/init.d/hobbitmonclient42 to start and stop hobbitmon.
    2.2 install hobbitmon will create hobbitmon accounts and groups
