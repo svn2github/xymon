@@ -114,7 +114,7 @@ hg-id = $(shell hg parents --template '{node|short}, dated {date|isodate},\n')
 hg-version = $(shell hg version -q | \
 	     sed 's,.*(version \(unknown\|[a-f0-9+]*\)),\1,')
 
-all: pdf html 
+all: pdf 
 #all: html 
 
 pdf: pdf/${BOOKNAME}.pdf
