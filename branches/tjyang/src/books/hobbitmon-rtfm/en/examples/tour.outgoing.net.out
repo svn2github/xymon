@@ -1,2 +1,0 @@
-$ \textbf{hg outgoing http://hg.serpentine.com/tutorial/hello}
-abort: There is no Mercurial repository here (.hg not found)!

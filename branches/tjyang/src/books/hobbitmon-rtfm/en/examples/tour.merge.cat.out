@@ -1,4 +1,0 @@
-$ \textbf{cat hello.c}
-cat: hello.c: No such file or directory
-$ \textbf{cat ../my-hello/hello.c}
-cat: ../my-hello/hello.c: No such file or directory

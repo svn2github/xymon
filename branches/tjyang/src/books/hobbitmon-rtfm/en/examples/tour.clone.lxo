@@ -1,3 +1,0 @@
-$ \textbf{hg clone http://hg.serpentine.com/tutorial/hello}
-destination directory: hello
-abort: HTTP Error 500: Internal Server Error

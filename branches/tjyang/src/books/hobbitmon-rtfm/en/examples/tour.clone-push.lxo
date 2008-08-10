@@ -1,3 +1,0 @@
-$ \textbf{cd ..}
-$ \textbf{hg clone hello hello-push}
-abort: repository hello not found!

@@ -1,6 +1,0 @@
-$ \textbf{hg tip}
-abort: There is no Mercurial repository here (.hg not found)!
-$ \textbf{hg pull ../my-hello}
-abort: There is no Mercurial repository here (.hg not found)!
-$ \textbf{hg tip}
-abort: There is no Mercurial repository here (.hg not found)!

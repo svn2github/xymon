@@ -1,7 +1,0 @@
-$ \textbf{hg diff}
-diff -r a9fa7aa65338 myfile
---- a/myfile	Mon Aug 04 12:53:23 2008 +0000
-+++ b/myfile	Mon Aug 04 12:53:23 2008 +0000
-@@ -1,1 +1,2 @@ The first line.
- The first line.
-+The second line.

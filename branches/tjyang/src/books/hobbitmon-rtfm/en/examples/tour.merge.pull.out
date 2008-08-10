@@ -1,2 +1,0 @@
-$ \textbf{hg pull ../my-hello}
-abort: There is no Mercurial repository here (.hg not found)!

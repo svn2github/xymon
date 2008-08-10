@@ -1,4 +1,0 @@
-$ \textbf{cd hello}
-bash: cd: hello: No such file or directory
-$ \textbf{ls -a}
-.  ..  .bashrc	.hgrc

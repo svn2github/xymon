@@ -1,5 +1,0 @@
-$ \textbf{cd ..}
-$ \textbf{hg clone hello my-hello}
-abort: repository hello not found!
-$ \textbf{cd my-hello}
-bash: cd: my-hello: No such file or directory

@@ -1,5 +1,0 @@
-$ \textbf{echo 'commit.when = echo -n "date of commit: "; date' >> .hg/hgrc}
-$ \textbf{echo a >> a}
-$ \textbf{hg commit -m 'i have two hooks'}
-committed 3cb9ebfccd8432fdeb0264eb47f03d57370fc2a6
-date of commit: Mon Aug  4 12:53:24 GMT 2008

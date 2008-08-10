@@ -1,7 +1,0 @@
-$ \textbf{hg tip}
-changeset:   4:bcf5d10f06ed
-tag:         tip
-user:        Bryan O'Sullivan <bos@serpentine.com>
-date:        Mon Aug 04 12:53:31 2008 +0000
-summary:     Added tag v1.1 for changeset ea880f4aadd4
-

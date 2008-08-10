@@ -1,4 +1,0 @@
-$ \textbf{ls -l}
-
-$ \textbf{ls hello}
-ls: cannot access hello: No such file or directory
