@@ -241,6 +241,9 @@ upload: all
 tar: 
 	tar czvf /tmp/hobbit-rtfm.tgz  /home/tjyang/docs/hobbit-rtfm
 	sudo rsync -avz --delete /tmp/*.tgz /var/www/html/pdf
+svncheckin:
+	svn commit -m "Auto commit by Makefile"
+
 
 #perl -pi -e 's!\\hline!!' *.tex 
 #perl -pi -e 's!\\\\!!' *.tex 
