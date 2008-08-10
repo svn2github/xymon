@@ -133,7 +133,8 @@ define pdf
 	if grep 'Reference.*undefined' $(@:.pdf=.log); then exit 1; fi
 endef
 
-pdf/${BOOKNAME}.pdf: $(sources) $(image-pdf) examples
+#pdf/${BOOKNAME}.pdf: $(sources) $(image-pdf) examples
+pdf/${BOOKNAME}.pdf: $(sources) 
 	$(call pdf)
 
 
