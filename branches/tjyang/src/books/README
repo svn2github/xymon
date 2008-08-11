@@ -2,7 +2,7 @@ Following will be in hobbitmon developer FAQ in the future.
 
 How do I help improving the hobbitmon books ?
 
-1. Get an developer account from hobbitmon project admin(Henrik Stoner) to have svn write access.
+1. Get a developer account from hobbitmon project admin(Henrik Stoner) to have svn write access.
 2. check out hobbitmon source.
    2.1 books source in in hobbitmon branches.
    svn co https://hobbitmon.svn.sourceforge.net/svnroot/hobbitmon hobbitmon 
