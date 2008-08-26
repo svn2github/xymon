@@ -1489,7 +1489,7 @@ AC_OUTPUT
     \variable{BUG-REPORT-ADDRESS})}]~\\
   Mandatory Autoconf initialization.
 \item[\texttt{AC\_PREREQ(\variable{VERSION})}]~\\
-  Require a minimum Autoconf version.  E.g. \texttt{AC\_PREREQ([\autoconfver])}
+
 \item[\texttt{AC\_CONFIG\_SRCDIR(\variable{FILE})}]~\\
   A safety check.  \variable{FILE} should be a distributed source file,
   and this makes sure that \command{configure} is not run from outer
@@ -1797,8 +1797,6 @@ done
       \item[\texttt{-Wall}] Turn all warnings on.
       \item[\texttt{-Werror}] Report warnings as errors.
       \item[\texttt{foreign}] Relax some GNU standard requirements.
-      \item[\texttt{\automakever}]
-        Require a minimum version of \command{automake}.
       \item[\texttt{dist-bzip2}] Also create \texttt{tar.bz2} archives during
         \command{make dist} and \command{make distcheck}.
       \item[\texttt{tar-ustar}] Create tar archives using the ustar format.
@@ -3113,7 +3111,6 @@ hello_SOURCES = main.c say.c say.h
 AC_INIT([amhello], [3.0], [bug-report@address])
 AC_CONFIG_AUX_DIR([build-aux])
 AM_INIT_AUTOMAKE([-Wall -Werror foreign])
-\alert<1-2>{AM_GNU_GETTEXT_VERSION([\gettextver])}
 \alert<1,3>{AM_GNU_GETTEXT([external])}
 AC_PROG_CC
 AC_CONFIG_HEADERS([config.h])
@@ -3169,7 +3166,6 @@ You should run \command{gettextize}:
 \begin{semiverbatim}
 AC_INIT([amhello], [3.0], [bug-report@address])
 AC_CONFIG_AUX_DIR([build-aux])
-AM_GNU_GETTEXT_VERSION([\gettextver])
 AM_GNU_GETTEXT([external])
 AM_INIT_AUTOMAKE([-Wall -Werror foreign])
 AC_PROG_CC

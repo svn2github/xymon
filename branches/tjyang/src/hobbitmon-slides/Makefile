@@ -59,7 +59,7 @@ clean:
 	rm -rf 	*.{aux,log,nav,out,snm,toc,vrb} *~
 
 # WHAT: use svn to checkin the changes and updated pdf file.
-svncheckin: 
+svncheckin: all
 	svn commit -m "automatic checkin by Makefile,sorry for less informative reasons."
 
 # WHAT:  use "svn status" command  to display files are not committed.
