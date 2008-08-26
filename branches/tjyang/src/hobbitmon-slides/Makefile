@@ -29,7 +29,7 @@
 SUCCESS:=0
 ERROR:=1
 WARNING:=2
-
+PDFLATEX:=/usr/bin/pdflatex
 ## ---------------------------------- SCRIPT -----------------------------------
 ##
 
@@ -38,21 +38,21 @@ WARNING:=2
 all: slides 
 #all: slides checkin
 
-# WHAT: 
+# WHAT: slides in pdf format
 slides: hobbit-slides-developer.pdf  hobbit-slides-intro.pdf \
         hobbit-slides-sysadmin.pdf
 
 # WHAT: Hobbit Introduction Slides
 hobbit-slides-intro.pdf: hobbit-slides-intro.tex
-	pdflatex  hobbit-slides-intro.tex
+	${PDFLATEX}  hobbit-slides-intro.tex
 
 # WHAT: Hobbit Slides for Developer
 hobbit-slides-developer.pdf: hobbit-slides-developer.tex
-	pdflatex  hobbit-slides-developer.tex
+	${PDFLATEX}  hobbit-slides-developer.tex
 
 # WHAT: Hobbit Slides for System Administrators
 hobbit-slides-sysadmin.pdf: hobbit-slides-sysadmin.tex
-	pdflatex  hobbit-slides-sysadmin.tex
+	${PDFLATEX}  hobbit-slides-sysadmin.tex
 
 # WHAT: clean up all the unwanted files.
 clean:
