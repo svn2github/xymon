@@ -79,7 +79,7 @@ hobbit-slides-sysadmin.pdf: hobbit-slides-sysadmin.tex
 
 # WHAT: clean up all the unwanted files.
 clean:
-	rm -rf 	*.{aux,log,nav,out,snm,toc,vrb} *~
+	rm -rf 	*.{aux,log,nav,out,snm,toc,vrb,ps} *~
 
 # WHAT: use svn to checkin the changes and updated pdf file.
 svncheckin: all
