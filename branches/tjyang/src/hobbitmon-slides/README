@@ -4,6 +4,10 @@ hobbit-slides-intro.tex    : hobbitmon introduction slides.
 hobbit-slides-developer.tex: hobbitmon developement slides.
 hobbit-slides-sysadmin.tex : hobbitmon system administration.
 
+hobbit-slides-intro.txt    : hobbitmon introduction slides in text format.
+hobbit-slides-developer.txt: hobbitmon developement slides in text format.
+hobbit-slides-sysadmin.txt : hobbitmon system administration in text format.
+
 Usage: make
 Output example:
 
