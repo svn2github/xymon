@@ -1,223 +1,0 @@
-
-
-Intruduction of Hobbit System Monitoring
-
-Presentation Subtitle
-
-F. Author1 S. Another2
-
-1Hobbitmon Community
-
-Date / Occasion
-
-Author, Tyng-Jing Yang Short Paper Title
-
-Outline
-
-Author, Tyng-Jing Yang Short Paper Title Outline
-
-Author, Tyng-Jing Yang Short Paper Title Originated from Big BrotherSubtitles are optional.
-
-Use itemize a lot. Use very short sentences or short phrases.
-
-Author, Tyng-Jing Yang Short Paper Title
-
-Outline
-
-Author, Tyng-Jing Yang Short Paper Title Originated from Big BrotherSubtitles are optional.
-
-Use itemize a lot. Use very short sentences or short phrases.
-
-Author, Tyng-Jing Yang Short Paper Title
-
-Make Titles Informative.
-
-You can create overlays. . .Standard hobbit tests
-
-CPU load averageSystem uptime System clockMemory usage Swap usageFile system usage Process countsNetwork ports File attributesFile data Directory sizesLog file data using overlay specifications:First item.
-
-Second item.using the general
-
-uncover command:First item.
-
-Second item.Author, Tyng-Jing Yang Short Paper Title
-
-Make Titles Informative.
-
-You can create overlays. . .Standard hobbit tests
-
-CPU load averageSystem uptime System clockMemory usage Swap usageFile system usage Process countsNetwork ports File attributesFile data Directory sizesLog file data using overlay specifications:First item.
-
-Second item.using the general
-
-uncover command:First item.
-
-Second item.Author, Tyng-Jing Yang Short Paper Title
-
-Make Titles Informative.
-
-You can create overlays. . .Standard hobbit tests
-
-CPU load averageSystem uptime System clockMemory usage Swap usageFile system usage Process countsNetwork ports File attributesFile data Directory sizesLog file data using overlay specifications:First item.
-
-Second item.using the general
-
-uncover command:First item.
-
-Second item.Author, Tyng-Jing Yang Short Paper Title
-
-Make Titles Informative.
-
-You can create overlays. . .Standard hobbit tests
-
-CPU load averageSystem uptime System clockMemory usage Swap usageFile system usage Process countsNetwork ports File attributesFile data Directory sizesLog file data using overlay specifications:First item.
-
-Second item.using the general
-
-uncover command:First item.
-
-Second item.Author, Tyng-Jing Yang Short Paper Title
-
-Make Titles Informative.
-
-You can create overlays. . .Standard hobbit tests
-
-CPU load averageSystem uptime System clockMemory usage Swap usageFile system usage Process countsNetwork ports File attributesFile data Directory sizesLog file data using overlay specifications:First item.
-
-Second item.using the general
-
-uncover command:First item.
-
-Second item.Author, Tyng-Jing Yang Short Paper Title
-
-Make Titles Informative.
-
-You can create overlays. . .Standard hobbit tests
-
-CPU load averageSystem uptime System clockMemory usage Swap usageFile system usage Process countsNetwork ports File attributesFile data Directory sizesLog file data using overlay specifications:First item.
-
-Second item.using the general
-
-uncover command:First item.
-
-Second item.Author, Tyng-Jing Yang Short Paper Title
-
-Outline
-
-Author, Tyng-Jing Yang Short Paper Title Make Titles Informative. Use Uppercase Letters.Subtitles are optional.
-
-Use itemize a lot. Use very short sentences or short phrases.
-
-Author, Tyng-Jing Yang Short Paper Title
-
-Make Titles Informative.
-
-You can create overlays. . .
-
-using the pause command:
-
-CPU load average using overlay specifications:
-
-First item.Second item.
-
-using the general uncover command:
-
-First item.Second item.
-
-Author, Tyng-Jing Yang Short Paper Title
-
-Make Titles Informative.
-
-You can create overlays. . .
-
-using the pause command:
-
-CPU load average using overlay specifications:
-
-First item.Second item.
-
-using the general uncover command:
-
-First item.Second item.
-
-Author, Tyng-Jing Yang Short Paper Title
-
-Make Titles Informative.
-
-You can create overlays. . .
-
-using the pause command:
-
-CPU load average using overlay specifications:
-
-First item.Second item.
-
-using the general uncover command:
-
-First item.Second item.
-
-Author, Tyng-Jing Yang Short Paper Title
-
-Make Titles Informative.
-
-You can create overlays. . .
-
-using the pause command:
-
-CPU load average using overlay specifications:
-
-First item.Second item.
-
-using the general uncover command:
-
-First item.Second item.
-
-Author, Tyng-Jing Yang Short Paper Title
-
-Make Titles Informative.
-
-You can create overlays. . .
-
-using the pause command:
-
-CPU load average using overlay specifications:
-
-First item.Second item.
-
-using the general uncover command:
-
-First item.Second item.
-
-Author, Tyng-Jing Yang Short Paper Title
-
-Make Titles Informative.
-
-You can create overlays. . .
-
-using the pause command:
-
-CPU load average using overlay specifications:
-
-First item.Second item.
-
-using the general uncover command:
-
-First item.Second item.
-
-Author, Tyng-Jing Yang Short Paper Title
-
-Outline
-
-Author, Tyng-Jing Yang Short Paper Title Make Titles Informative.
-
-Author, Tyng-Jing Yang Short Paper Title Make Titles Informative.
-
-Author, Tyng-Jing Yang Short Paper Title Summary
-
-The first main message of your talk in one or two lines. The second main message of your talk in one or two lines. Perhaps a third message, but not more than that.
-
-Outlook
-
-Something you haven't solved.Something else you haven't solved.
-
-Author, Tyng-Jing Yang Short Paper Title
