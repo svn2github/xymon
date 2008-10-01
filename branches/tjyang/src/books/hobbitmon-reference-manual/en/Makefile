@@ -213,7 +213,7 @@ hg_id.tex: $(hg)
 	echo -n '$(hg-version)' > hg_id.tex
 
 clean: clean_slides
-	rm -rf dist html pdf \
+	rm -rf dist html pdf/* \
 		$(image-dot:%.dot=%.pdf) \
 		$(image-dot:%.dot=%.png) \
 		$(image-svg:%.svg=%.pdf) \
