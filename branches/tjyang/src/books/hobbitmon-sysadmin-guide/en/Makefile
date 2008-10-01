@@ -1,5 +1,5 @@
 # This makefile requires GNU make.
-BOOKNAME= hobbit-RTFM
+BOOKNAME= hobbitmon-sysadmin-guide
 sources := \
 	00book.tex \
 	99book.bib \
