@@ -1,5 +1,5 @@
 # This makefile requires GNU make.
-BOOKNAME= hobbitmon-sysadmin-guide
+BOOKNAME= hobbitmon-reference-manual
 sources := \
 	00book.tex \
 	99book.bib \
