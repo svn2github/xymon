@@ -24,9 +24,9 @@ Part I Hobbitmon Development Models 1 Current 2008 development
 
 Manually created configure and Makefile GNU developement model
 
-2 Package Use Cases
+2 New Hobbitmon Devevelopment Model
 
-GNU+TWW development model The Power User Point of View The Packager Point of View The Maintainer Point of View
+GNU Autotool model TWW's CPAM to complete GNU autotool The Packager Point of View The Maintainer Point of View
 
 3 The configure Process 4 Why We Need Tools
 
@@ -38,9 +38,9 @@ Current 2008 development Manually created configure and Makefile Manually create
 
 Manually created configure and Makefile GNU developement model
 
-2 Package Use Cases
+2 New Hobbitmon Devevelopment Model
 
-GNU+TWW development model The Power User Point of View The Packager Point of View The Maintainer Point of View
+GNU Autotool model TWW's CPAM to complete GNU autotool The Packager Point of View The Maintainer Point of View
 
 3 The configure Process 4 Why We Need Tools
 
@@ -128,9 +128,9 @@ Current 2008 development GNU developement model GNU developement model
 
 Manually created configure and Makefile GNU developement model
 
-2 Package Use Cases
+2 New Hobbitmon Devevelopment Model
 
-GNU+TWW development model The Power User Point of View The Packager Point of View The Maintainer Point of View
+GNU Autotool model TWW's CPAM to complete GNU autotool The Packager Point of View The Maintainer Point of View
 
 3 The configure Process 4 Why We Need Tools
 
@@ -266,9 +266,9 @@ New Hobbitmon Devevelopment Model GNU Autotool model GNU Autotool model
 
 Manually created configure and Makefile GNU developement model
 
-2 Package Use Cases
+2 New Hobbitmon Devevelopment Model
 
-GNU+TWW development model The Power User Point of View The Packager Point of View The Maintainer Point of View
+GNU Autotool model TWW's CPAM to complete GNU autotool The Packager Point of View The Maintainer Point of View
 
 3 The configure Process 4 Why We Need Tools
 
@@ -470,9 +470,9 @@ New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool TWW's CPAM
 
 Manually created configure and Makefile GNU developement model
 
-2 Package Use Cases
+2 New Hobbitmon Devevelopment Model
 
-GNU+TWW development model The Power User Point of View The Packager Point of View The Maintainer Point of View
+GNU Autotool model TWW's CPAM to complete GNU autotool The Packager Point of View The Maintainer Point of View
 
 3 The configure Process 4 Why We Need Tools
 
@@ -850,9 +850,9 @@ New Hobbitmon Devevelopment Model The Packager Point of View The Packager Point 
 
 Manually created configure and Makefile GNU developement model
 
-2 Package Use Cases
+2 New Hobbitmon Devevelopment Model
 
-GNU+TWW development model The Power User Point of View The Packager Point of View The Maintainer Point of View
+GNU Autotool model TWW's CPAM to complete GNU autotool The Packager Point of View The Maintainer Point of View
 
 3 The configure Process 4 Why We Need Tools
 
@@ -902,9 +902,9 @@ New Hobbitmon Devevelopment Model The Maintainer Point of View The Maintainer Po
 
 Manually created configure and Makefile GNU developement model
 
-2 Package Use Cases
+2 New Hobbitmon Devevelopment Model
 
-GNU+TWW development model The Power User Point of View The Packager Point of View The Maintainer Point of View
+GNU Autotool model TWW's CPAM to complete GNU autotool The Packager Point of View The Maintainer Point of View
 
 3 The configure Process 4 Why We Need Tools
 
@@ -1024,9 +1024,9 @@ The configure Process The configure Process
 
 Manually created configure and Makefile GNU developement model
 
-2 Package Use Cases
+2 New Hobbitmon Devevelopment Model
 
-GNU+TWW development model The Power User Point of View The Packager Point of View The Maintainer Point of View
+GNU Autotool model TWW's CPAM to complete GNU autotool The Packager Point of View The Maintainer Point of View
 
 3 The configure Process 4 Why We Need Tools
 
@@ -1110,21 +1110,21 @@ Makefile src/ Makefile config.h config.cache
 
 T.J. Yang Hobbitmon Development October 2, 2008 34 / 161
 
-Why We Need Tools Why We Need Tools
+Why Hobbitmon developers Need autotools Why Hobbitmon developers Need autotools
 
 1 Current 2008 development
 
 Manually created configure and Makefile GNU developement model
 
-2 Package Use Cases
+2 New Hobbitmon Devevelopment Model
 
-GNU+TWW development model The Power User Point of View The Packager Point of View The Maintainer Point of View
+GNU Autotool model TWW's CPAM to complete GNU autotool The Packager Point of View The Maintainer Point of View
 
 3 The configure Process 4 Why We Need Tools
 
 T.J. Yang Hobbitmon Development October 2, 2008 35 / 161
 
-Why We Need Tools Why We Need Tools
+Why Hobbitmon developers Need autotools Why We Need Tools
 
 If you try to mimic this build system by hand, you'll discover that
 
@@ -1140,7 +1140,7 @@ Tools to create the GNU Build System from simple instructions. A central place w
 
 T.J. Yang Hobbitmon Development October 2, 2008 36 / 161
 
-Why We Need Tools Why We Need Tools
+Why Hobbitmon developers Need autotools Why We Need Tools
 
 If you try to mimic this build system by hand, you'll discover that
 
@@ -1156,7 +1156,7 @@ Tools to create the GNU Build System from simple instructions. A central place w
 
 T.J. Yang Hobbitmon Development October 2, 2008 36 / 161
 
-Why We Need Tools Why We Need Tools
+Why Hobbitmon developers Need autotools Why We Need Tools
 
 If you try to mimic this build system by hand, you'll discover that
 
@@ -1172,7 +1172,7 @@ Tools to create the GNU Build System from simple instructions. A central place w
 
 T.J. Yang Hobbitmon Development October 2, 2008 36 / 161
 
-Why We Need Tools Why We Need Tools
+Why Hobbitmon developers Need autotools Why We Need Tools
 
 If you try to mimic this build system by hand, you'll discover that
 
@@ -1188,7 +1188,7 @@ Tools to create the GNU Build System from simple instructions. A central place w
 
 T.J. Yang Hobbitmon Development October 2, 2008 36 / 161
 
-Why We Need Tools Why We Need Tools
+Why Hobbitmon developers Need autotools Why We Need Tools
 
 If you try to mimic this build system by hand, you'll discover that
 
@@ -1206,7 +1206,7 @@ A central place where fixes and improvements are made. (A bug-fix for a portabil
 
 T.J. Yang Hobbitmon Development October 2, 2008 36 / 161
 
-Why We Need Tools Why We Need Tools
+Why Hobbitmon developers Need autotools Why We Need Tools
 
 If you try to mimic this build system by hand, you'll discover that
 
