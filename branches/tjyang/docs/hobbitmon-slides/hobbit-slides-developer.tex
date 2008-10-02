@@ -114,7 +114,7 @@
 \title{Hobbitmon Development}
 \author[T.J. Yang]{Tyng-Jing Yang \\\url{tj_yang@hotmail.com}}
 \date{\today}
-\subject{Introduction to Hobbit development using TWW Hyper Package Mangement System and GNU Autotools}
+\subject{Introduction to Hobbit development using GNU Autotools plus TWW Hyper Package Mangement System}
 \keywords{autoconf, automake, build system, tutorial, introduction, presentation, TWW, HPMS,doxygen,vmware}
 
 \newcommand{\mypart}[1]{\part{#1}\frame{\partpage \tableofcontents}}
@@ -129,10 +129,12 @@
 
 This slides present a series of hobbbit development topics. These topics include coding standard,compilation and test farm,software packaging,software distribution and auto update for hobbitmon supported OS platforms.
 
+
+
 \bigskip
 
 The latest version of this document can be retrieved from\\
-{\small \url{http://hobbitmon.svn.sourceforge.net/viewvc/hobbitmon/branches/tjyang/trunk/docs/books/hobbit-slides/hobbit-slides-developer.pdf}}
+{\small \url{http://hobbitmon.svn.sourceforge.net/viewvc/hobbitmon/branches/tjyang/docs/hobbitmon-slides/hobbit-slides-developer.pdf}}
 
 \bigskip
 
@@ -162,26 +164,18 @@ Copyright \copyright{} 2008  Tyng-Jing Yang\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\mypart{Hobbitmon development models}
+\mypart{Hobbitmon Development Models}
 
 \section{Current 2008 development}
 
-\mysubsection{Portable Packages}
+\mysubsection{Manually created configure and Makefile}
 
 \begin{frame}
-\frametitle{Sources of Non-Portability in C}
+\frametitle{Pros}
 
-Consider C functions...
+The benifits of using homegrown configure and makefile ...
 \begin{itemize}
-\item that do not exist everywhere (e.g., \texttt{strtod()})
-\item that have different names (e.g., \texttt{strchr()} vs. \texttt{index()})
-\item that have varying prototypes\\
-      (e.g., \texttt{int setpgrp(void);} vs.  \texttt{int setpgrp(int, int);})
-\item that can behave differently (e.g., \texttt{malloc(0);})
-\item that might require other libraries\\
-      (is \texttt{pow() in \filename{libm.so} or in \filename{libc.so}?)}
-\item that can be defined in different headers\\
-      (\filename{string.h} vs. \filename{strings.h} vs. \filename{memory.h})
+\item No Need to learn GNU's autotools.
 \end{itemize}
 
 \medskip
@@ -191,11 +185,9 @@ How should a package deal with those?
 \end{frame}
 
 \begin{frame}
-\frametitle{Possible Solutions}
+\frametitle{Cons of manuall created configure and Makefile}
 \begin{itemize}
-\item Slice the code with lots of \texttt{\#if}/\texttt{\#else}
-\item Create substitution macros
-\item Create substitution functions
+\item Doesn't comply to GNU coding standard
 \end{itemize}
 
 \uncover<2>{The latter two are to be preferred.}

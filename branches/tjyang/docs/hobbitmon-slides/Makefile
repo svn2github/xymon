@@ -1,5 +1,5 @@
 # -----------------------------------------------------------------------------
-#     M A K E F I L E     S C R I P T   S P E C I F I C A T I O N
+#                     M A K E F I L E     S P E C I F I C A T I O N
 # -----------------------------------------------------------------------------
 # NAME
 #       Makefile 
@@ -36,9 +36,11 @@ PS2TXT:=/usr/bin/ps2ascii
 ##
 
 # WHAT: make slides and check in the modified files.
+#all: pdf svncheckin
 
-all: txt
-#all: slides checkin
+# text file for prework 
+all: txt 
+
 
 
 # WHAT: slides in text format
@@ -79,11 +81,11 @@ hobbit-slides-sysadmin.pdf: hobbit-slides-sysadmin.tex
 
 # WHAT: clean up all the unwanted files.
 clean:
-	rm -rf 	*.{aux,log,nav,out,snm,toc,vrb,ps} *~
+	rm -rf 	*.{aux,log,nav,out,snm,toc,vrb,ps,txt} *~
 
 # WHAT: use svn to checkin the changes and updated pdf file.
 svncheckin: all
-	svn commit -m "automatic checkin by Makefile,sorry for less informative reasons."
+	svn commit -m "automatic checkin, use ViewVC to see details."
 
 # WHAT:  use "svn status" command  to display files are not committed.
 svnstatus: clean
