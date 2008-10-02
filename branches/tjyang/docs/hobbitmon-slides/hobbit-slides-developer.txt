@@ -6,15 +6,17 @@ This slides present a series of hobbbit development topics. These topics include
 
 The latest version of this document can be retrieved from http://hobbitmon.svn.sourceforge.net/viewvc/hobbitmon/branches/ tjyang/docs/hobbitmon-slides/hobbit-slides-developer.pdf
 
-Please mail me corrections and suggestions about this document at tj_yang@hotmail.com.
+Please mail me corrections and suggestions about this document at hobbit@hswn.dk.
 
 T.J. Yang Hobbitmon Development October 2, 2008 1 / 161
 
 Title Page Hobbitmon Development
 
-Tyng-Jing Yang tj_yang@hotmail.com
+Hobbitmon Community
 
-October 2, 2008 Copyright cfl 2008 Tyng-Jing Yang http://creativecommons.org/licenses/by-sa/2.0/
+hobbit@hswn.dk
+
+October 2, 2008 Copyright cfl 2008 Hobbitmon Community http://creativecommons.org/licenses/by-sa/2.0/
 
 T.J. Yang Hobbitmon Development October 2, 2008 2 / 161
 
@@ -258,7 +260,7 @@ coding style configuration Makefile conventions etc.
 
 T.J. Yang Hobbitmon Development October 2, 2008 13 / 161
 
-Package Use Cases GNU+TWW development model GNU+TWW development model
+New Hobbitmon Devevelopment Model GNU Autotool model GNU Autotool model
 
 1 Current 2008 development
 
@@ -272,7 +274,7 @@ GNU+TWW development model The Power User Point of View The Packager Point of Vie
 
 T.J. Yang Hobbitmon Development October 2, 2008 14 / 161
 
-Package Use Cases GNU+TWW development model Standard Installation Procedure
+New Hobbitmon Devevelopment Model GNU Autotool model Standard Installation Procedure
 
 ~ % tar zxf amhello-1.0.tar.gz
 
@@ -280,7 +282,7 @@ Package Use Cases GNU+TWW development model Standard Installation Procedure
 
 T.J. Yang Hobbitmon Development October 2, 2008 15 / 161
 
-Package Use Cases GNU+TWW development model Standard Installation Procedure
+New Hobbitmon Devevelopment Model GNU Autotool model Standard Installation Procedure
 
 ~ % tar zxf amhello-1.0.tar.gz ~ % cd amhello-1.0
 
@@ -288,7 +290,7 @@ Package Use Cases GNU+TWW development model Standard Installation Procedure
 
 T.J. Yang Hobbitmon Development October 2, 2008 15 / 161
 
-Package Use Cases GNU+TWW development model Standard Installation Procedure
+New Hobbitmon Devevelopment Model GNU Autotool model Standard Installation Procedure
 
 ~ % tar zxf amhello-1.0.tar.gz ~ % cd amhello-1.0 ~/amhello-1.0 % ./configure ...
 
@@ -296,7 +298,7 @@ Package Use Cases GNU+TWW development model Standard Installation Procedure
 
 T.J. Yang Hobbitmon Development October 2, 2008 15 / 161
 
-Package Use Cases GNU+TWW development model Standard Installation Procedure
+New Hobbitmon Devevelopment Model GNU Autotool model Standard Installation Procedure
 
 ~ % tar zxf amhello-1.0.tar.gz ~ % cd amhello-1.0 ~/amhello-1.0 % ./configure ... ~/amhello-1.0 % make ...
 
@@ -304,7 +306,7 @@ Package Use Cases GNU+TWW development model Standard Installation Procedure
 
 T.J. Yang Hobbitmon Development October 2, 2008 15 / 161
 
-Package Use Cases GNU+TWW development model Standard Installation Procedure
+New Hobbitmon Devevelopment Model GNU Autotool model Standard Installation Procedure
 
 ~ % tar zxf amhello-1.0.tar.gz ~ % cd amhello-1.0 ~/amhello-1.0 % ./configure ... ~/amhello-1.0 % make ... ~/amhello-1.0 % make check ...
 
@@ -312,7 +314,7 @@ Package Use Cases GNU+TWW development model Standard Installation Procedure
 
 T.J. Yang Hobbitmon Development October 2, 2008 15 / 161
 
-Package Use Cases GNU+TWW development model Standard Installation Procedure
+New Hobbitmon Devevelopment Model GNU Autotool model Standard Installation Procedure
 
 ~ % tar zxf amhello-1.0.tar.gz ~ % cd amhello-1.0 ~/amhello-1.0 % ./configure ... ~/amhello-1.0 % make ... ~/amhello-1.0 % make check ... ~/amhello-1.0 % su Password:
 
@@ -320,7 +322,7 @@ Package Use Cases GNU+TWW development model Standard Installation Procedure
 
 T.J. Yang Hobbitmon Development October 2, 2008 15 / 161
 
-Package Use Cases GNU+TWW development model Standard Installation Procedure
+New Hobbitmon Devevelopment Model GNU Autotool model Standard Installation Procedure
 
 ~ % tar zxf amhello-1.0.tar.gz ~ % cd amhello-1.0 ~/amhello-1.0 % ./configure ... ~/amhello-1.0 % make ... ~/amhello-1.0 % make check ... ~/amhello-1.0 % su Password: /home/adl/amhello-1.0 # make install ...
 
@@ -328,7 +330,7 @@ Package Use Cases GNU+TWW development model Standard Installation Procedure
 
 T.J. Yang Hobbitmon Development October 2, 2008 15 / 161
 
-Package Use Cases GNU+TWW development model Standard Installation Procedure
+New Hobbitmon Devevelopment Model GNU Autotool model Standard Installation Procedure
 
 ~ % tar zxf amhello-1.0.tar.gz ~ % cd amhello-1.0 ~/amhello-1.0 % ./configure ... ~/amhello-1.0 % make ... ~/amhello-1.0 % make check ... ~/amhello-1.0 % su Password: /home/adl/amhello-1.0 # make install ... /home/adl/amhello-1.0 # exit
 
@@ -336,13 +338,13 @@ Package Use Cases GNU+TWW development model Standard Installation Procedure
 
 T.J. Yang Hobbitmon Development October 2, 2008 15 / 161
 
-Package Use Cases GNU+TWW development model Standard Installation Procedure
+New Hobbitmon Devevelopment Model GNU Autotool model Standard Installation Procedure
 
 ~ % tar zxf amhello-1.0.tar.gz ~ % cd amhello-1.0 ~/amhello-1.0 % ./configure ... ~/amhello-1.0 % make ... ~/amhello-1.0 % make check ... ~/amhello-1.0 % su Password: /home/adl/amhello-1.0 # make install ... /home/adl/amhello-1.0 # exit ~/amhello-1.0 % make installcheck ...
 
 T.J. Yang Hobbitmon Development October 2, 2008 15 / 161
 
-Package Use Cases GNU+TWW development model Standard Makefile Targets
+New Hobbitmon Devevelopment Model GNU Autotool model Standard Makefile Targets
 
 `make all' Build programs, libraries, documentation, etc.
 
@@ -368,7 +370,7 @@ supported.
 
 `make dist' Create PACKAGE-VERSION.tar.gz . T.J. Yang Hobbitmon Development October 2, 2008 16 / 161
 
-Package Use Cases GNU+TWW development model Standard File System Hierarchy
+New Hobbitmon Devevelopment Model GNU Autotool model Standard File System Hierarchy
 
 Directory variable Default value prefix /usr/ local
 
@@ -384,7 +386,7 @@ datadir datarootdir mandir datarootdir/man infodir datarootdir/info ...
 
 T.J. Yang Hobbitmon Development October 2, 2008 17 / 161
 
-Package Use Cases GNU+TWW development model Standard File System Hierarchy
+New Hobbitmon Devevelopment Model GNU Autotool model Standard File System Hierarchy
 
 Directory variable Default value prefix /usr/ local
 
@@ -400,7 +402,7 @@ datadir datarootdir mandir datarootdir/man infodir datarootdir/info ...
 
 T.J. Yang Hobbitmon Development October 2, 2008 17 / 161
 
-Package Use Cases GNU+TWW development model Standard File System Hierarchy
+New Hobbitmon Devevelopment Model GNU Autotool model Standard File System Hierarchy
 
 Directory variable Default value prefix /usr/ local
 
@@ -414,7 +416,7 @@ datadir datarootdir mandir datarootdir/man infodir datarootdir/info ...
 
 ~/amhello-1.0 % make install T.J. Yang Hobbitmon Development October 2, 2008 17 / 161
 
-Package Use Cases GNU+TWW development model Standard File System Hierarchy
+New Hobbitmon Devevelopment Model GNU Autotool model Standard File System Hierarchy
 
 Directory variable Default value prefix /usr/ local
 
@@ -428,7 +430,7 @@ datadir datarootdir mandir datarootdir/man infodir datarootdir/info ...
 
 T.J. Yang Hobbitmon Development October 2, 2008 17 / 161
 
-Package Use Cases GNU+TWW development model Standard Configuration Variables
+New Hobbitmon Devevelopment Model GNU Autotool model Standard Configuration Variables
 
 `./configure' automatically detects many settings. You can force some of them using configuration variables.
 
@@ -446,7 +448,7 @@ LDFLAGS linker flags CPPFLAGS C/C++ preprocessor flags
 
 T.J. Yang Hobbitmon Development October 2, 2008 18 / 161
 
-Package Use Cases GNU+TWW development model Standard Configuration Variables
+New Hobbitmon Devevelopment Model GNU Autotool model Standard Configuration Variables
 
 `./configure' automatically detects many settings. You can force some of them using configuration variables.
 
@@ -462,7 +464,7 @@ LDFLAGS linker flags CPPFLAGS C/C++ preprocessor flags
 
 T.J. Yang Hobbitmon Development October 2, 2008 18 / 161
 
-Package Use Cases The Power User Point of View The Power User Point of View
+New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool TWW's CPAM to complete GNU autotool
 
 1 Current 2008 development
 
@@ -476,7 +478,7 @@ GNU+TWW development model The Power User Point of View The Packager Point of Vie
 
 T.J. Yang Hobbitmon Development October 2, 2008 19 / 161
 
-Package Use Cases The Power User Point of View Overriding Default Configuration Settings with config.site
+New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool Cross-Platform Application Management
 
 Recall that old command ~/amhello-1.0 % ./configure --prefix ~/usr CC=gcc-3 \ CPPFLAGS=-I$HOME/usr/include LDFLAGS=-L$HOME/usr/lib
 
@@ -486,7 +488,7 @@ Reducing the command to... ~/amhello-1.0 % ./configure --prefix ~/usr configure:
 
 T.J. Yang Hobbitmon Development October 2, 2008 20 / 161
 
-Package Use Cases The Power User Point of View Overriding Default Configuration Settings with config.site
+New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool Cross-Platform Application Management
 
 Recall that old command ~/amhello-1.0 % ./configure --prefix ~/usr CC=gcc-3 \ CPPFLAGS=-I$HOME/usr/include LDFLAGS=-L$HOME/usr/lib
 
@@ -496,7 +498,7 @@ Reducing the command to... ~/amhello-1.0 % ./configure --prefix ~/usr configure:
 
 T.J. Yang Hobbitmon Development October 2, 2008 20 / 161
 
-Package Use Cases The Power User Point of View Overriding Default Configuration Settings with config.site
+New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool Cross-Platform Application Management
 
 Recall that old command ~/amhello-1.0 % ./configure --prefix ~/usr CC=gcc-3 \ CPPFLAGS=-I$HOME/usr/include LDFLAGS=-L$HOME/usr/lib
 
@@ -506,7 +508,7 @@ Reducing the command to... ~/amhello-1.0 % ./configure --prefix ~/usr configure:
 
 T.J. Yang Hobbitmon Development October 2, 2008 20 / 161
 
-Package Use Cases The Power User Point of View Parallel Build Trees (a.k.a. VPATH Builds)
+New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool Parallel Build Trees (a.k.a. VPATH Builds)
 
 Objects files, programs, and libraries are built where configure was run.
 
@@ -518,7 +520,7 @@ Sources files are in ,/ amhello-1.0/ , built files are all in ,/ amhello-1.0/ bu
 
 T.J. Yang Hobbitmon Development October 2, 2008 21 / 161
 
-Package Use Cases The Power User Point of View Parallel Build Trees (a.k.a. VPATH Builds)
+New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool Parallel Build Trees (a.k.a. VPATH Builds)
 
 Objects files, programs, and libraries are built where configure was run. ~ % tar zxf ~/amhello-1.0.tar.gz ~ % cd amhello-1.0
 
@@ -528,7 +530,7 @@ Sources files are in ,/ amhello-1.0/ , built files are all in ,/ amhello-1.0/ bu
 
 T.J. Yang Hobbitmon Development October 2, 2008 21 / 161
 
-Package Use Cases The Power User Point of View Parallel Build Trees (a.k.a. VPATH Builds)
+New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool Parallel Build Trees (a.k.a. VPATH Builds)
 
 Objects files, programs, and libraries are built where configure was run. ~ % tar zxf ~/amhello-1.0.tar.gz ~ % cd amhello-1.0 ~/amhello-1.0 % mkdir build && cd build
 
@@ -538,7 +540,7 @@ Sources files are in ,/ amhello-1.0/ , built files are all in ,/ amhello-1.0/ bu
 
 T.J. Yang Hobbitmon Development October 2, 2008 21 / 161
 
-Package Use Cases The Power User Point of View Parallel Build Trees (a.k.a. VPATH Builds)
+New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool Parallel Build Trees (a.k.a. VPATH Builds)
 
 Objects files, programs, and libraries are built where configure was run. ~ % tar zxf ~/amhello-1.0.tar.gz ~ % cd amhello-1.0 ~/amhello-1.0 % mkdir build && cd build ~/amhello-1.0/build % ../configure
 
@@ -548,7 +550,7 @@ Sources files are in ,/ amhello-1.0/ , built files are all in ,/ amhello-1.0/ bu
 
 T.J. Yang Hobbitmon Development October 2, 2008 21 / 161
 
-Package Use Cases The Power User Point of View Parallel Build Trees (a.k.a. VPATH Builds)
+New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool Parallel Build Trees (a.k.a. VPATH Builds)
 
 Objects files, programs, and libraries are built where configure was run. ~ % tar zxf ~/amhello-1.0.tar.gz ~ % cd amhello-1.0 ~/amhello-1.0 % mkdir build && cd build ~/amhello-1.0/build % ../configure ~/amhello-1.0/build % make ...
 
@@ -556,7 +558,7 @@ Sources files are in ,/ amhello-1.0/ , built files are all in ,/ amhello-1.0/ bu
 
 T.J. Yang Hobbitmon Development October 2, 2008 21 / 161
 
-Package Use Cases The Power User Point of View Parallel Build Trees (a.k.a. VPATH Builds)
+New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool Parallel Build Trees (a.k.a. VPATH Builds)
 
 Objects files, programs, and libraries are built where configure was run. ~ % tar zxf ~/amhello-1.0.tar.gz ~ % cd amhello-1.0 ~/amhello-1.0 % mkdir build && cd build ~/amhello-1.0/build % ../configure ~/amhello-1.0/build % make ...
 
@@ -564,7 +566,7 @@ Sources files are in ,/ amhello-1.0/ , built files are all in ,/ amhello-1.0/ bu
 
 T.J. Yang Hobbitmon Development October 2, 2008 21 / 161
 
-Package Use Cases The Power User Point of View Parallel Build Trees for Multiple Architectures
+New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool Parallel Build Trees for Multiple Architectures
 
 Builds for multiple architectures can share the same source tree.
 
@@ -578,7 +580,7 @@ Compilation on second host
 
 T.J. Yang Hobbitmon Development October 2, 2008 22 / 161
 
-Package Use Cases The Power User Point of View Parallel Build Trees for Multiple Architectures
+New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool Parallel Build Trees for Multiple Architectures
 
 Builds for multiple architectures can share the same source tree. Have the source on a (possibly read-only) shared directory ~ % cd /nfs/src /nfs/src % tar zxf ~/amhello-1.0.tar.gz
 
@@ -590,7 +592,7 @@ Compilation on second host
 
 T.J. Yang Hobbitmon Development October 2, 2008 22 / 161
 
-Package Use Cases The Power User Point of View Parallel Build Trees for Multiple Architectures
+New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool Parallel Build Trees for Multiple Architectures
 
 Builds for multiple architectures can share the same source tree. Have the source on a (possibly read-only) shared directory ~ % cd /nfs/src /nfs/src % tar zxf ~/amhello-1.0.tar.gz
 
@@ -602,7 +604,7 @@ Compilation on second host
 
 T.J. Yang Hobbitmon Development October 2, 2008 22 / 161
 
-Package Use Cases The Power User Point of View Parallel Build Trees for Multiple Architectures
+New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool Parallel Build Trees for Multiple Architectures
 
 Builds for multiple architectures can share the same source tree. Have the source on a (possibly read-only) shared directory ~ % cd /nfs/src /nfs/src % tar zxf ~/amhello-1.0.tar.gz
 
@@ -614,7 +616,7 @@ Compilation on second host
 
 T.J. Yang Hobbitmon Development October 2, 2008 22 / 161
 
-Package Use Cases The Power User Point of View Parallel Build Trees for Multiple Architectures
+New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool Parallel Build Trees for Multiple Architectures
 
 Builds for multiple architectures can share the same source tree. Have the source on a (possibly read-only) shared directory ~ % cd /nfs/src /nfs/src % tar zxf ~/amhello-1.0.tar.gz
 
@@ -624,7 +626,7 @@ Compilation on second host, assuming shared data ~ % mkdir /tmp/amh && cd /tmp/a
 
 T.J. Yang Hobbitmon Development October 2, 2008 22 / 161
 
-Package Use Cases The Power User Point of View Two Part Installation
+New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool Two Part Installation
 
 `make install'
 
@@ -636,7 +638,7 @@ install platform-independent files (can be shared among multiple machines)
 
 T.J. Yang Hobbitmon Development October 2, 2008 23 / 161
 
-Package Use Cases The Power User Point of View Two Part Installation
+New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool Two Part Installation
 
 `make install'
 
@@ -648,7 +650,7 @@ install platform-independent files (can be shared among multiple machines)
 
 T.J. Yang Hobbitmon Development October 2, 2008 23 / 161
 
-Package Use Cases The Power User Point of View Two Part Installation
+New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool Two Part Installation
 
 `make install'
 
@@ -660,7 +662,7 @@ Package Use Cases The Power User Point of View Two Part Installation
 
 T.J. Yang Hobbitmon Development October 2, 2008 23 / 161
 
-Package Use Cases The Power User Point of View Cross-Compilation
+New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool Cross-Compilation
 
 ~/amhello-1.0 % ./configure checking for a BSD-compatible install... /usr/bin/install -c checking whether build environment is sane... yes checking for gawk... gawk checking whether make sets $(MAKE)... yes checking for gcc... gcc checking for C compiler default output file name... a.out checking whether the C compiler works... yes checking whether we are cross compiling... no checking for suffix of executables... checking for suffix of object files... o checking whether we are using the GNU C compiler... yes checking whether gcc accepts -g... yes checking for gcc option to accept ANSI C... ...
 
@@ -678,7 +680,7 @@ For simple cross-compilation, only `--host=HOST' is needed.
 
 T.J. Yang Hobbitmon Development October 2, 2008 24 / 161
 
-Package Use Cases The Power User Point of View Cross-Compilation
+New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool Cross-Compilation
 
 ~/amhello-1.0 % ./configure checking for a BSD-compatible install... /usr/bin/install -c checking whether build environment is sane... yes checking for gawk... gawk checking whether make sets $(MAKE)... yes checking for gcc... gcc checking for C compiler default output file name... a.out checking whether the C compiler works... yes checking whether we are cross compiling... no checking for suffix of executables... checking for suffix of object files... o checking whether we are using the GNU C compiler... yes checking whether gcc accepts -g... yes checking for gcc option to accept ANSI C... ...
 
@@ -696,7 +698,7 @@ For simple cross-compilation, only `--host=HOST' is needed.
 
 T.J. Yang Hobbitmon Development October 2, 2008 24 / 161
 
-Package Use Cases The Power User Point of View Cross-Compilation
+New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool Cross-Compilation
 
 ~/amhello-1.0 % ./configure --build i686-pc-linux-gnu \
 
@@ -716,7 +718,7 @@ For simple cross-compilation, only `--host=HOST' is needed.
 
 T.J. Yang Hobbitmon Development October 2, 2008 24 / 161
 
-Package Use Cases The Power User Point of View Cross-Compilation
+New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool Cross-Compilation
 
 ~/amhello-1.0 % ./configure --build i686-pc-linux-gnu \
 
@@ -738,7 +740,7 @@ For simple cross-compilation, only `--host=HOST' is needed.
 
 T.J. Yang Hobbitmon Development October 2, 2008 24 / 161
 
-Package Use Cases The Power User Point of View Cross-Compilation
+New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool Cross-Compilation
 
 ~/amhello-1.0 % ./configure --build i686-pc-linux-gnu \
 
@@ -760,7 +762,7 @@ For simple cross-compilation, only `--host=HOST' is needed.
 
 T.J. Yang Hobbitmon Development October 2, 2008 24 / 161
 
-Package Use Cases The Power User Point of View Cross-Compilation
+New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool Cross-Compilation
 
 ~/amhello-1.0 % ./configure --build i686-pc-linux-gnu \
 
@@ -780,7 +782,7 @@ For simple cross-compilation, only `--host=HOST' is needed.
 
 T.J. Yang Hobbitmon Development October 2, 2008 24 / 161
 
-Package Use Cases The Power User Point of View Renaming Programs at Install Time
+New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool Renaming Programs at Install Time
 
 Maybe hello is already a command on this host?
 
@@ -802,7 +804,7 @@ Will install hello as /usr/ local/ bin/ test-hello
 
 . T.J. Yang Hobbitmon Development October 2, 2008 25 / 161
 
-Package Use Cases The Power User Point of View Renaming Programs at Install Time
+New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool Renaming Programs at Install Time
 
 Maybe hello is already a command on this host? `--program-prefix=PREFIX'
 
@@ -822,7 +824,7 @@ Will install hello as /usr/ local/ bin/ test-hello
 
 . T.J. Yang Hobbitmon Development October 2, 2008 25 / 161
 
-Package Use Cases The Power User Point of View Renaming Programs at Install Time
+New Hobbitmon Devevelopment Model TWW's CPAM to complete GNU autotool Renaming Programs at Install Time
 
 Maybe hello is already a command on this host? `--program-prefix=PREFIX'
 
@@ -842,7 +844,7 @@ Will install hello as /usr/ local/ bin/ test-hello.
 
 T.J. Yang Hobbitmon Development October 2, 2008 25 / 161
 
-Package Use Cases The Packager Point of View The Packager Point of View
+New Hobbitmon Devevelopment Model The Packager Point of View The Packager Point of View
 
 1 Current 2008 development
 
@@ -856,7 +858,7 @@ GNU+TWW development model The Power User Point of View The Packager Point of Vie
 
 T.J. Yang Hobbitmon Development October 2, 2008 26 / 161
 
-Package Use Cases The Packager Point of View Building Binary Packages Using DESTDIR
+New Hobbitmon Devevelopment Model The Packager Point of View Building Binary Packages Using DESTDIR
 
 DESTDIR is used to relocate a package at install time. ~/amhello-1.0 % ./configure --prefix /usr ...
 
@@ -866,7 +868,7 @@ DESTDIR is used to relocate a package at install time. ~/amhello-1.0 % ./configu
 
 T.J. Yang Hobbitmon Development October 2, 2008 27 / 161
 
-Package Use Cases The Packager Point of View Building Binary Packages Using DESTDIR
+New Hobbitmon Devevelopment Model The Packager Point of View Building Binary Packages Using DESTDIR
 
 DESTDIR is used to relocate a package at install time. ~/amhello-1.0 % ./configure --prefix /usr ... ~/amhello-1.0 % make ...
 
@@ -876,7 +878,7 @@ DESTDIR is used to relocate a package at install time. ~/amhello-1.0 % ./configu
 
 T.J. Yang Hobbitmon Development October 2, 2008 27 / 161
 
-Package Use Cases The Packager Point of View Building Binary Packages Using DESTDIR
+New Hobbitmon Devevelopment Model The Packager Point of View Building Binary Packages Using DESTDIR
 
 DESTDIR is used to relocate a package at install time. ~/amhello-1.0 % ./configure --prefix /usr ... ~/amhello-1.0 % make ... ~/amhello-1.0 % make DESTDIR=$HOME/inst install ...
 
@@ -886,7 +888,7 @@ DESTDIR is used to relocate a package at install time. ~/amhello-1.0 % ./configu
 
 T.J. Yang Hobbitmon Development October 2, 2008 27 / 161
 
-Package Use Cases The Packager Point of View Building Binary Packages Using DESTDIR
+New Hobbitmon Devevelopment Model The Packager Point of View Building Binary Packages Using DESTDIR
 
 DESTDIR is used to relocate a package at install time. ~/amhello-1.0 % ./configure --prefix /usr ... ~/amhello-1.0 % make ... ~/amhello-1.0 % make DESTDIR=$HOME/inst install ... ~/amhello-1.0 % cd ~/inst ~/inst % tar zcvf ~/amhello-1.0-i686.tar.gz . ./ ./usr/ ./usr/bin/ ./usr/bin/hello
 
@@ -894,7 +896,7 @@ DESTDIR is used to relocate a package at install time. ~/amhello-1.0 % ./configu
 
 T.J. Yang Hobbitmon Development October 2, 2008 27 / 161
 
-Package Use Cases The Maintainer Point of View The Maintainer Point of View
+New Hobbitmon Devevelopment Model The Maintainer Point of View The Maintainer Point of View
 
 1 Current 2008 development
 
@@ -908,7 +910,7 @@ GNU+TWW development model The Power User Point of View The Packager Point of Vie
 
 T.J. Yang Hobbitmon Development October 2, 2008 28 / 161
 
-Package Use Cases The Maintainer Point of View Preparing Distributions
+New Hobbitmon Devevelopment Model The Maintainer Point of View Preparing Distributions
 
 `make dist' Create PACKAGE-VERSION.tar.gz . `make distcheck' Likewise, with many sanity checks. Prefer this one!
 
@@ -922,7 +924,7 @@ Releasing a package that fails `make distcheck' means releasing a package that w
 
 T.J. Yang Hobbitmon Development October 2, 2008 29 / 161
 
-Package Use Cases The Maintainer Point of View Preparing Distributions
+New Hobbitmon Devevelopment Model The Maintainer Point of View Preparing Distributions
 
 `make dist' Create PACKAGE-VERSION.tar.gz . `make distcheck' Likewise, with many sanity checks. Prefer this one!
 
@@ -936,7 +938,7 @@ Releasing a package that fails `make distcheck' means releasing a package that w
 
 T.J. Yang Hobbitmon Development October 2, 2008 29 / 161
 
-Package Use Cases The Maintainer Point of View Automatic Dependency Tracking
+New Hobbitmon Devevelopment Model The Maintainer Point of View Automatic Dependency Tracking
 
 ~/amhello-1.0 % ./configure --prefix /usr ... checking dependency style of gcc... gcc3 ...
 
@@ -952,7 +954,7 @@ extractors
 
 T.J. Yang Hobbitmon Development October 2, 2008 30 / 161
 
-Package Use Cases The Maintainer Point of View Automatic Dependency Tracking
+New Hobbitmon Devevelopment Model The Maintainer Point of View Automatic Dependency Tracking
 
 ~/amhello-1.0 % ./configure --prefix /usr ... checking dependency style of gcc... gcc3 ...
 
@@ -968,7 +970,7 @@ extractors
 
 T.J. Yang Hobbitmon Development October 2, 2008 30 / 161
 
-Package Use Cases The Maintainer Point of View Nested Packages
+New Hobbitmon Devevelopment Model The Maintainer Point of View Nested Packages
 
 Autoconfiscated packages can be nested to arbitrary depth.
 
@@ -984,7 +986,7 @@ Easier integration. The sub-package is autonomous.
 
 T.J. Yang Hobbitmon Development October 2, 2008 31 / 161
 
-Package Use Cases The Maintainer Point of View Nested Packages
+New Hobbitmon Devevelopment Model The Maintainer Point of View Nested Packages
 
 Autoconfiscated packages can be nested to arbitrary depth.
 
@@ -1000,7 +1002,7 @@ Easier integration. The sub-package is autonomous.
 
 T.J. Yang Hobbitmon Development October 2, 2008 31 / 161
 
-Package Use Cases The Maintainer Point of View Nested Packages
+New Hobbitmon Devevelopment Model The Maintainer Point of View Nested Packages
 
 Autoconfiscated packages can be nested to arbitrary depth.
 
@@ -7200,7 +7202,7 @@ T.J. Yang Hobbitmon Development October 2, 2008 150 / 161
 
 Gettext Localizing a Package po/ fr.po: Header
 
-msgid "" msgstr "" "Project-Id-Version: amhello 3.0\n" "Report-Msgid-Bugs-To: bug-report@address\n" "POT-Creation-Date: 2005-03-05 00:27+0100\n" "PO-Revision-Date: 2005-03-15 20:54+0100\n" "Last-Translator: Tyng-Jing Yang <tj_yang@hotmail.com>\n" "Language-Team: French\n" "MIME-Version: 1.0\n" "Content-Type: text/plain; charset=ASCII\n" "Content-Transfer-Encoding: 8bit\n" "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+msgid "" msgstr "" "Project-Id-Version: amhello 3.0\n" "Report-Msgid-Bugs-To: bug-report@address\n" "POT-Creation-Date: 2005-03-05 00:27+0100\n" "PO-Revision-Date: 2005-03-15 20:54+0100\n" "Last-Translator: Hobbitmon Community <hobbit@hswn.dk>\n" "Language-Team: French\n" "MIME-Version: 1.0\n" "Content-Type: text/plain; charset=ASCII\n" "Content-Transfer-Encoding: 8bit\n" "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 `msginit' filled these fields.
 
@@ -7210,7 +7212,7 @@ T.J. Yang Hobbitmon Development October 2, 2008 151 / 161
 
 Gettext Localizing a Package po/ fr.po: Header
 
-msgid "" msgstr "" "Project-Id-Version: amhello 3.0\n" "Report-Msgid-Bugs-To: bug-report@address\n" "POT-Creation-Date: 2005-03-05 00:27+0100\n" "PO-Revision-Date: 2005-03-15 20:54+0100\n" "Last-Translator: Tyng-Jing Yang <tj_yang@hotmail.com>\n" "Language-Team: French\n" "MIME-Version: 1.0\n" "Content-Type: text/plain; charset=ASCII\n" "Content-Transfer-Encoding: 8bit\n" "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+msgid "" msgstr "" "Project-Id-Version: amhello 3.0\n" "Report-Msgid-Bugs-To: bug-report@address\n" "POT-Creation-Date: 2005-03-05 00:27+0100\n" "PO-Revision-Date: 2005-03-15 20:54+0100\n" "Last-Translator: Hobbitmon Community <hobbit@hswn.dk>\n" "Language-Team: French\n" "MIME-Version: 1.0\n" "Content-Type: text/plain; charset=ASCII\n" "Content-Transfer-Encoding: 8bit\n" "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 `msginit' filled these fields.
 
@@ -7220,7 +7222,7 @@ T.J. Yang Hobbitmon Development October 2, 2008 151 / 161
 
 Gettext Localizing a Package po/ fr.po: Header
 
-msgid "" msgstr "" "Project-Id-Version: amhello 3.0\n" "Report-Msgid-Bugs-To: bug-report@address\n" "POT-Creation-Date: 2005-03-05 00:27+0100\n" "PO-Revision-Date: 2005-03-15 20:54+0100\n" "Last-Translator: Tyng-Jing Yang <tj_yang@hotmail.com>\n" "Language-Team: French\n" "MIME-Version: 1.0\n" "Content-Type: text/plain; charset=iso-8859-1\n" "Content-Transfer-Encoding: 8bit\n" "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+msgid "" msgstr "" "Project-Id-Version: amhello 3.0\n" "Report-Msgid-Bugs-To: bug-report@address\n" "POT-Creation-Date: 2005-03-05 00:27+0100\n" "PO-Revision-Date: 2005-03-15 20:54+0100\n" "Last-Translator: Hobbitmon Community <hobbit@hswn.dk>\n" "Language-Team: French\n" "MIME-Version: 1.0\n" "Content-Type: text/plain; charset=iso-8859-1\n" "Content-Transfer-Encoding: 8bit\n" "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 `msginit' filled these fields. You may have to customize it a bit.
 
@@ -7228,7 +7230,7 @@ The revision date will also be updated on save. T.J. Yang Hobbitmon Development 
 
 Gettext Localizing a Package po/ fr.po: Header
 
-msgid "" msgstr "" "Project-Id-Version: amhello 3.0\n" "Report-Msgid-Bugs-To: bug-report@address\n" "POT-Creation-Date: 2005-03-05 00:27+0100\n" "PO-Revision-Date: 2005-03-15 20:54+0100\n" "Last-Translator: Tyng-Jing Yang <tj_yang@hotmail.com>\n" "Language-Team: French\n" "MIME-Version: 1.0\n" "Content-Type: text/plain; charset=iso-8859-1\n" "Content-Transfer-Encoding: 8bit\n" "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+msgid "" msgstr "" "Project-Id-Version: amhello 3.0\n" "Report-Msgid-Bugs-To: bug-report@address\n" "POT-Creation-Date: 2005-03-05 00:27+0100\n" "PO-Revision-Date: 2005-03-15 20:54+0100\n" "Last-Translator: Hobbitmon Community <hobbit@hswn.dk>\n" "Language-Team: French\n" "MIME-Version: 1.0\n" "Content-Type: text/plain; charset=iso-8859-1\n" "Content-Transfer-Encoding: 8bit\n" "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 `msginit' filled these fields. You may have to customize it a bit. The revision date will also be updated on save.
 
