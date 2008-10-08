@@ -1,0 +1,3 @@
+1. This autotool example need to  be run in Fedora 9.
+2. autoreconf --install
+3. http://www.lrde.epita.fr/~adl/autotools.html
