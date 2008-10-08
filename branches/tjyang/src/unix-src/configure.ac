@@ -58,9 +58,22 @@ AC_STRUCT_TM
 AC_HEADER_STDBOOL
 AC_TYPE_UID_T
 AC_C_VOLATILE
+
+
+AC_FUNC_MKTIME
+AC_PROG_CXX 
+AC_PROG_LN_S 
+AC_PROG_RANLIB 
+AC_TYPE_SSIZE_T 
+AC_TYPE_UINT32_T 
+AC_TYPE_UINT64_T 
+AC_TYPE_UINT8_T 
+
 #############################################
 # Checks for library functions.
 #############################################
+
+
 AC_FUNC_CHOWN
 AC_FUNC_CLOSEDIR_VOID
 AC_FUNC_FORK
