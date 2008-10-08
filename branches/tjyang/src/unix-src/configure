@@ -9729,32 +9729,7 @@ done
 
 VARIABLE1=VALUE1
 
-# AC_CONFIG_FILES(FILES)
-# Create FILE for all FILE.in
-
-#                 bbdisplay/Makefile
-#                 bbnet/Makefile
-#                 build/Makefile
-#                 client/Makefile
-#                 common/Makefile
-#                 contrib/netware/Makefile
-#                 demotool/Makefile
-#                 docs/Makefile
-#                 docs/autotww/FAQ-en/Makefile
-#                 docs/autotww/en/Makefile
-#                 docs/book/en/Makefile
-#                 docs/hobbit-developer-guide/en/Makefile
-#                 docs/hobbit-developer-guide/en/old/Makefile
-#                 docs/hobbit-faq-howto/FAQ-en/Makefile
-#                 docs/hobbit-faq-howto/en/Makefile
-#                 docs/hobbit-reference-manual/en/Makefile
-#                 docs/hobbit-sysadmin-guide/en/Makefile
-#                 docs/hobbit-user-guide/en/Makefile
-#                 docs/slides/Makefile
-#                 hobbitd/Makefile
-#                 lib/Makefile
-#                 web/Makefile
-ac_config_files="$ac_config_files bbproxy/Makefile"
+ac_config_files="$ac_config_files Makefile bbproxy/Makefile"
 
 cat >confcache <<\_ACEOF
 # This file is a shell script that caches the results of configure
@@ -10342,6 +10317,7 @@ do
   case $ac_config_target in
     "config.h") CONFIG_HEADERS="$CONFIG_HEADERS config.h" ;;
     "depfiles") CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
+    "Makefile") CONFIG_FILES="$CONFIG_FILES Makefile" ;;
     "bbproxy/Makefile") CONFIG_FILES="$CONFIG_FILES bbproxy/Makefile" ;;
 
   *) { { echo "$as_me:$LINENO: error: invalid argument: $ac_config_target" >&5
