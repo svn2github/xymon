@@ -1,0 +1,17 @@
+1. http://www.lrde.epita.fr/~adl/autotools.html
+2. This autotool example need to  be run in Fedora 9.
+3. autoreconf --install
+
+
+[tjyang@ibm amhello-1.0]$ tree -as
+.
+|-- [      223]  Makefile.am
+|-- [      126]  README
+|-- [      380]  configure.ac
+`-- [     4096]  src
+    |-- [      230]  Makefile.am
+    `-- [      333]  main.c
+
+1 directory, 5 files
+[tjyang@ibm amhello-1.0]$
+
