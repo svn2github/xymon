@@ -87,6 +87,7 @@ clean:
 svncheckin: all
 	svn commit -m "automatic checkin, use ViewVC to see details."
 
-# WHAT:  use "svn status" command  to display files are not committed.
+# WHAT: clean out the unwanted files first  
+#       and use "svn status" command  to display files are not committed.
 svnstatus: clean
 	svn status
