@@ -2,14 +2,10 @@
  *    This program is free software; the Free Software Foundation
  *       gives unlimited permission to copy, distribute and modify it.  */
 
-#include <config.h>
-#include <stdio.h>
-
-int
-main (void)
+#include "say.h"
+int main (void)
 {
-  puts ("Hello World!");
-  puts ("This is " PACKAGE_STRING ".");
+  say_hello ();
   return 0;
 }
 
