@@ -96,30 +96,8 @@ AC_FUNC_WAIT3
 AC_CHECK_FUNCS([alarm dup2 getcwd gethostbyname gethostname gettimeofday inet_ntoa memmove memset mkdir pathconf pstat_getdynamic putenv regcomp rmdir select socket strcasecmp strchr strcspn strdup strerror strncasecmp strrchr strspn strstr strtol utime])
 
 AC_SUBST(VARIABLE1,[VALUE1])
-# AC_CONFIG_FILES(FILES)
-# Create FILE for all FILE.in
-
-#                 bbdisplay/Makefile
-#                 bbnet/Makefile
-#                 build/Makefile
-#                 client/Makefile
-#                 common/Makefile
-#                 contrib/netware/Makefile
-#                 demotool/Makefile
-#                 docs/Makefile
-#                 docs/autotww/FAQ-en/Makefile
-#                 docs/autotww/en/Makefile
-#                 docs/book/en/Makefile
-#                 docs/hobbit-developer-guide/en/Makefile
-#                 docs/hobbit-developer-guide/en/old/Makefile
-#                 docs/hobbit-faq-howto/FAQ-en/Makefile
-#                 docs/hobbit-faq-howto/en/Makefile
-#                 docs/hobbit-reference-manual/en/Makefile
-#                 docs/hobbit-sysadmin-guide/en/Makefile
-#                 docs/hobbit-user-guide/en/Makefile
-#                 docs/slides/Makefile
-#                 hobbitd/Makefile
-#                 lib/Makefile
-#                 web/Makefile
-AC_CONFIG_FILES([ bbproxy/Makefile ])
+AC_CONFIG_FILES([
+Makefile 
+bbproxy/Makefile
+])
 AC_OUTPUT

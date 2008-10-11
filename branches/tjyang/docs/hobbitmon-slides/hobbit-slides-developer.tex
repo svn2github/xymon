@@ -2,7 +2,37 @@
 % Permission is granted to use, modify, and redistribute under the terms
 % of the Creative Commons Attribution-ShareAlike 2.0 license.
 % http://creativecommons.org/licenses/by-sa/2.0/
+% -----------------------------------------------------------------------------
+%                     TeX file   S P E C I F I C A T I O N
+% -----------------------------------------------------------------------------
+% NAME
+%       hobbit-slides-developer.tex
+%
+% REVISION HISTORY
+%     08/04 2008 T.J. Yang Init
+%
+% 
+% USAGE
+%       make -f Makefile to use latex to generat into different formats.
+%
+% DESCRIPTION
+%
+% ---------------------------- CONSTANT DECLARATION ---------------------------
+%
+% WHAT: Define exit status flags.
+% WHY:  Easier to program with a mnemonic than with the numbers.
+% 
+%
+%
+%UCCESS:=0
+%RROR:=1
+%ARNING:=2
+%DFLATEX:=/usr/bin/pdflatex
+%S2TXT:=/usr/bin/ps2ascii
+%# ---------------------------------- SCRIPT -----------------------------------
+%#
 
+% WHAT: use beamer class to generate this slide.
 \documentclass{beamer}
 
 \usepackage{pgf,tikz}
