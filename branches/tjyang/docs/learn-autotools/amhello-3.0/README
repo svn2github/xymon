@@ -1,6 +1,5 @@
-
 0.
-[tjyang@ibm amhello-1.0]$ tree -as
+[tjyang@ibm amhello-3.0]$ tree -as
 .
 |-- [      223]  Makefile.am
 |-- [      126]  README
@@ -15,23 +14,23 @@
 
 4. ./configure;make
 1 directory, 5 files
-[tjyang@ibm amhello-1.0]$
+[tjyang@ibm amhello-3.0]$
 5. Following files/dir are changes after step 3 and 4.
-?      amhello-1.0/configure
-?      amhello-1.0/Makefile.in
-?      amhello-1.0/config.log
-?      amhello-1.0/depcomp
-?      amhello-1.0/config.status
-?      amhello-1.0/stamp-h1
-?      amhello-1.0/config.h
-?      amhello-1.0/config.h.in
-?      amhello-1.0/autom4te.cache
-?      amhello-1.0/missing
-?      amhello-1.0/aclocal.m4
-?      amhello-1.0/Makefile
-?      amhello-1.0/install-sh
-?      amhello-1.0/src/Makefile.in
-?      amhello-1.0/src/hello
-?      amhello-1.0/src/.deps
-?      amhello-1.0/src/Makefile
+?      amhello-3.0/configure
+?      amhello-3.0/Makefile.in
+?      amhello-3.0/config.log
+?      amhello-3.0/depcomp
+?      amhello-3.0/config.status
+?      amhello-3.0/stamp-h1
+?      amhello-3.0/config.h
+?      amhello-3.0/config.h.in
+?      amhello-3.0/autom4te.cache
+?      amhello-3.0/missing
+?      amhello-3.0/aclocal.m4
+?      amhello-3.0/Makefile
+?      amhello-3.0/install-sh
+?      amhello-3.0/src/Makefile.in
+?      amhello-3.0/src/hello
+?      amhello-3.0/src/.deps
+?      amhello-3.0/src/Makefile
 
