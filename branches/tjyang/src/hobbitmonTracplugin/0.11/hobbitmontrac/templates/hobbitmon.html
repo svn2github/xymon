@@ -1,0 +1,37 @@
+<?cs include "header.cs"?>
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:py="http://genshi.edgewall.org/"
+      xmlns:xi="http://www.w3.org/2001/XInclude">
+  <xi:include href="layout.html" />
+  <head>
+    <title>Hobbitmon in Trac</title>
+  </head>
+
+  <body>
+    <div id="content" class="hobbitmon">
+      <div py:if="hobbitmon_text" id="content" class="wiki">
+         <div class="wikipage">
+           <div id="searchable" py:content="hobbitmon_text" />
+        </div>
+      </div>
+
+      <div py:if="hobbitmon_content">
+        <!--!
+         !    Ideally it would be nice to be able to use Genshi xi:include
+         !    but there's currently no way to specify /no/ parsing on the
+         !    included file, as in:
+         !
+         !      <xi:include href="$hobbitmon_path" parse="" /> 
+         !
+         !    (using parse="text" won't work either, as the output will be
+         !     HTML escaped)
+         !-->
+        ${hobbitmon_content}
+      </div>
+
+    </div>
+  </body>
+</html>
