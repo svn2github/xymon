@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# Configuration script for Hobbit.
+# $Id: configure,v 1.3 2006/08/08 12:40:29 henrik Rel $
+
+BASEDIR="`dirname $0`"
+TARGET="$1"
+if test "$TARGET" != ""; then shift; fi
+
+case "$TARGET" in
+  "--client")
+	$BASEDIR/configure.client $*
+	;;
+
+  "--server"|"")
+	$BASEDIR/configure.server $*
+	;;
+
+  "--help")
+  	echo "To configure a Hobbit server: $0 --server"
+  	echo "To configure a Hobbit client: $0 --client"
+	;;
+esac
+
+exit 0
