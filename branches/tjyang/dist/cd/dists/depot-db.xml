@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<depots>
-  <depot dist-ver="eval" name="eval"/>
-  <depot dist-ver="latest" name="opt"/>
-  <depot dist-ver="opt" name="opt"/>
-</depots>
