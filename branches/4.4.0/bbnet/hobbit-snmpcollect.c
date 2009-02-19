@@ -995,9 +995,11 @@ void egoresult(int color, char *egocolumn)
 	char msgline[1024];
 	char *timestamps = NULL;
 
+	init_timestamp();
+
 	combo_start();
 	init_status(color);
-	sprintf(msgline, "status %s.%s %s %s\n\n", 
+	sprintf(msgline, "status %s.%s %s snmpcollect %s\n\n", 
 		xgetenv("MACHINE"), egocolumn, colorname(color), timestamp);
 	addtostatus(msgline);
 
