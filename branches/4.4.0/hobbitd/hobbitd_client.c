@@ -1489,6 +1489,7 @@ void unix_ports_report(char *hostname, char *clientclass, enum ostype_t os,
 #include "client/zvm.c"
 #include "client/zvse.c"
 #include "client/zos.c"
+#include "client/snmpcollect.c"
 
 static volatile int reloadconfig = 0;
 
@@ -1856,8 +1857,14 @@ int main(int argc, char *argv[])
 			char *hostname = metadata[3];
 			char *clientos = metadata[4];
 			char *clientclass = metadata[5];
+			char *collectorid = metadata[6];
 			enum ostype_t os;
 			void *hinfo = NULL;
+
+			dbgprintf("Client report from host %s\n", (hostname ? hostname : "<unknown>"));
+
+			/* We handle data from the default client collector and snmpcollect - nothing else */
+			if (collectorid && (strcmp(collectorid, "") != 0) && (strcmp(collectorid, "snmpcollect") != 0)) continue;
 
 			hinfo = (localmode ? localhostinfo(hostname) : hostinfo(hostname));
 			if (!hinfo) continue;
@@ -1928,6 +1935,10 @@ int main(int argc, char *argv[])
 
 			  case OS_ZOS:
 				handle_zos_client(hostname, clientclass, os, hinfo, sender, timestamp, restofmsg);
+				break;
+
+			  case OS_SNMPCOLLECT:
+				handle_snmpcollect_client(hostname, clientclass, os, hinfo, sender, timestamp, restofmsg);
 				break;
 
 			  default:
