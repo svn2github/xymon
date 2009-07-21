@@ -235,16 +235,16 @@ int onehost(char *hostname, char *starttime, char *endtime)
 	}
 
 	/*
-	 * Memory data - use "actual" memory if present, otherwise report
-	 * the data from the "real" reading.
+	 * Report all memory data - it depends on the OS of the host which one
+	 * really is interesting (memory.actual.rrd for Linux, memory.real.rrd for
+	 * most of the other systems).
 	 */
 	if (stat("memory.actual.rrd", &st) == 0) {
-		oneset(hostname, "memory.actual.rrd", starttime, endtime, "realmempct", 0, "RAM");
+		oneset(hostname, "memory.actual.rrd", starttime, endtime, "realmempct", 0, "Virtual");
 	}
-	else {
+	if (stat("memory.real.rrd", &st) == 0) {
 		oneset(hostname, "memory.real.rrd", starttime, endtime, "realmempct", 0, "RAM");
 	}
-
 	if (stat("memory.swap.rrd", &st) == 0) {
 		oneset(hostname, "memory.swap.rrd", starttime, endtime, "realmempct", 0, "Swap");
 	}
@@ -330,8 +330,12 @@ int main(int argc, char **argv)
 		}
 
 		hostpattern = argv[1];
-		starttime = argv[2];
-		endtime = argv[3];
+		if (strncmp(hostpattern, "--page=", 7) == 0) {
+			pagepattern = strchr(argv[1], '=') + 1;
+			hostpattern = NULL;
+		}
+		starttimedate = argv[2]; starttimehm = "00:00:00";
+		endtimedate = argv[3]; endtimehm = "00:00:00";
 		if (argc > 4) {
 			if (strncmp(argv[4], "--csv", 5) == 0) {
 				char *p;
