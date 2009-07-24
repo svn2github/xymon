@@ -32,6 +32,8 @@ static char rcsid[] = "$Id$";
 
 #include "hobbitd_worker.h"
 
+int rotatefiles = 0;
+
 void sig_handler(int signum)
 {
 	/*
@@ -40,8 +42,18 @@ void sig_handler(int signum)
 	switch (signum) {
 	  case SIGCHLD:
 		  break;
+
+	  case SIGHUP:
+		  rotatefiles = 1;
+		  break;
 	}
 }
+
+typedef struct columndef_t {
+	char *name;
+	int saveit;
+} columndef_t;
+RbtHandle columndefs;
 
 int main(int argc, char *argv[])
 {
@@ -53,13 +65,17 @@ int main(int argc, char *argv[])
 	int save_allevents = 1;
 	int save_hostevents = 1;
 	int save_statusevents = 1;
-	int save_histlogs = 1;
+	int save_histlogs = 1, defaultsaveop = 1;
 	FILE *alleventsfd = NULL;
 	int running = 1;
 	struct sigaction sa;
 	char newcol2[3];
 	char oldcol2[3];
+	char alleventsfn[PATH_MAX];
+	char pidfn[PATH_MAX];
 
+	MEMDEFINE(pidfn);
+	MEMDEFINE(alleventsfn);
 	MEMDEFINE(newcol2);
 	MEMDEFINE(oldcol2);
 
@@ -68,7 +84,7 @@ int main(int argc, char *argv[])
 
 	if (xgetenv("BBALLHISTLOG")) save_allevents = (strcmp(xgetenv("BBALLHISTLOG"), "TRUE") == 0);
 	if (xgetenv("BBHOSTHISTLOG")) save_hostevents = (strcmp(xgetenv("BBHOSTHISTLOG"), "TRUE") == 0);
-	if (xgetenv("SAVESTATUSLOG")) save_histlogs = (strcmp(xgetenv("SAVESTATUSLOG"), "TRUE") == 0);
+	if (xgetenv("SAVESTATUSLOG")) save_histlogs = (strncmp(xgetenv("SAVESTATUSLOG"), "FALSE", 5) != 0);
 
 	for (argi = 1; (argi < argc); argi++) {
 		if (argnmatch(argv[argi], "--histdir=")) {
@@ -98,19 +114,54 @@ int main(int argc, char *argv[])
 		return 1;
 	}
 
+	columndefs = rbtNew(string_compare);
+	{
+		char *defaultsave, *tok;
+		char *savelist;
+		columndef_t *newrec;
+
+		savelist = strdup(xgetenv("SAVESTATUSLOG"));
+		defaultsave = strtok(savelist, ","); 
+		/*
+		 * TRUE: Save everything by default; may list some that are not saved.
+		 * ONLY: Save nothing by default; may list some that are saved.
+		 * FALSE: Save nothing.
+		 */
+		defaultsaveop = (strcasecmp(defaultsave, "TRUE") == 0);
+		tok = strtok(NULL, ",");
+		while (tok) {
+			newrec = (columndef_t *)malloc(sizeof(columndef_t));
+			if (*tok == '!') {
+				newrec->saveit = 0;
+				newrec->name = strdup(tok+1);
+			}
+			else {
+				newrec->saveit = 1;
+				newrec->name = strdup(tok);
+			}
+			rbtInsert(columndefs, newrec->name, newrec);
+
+			tok = strtok(NULL, ",");
+		}
+		xfree(savelist);
+	}
+
+	sprintf(pidfn, "%s/hobbitd_history.pid", xgetenv("BBSERVERLOGS"));
+	{
+		FILE *pidfd = fopen(pidfn, "w");
+		if (pidfd) {
+			fprintf(pidfd, "%d\n", getpid());
+			fclose(pidfd);
+		}
+	}
+
+	sprintf(alleventsfn, "%s/allevents", histdir);
 	if (save_allevents) {
-		char alleventsfn[PATH_MAX];
-
-		MEMDEFINE(alleventsfn);
-
-		sprintf(alleventsfn, "%s/allevents", histdir);
 		alleventsfd = fopen(alleventsfn, "a");
 		if (alleventsfd == NULL) {
 			errprintf("Cannot open the all-events file '%s'\n", alleventsfn);
 		}
 		setvbuf(alleventsfd, (char *)NULL, _IOLBF, 0);
-
-		MEMUNDEFINE(alleventsfn);
 	}
 
 	/* For picking up lost children */
@@ -118,6 +169,7 @@ int main(int argc, char *argv[])
 	memset(&sa, 0, sizeof(sa));
 	sa.sa_handler = sig_handler;
 	sigaction(SIGCHLD, &sa, NULL);
+	sigaction(SIGHUP, &sa, NULL);
 	signal(SIGPIPE, SIG_DFL);
 
 	while (running) {
@@ -136,6 +188,17 @@ int main(int argc, char *argv[])
 
 		/* Pickup any finished child processes to avoid zombies */
 		while (wait3(&childstat, WNOHANG, NULL) > 0) ;
+
+		if (rotatefiles && alleventsfd) {
+			fclose(alleventsfd);
+			alleventsfd = fopen(alleventsfn, "a");
+			if (alleventsfd == NULL) {
+				errprintf("Cannot re-open the all-events file '%s'\n", alleventsfn);
+			}
+			else {
+				setvbuf(alleventsfd, (char *)NULL, _IOLBF, 0);
+			}
+		}
 
 		msg = get_hobbitd_message(C_STACHG, "hobbitd_history", &seq, NULL);
 		if (msg == NULL) {
@@ -157,6 +220,9 @@ int main(int argc, char *argv[])
 		}
 
 		if ((metacount > 9) && (strncmp(metadata[0], "@@stachg", 8) == 0)) {
+			RbtIterator handle;
+			columndef_t *saveit = NULL;
+
 			/* @@stachg#seq|timestamp|sender|origin|hostname|testname|expiretime|color|prevcolor|changetime|disabletime|disablemsg|downtimeactive|clienttstamp */
 			sscanf(metadata[1], "%d.%*d", &tstamp_i); tstamp = tstamp_i;
 			hostname = metadata[4];
@@ -175,6 +241,17 @@ int main(int argc, char *argv[])
 			}
 
 			p = hostnamecommas = strdup(hostname); while ((p = strchr(p, '.')) != NULL) *p = ',';
+
+			handle = rbtFind(columndefs, testname);
+			if (handle == rbtEnd(columndefs)) {
+				saveit = (columndef_t *)malloc(sizeof(columndef_t));
+				saveit->name = strdup(testname);
+				saveit->saveit = defaultsaveop;
+				rbtInsert(columndefs, saveit->name, saveit);
+			}
+			else {
+				saveit = (columndef_t *) gettreeitem(columndefs, handle);
+			}
 
 			if (save_statusevents) {
 				char statuslogfn[PATH_MAX];
@@ -318,7 +395,7 @@ int main(int argc, char *argv[])
 				MEMUNDEFINE(timestamp);
 			}
 
-			if (save_histlogs) {
+			if (save_histlogs && saveit->saveit) {
 				char *hostdash;
 				char fname[PATH_MAX];
 				FILE *histlogfd;
@@ -648,8 +725,12 @@ int main(int argc, char *argv[])
 
 	MEMUNDEFINE(newcol2);
 	MEMUNDEFINE(oldcol2);
+	MEMUNDEFINE(alleventsfn);
+	MEMUNDEFINE(pidfn);
 
 	fclose(alleventsfd);
+	unlink(pidfn);
+
 	return 0;
 }
 
