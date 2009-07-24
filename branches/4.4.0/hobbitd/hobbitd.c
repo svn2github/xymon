@@ -2805,17 +2805,26 @@ void do_message(conn_t *msg, char *origin)
 					fflush(dbgfd);
 				}
 
-				if (color == COL_PURPLE) {
+				switch (color) {
+				  case COL_PURPLE:
 					errprintf("Ignored PURPLE status update from %s for %s.%s\n",
 						  sender, (h ? h->hostname : "<unknown>"), (t ? t->name : "unknown"));
-				}
-				else {
+					break;
+
+				  case COL_CLIENT:
+					/* Pseudo color, allows us to send "client" data from a standard BB utility */
+					/* In HOSTNAME.TESTNAME, the TESTNAME is used as the collector-ID */
+					handle_client(currmsg, sender, h->hostname, t->name, "", NULL);
+					break;
+
+				  default:
 					/* Count individual status-messages also */
 					update_statistics(currmsg);
 
 					if (h && t && log && (color != -1)) {
 						handle_status(currmsg, sender, h->hostname, t->name, grouplist, log, color, downcause, 0);
 					}
+					break;
 				}
 			}
 
@@ -2872,14 +2881,23 @@ void do_message(conn_t *msg, char *origin)
 			fflush(dbgfd);
 		}
 
-		if (color == COL_PURPLE) {
+		switch (color) {
+		  case COL_PURPLE:
 			errprintf("Ignored PURPLE status update from %s for %s.%s\n",
 				  sender, (h ? h->hostname : "<unknown>"), (t ? t->name : "unknown"));
-		}
-		else {
+			break;
+
+		  case COL_CLIENT:
+			/* Pseudo color, allows us to send "client" data from a standard BB utility */
+			/* In HOSTNAME.TESTNAME, the TESTNAME is used as the collector-ID */
+			handle_client(msg->buf, sender, h->hostname, t->name, "", NULL);
+			break;
+
+		  default:
 			if (h && t && log && (color != -1)) {
 				handle_status(msg->buf, sender, h->hostname, t->name, grouplist, log, color, downcause, 0);
 			}
+			break;
 		}
 	}
 	else if (strncmp(msg->buf, "data", 4) == 0) {
