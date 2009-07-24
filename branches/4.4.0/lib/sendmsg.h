@@ -53,6 +53,7 @@ extern void init_status(int color);
 extern void addtostatus(char *p);
 extern void addtostrstatus(strbuffer_t *p);
 extern void finish_status(void);
+extern char *copy_status(void);
 
 extern void meta_start(void);
 extern void meta_end(void);

@@ -764,6 +764,11 @@ void finish_status(void)
 	combo_add(msgbuf);
 }
 
+char *copy_status(void)
+{
+        return strdup(STRBUF(msgbuf));
+}
+
 void finish_meta(void)
 {
 	meta_add(metabuf);
