@@ -2226,16 +2226,26 @@ int check_mibvals(void *hinfo, char *classname,
 				if (group) addalertgroup(group);
 			}
 
-			if (matchexp && !namematch(dval, ((exprlist_t *)matchexp)->pattern, ((exprlist_t *)matchexp)->exp)) {
-				if (keyname)
-					sprintf(msgline, "&%s %s:%s %s (expected: %s)\n",
-						colorname(rulecolor), keyname, dnam, dval, ((exprlist_t *)matchexp)->pattern);
-				else 
-					sprintf(msgline, "&%s %s %s (expected: %s)\n",
-						colorname(rulecolor), dnam, dval, ((exprlist_t *)matchexp)->pattern);
+			if (matchexp) {
+				if (!namematch(dval, ((exprlist_t *)matchexp)->pattern, ((exprlist_t *)matchexp)->exp)) {
+					if (rulecolor > color) color = rulecolor;
+					if (group) addalertgroup(group);
+
+					if (keyname)
+						sprintf(msgline, "&%s %s:%s %s (expected: %s)\n",
+								colorname(rulecolor), keyname, dnam, dval, ((exprlist_t *)matchexp)->pattern);
+					else 
+						sprintf(msgline, "&%s %s %s (expected: %s)\n",
+								colorname(rulecolor), dnam, dval, ((exprlist_t *)matchexp)->pattern);
+				}
+				else {
+					if (keyname) 
+						sprintf(msgline, "&green %s:%s %s\n", keyname, dnam, dval);
+					else
+						sprintf(msgline, "&green %s %s\n", dnam, dval);
+				}
+
 				addtobuffer(summarybuf, msgline);
-				if (rulecolor > color) color = rulecolor;
-				if (group) addalertgroup(group);
 			}
 			break;
 		}
