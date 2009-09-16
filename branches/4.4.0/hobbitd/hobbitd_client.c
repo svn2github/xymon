@@ -1490,6 +1490,7 @@ void unix_ports_report(char *hostname, char *clientclass, enum ostype_t os,
 #include "client/zvse.c"
 #include "client/zos.c"
 #include "client/snmpcollect.c"
+#include "client/mqcollect.c"
 
 static volatile int reloadconfig = 0;
 
@@ -1750,6 +1751,7 @@ int main(int argc, char *argv[])
 	struct sigaction sa;
 	time_t nextconfigload = 0;
 	char *configfn = NULL;
+	char **collectors = NULL;
 
 	/* Handle program options. */
 	for (argi = 1; (argi < argc); argi++) {
@@ -1782,6 +1784,18 @@ int main(int argc, char *argv[])
 			char *lp = strchr(argv[argi], '=');
 			configfn = strdup(lp+1);
 		}
+		else if (argnmatch(argv[argi], "--collectors=")) {
+			char *lp = strdup(strchr(argv[argi], '=')+1);
+			char *tok;
+			int i;
+
+			tok = strtok(lp, ","); i = 0; collectors = (char **)calloc(1, sizeof(char *));
+			while (tok) {
+				collectors = (char **)realloc(collectors, (i+2)*sizeof(char *));
+				collectors[i++] = tok; collectors[i] = NULL;
+				tok = strtok(NULL, ",");
+			}
+		}
 		else if (argnmatch(argv[argi], "--dump-config")) {
 			load_client_config(configfn);
 			dump_client_config();
@@ -1799,6 +1813,14 @@ int main(int argc, char *argv[])
 	}
 
 	save_errbuf = 0;
+
+	if (collectors == NULL) {
+		/* Setup the default collectors */
+		collectors = (char **)calloc(3, sizeof(char *));
+		collectors[0] = "";
+		collectors[1] = "snmpcollect";
+		collectors[2] = NULL;
+	}
 
 	/* Do the network stuff if needed */
 	net_worker_run(ST_CLIENT, LOC_ROAMING, NULL);
@@ -1852,6 +1874,7 @@ int main(int argc, char *argv[])
 		metadata[metacount] = NULL;
 
 		if ((metacount > 4) && (strncmp(metadata[0], "@@client", 8) == 0)) {
+			int cnum, havecollector;
 			time_t timestamp = atoi(metadata[1]);
 			char *sender = metadata[2];
 			char *hostname = metadata[3];
@@ -1863,8 +1886,11 @@ int main(int argc, char *argv[])
 
 			dbgprintf("Client report from host %s\n", (hostname ? hostname : "<unknown>"));
 
-			/* We handle data from the default client collector and snmpcollect - nothing else */
-			if (collectorid && (strcmp(collectorid, "") != 0) && (strcmp(collectorid, "snmpcollect") != 0)) continue;
+			/* Check if we are running a collector module for this type of client */
+			if (!collectorid) collectorid = "";
+			for (cnum = 0, havecollector = 0; (collectors[cnum] && !havecollector); cnum++) 
+				havecollector = (strcmp(collectorid, collectors[cnum]) == 0);
+			if (!havecollector) continue;
 
 			hinfo = (localmode ? localhostinfo(hostname) : hostinfo(hostname));
 			if (!hinfo) continue;
@@ -1939,6 +1965,10 @@ int main(int argc, char *argv[])
 
 			  case OS_SNMPCOLLECT:
 				handle_snmpcollect_client(hostname, clientclass, os, hinfo, sender, timestamp, restofmsg);
+				break;
+
+			  case OS_MQCOLLECT:
+				handle_mqcollect_client(hostname, clientclass, os, hinfo, sender, timestamp, restofmsg);
 				break;
 
 			  default:
