@@ -215,7 +215,17 @@ typedef struct c_rrdds_t {
 } c_rrdds_t;
 
 
-typedef enum { C_LOAD, C_UPTIME, C_CLOCK, C_DISK, C_MEM, C_PROC, C_LOG, C_FILE, C_DIR, C_PORT, C_SVC, C_CICS, C_PAGING, C_MEM_GETVIS, C_MEM_VSIZE, C_ASID, C_MIBVAL, C_RRDDS } ruletype_t;
+typedef struct c_mq_queue_t {
+	exprlist_t *qmgrname, *qname;
+	int warnlen, critlen;
+	int warnage, critage;
+} c_mq_queue_t;
+
+typedef struct c_mq_channel_t {
+	exprlist_t *qmgrname, *chnname, *warnstates, *alertstates;
+} c_mq_channel_t;
+
+typedef enum { C_LOAD, C_UPTIME, C_CLOCK, C_DISK, C_MEM, C_PROC, C_LOG, C_FILE, C_DIR, C_PORT, C_SVC, C_CICS, C_PAGING, C_MEM_GETVIS, C_MEM_VSIZE, C_ASID, C_MIBVAL, C_RRDDS, C_MQ_QUEUE, C_MQ_CHANNEL } ruletype_t;
 
 typedef struct c_rule_t {
 	exprlist_t *hostexp;
@@ -249,6 +259,8 @@ typedef struct c_rule_t {
 		c_paging_t paging;
 		c_mibval_t mibval;
 		c_rrdds_t rrdds;
+		c_mq_queue_t mqqueue;
+		c_mq_channel_t mqchannel;
 	} rule;
 } c_rule_t;
 
@@ -1401,6 +1413,86 @@ curtime, curtext, curgroup, cfid);
 					}
 				} while (tok && (!isqual(tok)));
 			}
+			else if (strcasecmp(tok, "MQ_QUEUE") == 0) {
+				char *p;
+				currule = setup_rule(C_MQ_QUEUE, curhost, curexhost, curpage, curexpage, curclass, curexclass, curtime, curtext, curgroup, cfid);
+				currule->rule.mqqueue.qmgrname = NULL;
+				currule->rule.mqqueue.qname = NULL;
+				currule->rule.mqqueue.warnlen = -1;
+				currule->rule.mqqueue.critlen = -1;
+				currule->rule.mqqueue.warnage = -1;
+				currule->rule.mqqueue.critage = -1;
+
+				tok = wstok(NULL);
+				p = strchr(tok, ':');
+				if (p) {
+					*p = '\0'; p++;
+					currule->rule.mqqueue.qmgrname = setup_expr(tok, 0);
+					currule->rule.mqqueue.qname = setup_expr(p, 0);
+				}
+				else {
+					currule->rule.mqqueue.qmgrname = setup_expr("*", 0);
+					currule->rule.mqqueue.qname = setup_expr(tok, 0);
+				};
+
+				do {
+					tok = wstok(NULL); if (!tok || isqual(tok)) continue;
+
+					if (strncasecmp(tok, "depth-warning=", 14) == 0) {
+						currule->rule.mqqueue.warnlen = atol(tok+14);
+					}
+					else if (strncasecmp(tok, "depth-critical=", 15) == 0) {
+						currule->rule.mqqueue.critlen = atol(tok+15);
+					}
+					else if (strncasecmp(tok, "age-warning=", 12) == 0) {
+						currule->rule.mqqueue.warnage = atol(tok+12);
+					}
+					else if (strncasecmp(tok, "age-critical=", 13) == 0) {
+						currule->rule.mqqueue.critage = atol(tok+13);
+					}
+					else if (strncasecmp(tok, "track", 5) == 0) {
+						currule->flags |= CHK_TRACKIT;
+						if (*(tok+5) == '=') currule->rrdidstr = strdup(tok+6);
+					}
+				} while (tok && (!isqual(tok)));
+			}
+			else if (strcasecmp(tok, "MQ_CHANNEL") == 0) {
+				char *p;
+
+				currule = setup_rule(C_MQ_CHANNEL, curhost, curexhost, curpage, curexpage, curclass, curexclass, curtime, curtext, curgroup, cfid);
+				currule->rule.mqchannel.qmgrname = NULL;
+				currule->rule.mqchannel.chnname = NULL;
+				currule->rule.mqchannel.warnstates = NULL;
+				currule->rule.mqchannel.alertstates = NULL;
+
+				tok = wstok(NULL);
+				p = strchr(tok, ':');
+				if (p) {
+					*p = '\0'; p++;
+					currule->rule.mqchannel.qmgrname = setup_expr(tok, 0);
+					currule->rule.mqchannel.chnname = setup_expr(p, 0);
+				}
+				else {
+					currule->rule.mqchannel.qmgrname = setup_expr("*", 0);
+					currule->rule.mqchannel.chnname = setup_expr(tok, 0);
+				};
+
+				do {
+					tok = wstok(NULL); if (!tok || isqual(tok)) continue;
+
+					if (strncasecmp(tok, "warning=", 8) == 0) {
+						currule->rule.mqchannel.warnstates = setup_expr(tok+8, 0);
+					}
+					else if (strncasecmp(tok, "alert=", 6) == 0) {
+						currule->rule.mqchannel.alertstates = setup_expr(tok+6, 0);
+					}
+				} while (tok && (!isqual(tok)));
+
+				if ((currule->rule.mqchannel.warnstates == NULL) && (currule->rule.mqchannel.alertstates == NULL)) {
+					/* Default: Alert on channel in BIND or RETRYING state */
+					currule->rule.mqchannel.alertstates = setup_expr("%BIND|RETRYING", 0);
+				}
+			}
 			else {
 				errprintf("Unknown token '%s' ignored at line %d\n", tok, cfid);
 				unknowntok = 1; tok = NULL; continue;
@@ -1660,6 +1752,24 @@ void dump_client_config(void)
 					printf(" <=%.2f", rwalk->rule.rrdds.limitval);
 			}
 			printf(" color=%s", colorname(rwalk->rule.rrdds.color));
+			break;
+
+		  case C_MQ_QUEUE:
+			printf("MQ_QUEUE %s:%s", rwalk->rule.mqqueue.qmgrname->pattern, rwalk->rule.mqqueue.qname->pattern);
+			if (rwalk->rule.mqqueue.warnlen != -1)
+				printf(" depth-warn=%d", rwalk->rule.mqqueue.warnlen);
+			if (rwalk->rule.mqqueue.critlen != -1)
+				printf(" depth-critical=%d", rwalk->rule.mqqueue.critlen);
+			if (rwalk->rule.mqqueue.warnage != -1)
+				printf(" age-warn=%d", rwalk->rule.mqqueue.warnage);
+			if (rwalk->rule.mqqueue.critage != -1)
+				printf(" age-critical=%d", rwalk->rule.mqqueue.critage);
+			break;
+
+		  case C_MQ_CHANNEL:
+			printf("MQ_CHANNEL %s:%s",rwalk->rule.mqchannel.qmgrname->pattern , rwalk->rule.mqchannel.chnname->pattern);
+			if (rwalk->rule.mqchannel.warnstates) printf(" warning=%s", rwalk->rule.mqchannel.warnstates->pattern);
+			if (rwalk->rule.mqchannel.alertstates) printf(" alert=%s", rwalk->rule.mqchannel.alertstates->pattern);
 			break;
 		}
 
@@ -2877,6 +2987,66 @@ nextrule:
 }
 
 
+void get_mqqueue_thresholds(void *hinfo, char *classname, char *qmgrname, char *qname, int *warnlen, int *critlen, int *warnage, int *critage, char **trackit)
+{
+	char *hostname, *pagepaths;
+	c_rule_t *rule;
+
+	hostname = bbh_item(hinfo, BBH_HOSTNAME);
+	pagepaths = bbh_item(hinfo, BBH_ALLPAGEPATHS);
+
+	*warnlen = *critlen = *warnage = *critage = -1;
+	*trackit = NULL;
+
+	rule = getrule(hostname, pagepaths, classname, hinfo, C_MQ_QUEUE);
+	while (rule) {
+		if (namematch(qname, rule->rule.mqqueue.qname->pattern, rule->rule.mqqueue.qname->exp) &&
+		    namematch(qmgrname, rule->rule.mqqueue.qmgrname->pattern, rule->rule.mqqueue.qmgrname->exp)) {
+			*warnlen = rule->rule.mqqueue.warnlen;
+			*critlen = rule->rule.mqqueue.critlen;
+			*warnage = rule->rule.mqqueue.warnage;
+			*critage = rule->rule.mqqueue.critage;
+			if (rule->flags & CHK_TRACKIT) *trackit = (rule->rrdidstr ? rule->rrdidstr : "");
+			return;
+		}
+
+		rule = getrule(NULL, NULL, NULL, hinfo, C_MQ_QUEUE);
+	}
+}
+
+int get_mqchannel_params(void *hinfo, char *classname, char *qmgrname, char *chnname, char *chnstatus, int *color)
+{
+	char *hostname, *pagepaths;
+	c_rule_t *rule;
+
+	hostname = bbh_item(hinfo, BBH_HOSTNAME);
+	pagepaths = bbh_item(hinfo, BBH_ALLPAGEPATHS);
+
+	rule = getrule(hostname, pagepaths, classname, hinfo, C_MQ_CHANNEL);
+	while (rule) {
+		if (namematch(chnname, rule->rule.mqchannel.chnname->pattern, rule->rule.mqchannel.chnname->exp) &&
+		    namematch(qmgrname, rule->rule.mqchannel.qmgrname->pattern, rule->rule.mqchannel.qmgrname->exp)) {
+			if (rule->rule.mqchannel.alertstates && namematch(chnstatus, rule->rule.mqchannel.alertstates->pattern, rule->rule.mqchannel.alertstates->exp)) {
+				*color = COL_RED;
+			}
+			else if (rule->rule.mqchannel.warnstates && namematch(chnstatus, rule->rule.mqchannel.warnstates->pattern, rule->rule.mqchannel.warnstates->exp)) {
+				*color = COL_YELLOW;
+			}
+			else {
+				*color = COL_GREEN;
+			}
+
+			return 1;
+		}
+
+		rule = getrule(NULL, NULL, NULL, hinfo, C_MQ_CHANNEL);
+	}
+
+	return 0;
+}
+
+
+
 typedef struct mon_proc_t {
 	c_rule_t *rule;
 	struct mon_proc_t *next;
@@ -2913,7 +3083,7 @@ static int clear_counts(void *hinfo, char *classname, ruletype_t ruletype,
 		  case C_DISK : rule->rule.disk.dcount = 0; break;
 		  case C_PROC : rule->rule.proc.pcount = 0; break;
 		  case C_PORT : rule->rule.port.pcount = 0; break;
-                 case C_SVC : rule->rule.svc.scount = 0; break;
+                  case C_SVC  : rule->rule.svc.scount = 0; break;
 		  default: break;
 		}
 
@@ -2958,6 +3128,7 @@ static void add_count(char *pname, mon_proc_t *head)
 					pwalk->rule->rule.disk.dcount++;
 			}
 			break;
+
 
 		  default: break;
 		}
@@ -3233,3 +3404,6 @@ char *check_svc_count(int *count, int *color, char **group)
 {
         return check_count(count, C_SVC, NULL, NULL, color, &svcmonwalk, NULL, NULL, group);
 }
+
+
+
