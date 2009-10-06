@@ -182,7 +182,7 @@ void handle_mqcollect_client(char *hostname, char *clienttype, enum ostype_t os,
 					qlen = atoi(tok+9);
 				}
 				else if (strncmp(tok, "MSGAGE(", 7) == 0) {
-					qage = atoi(tok+7);
+					if (isdigit(*(tok+7))) qage = atoi(tok+7);
 				}
 
 				tok = strtok(NULL, " \t");
