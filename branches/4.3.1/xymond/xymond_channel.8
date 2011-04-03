@@ -1,0 +1,87 @@
+.TH XYMOND_CHANNEL 8 "Version 4.3.1:  3 Apr 2011" "Xymon"
+.SH NAME
+xymond_channel \- Feed a xymond channel to a worker module
+.SH SYNOPSIS
+.B "xymond_channel --channel=CHANNEL [options] workerprogram [worker-options]"
+
+.SH DESCRIPTION
+xymond_channel hooks into one of the 
+.I xymond(8)
+channels that provide information about events occurring in the Xymon system.
+It retrieves messages from the xymond daemon, and passes them on to the
+\fBworkerprogram\fR on the STDIN (file descripter 1) of the worker program. 
+Worker programs can then handle messages as they like.
+
+A number of worker programs are shipped with xymond, e.g.
+.I xymond_filestore(8)
+.I xymond_history(8)
+.I xymond_alert(8)
+.I xymond_rrd(8)
+
+If you want to write your own worker module, a sample worker module
+is provided as part of the xymond distribution in the xymond_sample.c
+file. This illustrates how to easily fetch and parse messages.
+
+.SH OPTIONS
+xymond_channel accepts a few options.
+
+.IP "--channel=CHANNELNAME"
+Specifies the channel to receive messages from, only one channel can be used.
+This option is required. The following channels are available:
+.br
+"status" receives all Xymon status- and summary-messages
+.br
+"stachg" receives information about status changes
+.br
+"page" receives information about statuses triggering alerts
+.br
+"data" receives all Xymon "data" messages
+.br
+"notes" receives all Xymon "notes" messages
+.br
+"enadis" receives information about hosts being disabled or enabled.
+
+.IP "--filter=EXPRESSION"
+EXPRESSION is a Perl-compatible regular expression. xymond_channel will match 
+the first line of each message against this expression, and silently drops any
+message that does not match the expression. Especially useful for custom 
+worker modules and during testing, to limit the amount of data that the module
+must process.
+.br
+Note that messages for "logrotate", "shutdown", "drophost", "renamehost",
+"droptest" and "renametest" are always forwarded by xymond_channel, whether
+they match the filter or not.
+
+.IP "--daemon"
+xymond_channel is normally started by 
+.I xymonlaunch(8)
+as a task defined in the
+.I tasks.cfg(5)
+file. If you are not using xymonlaunch, then starting xymond_channel with this
+option causes it to run as a stand-alone background task.
+
+.IP "--pidfile=FILENAME"
+If running as a stand-alone daemon, xymond_channel will save the proces-ID 
+of the daemon in FILENAME. This is useful for automated startup- and shutdown-
+scripts.
+
+.IP "--env=FILENAME"
+Loads the environment variables defined in FILENAME before starting xymond_channel.
+This is normally used only when running as a stand-alone daemon; if xymond_channel
+is started by xymonlaunch, then the environment is controlled by the task definition 
+in the
+.I tasks.cfg(5)
+file.
+
+.IP "--log=FILENAME"
+Redirect output to this log-file.
+
+.IP "--debug"
+Enable debugging output.
+
+.SH FILES
+This program does not use any configuration files.
+
+.SH "SEE ALSO"
+xymond(8), xymon(7)
+
