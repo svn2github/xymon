@@ -1,0 +1,5 @@
+etc/apache2/conf.d
+etc/xymon/tasks.d
+etc/xymon/graphs.d
+etc/xymon/xymonserver.d
+usr/share/xymon
