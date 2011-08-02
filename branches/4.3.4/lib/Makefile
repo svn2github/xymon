@@ -1,0 +1,118 @@
+# Xymon library Makefile
+#
+
+XYMONLIBOBJS = osdefs.o acklog.o availability.o calc.o cgi.o cgiurls.o clientlocal.o color.o crondate.o digest.o encoding.o environ.o errormsg.o eventlog.o files.o headfoot.o xymonrrd.o holidays.o htmllog.o ipaccess.o loadalerts.o loadhosts.o loadcriticalconf.o locator.o links.o matching.o md5.o memory.o misc.o msort.o netservices.o notifylog.o rbtr.o readmib.o reportlog.o rmd160c.o sendmsg.o sha1.o sha2.o sig.o stackio.o strfunc.o suid.o timefunc.o timing.o url.o
+
+CLIENTLIBOBJS = osdefs.o cgiurls.o color-client.o crondate.o digest.o encoding.o environ-client.o errormsg.o holidays.o ipaccess.o loadhosts.o md5.o memory.o misc.o msort.o rbtr.o rmd160c.o sendmsg.o sha1.o sha2.o sig.o stackio.o strfunc.o suid.o timefunc-client.o
+ifeq ($(LOCALCLIENT),yes)
+	CLIENTLIBOBJS += matching.o
+endif
+
+
+CFLAGS += -I. -I../include 
+
+all: test-endianness libxymon.a libredblack.a redblack.h xymonclient.a loadhosts stackio availability md5 sha1 rmd160 locator
+
+client: test-endianness xymonclient.a
+
+test-endianness: test-endianness.c
+	$(CC) $(CFLAGS) -o $@ $<
+
+libxymon.a: redblack.h $(XYMONLIBOBJS)
+	ar cr libxymon.a $(XYMONLIBOBJS)
+	ranlib libxymon.a || echo ""
+
+xymonclient.a: redblack.h $(CLIENTLIBOBJS)
+	ar cr xymonclient.a $(CLIENTLIBOBJS)
+	ranlib xymonclient.a || echo ""
+
+libredblack.a: libredblack/.libs/libredblack.a
+	cp libredblack/.libs/libredblack.a .
+
+redblack.h: libredblack/.libs/libredblack.a
+# The redblack.h header-file declares all data returned from the lookup-functions as "const".
+# Which doesn't make sense, since it points to data that I have put into the tree, and can
+# therefore modify as I see fit. So to avoid gcc puking all over the place, fix these defs.
+	cat libredblack/redblack.h | sed \
+		-e 's!^RB_STATIC const RB_ENTRY(data_t) \*RB_ENTRY(find)!RB_STATIC RB_ENTRY(data_t) *RB_ENTRY(find)!' \
+		-e 's!^RB_STATIC const RB_ENTRY(data_t) \*RB_ENTRY(lookup)!RB_STATIC RB_ENTRY(data_t) *RB_ENTRY(lookup)!' \
+		-e 's!^RB_STATIC const RB_ENTRY(data_t) \*RB_ENTRY(search)!RB_STATIC RB_ENTRY(data_t) *RB_ENTRY(search)!' \
+		-e 's!^RB_STATIC const RB_ENTRY(data_t) \*RB_ENTRY(delete)!RB_STATIC RB_ENTRY(data_t) *RB_ENTRY(delete)!' \
+		-e 's!^RB_STATIC const RB_ENTRY(data_t) \*RB_ENTRY(readlist)!RB_STATIC RB_ENTRY(data_t) *RB_ENTRY(readlist)!' >redblack.h
+
+
+libredblack/.libs/libredblack.a: libredblack/Makefile
+	(cd libredblack && $(MAKE))
+
+libredblack/Makefile: libredblack/configure
+	(cd libredblack && CFLAGS="$(CFLAGS)" ./configure --disable-shared --without-rbgen)
+
+libredblack/configure: libredblack-1.3.tar.gz
+	gzip -dc $< | tar xf -
+	mv libredblack-1.3 libredblack
+	# Must touch "configure", or it will trigger a rebuild because it is older than the tar.gz file.
+	touch libredblack/configure
+
+loadhosts.o: loadhosts.c loadhosts_file.c
+	$(CC) $(CFLAGS) -c -o $@ loadhosts.c
+
+eventlog.o: eventlog.c
+	$(CC) $(CFLAGS) $(PCREINCDIR) -c -o $@ $<
+
+notifylog.o: notifylog.c
+	$(CC) $(CFLAGS) $(PCREINCDIR) -c -o $@ $<
+
+headfoot.o: headfoot.c
+	$(CC) $(CFLAGS) $(PCREINCDIR) -c -o $@ $<
+
+loadalerts.o: loadalerts.c
+	$(CC) $(CFLAGS) $(PCREINCDIR) -c -o $@ $<
+
+matching.o: matching.c
+	$(CC) $(CFLAGS) $(PCREINCDIR) -c -o $@ $<
+
+sha1.o: sha1.c
+	$(CC) $(CFLAGS) `./test-endianness` -c -o $@ $<
+
+rmd160c.o: rmd160c.c
+	$(CC) $(CFLAGS) `./test-endianness` -c -o $@ $<
+
+environ.o: environ.c
+	$(CC) $(CFLAGS) -DXYMONTOPDIR=\"$(XYMONTOPDIR)\" -DXYMONLOGDIR=\"$(XYMONLOGDIR)\" -DXYMONHOSTNAME=\"$(XYMONHOSTNAME)\" -DXYMONHOSTIP=\"$(XYMONHOSTIP)\" -DXYMONHOSTOS=\"$(XYMONHOSTOS)\" -DBUILD_HOME=\"$(XYMONTOPDIR)/server\" -c -o $@ environ.c
+
+environ-client.o: environ.c
+	$(CC) $(CFLAGS) -DXYMONTOPDIR=\"$(XYMONTOPDIR)\" -DXYMONLOGDIR=\"$(XYMONLOGDIR)\" -DXYMONHOSTNAME=\"$(XYMONHOSTNAME)\" -DXYMONHOSTIP=\"$(XYMONHOSTIP)\" -DXYMONHOSTOS=\"$(XYMONHOSTOS)\" -DBUILD_HOME=\"$(XYMONTOPDIR)/client\" -c -o $@ environ.c
+
+color-client.o: color.c
+	$(CC) $(CFLAGS) -DCLIENTONLY -c -o $@ $<
+
+timefunc-client.o: timefunc.c
+	$(CC) $(CFLAGS) -DCLIENTONLY -c -o $@ $<
+
+loadhosts: loadhosts.c libxymon.a
+	$(CC) $(CFLAGS) -DSTANDALONE -o $@ loadhosts.c ./libxymon.a $(LIBRTDEF)
+
+stackio: stackio.c libxymon.a
+	$(CC) $(CFLAGS) -DSTANDALONE -o $@ stackio.c ./libxymon.a $(LIBRTDEF)
+
+availability: availability.c libxymon.a
+	$(CC) $(CFLAGS) -DSTANDALONE -o $@ availability.c ./libxymon.a $(LIBRTDEF)
+
+md5: md5.c
+	$(CC) $(CFLAGS) -DSTANDALONE `./test-endianness` -o $@ md5.c
+
+sha1: sha1.c
+	$(CC) $(CFLAGS) -DSTANDALONE `./test-endianness` -o $@ sha1.c
+
+rmd160: rmd160c.c
+	$(CC) $(CFLAGS) -DSTANDALONE `./test-endianness` -o $@ rmd160c.c
+
+locator: locator.c
+	$(CC) $(CFLAGS) -DSTANDALONE -o $@ locator.c ./libxymon.a $(NETLIBS) $(LIBRTDEF)
+
+clean:
+	rm -f *.o *.a redblack.h *~ loadhosts stackio availability test-endianness md5 sha1 rmd160 locator
+
+distclean: clean
+	rm -rf libredblack
+

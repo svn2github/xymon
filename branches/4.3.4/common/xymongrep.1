@@ -1,0 +1,122 @@
+.TH XYMONGREP 1 "Version 4.3.4: 30 Jul 2011" "Xymon"
+.SH NAME
+xymongrep \- pick out lines in hosts.cfg
+.SH SYNOPSIS
+.B "xymongrep --help"
+.br
+.B "xymongrep --version"
+.br
+.B "xymongrep [--noextras] [--test-untagged] [--web] [--net] TAG [TAG...]"
+
+.SH DESCRIPTION
+.I xymongrep(1)
+is for use by extension scripts that need to pick out the entries 
+in a hosts.cfg file that are relevant to the script.
+
+The utility accepts test names as parameters, and will then
+parse the hosts.cfg file and print out the host entries that
+have at least one of the wanted tests specified. Tags may be
+given with a trailing asterisk '*', e.g. "xymongrep http*"
+is needed to find all http and https tags.
+
+The xymongrep utility supports the use of "include" directives
+inside the hosts.cfg file, and will find matching tags in all
+included files.
+
+If the DOWNTIME or SLA tags are used in the
+.I hosts.cfg(5)
+file, these are interpreted relative to the current time. 
+xymongrep then outputs a "INSIDESLA" or "OUTSIDESLA" tag
+for easier use by scripts that want to check if the current
+time is inside or outside the expected uptime window.
+
+.SH OPTIONS
+.IP "--noextras"
+Remove the "testip", "dialup", "INSIDESLA" and "OUTSIDESLA" tags 
+from the output.
+
+.IP "--test-untagged"
+When using the XYMONNETWORK environment variable to test
+only hosts on a particular network segment, xymonnet
+will ignore hosts that do not have any "NET:x" tag.
+So only hosts that have a NET:$XYMONNETWORK tag will be
+tested.
+.br
+With this option, hosts with no NET: tag are included
+in the test, so that all hosts that either have a
+matching NET: tag, or no NET: tag at all are tested.
+
+.IP "--no-down[=TESTNAME]"
+xymongrep will query the Xymon server for the current
+status of the "conn" test, and if TESTNAME is specified
+also for the current state of the specified test. If
+the status of the "conn" test for a host is non-green,
+or the status of the TESTNAME test is disabled, then this 
+host is ignored and will not be included in the output.
+This can be used to ignore hosts that are down, or hosts
+where the custom test is disabled.
+
+.IP "--web"
+Search the hosts.cfg file following include statements as a
+Xymon web-server would.
+
+.IP "--net"
+Search the hosts.cfg file following include statements as 
+when running xymonnet.
+
+.SH EXAMPLE
+If your hosts.cfg file looks like this
+
+   192.168.1.1   www.test.com  # ftp telnet !oracle
+   192.168.1.2   db1.test.com  # oracle
+   192.168.1.3   mail.test.com # smtp
+
+and you have a custom Xymon extension script that performs the
+"oracle" test, then running "xymongrep oracle" would yield
+
+   192.168.1.1   www.test.com  # !oracle
+   192.168.1.2   db1.test.com  # oracle
+
+so the script can quickly find the hosts that are of interest.
+
+Note that the reverse-test modifier - "!oracle" - is included
+in the output; this also applies to the other test modifiers
+defined by Xymon (the dial-up and always-true modifiers).
+
+If your extension scripts use more than one tag, just list
+all of the interesting tags on the command line.
+
+xymongrep also supports the "NET:location" tag used by 
+xymonnet, so if your script performs network checks then 
+it will see only the hosts that are relevant for the test
+location that the script currently executes on.
+
+.SH USE IN EXTENSION SCRIPTS
+To integrate xymongrep into an existing script, look for
+the line in the script that grep's in the $HOSTSCFG file. 
+Typically it will look somewhat like this:
+
+   $GREP -i "^[0-9].*#.*TESTNAME" $HOSTSCFG | ... code to handle test
+
+Instead of the grep, we will use xymongrep. It then becomes
+
+   $XYMONHOME/bin/xymongrep TESTNAME | ... code to handle test
+
+which is simpler, less error-prone and more efficient.
+
+.SH ENVIRONMENT VARIABLES
+.IP XYMONNETWORK
+If set, xymongrep outputs only lines from hosts.cfg that have
+a matching NET:$XYMONNETWORK setting.
+.sp
+.IP HOSTSCFG
+Filename for the Xymon
+.I hosts.cfg(5)
+file.
+
+.SH FILES
+.IP $HOSTSCFG
+The Xymon hosts.cfg file
+
+.SH "SEE ALSO"
+hosts.cfg(5), xymonserver.cfg(5)
