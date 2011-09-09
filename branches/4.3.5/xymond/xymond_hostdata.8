@@ -1,0 +1,39 @@
+.TH XYMOND_HOSTDATA 8 "Version 4.3.5:  9 Sep 2011" "Xymon"
+.SH NAME
+xymond_hostdata \- xymond worker module for storing historical client data
+.SH SYNOPSIS
+.B "xymond_channel --channel=clichg xymond_hostdata"
+
+.SH DESCRIPTION
+xymond_hostdata is a worker module for xymond, and as such it is normally
+run via the
+.I xymond_channel(8)
+program. Whenever a status column in Xymon changes to an alert
+state (usually red, yellow or purple), this module receives a copy
+of the latest Xymon client data sent by the host, and stores it on
+disk. This allows you to review all of the data collected by the
+Xymon client on the server around the time that a problem occurred.
+This can make troubleshooting incidents easier by providing a snapshot
+of the host status shortly before a problem became apparent.
+
+Note: This module requires that
+.I xymond(8)
+is launched with the "--store-clientlogs" option enabled.
+
+.SH OPTIONS
+.IP "--minimum-free=N"
+Sets the minimum percentage of free filesystem space on the $CLIENTLOGS
+directory. If there is less than N% free space, xymond_hostdata will
+not save the data.
+Default: 5
+
+.IP "--debug"
+Enable debugging output.
+
+.SH FILES
+All of the host data are stored in the $CLIENTLOGS directory,
+by default this is the $XYMONVAR/hostdata/ directory.
+
+.SH "SEE ALSO"
+xymond(8), xymond_channel(8), xymon(7)
+

@@ -1,0 +1,56 @@
+.TH COMBOSTATUS 1 "Version 4.3.5:  9 Sep 2011" "Xymon"
+.SH NAME
+combostatus \- Xymon combination test tool
+.SH SYNOPSIS
+.B "combostatus --help"
+.br
+.B "combostatus --version"
+.br
+.B "combostatus [--debug] [--quiet]"
+
+.SH DESCRIPTION
+\fBcombostatus\fR
+is a Xymon extension script that runs on the Xymon server. 
+It combines the results of one or more of the normal
+Xymon test results into a combined test result, using
+standard arithmetic og logical operators.
+
+The resulting tests are sent to the Xymon display server as any 
+normal test - so all of the standard Xymon functions (history,
+statistics etc.) are available for the combined tests.
+
+The tool was born from the need to monitor systems with built-in
+redundancy and automatic failover - e.g. load-balanced web servers.
+But other uses are possible.
+
+.SH OPTIONS
+.IP "--error-colors=COLOR[,COLOR]"
+Specify which colors trigger an error status. By default only a "red" 
+status counts as an error color - all other colors, including yellow,
+will count as "green" when evaluating the combined status. COLOR
+is "red", "yellow", "blue", "purple" or "clear".
+
+.IP "--quiet"
+Normally, the test status sent by combostatus includes information
+about the underlying test results used to determine the current
+value of the combined test. "--quiet" eliminates this information
+from the test status page.
+
+.IP "--debug"
+Provide debugging output for use in troubleshooting problems with
+combostatus.
+
+.IP "--no-update"
+Dont send any status messages - instead, the result of the combotests
+is simply dumped to stdout. Useful for debugging.
+
+
+.SH FILES
+.IP $XYMONHOME/etc/combo.cfg
+Configuration file for combostatus, where the combined tests are defined
+.IP $XYMONHOME/etc/tasks.cfg
+Configuration file controlling when combostatus is run.
+
+.SH "SEE ALSO"
+combo.cfg(5), hosts.cfg(5), xymonserver.cfg(5), tasks.cfg(5)
+
