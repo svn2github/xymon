@@ -1,0 +1,12 @@
+README file for Demotool
+======================
+ Instead of running local system command to get the system information.
+ demotool will scan /etc/hdemo/data directory that containts demo data.
+
+How to install
+--------------
+1. make
+2. mkdir /etc/hdemo
+3. cp -rp data/* /etc/hdemo
+4. ./demotool
+
