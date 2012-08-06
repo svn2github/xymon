@@ -1,0 +1,54 @@
+.TH XYMOND_CAPTURE 8 "Version 4.3.10:  3 Aug 2012" "Xymon"
+.SH NAME
+xymond_capture \- catch selected messages from a xymond channel
+.SH SYNOPSIS
+.B "xymond_channel --channel=status xymond_capture [options]"
+
+.SH DESCRIPTION
+xymond_capture is a worker module for xymond, and as such it is normally
+run via the
+.I xymond_channel(8)
+program. It receives messages from xymond via stdin and filters them to
+select messages based on the hostname, testname or color of the status.
+By default the resulting messages are printed on stdout, but they can also
+be fed into a command for further processing.
+
+xymond_capture supports the \fBstatus\fR, \fBdata\fR, \fBclient\fR and 
+\fBhostdata\fR channels.
+
+.SH OPTIONS
+.IP "--hosts=PATTERN"
+Select messages only from hosts matching PATTERN (regular expression).
+
+.IP "--exhosts=PATTERN"
+Exclude messages from hosts matching PATTERN. If used with the --hosts option, 
+then the hostname must match the --hosts pattern, but NOT the --exhosts pattern.
+
+.IP "--tests=PATTERN"
+Select messages only from tests matching PATTERN (regular expression).
+
+.IP "--extests=PATTERN"
+Exclude messages from tests matching PATTERN. If used with the --tests option, 
+then the testname must match the --tests pattern, but NOT the --extests pattern.
+
+.IP "--colors=COLOR[,color]"
+Select messages based on the color of the status message. Multiple colors can be 
+listed, separated by comma. Default: Accept all colors.
+
+.IP "--batch-command=COMMAND"
+Instead of printing the messages to stdout, feed them to COMMAND on stdin. COMMAND
+can be any command which accepts the mssage on standard input.
+
+.IP "--batch-timeout=SECONDS"
+Collect messages until no messages have arrived in SECONDS seconds, before sending
+them to the --batch-command COMMAND.
+
+.IP "--client"
+Capture data from the "client" channel instead of the default "status" channel.
+
+.IP "--debug"
+Enable debugging output.
+
+.SH "SEE ALSO"
+xymond_channel(8), xymond(8), xymon(7)
+
