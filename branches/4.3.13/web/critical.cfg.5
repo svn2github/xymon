@@ -1,0 +1,29 @@
+.TH CRITICAL.CFG 5 "Version 4.3.12: 24 Jul 2013" "Xymon"
+.SH NAME
+critical.cfg \- Configuration of the showgraph CGI
+
+.SH SYNOPSIS
+.B $XYMONHOME/etc/critical.cfg
+
+.SH DESCRIPTION
+.I critical.cgi(1)
+uses the configuration file $XYMONHOME/etc/critical.cfg to
+determine which of the statuses currently in a red or yellow state
+should appear on the Critical Systems view.
+
+This file should not be edited manually. It is maintained by the
+.I criticaleditor.cgi(1)
+utility via a web-based frontend.
+
+.SH FILE PERMISSIONS
+Since the file is maintained by a web front-end tool, the userid
+running Web CGI scripts must have write-permission to the file.
+Typically, this means it must have a group-ownership matching your
+webserver userid, and group-write permissions (mode 664).
+
+When editing the file with the web front-end, a backup file is created.
+Therefore the critical.cfg.bak file should have identical permissions.
+
+.SH "SEE ALSO"
+criticalview.cgi(1), criticaleditor.cgi(1)
+
