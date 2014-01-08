@@ -1,0 +1,62 @@
+.TH XYMON-MAILACK 8 "Version 4.3.13:  7 Jan 2014" "Xymon"
+.SH NAME
+xymon-mailack \- permit acknowledging alerts via e-mail
+.SH SYNOPSIS
+.B "xymon-mailack --env=FILENAME [--debug]"
+
+.SH DESCRIPTION
+xymon-mailack normally runs as an input mail-filter for the
+xymon user, e.g. by being called from the xymon users' 
+.I procmailrc(5)
+file. xymon-mailack recognizes e-mails that are replies to 
+.I xymond_alert(8)
+mail alerts, and converts the reply mail into an acknowledge
+message that is sent to the Xymon system. This permits an
+administrator to acknowledge an alert via e-mail.
+
+.SH ADDING INFORMATION TO THE REPLY MAIL
+By default, an acknowledgment is valid for 1 hour. If you know
+in advance that solving the problem is going to take longer,
+you can change this by adding \fBdelay=DURATION\fR to the subject
+of your mail reply or on a line in the reply message. Duration is 
+in minutes, unless you add a trailing 'h' (for 'hours'), 'd' 
+(for 'days') or 'w' (for 'weeks').
+
+You can also include a message that will show up on the status-page
+together with the acknowledgment, e.g. to provide an explanation for
+the issue or some other information to the users. You can either
+put it at the end of the subject line as \fBmsg=Some random text\fR, 
+or you can just enter it in the e-mail as the first non-blank line of
+text in the mail (a "delay=N" line is ignored when looking for the
+message text).
+
+.SH USE WITH PROCMAIL
+To setup xymon-mailack, create a \fB.procmailrc\fR file in
+the xymon-users home-directory with the following contents:
+.IP
+.nf
+DEFAULT=$HOME/Mailbox
+LOGFILE=$HOME/procmail.log
+:0
+| $HOME/server/bin/xymon-mailack --env=$HOME/server/etc/xymonserver.cfg
+.fi
+
+.SH USE WITH QMAIL
+If you are using Qmail to deliver mail locally, you can run xymon-mailack
+directly from a \fB.qmail\fR file. Setup the xymon-users .qmail file like this:
+.IP
+.nf
+| $HOME/server/bin/xymon-mailack --env=$HOME/server/etc/xymonserver.cfg
+.fi
+
+.SH OPTIONS
+.IP "--env=FILENAME"
+Load environment from FILENAME, usually xymonserver.cfg.
+
+.IP "--debug"
+Dont send a message to xymond, but dump the message to
+stdout.
+
+.SH "SEE ALSO"
+xymond_alert(8), xymond(8), xymon(7)
+
