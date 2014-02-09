@@ -1,0 +1,45 @@
+.TH XYMONCFG 1 "Version 4.3.16:  9 Feb 2014" "Xymon"
+.SH NAME
+xymoncfg \- output the full hosts.cfg file
+.SH SYNOPSIS
+.B "xymoncfg [--web] [--net] [filename]"
+
+.SH DESCRIPTION
+.I xymoncfg(1)
+dumps the full hosts.cfg file to stdout. It follows "include"
+tags in the hosts.cfg files, and prints the full contents
+as seen by the
+.I xymongen(1)
+and
+.I xymonnet(1)
+utilities.
+
+If no filename is given, xymoncfg displays the file pointed
+to by the HOSTSCFG environment variable.
+
+.SH OPTIONS
+.IP "--web"
+Show the hosts.cfg file following include statements as a
+Xymon web-server would.
+
+.IP "--net"
+Show the hosts.cfg file following include statements as done
+when running xymonnet.
+
+.IP "-s"
+Output only the lines that look like environment variable definitions, in a format suitable for use with Bourne-style shells (e.g. bash, ksh). You will probably not use this with the default hosts.cfg input file, but e.g. xymonserver.cfg. To define all the variables in xymonserver.cfg inside your shell script, you can use
+.br
+.br
+   eval `xymoncfg -s /etc/xymon/xymonserver.cfg`
+
+.IP "-c"
+Similar to "-s", but for C-shell.
+
+.SH ENVIRONMENT VARIABLES
+.IP HOSTSCFG
+Filename for the
+.I hosts.cfg(5)
+file.
+
+.SH "SEE ALSO"
+hosts.cfg(5), xymonserver.cfg(5)
