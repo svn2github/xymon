@@ -1,0 +1,28 @@
+.TH XYMOND_SAMPLE 8 "Version 4.3.24: 23 Nov 2015" "Xymon"
+.SH NAME
+xymond_sample \- example of a xymond worker module
+.SH SYNOPSIS
+.B "xymond_channel --channel=status xymond_sample [options]"
+
+.SH DESCRIPTION
+xymond_sample is a worker module for xymond, and as such it is normally
+run via the
+.I xymond_channel(8)
+program. It receives messages from xymond via stdin, and simply displays
+these on stdout. It can be used with all types of xymond channels.
+
+xymond_sample is not designed to actually run, except as a demonstration.
+The purpose of this tool is to show how xymond worker modules can be
+implemented to handle different tasks that need to hook into the xymond
+processing.
+
+.SH OPTIONS
+.IP "--timeout=N"
+Read messages with a timeout of N seconds.
+
+.IP "--debug"
+Enable debugging output.
+
+.SH "SEE ALSO"
+xymond_channel(8), xymond(8), xymon(7)
+
