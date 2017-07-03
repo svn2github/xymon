@@ -1,0 +1,34 @@
+#!/bin/sh
+
+# Configuration script for Xymon.
+# $Id$
+
+BASEDIR="`dirname $0`"
+TARGET="$1"
+if test "$TARGET" != ""; then shift; fi
+
+# Make sure that all shell-scripts are executable.
+# Subversion has a habit of exporting without the
+# execute-bit set.
+chmod 755 $BASEDIR/configure* $BASEDIR/build/*.sh $BASEDIR/client/*.sh
+
+case "$TARGET" in
+  "--client")
+	exec $BASEDIR/configure.client $*
+	;;
+
+  "--server"|"")
+	exec $BASEDIR/configure.server $*
+	;;
+
+  "--help")
+  	echo "To configure a Xymon server: $0 --server"
+  	echo "To configure a Xymon client: $0 --client"
+	;;
+  *)
+	echo "unrecognized $0 target $TARGET"
+	exit 1
+	;;
+esac
+
+exit 0
