@@ -1696,7 +1696,7 @@ function XymonMsgs
                                 foreach ($filter in $filters)
                                 {
                                     $filter = $filter -replace '^ignore ', ''
-                                    if ($entry.ProviderName -match $filter -or $entry.Message -match $filter)
+                                    if ($entry.id -match $filter -or $entry.ProviderName -match $filter -or $entry.Message -match $filter)
                                     {
                                         ++$filterCount
                                         $excludeItem = $true
@@ -1714,7 +1714,7 @@ function XymonMsgs
                                 foreach ($filter in $filters)
                                 {
                                     $filter = $filter -replace '^include ', ''
-                                    if ($entry.ProviderName -match $filter -or $entry.Message -match $filter)
+                                    if ($entry.id -match $filter -or $entry.ProviderName -match $filter -or $entry.Message -match $filter)
                                     {
                                         ++$filterCount
                                         $includeItem = $true
